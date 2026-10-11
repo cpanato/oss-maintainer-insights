@@ -10,7 +10,7 @@ const fixture = (): AnalysisInput =>
       new URL("./fixtures/monthly-input.json", import.meta.url),
       "utf8",
     ),
-  );
+  ) as AnalysisInput;
 const review = (overrides: Partial<Review> = {}): Review => ({
   id: "extra",
   actor: { id: 10, login: "renamed", type: "User" },
@@ -19,8 +19,8 @@ const review = (overrides: Partial<Review> = {}): Review => ({
   ...overrides,
 });
 
-test("matches the shared monthly golden result", () => {
-  const expected = JSON.parse(
+void test("matches the shared monthly golden result", () => {
+  const expected: unknown = JSON.parse(
     readFileSync(
       new URL("./fixtures/monthly-expected.json", import.meta.url),
       "utf8",
@@ -29,7 +29,7 @@ test("matches the shared monthly golden result", () => {
   assert.deepEqual(analyze(fixture()), expected);
 });
 
-test("counts one reviewer–PR pair across review states and account renames", () => {
+void test("counts one reviewer–PR pair across review states and account renames", () => {
   const input = fixture();
   input.pull_requests[0]!.reviews.push(
     review(),
@@ -41,7 +41,7 @@ test("counts one reviewer–PR pair across review states and account renames", (
   assert.equal(result.first_response.median_ms.value, 3 * 3600000);
 });
 
-test("excludes self-responses, bots, missing actors and nonqualifying reviews", () => {
+void test("excludes self-responses, bots, missing actors and nonqualifying reviews", () => {
   const input = fixture();
   const pr = input.pull_requests[0]!;
   input.bot_ids = [30];
@@ -69,7 +69,7 @@ test("excludes self-responses, bots, missing actors and nonqualifying reviews", 
   assert.equal(result.exclusions.missing_event_actors, 1);
 });
 
-test("excludes draft, missing and bot authors from every population", () => {
+void test("excludes draft, missing and bot authors from every population", () => {
   const input = fixture();
   input.pull_requests[0]!.draft = true;
   input.pull_requests[1]!.author = null;
@@ -88,7 +88,7 @@ test("excludes draft, missing and bot authors from every population", () => {
   });
 });
 
-test("requires complete event streams for response and complete reviews for participation", () => {
+void test("requires complete event streams for response and complete reviews for participation", () => {
   const input = fixture();
   input.pull_requests[0]!.coverage.issue_comments = false;
   input.pull_requests[1]!.coverage.reviews = false;
@@ -102,7 +102,7 @@ test("requires complete event streams for response and complete reviews for part
   assert.equal(result.first_response.coverage, "partial");
 });
 
-test("distinguishes successful empty results from incomplete enumeration", () => {
+void test("distinguishes successful empty results from incomplete enumeration", () => {
   const input = fixture();
   input.pull_requests = [];
   assert.equal(analyze(input).review_activity.coverage, "complete_for_window");
@@ -111,7 +111,7 @@ test("distinguishes successful empty results from incomplete enumeration", () =>
   assert.equal(analyze(input).review_activity.coverage, "partial");
 });
 
-test("distinguishes unavailable streams from zero review units", () => {
+void test("distinguishes unavailable streams from zero review units", () => {
   const input = fixture();
   for (const pr of input.pull_requests)
     pr.coverage = {
@@ -125,7 +125,7 @@ test("distinguishes unavailable streams from zero review units", () => {
   assert.equal(result.first_response.unanswered_prs, 0);
 });
 
-test("historical review windows include old PRs and use the earliest pair timestamp", () => {
+void test("historical review windows include old PRs and use the earliest pair timestamp", () => {
   const input = fixture();
   input.pull_requests[0]!.created_at = "2025-12-01T00:00:00Z";
   const old = input.pull_requests[1]!;
@@ -139,7 +139,7 @@ test("historical review windows include old PRs and use the earliest pair timest
   assert.equal(result.review_activity.review_units, 4);
 });
 
-test("UTC windows include the start and exclude the end", () => {
+void test("UTC windows include the start and exclude the end", () => {
   const input = fixture();
   input.pull_requests[0]!.reviews[0]!.occurred_at = input.window.start;
   input.pull_requests[1]!.reviews[0]!.occurred_at = input.window.end;
@@ -149,7 +149,7 @@ test("UTC windows include the start and exclude the end", () => {
   assert.equal(analyze(input).review_activity.review_units, 3);
 });
 
-test("uses the earliest comment or qualifying review; ignores pre-creation and future events", () => {
+void test("uses the earliest comment or qualifying review; ignores pre-creation and future events", () => {
   const input = fixture();
   const pr = input.pull_requests[4]!;
   pr.issue_comments.push(
@@ -160,7 +160,7 @@ test("uses the earliest comment or qualifying review; ignores pre-creation and f
   assert.equal(analyze(input).first_response.median_ms.value, 2 * 3600000);
 });
 
-test("live review activity follows the creation sample and includes reviews through observation", () => {
+void test("live review activity follows the creation sample and includes reviews through observation", () => {
   const input = fixture();
   input.mode = "live_sample";
   input.window.end = "2026-01-02T00:00:00Z";
@@ -170,7 +170,7 @@ test("live review activity follows the creation sample and includes reviews thro
   assert.equal(result.review_activity.coverage, "complete_for_sample");
 });
 
-test("five responses unlock median; even sample medians average the middle durations", () => {
+void test("five responses unlock median; even sample medians average the middle durations", () => {
   const input = fixture();
   const extra = structuredClone(input.pull_requests[4]!);
   extra.id = 6;
@@ -179,7 +179,7 @@ test("five responses unlock median; even sample medians average the middle durat
   assert.equal(analyze(input).first_response.median_ms.value, 3.5 * 3600000);
 });
 
-test("rejects invalid UTC windows and duplicate normalized records", () => {
+void test("rejects invalid UTC windows and duplicate normalized records", () => {
   const input = fixture();
   input.window.start = "2026-02-30T00:00:00Z";
   assert.throws(() => analyze(input), /Invalid UTC/);
@@ -197,7 +197,7 @@ test("rejects invalid UTC windows and duplicate normalized records", () => {
   );
 });
 
-test("does not mutate input and produces deterministic results", () => {
+void test("does not mutate input and produces deterministic results", () => {
   const input = fixture();
   const before = structuredClone(input);
   assert.deepEqual(analyze(input), analyze(input));

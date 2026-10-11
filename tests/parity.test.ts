@@ -101,15 +101,15 @@ const cases: Record<string, (input: AnalysisInput) => void> = {
   },
 };
 for (const [name, mutate] of Object.entries(cases)) {
-  test(`Go and TypeScript agree: ${name}`, () => {
-    const input: AnalysisInput = JSON.parse(
+  void test(`Go and TypeScript agree: ${name}`, () => {
+    const input = JSON.parse(
       readFileSync(
         new URL("./fixtures/monthly-input.json", import.meta.url),
         "utf8",
       ),
-    );
+    ) as AnalysisInput;
     mutate(input);
-    const actual = JSON.parse(
+    const actual: unknown = JSON.parse(
       execFileSync(binary, ["analyze"], {
         input: JSON.stringify(input),
         encoding: "utf8",

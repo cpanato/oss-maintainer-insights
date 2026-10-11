@@ -1,6 +1,6 @@
 # OSS Maintainer Insights Implementation Plan
 
-Status: execution proposal; milestone 1 implemented locally, CI execution on GitHub pending
+Status: execution plan; milestone 1 implemented with PR CI
 Date: 11 October 2026
 Reference: [design document](oss-maintainer-insights-design.md)
 
@@ -104,21 +104,21 @@ Contribution CI validates local schema, duplicates, and size. Network checks ver
 
 Ship CI in milestone 1 and extend it as components arrive. Document the same local and Actions commands in the README.
 
-- Trigger on `pull_request`, pushes to `main`, and manual dispatch. Use `contents: read`, no secrets, no data writes, and no PR deployments. Do not execute PR code with `pull_request_target`.
+- Trigger on `pull_request` and pushes to `main`. Declare workflow-level `permissions: {}` and grant `contents: read` only to jobs that need it. Use no secrets, data writes, or PR deployments. Do not execute PR code with `pull_request_target`.
 - Pin Node and Go versions and external actions to verified commit SHAs. Install npm dependencies from the frozen lockfile and cache dependencies by lockfile. Do not cache credentials or test results.
-- Run independent TypeScript quality, tests/parity, build, and Go quality/test/build jobs. Add browser checks when the application exists. Use timeouts and cancel superseded runs for a PR.
-- Maintain the final `ci-required` check, failing if any required job fails, is cancelled, or unexpectedly skips. Configuring this check in GitHub branch protection is an operational step.
+- Run independent type-aware ESLint/type checks, tests/parity, build, Go quality/test/build, and golangci-lint jobs. Add browser checks when the application exists. Use timeouts and cancel superseded runs for a PR.
+- Maintain the final `ci-required` check for language checks, failing if any required job fails, is cancelled, or unexpectedly skips. Run zizmor and OpenSSF Scorecard as independent workflows outside this aggregation. Configuring required checks in GitHub branch protection is an operational step.
 - Keep mandatory tests deterministic, using fixtures and simulated API responses without mutable GitHub data or the `data` branch. Use validated synthetic datasets for PR builds, covering pending, partial, stale, and empty success.
 - Upload test reports with limited retention. Add browser traces/screenshots and static site artifacts when those components exist; inspecting a PR artifact does not deploy it.
 
-| Milestone | Required CI additions                                                                                           |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| 1         | Lint, formatting, typecheck, metric/schema tests, Go/TypeScript parity, package builds, Go vet/race tests/build |
-| 2         | Simulated REST pagination, request accounting, retries, timeout, and cancellation                               |
-| 3         | Astro Pages-base build and browser checks for queries, cache, errors, keyboard controls, and tables             |
-| 4         | Simulated Go ingestion, checkpoint resumption, idempotency, late events, and aggregate validation               |
-| 5         | Failure preservation, reproducibility, and artifact checks excluding internal records and forbidden fields      |
-| 6         | Local catalog validation, contribution flow, and small/moderate/over-budget E2E scenarios                       |
+| Milestone | Required CI additions                                                                                                                                                   |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1         | Lint, formatting, typecheck, metric/schema tests, Go/TypeScript parity, package builds, Go vet/race tests/build, golangci-lint, and independent zizmor/Scorecard audits |
+| 2         | Simulated REST pagination, request accounting, retries, timeout, and cancellation                                                                                       |
+| 3         | Astro Pages-base build and browser checks for queries, cache, errors, keyboard controls, and tables                                                                     |
+| 4         | Simulated Go ingestion, checkpoint resumption, idempotency, late events, and aggregate validation                                                                       |
+| 5         | Failure preservation, reproducibility, and artifact checks excluding internal records and forbidden fields                                                              |
+| 6         | Local catalog validation, contribution flow, and small/moderate/over-budget E2E scenarios                                                                               |
 
 Keep real API integration in a separate manual/scheduled workflow with a bounded budget. Test authenticated reads in Go Actions jobs and CORS/headers in a browser from Pages. Network-dependent catalog checks must allow retry and record inconclusive outcomes for review and launch validation without making every code change depend on API availability.
 

@@ -2,20 +2,30 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { Ajv } from "ajv";
+import type { AnySchema } from "ajv";
 import { default as addFormats } from "ajv-formats";
 import { analyze } from "../packages/analysis/src/index.js";
-import type { AnalysisInput } from "../packages/analysis/src/index.js";
+import type {
+  AnalysisInput,
+  AnalysisResult,
+} from "../packages/analysis/src/index.js";
 
-const load = (path: string) =>
-  JSON.parse(readFileSync(new URL(path, import.meta.url), "utf8"));
+const load = <T = unknown>(path: string): T =>
+  JSON.parse(readFileSync(new URL(path, import.meta.url), "utf8")) as T;
 const ajv = new Ajv({ allErrors: true, strict: true });
 addFormats.default(ajv);
-const inputValid = ajv.compile(load("../schemas/analysis-input.schema.json"));
-const resultValid = ajv.compile(load("../schemas/analysis-result.schema.json"));
-const catalogValid = ajv.compile(load("../schemas/catalog.schema.json"));
+const inputValid = ajv.compile(
+  load<AnySchema>("../schemas/analysis-input.schema.json"),
+);
+const resultValid = ajv.compile(
+  load<AnySchema>("../schemas/analysis-result.schema.json"),
+);
+const catalogValid = ajv.compile(
+  load<AnySchema>("../schemas/catalog.schema.json"),
+);
 
-test("shared input and golden output conform to strict schemas", () => {
-  const input: AnalysisInput = load("./fixtures/monthly-input.json");
+void test("shared input and golden output conform to strict schemas", () => {
+  const input = load<AnalysisInput>("./fixtures/monthly-input.json");
   assert.equal(inputValid(input), true, ajv.errorsText(inputValid.errors));
   assert.equal(
     resultValid(load("./fixtures/monthly-expected.json")),
@@ -29,23 +39,26 @@ test("shared input and golden output conform to strict schemas", () => {
   );
 });
 
-test("rejects raw bodies, missing coverage, bad dates and unsupported versions", () => {
-  const input = load("./fixtures/monthly-input.json");
-  input.pull_requests[0].body = "Never retain comment or PR bodies";
+void test("rejects raw bodies, missing coverage, bad dates and unsupported versions", () => {
+  const input = load<AnalysisInput>("./fixtures/monthly-input.json");
+  const pr = input.pull_requests[0]!;
+  Object.assign(pr, { body: "Never retain comment or PR bodies" });
   assert.equal(inputValid(input), false);
-  delete input.pull_requests[0].body;
-  delete input.pull_requests[0].coverage;
+  Reflect.deleteProperty(pr, "body");
+  Reflect.deleteProperty(pr, "coverage");
   assert.equal(inputValid(input), false);
-  const wrong = load("./fixtures/monthly-input.json");
-  wrong.schema_version = 2;
+  const wrong = {
+    ...load<AnalysisInput>("./fixtures/monthly-input.json"),
+    schema_version: 2,
+  };
   assert.equal(inputValid(wrong), false);
   wrong.schema_version = 1;
   wrong.observed_at = "2026-02-30T00:00:00Z";
   assert.equal(inputValid(wrong), false);
 });
 
-test("rejects contradictory metric status and numeric values", () => {
-  const result = load("./fixtures/monthly-expected.json");
+void test("rejects contradictory metric status and numeric values", () => {
+  const result = load<AnalysisResult>("./fixtures/monthly-expected.json");
   result.first_response.median_ms.status = "insufficient_data";
   assert.equal(resultValid(result), false);
   result.first_response.median_ms.value = null;
@@ -54,7 +67,7 @@ test("rejects contradictory metric status and numeric values", () => {
   assert.equal(resultValid(result), false);
 });
 
-test("validates catalog repository syntax and excludes unknown fields", () => {
+void test("validates catalog repository syntax and excludes unknown fields", () => {
   assert.equal(
     catalogValid([{ repository: "example/project", bot_ids: [42] }]),
     true,

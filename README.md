@@ -20,6 +20,7 @@ Run Go checks separately:
 ```sh
 test -z "$(gofmt -l cmd internal)"
 go vet ./cmd/... ./internal/...
+golangci-lint run ./cmd/... ./internal/...
 go test -race ./cmd/... ./internal/...
 go build -o dist/collector ./cmd/collector
 ```
@@ -38,12 +39,15 @@ The expected result is in `tests/fixtures/monthly-expected.json`. The command re
 
 ## Pull request checks
 
-The CI workflow runs TypeScript quality, metric/schema/parity tests, TypeScript builds, and Go formatting/vet/race tests/builds. Reports are uploaded for seven days. Tests use synthetic fixtures and do not need secrets or API access. Configure `ci-required` as a required status check in GitHub branch protection after the first workflow run.
+The main CI workflow runs ESLint with TypeScript type information, formatting/type checks, metric/schema/parity tests, builds, Go formatting/vet/race tests, and a dedicated golangci-lint **2.14.0** job. Its `ci-required` check summarizes these language checks. Reports are uploaded for seven days; tests use synthetic fixtures without secrets or live API access.
+
+Independent workflows run zizmor on PRs and OpenSSF Scorecard on `main` and weekly. They do not feed into `ci-required`. All workflows start with `permissions: {}` and grant minimum permissions per job. See [CI practices](docs/ci.md) for local audit commands, report handling, and branch-protection setup.
 
 ## Documentation
 
 - [Design](docs/design/oss-maintainer-insights-design.md)
 - [Implementation plan](docs/design/oss-maintainer-insights-implementation-plan.md)
 - [Methodology](docs/methodology.md)
+- [CI practices](docs/ci.md)
 
 Repository documentation, code, comments, and user-facing strings are written in English. The project is licensed under Apache 2.0.
