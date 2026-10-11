@@ -1,0 +1,376 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cpanato.github.io/oss-maintainer-insights/schemas/analysis-result.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "methodology_version",
+    "repository",
+    "mode",
+    "collected_at",
+    "window",
+    "exclusions",
+    "creation_cohort",
+    "review_activity",
+    "first_response"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "methodology_version": {
+      "const": "1.0.0"
+    },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "full_name"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "full_name": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*/[A-Za-z0-9_.-]+$"
+        }
+      }
+    },
+    "mode": {
+      "enum": ["live_sample", "historical"]
+    },
+    "collected_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z$"
+    },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z$"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z$"
+        }
+      }
+    },
+    "exclusions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "draft_prs",
+        "bot_authors",
+        "missing_authors",
+        "bot_events",
+        "missing_event_actors",
+        "self_events"
+      ],
+      "properties": {
+        "draft_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bot_authors": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missing_authors": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "bot_events": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missing_event_actors": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "self_events": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "creation_cohort": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["eligible_prs", "coverage", "authors", "outcomes"],
+      "properties": {
+        "eligible_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage": {
+          "enum": [
+            "complete_for_sample",
+            "complete_for_window",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "authors": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "outcomes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["open", "closed_unmerged", "merged"],
+          "properties": {
+            "open": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "closed_unmerged": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "merged": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        }
+      }
+    },
+    "review_activity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eligible_prs",
+        "covered_prs",
+        "coverage",
+        "review_units",
+        "participants",
+        "distribution",
+        "concentration_80",
+        "largest_reviewer_share"
+      ],
+      "properties": {
+        "eligible_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "covered_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage": {
+          "enum": [
+            "complete_for_sample",
+            "complete_for_window",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "review_units": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "participants": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "distribution": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["actor", "review_units"],
+            "properties": {
+              "actor": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["id", "login", "type"],
+                "properties": {
+                  "id": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 9007199254740991
+                  },
+                  "login": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "type": {
+                    "enum": ["User", "Bot"]
+                  }
+                }
+              },
+              "review_units": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          }
+        },
+        "concentration_80": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "status"],
+          "properties": {
+            "value": {
+              "type": ["integer", "null"],
+              "minimum": 0
+            },
+            "status": {
+              "enum": ["available", "insufficient_data"]
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "insufficient_data"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "value": {
+                    "type": "null"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "value": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "largest_reviewer_share": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "status"],
+          "properties": {
+            "value": {
+              "type": ["number", "null"],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "status": {
+              "enum": ["available", "insufficient_data"]
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "insufficient_data"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "value": {
+                    "type": "null"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "value": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "first_response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eligible_prs",
+        "covered_prs",
+        "coverage",
+        "responded_prs",
+        "unanswered_prs",
+        "median_ms"
+      ],
+      "properties": {
+        "eligible_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "covered_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage": {
+          "enum": [
+            "complete_for_sample",
+            "complete_for_window",
+            "partial",
+            "unavailable"
+          ]
+        },
+        "responded_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unanswered_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "median_ms": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["value", "status"],
+          "properties": {
+            "value": {
+              "type": ["number", "null"],
+              "minimum": 0
+            },
+            "status": {
+              "enum": ["available", "insufficient_data"]
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "insufficient_data"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "value": {
+                    "type": "null"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "value": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
