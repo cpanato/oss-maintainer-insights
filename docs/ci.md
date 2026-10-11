@@ -21,10 +21,10 @@ npm run check
 golangci-lint run ./cmd/... ./internal/...
 go test -race ./cmd/... ./internal/...
 actionlint .github/workflows/*.yml
-zizmor --offline --no-progress .github
+zizmor --offline --persona pedantic --no-progress .github
 ```
 
-Use zizmor **1.30.1** for parity with CI. Its CI workflow also performs online action audits with a read-only GitHub token. Offline checks do not substitute for those online checks.
+The zizmor workflow uses `persona: pedantic` and the tool version selected by its pinned action. Run local checks with `zizmor --offline --persona pedantic --no-progress .github`. CI also performs online action audits with a read-only GitHub token; offline checks do not substitute for those checks.
 
 ## Workflow hardening
 
