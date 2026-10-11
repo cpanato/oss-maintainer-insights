@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "methodology_version": "1.0.0",
+  "repository": {
+    "id": 123,
+    "full_name": "example/project"
+  },
+  "mode": "historical",
+  "collected_at": "2026-02-01T00:00:00Z",
+  "window": {
+    "start": "2026-01-01T00:00:00Z",
+    "end": "2026-02-01T00:00:00Z"
+  },
+  "exclusions": {
+    "draft_prs": 0,
+    "bot_authors": 0,
+    "missing_authors": 0,
+    "bot_events": 0,
+    "missing_event_actors": 0,
+    "self_events": 0
+  },
+  "creation_cohort": {
+    "eligible_prs": 5,
+    "coverage": "complete_for_window",
+    "authors": 5,
+    "outcomes": {
+      "open": 2,
+      "closed_unmerged": 1,
+      "merged": 2
+    }
+  },
+  "review_activity": {
+    "eligible_prs": 5,
+    "covered_prs": 5,
+    "coverage": "complete_for_window",
+    "review_units": 5,
+    "participants": 2,
+    "distribution": [
+      {
+        "actor": {
+          "id": 10,
+          "login": "reviewer-a",
+          "type": "User"
+        },
+        "review_units": 4
+      },
+      {
+        "actor": {
+          "id": 20,
+          "login": "reviewer-b",
+          "type": "User"
+        },
+        "review_units": 1
+      }
+    ],
+    "concentration_80": {
+      "value": 1,
+      "status": "available"
+    },
+    "largest_reviewer_share": {
+      "value": 0.8,
+      "status": "available"
+    }
+  },
+  "first_response": {
+    "eligible_prs": 5,
+    "covered_prs": 5,
+    "coverage": "complete_for_window",
+    "responded_prs": 5,
+    "unanswered_prs": 0,
+    "median_ms": {
+      "value": 10800000,
+      "status": "available"
+    }
+  }
+}
