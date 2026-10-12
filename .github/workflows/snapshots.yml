@@ -1,19 +1,9 @@
 name: Repository snapshots and Pages
 
 # Manual refresh is operational: it consumes API allowance and regenerates saved UI data.
-# PR runs provide review artifacts and never become a mandatory test or deploy data.
+# PRs run offline collector fixtures in CI; live collection must leave API allowance for publication.
 on:
   workflow_dispatch:
-  pull_request:
-    paths:
-      - catalog/**
-      - cmd/collector/**
-      - internal/**
-      - schemas/**
-      - .go-version
-      - go.mod
-      - go.sum
-      - .github/workflows/snapshots.yml
   push:
     branches:
       - main
@@ -33,7 +23,7 @@ on:
       - scripts/**
       - diagnostics/**
   schedule:
-    - cron: "43 4 * * *"
+    - cron: "43 * * * *"
 
 permissions: {}
 
@@ -94,7 +84,7 @@ jobs:
         run: |
           set -euo pipefail
           flags=()
-          if [[ "$COLLECTION_EVENT" == 'schedule' || "$COLLECTION_EVENT" == 'workflow_dispatch' ]]; then
+          if [[ "$COLLECTION_EVENT" == 'workflow_dispatch' ]]; then
             flags+=(--force)
           fi
           go run ./cmd/collector snapshots --output generated-data --state .cache/snapshots "${flags[@]}"

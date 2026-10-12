@@ -17,7 +17,8 @@
       "enum": [
         "newest-eight-human-prs-90-days-v1",
         "three-age-bands-eighteen-human-prs-90-days-v1",
-        "three-age-bands-three-hundred-human-prs-90-days-v1"
+        "three-age-bands-three-hundred-human-prs-90-days-v1",
+        "all-human-prs-created-in-90-days-v1"
       ]
     },
     "result": {
@@ -48,18 +49,15 @@
       "properties": {
         "listed": {
           "type": "integer",
-          "minimum": 0,
-          "maximum": 300
+          "minimum": 0
         },
         "selected": {
           "type": "integer",
-          "minimum": 0,
-          "maximum": 300
+          "minimum": 0
         },
         "eligible_on_page": {
           "type": "integer",
-          "minimum": 0,
-          "maximum": 300
+          "minimum": 0
         },
         "truncated": {
           "type": "boolean"
@@ -185,7 +183,8 @@
           "policy": {
             "enum": [
               "three-age-bands-eighteen-human-prs-90-days-v1",
-              "three-age-bands-three-hundred-human-prs-90-days-v1"
+              "three-age-bands-three-hundred-human-prs-90-days-v1",
+              "all-human-prs-created-in-90-days-v1"
             ]
           },
           "selection": {
@@ -236,6 +235,36 @@
               "eligible_on_page": {
                 "type": "integer",
                 "maximum": 90
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "policy": {
+            "const": "three-age-bands-three-hundred-human-prs-90-days-v1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "selection": {
+            "type": "object",
+            "properties": {
+              "listed": {
+                "type": "integer",
+                "maximum": 300
+              },
+              "eligible_on_page": {
+                "type": "integer",
+                "maximum": 300
+              },
+              "selected": {
+                "type": "integer",
+                "maximum": 300
               }
             }
           }

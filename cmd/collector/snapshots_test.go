@@ -8,6 +8,7 @@ import (
 	"os"
 	"path/filepath"
 	"reflect"
+	"strconv"
 	"strings"
 	"testing"
 	"time"
@@ -120,5 +121,41 @@ func TestSnapshotsRejectDuplicateCatalogWithoutNetwork(t *testing.T) {
 	}
 	if err := run([]string{"snapshots", "--catalog", catalog, "--output", filepath.Join(directory, "public"), "--state", filepath.Join(directory, "state")}, strings.NewReader(""), &bytes.Buffer{}); err == nil {
 		t.Fatal("duplicate catalog accepted")
+	}
+}
+
+func TestSnapshotsReservePublicationQuotaAndPersistPendingEnumeration(t *testing.T) {
+	directory := t.TempDir()
+	catalog := filepath.Join(directory, "catalog.json")
+	if err := os.WriteFile(catalog, []byte(`[{"repository":"example/repo"}]`), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	original := http.DefaultClient
+	defer func() { http.DefaultClient = original }()
+	calls := 0
+	http.DefaultClient = &http.Client{Transport: snapshotTransport(func(_ *http.Request) (*http.Response, error) {
+		calls++
+		return &http.Response{StatusCode: 200, Header: http.Header{"X-Ratelimit-Remaining": []string{"100"}, "X-Ratelimit-Reset": []string{strconv.FormatInt(time.Now().Add(time.Hour).Unix(), 10)}}, Body: io.NopCloser(strings.NewReader(`{"id":42,"full_name":"example/repo","private":false}`))}, nil
+	})}
+	var output bytes.Buffer
+	if err := run([]string{"snapshots", "--catalog", catalog, "--output", filepath.Join(directory, "public"), "--state", filepath.Join(directory, "state")}, strings.NewReader(""), &output); err != nil {
+		t.Fatal(err)
+	}
+	var report manifest
+	if err := json.Unmarshal(output.Bytes(), &report); err != nil {
+		t.Fatal(err)
+	}
+	if calls != 1 || report.Entries[0].Status != "pending" || report.Entries[0].Reason != "rate_limit" {
+		t.Fatalf("publication reserve consumed: calls=%d report=%+v", calls, report)
+	}
+	var state snapshot.State
+	if err := readJSON(filepath.Join(directory, "state", "example--repo.json"), &state); err != nil {
+		t.Fatal(err)
+	}
+	if !state.Pending || state.Progress.EnumerationComplete || state.RepositoryID != 42 {
+		t.Fatalf("missing resumable enumeration: %+v", state)
+	}
+	if _, err := os.Stat(filepath.Join(directory, "public", "example--repo.json")); !os.IsNotExist(err) {
+		t.Fatal("unfinished full window was published")
 	}
 }

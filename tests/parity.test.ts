@@ -119,7 +119,7 @@ for (const [name, mutate] of Object.entries(cases)) {
   });
 }
 
-void test("catalog age-band fixture preserves Go and TypeScript metric parity", () => {
+void test("catalog creation-window fixture preserves Go and TypeScript metric parity", () => {
   const input = JSON.parse(
     readFileSync(
       new URL("./fixtures/catalog-input.json", import.meta.url),

@@ -252,7 +252,7 @@ test("switching repositories prevents an older in-flight query replacing newer r
   await expect(page).toHaveURL(/repo=ossf%2Fscorecard/);
 });
 
-test("saved age-band sample explains its age and response denominator without API calls", async ({
+test("saved complete window explains its scope and response denominator without API calls", async ({
   page,
 }) => {
   const { readFileSync } = await import("node:fs");
@@ -273,7 +273,7 @@ test("saved age-band sample explains its age and response denominator without AP
   await page.goto("./?repo=kubernetes/kubernetes");
   await expect(page.getByRole("status")).toContainText("No GitHub API calls");
   await expect(page.locator("#sample-description")).toContainText(
-    "21 selected PRs",
+    "21 eligible PRs",
   );
   await expect(page.locator("#sample-description")).toContainText(
     "PR ages at collection: 1.0 days–67.0 days",
@@ -282,22 +282,22 @@ test("saved age-band sample explains its age and response denominator without AP
     "90-day window",
   );
   await expect(page.locator("#sample-description")).toContainText(
-    "Up to 100 PRs from each of three 30-day creation bands",
+    "All eligible PRs created within this window",
   );
   await expect(page.locator("#sample-scope")).toContainText(
-    "All metrics below describe these 21 selected PRs",
+    "Metrics cover all eligible human-authored, non-draft PRs",
   );
   await expect(page.locator("#sample-scope")).toContainText(
-    "They do not count all PRs, reviews, or contributors",
+    "Reviews on PRs created before the window are outside this collection",
   );
   await expect(page.locator("#sample-scope")).toContainText(
     "Refresh live replaces this view with a smaller sample",
   );
   await expect(page.locator("#coverage-notes")).toContainText(
-    "not a random sample or full 90-day census",
+    "GitHub pagination is not an atomic historical snapshot",
   );
   await expect(page.locator("#coverage-notes")).toContainText(
-    "at most 100 search candidates",
+    "enumerated through GitHub PR pages",
   );
   await expect(page.locator("#response-note")).toContainText(
     "14 responded PRs",
@@ -311,7 +311,7 @@ test("saved age-band sample explains its age and response denominator without AP
   saved.result.first_response.unanswered_prs = 18;
   await page.reload();
   await expect(page.locator("#response-note")).toContainText(
-    "Sample has 3 human responses",
+    "Creation window has 3 human responses",
   );
   await expect(page.locator("#response-note")).toContainText(
     "At least 5 are needed",
@@ -502,4 +502,84 @@ test("metric explanations support mouse, keyboard and touch", async ({
   const bounds = await tooltip.boundingBox();
   expect(bounds!.x).toBeGreaterThanOrEqual(0);
   expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(360);
+});
+
+test("pending full-window progress preserves a visibly bounded legacy sample", async ({
+  page,
+}) => {
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } =
+    await import("../../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.policy = "three-age-bands-three-hundred-human-prs-90-days-v1";
+  saved.result.repository.full_name = "kubernetes/kubernetes";
+  const calls = await fixture(page);
+  await page.route("**/data/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ json: saved }),
+  );
+  await page.route("**/data/index.json", (route) =>
+    route.fulfill({
+      json: {
+        schema_version: 1,
+        attempted_at: saved.result.collected_at,
+        entries: [
+          {
+            repository: "kubernetes/kubernetes",
+            status: "pending",
+            reason: "budget",
+            requests: 1300,
+            progress: {
+              window: saved.result.window,
+              enumerated_prs: 1500,
+              eligible_prs: 1200,
+              covered_prs: 400,
+              enumeration_complete: true,
+            },
+          },
+        ],
+      },
+    }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect(page.locator("#collection-progress")).toContainText(
+    "1200 eligible, 400 with complete review and comment streams",
+  );
+  await expect(page.locator("#collection-progress")).toContainText(
+    "previous saved result remains visible",
+  );
+  await expect(page.locator("#sample-description")).toContainText(
+    "21 selected PRs",
+  );
+  await expect(page.locator("#sample-description")).toContainText(
+    "Up to 100 PRs from each",
+  );
+  expect(calls).toHaveLength(0);
+});
+
+test("uncatalogued deep links display a prominent catalog contribution guide", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.goto("./?repo=sigstore%2Frekor");
+  await expect(page.locator("#contribution")).toBeVisible();
+  await expect(page.locator("#contribution")).toContainText(
+    "Want more data for this repository?",
+  );
+  await expect(page.locator("#contribution")).toContainText(
+    "pull request to add this repository",
+  );
+  await page
+    .locator("#contribution")
+    .getByRole("link", { name: "Read the contribution guide" })
+    .click();
+  await expect(page).toHaveURL(/\/contributing\/$/);
+  await expect(
+    page.getByRole("heading", { name: "Open a catalog pull request" }),
+  ).toBeVisible();
 });

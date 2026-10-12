@@ -77,7 +77,7 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
           </div>
           <div class="query-hint">
             <span>
-              No sign-in required · 90-day window · Saved samples: up to 300 PRs
+              No sign-in required · 90-day window · Saved data: all eligible PRs
               · Live queries: up to 8 PRs
             </span>
             <button id="cancel" type="button" hidden>
@@ -102,12 +102,28 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
         <p id="status" role="status" aria-live="polite">
           Ready to explore. Queries run directly in your browser.
         </p>
+        <p id="collection-progress" class="muted" hidden></p>
         <p id="error" role="alert" hidden></p>
       </section>
+      <aside id="contribution" class="catalog-note" hidden>
+        <div>
+          <p class="eyebrow">ADD A PROJECT</p>
+          <h3>Want more data for this repository?</h3>
+          <p>
+            This repository is not in the saved catalog. You can propose it with
+            a pull request to add this repository to the saved catalog. The Go
+            collector will enumerate all eligible PRs in a 90-day window; saved
+            results become available when collection completes.
+          </p>
+        </div>
+        <a href={`${base}contributing/`}>Read the contribution guide ↗</a>
+      </aside>
       <section id="results" hidden aria-label="Repository analysis">
         <div class="result-heading">
           <div>
-            <p class="eyebrow">RECENT SAMPLE</p>
+            <p id="population-label" class="eyebrow">
+              RECENT SAMPLE
+            </p>
             <h2 id="repo-name"></h2>
             <p id="sample-description" class="muted"></p>
           </div>
@@ -153,7 +169,7 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
               <InfoTip
                 id="metric-help-2"
                 label="Review concentration 80"
-                explanation="The smallest number of reviewers accounting for at least 80% of sampled review units. Requires at least five fully covered PRs and one qualifying review unit."
+                explanation="The smallest number of reviewers accounting for at least 80% of covered review units. Requires at least five fully covered PRs and one qualifying review unit."
               />
             </p>
             <strong id="concentration">—</strong>
@@ -225,11 +241,11 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
                       />
                     </th>
                     <th scope="col">
-                      Share of sampled review units{" "}
+                      Share of covered review units{" "}
                       <InfoTip
                         id="metric-help-7"
                         label="Share"
-                        explanation="This reviewer’s review units divided by all review units in the covered sample, multiplied by 100. For example, 2 of 8 units = 25%. This is not their share of all repository activity."
+                        explanation="This reviewer’s review units divided by all review units across the covered PRs, multiplied by 100. For example, 2 of 8 units = 25%. This is not their share of all repository activity."
                       />
                     </th>
                   </tr>
@@ -238,7 +254,7 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
               </table>
             </div>
             <p id="distribution-empty" hidden>
-              No qualifying reviews in the covered sample.
+              No qualifying reviews across the covered PRs.
             </p>
           </section>
           <section class="panel coverage-panel">
@@ -291,17 +307,7 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
           </p>
         </article>
       </section>
-      <aside id="contribution" class="catalog-note" hidden>
-        <div>
-          <p class="eyebrow">ADD A PROJECT</p>
-          <h3>Want historical tracking for this repository?</h3>
-          <p>
-            This repository is not in the saved catalog. You can propose it with
-            a pull request; historical coverage starts only after collection.
-          </p>
-        </div>
-        <a href={`${base}contributing/`}>Read the contribution guide ↗</a>
-      </aside>
+
       <section class="catalog-note">
         <div>
           <span class="tag">IN DEVELOPMENT</span>

@@ -3,6 +3,7 @@ import addFormats from "ajv-formats";
 import type { FormatsPlugin } from "ajv-formats";
 import inputSchema from "../../../../schemas/analysis-input.schema.json" with { type: "json" };
 import resultSchema from "../../../../schemas/analysis-result.schema.json" with { type: "json" };
+import indexSchema from "../../../../schemas/snapshot-index.schema.json" with { type: "json" };
 import snapshotSchema from "../../../../schemas/repository-snapshot.schema.json" with { type: "json" };
 const validator = new Ajv({ strict: true });
 // NodeNext and Astro's bundler resolve this CommonJS export to different types.
@@ -12,6 +13,7 @@ applyFormats(validator);
 const validInput = validator.compile(inputSchema);
 validator.addSchema(resultSchema);
 const validPublic = validator.compile(snapshotSchema);
+const validIndex = validator.compile(indexSchema);
 import {
   analyze,
   parseReviewCommands,
@@ -40,8 +42,9 @@ import type {
 export const QUERY_POLICY = "newest-eight-human-prs-90-days-v1";
 export const LEGACY_CATALOG_POLICY =
   "three-age-bands-eighteen-human-prs-90-days-v1";
-export const CATALOG_POLICY =
+export const BAND_CATALOG_POLICY =
   "three-age-bands-three-hundred-human-prs-90-days-v1";
+export const CATALOG_POLICY = "all-human-prs-created-in-90-days-v1";
 export interface StreamFailure {
   pr: number;
   stream: string;
@@ -49,7 +52,10 @@ export interface StreamFailure {
 }
 export interface PublicSnapshot {
   policy:
-    typeof QUERY_POLICY | typeof CATALOG_POLICY | typeof LEGACY_CATALOG_POLICY;
+    | typeof QUERY_POLICY
+    | typeof CATALOG_POLICY
+    | typeof LEGACY_CATALOG_POLICY
+    | typeof BAND_CATALOG_POLICY;
   sample_age?: { oldest_created_at: string; newest_created_at: string };
   result: AnalysisResult;
   selection: {
@@ -79,6 +85,7 @@ export function parsePublicSnapshot(
     normalizeRepository(snapshot.result.repository.full_name).toLowerCase() !==
       normalizeRepository(repository).toLowerCase() ||
     snapshot.result.mode !== "live_sample" ||
+    (snapshot.policy === CATALOG_POLICY && !snapshot.complete) ||
     !["1.0.0", METHODOLOGY_VERSION].includes(
       snapshot.result.methodology_version,
     ) ||
@@ -492,4 +499,37 @@ export class LiveCache {
       return false;
     }
   }
+}
+
+export interface CollectionProgress {
+  window: { start: string; end: string };
+  enumerated_prs: number;
+  eligible_prs: number;
+  covered_prs: number;
+  enumeration_complete: boolean;
+}
+export function parseCollectionProgress(
+  value: unknown,
+  repository: string,
+): CollectionProgress | null {
+  if (!validIndex(value)) return null;
+  const index = value as {
+    entries: {
+      repository: string;
+      status: string;
+      progress?: CollectionProgress;
+    }[];
+  };
+  const entry = index.entries.find(
+    (item) => item.repository.toLowerCase() === repository.toLowerCase(),
+  );
+  const progress = entry?.status === "pending" ? entry.progress : undefined;
+  if (
+    !progress ||
+    progress.covered_prs > progress.eligible_prs ||
+    progress.eligible_prs > progress.enumerated_prs ||
+    Date.parse(progress.window.start) >= Date.parse(progress.window.end)
+  )
+    return null;
+  return progress;
 }

@@ -57,21 +57,26 @@ const base = import.meta.env.BASE_URL;
         </p>
       </section>
       <section class="panel">
-        <h2>Saved catalog samples</h2>
+        <h2>Saved 90-day creation windows</h2>
         <p>
-          Saved catalog data selects up to 300 PRs across the preceding 90 days:
-          up to 100 from each disjoint 30-day creation band. Each band inspects
-          the newest 100 search candidates, then confirms current PR details.
-          Human-authored, non-draft PRs are selected by creation time, without
-          requiring reviews or responses. Empty bands stay empty. The selected
-          PR age range is measured at collection time and shown with the sample.
+          Saved collection enumerates all human-authored, non-draft PRs created
+          within the preceding 90 days, using PR pages sorted by creation time.
+          There is no selected-PR count limit. Bots and configured bot IDs are
+          excluded; PRs without reviews or responses remain in the cohort.
         </p>
         <p>
-          This bounded selection favors newer PRs within each band. It is not a
-          random sample, a full 90-day census, or complete historical review
-          activity. A complete collection means all selected event streams
-          finished; it does not mean every PR in the repository was collected.
-          Missing headline metrics describe this sample, not repository health.
+          Request limits bound each execution. Pending checkpoints retain the
+          same window and resume across executions until PR enumeration and all
+          selected review and comment streams finish. The previous complete
+          saved result stays visible while work continues. Legacy samples of up
+          to 18 or 300 PRs are explicitly labeled as samples.
+        </p>
+        <p>
+          This covers PRs created in the window, not every review performed in
+          the repository: reviews on older PRs are outside the cohort. GitHub
+          pagination is not an atomic historical snapshot. Monthly historical
+          series and reconciliation remain future work. The UI shows window
+          dates, collection age, coverage, and pending collection progress.
         </p>
       </section>
       <section class="panel">
