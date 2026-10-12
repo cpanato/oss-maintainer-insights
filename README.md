@@ -11,7 +11,7 @@ Requires Node (see `.node-version`) and Go (see `.go-version`).
 ```sh
 npm ci
 npm run check   # lint, format, typecheck, tests, builds (requires Go for parity tests)
-npm run dev     # http://127.0.0.1:4321/oss-maintainer-insights/
+npm run dev     # http://127.0.0.1:4321/
 ```
 
 Enter `owner/repository` or a GitHub repository URL, or open `?repo=owner/repository`. Catalog entries load saved JSON without GitHub API requests; **Refresh live** explicitly requests a new sample. Other repositories use bounded unauthenticated live queries and offer a [contribution guide](CONTRIBUTING.md). Saved samples are not a full historical census. See [operations](docs/operations.md) for limits, caching, and behavior.
