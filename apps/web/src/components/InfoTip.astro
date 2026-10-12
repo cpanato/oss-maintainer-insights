@@ -1,0 +1,21 @@
+---
+interface Props {
+  id: string;
+  label: string;
+  explanation: string;
+}
+const { id, label, explanation } = Astro.props;
+---
+
+<button
+  type="button"
+  class="info-tip"
+  popovertarget={id}
+  aria-label={`Explain ${label}`}
+  aria-describedby={id}
+>
+  ?
+</button>
+<div id={id} class="info-tip-content" popover role="tooltip">
+  {explanation}
+</div>

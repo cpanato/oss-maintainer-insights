@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import InfoTip from "../components/InfoTip.astro";
 const base = import.meta.env.BASE_URL;
 import catalog from "../../../../catalog/repositories.json";
 const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
@@ -75,7 +76,10 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
             </button>
           </div>
           <div class="query-hint">
-            <span>No sign-in required · Up to 8 PRs from the last 90 days</span>
+            <span>
+              No sign-in required · 90-day window · Saved samples: up to 300 PRs
+              · Live queries: up to 8 PRs
+            </span>
             <button id="cancel" type="button" hidden>
               Cancel query
             </button>
@@ -116,25 +120,54 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
             </button>
           </div>
         </div>
+        <p id="sample-scope" class="muted"></p>
         <p id="freshness" class="freshness"></p>
         <div class="metrics">
           <article class="metric">
-            <p>PR authors</p>
+            <p>
+              PR authors{" "}
+              <InfoTip
+                id="metric-help-0"
+                label="PR authors"
+                explanation="Distinct human authors of the selected eligible PRs. Bots and draft PRs are excluded."
+              />
+            </p>
             <strong id="authors">—</strong>
             <span id="author-note"></span>
           </article>
           <article class="metric">
-            <p>Review participants</p>
+            <p>
+              Review participants{" "}
+              <InfoTip
+                id="metric-help-1"
+                label="Review participants"
+                explanation="Distinct human reviewers in PRs with complete review and comment streams. Includes GitHub reviews and active Prow commands; excludes self-reviews and bots."
+              />
+            </p>
             <strong id="reviewers">—</strong>
             <span id="reviewer-note"></span>
           </article>
           <article class="metric">
-            <p>Review concentration 80</p>
+            <p>
+              Review concentration 80{" "}
+              <InfoTip
+                id="metric-help-2"
+                label="Review concentration 80"
+                explanation="The smallest number of reviewers accounting for at least 80% of sampled review units. Requires at least five fully covered PRs and one qualifying review unit."
+              />
+            </p>
             <strong id="concentration">—</strong>
             <span id="concentration-note"></span>
           </article>
           <article class="metric">
-            <p>First human response</p>
+            <p>
+              First human response{" "}
+              <InfoTip
+                id="metric-help-3"
+                label="First human response"
+                explanation="Median wait from PR creation to its first human comment or qualifying review by someone other than its author. Requires at least five responded PRs."
+              />
+            </p>
             <strong id="response">—</strong>
             <span id="response-note"></span>
           </article>
@@ -167,10 +200,38 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
                 <caption>Review participation data</caption>
                 <thead>
                   <tr>
-                    <th scope="col">Reviewer</th>
-                    <th scope="col">Review units</th>
-                    <th scope="col">Sources</th>
-                    <th scope="col">Share</th>
+                    <th scope="col">
+                      Reviewer{" "}
+                      <InfoTip
+                        id="metric-help-4"
+                        label="Reviewer"
+                        explanation="The GitHub account that submitted a qualifying review or active Prow command on a selected PR."
+                      />
+                    </th>
+                    <th scope="col">
+                      Review units{" "}
+                      <InfoTip
+                        id="metric-help-5"
+                        label="Review units"
+                        explanation="One unit per unique reviewer–PR pair. Multiple reviews and Prow commands from the same person on the same PR count once."
+                      />
+                    </th>
+                    <th scope="col">
+                      Sources{" "}
+                      <InfoTip
+                        id="metric-help-6"
+                        label="Sources"
+                        explanation="Counts reviewer–PR pairs from GitHub reviews and active Prow commands. A pair may appear in both sources, but counts once in total review units."
+                      />
+                    </th>
+                    <th scope="col">
+                      Share of sampled review units{" "}
+                      <InfoTip
+                        id="metric-help-7"
+                        label="Share"
+                        explanation="This reviewer’s review units divided by all review units in the covered sample, multiplied by 100. For example, 2 of 8 units = 25%. This is not their share of all repository activity."
+                      />
+                    </th>
                   </tr>
                 </thead>
                 <tbody id="review-table"></tbody>

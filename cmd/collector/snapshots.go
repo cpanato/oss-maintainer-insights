@@ -6,7 +6,9 @@ import (
 	"encoding/json"
 	"errors"
 	"flag"
+	"fmt"
 	"io"
+	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
@@ -86,11 +88,13 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 	directory := flags.String("output", "apps/web/public/data", "Public aggregate output directory")
 	stateDirectory := flags.String("state", ".cache/snapshots", "Private conditional checkpoints")
 	maxAge := flags.Duration("max-age", 24*time.Hour, "Skip saved samples newer than this age")
+	useCLI := flags.Bool("github-cli", false, "Use GitHub CLI authentication without exporting a token")
+	maxWait := flags.Duration("rate-limit-wait", 2*time.Second, "Maximum API rate-limit wait; pending collection is checkpointed")
 	force := flags.Bool("force", false, "Revalidate samples even when fresh")
 	if err := flags.Parse(args); err != nil {
 		return err
 	}
-	if flags.NArg() != 0 || *maxAge < 0 || filepath.Clean(*directory) == filepath.Clean(*stateDirectory) {
+	if flags.NArg() != 0 || *maxAge < 0 || *maxWait < 0 || *maxWait > 65*time.Minute || filepath.Clean(*directory) == filepath.Clean(*stateDirectory) {
 		return errors.New("invalid snapshot arguments")
 	}
 	data, err := os.ReadFile(*catalog)
@@ -104,7 +108,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 	if err := json.Unmarshal(data, &entries); err != nil {
 		return err
 	}
-	// Divide the 700-request run cap fairly; the initial seven projects get up to 90 each.
+	// Divide the 9,000-attempt run cap fairly, with at most 1,300 attempts per project.
 	if len(entries) > 20 {
 		return errors.New("bounded sample collector supports at most 20 catalog entries")
 	}
@@ -119,7 +123,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 			return err
 		}
 	}
-	ctx, cancel := context.WithTimeout(ctx, 30*time.Minute)
+	ctx, cancel := context.WithTimeout(ctx, 90*time.Minute)
 	defer cancel()
 	now := time.Now().UTC()
 	report := manifest{SchemaVersion: 1, AttemptedAt: now.Format(time.RFC3339), Entries: []attempt{}}
@@ -129,22 +133,66 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 		statePath := filepath.Join(*stateDirectory, key+".json")
 		var prior snapshot.Public
 		validPrior := readJSON(publicPath, &prior) == nil && schemas.Validate("repository-snapshot", prior) == nil && strings.EqualFold(prior.Result.Repository.FullName, entry.Repository)
-		collected, parseErr := time.Parse(time.RFC3339Nano, prior.Result.CollectedAt)
-		if validPrior && prior.Policy == snapshot.CatalogPolicy && prior.Result.MethodologyVersion == analysis.MethodologyVersion && parseErr == nil && !*force && !now.Before(collected) && now.Sub(collected) < *maxAge {
-			report.Entries = append(report.Entries, attempt{Repository: entry.Repository, Status: "fresh"})
-			continue
-		}
 		var previous snapshot.State
 		if err := readJSON(statePath, &previous); err != nil && !os.IsNotExist(err) {
 			previous = snapshot.State{}
 		}
+		collected, parseErr := time.Parse(time.RFC3339Nano, prior.Result.CollectedAt)
+		if validPrior && prior.Policy == snapshot.CatalogPolicy && prior.Result.MethodologyVersion == analysis.MethodologyVersion && parseErr == nil && !previous.Pending && !*force && !now.Before(collected) && now.Sub(collected) < *maxAge {
+			report.Entries = append(report.Entries, attempt{Repository: entry.Repository, Status: "fresh"})
+			continue
+		}
 		policy := github.DefaultPolicy()
-		policy.MaxRequests = min(90, 700/len(entries))
-		client, err := github.New(github.Options{Policy: policy, Token: os.Getenv("GITHUB_TOKEN")})
+		policy.MaxRequests = min(1300, 9000/len(entries))
+		policy.MaxWait = *maxWait
+		fmt.Fprintf(os.Stderr, "Collecting %s (up to 300 PRs, %d request attempts)\n", entry.Repository, policy.MaxRequests)
+		options := github.Options{Policy: policy, Token: os.Getenv("GITHUB_TOKEN"), Sleep: func(ctx context.Context, delay time.Duration) error {
+			if delay > 2*time.Second {
+				fmt.Fprintf(os.Stderr, "Waiting %s for GitHub rate limit/retry; collection can be cancelled and resumed\n", delay.Round(time.Second))
+			}
+			timer := time.NewTimer(delay)
+			defer timer.Stop()
+			select {
+			case <-timer.C:
+				return nil
+			case <-ctx.Done():
+				return ctx.Err()
+			}
+		}}
+		if *useCLI {
+			options.Token = ""
+			options.HTTP = &http.Client{Transport: github.CLITransport{}}
+		}
+		client, err := github.New(options)
 		if err != nil {
 			return err
 		}
-		current, state, collectErr := snapshot.CollectCatalog(ctx, client, entry, time.Time{}, previous)
+		var checkpointErr error
+		checkpointCount := 0
+		checkpoint := func(state snapshot.State) error {
+			checkpointCount++
+			if checkpointCount%25 != 0 {
+				return nil
+			}
+			checkpointErr = atomicJSON(statePath, state)
+			if checkpointCount%100 == 0 {
+				fmt.Fprintf(os.Stderr, "Checkpoint %s: %d saved pages, %d attempts this run\n", entry.Repository, len(state.Pages), client.RequestsUsed())
+			}
+			return checkpointErr
+		}
+		current, state, collectErr := snapshot.CollectCatalogWithCheckpoint(ctx, client, entry, time.Time{}, previous, checkpoint)
+		if checkpointErr != nil {
+			return checkpointErr
+		}
+		if collectErr != nil {
+			var failure *github.Failure
+			if !errors.As(collectErr, &failure) || (failure.Reason != "budget" && failure.Reason != "rate_limit" && failure.Reason != "cancelled" && failure.Reason != "network" && failure.Reason != "timeout" && failure.Reason != "http") {
+				state.Pending = false
+			}
+		}
+		if err := atomicJSON(statePath, state); err != nil {
+			return err
+		}
 		status := attempt{Repository: entry.Repository, Status: "updated", Requests: client.RequestsUsed()}
 		if collectErr != nil {
 			status.Status = "unavailable"
@@ -158,16 +206,14 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 				status.Reason = "invalid_response"
 			}
 		} else {
-			if err := atomicJSON(statePath, state); err != nil {
-				return err
-			}
-			if validPrior && prior.Policy == current.Policy && prior.Result.MethodologyVersion == current.Result.MethodologyVersion && prior.Complete && !current.Complete {
+			if validPrior && prior.Complete && !current.Complete {
 				status.Status = "preserved"
 				status.Reason = "partial"
 			} else if err := atomicJSON(publicPath, current); err != nil {
 				return err
 			}
 		}
+		fmt.Fprintf(os.Stderr, "%s: %s (%d attempts)\n", entry.Repository, status.Status, status.Requests)
 		report.Entries = append(report.Entries, status)
 	}
 	if err := schemas.Validate("snapshot-index", report); err != nil {

@@ -38,14 +38,18 @@ import type {
 } from "../../../../packages/github/src/index.js";
 
 export const QUERY_POLICY = "newest-eight-human-prs-90-days-v1";
-export const CATALOG_POLICY = "three-age-bands-eighteen-human-prs-90-days-v1";
+export const LEGACY_CATALOG_POLICY =
+  "three-age-bands-eighteen-human-prs-90-days-v1";
+export const CATALOG_POLICY =
+  "three-age-bands-three-hundred-human-prs-90-days-v1";
 export interface StreamFailure {
   pr: number;
   stream: string;
   reason: FailureReason;
 }
 export interface PublicSnapshot {
-  policy: typeof QUERY_POLICY | typeof CATALOG_POLICY;
+  policy:
+    typeof QUERY_POLICY | typeof CATALOG_POLICY | typeof LEGACY_CATALOG_POLICY;
   sample_age?: { oldest_created_at: string; newest_created_at: string };
   result: AnalysisResult;
   selection: {

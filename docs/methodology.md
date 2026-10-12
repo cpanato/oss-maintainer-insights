@@ -42,7 +42,7 @@ Methodology changes require updates to both engines, fixtures, tests, and either
 
 ## Saved catalog selection
 
-Catalog snapshots select at most six human-authored, non-draft PRs from each of three disjoint 30-day creation bands within the preceding 90 days. Each band inspects its newest 30 search candidates; current PR details confirm eligibility. Empty bands stay empty. PRs without reviews or responses remain selected. Selection favors newer PRs within each band and is not random or exhaustive. Aggregate oldest/newest creation timestamps describe selected PR ages at collection. Browser queries retain the newest-eight policy. Both policies use the same metric engine and sufficiency thresholds; only selected populations differ.
+Catalog snapshots select at most 100 human-authored, non-draft PRs from each of three disjoint 30-day creation bands within the preceding 90 days. Each band inspects its newest 100 search candidates; current PR details confirm eligibility. Empty bands stay empty. PRs without reviews or responses remain selected. Selection favors newer PRs within each band and is not random or exhaustive. Aggregate oldest/newest creation timestamps describe selected PR ages at collection. Browser queries retain the newest-eight policy. Both policies use the same metric engine and sufficiency thresholds; only selected populations differ.
 
 ## Migration from 1.0.0
 

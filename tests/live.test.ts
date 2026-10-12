@@ -304,8 +304,8 @@ void test("public catalog snapshots validate larger samples and creation age bou
     ),
   );
   const snapshot = parsePublicSnapshot(raw, "example/repo")!;
-  assert.equal(snapshot.selection.selected, 18);
-  assert.equal(snapshot.result.first_response.unanswered_prs, 6);
+  assert.equal(snapshot.selection.selected, 21);
+  assert.equal(snapshot.result.first_response.unanswered_prs, 7);
   assert.equal(snapshot.result.first_response.median_ms.value, 3600000);
   const missingAge = structuredClone(snapshot);
   delete missingAge.sample_age;
