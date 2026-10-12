@@ -138,7 +138,7 @@ func target(value string) (*url.URL, error) {
 		return nil, &Failure{Reason: "invalid_input"}
 	}
 	u := base.ResolveReference(parsed)
-	if u.Scheme != "https" || u.Host != "api.github.com" || u.User != nil || u.Fragment != "" || (!strings.HasPrefix(u.Path, "/repos/") && !strings.HasPrefix(u.Path, "/repositories/")) {
+	if u.Scheme != "https" || u.Host != "api.github.com" || u.User != nil || u.Fragment != "" || (!strings.HasPrefix(u.Path, "/repos/") && !strings.HasPrefix(u.Path, "/repositories/") && u.Path != "/search/issues") {
 		return nil, &Failure{Reason: "invalid_input"}
 	}
 	return u, nil

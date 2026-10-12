@@ -90,7 +90,9 @@ test("complete small sample displays denominators, caches, refreshes and clears"
   expect(calls).toHaveLength(8);
   await expect(page.locator("#reviewers")).toHaveText("1");
   await expect(page.locator("#response")).toHaveText("—");
-  await expect(page.locator("#response-note")).toContainText("2/5 required");
+  await expect(page.locator("#response-note")).toContainText(
+    "Sample has 2 human responses",
+  );
   await expect(page.getByRole("table")).toContainText("100.0%");
   const stored = await page.evaluate(() => JSON.stringify(localStorage));
   expect(stored).not.toContain("PRIVATE_BODY_MARKER");
@@ -248,6 +250,55 @@ test("switching repositories prevents an older in-flight query replacing newer r
   });
   await expect(page.locator("#repo-name")).toHaveText("example/repo");
   await expect(page).toHaveURL(/repo=ossf%2Fscorecard/);
+});
+
+test("saved age-band sample explains its age and response denominator without API calls", async ({
+  page,
+}) => {
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } =
+    await import("../../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.result.repository.full_name = "kubernetes/kubernetes";
+  const calls = await fixture(page);
+  await page.route("**/data/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ json: saved }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect(page.getByRole("status")).toContainText("No GitHub API calls");
+  await expect(page.locator("#sample-description")).toContainText(
+    "18 selected PRs",
+  );
+  await expect(page.locator("#sample-description")).toContainText(
+    "PR ages at collection: 1.0 days–66.0 days",
+  );
+  await expect(page.locator("#coverage-notes")).toContainText(
+    "not a random sample or full 90-day census",
+  );
+  await expect(page.locator("#response-note")).toContainText(
+    "12 responded PRs",
+  );
+  expect(calls).toHaveLength(0);
+  saved.result.first_response.median_ms = {
+    value: null,
+    status: "insufficient_data",
+  };
+  saved.result.first_response.responded_prs = 3;
+  saved.result.first_response.unanswered_prs = 15;
+  await page.reload();
+  await expect(page.locator("#response-note")).toContainText(
+    "Sample has 3 human responses",
+  );
+  await expect(page.locator("#response-note")).toContainText(
+    "At least 5 are needed",
+  );
+  expect(calls).toHaveLength(0);
 });
 
 test("saved catalog sample loads without GitHub calls and refresh is explicit", async ({
