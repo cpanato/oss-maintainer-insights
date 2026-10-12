@@ -296,6 +296,9 @@ test("saved age-band sample explains its age and response denominator without AP
   await expect(page.locator("#coverage-notes")).toContainText(
     "not a random sample or full 90-day census",
   );
+  await expect(page.locator("#coverage-notes")).toContainText(
+    "at most 100 search candidates",
+  );
   await expect(page.locator("#response-note")).toContainText(
     "14 responded PRs",
   );

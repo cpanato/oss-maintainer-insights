@@ -243,7 +243,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   }
   text(
     "coverage-notes",
-    `${catalogSample ? "Up to six eligible human-authored, non-draft PRs from each of three 30-day creation bands are selected, newest first within each band. Each band inspects at most 30 search candidates. Empty bands stay empty; PRs are not replaced because they lack responses. This is a bounded sample, not a random sample or full 90-day census." : "The newest eligible human-authored, non-draft PRs from the first 30-record page are selected, up to 8."}${selection.truncated || selection.list_has_more ? " The repository contains PRs outside this bounded sample." : ""} Uncovered PRs are not counted as unanswered. Bots, deleted actors, and self responses are excluded.`,
+    `${catalogSample ? `Up to ${bandLimit} eligible human-authored, non-draft PRs from each of three 30-day creation bands are selected, newest first within each band. Each band inspects at most ${snapshot.policy === CATALOG_POLICY ? 100 : 30} search candidates. Empty bands stay empty; PRs are not replaced because they lack responses. This is a bounded sample, not a random sample or full 90-day census.` : "The newest eligible human-authored, non-draft PRs from the first 30-record page are selected, up to 8."}${selection.truncated || selection.list_has_more ? " The repository contains PRs outside this bounded sample." : ""} Uncovered PRs are not counted as unanswered. Bots, deleted actors, and self responses are excluded.`,
   );
   const failures = element("failure-list");
   failures.replaceChildren();
