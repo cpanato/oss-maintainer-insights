@@ -20,8 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
+    # Private repositories need extra read scopes for Scorecard's GraphQL queries.
     permissions:
       contents: read
+      actions: read
+      issues: read
+      pull-requests: read
+      checks: read
 
     steps:
       - name: Checkout default branch
