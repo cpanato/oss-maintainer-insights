@@ -88,13 +88,19 @@ func (r *reader) catalogPRs(ctx context.Context, path, repository string, botIDs
 			if _, err := r.get(ctx, fmt.Sprintf("%s/pulls/%d", path, item.Number), &pr); err != nil {
 				return nil, selection, err
 			}
-			if pr.ID <= 0 || pr.ID > 9007199254740991 || pr.Number != item.Number || pr.Draft == nil || seenIDs[pr.ID] || (pr.State != "open" && pr.State != "closed") {
+			if pr.ID <= 0 || pr.ID > 9007199254740991 || pr.Number != item.Number || pr.Draft == nil || (pr.State != "open" && pr.State != "closed") {
 				return nil, selection, &github.Failure{Reason: "invalid_response"}
 			}
-			seenIDs[pr.ID] = true
 			created, err := timestamp(pr.Created)
-			if err != nil || !created.Equal(candidateTime(item.Created)) {
+			if err != nil {
 				return nil, selection, &github.Failure{Reason: "invalid_response"}
+			}
+			// Search indexes issue creation time, which can differ from the PR timestamp.
+			// Detailed PR metadata determines the actual creation band and metric clock.
+			end := observed.Add(-time.Duration(band) * 30 * 24 * time.Hour)
+			start := end.Add(-30 * 24 * time.Hour)
+			if created.Before(start) || !created.Before(end) {
+				continue
 			}
 			if pr.Merged != nil {
 				if _, err := timestamp(*pr.Merged); err != nil {
@@ -108,13 +114,13 @@ func (r *reader) catalogPRs(ctx context.Context, path, repository string, botIDs
 			if *pr.Draft || user == nil || user.Type != "User" || bots[user.ID] {
 				continue
 			}
+			if seenIDs[pr.ID] {
+				return nil, selection, &github.Failure{Reason: "invalid_response"}
+			}
+			seenIDs[pr.ID] = true
 			selected = append(selected, pr)
 		}
 	}
 	selection.Selected = len(selected)
 	return selected, selection, nil
-}
-func candidateTime(value string) time.Time {
-	parsed, _ := timestamp(value)
-	return parsed
 }
