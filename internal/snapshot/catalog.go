@@ -71,14 +71,16 @@ func (r *reader) catalogPRs(ctx context.Context, path, _ string, botIDs []int64,
 			selection.Eligible++
 			selected = append(selected, pr)
 		}
-		r.next.Progress.EnumeratedPRs = selection.Listed
-		r.next.Progress.EligiblePRs = selection.Eligible
+		r.next.Progress.EnumeratedPRs = max(r.next.Progress.EnumeratedPRs, selection.Listed)
+		r.next.Progress.EligiblePRs = max(r.next.Progress.EligiblePRs, selection.Eligible)
 		if boundary {
 			break
 		}
 		endpoint = next
 	}
 	selection.Selected = len(selected)
+	r.next.Progress.EnumeratedPRs = selection.Listed
+	r.next.Progress.EligiblePRs = selection.Eligible
 	r.next.Progress.EnumerationComplete = true
 	return selected, selection, nil
 }

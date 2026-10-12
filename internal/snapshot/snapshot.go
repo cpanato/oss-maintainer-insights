@@ -282,6 +282,31 @@ func (r *reader) events(ctx context.Context, path string, review bool) ([]analys
 	}
 	return values, true, nil
 }
+func (r *reader) cachedStream(path string, review bool) bool {
+	visited := map[string]bool{}
+	for path != "" {
+		if visited[path] {
+			return false
+		}
+		visited[path] = true
+		page, ok := r.previous.Pages[path]
+		if !ok {
+			return false
+		}
+		var records []rawEvent
+		if json.Unmarshal(page.Value, &records) != nil || records == nil {
+			return false
+		}
+		for _, record := range records {
+			if _, err := normalize(record, review); err != nil {
+				return false
+			}
+		}
+		path = page.Next
+	}
+	return true
+}
+
 func reason(err error) string {
 	var failure *github.Failure
 	if errors.As(err, &failure) {
@@ -342,6 +367,10 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 	}
 	if catalog {
 		state.Progress = &Progress{Window: analysis.Window{Start: observed.Add(-90 * 24 * time.Hour).Format("2006-01-02T15:04:05.000Z"), End: observed.Format("2006-01-02T15:04:05.000Z")}}
+	}
+	if resume && previous.Progress != nil {
+		progress := *previous.Progress
+		state.Progress = &progress
 	}
 	r := reader{client: client, previous: previous, next: state, resume: resume, checkpoint: checkpoint}
 	path, err := github.RepositoryPath(entry.Repository)
@@ -443,6 +472,16 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 	}
 	failures := []Failure{}
 	if catalog {
+		cachedCoverage := map[int64]bool{}
+		if r.resume {
+			r.next.Progress.CoveredPRs = 0
+			for _, raw := range eligible {
+				if r.cachedStream(fmt.Sprintf("%s/pulls/%d/reviews?per_page=100", path, raw.Number), true) && r.cachedStream(fmt.Sprintf("%s/issues/%d/comments?per_page=100", path, raw.Number), false) && r.cachedStream(fmt.Sprintf("%s/pulls/%d/comments?per_page=100", path, raw.Number), false) {
+					cachedCoverage[raw.ID] = true
+					r.next.Progress.CoveredPRs++
+				}
+			}
+		}
 		for index, raw := range eligible {
 			pr := &input.PullRequests[index]
 			for _, stream := range []string{"reviews", "issue_comments", "review_comments"} {
@@ -475,7 +514,11 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 				}
 			}
 			if pr.Coverage.Reviews && pr.Coverage.IssueComments && pr.Coverage.ReviewComments {
-				r.next.Progress.CoveredPRs++
+				if !cachedCoverage[raw.ID] {
+					r.next.Progress.CoveredPRs++
+				}
+			} else if cachedCoverage[raw.ID] {
+				r.next.Progress.CoveredPRs--
 			}
 		}
 	} else {

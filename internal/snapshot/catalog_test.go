@@ -293,7 +293,12 @@ func TestCatalogResumeReusesPagesAndRevalidatesVisibility(t *testing.T) {
 		t.Fatalf("missing checkpoint writes=%d err=%v", writes, err)
 	}
 	resumed, _ := catalogSource(t)
-	public, complete, err := CollectCatalogWithCheckpoint(context.Background(), resumed, Entry{Repository: "example/repo"}, observed.Add(10*24*time.Hour), state, nil)
+	public, complete, err := CollectCatalogWithCheckpoint(context.Background(), resumed, Entry{Repository: "example/repo"}, observed.Add(10*24*time.Hour), state, func(progress State) error {
+		if progress.Progress.CoveredPRs < state.Progress.CoveredPRs || progress.Progress.EnumeratedPRs < state.Progress.EnumeratedPRs {
+			t.Fatalf("resume progress regressed: previous=%+v current=%+v", state.Progress, progress.Progress)
+		}
+		return nil
+	})
 	if err != nil || !public.Complete || complete.Pending || public.Requests != 36 || public.Result.CollectedAt != observed.Format("2006-01-02T15:04:05.000Z") {
 		t.Fatalf("resume failed requests=%d err=%v", public.Requests, err)
 	}
