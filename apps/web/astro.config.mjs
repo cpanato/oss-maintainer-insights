@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 export default defineConfig({
-  site: "https://cpanato.github.io",
-  base: "/oss-maintainer-insights/",
+  site: "https://maintainerinsights.dev",
+  base: "/",
   output: "static",
   devToolbar: { enabled: false },
 });

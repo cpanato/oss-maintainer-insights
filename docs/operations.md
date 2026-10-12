@@ -52,7 +52,7 @@ Build packages, serve the repository root, and open `/diagnostics/github.html`. 
 
 A real headless Chrome run from a local HTTP origin on **12 October 2026 at 09:03:56 UTC** completed both requests against `ossf/scorecard`. JavaScript could read `Link`, `x-ratelimit-limit`, `x-ratelimit-remaining`, and `x-ratelimit-reset`. The visible limit was 60; remaining allowance changed from 24 to 23. `Retry-After` was absent on these successful responses, so this run does not demonstrate its CORS exposure on a throttled response. Preflight policy and browser CORS worked for the headers actually used by the client.
 
-This is evidence for the **local origin only**. Do not claim deployed-origin validation until the diagnostic is served from `https://cpanato.github.io/oss-maintainer-insights/` and repeated there. Include the diagnostic HTML/JS and built GitHub client at the corresponding relative paths in the first Pages artifact. Preserve the project base prefix.
+This is evidence for the **local origin only**. Do not claim deployed-origin validation until the diagnostic is served from `https://maintainerinsights.dev/` and repeated there. Include the diagnostic HTML/JS and built GitHub client at the corresponding relative paths in the first Pages artifact. Serve assets and navigation from the custom domain root.
 
 ## Actions credential gate
 
@@ -101,7 +101,7 @@ Official documentation rechecked on 12 October 2026:
 
 ## Local live interface
 
-The Astro site serves bounded live queries at `/oss-maintainer-insights/` with a shareable `?repo=owner/repository` parameter. It uses the same unauthenticated browser transport measured above. One query selects up to eight eligible PRs from the newest 30-record page within 90 days, freezes its observation time, and shares a 20-attempt budget across metadata, listing, pagination, and retries. It reads all selected review streams before spending the remaining budget on issue and inline comments.
+The Astro site serves bounded live queries at `https://maintainerinsights.dev/` with a shareable `?repo=owner/repository` parameter. It uses the same unauthenticated browser transport measured above. One query selects up to eight eligible PRs from the newest 30-record page within 90 days, freezes its observation time, and shares a 20-attempt budget across metadata, listing, pagination, and retries. It reads all selected review streams before spending the remaining budget on issue and inline comments.
 
 For an eight-PR sample, even one page per stream needs 26 requests (metadata, listing, and 24 stream pages), so partial response coverage under the 20-request cap is expected. This limit is intentional: review participation can have complete coverage while first response covers fewer PRs. Missing streams are never interpreted as empty streams or unanswered PRs. A complete sample of up to six PRs fits when each stream needs one page and there are no retries.
 
@@ -134,3 +134,7 @@ The owner selected [jsonschema/v6](https://github.com/santhosh-tekuri/jsonschema
 [PR collection run 38238121807](https://github.com/cpanato/oss-maintainer-insights/actions/runs/38238121807), source `4e5409f7495435b17bd10c894f190fc7a392e232`, generated public samples for all seven catalog entries on **12 October 2026**. The manifest attempt time was **10:44:17 UTC**. Each query used 20 attempts and selected eight PRs, with complete reviews for 8/8 and complete first-response streams for 5/8. All samples are explicitly partial overall because the remaining response streams exceeded the product cap. These observations describe the saved samples, not complete historical windows.
 
 The downloaded aggregate artifact passes the same website JSON validation and is available in the local preview. PR publication, data-branch writes, and Pages deployment were correctly skipped. Internal checkpoints inherit repository/artifact visibility; “internal” means excluded from the website, not secret storage.
+
+## Custom domain asset paths
+
+GitHub Pages is configured with the custom domain `maintainerinsights.dev`. Astro uses `site: "https://maintainerinsights.dev"` and `base: "/"`, so stylesheets, scripts, navigation, and saved JSON resolve from the domain root. Keeping the former `/oss-maintainer-insights/` project prefix produces asset 404s on this domain. PR browser checks run against the same root path before deployment.

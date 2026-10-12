@@ -8,7 +8,7 @@ export default defineConfig({
   ...(process.env.CI ? { workers: 2 } : {}),
   reporter: [["list"], ["html", { open: "never" }]],
   use: {
-    baseURL: "http://127.0.0.1:4322/oss-maintainer-insights/",
+    baseURL: "http://127.0.0.1:4322/",
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
     ...devices["Desktop Chrome"],
@@ -17,7 +17,7 @@ export default defineConfig({
   webServer: {
     command:
       "npm run preview --workspace @oss-maintainer-insights/web -- --port 4322 --ignore-lock",
-    url: "http://127.0.0.1:4322/oss-maintainer-insights/",
+    url: "http://127.0.0.1:4322/",
     reuseExistingServer: false,
     timeout: 30000,
   },

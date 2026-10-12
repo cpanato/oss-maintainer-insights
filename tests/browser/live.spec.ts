@@ -59,7 +59,7 @@ async function explore(page: Page) {
   await page.getByRole("button", { name: "Explore repository" }).click();
 }
 
-test("initial page makes no API calls and supports prefixed links and validation", async ({
+test("initial page makes no API calls and supports root links and validation", async ({
   page,
 }) => {
   const calls = await fixture(page);
@@ -73,7 +73,7 @@ test("initial page makes no API calls and supports prefixed links and validation
   await expect(page.getByRole("alert")).toContainText("Enter owner/repository");
   expect(calls).toHaveLength(0);
   await page.getByRole("link", { name: "Methodology", exact: true }).click();
-  await expect(page).toHaveURL(/\/oss-maintainer-insights\/methodology\/$/);
+  await expect(page).toHaveURL(/\/methodology\/$/);
   await expect(
     page.getByRole("heading", { name: "A bounded live sample" }),
   ).toBeVisible();
@@ -299,4 +299,31 @@ test("uncataloged repository offers the historical contribution guide", async ({
   await expect(
     page.getByRole("heading", { name: "Open a catalog pull request" }),
   ).toBeVisible();
+});
+
+test("custom domain root serves stylesheets and page navigation", async ({
+  page,
+}) => {
+  const stylesheet = page.waitForResponse(
+    (response) =>
+      response.url().includes("/_astro/") && response.url().endsWith(".css"),
+  );
+  await page.goto("./methodology/");
+  const response = await stylesheet;
+  expect(response.status()).toBe(200);
+  expect(response.headers()["content-type"]).toContain("text/css");
+  await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute(
+    "href",
+    /^\/_astro\//,
+  );
+  await page
+    .getByRole("link", { name: "Explore repositories", exact: true })
+    .click();
+  await expect(page).toHaveURL("http://127.0.0.1:4322/");
+  await page.goto("./contributing/");
+  await expect(page).toHaveURL(/\/contributing\/$/);
+  await expect(page.locator('link[rel="stylesheet"]')).toHaveAttribute(
+    "href",
+    /^\/_astro\//,
+  );
 });
