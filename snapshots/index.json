@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-12T16:24:05Z",
+  "attempted_at": "2026-10-12T16:59:33Z",
   "entries": [
     {
       "repository": "ossf/scorecard",
@@ -19,9 +19,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 1207,
+      "status": "updated",
+      "requests": 848,
       "progress": {
         "window": {
           "start": "2026-07-14T15:29:30.000Z",
@@ -29,57 +28,24 @@
         },
         "enumerated_prs": 1900,
         "eligible_prs": 1765,
-        "covered_prs": 1056,
+        "covered_prs": 1765,
         "enumeration_complete": true
       }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "pending",
-      "reason": "cancelled",
-      "requests": 0,
-      "progress": {
-        "window": {
-          "start": "2026-07-14T15:42:06.000Z",
-          "end": "2026-10-12T15:42:06.000Z"
-        },
-        "enumerated_prs": 0,
-        "eligible_prs": 0,
-        "covered_prs": 0,
-        "enumeration_complete": false
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "helm/helm",
-      "status": "pending",
-      "reason": "cancelled",
-      "requests": 0,
-      "progress": {
-        "window": {
-          "start": "2026-07-14T15:50:24.000Z",
-          "end": "2026-10-12T15:50:24.000Z"
-        },
-        "enumerated_prs": 0,
-        "eligible_prs": 0,
-        "covered_prs": 0,
-        "enumeration_complete": false
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "cpanato/github-actions-dashboard",
-      "status": "pending",
-      "reason": "cancelled",
-      "requests": 0,
-      "progress": {
-        "window": {
-          "start": "2026-07-14T15:57:47.000Z",
-          "end": "2026-10-12T15:57:47.000Z"
-        },
-        "enumerated_prs": 0,
-        "eligible_prs": 0,
-        "covered_prs": 0,
-        "enumeration_complete": false
-      }
+      "status": "fresh",
+      "requests": 0
     }
   ]
 }
