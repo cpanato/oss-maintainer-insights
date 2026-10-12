@@ -1,5 +1,9 @@
 {
-  "policy": "newest-eight-human-prs-90-days-v1",
+  "sample_age": {
+    "oldest_created_at": "2026-08-09T17:27:46Z",
+    "newest_created_at": "2026-10-12T03:00:22Z"
+  },
+  "policy": "three-age-bands-eighteen-human-prs-90-days-v1",
   "result": {
     "schema_version": 1,
     "methodology_version": "1.0.0",
@@ -8,69 +12,102 @@
       "full_name": "ossf/scorecard"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-12T11:49:01.239Z",
+    "collected_at": "2026-10-12T13:29:02.000Z",
     "window": {
-      "start": "2026-07-14T11:49:01.239Z",
-      "end": "2026-10-12T11:49:01.239Z"
+      "start": "2026-07-14T13:29:02.000Z",
+      "end": "2026-10-12T13:29:02.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 11,
+      "bot_events": 34,
       "missing_event_actors": 0,
-      "self_events": 3
+      "self_events": 22
     },
     "creation_cohort": {
-      "eligible_prs": 8,
+      "eligible_prs": 18,
       "coverage": "complete_for_sample",
-      "authors": 3,
+      "authors": 11,
       "outcomes": {
-        "open": 3,
-        "closed_unmerged": 0,
-        "merged": 5
+        "open": 8,
+        "closed_unmerged": 3,
+        "merged": 7
       }
     },
     "review_activity": {
-      "eligible_prs": 8,
-      "covered_prs": 8,
+      "eligible_prs": 18,
+      "covered_prs": 18,
       "coverage": "complete_for_sample",
-      "review_units": 0,
-      "participants": 0,
-      "distribution": [],
+      "review_units": 7,
+      "participants": 4,
+      "distribution": [
+        {
+          "actor": {
+            "id": 119035493,
+            "login": "bilaldeveloper4312",
+            "type": "User"
+          },
+          "review_units": 4
+        },
+        {
+          "actor": {
+            "id": 567897,
+            "login": "justaugustus",
+            "type": "User"
+          },
+          "review_units": 1
+        },
+        {
+          "actor": {
+            "id": 1358764,
+            "login": "JamieMagee",
+            "type": "User"
+          },
+          "review_units": 1
+        },
+        {
+          "actor": {
+            "id": 8219709,
+            "login": "kamphaus",
+            "type": "User"
+          },
+          "review_units": 1
+        }
+      ],
       "concentration_80": {
-        "value": null,
-        "status": "insufficient_data"
+        "value": 3,
+        "status": "available"
       },
       "largest_reviewer_share": {
-        "value": null,
-        "status": "insufficient_data"
+        "value": 0.5714285714285714,
+        "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 8,
-      "covered_prs": 8,
+      "eligible_prs": 18,
+      "covered_prs": 18,
       "coverage": "complete_for_sample",
-      "responded_prs": 0,
-      "unanswered_prs": 8,
+      "responded_prs": 5,
+      "unanswered_prs": 13,
       "median_ms": {
-        "value": null,
-        "status": "insufficient_data"
+        "value": 95658000,
+        "status": "available"
       }
     }
   },
   "selection": {
-    "listed": 30,
-    "selected": 8,
-    "eligible_on_page": 13,
+    "listed": 90,
+    "selected": 18,
+    "eligible_on_page": 53,
     "truncated": true,
     "list_has_more": true
   },
-  "requests": 26,
+  "requests": 76,
   "rate": {
-    "remaining": 4759,
+    "remaining": 4905,
     "limit": 5000,
-    "resetAt": 1791809053000
+    "resetAt": 1791815303000
   },
   "failures": [],
   "complete": true

@@ -1,5 +1,9 @@
 {
-  "policy": "newest-eight-human-prs-90-days-v1",
+  "sample_age": {
+    "oldest_created_at": "2026-07-26T20:12:49Z",
+    "newest_created_at": "2026-10-05T13:36:56Z"
+  },
+  "policy": "three-age-bands-eighteen-human-prs-90-days-v1",
   "result": {
     "schema_version": 1,
     "methodology_version": "1.0.0",
@@ -8,32 +12,32 @@
       "full_name": "ossf/allstar"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-12T11:49:08.732Z",
+    "collected_at": "2026-10-12T13:29:30.000Z",
     "window": {
-      "start": "2026-07-14T11:49:08.732Z",
-      "end": "2026-10-12T11:49:08.732Z"
+      "start": "2026-07-14T13:29:30.000Z",
+      "end": "2026-10-12T13:29:30.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 5,
+      "bot_events": 14,
       "missing_event_actors": 0,
-      "self_events": 7
+      "self_events": 9
     },
     "creation_cohort": {
-      "eligible_prs": 8,
+      "eligible_prs": 11,
       "coverage": "complete_for_sample",
-      "authors": 5,
+      "authors": 8,
       "outcomes": {
-        "open": 5,
-        "closed_unmerged": 0,
+        "open": 6,
+        "closed_unmerged": 2,
         "merged": 3
       }
     },
     "review_activity": {
-      "eligible_prs": 8,
-      "covered_prs": 8,
+      "eligible_prs": 11,
+      "covered_prs": 11,
       "coverage": "complete_for_sample",
       "review_units": 1,
       "participants": 1,
@@ -57,11 +61,11 @@
       }
     },
     "first_response": {
-      "eligible_prs": 8,
-      "covered_prs": 8,
+      "eligible_prs": 11,
+      "covered_prs": 11,
       "coverage": "complete_for_sample",
       "responded_prs": 1,
-      "unanswered_prs": 7,
+      "unanswered_prs": 10,
       "median_ms": {
         "value": null,
         "status": "insufficient_data"
@@ -69,17 +73,17 @@
     }
   },
   "selection": {
-    "listed": 30,
-    "selected": 8,
-    "eligible_on_page": 10,
-    "truncated": true,
-    "list_has_more": true
+    "listed": 35,
+    "selected": 11,
+    "eligible_on_page": 11,
+    "truncated": false,
+    "list_has_more": false
   },
-  "requests": 26,
+  "requests": 48,
   "rate": {
-    "remaining": 4710,
+    "remaining": 4860,
     "limit": 5000,
-    "resetAt": 1791809053000
+    "resetAt": 1791815303000
   },
   "failures": [],
   "complete": true
