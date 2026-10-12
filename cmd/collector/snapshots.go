@@ -12,6 +12,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/cpanato/oss-maintainer-insights/internal/analysis"
 	"github.com/cpanato/oss-maintainer-insights/internal/github"
 	"github.com/cpanato/oss-maintainer-insights/internal/snapshot"
 	"github.com/cpanato/oss-maintainer-insights/schemas"
@@ -129,7 +130,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 		var prior snapshot.Public
 		validPrior := readJSON(publicPath, &prior) == nil && schemas.Validate("repository-snapshot", prior) == nil && strings.EqualFold(prior.Result.Repository.FullName, entry.Repository)
 		collected, parseErr := time.Parse(time.RFC3339Nano, prior.Result.CollectedAt)
-		if validPrior && prior.Policy == snapshot.CatalogPolicy && parseErr == nil && !*force && !now.Before(collected) && now.Sub(collected) < *maxAge {
+		if validPrior && prior.Policy == snapshot.CatalogPolicy && prior.Result.MethodologyVersion == analysis.MethodologyVersion && parseErr == nil && !*force && !now.Before(collected) && now.Sub(collected) < *maxAge {
 			report.Entries = append(report.Entries, attempt{Repository: entry.Repository, Status: "fresh"})
 			continue
 		}
@@ -160,7 +161,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 			if err := atomicJSON(statePath, state); err != nil {
 				return err
 			}
-			if validPrior && prior.Policy == current.Policy && prior.Complete && !current.Complete {
+			if validPrior && prior.Policy == current.Policy && prior.Result.MethodologyVersion == current.Result.MethodologyVersion && prior.Complete && !current.Complete {
 				status.Status = "preserved"
 				status.Reason = "partial"
 			} else if err := atomicJSON(publicPath, current); err != nil {

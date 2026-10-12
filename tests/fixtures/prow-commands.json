@@ -1,0 +1,62 @@
+[
+  {
+    "name": "standalone commands",
+    "body": "/lgtm\n/approve",
+    "expected": ["lgtm", "approve"]
+  },
+  {
+    "name": "repeat deduplication",
+    "body": "/lgtm\n/lgtm\n/approve no-issue",
+    "expected": ["lgtm", "approve"]
+  },
+  {
+    "name": "cancellations",
+    "body": "/lgtm cancel\n/remove-approve",
+    "expected": ["lgtm_cancel", "approve_cancel"]
+  },
+  {
+    "name": "reactivate in one comment",
+    "body": "/lgtm cancel\n/lgtm\n/approve\n/approve cancel",
+    "expected": ["lgtm_cancel", "lgtm", "approve_cancel"]
+  },
+  {
+    "name": "quoted and inline text",
+    "body": "> /lgtm\nPlease use /approve\n`/approve`\n    /lgtm\n\t/approve",
+    "expected": []
+  },
+  {
+    "name": "backtick code fence",
+    "body": "```sh\n/lgtm\n/approve\n```\n/approve",
+    "expected": ["approve"]
+  },
+  {
+    "name": "tilde code fence",
+    "body": "~~~~\n/lgtm\n~~~\n/approve\n~~~~\n/lgtm",
+    "expected": ["lgtm"]
+  },
+  {
+    "name": "hidden HTML comments",
+    "body": "<!--\n/lgtm\n-->\n/approve",
+    "expected": ["approve"]
+  },
+  {
+    "name": "unclosed hidden block",
+    "body": "<!-- /approve\n/lgtm",
+    "expected": []
+  },
+  {
+    "name": "unsupported arguments",
+    "body": "/lgtm somebody\n/approve somebody\n/approve cancel please\n/lgtm-ish",
+    "expected": []
+  },
+  {
+    "name": "CRLF and spaces",
+    "body": " /lgtm\r\n/approve\t\r\n",
+    "expected": ["lgtm", "approve"]
+  },
+  {
+    "name": "case-insensitive and no-issue",
+    "body": "/LGTM no-issue\n/APPROVE\n/APPROVE CANCEL",
+    "expected": ["lgtm", "approve_cancel"]
+  }
+]

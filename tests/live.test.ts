@@ -83,7 +83,7 @@ void test("live selection excludes drafts/bots/deleted authors, selects newest e
   );
   assert.equal(snapshot.requests, 20);
   assert.equal(snapshot.complete, false);
-  assert.equal(snapshot.result.review_activity.covered_prs, 8);
+  assert.equal(snapshot.result.review_activity.covered_prs, 5);
   assert.equal(snapshot.result.first_response.covered_prs, 5);
   assert.ok(api.paths.slice(2, 10).every((path) => path.endsWith("/reviews")));
   assert.ok(!JSON.stringify(snapshot).includes("DO NOT RETAIN"));
@@ -116,7 +116,7 @@ void test("a missing comment stream prevents an unanswered designation", async (
     client: api.client,
     now: () => observed,
   });
-  assert.equal(snapshot.result.review_activity.covered_prs, 1);
+  assert.equal(snapshot.result.review_activity.covered_prs, 0);
   assert.equal(snapshot.result.first_response.covered_prs, 0);
   assert.equal(snapshot.result.first_response.unanswered_prs, 0);
   assert.equal(snapshot.result.first_response.coverage, "unavailable");
@@ -324,4 +324,63 @@ void test("public catalog snapshots validate larger samples and creation age bou
     policy: "newest-eight-human-prs-90-days-v1",
   };
   assert.equal(parsePublicSnapshot(wrongPolicy, "example/repo"), null);
+});
+
+void test("live acquisition extracts Prow signals, deduplicates review sources, and drops raw bodies", async () => {
+  const api = client([pr(1)], (path) =>
+    path.endsWith("/reviews")
+      ? [event(1)]
+      : path.includes("/issues/")
+        ? [
+            { ...event(2), body: "/lgtm\nDO NOT RETAIN" },
+            { ...event(3), user: user(901), body: "/approve\nDO NOT RETAIN" },
+            {
+              ...event(4),
+              user: user(902),
+              body: "> /lgtm\n```\n/approve\n```",
+            },
+          ]
+        : [],
+  );
+  const snapshot = await collectLive("example/repo", {
+    client: api.client,
+    now: () => observed,
+  });
+  assert.equal(snapshot.complete, true);
+  assert.equal(snapshot.result.review_activity.review_units, 2);
+  assert.deepEqual(snapshot.result.review_activity.sources, {
+    github_review_units: 1,
+    prow_command_units: 2,
+  });
+  assert.ok(!JSON.stringify(snapshot).includes("DO NOT RETAIN"));
+  const storage = memory();
+  const cache = new LiveCache(storage, () => observed);
+  assert.equal(cache.write("example/repo", snapshot), true);
+  assert.equal(
+    cache.read("example/repo")!.result.review_activity.review_units,
+    2,
+  );
+  assert.ok(!JSON.stringify([...storage.values]).includes("DO NOT RETAIN"));
+});
+void test("legacy public snapshots stay readable and new source totals are checked", async () => {
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } = await import("../apps/web/src/lib/live.js");
+  const snapshot = JSON.parse(
+    readFileSync(
+      new URL("./fixtures/live-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  ) as import("../apps/web/src/lib/live.js").PublicSnapshot;
+  const missing = structuredClone(snapshot);
+  delete missing.result.review_activity.sources;
+  assert.equal(parsePublicSnapshot(missing, "example/repo"), null);
+  const invalid = structuredClone(snapshot);
+  invalid.result.review_activity.sources!.prow_command_units = 99;
+  assert.equal(parsePublicSnapshot(invalid, "example/repo"), null);
+  const legacy = structuredClone(snapshot);
+  legacy.result.methodology_version = "1.0.0";
+  delete legacy.result.review_activity.sources;
+  for (const row of legacy.result.review_activity.distribution)
+    delete row.sources;
+  assert.ok(parsePublicSnapshot(legacy, "example/repo"));
 });

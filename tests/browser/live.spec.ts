@@ -106,7 +106,7 @@ test("complete small sample displays denominators, caches, refreshes and clears"
   await expect(page.getByRole("status")).toContainText("cache cleared");
   expect(errors).toEqual([]);
 });
-test("request cap produces a partial sample with complete reviews and limited response coverage", async ({
+test("request cap produces a partial sample with limited combined review and response coverage", async ({
   page,
 }) => {
   const calls = await fixture(page, 12);
@@ -116,7 +116,7 @@ test("request cap produces a partial sample with complete reviews and limited re
   await expect(page.locator("#sample-description")).toContainText(
     "8 selected PRs",
   );
-  await expect(page.locator("#coverage")).toContainText("8/8");
+  await expect(page.locator("#coverage")).not.toContainText("8/8");
   await expect(page.locator("#coverage")).toContainText("5/8");
   await expect(page.locator("#response")).toHaveText("1.0 h");
   await expect(page.locator("#concentration")).toHaveText("1");
@@ -377,4 +377,85 @@ test("custom domain root serves stylesheets and page navigation", async ({
     "href",
     /^\/_astro\//,
   );
+});
+
+test("Prow command reviews render their sources without duplicate units or stored bodies", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.route(
+    "https://api.github.com/repositories/42/issues/*/comments*",
+    (route) =>
+      route.fulfill({
+        headers,
+        json: [
+          {
+            id: 2,
+            user: account(99),
+            created_at: responded,
+            body: "/lgtm\nPRIVATE_BODY_MARKER",
+          },
+          {
+            id: 3,
+            user: account(88),
+            created_at: responded,
+            body: "/approve\nPRIVATE_BODY_MARKER",
+          },
+          {
+            id: 4,
+            user: account(77),
+            created_at: responded,
+            body: "> /lgtm\n```\n/approve\n```",
+          },
+        ],
+      }),
+  );
+  await page.goto("./?repo=example/repo");
+  await expect(page.getByRole("status")).toContainText("Sample complete");
+  await expect(page.locator("#reviewers")).toHaveText("2");
+  await expect(page.locator("#review-units")).toHaveText("4 review units");
+  await expect(page.locator("#review-sources")).toContainText(
+    "2 GitHub review units · 4 Prow command units",
+  );
+  await expect(page.getByRole("table")).toContainText("GitHub: 2 · Prow: 2");
+  await expect(page.locator("#freshness")).toContainText("Methodology 1.1.0");
+  expect(await page.evaluate(() => JSON.stringify(localStorage))).not.toContain(
+    "PRIVATE_BODY_MARKER",
+  );
+  await page.setViewportSize({ width: 360, height: 780 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    ),
+  ).toBe(true);
+});
+test("legacy saved data is visibly labeled while requiring no GitHub requests", async ({
+  page,
+}) => {
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } =
+    await import("../../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/live-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.result.repository.full_name = "ossf/allstar";
+  saved.result.methodology_version = "1.0.0";
+  delete saved.result.review_activity.sources;
+  for (const row of saved.result.review_activity.distribution)
+    delete row.sources;
+  const calls = await fixture(page);
+  await page.route("**/data/ossf--allstar.json", (route) =>
+    route.fulfill({ json: saved }),
+  );
+  await page.goto("./?repo=ossf/allstar");
+  await expect(page.getByRole("status")).toContainText("No GitHub API calls");
+  await expect(page.locator("#review-sources")).toContainText(
+    "Legacy snapshot: Prow commands were not included",
+  );
+  await expect(page.locator("#freshness")).toContainText("Methodology 1.0.0");
+  expect(calls).toHaveLength(0);
 });

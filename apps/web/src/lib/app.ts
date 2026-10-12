@@ -86,7 +86,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   );
   text(
     "freshness",
-    `${source === "cache" ? "Cached result" : source === "saved" ? "Saved snapshot" : "Live query"} · Observed ${new Date(result.collected_at).toLocaleString()} · ${snapshot.requests}${source === "saved" ? "" : "/20"} requests at collection${source === "saved" || snapshot.rate.remaining === null ? "" : ` · API allowance at collection: ${snapshot.rate.remaining}`}`,
+    `${source === "cache" ? "Cached result" : source === "saved" ? "Saved snapshot" : "Live query"} · Observed ${new Date(result.collected_at).toLocaleString()} · ${snapshot.requests}${source === "saved" ? "" : "/20"} requests at collection · Methodology ${result.methodology_version}${source === "saved" || snapshot.rate.remaining === null ? "" : ` · API allowance at collection: ${snapshot.rate.remaining}`}`,
   );
   text("authors", String(result.creation_cohort.authors));
   text(
@@ -99,7 +99,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   );
   text(
     "reviewer-note",
-    `${reviews.covered_prs}/${reviews.eligible_prs} PRs with complete reviews`,
+    `${reviews.covered_prs}/${reviews.eligible_prs} PRs with complete ${result.methodology_version === "1.0.0" ? "GitHub reviews" : "review and comment streams"}`,
   );
   text(
     "concentration",
@@ -128,6 +128,14 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
       : `Median across ${response.responded_prs} responded PRs`,
   );
   text("review-units", `${reviews.review_units} review units`);
+  const sources = reviews.sources ?? {
+    github_review_units: reviews.review_units,
+    prow_command_units: 0,
+  };
+  text(
+    "review-sources",
+    `${sources.github_review_units} GitHub review units · ${sources.prow_command_units} Prow command units. Pairs appearing in both sources count once in the total.${result.methodology_version === "1.0.0" ? " Legacy snapshot: Prow commands were not included." : ""}`,
+  );
   const bars = element("distribution");
   const table = element("review-table");
   bars.replaceChildren();
@@ -157,6 +165,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
     row.append(account);
     for (const value of [
       String(item.review_units),
+      `GitHub: ${item.sources?.github_review_units ?? item.review_units} · Prow: ${item.sources?.prow_command_units ?? 0}`,
       `${(share * 100).toFixed(1)}%`,
     ]) {
       const cell = document.createElement("td");
@@ -189,7 +198,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
     ],
     ["Selected sample", String(selection.selected)],
     [
-      "Complete review streams",
+      "Complete review participation streams",
       `${reviews.covered_prs}/${reviews.eligible_prs}`,
     ],
     [

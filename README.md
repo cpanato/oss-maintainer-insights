@@ -2,7 +2,7 @@
 
 Explore review participation, response times, and maintenance trends in public GitHub repositories, with live queries and community-curated historical data.
 
-Status: early development. The UI supports saved catalog samples and live queries; Go generates validated samples with conditional checkpoints. Historical ingestion and monthly trends are still planned. Publication uses a dedicated `data` branch and GitHub Pages artifacts. See the [implementation plan](docs/design/oss-maintainer-insights-implementation-plan.md).
+Status: early development. The UI supports saved catalog samples and live queries; Go generates validated samples with conditional checkpoints. Review participation includes GitHub reviews and human Prow `/lgtm`/`/approve` signals, deduplicated per reviewer and PR. Historical ingestion and monthly trends are still planned. Publication uses a dedicated `data` branch and GitHub Pages artifacts. See the [implementation plan](docs/design/oss-maintainer-insights-implementation-plan.md).
 
 ## Development
 

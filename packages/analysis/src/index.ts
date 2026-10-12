@@ -8,9 +8,11 @@ import type {
   Review,
 } from "./types.js";
 export type * from "./types.js";
+export { parseReviewCommands } from "./prow.js";
+import { reviewPairs } from "./prow.js";
 
 export const SCHEMA_VERSION = 1;
-export const METHODOLOGY_VERSION = "1.0.0";
+export const METHODOLOGY_VERSION = "1.1.0";
 export const MIN_OBSERVATIONS = 5;
 
 /** Normalize account labels at the API boundary; stable IDs remain identity. */
@@ -87,6 +89,15 @@ export function analyze(input: AnalysisInput): AnalysisResult {
         ids.add(event.id);
         timestamp(event.occurred_at);
         normalizeActor(event.actor);
+        if (
+          event.review_commands?.some(
+            (command) =>
+              !["lgtm", "approve", "lgtm_cancel", "approve_cancel"].includes(
+                command,
+              ),
+          )
+        )
+          throw new Error("Invalid review command");
       }
     }
     const author = normalizeActor(pr.author);
@@ -134,21 +145,31 @@ export function analyze(input: AnalysisInput): AnalysisResult {
   const outcomes = { open: 0, closed_unmerged: 0, merged: 0 };
   for (const pr of cohort) outcomes[pr.outcome]++;
   const reviewPopulation = input.mode === "live_sample" ? cohort : eligible;
-  const coveredReviews = reviewPopulation.filter((pr) => pr.coverage.reviews);
+  const coveredReviews = reviewPopulation.filter(
+    (pr) =>
+      pr.coverage.reviews &&
+      pr.coverage.issue_comments &&
+      pr.coverage.review_comments,
+  );
   const reviewers = new Map<
     number,
-    { actor: Actor; review_units: number; labelAt: number; labelEvent: string }
+    {
+      actor: Actor;
+      review_units: number;
+      sources: { github_review_units: number; prow_command_units: number };
+      labelAt: number;
+      labelEvent: string;
+    }
   >();
   for (const pr of coveredReviews) {
-    const pairs = new Map<number, Review>();
-    for (const review of eventsByPR.get(pr.id)!.reviews) {
-      const at = timestamp(review.occurred_at);
-      if (at < timestamp(pr.created_at) || at > observed) continue;
-      const previous = pairs.get(review.actor!.id);
-      if (!previous || at < timestamp(previous.occurred_at))
-        pairs.set(review.actor!.id, review);
-    }
-    for (const review of pairs.values()) {
+    const pairs = reviewPairs(
+      eventsByPR.get(pr.id)!.reviews,
+      eventsByPR.get(pr.id)!.comments,
+      timestamp(pr.created_at),
+      observed,
+    );
+    for (const pair of pairs.values()) {
+      const review = pair.event;
       const at = timestamp(review.occurred_at);
       // Historical units belong to the earliest qualifying review's month.
       if (input.mode === "historical" && (at < start || at >= end)) continue;
@@ -158,11 +179,17 @@ export function analyze(input: AnalysisInput): AnalysisResult {
         reviewers.set(actor.id, {
           actor,
           review_units: 1,
+          sources: {
+            github_review_units: Number(pair.github),
+            prow_command_units: Number(pair.prow),
+          },
           labelAt: at,
           labelEvent: review.id,
         });
       else {
         current.review_units++;
+        current.sources.github_review_units += Number(pair.github);
+        current.sources.prow_command_units += Number(pair.prow);
         if (
           at > current.labelAt ||
           (at === current.labelAt && review.id > current.labelEvent)
@@ -176,7 +203,11 @@ export function analyze(input: AnalysisInput): AnalysisResult {
   }
   const distribution = [...reviewers.values()]
     .sort((a, b) => b.review_units - a.review_units || a.actor.id - b.actor.id)
-    .map(({ actor, review_units }) => ({ actor, review_units }));
+    .map(({ actor, review_units, sources }) => ({
+      actor,
+      review_units,
+      sources,
+    }));
   const units = distribution.reduce(
     (sum, actor) => sum + actor.review_units,
     0,
@@ -244,6 +275,16 @@ export function analyze(input: AnalysisInput): AnalysisResult {
         reviewPopulation.length,
       ),
       review_units: units,
+      sources: {
+        github_review_units: distribution.reduce(
+          (sum, item) => sum + item.sources.github_review_units,
+          0,
+        ),
+        prow_command_units: distribution.reduce(
+          (sum, item) => sum + item.sources.prow_command_units,
+          0,
+        ),
+      },
       participants: distribution.length,
       distribution,
       concentration_80: {

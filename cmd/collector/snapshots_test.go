@@ -85,6 +85,32 @@ func TestSnapshotsPreserveCompleteOnFailureAndSkipFresh(t *testing.T) {
 		t.Fatal("fresh legacy policy blocked recollection or failure preservation")
 	}
 
+	// A fresh dataset using the old methodology must also be recollected.
+	saved.Policy = snapshot.CatalogPolicy
+	saved.SampleAge = &snapshot.SampleAge{Oldest: "2026-01-10T00:00:00Z", Newest: "2026-01-10T00:00:00Z"}
+	saved.Result.MethodologyVersion = "1.0.0"
+	saved.Result.ReviewActivity.Sources = nil
+	for index := range saved.Result.ReviewActivity.Distribution {
+		saved.Result.ReviewActivity.Distribution[index].Sources = nil
+	}
+	if err := atomicJSON(path, saved); err != nil {
+		t.Fatal(err)
+	}
+	calls = 0
+	output.Reset()
+	if err := run(args, strings.NewReader(""), &output); err != nil {
+		t.Fatal(err)
+	}
+	if calls != 1 || !strings.Contains(output.String(), `"status":"preserved"`) {
+		t.Fatal("old methodology suppressed command recollection or failure preservation")
+	}
+	if err := readJSON(path, &after); err != nil {
+		t.Fatal(err)
+	}
+	if after.Result.MethodologyVersion != "1.0.0" {
+		t.Fatal("failed migration rewrote legacy data")
+	}
+
 }
 func TestSnapshotsRejectDuplicateCatalogWithoutNetwork(t *testing.T) {
 	directory := t.TempDir()

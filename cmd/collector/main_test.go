@@ -16,7 +16,7 @@ func TestAnalyze(t *testing.T) {
 	if err := run([]string{"analyze"}, bytes.NewReader(data), &output); err != nil {
 		t.Fatal(err)
 	}
-	if !strings.Contains(output.String(), `"methodology_version":"1.0.0"`) {
+	if !strings.Contains(output.String(), `"methodology_version":"1.1.0"`) {
 		t.Fatal("missing version")
 	}
 }

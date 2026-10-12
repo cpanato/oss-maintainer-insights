@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-const MethodologyVersion = "1.0.0"
+const MethodologyVersion = "1.1.0"
 const MinObservations = 5
 
 func utc(value string) (time.Time, error) {
@@ -73,6 +73,7 @@ func Analyze(input Input) (Result, error) {
 	}
 	result = Result{SchemaVersion: 1, MethodologyVersion: MethodologyVersion, Repository: input.Repository, Mode: input.Mode, CollectedAt: input.ObservedAt, Window: input.Window}
 	result.ReviewActivity.Distribution = []Reviewer{}
+	result.ReviewActivity.Sources = &ReviewSources{}
 	prIDs := map[int64]bool{}
 	eligible := []PullRequest{}
 	createdAt := map[int64]time.Time{}
@@ -109,6 +110,11 @@ func Analyze(input Input) (Result, error) {
 					return Result{}, errors.New("invalid or duplicate event")
 				}
 				ids[e.ID] = true
+				for _, command := range e.ReviewCommands {
+					if command != "lgtm" && command != "approve" && command != "lgtm_cancel" && command != "approve_cancel" {
+						return Result{}, errors.New("invalid review command")
+					}
+				}
 				if _, err := utc(e.OccurredAt); err != nil {
 					return Result{}, err
 				}
@@ -187,29 +193,28 @@ func Analyze(input Input) (Result, error) {
 	labelAt := map[int64]time.Time{}
 	labelEvent := map[int64]string{}
 	for _, pr := range population {
-		if !pr.Coverage.Reviews {
+		if !pr.Coverage.Reviews || !pr.Coverage.IssueComments || !pr.Coverage.ReviewComments {
 			continue
 		}
 		result.ReviewActivity.CoveredPRs++
-		pairs := map[int64]Review{}
-		for _, r := range events[pr.ID].reviews {
-			at, _ := utc(r.OccurredAt)
-			if at.Before(createdAt[pr.ID]) || at.After(observed) {
-				continue
-			}
-			old, ok := pairs[r.Actor.ID]
-			previous, _ := utc(old.OccurredAt)
-			if !ok || at.Before(previous) {
-				pairs[r.Actor.ID] = r
-			}
-		}
-		for _, r := range pairs {
+		pairs := reviewPairs(events[pr.ID].reviews, events[pr.ID].comments, createdAt[pr.ID], observed)
+		for _, pair := range pairs {
+			r := pair.event
 			at, _ := utc(r.OccurredAt)
 			if input.Mode == "historical" && (at.Before(start) || !at.Before(end)) {
 				continue
 			}
 			id := r.Actor.ID
 			current := reviewers[id]
+			if current.Sources == nil {
+				current.Sources = &ReviewSources{}
+			}
+			if pair.github {
+				current.Sources.GitHub++
+			}
+			if pair.prow {
+				current.Sources.Prow++
+			}
 			current.ReviewUnits++
 			if current.ReviewUnits == 1 || at.After(labelAt[id]) || (at.Equal(labelAt[id]) && r.ID > labelEvent[id]) {
 				current.Actor = *r.Actor
@@ -223,6 +228,8 @@ func Analyze(input Input) (Result, error) {
 	for _, r := range reviewers {
 		result.ReviewActivity.Distribution = append(result.ReviewActivity.Distribution, r)
 		result.ReviewActivity.ReviewUnits += r.ReviewUnits
+		result.ReviewActivity.Sources.GitHub += r.Sources.GitHub
+		result.ReviewActivity.Sources.Prow += r.Sources.Prow
 	}
 	distribution := result.ReviewActivity.Distribution
 	sort.Slice(distribution, func(i, j int) bool {

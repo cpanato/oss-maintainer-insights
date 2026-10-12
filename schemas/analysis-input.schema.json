@@ -205,6 +205,13 @@
                     "PENDING",
                     "DISMISSED"
                   ]
+                },
+                "review_commands": {
+                  "type": "array",
+                  "maxItems": 4,
+                  "items": {
+                    "enum": ["lgtm", "approve", "lgtm_cancel", "approve_cancel"]
+                  }
                 }
               }
             }
@@ -250,6 +257,13 @@
                   "type": "string",
                   "format": "date-time",
                   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z$"
+                },
+                "review_commands": {
+                  "type": "array",
+                  "maxItems": 4,
+                  "items": {
+                    "enum": ["lgtm", "approve", "lgtm_cancel", "approve_cancel"]
+                  }
                 }
               }
             }
@@ -295,6 +309,13 @@
                   "type": "string",
                   "format": "date-time",
                   "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z$"
+                },
+                "review_commands": {
+                  "type": "array",
+                  "maxItems": 4,
+                  "items": {
+                    "enum": ["lgtm", "approve", "lgtm_cancel", "approve_cancel"]
+                  }
                 }
               }
             }

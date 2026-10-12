@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "methodology_version": "1.0.0",
+  "methodology_version": "1.1.0",
   "repository": {
     "id": 123,
     "full_name": "example/project"
@@ -42,7 +42,11 @@
           "login": "reviewer-a",
           "type": "User"
         },
-        "review_units": 4
+        "review_units": 4,
+        "sources": {
+          "github_review_units": 4,
+          "prow_command_units": 0
+        }
       },
       {
         "actor": {
@@ -50,7 +54,11 @@
           "login": "reviewer-b",
           "type": "User"
         },
-        "review_units": 1
+        "review_units": 1,
+        "sources": {
+          "github_review_units": 1,
+          "prow_command_units": 0
+        }
       }
     ],
     "concentration_80": {
@@ -60,6 +68,10 @@
     "largest_reviewer_share": {
       "value": 0.8,
       "status": "available"
+    },
+    "sources": {
+      "github_review_units": 5,
+      "prow_command_units": 0
     }
   },
   "first_response": {

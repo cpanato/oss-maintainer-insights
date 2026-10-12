@@ -17,12 +17,13 @@ import (
 )
 
 type catalogFake struct {
-	data       fixture
-	prs        []rawPR
-	used       int
-	limit      int
-	incomplete bool
-	emptyBand  bool
+	searchOffset time.Duration
+	data         fixture
+	prs          []rawPR
+	used         int
+	limit        int
+	incomplete   bool
+	emptyBand    bool
 }
 
 func (f *catalogFake) RequestsUsed() int           { return f.used }
@@ -50,8 +51,9 @@ func (f *catalogFake) GetConditional(_ context.Context, path string, target any,
 		items := []searchItem{}
 		for _, pr := range f.prs {
 			created, _ := timestamp(pr.Created)
+			created = created.Add(f.searchOffset)
 			if !created.Before(start) && created.Before(end) {
-				items = append(items, searchItem{Number: pr.Number, User: pr.User, Created: pr.Created, PullRequest: &struct{}{}})
+				items = append(items, searchItem{Number: pr.Number, User: pr.User, Created: created.Format(time.RFC3339), PullRequest: &struct{}{}})
 			}
 		}
 		if f.emptyBand && len(items) > 0 && items[0].Number >= 110 && items[0].Number < 120 {
@@ -155,7 +157,7 @@ func TestCatalogBudgetPreservesCoverageDenominators(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if public.Complete || public.Requests != 30 || public.Result.ReviewActivity.CoveredPRs != 8 || public.Result.FirstResponse.CoveredPRs != 0 || public.Result.FirstResponse.UnansweredPRs != 0 {
+	if public.Complete || public.Requests != 30 || public.Result.ReviewActivity.CoveredPRs != 0 || public.Result.FirstResponse.CoveredPRs != 0 || public.Result.FirstResponse.UnansweredPRs != 0 {
 		t.Fatalf("budget mislabeled coverage: %+v", public)
 	}
 }
@@ -205,5 +207,32 @@ func TestCatalogThroughNativeHTTPClient(t *testing.T) {
 	}
 	if !public.Complete || public.Selection.Selected != 18 || public.Requests != 76 {
 		t.Fatalf("native HTTP acquisition failed: %+v", public)
+	}
+}
+
+func TestCatalogUsesDetailedCreationTimeWhenSearchDiffers(t *testing.T) {
+	client, observed := catalogSource(t)
+	client.searchOffset = time.Second
+	public, _, err := CollectCatalog(context.Background(), client, Entry{Repository: "example/repo"}, observed, State{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !public.Complete || public.Selection.Selected != 18 || public.SampleAge.Newest != client.prs[0].Created {
+		t.Fatalf("search timestamp mismatch rejected a valid sample: %+v", public)
+	}
+}
+func TestCatalogDoesNotPlaceDetailedPRInWrongAgeBand(t *testing.T) {
+	client, observed := catalogSource(t)
+	client.searchOffset = time.Second
+	// Search places this at the start of the newest band; actual PR creation
+	// precedes that boundary. It must not silently enter the wrong band.
+	client.prs[0].Created = observed.Add(-30*24*time.Hour - time.Second).Format(time.RFC3339)
+	client.prs = append(client.prs[:6], client.prs[7:]...)
+	public, _, err := CollectCatalog(context.Background(), client, Entry{Repository: "example/repo"}, observed, State{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if public.Selection.Selected != 17 {
+		t.Fatalf("cross-boundary candidate was counted: %+v", public.Selection)
 	}
 }

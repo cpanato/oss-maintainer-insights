@@ -14,10 +14,16 @@ type Window struct {
 	Start string `json:"start"`
 	End   string `json:"end"`
 }
+type ReviewSources struct {
+	GitHub int `json:"github_review_units"`
+	Prow   int `json:"prow_command_units"`
+}
+
 type Event struct {
-	ID         string `json:"id"`
-	Actor      *Actor `json:"actor"`
-	OccurredAt string `json:"occurred_at"`
+	ReviewCommands []string `json:"review_commands,omitempty"`
+	ID             string   `json:"id"`
+	Actor          *Actor   `json:"actor"`
+	OccurredAt     string   `json:"occurred_at"`
 }
 type Review struct {
 	Event
@@ -77,18 +83,20 @@ type CreationCohort struct {
 	Outcomes    Outcomes `json:"outcomes"`
 }
 type Reviewer struct {
-	Actor       Actor `json:"actor"`
-	ReviewUnits int   `json:"review_units"`
+	Sources     *ReviewSources `json:"sources,omitempty"`
+	Actor       Actor          `json:"actor"`
+	ReviewUnits int            `json:"review_units"`
 }
 type ReviewActivity struct {
-	EligiblePRs          int        `json:"eligible_prs"`
-	CoveredPRs           int        `json:"covered_prs"`
-	Coverage             string     `json:"coverage"`
-	ReviewUnits          int        `json:"review_units"`
-	Participants         int        `json:"participants"`
-	Distribution         []Reviewer `json:"distribution"`
-	Concentration80      Metric     `json:"concentration_80"`
-	LargestReviewerShare Metric     `json:"largest_reviewer_share"`
+	Sources              *ReviewSources `json:"sources,omitempty"`
+	EligiblePRs          int            `json:"eligible_prs"`
+	CoveredPRs           int            `json:"covered_prs"`
+	Coverage             string         `json:"coverage"`
+	ReviewUnits          int            `json:"review_units"`
+	Participants         int            `json:"participants"`
+	Distribution         []Reviewer     `json:"distribution"`
+	Concentration80      Metric         `json:"concentration_80"`
+	LargestReviewerShare Metric         `json:"largest_reviewer_share"`
 }
 type FirstResponse struct {
 	EligiblePRs   int    `json:"eligible_prs"`

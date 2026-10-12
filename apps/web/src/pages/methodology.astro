@@ -29,7 +29,7 @@ const base = import.meta.env.BASE_URL;
       </nav>
     </header>
     <main id="main" class="wrap methodology">
-      <p class="eyebrow">METHODOLOGY 1.0.0</p>
+      <p class="eyebrow">METHODOLOGY 1.1.0</p>
       <h1>
         Read the numbers
         <br />
@@ -78,11 +78,22 @@ const base = import.meta.env.BASE_URL;
         <h2>Review participation</h2>
         <p>
           One review unit is one reviewer–PR pair with at least one submitted
-          approved, changes requested, or commented review. Repeated reviews by
-          the same GitHub user ID on a PR count once. Pending and dismissed
-          reviews, bots, deleted actors, self reviews, and events outside
+          approved, changes requested, or commented review, or an active human
+          /lgtm or /approve command. Repeated reviews and commands by the same
+          GitHub user ID on a PR count once. Pending and dismissed reviews,
+          bots, deleted actors, self reviews, and events outside
           creation-to-observation time are excluded. A PR contributes only when
-          its review pagination is complete.
+          its review and both comment streams are complete.
+        </p>
+        <p>
+          Commands are standalone lines in comments or qualifying review bodies.
+          Quoted examples and code blocks are ignored. Cancel and remove
+          commands withdraw that person's corresponding signal; another active
+          command or a GitHub review can still retain the pair. Source counts
+          distinguish GitHub reviews and Prow commands and can overlap. These
+          are observed review intentions; OWNERS authorization and Prow label
+          state are not inferred. Methodology 1.1.0 applies this convention
+          across repositories.
         </p>
         <p>
           Concentration 80 is the smallest number of reviewers whose units reach

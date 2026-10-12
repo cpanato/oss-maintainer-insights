@@ -149,25 +149,33 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
               <span id="review-units" class="tag"></span>
             </div>
             <p class="muted">
-              One unit per reviewer–PR pair. Repeated reviews on the same PR
-              count once.
+              One unit per reviewer–PR pair. Repeated reviews on the same PR and
+              Prow commands count once.
             </p>
+            <p id="review-sources" class="muted"></p>
             <div
               id="distribution"
               class="distribution"
               aria-hidden="true"
             ></div>
-            <table>
-              <caption>Review participation data</caption>
-              <thead>
-                <tr>
-                  <th scope="col">Reviewer</th>
-                  <th scope="col">Review units</th>
-                  <th scope="col">Share</th>
-                </tr>
-              </thead>
-              <tbody id="review-table"></tbody>
-            </table>
+            <div
+              class="table-scroll"
+              tabindex="0"
+              aria-label="Review participation table"
+            >
+              <table>
+                <caption>Review participation data</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Reviewer</th>
+                    <th scope="col">Review units</th>
+                    <th scope="col">Sources</th>
+                    <th scope="col">Share</th>
+                  </tr>
+                </thead>
+                <tbody id="review-table"></tbody>
+              </table>
+            </div>
             <p id="distribution-empty" hidden>
               No qualifying reviews in the covered sample.
             </p>

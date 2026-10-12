@@ -4,7 +4,15 @@ export interface Actor {
   type: "User" | "Bot";
 }
 
+export type ReviewCommand =
+  "lgtm" | "approve" | "lgtm_cancel" | "approve_cancel";
+export interface ReviewSources {
+  github_review_units: number;
+  prow_command_units: number;
+}
+
 export interface Event {
+  review_commands?: ReviewCommand[];
   id: string;
   actor: Actor | null;
   occurred_at: string;
@@ -52,7 +60,7 @@ export interface Metric {
 
 export interface AnalysisResult {
   schema_version: 1;
-  methodology_version: "1.0.0";
+  methodology_version: "1.0.0" | "1.1.0";
   repository: AnalysisInput["repository"];
   mode: AnalysisInput["mode"];
   collected_at: string;
@@ -75,9 +83,14 @@ export interface AnalysisResult {
     eligible_prs: number;
     covered_prs: number;
     coverage: Coverage;
+    sources?: ReviewSources;
     review_units: number;
     participants: number;
-    distribution: { actor: Actor; review_units: number }[];
+    distribution: {
+      actor: Actor;
+      review_units: number;
+      sources?: ReviewSources;
+    }[];
     concentration_80: Metric;
     largest_reviewer_share: Metric;
   };
