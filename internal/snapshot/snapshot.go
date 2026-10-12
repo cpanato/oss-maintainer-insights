@@ -42,8 +42,15 @@ type Failure struct {
 	Reason string `json:"reason"`
 }
 
+// SampleAge describes selected creation times without publishing individual PRs.
+type SampleAge struct {
+	Oldest string `json:"oldest_created_at"`
+	Newest string `json:"newest_created_at"`
+}
+
 // Public contains aggregates only. Source events and validators never enter website artifacts.
 type Public struct {
+	SampleAge *SampleAge      `json:"sample_age,omitempty"`
 	Policy    string          `json:"policy"`
 	Result    analysis.Result `json:"result"`
 	Selection Selection       `json:"selection"`
@@ -233,9 +240,24 @@ func reason(err error) string {
 
 // Collect revalidates every selected stream, including older PRs. Unchanged pages use sanitized checkpoints.
 func Collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State) (Public, State, error) {
+	return collect(ctx, client, entry, observed, previous, false)
+}
+
+// CollectCatalog samples three disjoint creation-age bands without selecting for activity.
+func CollectCatalog(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State) (Public, State, error) {
+	return collect(ctx, client, entry, observed, previous, true)
+}
+
+const CatalogPolicy = "three-age-bands-eighteen-human-prs-90-days-v1"
+
+func collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, catalog bool) (Public, State, error) {
 	observed = observed.UTC().Truncate(time.Millisecond)
-	state := State{Version: 1, Policy: QueryPolicy, Repository: entry.Repository, Pages: map[string]Page{}}
-	if previous.Version != 1 || previous.Policy != QueryPolicy || !strings.EqualFold(previous.Repository, entry.Repository) {
+	policy := QueryPolicy
+	if catalog {
+		policy = CatalogPolicy
+	}
+	state := State{Version: 1, Policy: policy, Repository: entry.Repository, Pages: map[string]Page{}}
+	if previous.Version != 1 || previous.Policy != policy || !strings.EqualFold(previous.Repository, entry.Repository) {
 		previous = State{}
 	}
 	r := reader{client: client, previous: previous, next: state}
@@ -258,55 +280,69 @@ func Collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		return Public{}, state, &github.Failure{Reason: "invalid_response"}
 	}
 	path = "/repositories/" + strconv.FormatInt(metadata.ID, 10)
-	var records []rawPR
-	next, err := r.get(ctx, path+"/pulls?state=all&sort=created&direction=desc&per_page=30", &records)
-	if err != nil {
-		return Public{}, state, err
-	}
-	if records == nil || len(records) > 30 {
-		return Public{}, state, &github.Failure{Reason: "invalid_response"}
-	}
-	bots := map[int64]bool{}
-	for _, id := range entry.BotIDs {
-		bots[id] = true
-	}
-	if observed.IsZero() {
-		observed = time.Now().UTC().Truncate(time.Millisecond)
-	}
-	start := observed.Add(-90 * 24 * time.Hour)
-	eligible := []rawPR{}
-	seen := map[int64]bool{}
-	for _, pr := range records {
-		if pr.ID <= 0 || pr.ID > 9007199254740991 || pr.Number <= 0 || pr.Draft == nil || seen[pr.ID] || (pr.State != "open" && pr.State != "closed") {
+	var eligible []rawPR
+	var selection Selection
+	if catalog {
+		if observed.IsZero() {
+			observed = time.Now().UTC()
+		}
+		observed = observed.Truncate(time.Second)
+		eligible, selection, err = r.catalogPRs(ctx, path, metadata.FullName, entry.BotIDs, observed)
+		if err != nil {
+			return Public{}, r.next, err
+		}
+	} else {
+		var records []rawPR
+		next, err := r.get(ctx, path+"/pulls?state=all&sort=created&direction=desc&per_page=30", &records)
+		if err != nil {
+			return Public{}, state, err
+		}
+		if records == nil || len(records) > 30 {
 			return Public{}, state, &github.Failure{Reason: "invalid_response"}
 		}
-		seen[pr.ID] = true
-		created, err := timestamp(pr.Created)
-		if err != nil {
-			return Public{}, state, err
+		bots := map[int64]bool{}
+		for _, id := range entry.BotIDs {
+			bots[id] = true
 		}
-		user, err := actor(pr.User)
-		if err != nil {
-			return Public{}, state, err
+		if observed.IsZero() {
+			observed = time.Now().UTC().Truncate(time.Millisecond)
 		}
-		if *pr.Draft || user == nil || user.Type != "User" || bots[user.ID] || created.Before(start) || !created.Before(observed) {
-			continue
+		start := observed.Add(-90 * 24 * time.Hour)
+		eligible = []rawPR{}
+		seen := map[int64]bool{}
+		for _, pr := range records {
+			if pr.ID <= 0 || pr.ID > 9007199254740991 || pr.Number <= 0 || pr.Draft == nil || seen[pr.ID] || (pr.State != "open" && pr.State != "closed") {
+				return Public{}, state, &github.Failure{Reason: "invalid_response"}
+			}
+			seen[pr.ID] = true
+			created, err := timestamp(pr.Created)
+			if err != nil {
+				return Public{}, state, err
+			}
+			user, err := actor(pr.User)
+			if err != nil {
+				return Public{}, state, err
+			}
+			if *pr.Draft || user == nil || user.Type != "User" || bots[user.ID] || created.Before(start) || !created.Before(observed) {
+				continue
+			}
+			eligible = append(eligible, pr)
 		}
-		eligible = append(eligible, pr)
+		sort.Slice(eligible, func(i, j int) bool {
+			if eligible[i].Created == eligible[j].Created {
+				return eligible[i].Number > eligible[j].Number
+			}
+			a, _ := timestamp(eligible[i].Created)
+			b, _ := timestamp(eligible[j].Created)
+			return a.After(b)
+		})
+		selection = Selection{Listed: len(records), Eligible: len(eligible), Truncated: len(eligible) > 8, More: next != ""}
+		if len(eligible) > 8 {
+			eligible = eligible[:8]
+		}
+		selection.Selected = len(eligible)
 	}
-	sort.Slice(eligible, func(i, j int) bool {
-		if eligible[i].Created == eligible[j].Created {
-			return eligible[i].Number > eligible[j].Number
-		}
-		a, _ := timestamp(eligible[i].Created)
-		b, _ := timestamp(eligible[j].Created)
-		return a.After(b)
-	})
-	selection := Selection{Listed: len(records), Eligible: len(eligible), Truncated: len(eligible) > 8, More: next != ""}
-	if len(eligible) > 8 {
-		eligible = eligible[:8]
-	}
-	selection.Selected = len(eligible)
+	start := observed.Add(-90 * 24 * time.Hour)
 	input := analysis.Input{SchemaVersion: 1, Repository: analysis.Repository{ID: metadata.ID, FullName: metadata.FullName}, Mode: "live_sample", ObservedAt: observed.Format("2006-01-02T15:04:05.000Z"), Window: analysis.Window{Start: start.Format("2006-01-02T15:04:05.000Z"), End: observed.Format("2006-01-02T15:04:05.000Z")}, Enumeration: analysis.Enumeration{CreationCohort: true, ReviewActivity: true}, BotIDs: append([]int64{}, entry.BotIDs...), PullRequests: []analysis.PullRequest{}}
 	for _, raw := range eligible {
 		user, _ := actor(raw.User)
@@ -371,7 +407,22 @@ func Collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		value := rate.ResetAt.UnixMilli()
 		reset = &value
 	}
-	public := Public{Policy: QueryPolicy, Result: result, Selection: selection, Requests: client.RequestsUsed(), Rate: Rate{Remaining: rate.Remaining, Limit: rate.Limit, ResetAt: reset}, Failures: failures, Complete: complete}
+	public := Public{Policy: policy, Result: result, Selection: selection, Requests: client.RequestsUsed(), Rate: Rate{Remaining: rate.Remaining, Limit: rate.Limit, ResetAt: reset}, Failures: failures, Complete: complete}
+	if catalog && len(eligible) > 0 {
+		age := &SampleAge{Oldest: eligible[0].Created, Newest: eligible[0].Created}
+		for _, pr := range eligible {
+			at, _ := timestamp(pr.Created)
+			oldest, _ := timestamp(age.Oldest)
+			newest, _ := timestamp(age.Newest)
+			if at.Before(oldest) {
+				age.Oldest = pr.Created
+			}
+			if at.After(newest) {
+				age.Newest = pr.Created
+			}
+		}
+		public.SampleAge = age
+	}
 	if err := schemas.Validate("repository-snapshot", public); err != nil {
 		return Public{}, state, err
 	}

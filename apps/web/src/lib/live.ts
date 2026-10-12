@@ -37,13 +37,15 @@ import type {
 } from "../../../../packages/github/src/index.js";
 
 export const QUERY_POLICY = "newest-eight-human-prs-90-days-v1";
+export const CATALOG_POLICY = "three-age-bands-eighteen-human-prs-90-days-v1";
 export interface StreamFailure {
   pr: number;
   stream: string;
   reason: FailureReason;
 }
 export interface PublicSnapshot {
-  policy: typeof QUERY_POLICY;
+  policy: typeof QUERY_POLICY | typeof CATALOG_POLICY;
+  sample_age?: { oldest_created_at: string; newest_created_at: string };
   result: AnalysisResult;
   selection: {
     listed: number;
@@ -92,6 +94,17 @@ export function parsePublicSnapshot(
         response.covered_prs !== response.eligible_prs))
   )
     return null;
+  if (snapshot.sample_age) {
+    const oldest = Date.parse(snapshot.sample_age.oldest_created_at);
+    const newest = Date.parse(snapshot.sample_age.newest_created_at);
+    if (
+      snapshot.selection.selected === 0 ||
+      oldest > newest ||
+      oldest < Date.parse(snapshot.result.window.start) ||
+      newest >= Date.parse(snapshot.result.collected_at)
+    )
+      return null;
+  }
   return snapshot;
 }
 export interface LiveOptions {

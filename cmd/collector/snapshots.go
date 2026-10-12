@@ -103,7 +103,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 	if err := json.Unmarshal(data, &entries); err != nil {
 		return err
 	}
-	// Twenty reviewed entries bound a run to 600 requests, below the 700-request run budget.
+	// Divide the 700-request run cap fairly; the initial seven projects get up to 90 each.
 	if len(entries) > 20 {
 		return errors.New("bounded sample collector supports at most 20 catalog entries")
 	}
@@ -129,7 +129,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 		var prior snapshot.Public
 		validPrior := readJSON(publicPath, &prior) == nil && schemas.Validate("repository-snapshot", prior) == nil && strings.EqualFold(prior.Result.Repository.FullName, entry.Repository)
 		collected, parseErr := time.Parse(time.RFC3339Nano, prior.Result.CollectedAt)
-		if validPrior && parseErr == nil && !*force && !now.Before(collected) && now.Sub(collected) < *maxAge {
+		if validPrior && prior.Policy == snapshot.CatalogPolicy && parseErr == nil && !*force && !now.Before(collected) && now.Sub(collected) < *maxAge {
 			report.Entries = append(report.Entries, attempt{Repository: entry.Repository, Status: "fresh"})
 			continue
 		}
@@ -138,12 +138,12 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 			previous = snapshot.State{}
 		}
 		policy := github.DefaultPolicy()
-		policy.MaxRequests = 30
+		policy.MaxRequests = min(90, 700/len(entries))
 		client, err := github.New(github.Options{Policy: policy, Token: os.Getenv("GITHUB_TOKEN")})
 		if err != nil {
 			return err
 		}
-		current, state, collectErr := snapshot.Collect(ctx, client, entry, time.Time{}, previous)
+		current, state, collectErr := snapshot.CollectCatalog(ctx, client, entry, time.Time{}, previous)
 		status := attempt{Repository: entry.Repository, Status: "updated", Requests: client.RequestsUsed()}
 		if collectErr != nil {
 			status.Status = "unavailable"
@@ -160,7 +160,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 			if err := atomicJSON(statePath, state); err != nil {
 				return err
 			}
-			if validPrior && prior.Complete && !current.Complete {
+			if validPrior && prior.Policy == current.Policy && prior.Complete && !current.Complete {
 				status.Status = "preserved"
 				status.Reason = "partial"
 			} else if err := atomicJSON(publicPath, current); err != nil {

@@ -57,6 +57,24 @@ const base = import.meta.env.BASE_URL;
         </p>
       </section>
       <section class="panel">
+        <h2>Saved catalog samples</h2>
+        <p>
+          Saved catalog data selects up to 18 PRs across the preceding 90 days:
+          up to six from each disjoint 30-day creation band. Each band inspects
+          the newest 30 search candidates, then confirms current PR details.
+          Human-authored, non-draft PRs are selected by creation time, without
+          requiring reviews or responses. Empty bands stay empty. The selected
+          PR age range is measured at collection time and shown with the sample.
+        </p>
+        <p>
+          This bounded selection favors newer PRs within each band. It is not a
+          random sample, a full 90-day census, or complete historical review
+          activity. A complete collection means all selected event streams
+          finished; it does not mean every PR in the repository was collected.
+          Missing headline metrics describe this sample, not repository health.
+        </p>
+      </section>
+      <section class="panel">
         <h2>Review participation</h2>
         <p>
           One review unit is one reviewer–PR pair with at least one submitted

@@ -14,7 +14,10 @@
   ],
   "properties": {
     "policy": {
-      "const": "newest-eight-human-prs-90-days-v1"
+      "enum": [
+        "newest-eight-human-prs-90-days-v1",
+        "three-age-bands-eighteen-human-prs-90-days-v1"
+      ]
     },
     "result": {
       "allOf": [
@@ -45,17 +48,17 @@
         "listed": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 30
+          "maximum": 90
         },
         "selected": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 8
+          "maximum": 18
         },
         "eligible_on_page": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 30
+          "maximum": 90
         },
         "truncated": {
           "type": "boolean"
@@ -68,7 +71,7 @@
     "requests": {
       "type": "integer",
       "minimum": 0,
-      "maximum": 30
+      "maximum": 90
     },
     "rate": {
       "type": "object",
@@ -123,6 +126,83 @@
     },
     "complete": {
       "type": "boolean"
+    },
+    "sample_age": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["oldest_created_at", "newest_created_at"],
+      "properties": {
+        "oldest_created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "newest_created_at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "policy": {
+            "const": "newest-eight-human-prs-90-days-v1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "requests": {
+            "maximum": 30,
+            "type": "integer"
+          },
+          "selection": {
+            "properties": {
+              "selected": {
+                "maximum": 8,
+                "type": "integer"
+              },
+              "listed": {
+                "maximum": 30,
+                "type": "integer"
+              },
+              "eligible_on_page": {
+                "maximum": 30,
+                "type": "integer"
+              }
+            },
+            "type": "object"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "policy": {
+            "const": "three-age-bands-eighteen-human-prs-90-days-v1"
+          },
+          "selection": {
+            "properties": {
+              "selected": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "then": {
+        "required": ["sample_age"],
+        "properties": {
+          "sample_age": {
+            "$ref": "#/properties/sample_age"
+          }
+        }
+      }
+    }
+  ]
 }

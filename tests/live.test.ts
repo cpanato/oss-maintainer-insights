@@ -293,3 +293,35 @@ void test("cache rejects an entry when the explicit bot policy changes", async (
   assert.ok(cache.read("example/repo", []));
   assert.equal(cache.read("example/repo", [900]), null);
 });
+
+void test("public catalog snapshots validate larger samples and creation age bounds", async () => {
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } = await import("../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("./fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const snapshot = parsePublicSnapshot(raw, "example/repo")!;
+  assert.equal(snapshot.selection.selected, 18);
+  assert.equal(snapshot.result.first_response.unanswered_prs, 6);
+  assert.equal(snapshot.result.first_response.median_ms.value, 3600000);
+  const missingAge = structuredClone(snapshot);
+  delete missingAge.sample_age;
+  assert.equal(parsePublicSnapshot(missingAge, "example/repo"), null);
+  const future = structuredClone(snapshot);
+  future.sample_age!.newest_created_at = snapshot.result.collected_at;
+  assert.equal(parsePublicSnapshot(future, "example/repo"), null);
+  const reversed = structuredClone(snapshot);
+  reversed.sample_age!.oldest_created_at =
+    snapshot.sample_age!.newest_created_at;
+  reversed.sample_age!.newest_created_at =
+    snapshot.sample_age!.oldest_created_at;
+  assert.equal(parsePublicSnapshot(reversed, "example/repo"), null);
+  const wrongPolicy = {
+    ...snapshot,
+    policy: "newest-eight-human-prs-90-days-v1",
+  };
+  assert.equal(parsePublicSnapshot(wrongPolicy, "example/repo"), null);
+});

@@ -36,6 +36,8 @@ func TestSnapshotsPreserveCompleteOnFailureAndSkipFresh(t *testing.T) {
 	if err = json.Unmarshal(raw, &saved); err != nil {
 		t.Fatal(err)
 	}
+	saved.Policy = snapshot.CatalogPolicy
+	saved.SampleAge = &snapshot.SampleAge{Oldest: "2026-01-10T00:00:00Z", Newest: "2026-01-10T00:00:00Z"}
 	saved.Result.CollectedAt = time.Now().UTC().Format(time.RFC3339)
 	path := filepath.Join(publicDir, "example--repo.json")
 	if err := atomicJSON(path, saved); err != nil {
@@ -68,6 +70,21 @@ func TestSnapshotsPreserveCompleteOnFailureAndSkipFresh(t *testing.T) {
 	if !reflect.DeepEqual(before, after) || calls != 1 || !strings.Contains(output.String(), `"status":"preserved"`) {
 		t.Fatal("failed update replaced complete snapshot")
 	}
+	// A fresh legacy sample must not suppress migration to the catalog policy.
+	saved.Policy = snapshot.QueryPolicy
+	saved.SampleAge = nil
+	if err := atomicJSON(path, saved); err != nil {
+		t.Fatal(err)
+	}
+	calls = 0
+	output.Reset()
+	if err := run(args, strings.NewReader(""), &output); err != nil {
+		t.Fatal(err)
+	}
+	if calls != 1 || !strings.Contains(output.String(), `"status":"preserved"`) {
+		t.Fatal("fresh legacy policy blocked recollection or failure preservation")
+	}
+
 }
 func TestSnapshotsRejectDuplicateCatalogWithoutNetwork(t *testing.T) {
 	directory := t.TempDir()

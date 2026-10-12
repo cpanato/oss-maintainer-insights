@@ -118,3 +118,26 @@ for (const [name, mutate] of Object.entries(cases)) {
     assert.deepEqual(actual, analyze(input));
   });
 }
+
+void test("catalog age-band fixture preserves Go and TypeScript metric parity", () => {
+  const input = JSON.parse(
+    readFileSync(
+      new URL("./fixtures/catalog-input.json", import.meta.url),
+      "utf8",
+    ),
+  ) as AnalysisInput;
+  const snapshot = JSON.parse(
+    readFileSync(
+      new URL("./fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  ) as { result: unknown };
+  const result: unknown = JSON.parse(
+    execFileSync(binary, ["analyze"], {
+      input: JSON.stringify(input),
+      encoding: "utf8",
+    }),
+  );
+  assert.deepEqual(result, analyze(input));
+  assert.deepEqual(result, snapshot.result);
+});

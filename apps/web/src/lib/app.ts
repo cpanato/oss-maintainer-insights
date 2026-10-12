@@ -67,6 +67,13 @@ function duration(ms: number): string {
 function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   displayed = snapshot;
   const { result, selection } = snapshot;
+  const catalogSample =
+    snapshot.policy === "three-age-bands-eighteen-human-prs-90-days-v1";
+  const age = snapshot.sample_age;
+  const observed = Date.parse(result.collected_at);
+  const ageNote = age
+    ? ` · PR ages at collection: ${duration(observed - Date.parse(age.newest_created_at))}–${duration(observed - Date.parse(age.oldest_created_at))}`
+    : "";
   const reviews = result.review_activity;
   const response = result.first_response;
   element("results").hidden = false;
@@ -75,7 +82,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   text("repo-name", result.repository.full_name);
   text(
     "sample-description",
-    `${selection.selected} selected PRs · Created in the preceding 90 days · ${snapshot.complete ? "Collection complete for this sample" : "Partial collection"}`,
+    `${selection.selected} selected PRs · ${catalogSample ? "Three 30-day creation bands" : "Newest PRs in the preceding 90 days"}${ageNote} · ${snapshot.complete ? "Collection complete for this sample" : "Partial collection"}`,
   );
   text(
     "freshness",
@@ -103,7 +110,9 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   text(
     "concentration-note",
     reviews.concentration_80.value === null
-      ? "Insufficient data · Needs 5 covered PRs and review units"
+      ? reviews.review_units === 0
+        ? "No qualifying reviews in this sample · Repository activity outside the sample is not measured"
+        : `Sample too small · ${reviews.covered_prs}/5 required PRs with complete reviews`
       : "Reviewers accounting for at least 80% of review units",
   );
   text(
@@ -115,7 +124,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   text(
     "response-note",
     response.median_ms.value === null
-      ? `Insufficient data · ${response.responded_prs}/5 required responses`
+      ? `Sample has ${response.responded_prs} human responses · At least 5 are needed for a median`
       : `Median across ${response.responded_prs} responded PRs`,
   );
   text("review-units", `${reviews.review_units} review units`);
@@ -166,8 +175,18 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   const coverage = element("coverage");
   coverage.replaceChildren();
   for (const [name, value] of [
-    ["PRs inspected on the first page", String(selection.listed)],
-    ["Eligible PRs on that page", String(selection.eligible_on_page)],
+    [
+      catalogSample
+        ? "PR candidates inspected across age bands"
+        : "PRs inspected on the first page",
+      String(selection.listed),
+    ],
+    [
+      catalogSample
+        ? "Eligible candidates across age bands"
+        : "Eligible PRs on that page",
+      String(selection.eligible_on_page),
+    ],
     ["Selected sample", String(selection.selected)],
     [
       "Complete review streams",
@@ -192,7 +211,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   }
   text(
     "coverage-notes",
-    `The newest eligible human-authored, non-draft PRs from the first 30-record page are selected, up to 8.${selection.truncated || selection.list_has_more ? " The repository contains PRs outside this bounded sample." : ""} Uncovered PRs are not counted as unanswered. Bots, deleted actors, and self responses are excluded.`,
+    `${catalogSample ? "Up to six eligible human-authored, non-draft PRs from each of three 30-day creation bands are selected, newest first within each band. Each band inspects at most 30 search candidates. Empty bands stay empty; PRs are not replaced because they lack responses. This is a bounded sample, not a random sample or full 90-day census." : "The newest eligible human-authored, non-draft PRs from the first 30-record page are selected, up to 8."}${selection.truncated || selection.list_has_more ? " The repository contains PRs outside this bounded sample." : ""} Uncovered PRs are not counted as unanswered. Bots, deleted actors, and self responses are excluded.`,
   );
   const failures = element("failure-list");
   failures.replaceChildren();
