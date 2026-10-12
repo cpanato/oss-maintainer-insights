@@ -14,6 +14,7 @@ validator.addSchema(resultSchema);
 const validPublic = validator.compile(snapshotSchema);
 import {
   analyze,
+  parseReviewCommands,
   METHODOLOGY_VERSION,
   SCHEMA_VERSION,
 } from "../../../../packages/analysis/src/index.js";
@@ -74,7 +75,9 @@ export function parsePublicSnapshot(
     normalizeRepository(snapshot.result.repository.full_name).toLowerCase() !==
       normalizeRepository(repository).toLowerCase() ||
     snapshot.result.mode !== "live_sample" ||
-    snapshot.result.methodology_version !== METHODOLOGY_VERSION ||
+    !["1.0.0", METHODOLOGY_VERSION].includes(
+      snapshot.result.methodology_version,
+    ) ||
     snapshot.selection.selected !==
       snapshot.result.creation_cohort.eligible_prs ||
     snapshot.selection.selected > snapshot.selection.eligible_on_page ||
@@ -94,6 +97,32 @@ export function parsePublicSnapshot(
         response.covered_prs !== response.eligible_prs))
   )
     return null;
+  if (snapshot.result.methodology_version === METHODOLOGY_VERSION) {
+    const validSources = (units: number, sources: typeof reviews.sources) =>
+      !!sources &&
+      Math.max(sources.github_review_units, sources.prow_command_units) <=
+        units &&
+      units <= sources.github_review_units + sources.prow_command_units;
+    if (
+      reviews.covered_prs !== response.covered_prs ||
+      !validSources(reviews.review_units, reviews.sources) ||
+      reviews.participants !== reviews.distribution.length ||
+      reviews.distribution.some(
+        (row) => !validSources(row.review_units, row.sources),
+      ) ||
+      reviews.distribution.reduce((sum, row) => sum + row.review_units, 0) !==
+        reviews.review_units ||
+      reviews.distribution.reduce(
+        (sum, row) => sum + row.sources!.github_review_units,
+        0,
+      ) !== reviews.sources!.github_review_units ||
+      reviews.distribution.reduce(
+        (sum, row) => sum + row.sources!.prow_command_units,
+        0,
+      ) !== reviews.sources!.prow_command_units
+    )
+      return null;
+  }
   if (snapshot.sample_age) {
     const oldest = Date.parse(snapshot.sample_age.oldest_created_at);
     const newest = Date.parse(snapshot.sample_age.newest_created_at);
@@ -182,6 +211,14 @@ function review(value: unknown): Review | null {
   const raw = object(value);
   if (raw.state === "PENDING") return null;
   if (
+    raw.body !== undefined &&
+    raw.body !== null &&
+    typeof raw.body !== "string"
+  )
+    throw new GitHubError("invalid_response", "Invalid review body");
+  const commands =
+    typeof raw.body === "string" ? parseReviewCommands(raw.body) : [];
+  if (
     typeof raw.state !== "string" ||
     !["APPROVED", "CHANGES_REQUESTED", "COMMENTED", "DISMISSED"].includes(
       raw.state,
@@ -193,14 +230,24 @@ function review(value: unknown): Review | null {
     actor: actor(raw.user),
     occurred_at: date(raw.submitted_at),
     state: raw.state as Review["state"],
+    ...(commands.length ? { review_commands: commands } : {}),
   };
 }
 function comment(value: unknown): Event {
   const raw = object(value);
+  if (
+    raw.body !== undefined &&
+    raw.body !== null &&
+    typeof raw.body !== "string"
+  )
+    throw new GitHubError("invalid_response", "Invalid comment body");
+  const commands =
+    typeof raw.body === "string" ? parseReviewCommands(raw.body) : [];
   return {
     id: String(id(raw.id)),
     actor: actor(raw.user),
     occurred_at: date(raw.created_at),
+    ...(commands.length ? { review_commands: commands } : {}),
   };
 }
 function unique<T extends Event>(events: T[]): T[] {

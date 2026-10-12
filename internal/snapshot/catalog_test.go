@@ -155,7 +155,7 @@ func TestCatalogBudgetPreservesCoverageDenominators(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if public.Complete || public.Requests != 30 || public.Result.ReviewActivity.CoveredPRs != 8 || public.Result.FirstResponse.CoveredPRs != 0 || public.Result.FirstResponse.UnansweredPRs != 0 {
+	if public.Complete || public.Requests != 30 || public.Result.ReviewActivity.CoveredPRs != 0 || public.Result.FirstResponse.CoveredPRs != 0 || public.Result.FirstResponse.UnansweredPRs != 0 {
 		t.Fatalf("budget mislabeled coverage: %+v", public)
 	}
 }

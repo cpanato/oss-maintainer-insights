@@ -2,7 +2,7 @@
   "policy": "newest-eight-human-prs-90-days-v1",
   "result": {
     "schema_version": 1,
-    "methodology_version": "1.0.0",
+    "methodology_version": "1.1.0",
     "repository": {
       "id": 42,
       "full_name": "example/repo"
@@ -44,7 +44,11 @@
             "login": "user-900",
             "type": "User"
           },
-          "review_units": 6
+          "review_units": 6,
+          "sources": {
+            "github_review_units": 6,
+            "prow_command_units": 0
+          }
         }
       ],
       "concentration_80": {
@@ -54,6 +58,10 @@
       "largest_reviewer_share": {
         "value": 1,
         "status": "available"
+      },
+      "sources": {
+        "github_review_units": 6,
+        "prow_command_units": 0
       }
     },
     "first_response": {

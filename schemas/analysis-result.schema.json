@@ -20,7 +20,7 @@
       "const": 1
     },
     "methodology_version": {
-      "const": "1.0.0"
+      "enum": ["1.0.0", "1.1.0"]
     },
     "repository": {
       "type": "object",
@@ -210,6 +210,21 @@
               "review_units": {
                 "type": "integer",
                 "minimum": 1
+              },
+              "sources": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["github_review_units", "prow_command_units"],
+                "properties": {
+                  "github_review_units": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "prow_command_units": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
               }
             }
           }
@@ -292,6 +307,21 @@
               }
             }
           ]
+        },
+        "sources": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["github_review_units", "prow_command_units"],
+          "properties": {
+            "github_review_units": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "prow_command_units": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
         }
       }
     },
@@ -372,5 +402,65 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "methodology_version": {
+            "const": "1.1.0"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "review_activity": {
+            "type": "object",
+            "required": ["sources"],
+            "properties": {
+              "sources": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["github_review_units", "prow_command_units"],
+                "properties": {
+                  "github_review_units": {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  "prow_command_units": {
+                    "type": "integer",
+                    "minimum": 0
+                  }
+                }
+              },
+              "distribution": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["sources"],
+                  "properties": {
+                    "sources": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "required": ["github_review_units", "prow_command_units"],
+                      "properties": {
+                        "github_review_units": {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        "prow_command_units": {
+                          "type": "integer",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }

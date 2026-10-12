@@ -151,3 +151,7 @@ This advances saved samples and publication infrastructure without claiming mile
 ### Catalog sampling refinement
 
 The initial newest-eight policy can select only hours-old PRs in high-volume projects. Saved catalog collection now uses up to 18 PRs across three disjoint 30-day creation bands, with six candidates per band and no activity-based replacement. Browser queries retain their original policy and budget. The UI shows the selected PR age range and explains insufficient headline metrics as sample limitations. Shared fixtures validate Go/TypeScript metric parity under the new selection policy; complete monthly historical ingestion remains pending.
+
+### Prow participation extension
+
+Methodology 1.1.0 adds observed human Prow review commands across repositories, including the Kubernetes and CNCF ecosystems. Acquisition strips source bodies after extracting bounded signals; both metric engines deduplicate GitHub and command sources per reviewer–PR pair and honor actor-local cancellation. Combined participation requires complete review/issue/inline streams. Shared fixtures cover extraction, cancellation, sources, coverage, and language parity. Checkpoint/cache invalidation regenerates source-aware samples while legacy GitHub-only public data remains readable after collection failures. Full historical ingestion and larger repository-wide populations remain follow-up work.

@@ -117,7 +117,7 @@ func TestPartialStreamsAreNotEmptySuccess(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if public.Complete || public.Requests != 4 || public.Result.ReviewActivity.CoveredPRs != 2 || public.Result.FirstResponse.UnansweredPRs != 0 || public.Result.FirstResponse.CoveredPRs != 0 {
+	if public.Complete || public.Requests != 4 || public.Result.ReviewActivity.CoveredPRs != 0 || public.Result.FirstResponse.UnansweredPRs != 0 || public.Result.FirstResponse.CoveredPRs != 0 {
 		t.Fatalf("incorrect partial coverage: %+v", public)
 	}
 }
@@ -167,5 +167,35 @@ func TestSavedBudgetCompletesEightSinglePagePRs(t *testing.T) {
 	}
 	if !public.Complete || public.Requests != 26 || public.Result.FirstResponse.CoveredPRs != 8 || public.Result.ReviewActivity.CoveredPRs != 8 {
 		t.Fatalf("saved sample incomplete: %+v", public)
+	}
+}
+
+func TestCommandAcquisitionPrivacyAndConditionalReplay(t *testing.T) {
+	source, observed := load(t)
+	source.Issues = json.RawMessage(`[{"id":999,"user":{"id":901,"login":"prow-reviewer","type":"User"},"created_at":"2026-10-12T11:00:00Z","body":"/approve\nDO NOT RETAIN"}]`)
+	client := &fake{data: source, limit: 20}
+	public, state, err := Collect(context.Background(), client, Entry{Repository: source.Repository}, observed, State{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if public.Result.ReviewActivity.Sources.Prow != 6 || public.Result.ReviewActivity.ReviewUnits != 12 {
+		t.Fatalf("commands not acquired: %+v", public.Result.ReviewActivity)
+	}
+	checkpoint, _ := json.Marshal(state)
+	aggregate, _ := json.Marshal(public)
+	if strings.Contains(string(checkpoint), "DO NOT RETAIN") || strings.Contains(string(checkpoint), `"body"`) || strings.Contains(string(aggregate), "review_commands") {
+		t.Fatal("raw bodies or individual command events leaked")
+	}
+	replay, _, err := Collect(context.Background(), &fake{data: source, limit: 20}, Entry{Repository: source.Repository}, observed, state)
+	if err != nil || !reflect.DeepEqual(replay, public) {
+		t.Fatal("304 replay lost normalized command signals")
+	}
+	state.Version = 1
+	fresh := &fake{data: source, limit: 20}
+	if _, _, err := Collect(context.Background(), fresh, Entry{Repository: source.Repository}, observed, state); err != nil {
+		t.Fatal(err)
+	}
+	if fresh.conditional != 0 {
+		t.Fatal("legacy body-free checkpoint suppressed command extraction")
 	}
 }

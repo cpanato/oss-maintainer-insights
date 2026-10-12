@@ -155,11 +155,29 @@ type rawPR struct {
 	Merged  *string   `json:"merged_at"`
 }
 type rawEvent struct {
+	Commands  []string  `json:"review_commands,omitempty"`
 	ID        int64     `json:"id"`
 	User      *rawActor `json:"user"`
 	Created   string    `json:"created_at,omitempty"`
 	Submitted *string   `json:"submitted_at,omitempty"`
 	State     string    `json:"state,omitempty"`
+}
+
+// Parse body text before checkpoint serialization; only bounded signals survive.
+func (raw *rawEvent) UnmarshalJSON(data []byte) error {
+	type fields rawEvent
+	var value struct {
+		fields
+		Body *string `json:"body"`
+	}
+	if err := json.Unmarshal(data, &value); err != nil {
+		return err
+	}
+	*raw = rawEvent(value.fields)
+	if value.Body != nil {
+		raw.Commands = analysis.ParseReviewCommands(*value.Body)
+	}
+	return nil
 }
 
 func normalize(raw rawEvent, review bool) (analysis.Review, error) {
@@ -186,7 +204,7 @@ func normalize(raw rawEvent, review bool) (analysis.Review, error) {
 	if raw.ID <= 0 || raw.ID > 9007199254740991 {
 		return analysis.Review{}, &github.Failure{Reason: "invalid_response"}
 	}
-	return analysis.Review{Event: analysis.Event{ID: strconv.FormatInt(raw.ID, 10), Actor: user, OccurredAt: date}, State: raw.State}, nil
+	return analysis.Review{Event: analysis.Event{ReviewCommands: raw.Commands, ID: strconv.FormatInt(raw.ID, 10), Actor: user, OccurredAt: date}, State: raw.State}, nil
 }
 func (r *reader) events(ctx context.Context, path string, review bool) ([]analysis.Review, bool, error) {
 	values := []analysis.Review{}
@@ -256,8 +274,8 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 	if catalog {
 		policy = CatalogPolicy
 	}
-	state := State{Version: 1, Policy: policy, Repository: entry.Repository, Pages: map[string]Page{}}
-	if previous.Version != 1 || previous.Policy != policy || !strings.EqualFold(previous.Repository, entry.Repository) {
+	state := State{Version: 2, Policy: policy, Repository: entry.Repository, Pages: map[string]Page{}}
+	if previous.Version != 2 || previous.Policy != policy || !strings.EqualFold(previous.Repository, entry.Repository) {
 		previous = State{}
 	}
 	r := reader{client: client, previous: previous, next: state}

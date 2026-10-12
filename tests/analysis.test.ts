@@ -88,13 +88,13 @@ void test("excludes draft, missing and bot authors from every population", () =>
   });
 });
 
-void test("requires complete event streams for response and complete reviews for participation", () => {
+void test("requires complete event streams for response and combined review participation", () => {
   const input = fixture();
   input.pull_requests[0]!.coverage.issue_comments = false;
   input.pull_requests[1]!.coverage.reviews = false;
   const result = analyze(input);
-  assert.equal(result.review_activity.covered_prs, 4);
-  assert.equal(result.review_activity.review_units, 4);
+  assert.equal(result.review_activity.covered_prs, 3);
+  assert.equal(result.review_activity.review_units, 3);
   assert.equal(result.review_activity.coverage, "partial");
   assert.equal(result.first_response.covered_prs, 3);
   assert.equal(result.first_response.responded_prs, 3);
