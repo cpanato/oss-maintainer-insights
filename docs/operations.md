@@ -98,3 +98,31 @@ Official documentation rechecked on 12 October 2026:
 - [REST pagination](https://docs.github.com/en/rest/using-the-rest-api/using-pagination-in-the-rest-api)
 - [REST rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api)
 - [CORS and exposed response headers](https://docs.github.com/en/rest/using-the-rest-api/using-cors-and-jsonp-to-make-cross-origin-requests)
+
+## Local live interface
+
+The Astro site serves bounded live queries at `/oss-maintainer-insights/` with a shareable `?repo=owner/repository` parameter. It uses the same unauthenticated browser transport measured above. One query selects up to eight eligible PRs from the newest 30-record page within 90 days, freezes its observation time, and shares a 20-attempt budget across metadata, listing, pagination, and retries. It reads all selected review streams before spending the remaining budget on issue and inline comments.
+
+For an eight-PR sample, even one page per stream needs 26 requests (metadata, listing, and 24 stream pages), so partial response coverage under the 20-request cap is expected. This limit is intentional: review participation can have complete coverage while first response covers fewer PRs. Missing streams are never interpreted as empty streams or unanswered PRs. A complete sample of up to six PRs fits when each stream needs one page and there are no retries.
+
+The local cache accepts only complete, schema-validated normalized inputs and recalculates metrics on read. Entries expire after one hour and include repository ID, query-policy, schema, and methodology versions. Names are aliases; refresh resolves metadata again. Partial results remain visible but are not cached. Storage denial and quota exhaustion do not prevent live queries. Browser state and API-derived labels render as text.
+
+The UI uses Astro with a small TypeScript controller. React islands and a chart library are deferred until historical charts justify them; current review bars have an equivalent HTML table. The project owner selected Playwright for deterministic browser checks. Local preview evidence does not replace the deployed Pages-origin gate above. No site has been deployed by the interface change.
+
+## Saved samples, conditional refresh, and Pages
+
+The reviewed catalog in `catalog/repositories.json` contains OpenSSF, CNCF, and community examples. The UI first serves their pre-generated aggregate JSON from its own origin. No GitHub request occurs for a successfully loaded saved sample, even if it is old; its observation time and age remain visible. Missing saved data on a shareable catalog URL does not automatically fall back to the API. An explicit form submission or **Refresh live** can request a live sample. Repositories outside the catalog use live queries and offer the contribution guide for proposing future historical tracking.
+
+`go run ./cmd/collector snapshots` generates at most 20 requests per repository and accepts at most 20 entries (400 attempts/run), within a 30-minute deadline. The current seven entries therefore use at most 140 attempts/run. The default 24-hour freshness check skips network access for recent saved samples. `--force` revalidates regardless of age. Conditional requests count against the product attempt cap even when GitHub returns 304; the implementation does not assume a quota exemption to increase its budget.
+
+Sanitized page checkpoints retain only typed identifiers, actors, timestamps, states, pagination links, and ETags. A 304 reuses those records; changed pages replace them after validation and idempotent upserts. Selected reviews and both comment streams are revalidated, including PRs created before the latest run, so late events are not ignored simply because no new PR appeared. These are conditional sample checkpoints, not a completed historical backfill or a resumable monthly event queue. A page-heavy sample may remain partial under the cap.
+
+A failed collection preserves earlier output. A partial update cannot replace an earlier complete sample. `index.json` records the latest attempt and each repository's updated, fresh, preserved, or unavailable state. Freshness and coverage are separate: serving saved JSON does not imply complete data.
+
+`snapshots.yml` uses daily scheduling, source/catalog changes on `main`, and intentional manual refresh. PR execution collects read-only review artifacts and cannot write data or publish a site; it remains outside `ci-required`. Default-branch collection restores datasets and checkpoints from `data`. A separate job with `contents: write` commits them atomically to that branch. It checks the current `main` revision to skip obsolete runs, never force-pushes, and serializes default-branch generations with deployment.
+
+The website job copies only the public aggregate artifact and records the source SHA and data commit SHA in `build-manifest.json`. Its JSON validation rejects unknown/internal fields, checkpoints, and symlinks. It uploads a Pages artifact; a separate environment-bound job receives only `pages: write` and `id-token: write`. The `data` branch itself is not a Pages source, and bot pushes are not relied on to trigger publication. Configure **Settings → Pages → GitHub Actions** before the first deployment; the repository currently has no configured Pages site. Repository visibility is unchanged.
+
+For local review, generate samples or download the PR's `repository-snapshots` artifact into `apps/web/public/data/`, then run `npm run build`. The preview serves those aggregates without API requests. Mandatory CI continues to use fixtures and does not fetch `data` or depend on the live collection run. Historical ingestion, monthly trends, reconciliation queues, and the deployed-origin CORS check remain pending.
+
+The owner selected [jsonschema/v6](https://github.com/santhosh-tekuri/jsonschema) to keep Go generation independent of Node. Publication follows the official [Pages configuration](https://github.com/actions/configure-pages), [artifact packaging](https://github.com/actions/upload-pages-artifact), and [deployment](https://github.com/actions/deploy-pages) actions, pinned to verified release commits.

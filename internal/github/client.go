@@ -19,6 +19,8 @@ const Origin = "https://api.github.com"
 const APIVersion = "2022-11-28"
 const maxBodyBytes = 8 * 1024 * 1024
 
+var ErrNotModified = errors.New("GitHub resource not modified")
+
 type Failure struct {
 	Reason  string
 	Status  int
@@ -163,6 +165,18 @@ func (c *Client) setRate(headers http.Header) {
 // Get counts each HTTP attempt, including same-origin redirects and retries.
 // It never follows redirects automatically or sends credentials outside api.github.com.
 func (c *Client) Get(ctx context.Context, path string, destination any) (http.Header, error) {
+	return c.get(ctx, path, destination, "")
+}
+
+// GetConditional preserves the same attempt budget. A 304 leaves destination untouched.
+func (c *Client) GetConditional(ctx context.Context, path string, destination any, etag string) (http.Header, error) {
+	if strings.ContainsAny(etag, "\r\n") {
+		return nil, &Failure{Reason: "invalid_input"}
+	}
+	return c.get(ctx, path, destination, etag)
+}
+
+func (c *Client) get(ctx context.Context, path string, destination any, etag string) (http.Header, error) {
 	select {
 	case <-ctx.Done():
 		return nil, &Failure{Reason: "cancelled"}
@@ -210,6 +224,9 @@ func (c *Client) Get(ctx context.Context, path string, destination any) (http.He
 		request.Header.Set("Accept", "application/vnd.github+json")
 		request.Header.Set("X-GitHub-Api-Version", APIVersion)
 		request.Header.Set("User-Agent", "oss-maintainer-insights/0.1.0")
+		if etag != "" {
+			request.Header.Set("If-None-Match", etag)
+		}
 		if c.token != "" {
 			request.Header.Set("Authorization", "Bearer "+c.token)
 		}
@@ -245,6 +262,7 @@ func (c *Client) Get(ctx context.Context, path string, destination any) (http.He
 		c.setRate(response.Header)
 		status := response.StatusCode
 		if status == 301 || status == 302 || status == 303 || status == 307 || status == 308 {
+			etag = "" // Validators belong to one URL, not a redirect destination.
 			location := response.Header.Get("Location")
 			if location == "" || redirects[u.String()] {
 				return nil, &Failure{Reason: "redirect", Status: status}
@@ -265,6 +283,9 @@ func (c *Client) Get(ctx context.Context, path string, destination any) (http.He
 				return nil, &Failure{Reason: "invalid_response", Status: status}
 			}
 			return response.Header.Clone(), nil
+		}
+		if status == http.StatusNotModified && etag != "" {
+			return response.Header.Clone(), ErrNotModified
 		}
 		var message struct {
 			Message string `json:"message"`

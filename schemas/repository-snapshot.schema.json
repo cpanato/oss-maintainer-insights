@@ -1,0 +1,128 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cpanato.github.io/oss-maintainer-insights/schemas/repository-snapshot.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "policy",
+    "result",
+    "selection",
+    "requests",
+    "rate",
+    "failures",
+    "complete"
+  ],
+  "properties": {
+    "policy": {
+      "const": "newest-eight-human-prs-90-days-v1"
+    },
+    "result": {
+      "allOf": [
+        {
+          "$ref": "analysis-result.schema.json"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "mode": {
+              "const": "live_sample"
+            }
+          }
+        }
+      ]
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "listed",
+        "selected",
+        "eligible_on_page",
+        "truncated",
+        "list_has_more"
+      ],
+      "properties": {
+        "listed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "selected": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 8
+        },
+        "eligible_on_page": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30
+        },
+        "truncated": {
+          "type": "boolean"
+        },
+        "list_has_more": {
+          "type": "boolean"
+        }
+      }
+    },
+    "requests": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20
+    },
+    "rate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["remaining", "limit", "resetAt"],
+      "properties": {
+        "remaining": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "limit": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "resetAt": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        }
+      }
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["pr", "stream", "reason"],
+        "properties": {
+          "pr": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "stream": {
+            "enum": ["reviews", "issue_comments", "review_comments"]
+          },
+          "reason": {
+            "enum": [
+              "invalid_input",
+              "budget",
+              "rate_limit",
+              "forbidden",
+              "not_found",
+              "timeout",
+              "cancelled",
+              "network",
+              "http",
+              "invalid_response",
+              "redirect"
+            ]
+          }
+        }
+      }
+    },
+    "complete": {
+      "type": "boolean"
+    }
+  }
+}

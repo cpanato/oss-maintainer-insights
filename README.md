@@ -2,7 +2,7 @@
 
 Explore review participation, response times, and maintenance trends in public GitHub repositories, with live queries and community-curated historical data.
 
-Status: early development. Live queries work today; historical ingestion, the curated catalog, and deployment are planned. See the [implementation plan](docs/design/oss-maintainer-insights-implementation-plan.md).
+Status: early development. The UI supports saved catalog samples and live queries; Go generates validated samples with conditional checkpoints. Historical ingestion and monthly trends are still planned. Publication uses a dedicated `data` branch and GitHub Pages artifacts. See the [implementation plan](docs/design/oss-maintainer-insights-implementation-plan.md).
 
 ## Development
 
@@ -14,7 +14,7 @@ npm run check   # lint, format, typecheck, tests, builds (requires Go for parity
 npm run dev     # http://127.0.0.1:4321/oss-maintainer-insights/
 ```
 
-Enter `owner/repository` or a GitHub repository URL, or open `?repo=owner/repository`. Live queries are a bounded, unauthenticated sample, not a repository census. See [operations](docs/operations.md) for limits, caching, and behavior.
+Enter `owner/repository` or a GitHub repository URL, or open `?repo=owner/repository`. Catalog entries load saved JSON without GitHub API requests; **Refresh live** explicitly requests a new sample. Other repositories use bounded unauthenticated live queries and offer a [contribution guide](CONTRIBUTING.md). Saved samples are not a full historical census. See [operations](docs/operations.md) for limits, caching, and behavior.
 
 Browser tests use simulated GitHub responses and need no secrets:
 
@@ -27,20 +27,23 @@ npm run test:browser
 Go checks (see [CI practices](docs/ci.md) for the full list):
 
 ```sh
-go vet ./cmd/... ./internal/...
-go test -race ./cmd/... ./internal/...
+go vet ./cmd/... ./internal/... ./schemas/...
+go test -race ./cmd/... ./internal/... ./schemas/...
 ```
 
-Run `npm run format` and `gofmt -w cmd internal` to format sources.
+Run `npm run format` and `gofmt -w cmd internal schemas` to format sources.
 
 ## Go collector
 
 ```sh
 go run ./cmd/collector analyze < tests/fixtures/monthly-input.json
 go run ./cmd/collector probe --requests=10 ossf/scorecard
+go run ./cmd/collector snapshots
 ```
 
-`analyze` computes metrics from normalized input (expected output: `tests/fixtures/monthly-expected.json`). `probe` runs a bounded public-API feasibility check and uses `GITHUB_TOKEN` only if set in the environment. Neither command publishes data.
+`analyze` validates normalized input against the embedded schema and computes metrics (expected output: `tests/fixtures/monthly-expected.json`). `probe` runs a bounded public-API feasibility check. `snapshots` reads `catalog/repositories.json`, writes public aggregates to `apps/web/public/data/` and sanitized checkpoints to `.cache/snapshots/`, and skips saved samples newer than 24 hours. Use `--force` to revalidate with ETags. Collection uses `GITHUB_TOKEN` only if set in the environment; no command publishes by itself. Rebuild the site after generating or downloading data.
+
+The independent snapshot workflow produces PR review artifacts; on `main` it saves data, builds only public JSON into the website, and deploys a Pages artifact. Configure **Settings → Pages → GitHub Actions** before the first deployment. PR workflows never publish data or deploy Pages. The collected historical dataset remains a later milestone.
 
 ## Documentation
 

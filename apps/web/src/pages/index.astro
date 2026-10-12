@@ -1,0 +1,258 @@
+---
+import "../styles/global.css";
+const base = import.meta.env.BASE_URL;
+import catalog from "../../../../catalog/repositories.json";
+const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
+  label,
+  repositories: catalog
+    .filter((entry) => entry.group === label)
+    .map((entry) => entry.repository),
+}));
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore who participates in pull request reviews, response times, and coverage in public GitHub repositories."
+    />
+    <title>OSS Maintainer Insights · Review participation, made visible</title>
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <header class="topbar wrap">
+      <a class="brand" href={base}>
+        <span class="brand-icon" aria-hidden="true">
+          ◈
+        </span>
+        <span>
+          OSS Maintainer <strong>Insights</strong>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href={`${base}methodology/`}>Methodology</a>
+        <a href="https://github.com/cpanato/oss-maintainer-insights">
+          GitHub ↗
+        </a>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="intro">
+        <p class="eyebrow">
+          <span class="dot"></span> OPEN SOURCE, IN FOCUS
+        </p>
+        <h1>
+          The work behind
+          <br />
+          <em>the pull request.</em>
+        </h1>
+        <p class="lead">
+          Explore review participation and first human responses in a public
+          GitHub repository. Every number comes with its sample and coverage.
+        </p>
+        <form id="query" class="query-form">
+          <label for="repository">GitHub repository</label>
+          <div class="query-controls">
+            <span class="input-mark" aria-hidden="true">
+              ⌕
+            </span>
+            <input
+              id="repository"
+              name="repository"
+              placeholder="owner/repository or GitHub URL"
+              autocomplete="off"
+              spellcheck="false"
+              required
+            />
+            <button id="inspect" type="submit">
+              Explore repository <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div class="query-hint">
+            <span>No sign-in required · Up to 8 PRs from the last 90 days</span>
+            <button id="cancel" type="button" hidden>
+              Cancel query
+            </button>
+          </div>
+        </form>
+        <div class="example-groups" aria-label="Example public repositories">
+          {examples.map((group) => (
+            <div class="examples">
+              <span>{group.label}</span>
+              {group.repositories.map((repository) => (
+                <button type="button" data-repo={repository}>
+                  {repository} ↗
+                </button>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+      <section class="status-panel" aria-label="Collection status">
+        <p id="status" role="status" aria-live="polite">
+          Ready to explore. Queries run directly in your browser.
+        </p>
+        <p id="error" role="alert" hidden></p>
+      </section>
+      <section id="results" hidden aria-label="Repository analysis">
+        <div class="result-heading">
+          <div>
+            <p class="eyebrow">RECENT SAMPLE</p>
+            <h2 id="repo-name"></h2>
+            <p id="sample-description" class="muted"></p>
+          </div>
+          <div class="result-actions">
+            <button id="refresh" type="button" class="secondary">
+              Refresh live
+            </button>
+            <button id="clear-cache" type="button" class="quiet">
+              Clear cache
+            </button>
+          </div>
+        </div>
+        <p id="freshness" class="freshness"></p>
+        <div class="metrics">
+          <article class="metric">
+            <p>PR authors</p>
+            <strong id="authors">—</strong>
+            <span id="author-note"></span>
+          </article>
+          <article class="metric">
+            <p>Review participants</p>
+            <strong id="reviewers">—</strong>
+            <span id="reviewer-note"></span>
+          </article>
+          <article class="metric">
+            <p>Review concentration 80</p>
+            <strong id="concentration">—</strong>
+            <span id="concentration-note"></span>
+          </article>
+          <article class="metric">
+            <p>First human response</p>
+            <strong id="response">—</strong>
+            <span id="response-note"></span>
+          </article>
+        </div>
+        <div class="analysis-grid">
+          <section class="panel review-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">REVIEW ACTIVITY</p>
+                <h3>Who takes part in reviews?</h3>
+              </div>
+              <span id="review-units" class="tag"></span>
+            </div>
+            <p class="muted">
+              One unit per reviewer–PR pair. Repeated reviews on the same PR
+              count once.
+            </p>
+            <div
+              id="distribution"
+              class="distribution"
+              aria-hidden="true"
+            ></div>
+            <table>
+              <caption>Review participation data</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Reviewer</th>
+                  <th scope="col">Review units</th>
+                  <th scope="col">Share</th>
+                </tr>
+              </thead>
+              <tbody id="review-table"></tbody>
+            </table>
+            <p id="distribution-empty" hidden>
+              No qualifying reviews in the covered sample.
+            </p>
+          </section>
+          <section class="panel coverage-panel">
+            <p class="eyebrow">READ THE DENOMINATORS</p>
+            <h3>Coverage &amp; context</h3>
+            <dl id="coverage"></dl>
+            <p id="coverage-notes" class="muted"></p>
+            <details>
+              <summary>Collection details</summary>
+              <ul id="failure-list"></ul>
+            </details>
+          </section>
+        </div>
+        <section class="outcomes">
+          <p class="eyebrow">AT OBSERVATION TIME</p>
+          <h3>Sample PR outcomes</h3>
+          <div id="outcomes"></div>
+          <p class="muted">
+            These are outcomes for the selected PRs, not repository-wide totals.
+          </p>
+        </section>
+      </section>
+      <section
+        id="empty-state"
+        class="overview-grid"
+        aria-label="What you can explore"
+      >
+        <article>
+          <span class="feature-number">01 / PARTICIPATION</span>
+          <h3>Look at the distribution.</h3>
+          <p>
+            See who submits reviews and how review participation is concentrated
+            across the sample.
+          </p>
+        </article>
+        <article>
+          <span class="feature-number">02 / RESPONSE</span>
+          <h3>Make waiting visible.</h3>
+          <p>
+            See first human response times alongside answered, unanswered, and
+            fully covered PR counts.
+          </p>
+        </article>
+        <article>
+          <span class="feature-number">03 / COVERAGE</span>
+          <h3>Know what is missing.</h3>
+          <p>
+            Limited data stays clearly labeled. An incomplete collection never
+            becomes an empty success.
+          </p>
+        </article>
+      </section>
+      <aside id="contribution" class="catalog-note" hidden>
+        <div>
+          <p class="eyebrow">ADD A PROJECT</p>
+          <h3>Want historical tracking for this repository?</h3>
+          <p>
+            This repository is not in the saved catalog. You can propose it with
+            a pull request; historical coverage starts only after collection.
+          </p>
+        </div>
+        <a href={`${base}contributing/`}>Read the contribution guide ↗</a>
+      </aside>
+      <section class="catalog-note">
+        <div>
+          <span class="tag">IN DEVELOPMENT</span>
+          <h3>A longer view, coming next.</h3>
+          <p>
+            A reviewed historical catalog will add scheduled collection and
+            trends. Saved samples and live queries are available now.
+          </p>
+        </div>
+        <a href={`${base}methodology/`}>
+          Read the methodology <span aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+    <footer class="wrap">
+      <p>Observed activity. Transparent coverage.</p>
+      <p>No health scores · No maintainer roster inferred</p>
+    </footer>
+    <script>
+      import "../lib/app.ts";
+    </script>
+  </body>
+</html>

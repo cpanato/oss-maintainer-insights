@@ -1,8 +1,9 @@
-// The collector exposes offline analysis and bounded public-API feasibility probes.
+// The collector exposes offline analysis, API probes, and pre-generated public samples.
 // Historical ingestion and checkpoint persistence follow in a later milestone.
 package main
 
 import (
+	"bytes"
 	"context"
 	"encoding/json"
 	"flag"
@@ -16,6 +17,7 @@ import (
 	"github.com/cpanato/oss-maintainer-insights/internal/analysis"
 	"github.com/cpanato/oss-maintainer-insights/internal/github"
 	"github.com/cpanato/oss-maintainer-insights/internal/probe"
+	"github.com/cpanato/oss-maintainer-insights/schemas"
 )
 
 func run(args []string, input io.Reader, output io.Writer) error {
@@ -23,13 +25,26 @@ func run(args []string, input io.Reader, output io.Writer) error {
 }
 
 func runContext(ctx context.Context, args []string, input io.Reader, output io.Writer) error {
+	if len(args) > 0 && args[0] == "snapshots" {
+		return runSnapshots(ctx, args[1:], output)
+	}
 	if len(args) > 0 && args[0] == "probe" {
 		return runProbe(ctx, args[1:], output)
 	}
 	if len(args) != 1 || args[0] != "analyze" {
-		return fmt.Errorf("usage: collector analyze < normalized-input.json | collector probe [--requests=10] owner/repo [owner/repo]")
+		return fmt.Errorf("usage: collector analyze < normalized-input.json | collector probe [--requests=10] owner/repo | collector snapshots [--force]")
 	}
-	decoder := json.NewDecoder(input)
+	data, err := io.ReadAll(io.LimitReader(input, 8*1024*1024+1))
+	if err != nil {
+		return err
+	}
+	if len(data) > 8*1024*1024 {
+		return fmt.Errorf("input exceeds size limit")
+	}
+	if err := schemas.ValidateJSON("analysis-input", data); err != nil {
+		return err
+	}
+	decoder := json.NewDecoder(bytes.NewReader(data))
 	decoder.DisallowUnknownFields()
 	var normalized analysis.Input
 	if err := decoder.Decode(&normalized); err != nil {

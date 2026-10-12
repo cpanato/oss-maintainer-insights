@@ -1,0 +1,120 @@
+---
+import "../styles/global.css";
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Methodology · OSS Maintainer Insights</title>
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <header class="topbar wrap">
+      <a class="brand" href={base}>
+        <span class="brand-icon" aria-hidden="true">
+          ◈
+        </span>
+        <span>
+          OSS Maintainer <strong>Insights</strong>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href={base}>Explore repositories</a>
+      </nav>
+    </header>
+    <main id="main" class="wrap methodology">
+      <p class="eyebrow">METHODOLOGY 1.0.0</p>
+      <h1>
+        Read the numbers
+        <br />
+        <em>with their context.</em>
+      </h1>
+      <p class="lead">
+        These metrics describe observed review activity. They do not identify an
+        authoritative maintainer roster or assign a project health score.
+      </p>
+      <section class="panel">
+        <h2>A bounded live sample</h2>
+        <p>
+          Each query selects up to eight of the newest eligible PRs created in
+          the preceding 90 days from GitHub's first 30-record page, sorted by
+          creation time. Currently draft PRs, bot authors, and deleted authors
+          are excluded. The query does not replace unreviewed PRs with more
+          active ones. This is a sample, not a full 90-day repository census.
+        </p>
+        <p>
+          Queries make at most 20 API requests, including retries, and collect
+          all review streams before using the remaining budget for comments.
+          Pagination, rate limits, network failures, and cancellation can leave
+          partial coverage. Results show the observation time and the covered
+          and eligible counts for each metric.
+        </p>
+      </section>
+      <section class="panel">
+        <h2>Review participation</h2>
+        <p>
+          One review unit is one reviewer–PR pair with at least one submitted
+          approved, changes requested, or commented review. Repeated reviews by
+          the same GitHub user ID on a PR count once. Pending and dismissed
+          reviews, bots, deleted actors, self reviews, and events outside
+          creation-to-observation time are excluded. A PR contributes only when
+          its review pagination is complete.
+        </p>
+        <p>
+          Concentration 80 is the smallest number of reviewers whose units reach
+          at least 80% of all units. Its headline requires at least five PRs
+          with complete review coverage and at least one review unit. The
+          distribution and raw covered counts remain visible with smaller
+          samples.
+        </p>
+      </section>
+      <section class="panel">
+        <h2>First human response</h2>
+        <p>
+          The earliest qualifying review, issue comment, or inline comment from
+          a human other than the PR author is a response. All three event
+          streams must be complete. Uncovered PRs are not labeled unanswered. A
+          response exactly at creation has a zero duration; an unanswered PR has
+          no duration.
+        </p>
+        <p>
+          The median is shown only with at least five responded PRs. For an even
+          count, it averages the two middle durations. Responded, unanswered,
+          and fully covered counts are displayed separately.
+        </p>
+      </section>
+      <section class="panel">
+        <h2>Freshness, privacy, and limits</h2>
+        <p>
+          Complete normalized samples can be cached in this browser for one
+          hour, keyed by repository ID and the schema, methodology, and
+          query-policy versions. Refresh bypasses the cache. Failed or partial
+          refreshes cannot overwrite a complete cache entry. Clear cache removes
+          the stored sample.
+        </p>
+        <p>
+          Browser queries are unauthenticated and contain no credentials.
+          Comment bodies and PR titles are not retained in the analysis or
+          cache. Unknown automation and changes to current review states are
+          limitations. Historical trends and a reviewed repository catalog are
+          planned separately.
+        </p>
+        <p>
+          <a href="https://github.com/cpanato/oss-maintainer-insights/blob/main/docs/methodology.md">
+            Read the full methodology and versioning rules ↗
+          </a>
+        </p>
+      </section>
+    </main>
+    <footer class="wrap">
+      <p>Observed activity. Transparent coverage.</p>
+      <p>No health scores · No maintainer roster inferred</p>
+    </footer>
+  </body>
+</html>

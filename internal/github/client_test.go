@@ -227,3 +227,26 @@ func TestTransientCooldownIsNotRateLimit(t *testing.T) {
 		t.Fatal("ignored transient cooldown")
 	}
 }
+
+func TestConditionalResponsesCountAttemptsAndPreserveDestination(t *testing.T) {
+	policy := DefaultPolicy()
+	policy.MaxRequests = 1
+	client, calls, _ := scripted(t, []*http.Response{response(304, "", http.Header{"Etag": {`"same"`}})}, policy)
+	destination := []int{42}
+	_, err := client.GetConditional(context.Background(), "/repos/a/b/pulls", &destination, `"same"`)
+	if !errors.Is(err, ErrNotModified) || destination[0] != 42 || client.RequestsUsed() != 1 || (*calls)[0].Header.Get("If-None-Match") != `"same"` {
+		t.Fatal("incorrect conditional response")
+	}
+	_, err = client.GetConditional(context.Background(), "/repos/a/b/pulls", &destination, `"same"`)
+	failure(t, err, "budget")
+}
+func TestConditionalValidatorDoesNotFollowRedirect(t *testing.T) {
+	client, calls, _ := scripted(t, []*http.Response{response(301, "", http.Header{"Location": {"/repositories/42/pulls"}}), response(200, "[]", nil)}, DefaultPolicy())
+	var destination []int
+	if _, err := client.GetConditional(context.Background(), "/repos/a/b/pulls", &destination, `"old"`); err != nil {
+		t.Fatal(err)
+	}
+	if (*calls)[1].Header.Get("If-None-Match") != "" {
+		t.Fatal("forwarded validator to different URL")
+	}
+}
