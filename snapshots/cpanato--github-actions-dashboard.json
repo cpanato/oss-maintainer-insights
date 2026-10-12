@@ -1,0 +1,77 @@
+{
+  "policy": "newest-eight-human-prs-90-days-v1",
+  "result": {
+    "schema_version": 1,
+    "methodology_version": "1.0.0",
+    "repository": {
+      "id": 660941294,
+      "full_name": "cpanato/github-actions-dashboard"
+    },
+    "mode": "live_sample",
+    "collected_at": "2026-10-12T11:22:59.273Z",
+    "window": {
+      "start": "2026-07-14T11:22:59.273Z",
+      "end": "2026-10-12T11:22:59.273Z"
+    },
+    "exclusions": {
+      "draft_prs": 0,
+      "bot_authors": 0,
+      "missing_authors": 0,
+      "bot_events": 0,
+      "missing_event_actors": 0,
+      "self_events": 0
+    },
+    "creation_cohort": {
+      "eligible_prs": 8,
+      "coverage": "complete_for_sample",
+      "authors": 1,
+      "outcomes": {
+        "open": 2,
+        "closed_unmerged": 0,
+        "merged": 6
+      }
+    },
+    "review_activity": {
+      "eligible_prs": 8,
+      "covered_prs": 8,
+      "coverage": "complete_for_sample",
+      "review_units": 0,
+      "participants": 0,
+      "distribution": [],
+      "concentration_80": {
+        "value": null,
+        "status": "insufficient_data"
+      },
+      "largest_reviewer_share": {
+        "value": null,
+        "status": "insufficient_data"
+      }
+    },
+    "first_response": {
+      "eligible_prs": 8,
+      "covered_prs": 8,
+      "coverage": "complete_for_sample",
+      "responded_prs": 0,
+      "unanswered_prs": 8,
+      "median_ms": {
+        "value": null,
+        "status": "insufficient_data"
+      }
+    }
+  },
+  "selection": {
+    "listed": 30,
+    "selected": 8,
+    "eligible_on_page": 23,
+    "truncated": true,
+    "list_has_more": true
+  },
+  "requests": 26,
+  "rate": {
+    "remaining": 3905,
+    "limit": 5000,
+    "resetAt": 1791805421000
+  },
+  "failures": [],
+  "complete": true
+}

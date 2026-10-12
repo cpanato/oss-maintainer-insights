@@ -1,0 +1,86 @@
+{
+  "policy": "newest-eight-human-prs-90-days-v1",
+  "result": {
+    "schema_version": 1,
+    "methodology_version": "1.0.0",
+    "repository": {
+      "id": 370773729,
+      "full_name": "ossf/allstar"
+    },
+    "mode": "live_sample",
+    "collected_at": "2026-10-12T11:22:28.274Z",
+    "window": {
+      "start": "2026-07-14T11:22:28.274Z",
+      "end": "2026-10-12T11:22:28.274Z"
+    },
+    "exclusions": {
+      "draft_prs": 0,
+      "bot_authors": 0,
+      "missing_authors": 0,
+      "bot_events": 5,
+      "missing_event_actors": 0,
+      "self_events": 7
+    },
+    "creation_cohort": {
+      "eligible_prs": 8,
+      "coverage": "complete_for_sample",
+      "authors": 5,
+      "outcomes": {
+        "open": 5,
+        "closed_unmerged": 0,
+        "merged": 3
+      }
+    },
+    "review_activity": {
+      "eligible_prs": 8,
+      "covered_prs": 8,
+      "coverage": "complete_for_sample",
+      "review_units": 1,
+      "participants": 1,
+      "distribution": [
+        {
+          "actor": {
+            "id": 567897,
+            "login": "justaugustus",
+            "type": "User"
+          },
+          "review_units": 1
+        }
+      ],
+      "concentration_80": {
+        "value": 1,
+        "status": "available"
+      },
+      "largest_reviewer_share": {
+        "value": 1,
+        "status": "available"
+      }
+    },
+    "first_response": {
+      "eligible_prs": 8,
+      "covered_prs": 8,
+      "coverage": "complete_for_sample",
+      "responded_prs": 1,
+      "unanswered_prs": 7,
+      "median_ms": {
+        "value": null,
+        "status": "insufficient_data"
+      }
+    }
+  },
+  "selection": {
+    "listed": 30,
+    "selected": 8,
+    "eligible_on_page": 10,
+    "truncated": true,
+    "list_has_more": true
+  },
+  "requests": 26,
+  "rate": {
+    "remaining": 4035,
+    "limit": 5000,
+    "resetAt": 1791805421000
+  },
+  "failures": [],
+  "complete": true
+}
