@@ -126,3 +126,9 @@ The website job copies only the public aggregate artifact and records the source
 For local review, generate samples or download the PR's `repository-snapshots` artifact into `apps/web/public/data/`, then run `npm run build`. The preview serves those aggregates without API requests. Mandatory CI continues to use fixtures and does not fetch `data` or depend on the live collection run. Historical ingestion, monthly trends, reconciliation queues, and the deployed-origin CORS check remain pending.
 
 The owner selected [jsonschema/v6](https://github.com/santhosh-tekuri/jsonschema) to keep Go generation independent of Node. Publication follows the official [Pages configuration](https://github.com/actions/configure-pages), [artifact packaging](https://github.com/actions/upload-pages-artifact), and [deployment](https://github.com/actions/deploy-pages) actions, pinned to verified release commits.
+
+### First saved-sample review run
+
+[PR collection run 38238121807](https://github.com/cpanato/oss-maintainer-insights/actions/runs/38238121807), source `4e5409f7495435b17bd10c894f190fc7a392e232`, generated public samples for all seven catalog entries on **12 October 2026**. The manifest attempt time was **10:44:17 UTC**. Each query used 20 attempts and selected eight PRs, with complete reviews for 8/8 and complete first-response streams for 5/8. All samples are explicitly partial overall because the remaining response streams exceeded the product cap. These observations describe the saved samples, not complete historical windows.
+
+The downloaded aggregate artifact passes the same website JSON validation and is available in the local preview. PR publication, data-branch writes, and Pages deployment were correctly skipped. Internal checkpoints inherit repository/artifact visibility; “internal” means excluded from the website, not secret storage.

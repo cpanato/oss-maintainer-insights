@@ -5,8 +5,9 @@ import {
 import { collectLive, LiveCache, parsePublicSnapshot } from "./live.js";
 import type { PublicSnapshot } from "./live.js";
 import catalog from "../../../../catalog/repositories.json" with { type: "json" };
-const savedRepositories = new Set(
-  catalog.map((entry) => entry.repository.toLowerCase()),
+const catalogEntries: { repository: string; bot_ids?: number[] }[] = catalog;
+const savedRepositories = new Map(
+  catalogEntries.map((entry) => [entry.repository.toLowerCase(), entry]),
 );
 
 function element<T extends HTMLElement>(id: string): T {
@@ -243,7 +244,8 @@ async function query(repository: string, refresh = false, allowLive = true) {
   element("contribution").hidden = savedRepositories.has(
     normalized.toLowerCase(),
   );
-  const cached = !refresh && cache.read(normalized);
+  const botIds = savedRepositories.get(normalized.toLowerCase())?.bot_ids ?? [];
+  const cached = !refresh && cache.read(normalized, botIds);
   if (cached) {
     render(cached, "cache");
     busy(false);
@@ -295,6 +297,7 @@ async function query(repository: string, refresh = false, allowLive = true) {
   try {
     const snapshot = await collectLive(normalized, {
       signal,
+      botIds,
       onProgress: (partial) => {
         if (current !== generation) return;
         render(partial, "live");

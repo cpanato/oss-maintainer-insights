@@ -282,3 +282,14 @@ void test("browser acquisition matches the shared Go snapshot fixture", async ()
     ) as unknown,
   );
 });
+void test("cache rejects an entry when the explicit bot policy changes", async () => {
+  const api = client([pr(1)]);
+  const snapshot = await collectLive("example/repo", {
+    client: api.client,
+    now: () => observed,
+  });
+  const cache = new LiveCache(memory(), () => observed);
+  cache.write("example/repo", snapshot);
+  assert.ok(cache.read("example/repo", []));
+  assert.equal(cache.read("example/repo", [900]), null);
+});

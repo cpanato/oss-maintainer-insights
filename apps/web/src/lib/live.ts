@@ -333,7 +333,10 @@ export class LiveCache {
     private readonly storage: StorageLike | null,
     private readonly now: () => number = Date.now,
   ) {}
-  read(repository: string): LiveSnapshot | null {
+  read(
+    repository: string,
+    botIds: readonly number[] = [],
+  ): LiveSnapshot | null {
     try {
       const alias = this.storage?.getItem(
         prefix + "alias:" + normalizeRepository(repository).toLowerCase(),
@@ -345,6 +348,11 @@ export class LiveCache {
       const snapshot = cached.snapshot as LiveSnapshot;
       const input = object(snapshot?.input);
       if (!validInput(input) || input.mode !== "live_sample") return null;
+      if (
+        [...snapshot.input.bot_ids].sort((a, b) => a - b).join(",") !==
+        [...botIds].sort((a, b) => a - b).join(",")
+      )
+        return null;
       const selection = object(snapshot.selection);
       const rate = object(snapshot.rate);
       if (

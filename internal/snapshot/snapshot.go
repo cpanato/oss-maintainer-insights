@@ -1,4 +1,4 @@
-// Package snapshot generates bounded, public aggregate samples and private conditional checkpoints.
+// Package snapshot generates bounded, public aggregate samples and internal conditional checkpoints.
 package snapshot
 
 import (
