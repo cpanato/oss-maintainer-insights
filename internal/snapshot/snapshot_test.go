@@ -138,3 +138,34 @@ func TestCheckpointPolicyMismatchRefetches(t *testing.T) {
 		t.Fatal("reused incompatible checkpoints")
 	}
 }
+
+func TestSavedBudgetCompletesEightSinglePagePRs(t *testing.T) {
+	source, observed := load(t)
+	var prs []rawPR
+	if err := json.Unmarshal(source.PRs, &prs); err != nil {
+		t.Fatal(err)
+	}
+	for number := 7; number <= 8; number++ {
+		added := prs[0]
+		added.ID = int64(100 + number)
+		added.Number = number
+		user := *added.User
+		user.ID = int64(number)
+		user.Login = "additional-author"
+		added.User = &user
+		prs = append(prs, added)
+	}
+	data, err := json.Marshal(prs)
+	if err != nil {
+		t.Fatal(err)
+	}
+	source.PRs = data
+	client := &fake{data: source, limit: 30}
+	public, _, err := Collect(context.Background(), client, Entry{Repository: source.Repository}, observed, State{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !public.Complete || public.Requests != 26 || public.Result.FirstResponse.CoveredPRs != 8 || public.Result.ReviewActivity.CoveredPRs != 8 {
+		t.Fatalf("saved sample incomplete: %+v", public)
+	}
+}

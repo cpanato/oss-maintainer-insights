@@ -71,6 +71,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   const response = result.first_response;
   element("results").hidden = false;
   element("empty-state").hidden = true;
+  element("clear-cache").hidden = source === "saved";
   text("repo-name", result.repository.full_name);
   text(
     "sample-description",
@@ -78,7 +79,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   );
   text(
     "freshness",
-    `${source === "cache" ? "Cached result" : source === "saved" ? "Saved snapshot" : "Live query"} · Observed ${new Date(result.collected_at).toLocaleString()} · ${snapshot.requests}/20 requests at collection${source === "saved" || snapshot.rate.remaining === null ? "" : ` · API allowance at collection: ${snapshot.rate.remaining}`}`,
+    `${source === "cache" ? "Cached result" : source === "saved" ? "Saved snapshot" : "Live query"} · Observed ${new Date(result.collected_at).toLocaleString()} · ${snapshot.requests}${source === "saved" ? "" : "/20"} requests at collection${source === "saved" || snapshot.rate.remaining === null ? "" : ` · API allowance at collection: ${snapshot.rate.remaining}`}`,
   );
   text("authors", String(result.creation_cohort.authors));
   text(

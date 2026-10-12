@@ -103,7 +103,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 	if err := json.Unmarshal(data, &entries); err != nil {
 		return err
 	}
-	// Twenty reviewed entries bound a run to 400 requests, below the 700-request run budget.
+	// Twenty reviewed entries bound a run to 600 requests, below the 700-request run budget.
 	if len(entries) > 20 {
 		return errors.New("bounded sample collector supports at most 20 catalog entries")
 	}
@@ -138,7 +138,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 			previous = snapshot.State{}
 		}
 		policy := github.DefaultPolicy()
-		policy.MaxRequests = 20
+		policy.MaxRequests = 30
 		client, err := github.New(github.Options{Policy: policy, Token: os.Getenv("GITHUB_TOKEN")})
 		if err != nil {
 			return err
