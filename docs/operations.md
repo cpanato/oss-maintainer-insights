@@ -4,7 +4,7 @@
 
 Milestone 2 adds native TypeScript/browser and Go REST clients, a Go feasibility probe, a browser diagnostic, and simulated transport tests. No new external library is required. Historical ingestion, checkpoint persistence, live sample selection, and the website remain later milestones.
 
-The real measurements below establish unauthenticated public endpoint access and bounded cost. They do **not** establish authenticated cross-repository access with an Actions `GITHUB_TOKEN` or CORS from the deployed Pages origin. Those gates remain pending.
+The real measurements below establish unauthenticated public endpoint access, bounded cost, and authenticated public cross-repository access with the Actions `GITHUB_TOKEN`. CORS from the deployed Pages origin remains unverified.
 
 ## Request policy
 
@@ -58,7 +58,23 @@ This is evidence for the **local origin only**. Do not claim deployed-origin val
 
 `.github/workflows/api-probe.yml` deliberately has a manual trigger, empty workflow-level permissions, and only `contents: read` on its job. Fixed public targets and a ten-request cap yield at most thirty HTTP attempts. The Go step receives `github.token` through `GITHUB_TOKEN`, and publishes only the sanitized JSON Lines artifact.
 
-The workflow must exist on `main` before its dispatch can be registered. After merging this milestone, run **GitHub API feasibility probe**, download `github-api-probe`, and record endpoint access, response status/failure reasons, observed allowance, and costs here. Until that evidence exists, cross-repository access with `GITHUB_TOKEN` remains unverified. Do not substitute the local GitHub CLI credential or a PAT to claim this check passed. Any credential change is a separate operational decision.
+The workflow must exist on `main` before its dispatch can be registered. Run **GitHub API feasibility probe** and inspect `github-api-probe` when rechecking access or capacity. Do not substitute a local GitHub CLI credential or a PAT to claim the workflow-token check passed. Any credential change is a separate operational decision.
+
+### Verified Actions run — 12 October 2026
+
+[Run 38230040569](https://github.com/cpanato/oss-maintainer-insights/actions/runs/38230040569), source revision `29bc6d039111000705b0900bc47b58f8764757a9`, completed successfully. Reports were observed at **09:28:32 UTC**. The checked-in workflow supplied `github.token` through `GITHUB_TOKEN`; every report recorded `authenticated: true`.
+
+| Repository                         | Requests | Reported API limit | Remaining allowance at last response | Enumeration                     | Sampled event streams |
+| ---------------------------------- | -------- | ------------------ | ------------------------------------ | ------------------------------- | --------------------- |
+| `ossf/scorecard`                   | 10       | 5,000              | 4,972                                | Partial: product budget reached | All three complete    |
+| `sigstore/cosign`                  | 10       | 5,000              | 4,956                                | Partial: product budget reached | All three complete    |
+| `cpanato/github-actions-dashboard` | 6        | 5,000              | 4,950                                | Complete PR enumeration         | All three complete    |
+
+Repository metadata, PR-list pagination, submitted reviews, issue comments, and inline review comments were accessible for all three targets. There were no recorded permission or API rate-limit failures. The two `budget` failures are the configured ten-request cap, not exhausted GitHub allowance. Listed-PR counts and backfill lower bounds matched the local measurements: 600/495, 600/557, and 141/72 respectively.
+
+The headers reported a 5,000-request limit and the same reset timestamp, **10:19:30 UTC**, for these public endpoint calls. This is observed behavior in this execution, not a universal guarantee or a separate 5,000-request allocation per catalog target. GitHub's published ordinary `GITHUB_TOKEN` limit is 1,000 per workflow repository; retain that documented baseline and consult live headers for the actual context. Remaining-allowance differences need not equal this probe's counters because other requests can share the allowance.
+
+This closes the Actions credential-access gate for the tested public endpoints. It does not establish complete historical event coverage, full backfill capacity, or browser CORS from Pages. The sanitized artifact is retained for seven days; this source revision, run link, and summary preserve the operational evidence after artifact expiration.
 
 ## GitHub App option
 
@@ -66,11 +82,10 @@ The project owner is open to evaluating a GitHub App if access or request allowa
 
 GitHub documents a minimum of 5,000 REST requests/hour for an installation access token, compared with the ordinary 1,000 requests/hour per workflow repository for `GITHUB_TOKEN`. An App's allowance belongs to its installation; do not treat every catalog repository as a separate budget. Secondary limits still apply, and a larger API allowance does not automatically change the product's 700-request run cap.
 
-First verify the workflow token using the probe, then measure pilot backfill and daily reconciliation. If access fails or queued work cannot meet the chosen freshness target, compare a resumable multi-run strategy with an App-backed collector. Before adopting an App, confirm public cross-repository endpoint access, required read permissions, installation scope, short-lived token generation, and private-key storage in Actions secrets. The browser remains unauthenticated; never ship an App key or token in a static artifact. App registration and installation require a separate operational decision with the owner.
+The probe confirmed workflow-token access for all three targets and reported a 5,000-request limit in this run. Continue with that credential for now, and measure pilot backfill and daily reconciliation before introducing an App. If access fails or queued work cannot meet the chosen freshness target, compare a resumable multi-run strategy with an App-backed collector. Before adopting an App, confirm public cross-repository endpoint access, required read permissions, installation scope, short-lived token generation, and private-key storage in Actions secrets. The browser remains unauthenticated; never ship an App key or token in a static artifact. App registration and installation require a separate operational decision with the owner.
 
 ## Remaining gates
 
-- Execute the Go probe in Actions with the workflow token and review the artifact.
 - Repeat browser diagnostics from the deployed Pages origin, including pagination and visible rate-limit metadata.
 - Observe a real throttled response's visible headers if available; simulated tests verify required backoff, but do not manufacture API load to trigger throttling.
 - Measure full pilot ingestion and storage before extending coverage, catalog size, or a twelve-month backfill.
