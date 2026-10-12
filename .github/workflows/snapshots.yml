@@ -89,7 +89,15 @@ jobs:
       - name: Collect bounded public samples in Go
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: go run ./cmd/collector snapshots --output generated-data --state .cache/snapshots --force
+          COLLECTION_EVENT: ${{ github.event_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          flags=()
+          if [[ "$COLLECTION_EVENT" == 'schedule' || "$COLLECTION_EVENT" == 'workflow_dispatch' ]]; then
+            flags+=(--force)
+          fi
+          go run ./cmd/collector snapshots --output generated-data --state .cache/snapshots "${flags[@]}"
 
       - name: Upload public aggregate samples
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
