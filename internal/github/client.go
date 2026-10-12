@@ -211,6 +211,12 @@ func (c *Client) get(ctx context.Context, path string, destination any, etag str
 				retry := time.Time{}
 				if c.rate.ResetAt != nil {
 					retry = *c.rate.ResetAt
+					delay := retry.Sub(c.now())
+					if delay > 0 && delay <= c.policy.MaxWait {
+						c.blockedUntil = retry
+						c.blockedReason = "rate_limit"
+						continue
+					}
 				}
 				return nil, &Failure{Reason: "rate_limit", RetryAt: retry}
 			}

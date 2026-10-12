@@ -16,7 +16,8 @@
     "policy": {
       "enum": [
         "newest-eight-human-prs-90-days-v1",
-        "three-age-bands-eighteen-human-prs-90-days-v1"
+        "three-age-bands-eighteen-human-prs-90-days-v1",
+        "three-age-bands-three-hundred-human-prs-90-days-v1"
       ]
     },
     "result": {
@@ -48,17 +49,17 @@
         "listed": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 90
+          "maximum": 300
         },
         "selected": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 18
+          "maximum": 300
         },
         "eligible_on_page": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 90
+          "maximum": 300
         },
         "truncated": {
           "type": "boolean"
@@ -71,7 +72,7 @@
     "requests": {
       "type": "integer",
       "minimum": 0,
-      "maximum": 90
+      "maximum": 1300
     },
     "rate": {
       "type": "object",
@@ -182,7 +183,10 @@
       "if": {
         "properties": {
           "policy": {
-            "const": "three-age-bands-eighteen-human-prs-90-days-v1"
+            "enum": [
+              "three-age-bands-eighteen-human-prs-90-days-v1",
+              "three-age-bands-three-hundred-human-prs-90-days-v1"
+            ]
           },
           "selection": {
             "properties": {
@@ -200,6 +204,40 @@
         "properties": {
           "sample_age": {
             "$ref": "#/properties/sample_age"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "policy": {
+            "const": "three-age-bands-eighteen-human-prs-90-days-v1"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "requests": {
+            "type": "integer",
+            "maximum": 90
+          },
+          "selection": {
+            "type": "object",
+            "properties": {
+              "selected": {
+                "type": "integer",
+                "maximum": 18
+              },
+              "listed": {
+                "type": "integer",
+                "maximum": 90
+              },
+              "eligible_on_page": {
+                "type": "integer",
+                "maximum": 90
+              }
+            }
           }
         }
       }

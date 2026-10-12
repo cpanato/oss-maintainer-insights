@@ -268,3 +268,22 @@ func TestIssueSearchEndpointAndOriginRestrictions(t *testing.T) {
 		t.Fatal("unsupported search endpoint or foreign origin was fetched")
 	}
 }
+
+func TestPrimaryLimitWaitsUntilResetWithinConfiguredBudget(t *testing.T) {
+	policy := DefaultPolicy()
+	policy.MaxWait = time.Minute
+	client, calls, waits := scripted(t, []*http.Response{
+		response(200, `{}`, http.Header{"X-Ratelimit-Remaining": []string{"2"}, "X-Ratelimit-Reset": []string{"130"}}),
+		response(200, `{}`, http.Header{"X-Ratelimit-Remaining": []string{"99"}}),
+	}, policy)
+	var value any
+	if _, err := client.GetConditional(context.Background(), "/repos/example/repo", &value, ""); err != nil {
+		t.Fatal(err)
+	}
+	if _, err := client.GetConditional(context.Background(), "/repos/example/repo", &value, ""); err != nil {
+		t.Fatal(err)
+	}
+	if len(*calls) != 2 || len(*waits) != 1 || (*waits)[0] != 30*time.Second {
+		t.Fatalf("unexpected waiting calls=%d waits=%v", len(*calls), *waits)
+	}
+}

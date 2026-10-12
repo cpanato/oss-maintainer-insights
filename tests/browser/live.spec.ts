@@ -273,16 +273,31 @@ test("saved age-band sample explains its age and response denominator without AP
   await page.goto("./?repo=kubernetes/kubernetes");
   await expect(page.getByRole("status")).toContainText("No GitHub API calls");
   await expect(page.locator("#sample-description")).toContainText(
-    "18 selected PRs",
+    "21 selected PRs",
   );
   await expect(page.locator("#sample-description")).toContainText(
-    "PR ages at collection: 1.0 days–66.0 days",
+    "PR ages at collection: 1.0 days–67.0 days",
+  );
+  await expect(page.locator("#sample-description")).toContainText(
+    "90-day window",
+  );
+  await expect(page.locator("#sample-description")).toContainText(
+    "Up to 100 PRs from each of three 30-day creation bands",
+  );
+  await expect(page.locator("#sample-scope")).toContainText(
+    "All metrics below describe these 21 selected PRs",
+  );
+  await expect(page.locator("#sample-scope")).toContainText(
+    "They do not count all PRs, reviews, or contributors",
+  );
+  await expect(page.locator("#sample-scope")).toContainText(
+    "Refresh live replaces this view with a smaller sample",
   );
   await expect(page.locator("#coverage-notes")).toContainText(
     "not a random sample or full 90-day census",
   );
   await expect(page.locator("#response-note")).toContainText(
-    "12 responded PRs",
+    "14 responded PRs",
   );
   expect(calls).toHaveLength(0);
   saved.result.first_response.median_ms = {
@@ -290,7 +305,7 @@ test("saved age-band sample explains its age and response denominator without AP
     status: "insufficient_data",
   };
   saved.result.first_response.responded_prs = 3;
-  saved.result.first_response.unanswered_prs = 15;
+  saved.result.first_response.unanswered_prs = 18;
   await page.reload();
   await expect(page.locator("#response-note")).toContainText(
     "Sample has 3 human responses",
@@ -458,4 +473,30 @@ test("legacy saved data is visibly labeled while requiring no GitHub requests", 
   );
   await expect(page.locator("#freshness")).toContainText("Methodology 1.0.0");
   expect(calls).toHaveLength(0);
+});
+
+test("metric explanations support mouse, keyboard and touch", async ({
+  page,
+}) => {
+  await fixture(page);
+  await page.goto("./?repo=example/repo");
+  await expect(page.getByRole("status")).toContainText("Sample complete");
+  const help = page.getByRole("button", { name: "Explain Share", exact: true });
+  const tooltip = page.locator("#metric-help-7");
+  await help.hover();
+  await expect(tooltip).toBeVisible();
+  await expect(tooltip).toContainText("2 of 8 units = 25%");
+  await page.mouse.move(0, 0);
+  await expect(tooltip).toBeHidden();
+  await help.focus();
+  await expect(tooltip).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(tooltip).toBeHidden();
+  await help.blur();
+  await page.setViewportSize({ width: 360, height: 780 });
+  await help.dispatchEvent("click");
+  await expect(tooltip).toBeVisible();
+  const bounds = await tooltip.boundingBox();
+  expect(bounds!.x).toBeGreaterThanOrEqual(0);
+  expect(bounds!.x + bounds!.width).toBeLessThanOrEqual(360);
 });

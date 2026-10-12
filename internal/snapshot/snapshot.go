@@ -7,6 +7,7 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
+	"slices"
 	"sort"
 	"strconv"
 	"strings"
@@ -65,10 +66,15 @@ type Page struct {
 	Value json.RawMessage `json:"value"`
 }
 type State struct {
-	Version    int             `json:"version"`
-	Policy     string          `json:"policy"`
-	Repository string          `json:"repository"`
-	Pages      map[string]Page `json:"pages"`
+	RepositoryID       int64           `json:"repository_id,omitempty"`
+	ObservedAt         string          `json:"observed_at,omitempty"`
+	Pending            bool            `json:"pending,omitempty"`
+	MethodologyVersion string          `json:"methodology_version,omitempty"`
+	BotIDs             []int64         `json:"bot_ids,omitempty"`
+	Version            int             `json:"version"`
+	Policy             string          `json:"policy"`
+	Repository         string          `json:"repository"`
+	Pages              map[string]Page `json:"pages"`
 }
 type Getter interface {
 	GetConditional(context.Context, string, any, string) (http.Header, error)
@@ -76,13 +82,22 @@ type Getter interface {
 	RateLimit() github.RateLimit
 }
 type reader struct {
-	client   Getter
-	previous State
-	next     State
+	resume     bool
+	checkpoint func(State) error
+	client     Getter
+	previous   State
+	next       State
 }
 
 func (r *reader) get(ctx context.Context, path string, destination any) (string, error) {
 	cached := r.previous.Pages[path]
+	if r.resume && !strings.HasPrefix(path, "/repos/") && len(cached.Value) > 0 {
+		if err := json.Unmarshal(cached.Value, destination); err != nil {
+			return "", &github.Failure{Reason: "invalid_response"}
+		}
+		r.next.Pages[path] = cached
+		return cached.Next, nil
+	}
 	headers, err := r.client.GetConditional(ctx, path, destination, cached.ETag)
 	var next string
 	if errors.Is(err, github.ErrNotModified) {
@@ -104,6 +119,11 @@ func (r *reader) get(ctx context.Context, path string, destination any) (string,
 			return "", marshalErr
 		}
 		r.next.Pages[path] = Page{ETag: cached.ETag, Next: next, Value: data}
+		if r.checkpoint != nil {
+			if err := r.checkpoint(r.next); err != nil {
+				return "", err
+			}
+		}
 		return next, nil
 	}
 	if err != nil {
@@ -119,6 +139,11 @@ func (r *reader) get(ctx context.Context, path string, destination any) (string,
 		return "", err
 	}
 	r.next.Pages[path] = Page{ETag: headers.Get("ETag"), Next: next, Value: data}
+	if r.checkpoint != nil {
+		if err := r.checkpoint(r.next); err != nil {
+			return "", err
+		}
+	}
 	return next, nil
 }
 
@@ -258,30 +283,57 @@ func reason(err error) string {
 
 // Collect revalidates every selected stream, including older PRs. Unchanged pages use sanitized checkpoints.
 func Collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State) (Public, State, error) {
-	return collect(ctx, client, entry, observed, previous, false)
+	return collect(ctx, client, entry, observed, previous, false, false, nil)
 }
 
 // CollectCatalog samples three disjoint creation-age bands without selecting for activity.
 func CollectCatalog(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State) (Public, State, error) {
-	return collect(ctx, client, entry, observed, previous, true)
+	return collect(ctx, client, entry, observed, previous, true, false, nil)
 }
 
-const CatalogPolicy = "three-age-bands-eighteen-human-prs-90-days-v1"
+// CollectCatalogWithCheckpoint resumes a pending bounded sample at its frozen
+// observation time and reports sanitized page progress to the caller.
+func CollectCatalogWithCheckpoint(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, checkpoint func(State) error) (Public, State, error) {
+	return collect(ctx, client, entry, observed, previous, true, true, checkpoint)
+}
 
-func collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, catalog bool) (Public, State, error) {
+const CatalogPolicy = "three-age-bands-three-hundred-human-prs-90-days-v1"
+
+func collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, catalog, resume bool, checkpoint func(State) error) (Public, State, error) {
 	observed = observed.UTC().Truncate(time.Millisecond)
 	policy := QueryPolicy
 	if catalog {
 		policy = CatalogPolicy
 	}
 	state := State{Version: 2, Policy: policy, Repository: entry.Repository, Pages: map[string]Page{}}
+	if catalog {
+		if observed.IsZero() {
+			observed = time.Now().UTC()
+		}
+		observed = observed.Truncate(time.Second)
+	}
 	if previous.Version != 2 || previous.Policy != policy || !strings.EqualFold(previous.Repository, entry.Repository) {
 		previous = State{}
 	}
-	r := reader{client: client, previous: previous, next: state}
+	pendingAt, pendingErr := timestamp(previous.ObservedAt)
+	resume = resume && previous.Pending && pendingErr == nil && previous.MethodologyVersion == analysis.MethodologyVersion && slices.Equal(previous.BotIDs, entry.BotIDs) && !observed.Before(pendingAt) && observed.Sub(pendingAt) <= 7*24*time.Hour
+	if resume {
+		state.RepositoryID = previous.RepositoryID
+		observed = pendingAt
+		for path, page := range previous.Pages {
+			state.Pages[path] = page
+		}
+	}
+	if catalog {
+		state.ObservedAt = observed.Format(time.RFC3339)
+		state.Pending = true
+		state.MethodologyVersion = analysis.MethodologyVersion
+		state.BotIDs = append([]int64(nil), entry.BotIDs...)
+	}
+	r := reader{client: client, previous: previous, next: state, resume: resume, checkpoint: checkpoint}
 	path, err := github.RepositoryPath(entry.Repository)
 	if err != nil {
-		return Public{}, state, err
+		return Public{}, r.next, err
 	}
 	var metadata struct {
 		ID       int64  `json:"id"`
@@ -289,14 +341,18 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		Private  *bool  `json:"private"`
 	}
 	if _, err = r.get(ctx, path, &metadata); err != nil {
-		return Public{}, state, err
+		return Public{}, r.next, err
 	}
 	if metadata.ID <= 0 || metadata.ID > 9007199254740991 || metadata.Private == nil || *metadata.Private {
-		return Public{}, state, &github.Failure{Reason: "invalid_response"}
+		return Public{}, r.next, &github.Failure{Reason: "invalid_response"}
 	}
 	if _, err = github.RepositoryPath(metadata.FullName); err != nil {
-		return Public{}, state, &github.Failure{Reason: "invalid_response"}
+		return Public{}, r.next, &github.Failure{Reason: "invalid_response"}
 	}
+	if r.resume && r.next.RepositoryID != metadata.ID {
+		return Public{}, r.next, &github.Failure{Reason: "invalid_response"}
+	}
+	r.next.RepositoryID = metadata.ID
 	path = "/repositories/" + strconv.FormatInt(metadata.ID, 10)
 	var eligible []rawPR
 	var selection Selection
@@ -313,10 +369,10 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		var records []rawPR
 		next, err := r.get(ctx, path+"/pulls?state=all&sort=created&direction=desc&per_page=30", &records)
 		if err != nil {
-			return Public{}, state, err
+			return Public{}, r.next, err
 		}
 		if records == nil || len(records) > 30 {
-			return Public{}, state, &github.Failure{Reason: "invalid_response"}
+			return Public{}, r.next, &github.Failure{Reason: "invalid_response"}
 		}
 		bots := map[int64]bool{}
 		for _, id := range entry.BotIDs {
@@ -330,16 +386,16 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		seen := map[int64]bool{}
 		for _, pr := range records {
 			if pr.ID <= 0 || pr.ID > 9007199254740991 || pr.Number <= 0 || pr.Draft == nil || seen[pr.ID] || (pr.State != "open" && pr.State != "closed") {
-				return Public{}, state, &github.Failure{Reason: "invalid_response"}
+				return Public{}, r.next, &github.Failure{Reason: "invalid_response"}
 			}
 			seen[pr.ID] = true
 			created, err := timestamp(pr.Created)
 			if err != nil {
-				return Public{}, state, err
+				return Public{}, r.next, err
 			}
 			user, err := actor(pr.User)
 			if err != nil {
-				return Public{}, state, err
+				return Public{}, r.next, err
 			}
 			if *pr.Draft || user == nil || user.Type != "User" || bots[user.ID] || created.Before(start) || !created.Before(observed) {
 				continue
@@ -409,11 +465,11 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		}
 	}
 	if err := schemas.Validate("analysis-input", input); err != nil {
-		return Public{}, state, err
+		return Public{}, r.next, err
 	}
 	result, err := analysis.Analyze(input)
 	if err != nil {
-		return Public{}, state, err
+		return Public{}, r.next, err
 	}
 	complete := ctx.Err() == nil
 	for _, pr := range input.PullRequests {
@@ -442,7 +498,8 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		public.SampleAge = age
 	}
 	if err := schemas.Validate("repository-snapshot", public); err != nil {
-		return Public{}, state, err
+		return Public{}, r.next, err
 	}
+	r.next.Pending = !complete
 	return public, r.next, nil
 }

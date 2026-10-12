@@ -36,11 +36,11 @@ func (r *reader) catalogPRs(ctx context.Context, path, repository string, botIDs
 		start := end.Add(-30 * 24 * time.Hour)
 		query := fmt.Sprintf("repo:%s is:pr draft:false created:%s..%s", repository, start.Format(time.RFC3339), end.Add(-time.Second).Format(time.RFC3339))
 		var page searchPage
-		next, err := r.get(ctx, "/search/issues?q="+url.QueryEscape(query)+"&sort=created&order=desc&per_page=30", &page)
+		next, err := r.get(ctx, "/search/issues?q="+url.QueryEscape(query)+"&sort=created&order=desc&per_page=100", &page)
 		if err != nil {
 			return nil, selection, err
 		}
-		if page.Total == nil || page.Incomplete == nil || *page.Incomplete || page.Items == nil || len(page.Items) > 30 || *page.Total < len(page.Items) {
+		if page.Total == nil || page.Incomplete == nil || *page.Incomplete || page.Items == nil || len(page.Items) > 100 || *page.Total < len(page.Items) {
 			return nil, selection, &github.Failure{Reason: "invalid_response"}
 		}
 		selection.Listed += len(page.Items)
@@ -68,7 +68,7 @@ func (r *reader) catalogPRs(ctx context.Context, path, repository string, botIDs
 				continue
 			}
 			selection.Eligible++
-			if len(candidates[band]) < 6 {
+			if len(candidates[band]) < 100 {
 				candidates[band] = append(candidates[band], item)
 			} else {
 				selection.Truncated = true
@@ -78,7 +78,7 @@ func (r *reader) catalogPRs(ctx context.Context, path, repository string, botIDs
 	selected := []rawPR{}
 	seenIDs := map[int64]bool{}
 	// Interleave bands so a budget interruption never exhausts one age band first.
-	for index := range 6 {
+	for index := range 100 {
 		for band := range 3 {
 			if index >= len(candidates[band]) {
 				continue

@@ -2,7 +2,13 @@ import {
   GitHubError,
   normalizeRepository,
 } from "../../../../packages/github/src/index.js";
-import { collectLive, LiveCache, parsePublicSnapshot } from "./live.js";
+import {
+  collectLive,
+  LiveCache,
+  parsePublicSnapshot,
+  CATALOG_POLICY,
+  LEGACY_CATALOG_POLICY,
+} from "./live.js";
 import type { PublicSnapshot } from "./live.js";
 import catalog from "../../../../catalog/repositories.json" with { type: "json" };
 const catalogEntries: { repository: string; bot_ids?: number[] }[] = catalog;
@@ -67,8 +73,21 @@ function duration(ms: number): string {
 function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   displayed = snapshot;
   const { result, selection } = snapshot;
-  const catalogSample =
-    snapshot.policy === "three-age-bands-eighteen-human-prs-90-days-v1";
+  const catalogSample = [CATALOG_POLICY, LEGACY_CATALOG_POLICY].includes(
+    snapshot.policy,
+  );
+  const bandLimit = snapshot.policy === CATALOG_POLICY ? 100 : 6;
+  const windowDays = Math.round(
+    (Date.parse(result.window.end) - Date.parse(result.window.start)) /
+      86400000,
+  );
+  const date = (value: string) =>
+    new Date(value).toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      timeZone: "UTC",
+    });
   const age = snapshot.sample_age;
   const observed = Date.parse(result.collected_at);
   const ageNote = age
@@ -82,7 +101,11 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   text("repo-name", result.repository.full_name);
   text(
     "sample-description",
-    `${selection.selected} selected PRs · ${catalogSample ? "Three 30-day creation bands" : "Newest PRs in the preceding 90 days"}${ageNote} · ${snapshot.complete ? "Collection complete for this sample" : "Partial collection"}`,
+    `${selection.selected} selected PRs · ${windowDays}-day window (${date(result.window.start)}–${date(result.window.end)}, UTC) · ${catalogSample ? `Up to ${bandLimit} PRs from each of three 30-day creation bands` : "Up to 8 newest eligible PRs"}${ageNote} · ${snapshot.complete ? "Collection complete for this sample" : "Partial collection"}`,
+  );
+  text(
+    "sample-scope",
+    `All metrics below describe these ${selection.selected} selected PRs. They do not count all PRs, reviews, or contributors in this repository during the ${windowDays}-day window.${snapshot.selection.truncated || snapshot.selection.list_has_more ? " More PRs exist beyond the sample limit." : ""}${catalogSample ? " Refresh live replaces this view with a smaller sample of up to 8 recent PRs." : ""}`,
   );
   text(
     "freshness",
@@ -387,3 +410,31 @@ for (const example of document.querySelectorAll<HTMLButtonElement>(
   });
 const requested = new URL(location.href).searchParams.get("repo");
 if (requested) void query(requested, false, false);
+
+for (const button of document.querySelectorAll<HTMLButtonElement>(
+  ".info-tip",
+)) {
+  const tooltip = element(button.getAttribute("popovertarget")!);
+  const position = () => {
+    const rect = button.getBoundingClientRect();
+    tooltip.style.left = `${Math.max(12, Math.min(rect.left, window.innerWidth - tooltip.offsetWidth - 12))}px`;
+    tooltip.style.top = `${Math.max(12, Math.min(rect.bottom + 8, window.innerHeight - tooltip.offsetHeight - 12))}px`;
+  };
+  const show = () => {
+    tooltip.showPopover();
+    position();
+  };
+  button.addEventListener("pointerenter", (event) => {
+    if (event.pointerType === "mouse") show();
+  });
+  button.addEventListener("pointerleave", () => {
+    if (document.activeElement !== button) tooltip.hidePopover();
+  });
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    show();
+  });
+  button.addEventListener("focus", show);
+  button.addEventListener("blur", () => tooltip.hidePopover());
+  tooltip.addEventListener("toggle", position);
+}

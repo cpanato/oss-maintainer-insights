@@ -33,6 +33,7 @@ func (f *catalogFake) GetConditional(_ context.Context, path string, target any,
 		return nil, &github.Failure{Reason: "budget"}
 	}
 	f.used++
+	headers := http.Header{}
 	var value any = []rawEvent{}
 	switch {
 	case strings.HasPrefix(path, "/repos/"):
@@ -60,6 +61,10 @@ func (f *catalogFake) GetConditional(_ context.Context, path string, target any,
 			items = []searchItem{}
 		}
 		total := len(items)
+		if len(items) > 100 {
+			items = items[:100]
+			headers.Set("Link", "<https://api.github.com"+path+"&page=2>; rel=\"next\"")
+		}
 		value = searchPage{Total: &total, Incomplete: &f.incomplete, Items: items}
 	default:
 		parts := strings.Split(path, "/")
@@ -81,7 +86,7 @@ func (f *catalogFake) GetConditional(_ context.Context, path string, target any,
 	if err != nil {
 		return nil, err
 	}
-	return nil, json.Unmarshal(encoded, target)
+	return headers, json.Unmarshal(encoded, target)
 }
 func catalogSource(t *testing.T) (*catalogFake, time.Time) {
 	t.Helper()
@@ -101,7 +106,7 @@ func catalogSource(t *testing.T) (*catalogFake, time.Time) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	return &catalogFake{data: source, prs: prs, limit: 90}, observed
+	return &catalogFake{data: source, prs: prs, limit: 1300}, observed
 }
 func TestCatalogBandsAndSharedMetrics(t *testing.T) {
 	client, observed := catalogSource(t)
@@ -124,11 +129,11 @@ func TestCatalogBandsAndSharedMetrics(t *testing.T) {
 	if !reflect.DeepEqual(actual, want) {
 		t.Fatalf("catalog snapshot differs from shared fixture: %s", encoded)
 	}
-	if state.Policy != CatalogPolicy || len(state.Pages) != 76 {
+	if state.Policy != CatalogPolicy || len(state.Pages) != 88 {
 		t.Fatal("wrong checkpoint policy or requests")
 	}
-	// Six newest PRs without reviews must remain selected, not replaced by reviewed PRs.
-	if public.Result.FirstResponse.UnansweredPRs != 6 {
+	// Seven newest PRs without reviews must remain selected, not replaced by reviewed PRs.
+	if public.Result.FirstResponse.UnansweredPRs != 7 {
 		t.Fatal("unanswered PRs disappeared from the sample")
 	}
 }
@@ -139,7 +144,7 @@ func TestCatalogEmptyBandDoesNotBorrowFromAnother(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if public.Selection.Selected != 12 || !public.Complete || public.Result.FirstResponse.UnansweredPRs != 6 {
+	if public.Selection.Selected != 14 || !public.Complete || public.Result.FirstResponse.UnansweredPRs != 7 {
 		t.Fatalf("empty band filled from another: %+v", public.Selection)
 	}
 }
@@ -174,7 +179,7 @@ func TestCatalogFiltersBotsAndConfirmsCurrentDraftStatus(t *testing.T) {
 	}
 	// Bots are removed before candidate selection; a candidate that became a draft
 	// is removed on detail confirmation without selecting a replacement by activity.
-	if public.Selection.Selected != 17 || public.Selection.Eligible != 19 || public.Result.CreationCohort.Authors != 17 {
+	if public.Selection.Selected != 18 || public.Selection.Eligible != 19 || public.Result.CreationCohort.Authors != 18 {
 		t.Fatalf("ineligible authors/drafts contributed: %+v", public.Selection)
 	}
 }
@@ -196,7 +201,7 @@ func (f catalogTransport) RoundTrip(request *http.Request) (*http.Response, erro
 func TestCatalogThroughNativeHTTPClient(t *testing.T) {
 	source, observed := catalogSource(t)
 	policy := github.DefaultPolicy()
-	policy.MaxRequests = 90
+	policy.MaxRequests = 1300
 	client, err := github.New(github.Options{Policy: policy, HTTP: &http.Client{Transport: catalogTransport{source: source}}})
 	if err != nil {
 		t.Fatal(err)
@@ -205,7 +210,7 @@ func TestCatalogThroughNativeHTTPClient(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if !public.Complete || public.Selection.Selected != 18 || public.Requests != 76 {
+	if !public.Complete || public.Selection.Selected != 21 || public.Requests != 88 {
 		t.Fatalf("native HTTP acquisition failed: %+v", public)
 	}
 }
@@ -217,7 +222,7 @@ func TestCatalogUsesDetailedCreationTimeWhenSearchDiffers(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if !public.Complete || public.Selection.Selected != 18 || public.SampleAge.Newest != client.prs[0].Created {
+	if !public.Complete || public.Selection.Selected != 21 || public.SampleAge.Newest != client.prs[0].Created {
 		t.Fatalf("search timestamp mismatch rejected a valid sample: %+v", public)
 	}
 }
@@ -232,7 +237,65 @@ func TestCatalogDoesNotPlaceDetailedPRInWrongAgeBand(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if public.Selection.Selected != 17 {
+	if public.Selection.Selected != 19 {
 		t.Fatalf("cross-boundary candidate was counted: %+v", public.Selection)
+	}
+}
+
+func TestCatalogThreeHundredPRsAcrossBands(t *testing.T) {
+	client, observed := catalogSource(t)
+	client.prs = nil
+	for band := range 3 {
+		for index := range 110 {
+			draft := false
+			number := 1000 + band*110 + index
+			client.prs = append(client.prs, rawPR{ID: int64(number), Number: number, User: &rawActor{ID: int64(number + 2000), Login: "author", Type: "User"}, Created: observed.Add(-time.Duration(band*30+1)*24*time.Hour - time.Duration(index)*time.Minute).Format(time.RFC3339), Draft: &draft, State: "open"})
+		}
+	}
+	public, _, err := CollectCatalog(context.Background(), client, Entry{Repository: "example/repo"}, observed, State{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !public.Complete || public.Selection.Selected != 300 || public.Selection.Listed != 300 || !public.Selection.More || public.Requests != 1204 || public.Result.ReviewActivity.CoveredPRs != 300 {
+		t.Fatalf("expanded collection failed: selection=%+v requests=%d complete=%v", public.Selection, public.Requests, public.Complete)
+	}
+	if public.SampleAge.Newest != client.prs[0].Created || public.SampleAge.Oldest != client.prs[319].Created {
+		t.Fatalf("age-band sampling changed: %+v", public.SampleAge)
+	}
+}
+
+func TestCatalogResumeReusesCompletedPagesAndRevalidatesVisibility(t *testing.T) {
+	client, observed := catalogSource(t)
+	client.limit = 30
+	writes := 0
+	_, state, err := CollectCatalogWithCheckpoint(context.Background(), client, Entry{Repository: "example/repo"}, observed, State{}, func(progress State) error {
+		writes++
+		if !progress.Pending || len(progress.Pages) == 0 {
+			t.Fatal("missing progress")
+		}
+		return nil
+	})
+	if err != nil || !state.Pending || writes != 30 {
+		t.Fatalf("missing pending checkpoint: writes=%d err=%v", writes, err)
+	}
+	resumed, _ := catalogSource(t)
+	public, complete, err := CollectCatalogWithCheckpoint(context.Background(), resumed, Entry{Repository: "example/repo"}, observed.Add(time.Hour), state, nil)
+	if err != nil || !public.Complete || complete.Pending || public.Requests != 59 || public.Result.CollectedAt != observed.Format("2006-01-02T15:04:05.000Z") {
+		t.Fatalf("resume failed: requests=%d pending=%v err=%v", public.Requests, complete.Pending, err)
+	}
+	denied, _ := catalogSource(t)
+	denied.data.Metadata = json.RawMessage(`{"id":42,"full_name":"example/repo","private":true}`)
+	if _, _, err = CollectCatalogWithCheckpoint(context.Background(), denied, Entry{Repository: "example/repo"}, observed, state, nil); err == nil || denied.used != 1 {
+		t.Fatal("resume skipped repository visibility check")
+	}
+}
+func TestCatalogResumeInvalidatesChangedBotPolicy(t *testing.T) {
+	client, observed := catalogSource(t)
+	client.limit = 30
+	_, state, _ := CollectCatalogWithCheckpoint(context.Background(), client, Entry{Repository: "example/repo"}, observed, State{}, nil)
+	changed, _ := catalogSource(t)
+	public, _, err := CollectCatalogWithCheckpoint(context.Background(), changed, Entry{Repository: "example/repo", BotIDs: []int64{999}}, observed, state, nil)
+	if err != nil || public.Requests != 88 {
+		t.Fatalf("stale exclusion policy reused: requests=%d err=%v", public.Requests, err)
 	}
 }
