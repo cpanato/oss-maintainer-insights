@@ -2,65 +2,45 @@
 
 Explore review participation, response times, and maintenance trends in public GitHub repositories, with live queries and community-curated historical data.
 
-The implementation provides deterministic Go and TypeScript metrics, versioned JSON Schemas, shared fixtures, bounded REST clients, an offline Go analysis command, a public-API feasibility probe, and PR CI. The website, historical ingestion, and deployment follow in later milestones.
+Status: early development. Live queries work today; historical ingestion, the curated catalog, and deployment are planned. See the [implementation plan](docs/design/oss-maintainer-insights-implementation-plan.md).
 
 ## Development
 
-Use Node **24.21.0** (see `.node-version`) and Go **1.27.1** (see `go.mod`). Install dependencies from the committed lockfile:
+Requires Node (see `.node-version`) and Go (see `go.mod`).
 
 ```sh
 npm ci
-npm run check
+npm run check   # lint, format, typecheck, tests, builds (requires Go for parity tests)
+npm run dev     # http://127.0.0.1:4321/oss-maintainer-insights/
 ```
 
-`npm run check` runs lint, formatting checks, typecheck, unit/schema/parity tests, and the TypeScript package build. Parity tests compile the Go command and compare its output with the TypeScript engine for the same scenarios, so Go must be installed for this command.
+Enter `owner/repository` or a GitHub repository URL, or open `?repo=owner/repository`. Live queries are a bounded, unauthenticated sample, not a repository census. See [operations](docs/operations.md) for limits, caching, and behavior.
 
-Run Go checks separately:
-
-```sh
-test -z "$(gofmt -l cmd internal)"
-go vet ./cmd/... ./internal/...
-golangci-lint run ./cmd/... ./internal/...
-go test -race ./cmd/... ./internal/...
-go build -o dist/collector ./cmd/collector
-```
-
-Go commands target the project's package directories explicitly so installed npm dependencies are not included in Go package discovery. To format source files, run `npm run format` and `gofmt -w cmd internal`.
-
-## Offline analysis
-
-The Go command currently analyzes normalized input; it does not fetch from GitHub or publish data. Use the shared, schema-tested fixture:
-
-```sh
-go run ./cmd/collector analyze < tests/fixtures/monthly-input.json
-```
-
-The expected result is in `tests/fixtures/monthly-expected.json`. The command rejects unknown fields, duplicate records, and invalid analysis inputs. Inputs must be JSON Schema validated before use; full schema validation at the Go ingestion boundary is scheduled with the collector milestone.
-
-## Public API diagnostics
-
-Measure public endpoint access and bounded backfill cost locally:
-
-```sh
-go run ./cmd/collector probe --requests=10 ossf/scorecard
-```
-
-The command makes at most ten requests for this repository, including retries and redirects, and prints one sanitized JSON report. It samples event streams on the first eligible PR and enumerates old PRs within the remaining budget. This is a feasibility report, not historical metrics. It uses `GITHUB_TOKEN` when explicitly present in the environment; otherwise it runs unauthenticated. Never put credentials in command arguments or reports.
-
-For browser CORS diagnostics, build the packages and serve the repository root:
+Browser tests use simulated GitHub responses and need no secrets:
 
 ```sh
 npm run build
-python3 -m http.server 8000 --bind 127.0.0.1
+npx playwright install chromium
+npm run test:browser
 ```
 
-Open `http://127.0.0.1:8000/diagnostics/github.html`. Each diagnostic makes at most two unauthenticated requests and shows the headers visible to the browser. See [operations](docs/operations.md) for measured costs, behavior, and remaining launch gates.
+Go checks (see [CI practices](docs/ci.md) for the full list):
 
-## Pull request checks
+```sh
+go vet ./cmd/... ./internal/...
+go test -race ./cmd/... ./internal/...
+```
 
-The main CI workflow runs ESLint with TypeScript type information, formatting/type checks, metric/schema/parity tests, builds, Go formatting/vet/race tests, and a dedicated golangci-lint **2.14.0** job. Its `ci-required` check summarizes these language checks. Reports are uploaded for seven days; tests use synthetic fixtures without secrets or live API access.
+Run `npm run format` and `gofmt -w cmd internal` to format sources.
 
-Independent workflows run zizmor on PRs and OpenSSF Scorecard on `main` and weekly. They do not feed into `ci-required`. All workflows start with `permissions: {}` and grant minimum permissions per job. See [CI practices](docs/ci.md) for local audit commands, report handling, and branch-protection setup.
+## Go collector
+
+```sh
+go run ./cmd/collector analyze < tests/fixtures/monthly-input.json
+go run ./cmd/collector probe --requests=10 ossf/scorecard
+```
+
+`analyze` computes metrics from normalized input (expected output: `tests/fixtures/monthly-expected.json`). `probe` runs a bounded public-API feasibility check and uses `GITHUB_TOKEN` only if set in the environment. Neither command publishes data.
 
 ## Documentation
 
