@@ -6,7 +6,7 @@ Status: early development. Live queries work today; historical ingestion, the cu
 
 ## Development
 
-Requires Node (see `.node-version`) and Go (see `go.mod`).
+Requires Node (see `.node-version`) and Go (see `.go-version`).
 
 ```sh
 npm ci
