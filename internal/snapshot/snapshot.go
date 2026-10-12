@@ -316,7 +316,7 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		previous = State{}
 	}
 	pendingAt, pendingErr := timestamp(previous.ObservedAt)
-	resume = resume && previous.Pending && pendingErr == nil && previous.MethodologyVersion == analysis.MethodologyVersion && slices.Equal(previous.BotIDs, entry.BotIDs) && !observed.Before(pendingAt) && observed.Sub(pendingAt) <= 7*24*time.Hour
+	resume = resume && previous.Pending && previous.RepositoryID > 0 && pendingErr == nil && previous.MethodologyVersion == analysis.MethodologyVersion && slices.Equal(previous.BotIDs, entry.BotIDs) && !observed.Before(pendingAt) && observed.Sub(pendingAt) <= 7*24*time.Hour
 	if resume {
 		state.RepositoryID = previous.RepositoryID
 		observed = pendingAt

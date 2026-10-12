@@ -299,3 +299,17 @@ func TestCatalogResumeInvalidatesChangedBotPolicy(t *testing.T) {
 		t.Fatalf("stale exclusion policy reused: requests=%d err=%v", public.Requests, err)
 	}
 }
+
+func TestCatalogResumeIgnoresCheckpointBeforeMetadata(t *testing.T) {
+	client, observed := catalogSource(t)
+	client.limit = 0
+	_, state, err := CollectCatalogWithCheckpoint(context.Background(), client, Entry{Repository: "example/repo"}, observed, State{}, nil)
+	if err == nil || !state.Pending || state.RepositoryID != 0 {
+		t.Fatal("expected interruption before metadata")
+	}
+	fresh, _ := catalogSource(t)
+	public, _, err := CollectCatalogWithCheckpoint(context.Background(), fresh, Entry{Repository: "example/repo"}, observed, state, nil)
+	if err != nil || !public.Complete || public.Requests != 88 {
+		t.Fatalf("empty checkpoint blocked acquisition: requests=%d err=%v", public.Requests, err)
+	}
+}
