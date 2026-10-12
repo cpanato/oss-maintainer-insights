@@ -1,9 +1,9 @@
 {
   "sample_age": {
-    "oldest_created_at": "2026-10-11T11:11:42Z",
-    "newest_created_at": "2026-10-12T15:03:56Z"
+    "oldest_created_at": "2026-10-10T13:27:52Z",
+    "newest_created_at": "2026-10-12T15:55:52Z"
   },
-  "policy": "three-age-bands-eighteen-human-prs-90-days-v1",
+  "policy": "three-age-bands-three-hundred-human-prs-90-days-v1",
   "result": {
     "schema_version": 1,
     "methodology_version": "1.1.0",
@@ -12,10 +12,10 @@
       "full_name": "cpanato/github-actions-dashboard"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-12T15:15:29.000Z",
+    "collected_at": "2026-10-12T15:57:47.000Z",
     "window": {
-      "start": "2026-07-14T15:15:29.000Z",
-      "end": "2026-10-12T15:15:29.000Z"
+      "start": "2026-07-14T15:57:47.000Z",
+      "end": "2026-10-12T15:57:47.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
@@ -26,13 +26,13 @@
       "self_events": 0
     },
     "creation_cohort": {
-      "eligible_prs": 6,
+      "eligible_prs": 25,
       "coverage": "complete_for_sample",
       "authors": 1,
       "outcomes": {
-        "open": 2,
+        "open": 0,
         "closed_unmerged": 0,
-        "merged": 4
+        "merged": 25
       }
     },
     "review_activity": {
@@ -40,8 +40,8 @@
         "github_review_units": 0,
         "prow_command_units": 0
       },
-      "eligible_prs": 6,
-      "covered_prs": 6,
+      "eligible_prs": 25,
+      "covered_prs": 25,
       "coverage": "complete_for_sample",
       "review_units": 0,
       "participants": 0,
@@ -56,11 +56,11 @@
       }
     },
     "first_response": {
-      "eligible_prs": 6,
-      "covered_prs": 6,
+      "eligible_prs": 25,
+      "covered_prs": 25,
       "coverage": "complete_for_sample",
       "responded_prs": 0,
-      "unanswered_prs": 6,
+      "unanswered_prs": 25,
       "median_ms": {
         "value": null,
         "status": "insufficient_data"
@@ -68,17 +68,17 @@
     }
   },
   "selection": {
-    "listed": 29,
-    "selected": 6,
-    "eligible_on_page": 24,
-    "truncated": true,
+    "listed": 30,
+    "selected": 25,
+    "eligible_on_page": 25,
+    "truncated": false,
     "list_has_more": false
   },
-  "requests": 28,
+  "requests": 104,
   "rate": {
-    "remaining": 4100,
+    "remaining": 1998,
     "limit": 5000,
-    "resetAt": 1791821090000
+    "resetAt": 1791822533000
   },
   "failures": [],
   "complete": true

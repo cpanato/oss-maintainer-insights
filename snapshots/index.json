@@ -1,45 +1,85 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-12T15:47:33Z",
+  "attempted_at": "2026-10-12T16:24:05Z",
   "entries": [
     {
       "repository": "ossf/scorecard",
-      "status": "updated",
-      "requests": 352
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "ossf/allstar",
-      "status": "updated",
-      "requests": 48
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "sigstore/cosign",
-      "status": "updated",
-      "requests": 276
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "preserved",
-      "reason": "rate_limit",
-      "requests": 49
+      "status": "pending",
+      "reason": "partial",
+      "requests": 1207,
+      "progress": {
+        "window": {
+          "start": "2026-07-14T15:29:30.000Z",
+          "end": "2026-10-12T15:29:30.000Z"
+        },
+        "enumerated_prs": 1900,
+        "eligible_prs": 1765,
+        "covered_prs": 1056,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "preserved",
-      "reason": "rate_limit",
-      "requests": 1
+      "status": "pending",
+      "reason": "cancelled",
+      "requests": 0,
+      "progress": {
+        "window": {
+          "start": "2026-07-14T15:42:06.000Z",
+          "end": "2026-10-12T15:42:06.000Z"
+        },
+        "enumerated_prs": 0,
+        "eligible_prs": 0,
+        "covered_prs": 0,
+        "enumeration_complete": false
+      }
     },
     {
       "repository": "helm/helm",
-      "status": "preserved",
-      "reason": "rate_limit",
-      "requests": 1
+      "status": "pending",
+      "reason": "cancelled",
+      "requests": 0,
+      "progress": {
+        "window": {
+          "start": "2026-07-14T15:50:24.000Z",
+          "end": "2026-10-12T15:50:24.000Z"
+        },
+        "enumerated_prs": 0,
+        "eligible_prs": 0,
+        "covered_prs": 0,
+        "enumeration_complete": false
+      }
     },
     {
       "repository": "cpanato/github-actions-dashboard",
-      "status": "preserved",
-      "reason": "rate_limit",
-      "requests": 1
+      "status": "pending",
+      "reason": "cancelled",
+      "requests": 0,
+      "progress": {
+        "window": {
+          "start": "2026-07-14T15:57:47.000Z",
+          "end": "2026-10-12T15:57:47.000Z"
+        },
+        "enumerated_prs": 0,
+        "eligible_prs": 0,
+        "covered_prs": 0,
+        "enumeration_complete": false
+      }
     }
   ]
 }
