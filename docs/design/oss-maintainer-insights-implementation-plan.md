@@ -150,7 +150,7 @@ This advances saved samples and publication infrastructure without claiming mile
 
 ### Catalog sampling refinement
 
-The initial newest-eight policy can select only hours-old PRs in high-volume projects. Saved catalog collection now uses up to 300 PRs across three disjoint 30-day creation bands, with up to 100 candidates per band and no activity-based replacement. Browser queries retain their original policy and budget. The UI shows the selected PR age range and explains insufficient headline metrics as sample limitations. Shared fixtures validate Go/TypeScript metric parity under the new selection policy; complete monthly historical ingestion remains pending.
+Saved collection now enumerates every eligible human PR created within a frozen 90-day window, without an eighteen/three-hundred-PR population cap. Hourly executions resume sanitized enumeration and per-PR event checkpoints under request budgets; completed windows stay fresh for 24 hours. Only complete cohorts replace public results. The UI labels legacy samples, full creation cohorts, and pending progress distinctly. Browser queries remain newest-eight/20-attempt and offer a catalog contribution guide. Tests cover more than 1,000 PRs and multi-execution completion without live API access; monthly historical ingestion remains pending.
 
 ### Prow participation extension
 

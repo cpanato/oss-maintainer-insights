@@ -384,3 +384,46 @@ void test("legacy public snapshots stay readable and new source totals are check
     delete row.sources;
   assert.ok(parsePublicSnapshot(legacy, "example/repo"));
 });
+
+void test("collection progress rejects invalid denominators and incomplete full results", async () => {
+  const { parseCollectionProgress, parsePublicSnapshot } =
+    await import("../apps/web/src/lib/live.js");
+  const window = { start: "2026-07-14T12:00:00Z", end: "2026-10-12T12:00:00Z" };
+  const index = {
+    schema_version: 1,
+    attempted_at: window.end,
+    entries: [
+      {
+        repository: "example/repo",
+        status: "pending",
+        reason: "budget",
+        requests: 1300,
+        progress: {
+          window,
+          enumerated_prs: 1500,
+          eligible_prs: 1200,
+          covered_prs: 400,
+          enumeration_complete: true,
+        },
+      },
+    ],
+  };
+  assert.equal(
+    parseCollectionProgress(index, "example/repo")?.covered_prs,
+    400,
+  );
+  assert.equal(parseCollectionProgress(index, "different/repo"), null);
+  const invalid = structuredClone(index);
+  invalid.entries[0]!.progress.covered_prs = 1201;
+  assert.equal(parseCollectionProgress(invalid, "example/repo"), null);
+  const { readFileSync } = await import("node:fs");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("./fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.complete = false;
+  assert.equal(parsePublicSnapshot(saved, "example/repo"), null);
+});

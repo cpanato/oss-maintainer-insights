@@ -8,6 +8,8 @@ import {
   parsePublicSnapshot,
   CATALOG_POLICY,
   LEGACY_CATALOG_POLICY,
+  BAND_CATALOG_POLICY,
+  parseCollectionProgress,
 } from "./live.js";
 import type { PublicSnapshot } from "./live.js";
 import catalog from "../../../../catalog/repositories.json" with { type: "json" };
@@ -73,10 +75,17 @@ function duration(ms: number): string {
 function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   displayed = snapshot;
   const { result, selection } = snapshot;
-  const catalogSample = [CATALOG_POLICY, LEGACY_CATALOG_POLICY].includes(
-    snapshot.policy,
+  const catalogSample = [
+    CATALOG_POLICY,
+    LEGACY_CATALOG_POLICY,
+    BAND_CATALOG_POLICY,
+  ].includes(snapshot.policy);
+  const fullWindow = snapshot.policy === CATALOG_POLICY;
+  const bandLimit = snapshot.policy === LEGACY_CATALOG_POLICY ? 6 : 100;
+  text(
+    "population-label",
+    fullWindow ? "90-DAY CREATION COHORT" : "RECENT SAMPLE",
   );
-  const bandLimit = snapshot.policy === CATALOG_POLICY ? 100 : 6;
   const windowDays = Math.round(
     (Date.parse(result.window.end) - Date.parse(result.window.start)) /
       86400000,
@@ -101,20 +110,20 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   text("repo-name", result.repository.full_name);
   text(
     "sample-description",
-    `${selection.selected} selected PRs · ${windowDays}-day window (${date(result.window.start)}–${date(result.window.end)}, UTC) · ${catalogSample ? `Up to ${bandLimit} PRs from each of three 30-day creation bands` : "Up to 8 newest eligible PRs"}${ageNote} · ${snapshot.complete ? "Collection complete for this sample" : "Partial collection"}`,
+    `${selection.selected} ${fullWindow ? "eligible PRs" : "selected PRs"} · ${windowDays}-day window (${date(result.window.start)}–${date(result.window.end)}, UTC) · ${fullWindow ? "All eligible PRs created within this window" : catalogSample ? `Up to ${bandLimit} PRs from each of three 30-day creation bands` : "Up to 8 newest eligible PRs"}${ageNote} · ${snapshot.complete ? (fullWindow ? "Collection complete for this creation window" : "Collection complete for this sample") : "Partial collection"}`,
   );
   text(
     "sample-scope",
-    `All metrics below describe these ${selection.selected} selected PRs. They do not count all PRs, reviews, or contributors in this repository during the ${windowDays}-day window.${snapshot.selection.truncated || snapshot.selection.list_has_more ? " More PRs exist beyond the sample limit." : ""}${catalogSample ? " Refresh live replaces this view with a smaller sample of up to 8 recent PRs." : ""}`,
+    `${fullWindow ? "Metrics cover all eligible human-authored, non-draft PRs created in this window. Reviews on PRs created before the window are outside this collection." : `All metrics below describe these ${selection.selected} selected PRs. They do not count all PRs, reviews, or contributors in this repository during the ${windowDays}-day window.`}${snapshot.selection.truncated || snapshot.selection.list_has_more ? " More PRs exist beyond the sample limit." : ""}${catalogSample ? " Refresh live replaces this view with a smaller sample of up to 8 recent PRs." : ""}`,
   );
   text(
     "freshness",
-    `${source === "cache" ? "Cached result" : source === "saved" ? "Saved snapshot" : "Live query"} · Observed ${new Date(result.collected_at).toLocaleString()} · ${snapshot.requests}${source === "saved" ? "" : "/20"} requests at collection · Methodology ${result.methodology_version}${source === "saved" || snapshot.rate.remaining === null ? "" : ` · API allowance at collection: ${snapshot.rate.remaining}`}`,
+    `${source === "cache" ? "Cached result" : source === "saved" ? "Saved snapshot" : "Live query"} · Observed ${new Date(result.collected_at).toLocaleString()} · ${snapshot.requests}${source === "saved" ? "" : "/20"} requests ${fullWindow ? "in the final collection run" : "at collection"} · Methodology ${result.methodology_version}${source === "saved" || snapshot.rate.remaining === null ? "" : ` · API allowance at collection: ${snapshot.rate.remaining}`}`,
   );
   text("authors", String(result.creation_cohort.authors));
   text(
     "author-note",
-    `${result.creation_cohort.eligible_prs} eligible PRs in this sample`,
+    `${result.creation_cohort.eligible_prs} eligible PRs in this ${fullWindow ? "creation window" : "sample"}`,
   );
   text(
     "reviewers",
@@ -147,7 +156,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   text(
     "response-note",
     response.median_ms.value === null
-      ? `Sample has ${response.responded_prs} human responses · At least 5 are needed for a median`
+      ? `${fullWindow ? "Creation window" : "Sample"} has ${response.responded_prs} human responses · At least 5 are needed for a median`
       : `Median across ${response.responded_prs} responded PRs`,
   );
   text("review-units", `${reviews.review_units} review units`);
@@ -208,18 +217,25 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   coverage.replaceChildren();
   for (const [name, value] of [
     [
-      catalogSample
-        ? "PR candidates inspected across age bands"
-        : "PRs inspected on the first page",
+      fullWindow
+        ? "PRs inspected during enumeration"
+        : catalogSample
+          ? "PR candidates inspected across age bands"
+          : "PRs inspected on the first page",
       String(selection.listed),
     ],
     [
-      catalogSample
-        ? "Eligible candidates across age bands"
-        : "Eligible PRs on that page",
+      fullWindow
+        ? "Eligible human PRs in the window"
+        : catalogSample
+          ? "Eligible candidates across age bands"
+          : "Eligible PRs on that page",
       String(selection.eligible_on_page),
     ],
-    ["Selected sample", String(selection.selected)],
+    [
+      fullWindow ? "Eligible creation cohort" : "Selected sample",
+      String(selection.selected),
+    ],
     [
       "Complete review participation streams",
       `${reviews.covered_prs}/${reviews.eligible_prs}`,
@@ -243,7 +259,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   }
   text(
     "coverage-notes",
-    `${catalogSample ? `Up to ${bandLimit} eligible human-authored, non-draft PRs from each of three 30-day creation bands are selected, newest first within each band. Each band inspects at most ${snapshot.policy === CATALOG_POLICY ? 100 : 30} search candidates. Empty bands stay empty; PRs are not replaced because they lack responses. This is a bounded sample, not a random sample or full 90-day census.` : "The newest eligible human-authored, non-draft PRs from the first 30-record page are selected, up to 8."}${selection.truncated || selection.list_has_more ? " The repository contains PRs outside this bounded sample." : ""} Uncovered PRs are not counted as unanswered. Bots, deleted actors, and self responses are excluded.`,
+    `${fullWindow ? "All eligible human-authored, non-draft PRs created within the 90-day window are enumerated through GitHub PR pages. Reviews on PRs created before the window are outside this collection. GitHub pagination is not an atomic historical snapshot." : catalogSample ? `Up to ${bandLimit} eligible human-authored, non-draft PRs from each of three 30-day creation bands are selected, newest first within each band. Each band inspects at most ${snapshot.policy === BAND_CATALOG_POLICY ? 100 : 30} search candidates. Empty bands stay empty; PRs are not replaced because they lack responses. This is a bounded sample, not a random sample or full 90-day census.` : "The newest eligible human-authored, non-draft PRs from the first 30-record page are selected, up to 8."}${selection.truncated || selection.list_has_more ? " The repository contains PRs outside this bounded sample." : ""} Uncovered PRs are not counted as unanswered. Bots, deleted actors, and self responses are excluded.`,
   );
   const failures = element("failure-list");
   failures.replaceChildren();
@@ -296,6 +312,7 @@ async function query(repository: string, refresh = false, allowLive = true) {
   element("contribution").hidden = savedRepositories.has(
     normalized.toLowerCase(),
   );
+  element("collection-progress").hidden = true;
   const botIds = savedRepositories.get(normalized.toLowerCase())?.bot_ids ?? [];
   const cached = !refresh && cache.read(normalized, botIds);
   if (cached) {
@@ -311,6 +328,19 @@ async function query(repository: string, refresh = false, allowLive = true) {
   if (!refresh && savedRepositories.has(normalized.toLowerCase())) {
     text("status", `Loading saved snapshot for ${normalized}.`);
     try {
+      const progressRequest = fetch(
+        `${import.meta.env.BASE_URL}data/index.json`,
+        { signal, credentials: "omit" },
+      )
+        .then(async (response) =>
+          response.ok
+            ? parseCollectionProgress(
+                (await response.json()) as unknown,
+                normalized,
+              )
+            : null,
+        )
+        .catch(() => null);
       const response = await fetch(
         `${import.meta.env.BASE_URL}data/${normalized.toLowerCase().replace("/", "--")}.json`,
         { signal, credentials: "omit" },
@@ -318,13 +348,21 @@ async function query(repository: string, refresh = false, allowLive = true) {
       const saved = response.ok
         ? parsePublicSnapshot((await response.json()) as unknown, normalized)
         : null;
+      const progress = await progressRequest;
       if (current !== generation) return;
+      if (progress) {
+        text(
+          "collection-progress",
+          `Full 90-day collection in progress (${progress.window.start.slice(0, 10)}–${progress.window.end.slice(0, 10)}, UTC): ${progress.enumerated_prs} PRs inspected, ${progress.eligible_prs} eligible, ${progress.covered_prs} with complete review and comment streams. ${progress.enumeration_complete ? "PR enumeration finished; event collection continues." : "More PR pages remain to be enumerated."}${saved ? " The previous saved result remains visible until this collection completes." : " Results will be published when this collection completes."}`,
+        );
+        element("collection-progress").hidden = false;
+      }
       if (saved) {
         render(saved, "saved");
         const age = Date.now() - Date.parse(saved.result.collected_at);
         text(
           "status",
-          `Showing a saved ${saved.complete ? "complete" : "partial"} sample. No GitHub API calls were made.${age > 86400000 ? " This snapshot is over 24 hours old." : ""} Refresh live only when you need a new query.`,
+          `Showing a saved ${saved.complete ? "complete" : "partial"} ${saved.policy === CATALOG_POLICY ? "90-day creation window" : "sample"}. No GitHub API calls were made.${age > 86400000 ? " This snapshot is over 24 hours old." : ""} Refresh live only when you need a new query.`,
         );
         busy(false);
         controller = null;

@@ -51,11 +51,11 @@ func readJSON(path string, destination any) error {
 		return err
 	}
 	defer func() { _ = file.Close() }()
-	data, err := io.ReadAll(io.LimitReader(file, 8*1024*1024+1))
+	data, err := io.ReadAll(io.LimitReader(file, 64*1024*1024+1))
 	if err != nil {
 		return err
 	}
-	if len(data) > 8*1024*1024 {
+	if len(data) > 64*1024*1024 {
 		return errors.New("saved document exceeds size limit")
 	}
 	decoder := json.NewDecoder(bytes.NewReader(data))
@@ -70,10 +70,11 @@ func readJSON(path string, destination any) error {
 }
 
 type attempt struct {
-	Repository string `json:"repository"`
-	Status     string `json:"status"`
-	Reason     string `json:"reason,omitempty"`
-	Requests   int    `json:"requests"`
+	Repository string             `json:"repository"`
+	Status     string             `json:"status"`
+	Reason     string             `json:"reason,omitempty"`
+	Requests   int                `json:"requests"`
+	Progress   *snapshot.Progress `json:"progress,omitempty"`
 }
 type manifest struct {
 	SchemaVersion int       `json:"schema_version"`
@@ -137,6 +138,17 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 		if err := readJSON(statePath, &previous); err != nil && !os.IsNotExist(err) {
 			previous = snapshot.State{}
 		}
+		// Reuse body-free observations from a legacy sample while enumerating the
+		// entire creation window. Its cached streams become part of the pending
+		// frozen window; missing PR pages and streams still come from GitHub.
+		if validPrior && prior.Complete && prior.Policy != snapshot.CatalogPolicy && prior.Result.MethodologyVersion == analysis.MethodologyVersion && previous.Version == 2 && previous.Policy == prior.Policy && strings.EqualFold(previous.Repository, entry.Repository) {
+			previous.Policy = snapshot.CatalogPolicy
+			previous.Pending = true
+			previous.ObservedAt = prior.Result.CollectedAt
+			previous.RepositoryID = prior.Result.Repository.ID
+			previous.MethodologyVersion = analysis.MethodologyVersion
+			previous.BotIDs = append([]int64(nil), entry.BotIDs...)
+		}
 		collected, parseErr := time.Parse(time.RFC3339Nano, prior.Result.CollectedAt)
 		if validPrior && prior.Policy == snapshot.CatalogPolicy && prior.Result.MethodologyVersion == analysis.MethodologyVersion && parseErr == nil && !previous.Pending && !*force && !now.Before(collected) && now.Sub(collected) < *maxAge {
 			report.Entries = append(report.Entries, attempt{Repository: entry.Repository, Status: "fresh"})
@@ -145,7 +157,8 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 		policy := github.DefaultPolicy()
 		policy.MaxRequests = min(1300, 9000/len(entries))
 		policy.MaxWait = *maxWait
-		fmt.Fprintf(os.Stderr, "Collecting %s (up to 300 PRs, %d request attempts)\n", entry.Repository, policy.MaxRequests)
+		policy.MinimumRemaining = 100
+		fmt.Fprintf(os.Stderr, "Collecting %s (all eligible PRs in 90 days, %d request attempts)\n", entry.Repository, policy.MaxRequests)
 		options := github.Options{Policy: policy, Token: os.Getenv("GITHUB_TOKEN"), Sleep: func(ctx context.Context, delay time.Duration) error {
 			if delay > 2*time.Second {
 				fmt.Fprintf(os.Stderr, "Waiting %s for GitHub rate limit/retry; collection can be cancelled and resumed\n", delay.Round(time.Second))
@@ -175,6 +188,12 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 				return nil
 			}
 			checkpointErr = atomicJSON(statePath, state)
+			if checkpointErr != nil {
+				return checkpointErr
+			}
+			interim := report
+			interim.Entries = append(append([]attempt(nil), report.Entries...), attempt{Repository: entry.Repository, Status: "pending", Requests: client.RequestsUsed(), Progress: state.Progress})
+			checkpointErr = atomicJSON(filepath.Join(*directory, "index.json"), interim)
 			if checkpointCount%100 == 0 {
 				fmt.Fprintf(os.Stderr, "Checkpoint %s: %d saved pages, %d attempts this run\n", entry.Repository, len(state.Pages), client.RequestsUsed())
 			}
@@ -193,7 +212,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 		if err := atomicJSON(statePath, state); err != nil {
 			return err
 		}
-		status := attempt{Repository: entry.Repository, Status: "updated", Requests: client.RequestsUsed()}
+		status := attempt{Repository: entry.Repository, Status: "updated", Requests: client.RequestsUsed(), Progress: state.Progress}
 		if collectErr != nil {
 			status.Status = "unavailable"
 			if validPrior {
@@ -202,12 +221,15 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 			var failure *github.Failure
 			if errors.As(collectErr, &failure) {
 				status.Reason = failure.Reason
+				if state.Pending {
+					status.Status = "pending"
+				}
 			} else {
 				status.Reason = "invalid_response"
 			}
 		} else {
-			if validPrior && prior.Complete && !current.Complete {
-				status.Status = "preserved"
+			if !current.Complete {
+				status.Status = "pending"
 				status.Reason = "partial"
 			} else if err := atomicJSON(publicPath, current); err != nil {
 				return err

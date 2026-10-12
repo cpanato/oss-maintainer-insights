@@ -26,7 +26,7 @@
             "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*/[A-Za-z0-9_.-]+$"
           },
           "status": {
-            "enum": ["fresh", "updated", "preserved", "unavailable"]
+            "enum": ["fresh", "updated", "preserved", "unavailable", "pending"]
           },
           "reason": {
             "enum": [
@@ -48,6 +48,51 @@
             "type": "integer",
             "minimum": 0,
             "maximum": 1300
+          },
+          "progress": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "window",
+              "enumerated_prs",
+              "eligible_prs",
+              "covered_prs",
+              "enumeration_complete"
+            ],
+            "properties": {
+              "window": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["start", "end"],
+                "properties": {
+                  "start": {
+                    "type": "string",
+                    "format": "date-time",
+                    "pattern": "Z$"
+                  },
+                  "end": {
+                    "type": "string",
+                    "format": "date-time",
+                    "pattern": "Z$"
+                  }
+                }
+              },
+              "enumeration_complete": {
+                "type": "boolean"
+              },
+              "enumerated_prs": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "eligible_prs": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "covered_prs": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
           }
         }
       }

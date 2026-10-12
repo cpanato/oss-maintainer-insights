@@ -65,7 +65,16 @@ type Page struct {
 	Next  string          `json:"next"`
 	Value json.RawMessage `json:"value"`
 }
+type Progress struct {
+	Window              analysis.Window `json:"window"`
+	EnumeratedPRs       int             `json:"enumerated_prs"`
+	EligiblePRs         int             `json:"eligible_prs"`
+	CoveredPRs          int             `json:"covered_prs"`
+	EnumerationComplete bool            `json:"enumeration_complete"`
+}
+
 type State struct {
+	Progress           *Progress       `json:"progress,omitempty"`
 	RepositoryID       int64           `json:"repository_id,omitempty"`
 	ObservedAt         string          `json:"observed_at,omitempty"`
 	Pending            bool            `json:"pending,omitempty"`
@@ -273,6 +282,31 @@ func (r *reader) events(ctx context.Context, path string, review bool) ([]analys
 	}
 	return values, true, nil
 }
+func (r *reader) cachedStream(path string, review bool) bool {
+	visited := map[string]bool{}
+	for path != "" {
+		if visited[path] {
+			return false
+		}
+		visited[path] = true
+		page, ok := r.previous.Pages[path]
+		if !ok {
+			return false
+		}
+		var records []rawEvent
+		if json.Unmarshal(page.Value, &records) != nil || records == nil {
+			return false
+		}
+		for _, record := range records {
+			if _, err := normalize(record, review); err != nil {
+				return false
+			}
+		}
+		path = page.Next
+	}
+	return true
+}
+
 func reason(err error) string {
 	var failure *github.Failure
 	if errors.As(err, &failure) {
@@ -286,7 +320,7 @@ func Collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 	return collect(ctx, client, entry, observed, previous, false, false, nil)
 }
 
-// CollectCatalog samples three disjoint creation-age bands without selecting for activity.
+// CollectCatalog enumerates the complete eligible 90-day creation cohort.
 func CollectCatalog(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State) (Public, State, error) {
 	return collect(ctx, client, entry, observed, previous, true, false, nil)
 }
@@ -297,7 +331,7 @@ func CollectCatalogWithCheckpoint(ctx context.Context, client Getter, entry Entr
 	return collect(ctx, client, entry, observed, previous, true, true, checkpoint)
 }
 
-const CatalogPolicy = "three-age-bands-three-hundred-human-prs-90-days-v1"
+const CatalogPolicy = "all-human-prs-created-in-90-days-v1"
 
 func collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, catalog, resume bool, checkpoint func(State) error) (Public, State, error) {
 	observed = observed.UTC().Truncate(time.Millisecond)
@@ -312,11 +346,12 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		}
 		observed = observed.Truncate(time.Second)
 	}
-	if previous.Version != 2 || previous.Policy != policy || !strings.EqualFold(previous.Repository, entry.Repository) {
+	compatiblePolicy := previous.Policy == policy || (catalog && slices.Contains([]string{QueryPolicy, "three-age-bands-eighteen-human-prs-90-days-v1", "three-age-bands-three-hundred-human-prs-90-days-v1"}, previous.Policy))
+	if previous.Version != 2 || !compatiblePolicy || !strings.EqualFold(previous.Repository, entry.Repository) {
 		previous = State{}
 	}
 	pendingAt, pendingErr := timestamp(previous.ObservedAt)
-	resume = resume && previous.Pending && previous.RepositoryID > 0 && pendingErr == nil && previous.MethodologyVersion == analysis.MethodologyVersion && slices.Equal(previous.BotIDs, entry.BotIDs) && !observed.Before(pendingAt) && observed.Sub(pendingAt) <= 7*24*time.Hour
+	resume = resume && previous.Pending && previous.Policy == policy && previous.RepositoryID > 0 && pendingErr == nil && previous.MethodologyVersion == analysis.MethodologyVersion && slices.Equal(previous.BotIDs, entry.BotIDs) && !observed.Before(pendingAt)
 	if resume {
 		state.RepositoryID = previous.RepositoryID
 		observed = pendingAt
@@ -329,6 +364,13 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		state.Pending = true
 		state.MethodologyVersion = analysis.MethodologyVersion
 		state.BotIDs = append([]int64(nil), entry.BotIDs...)
+	}
+	if catalog {
+		state.Progress = &Progress{Window: analysis.Window{Start: observed.Add(-90 * 24 * time.Hour).Format("2006-01-02T15:04:05.000Z"), End: observed.Format("2006-01-02T15:04:05.000Z")}}
+	}
+	if resume && previous.Progress != nil {
+		progress := *previous.Progress
+		state.Progress = &progress
 	}
 	r := reader{client: client, previous: previous, next: state, resume: resume, checkpoint: checkpoint}
 	path, err := github.RepositoryPath(entry.Repository)
@@ -429,40 +471,93 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		input.PullRequests = append(input.PullRequests, analysis.PullRequest{ID: raw.ID, Author: user, CreatedAt: raw.Created, Outcome: outcome, Reviews: []analysis.Review{}, IssueComments: []analysis.Event{}, ReviewComments: []analysis.Event{}})
 	}
 	failures := []Failure{}
-	for index, raw := range eligible {
-		events, complete, err := r.events(ctx, fmt.Sprintf("%s/pulls/%d/reviews?per_page=100", path, raw.Number), true)
-		input.PullRequests[index].Reviews = events
-		input.PullRequests[index].Coverage.Reviews = complete
-		if err != nil {
-			failures = append(failures, Failure{PR: raw.Number, Stream: "reviews", Reason: reason(err)})
+	if catalog {
+		cachedCoverage := map[int64]bool{}
+		if r.resume {
+			r.next.Progress.CoveredPRs = 0
+			for _, raw := range eligible {
+				if r.cachedStream(fmt.Sprintf("%s/pulls/%d/reviews?per_page=100", path, raw.Number), true) && r.cachedStream(fmt.Sprintf("%s/issues/%d/comments?per_page=100", path, raw.Number), false) && r.cachedStream(fmt.Sprintf("%s/pulls/%d/comments?per_page=100", path, raw.Number), false) {
+					cachedCoverage[raw.ID] = true
+					r.next.Progress.CoveredPRs++
+				}
+			}
 		}
-	}
-	for index, raw := range eligible {
-		pr := &input.PullRequests[index]
-		if !pr.Coverage.Reviews {
-			continue
+		for index, raw := range eligible {
+			pr := &input.PullRequests[index]
+			for _, stream := range []string{"reviews", "issue_comments", "review_comments"} {
+				endpoint := fmt.Sprintf("%s/pulls/%d/reviews?per_page=100", path, raw.Number)
+				if stream == "issue_comments" {
+					endpoint = fmt.Sprintf("%s/issues/%d/comments?per_page=100", path, raw.Number)
+				}
+				if stream == "review_comments" {
+					endpoint = fmt.Sprintf("%s/pulls/%d/comments?per_page=100", path, raw.Number)
+				}
+				events, complete, err := r.events(ctx, endpoint, stream == "reviews")
+				if stream == "reviews" {
+					pr.Reviews = events
+					pr.Coverage.Reviews = complete
+				} else {
+					values := []analysis.Event{}
+					for _, event := range events {
+						values = append(values, event.Event)
+					}
+					if stream == "issue_comments" {
+						pr.IssueComments = values
+						pr.Coverage.IssueComments = complete
+					} else {
+						pr.ReviewComments = values
+						pr.Coverage.ReviewComments = complete
+					}
+				}
+				if err != nil {
+					failures = append(failures, Failure{PR: raw.Number, Stream: stream, Reason: reason(err)})
+				}
+			}
+			if pr.Coverage.Reviews && pr.Coverage.IssueComments && pr.Coverage.ReviewComments {
+				if !cachedCoverage[raw.ID] {
+					r.next.Progress.CoveredPRs++
+				}
+			} else if cachedCoverage[raw.ID] {
+				r.next.Progress.CoveredPRs--
+			}
 		}
-		for _, stream := range []string{"issue_comments", "review_comments"} {
-			endpoint := fmt.Sprintf("%s/pulls/%d/comments?per_page=100", path, raw.Number)
-			if stream == "issue_comments" {
-				endpoint = fmt.Sprintf("%s/issues/%d/comments?per_page=100", path, raw.Number)
-			}
-			events, complete, err := r.events(ctx, endpoint, false)
-			values := []analysis.Event{}
-			for _, event := range events {
-				values = append(values, event.Event)
-			}
-			if stream == "issue_comments" {
-				pr.IssueComments = values
-				pr.Coverage.IssueComments = complete
-			} else {
-				pr.ReviewComments = values
-				pr.Coverage.ReviewComments = complete
-			}
+	} else {
+		for index, raw := range eligible {
+			events, complete, err := r.events(ctx, fmt.Sprintf("%s/pulls/%d/reviews?per_page=100", path, raw.Number), true)
+			input.PullRequests[index].Reviews = events
+			input.PullRequests[index].Coverage.Reviews = complete
 			if err != nil {
-				failures = append(failures, Failure{PR: raw.Number, Stream: stream, Reason: reason(err)})
+				failures = append(failures, Failure{PR: raw.Number, Stream: "reviews", Reason: reason(err)})
 			}
 		}
+		for index, raw := range eligible {
+			pr := &input.PullRequests[index]
+			if !pr.Coverage.Reviews {
+				continue
+			}
+			for _, stream := range []string{"issue_comments", "review_comments"} {
+				endpoint := fmt.Sprintf("%s/pulls/%d/comments?per_page=100", path, raw.Number)
+				if stream == "issue_comments" {
+					endpoint = fmt.Sprintf("%s/issues/%d/comments?per_page=100", path, raw.Number)
+				}
+				events, complete, err := r.events(ctx, endpoint, false)
+				values := []analysis.Event{}
+				for _, event := range events {
+					values = append(values, event.Event)
+				}
+				if stream == "issue_comments" {
+					pr.IssueComments = values
+					pr.Coverage.IssueComments = complete
+				} else {
+					pr.ReviewComments = values
+					pr.Coverage.ReviewComments = complete
+				}
+				if err != nil {
+					failures = append(failures, Failure{PR: raw.Number, Stream: stream, Reason: reason(err)})
+				}
+			}
+		}
+
 	}
 	if err := schemas.Validate("analysis-input", input); err != nil {
 		return Public{}, r.next, err

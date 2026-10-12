@@ -36,8 +36,8 @@ const base = import.meta.env.BASE_URL;
         <em>starts with a proposal.</em>
       </h1>
       <p class="lead">
-        Request saved samples and future historical tracking for a public GitHub
-        repository.
+        Request complete 90-day creation windows and future historical tracking
+        for a public GitHub repository.
       </p>
       <section class="panel">
         <h2>Open a catalog pull request</h2>
@@ -71,8 +71,9 @@ const base = import.meta.env.BASE_URL;
       <section class="panel">
         <h2>Catalog inclusion is not complete history</h2>
         <p>
-          Scheduled Go collection creates saved samples. Historical ingestion
-          and monthly trends are in development; a merged catalog entry does not
+          Scheduled Go collection enumerates every eligible PR created in a
+          90-day window and resumes until complete. Historical ingestion and
+          monthly trends are in development; a merged catalog entry does not
           immediately have complete history. The UI must show collection dates,
           coverage, and pending work.
         </p>
