@@ -1,9 +1,9 @@
 {
   "sample_age": {
-    "oldest_created_at": "2026-08-09T17:27:46Z",
+    "oldest_created_at": "2026-07-15T09:36:36Z",
     "newest_created_at": "2026-10-12T15:09:19Z"
   },
-  "policy": "three-age-bands-eighteen-human-prs-90-days-v1",
+  "policy": "three-age-bands-three-hundred-human-prs-90-days-v1",
   "result": {
     "schema_version": 1,
     "methodology_version": "1.1.0",
@@ -12,43 +12,43 @@
       "full_name": "ossf/scorecard"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-12T15:13:09.000Z",
+    "collected_at": "2026-10-12T15:47:33.000Z",
     "window": {
-      "start": "2026-07-14T15:13:09.000Z",
-      "end": "2026-10-12T15:13:09.000Z"
+      "start": "2026-07-14T15:47:33.000Z",
+      "end": "2026-10-12T15:47:33.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 33,
+      "bot_events": 147,
       "missing_event_actors": 0,
-      "self_events": 22
+      "self_events": 94
     },
     "creation_cohort": {
-      "eligible_prs": 18,
+      "eligible_prs": 87,
       "coverage": "complete_for_sample",
-      "authors": 12,
+      "authors": 53,
       "outcomes": {
-        "open": 9,
-        "closed_unmerged": 3,
-        "merged": 6
+        "open": 42,
+        "closed_unmerged": 21,
+        "merged": 24
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 7,
+        "github_review_units": 28,
         "prow_command_units": 0
       },
-      "eligible_prs": 18,
-      "covered_prs": 18,
+      "eligible_prs": 87,
+      "covered_prs": 87,
       "coverage": "complete_for_sample",
-      "review_units": 7,
-      "participants": 4,
+      "review_units": 28,
+      "participants": 11,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 4,
+            "github_review_units": 9,
             "prow_command_units": 0
           },
           "actor": {
@@ -56,11 +56,11 @@
             "login": "bilaldeveloper4312",
             "type": "User"
           },
-          "review_units": 4
+          "review_units": 9
         },
         {
           "sources": {
-            "github_review_units": 1,
+            "github_review_units": 5,
             "prow_command_units": 0
           },
           "actor": {
@@ -68,7 +68,31 @@
             "login": "justaugustus",
             "type": "User"
           },
-          "review_units": 1
+          "review_units": 5
+        },
+        {
+          "sources": {
+            "github_review_units": 4,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 771387,
+            "login": "jeffmendoza",
+            "type": "User"
+          },
+          "review_units": 4
+        },
+        {
+          "sources": {
+            "github_review_units": 3,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 1358764,
+            "login": "JamieMagee",
+            "type": "User"
+          },
+          "review_units": 3
         },
         {
           "sources": {
@@ -76,8 +100,8 @@
             "prow_command_units": 0
           },
           "actor": {
-            "id": 1358764,
-            "login": "JamieMagee",
+            "id": 6064089,
+            "login": "spencerschrock",
             "type": "User"
           },
           "review_units": 1
@@ -93,39 +117,99 @@
             "type": "User"
           },
           "review_units": 1
+        },
+        {
+          "sources": {
+            "github_review_units": 1,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 112932824,
+            "login": "daichunghy",
+            "type": "User"
+          },
+          "review_units": 1
+        },
+        {
+          "sources": {
+            "github_review_units": 1,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 163281616,
+            "login": "Walentalien",
+            "type": "User"
+          },
+          "review_units": 1
+        },
+        {
+          "sources": {
+            "github_review_units": 1,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 164633440,
+            "login": "royy92",
+            "type": "User"
+          },
+          "review_units": 1
+        },
+        {
+          "sources": {
+            "github_review_units": 1,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 170531907,
+            "login": "CAOShurong",
+            "type": "User"
+          },
+          "review_units": 1
+        },
+        {
+          "sources": {
+            "github_review_units": 1,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 185926987,
+            "login": "noqt",
+            "type": "User"
+          },
+          "review_units": 1
         }
       ],
       "concentration_80": {
-        "value": 3,
+        "value": 6,
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5714285714285714,
+        "value": 0.32142857142857145,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 18,
-      "covered_prs": 18,
+      "eligible_prs": 87,
+      "covered_prs": 87,
       "coverage": "complete_for_sample",
-      "responded_prs": 5,
-      "unanswered_prs": 13,
+      "responded_prs": 26,
+      "unanswered_prs": 61,
       "median_ms": {
-        "value": 95658000,
+        "value": 305669000,
         "status": "available"
       }
     }
   },
   "selection": {
-    "listed": 90,
-    "selected": 18,
-    "eligible_on_page": 54,
-    "truncated": true,
-    "list_has_more": true
+    "listed": 149,
+    "selected": 87,
+    "eligible_on_page": 87,
+    "truncated": false,
+    "list_has_more": false
   },
-  "requests": 76,
+  "requests": 352,
   "rate": {
-    "remaining": 4462,
+    "remaining": 823,
     "limit": 5000,
     "resetAt": 1791821090000
   },
