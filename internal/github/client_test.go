@@ -250,3 +250,21 @@ func TestConditionalValidatorDoesNotFollowRedirect(t *testing.T) {
 		t.Fatal("forwarded validator to different URL")
 	}
 }
+
+func TestIssueSearchEndpointAndOriginRestrictions(t *testing.T) {
+	client, calls, _ := scripted(t, []*http.Response{response(200, `{"total_count":0,"incomplete_results":false,"items":[]}`, nil)}, DefaultPolicy())
+	var data any
+	if _, err := client.Get(context.Background(), "/search/issues?q=repo%3Aexample%2Frepo+is%3Apr", &data); err != nil {
+		t.Fatal(err)
+	}
+	if len(*calls) != 1 || (*calls)[0].URL.Path != "/search/issues" || (*calls)[0].URL.Query().Get("q") != "repo:example/repo is:pr" {
+		t.Fatal("issue search query did not reach the HTTP transport")
+	}
+	for _, path := range []string{"/search/code?q=example", "/search/issues/extra", "https://example.com/search/issues?q=example"} {
+		_, err := client.Get(context.Background(), path, &data)
+		failure(t, err, "invalid_input")
+	}
+	if len(*calls) != 1 {
+		t.Fatal("unsupported search endpoint or foreign origin was fetched")
+	}
+}

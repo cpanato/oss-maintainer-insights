@@ -3,6 +3,7 @@ package snapshot
 import (
 	"context"
 	"encoding/json"
+	"io"
 	"net/http"
 	"net/url"
 	"os"
@@ -173,5 +174,36 @@ func TestCatalogFiltersBotsAndConfirmsCurrentDraftStatus(t *testing.T) {
 	// is removed on detail confirmation without selecting a replacement by activity.
 	if public.Selection.Selected != 17 || public.Selection.Eligible != 19 || public.Result.CreationCohort.Authors != 17 {
 		t.Fatalf("ineligible authors/drafts contributed: %+v", public.Selection)
+	}
+}
+
+type catalogTransport struct{ source *catalogFake }
+
+func (f catalogTransport) RoundTrip(request *http.Request) (*http.Response, error) {
+	var value any
+	_, err := f.source.GetConditional(request.Context(), request.URL.RequestURI(), &value, "")
+	if err != nil {
+		return nil, err
+	}
+	body, err := json.Marshal(value)
+	if err != nil {
+		return nil, err
+	}
+	return &http.Response{StatusCode: 200, Header: http.Header{}, Body: io.NopCloser(strings.NewReader(string(body)))}, nil
+}
+func TestCatalogThroughNativeHTTPClient(t *testing.T) {
+	source, observed := catalogSource(t)
+	policy := github.DefaultPolicy()
+	policy.MaxRequests = 90
+	client, err := github.New(github.Options{Policy: policy, HTTP: &http.Client{Transport: catalogTransport{source: source}}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	public, _, err := CollectCatalog(context.Background(), client, Entry{Repository: "example/repo"}, observed, State{})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !public.Complete || public.Selection.Selected != 18 || public.Requests != 76 {
+		t.Fatalf("native HTTP acquisition failed: %+v", public)
 	}
 }
