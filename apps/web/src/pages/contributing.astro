@@ -1,0 +1,95 @@
+---
+import "../styles/global.css";
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contributing · OSS Maintainer Insights</title>
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <header class="topbar wrap">
+      <a class="brand" href={base}>
+        <span class="brand-icon" aria-hidden="true">
+          ◈
+        </span>
+        <span>
+          OSS Maintainer <strong>Insights</strong>
+        </span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href={base}>Explore repositories</a>
+      </nav>
+    </header>
+    <main id="main" class="wrap methodology">
+      <p class="eyebrow">CONTRIBUTE A PROJECT</p>
+      <h1>
+        A longer view
+        <br />
+        <em>starts with a proposal.</em>
+      </h1>
+      <p class="lead">
+        Request saved samples and future historical tracking for a public GitHub
+        repository.
+      </p>
+      <section class="panel">
+        <h2>Open a catalog pull request</h2>
+        <ol>
+          <li>Fork OSS Maintainer Insights and create a branch.</li>
+          <li>
+            Add the canonical <code>owner/repository</code> name to{" "}
+            <code>catalog/repositories.json</code>. Choose OpenSSF, CNCF, or
+            Community as the group.
+          </li>
+          <li>
+            Run the documented local checks. Keep repository documentation and
+            PR text in English.
+          </li>
+          <li>
+            Open a PR explaining the project, its foundation association, and
+            why tracking it would be useful.
+          </li>
+        </ol>
+        <p>
+          <a href="https://github.com/cpanato/oss-maintainer-insights/blob/main/CONTRIBUTING.md">
+            Read the full contribution guide ↗
+          </a>
+        </p>
+        <p>
+          <a href="https://github.com/cpanato/oss-maintainer-insights/edit/main/catalog/repositories.json">
+            Propose a catalog entry on GitHub ↗
+          </a>
+        </p>
+      </section>
+      <section class="panel">
+        <h2>Catalog inclusion is not complete history</h2>
+        <p>
+          Scheduled Go collection creates saved samples. Historical ingestion
+          and monthly trends are in development; a merged catalog entry does not
+          immediately have complete history. The UI must show collection dates,
+          coverage, and pending work.
+        </p>
+        <p>
+          Only public repositories are eligible. Do not submit tokens, raw API
+          payloads, or generated checkpoints. The collector never runs code from
+          monitored repositories. Reviewers verify identity, API access, and
+          collection cost; network failures remain inconclusive.
+        </p>
+      </section>
+      <p>
+        <a href={base}>← Back to repository exploration</a>
+      </p>
+    </main>
+    <footer class="wrap">
+      <p>Observed activity. Transparent coverage.</p>
+      <p>No health scores · No maintainer roster inferred</p>
+    </footer>
+  </body>
+</html>

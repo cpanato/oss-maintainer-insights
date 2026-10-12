@@ -135,3 +135,15 @@ Main sequence: milestone 1 → 2 → 3 → 4 → 5 → 6. The visual shell can u
 | MVP         | Unauthenticated live queries, three projects, contributions, and audit   | Close gaps before expanding                     |
 
 After the MVP, use requests per project, backlog, runtime, storage, and reconciliation lag to decide whether to add 12-month history, projects, or comparisons.
+
+## Milestone 3 implementation notes
+
+The local Astro interface now supports bounded public-repository queries, shareable query URLs, progress and cancellation, metric denominators, reviewer bars with an equivalent table, outcomes, and methodology. Complete normalized samples use a one-hour versioned repository-ID cache; refresh bypasses it, and failed or partial queries preserve earlier complete entries. The historical catalog is visibly in development until milestone 4 produces validated datasets.
+
+A native TypeScript controller is sufficient for the current interaction; React islands and a chart dependency remain deferred to historical trends. Playwright was selected by the owner and joins `ci-required` with simulated API responses and retained failure traces. PR builds upload a static preview artifact without deployment. Deployment-origin CORS verification remains an operational launch gate.
+
+### Saved-sample extension requested during interface review
+
+The owner requested pre-generated UI data, extra OpenSSF/CNCF examples, contribution guidance for uncataloged repositories, and a dedicated data branch. The Go sample generator now revalidates sanitized cached pages with ETags and publishes aggregate-only JSON. The UI uses those saved samples before any live GitHub query and exposes explicit refresh. PR CI validates the catalog and public contracts offline; independent real-API collection produces review artifacts. Default-branch generation writes `data` and explicitly builds/deploys Pages from public snapshots, with source/data provenance and separate write/deploy jobs.
+
+This advances saved samples and publication infrastructure without claiming milestone 4's complete historical ingestion. Monthly backfill, resumable pending streams, fair historical queues, and reconciliation remain required. Pages configuration and deployed-origin evidence remain operational launch work. Catalog inclusion requests future historical tracking, not immediate complete history.

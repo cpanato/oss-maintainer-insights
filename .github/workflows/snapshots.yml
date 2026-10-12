@@ -1,0 +1,243 @@
+name: Repository snapshots and Pages
+
+# Manual refresh is operational: it consumes API allowance and regenerates saved UI data.
+# PR runs provide review artifacts and never become a mandatory test or deploy data.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - catalog/**
+      - cmd/collector/**
+      - internal/**
+      - schemas/**
+      - .go-version
+      - go.mod
+      - go.sum
+      - .github/workflows/snapshots.yml
+  push:
+    branches:
+      - main
+    paths:
+      - catalog/**
+      - cmd/collector/**
+      - internal/**
+      - schemas/**
+      - .go-version
+      - go.mod
+      - go.sum
+      - .github/workflows/snapshots.yml
+      - apps/web/**
+      - packages/**
+      - package.json
+      - package-lock.json
+      - scripts/**
+      - diagnostics/**
+  schedule:
+    - cron: "43 4 * * *"
+
+permissions: {}
+
+env:
+  GOTOOLCHAIN: local
+
+concurrency:
+  group: snapshots-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    name: Generate saved repository samples
+    if: github.repository == 'cpanato/oss-maintainer-insights'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Go
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: .go-version
+          cache: false
+
+      - name: Restore saved data and checkpoints from the data branch
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          mkdir -p generated-data .cache/snapshots .data-source
+          existing=$(gh api "repos/$GH_REPO/git/matching-refs/heads/data" --jq '.[] | select(.ref == "refs/heads/data") | .ref')
+          if [[ -n "$existing" ]]; then
+            git -c credential.helper='!gh auth git-credential' fetch "https://github.com/$GH_REPO.git" data:refs/remotes/origin/data
+            git archive refs/remotes/origin/data | tar -x -C .data-source
+            samples=(.data-source/snapshots/*.json)
+            if (( ${#samples[@]} )); then cp "${samples[@]}" generated-data/; fi
+            checkpoints=(.data-source/checkpoints/*.json)
+            if (( ${#checkpoints[@]} )); then cp "${checkpoints[@]}" .cache/snapshots/; fi
+          fi
+
+      - name: Collect bounded public samples in Go
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: go run ./cmd/collector snapshots --output generated-data --state .cache/snapshots --force
+
+      - name: Upload public aggregate samples
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: repository-snapshots
+          path: generated-data/
+          retention-days: 7
+          if-no-files-found: error
+
+      - name: Upload internal sanitized conditional checkpoints
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: snapshot-checkpoints
+          path: .cache/snapshots/
+          include-hidden-files: true
+          retention-days: 7
+          if-no-files-found: warn
+
+  publish-data:
+    name: Save datasets on the data branch
+    needs: collect
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      revision: ${{ steps.save.outputs.revision }}
+      current: ${{ steps.save.outputs.current }}
+
+    permissions:
+      contents: write # Commit only generated JSON and sanitized collector checkpoints to data.
+
+    steps:
+      - name: Checkout source revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Download public samples
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: repository-snapshots
+          path: generated-data
+
+      - name: Download sanitized checkpoints
+        continue-on-error: true # A cold or failed collection can have no checkpoint artifact.
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: snapshot-checkpoints
+          path: .cache/snapshots
+
+      - name: Commit data atomically without replacing newer source builds
+        id: save
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          SOURCE_REVISION: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          current_main=$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)
+          if [[ "$current_main" != "$SOURCE_REVISION" ]]; then
+            printf 'current=false\n' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          worktree=$(mktemp -d "$RUNNER_TEMP/snapshot-data.XXXXXX")
+          existing=$(gh api "repos/$GH_REPO/git/matching-refs/heads/data" --jq '.[] | select(.ref == "refs/heads/data") | .ref')
+          if [[ -n "$existing" ]]; then
+            git -c credential.helper='!gh auth git-credential' fetch "https://github.com/$GH_REPO.git" data:refs/remotes/origin/data
+            git worktree add --detach "$worktree" refs/remotes/origin/data
+          else
+            git worktree add --detach "$worktree" "$SOURCE_REVISION"
+            git -C "$worktree" switch --orphan data
+          fi
+          mkdir -p .cache/snapshots "$worktree/snapshots" "$worktree/checkpoints"
+          rsync -a --delete generated-data/ "$worktree/snapshots/"
+          rsync -a --delete .cache/snapshots/ "$worktree/checkpoints/"
+          printf '%s\n' "$SOURCE_REVISION" > "$worktree/source-revision.txt"
+          git -C "$worktree" config user.name 'github-actions[bot]'
+          git -C "$worktree" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C "$worktree" add snapshots checkpoints source-revision.txt
+          if ! git -C "$worktree" diff --cached --quiet; then
+            git -C "$worktree" -c commit.gpgsign=false commit -m 'data: refresh bounded repository samples'
+            git -C "$worktree" -c credential.helper='!gh auth git-credential' push "https://github.com/$GH_REPO.git" HEAD:refs/heads/data
+          fi
+          printf 'revision=%s\ncurrent=true\n' "$(git -C "$worktree" rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  build-pages:
+    name: Build Pages with public snapshots
+    needs: publish-data
+    if: needs.publish-data.outputs.current == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout source revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download public samples only
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: repository-snapshots
+          path: apps/web/public/data
+
+      - name: Build static website
+        run: npm run build
+
+      - name: Record and validate artifact provenance
+        env:
+          SOURCE_REVISION: ${{ github.sha }}
+          DATA_REVISION: ${{ needs.publish-data.outputs.revision }}
+        run: node scripts/check-site.mjs --manifest
+
+      - name: Package public Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: apps/web/dist
+
+  deploy-pages:
+    name: Deploy GitHub Pages
+    needs: build-pages
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    permissions:
+      pages: write # Publish the validated public website artifact.
+      id-token: write # Authenticate the default-branch Pages deployment.
+
+    steps:
+      - name: Verify Pages configuration
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Deploy public website
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

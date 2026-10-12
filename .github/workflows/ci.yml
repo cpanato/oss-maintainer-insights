@@ -114,6 +114,55 @@ jobs:
       - name: Build TypeScript packages
         run: npm run build
 
+      - name: Upload static website
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: website-preview
+          path: apps/web/dist/
+          retention-days: 7
+
+  browser:
+    name: Browser queries and cache
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .node-version
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build static website
+        run: npm run build
+
+      - name: Run browser tests with simulated API responses
+        run: npm run test:browser
+
+      - name: Upload browser report and failure traces
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: browser-test-report
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+
   go:
     name: Go quality, tests and build
     runs-on: ubuntu-latest
@@ -135,17 +184,17 @@ jobs:
           cache: false
 
       - name: Check formatting
-        run: test -z "$(gofmt -l cmd internal)"
+        run: test -z "$(gofmt -l cmd internal schemas)"
 
       - name: Run go vet
-        run: go vet ./cmd/... ./internal/...
+        run: go vet ./cmd/... ./internal/... ./schemas/...
 
       - name: Run tests with race detection
         shell: bash
         run: |
           set -o pipefail
           mkdir -p reports
-          go test -race -json ./cmd/... ./internal/... | tee reports/go-tests.json
+          go test -race -json ./cmd/... ./internal/... ./schemas/... | tee reports/go-tests.json
 
       - name: Build collector
         run: go build -o dist/collector ./cmd/collector
@@ -182,13 +231,13 @@ jobs:
         uses: golangci/golangci-lint-action@ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a # v9.3.0
         with:
           version: v2.14.0
-          args: ./cmd/... ./internal/...
+          args: ./cmd/... ./internal/... ./schemas/...
           skip-cache: true
 
   ci-required:
     name: ci-required
     if: always()
-    needs: [quality, tests, build, go, go-lint]
+    needs: [quality, tests, build, browser, go, go-lint]
     runs-on: ubuntu-latest
     timeout-minutes: 2
 
@@ -200,6 +249,7 @@ jobs:
           QUALITY_RESULT: ${{ needs.quality.result }}
           TESTS_RESULT: ${{ needs.tests.result }}
           BUILD_RESULT: ${{ needs.build.result }}
+          BROWSER_RESULT: ${{ needs.browser.result }}
           GO_RESULT: ${{ needs.go.result }}
           GO_LINT_RESULT: ${{ needs.go-lint.result }}
         run: |
@@ -207,5 +257,6 @@ jobs:
           test "$QUALITY_RESULT" = success
           test "$TESTS_RESULT" = success
           test "$BUILD_RESULT" = success
+          test "$BROWSER_RESULT" = success
           test "$GO_RESULT" = success
           test "$GO_LINT_RESULT" = success

@@ -32,6 +32,6 @@ Each metric has its own eligible and covered counts. Enumeration flags describe 
 
 ## Schema and version changes
 
-Validate normalized inputs and public outputs against the versioned JSON Schemas at acquisition/publication boundaries. Structural JSON Schema validation does not establish semantic relationships such as cohort counts or chronological windows; engines and fixtures check those rules. The current offline Go CLI accepts prevalidated normalized fixtures and performs semantic checks and strict field decoding. Full Go schema validation will be added with authenticated ingestion before publishing data.
+Validate normalized inputs and public outputs against the versioned JSON Schemas at acquisition/publication boundaries. Structural JSON Schema validation does not establish semantic relationships such as cohort counts or chronological windows; engines and fixtures check those rules. The Go CLI validates normalized inputs and public samples against embedded JSON Schemas using jsonschema/v6, followed by semantic analysis checks and strict field decoding. Source API payloads are projected into typed records before retention; public website samples contain aggregates only.
 
 Methodology changes require updates to both engines, fixtures, tests, and either recomputation or an explicit break in published history. The initial bot-list policy is empty plus per-input explicit IDs; production collection must version that policy with its dataset.

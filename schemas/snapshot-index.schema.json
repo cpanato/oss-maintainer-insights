@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cpanato.github.io/oss-maintainer-insights/schemas/snapshot-index.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "attempted_at", "entries"],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "attempted_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "entries": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["repository", "status", "requests"],
+        "properties": {
+          "repository": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*/[A-Za-z0-9_.-]+$"
+          },
+          "status": {
+            "enum": ["fresh", "updated", "preserved", "unavailable"]
+          },
+          "reason": {
+            "enum": [
+              "invalid_input",
+              "budget",
+              "rate_limit",
+              "forbidden",
+              "not_found",
+              "timeout",
+              "cancelled",
+              "network",
+              "http",
+              "invalid_response",
+              "redirect",
+              "partial"
+            ]
+          },
+          "requests": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 30
+          }
+        }
+      }
+    }
+  }
+}

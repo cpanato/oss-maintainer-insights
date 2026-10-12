@@ -7,25 +7,30 @@
     "node": ">=24 <25"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && npm run check --workspace @oss-maintainer-insights/web",
     "test": "node --import tsx --test tests/*.test.ts",
     "test:ci": "mkdir -p reports && node --import tsx --test --test-reporter=junit --test-reporter-destination=reports/tests.xml tests/*.test.ts",
-    "build": "npm run build --workspaces",
-    "check": "npm run lint && npm run format:check && npm run typecheck && npm test && npm run build"
+    "build": "npm run build --workspaces && node scripts/prepare-diagnostics.mjs && node scripts/check-site.mjs",
+    "check": "npm run lint && npm run format:check && npm run typecheck && npm test && npm run build",
+    "dev": "npm run dev --workspace @oss-maintainer-insights/web",
+    "test:browser": "playwright test"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
+    "@playwright/test": "1.64.0",
     "@types/node": "26.6.4",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "eslint": "10.12.0",
     "prettier": "3.9.10",
+    "prettier-plugin-astro": "1.1.1",
     "tsx": "4.23.15",
     "typescript": "6.0.3",
     "typescript-eslint": "8.71.1"

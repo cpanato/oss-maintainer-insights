@@ -1,6 +1,7 @@
 # Repository conventions
 
 - Write repository artifacts in English, including documentation, code comments, commit/PR text, and product strings.
+- Use a dedicated Git branch and worktree for each implementation task to keep unrelated changes and commits isolated.
 - Implement scheduled collection and its GitHub Actions execution in Go. Use TypeScript for browser queries and the website.
 - Maintain shared JSON fixtures and Go/TypeScript metric parity whenever methodology changes.
 - When uncertain about an external library choice, consult the project owner with alternatives and tradeoffs before adopting it.
