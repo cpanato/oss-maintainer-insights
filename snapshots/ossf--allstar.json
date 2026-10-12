@@ -6,16 +6,16 @@
   "policy": "three-age-bands-eighteen-human-prs-90-days-v1",
   "result": {
     "schema_version": 1,
-    "methodology_version": "1.0.0",
+    "methodology_version": "1.1.0",
     "repository": {
       "id": 370773729,
       "full_name": "ossf/allstar"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-12T13:29:30.000Z",
+    "collected_at": "2026-10-12T15:13:34.000Z",
     "window": {
-      "start": "2026-07-14T13:29:30.000Z",
-      "end": "2026-10-12T13:29:30.000Z"
+      "start": "2026-07-14T15:13:34.000Z",
+      "end": "2026-10-12T15:13:34.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
@@ -36,6 +36,10 @@
       }
     },
     "review_activity": {
+      "sources": {
+        "github_review_units": 1,
+        "prow_command_units": 0
+      },
       "eligible_prs": 11,
       "covered_prs": 11,
       "coverage": "complete_for_sample",
@@ -43,6 +47,10 @@
       "participants": 1,
       "distribution": [
         {
+          "sources": {
+            "github_review_units": 1,
+            "prow_command_units": 0
+          },
           "actor": {
             "id": 567897,
             "login": "justaugustus",
@@ -81,9 +89,9 @@
   },
   "requests": 48,
   "rate": {
-    "remaining": 4860,
+    "remaining": 4417,
     "limit": 5000,
-    "resetAt": 1791815303000
+    "resetAt": 1791821090000
   },
   "failures": [],
   "complete": true

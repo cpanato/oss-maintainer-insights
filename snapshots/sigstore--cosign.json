@@ -6,16 +6,16 @@
   "policy": "three-age-bands-eighteen-human-prs-90-days-v1",
   "result": {
     "schema_version": 1,
-    "methodology_version": "1.0.0",
+    "methodology_version": "1.1.0",
     "repository": {
       "id": 335952417,
       "full_name": "sigstore/cosign"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-12T13:29:45.000Z",
+    "collected_at": "2026-10-12T15:13:48.000Z",
     "window": {
-      "start": "2026-07-14T13:29:45.000Z",
-      "end": "2026-10-12T13:29:45.000Z"
+      "start": "2026-07-14T15:13:48.000Z",
+      "end": "2026-10-12T15:13:48.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
@@ -36,6 +36,10 @@
       }
     },
     "review_activity": {
+      "sources": {
+        "github_review_units": 15,
+        "prow_command_units": 0
+      },
       "eligible_prs": 18,
       "covered_prs": 18,
       "coverage": "complete_for_sample",
@@ -43,6 +47,10 @@
       "participants": 5,
       "distribution": [
         {
+          "sources": {
+            "github_review_units": 5,
+            "prow_command_units": 0
+          },
           "actor": {
             "id": 1220710,
             "login": "cmurphy",
@@ -51,6 +59,10 @@
           "review_units": 5
         },
         {
+          "sources": {
+            "github_review_units": 3,
+            "prow_command_units": 0
+          },
           "actor": {
             "id": 167759,
             "login": "steiza",
@@ -59,6 +71,10 @@
           "review_units": 3
         },
         {
+          "sources": {
+            "github_review_units": 3,
+            "prow_command_units": 0
+          },
           "actor": {
             "id": 2845093,
             "login": "bobcallaway",
@@ -67,6 +83,10 @@
           "review_units": 3
         },
         {
+          "sources": {
+            "github_review_units": 3,
+            "prow_command_units": 0
+          },
           "actor": {
             "id": 8418760,
             "login": "Hayden-IO",
@@ -75,6 +95,10 @@
           "review_units": 3
         },
         {
+          "sources": {
+            "github_review_units": 1,
+            "prow_command_units": 0
+          },
           "actor": {
             "id": 64337293,
             "login": "aaronlew02",
@@ -113,9 +137,9 @@
   },
   "requests": 76,
   "rate": {
-    "remaining": 4787,
+    "remaining": 4344,
     "limit": 5000,
-    "resetAt": 1791815303000
+    "resetAt": 1791821090000
   },
   "failures": [],
   "complete": true

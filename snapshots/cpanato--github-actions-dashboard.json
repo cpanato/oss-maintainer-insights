@@ -1,21 +1,21 @@
 {
   "sample_age": {
-    "oldest_created_at": "2026-10-11T09:32:22Z",
-    "newest_created_at": "2026-10-11T17:55:40Z"
+    "oldest_created_at": "2026-10-11T11:11:42Z",
+    "newest_created_at": "2026-10-12T15:03:56Z"
   },
   "policy": "three-age-bands-eighteen-human-prs-90-days-v1",
   "result": {
     "schema_version": 1,
-    "methodology_version": "1.0.0",
+    "methodology_version": "1.1.0",
     "repository": {
       "id": 660941294,
       "full_name": "cpanato/github-actions-dashboard"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-12T13:31:13.000Z",
+    "collected_at": "2026-10-12T15:15:29.000Z",
     "window": {
-      "start": "2026-07-14T13:31:13.000Z",
-      "end": "2026-10-12T13:31:13.000Z"
+      "start": "2026-07-14T15:15:29.000Z",
+      "end": "2026-10-12T15:15:29.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
@@ -36,6 +36,10 @@
       }
     },
     "review_activity": {
+      "sources": {
+        "github_review_units": 0,
+        "prow_command_units": 0
+      },
       "eligible_prs": 6,
       "covered_prs": 6,
       "coverage": "complete_for_sample",
@@ -64,17 +68,17 @@
     }
   },
   "selection": {
-    "listed": 28,
+    "listed": 29,
     "selected": 6,
-    "eligible_on_page": 23,
+    "eligible_on_page": 24,
     "truncated": true,
     "list_has_more": false
   },
   "requests": 28,
   "rate": {
-    "remaining": 4609,
+    "remaining": 4100,
     "limit": 5000,
-    "resetAt": 1791815303000
+    "resetAt": 1791821090000
   },
   "failures": [],
   "complete": true
