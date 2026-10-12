@@ -1,0 +1,51 @@
+name: GitHub API feasibility probe
+
+# A manual trigger is intentional: real API measurements consume shared allowance
+# and are operational evidence, not deterministic PR checks.
+on:
+  workflow_dispatch:
+
+permissions: {}
+
+env:
+  GOTOOLCHAIN: local
+
+concurrency:
+  group: api-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    name: Public cross-repository endpoint probe
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Setup Go
+        uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: go.mod
+          cache: false
+
+      - name: Measure public endpoint access and collection cost
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p reports
+          go run ./cmd/collector probe --requests=10 ossf/scorecard sigstore/cosign cpanato/github-actions-dashboard > reports/api-probe.jsonl
+
+      - name: Upload sanitized probe report
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: github-api-probe
+          path: reports/api-probe.jsonl
+          retention-days: 7
+          if-no-files-found: error

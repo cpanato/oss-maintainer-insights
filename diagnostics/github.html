@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GitHub browser diagnostics</title>
+  </head>
+  <body>
+    <h1>GitHub browser diagnostics</h1>
+    <p>
+      Check unauthenticated API access and visible headers from this browser
+      origin. Each run makes at most two requests, including retries.
+    </p>
+    <form id="query">
+      <label for="repository">Public GitHub repository</label>
+      <input
+        id="repository"
+        name="repository"
+        value="ossf/scorecard"
+        required
+      />
+      <button id="run" type="submit">Run diagnostic</button>
+      <button id="cancel" type="button" disabled>Cancel</button>
+    </form>
+    <p id="status" role="status">Ready.</p>
+    <p>
+      The Link header can be absent when no pagination is needed. Use a
+      repository with at least two PRs to check it.
+    </p>
+    <pre id="report" aria-label="Diagnostic report"></pre>
+    <script type="module" src="github.js"></script>
+  </body>
+</html>

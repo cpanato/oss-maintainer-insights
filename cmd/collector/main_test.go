@@ -30,3 +30,18 @@ func TestRejectsInvalidDocuments(t *testing.T) {
 		t.Fatal("expected usage error")
 	}
 }
+
+func TestProbeArgumentsAndZeroBudget(t *testing.T) {
+	for _, args := range [][]string{{"probe"}, {"probe", "--requests=-1", "a/b"}, {"probe", "--requests=101", "a/b"}, {"probe", "https://evil.test/repo"}, {"probe", "a/b", "c/d", "e/f", "g/h"}} {
+		if err := run(args, strings.NewReader(""), &bytes.Buffer{}); err == nil {
+			t.Fatalf("invalid arguments accepted: %v", args)
+		}
+	}
+	var output bytes.Buffer
+	if err := run([]string{"probe", "--requests=0", "example/project"}, strings.NewReader(""), &output); err != nil {
+		t.Fatal(err)
+	}
+	if !strings.Contains(output.String(), `"failure_reason":"budget"`) || !strings.Contains(output.String(), `"requests":0`) {
+		t.Fatalf("unexpected zero-budget probe: %s", output.String())
+	}
+}
