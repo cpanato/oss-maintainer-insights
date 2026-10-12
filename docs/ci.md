@@ -1,12 +1,13 @@
 # CI practices
 
-Keep language checks in one workflow and repository/workflow security audits independent. Do not couple unrelated checks through reusable workflows or cross-workflow polling.
+Keep language checks in one workflow and repository/workflow security audits independent. Keep real API measurements outside deterministic PR checks. Do not couple unrelated checks through reusable workflows or cross-workflow polling.
 
-| Workflow        | Purpose                                                                                | Trigger                | Required-check aggregation                           |
-| --------------- | -------------------------------------------------------------------------------------- | ---------------------- | ---------------------------------------------------- |
-| `ci.yml`        | Node lint/type checks, metrics/schema/parity tests, builds, Go tests and golangci-lint | PR, push to `main`     | `ci-required` requires every language job to succeed |
-| `zizmor.yml`    | GitHub Actions security analysis with annotations                                      | PR, push to `main`     | Independent; not included in `ci-required`           |
-| `scorecard.yml` | OpenSSF audit of repository security practices                                         | Push to `main`, weekly | Independent report; not a PR score threshold         |
+| Workflow        | Purpose                                                                                | Trigger                  | Required-check aggregation                           |
+| --------------- | -------------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------- |
+| `ci.yml`        | Node lint/type checks, metrics/schema/parity tests, builds, Go tests and golangci-lint | PR, push to `main`       | `ci-required` requires every language job to succeed |
+| `zizmor.yml`    | GitHub Actions security analysis with annotations                                      | PR, push to `main`       | Independent; not included in `ci-required`           |
+| `api-probe.yml` | Bounded Go measurements with the workflow credential                                   | Explicit manual dispatch | Independent operational evidence                     |
+| `scorecard.yml` | OpenSSF audit of repository security practices                                         | Push to `main`, weekly   | Independent report; not a PR score threshold         |
 
 ## Language checks
 
@@ -28,11 +29,15 @@ The zizmor workflow uses `persona: pedantic` and the tool version selected by it
 
 ## Workflow hardening
 
-- Declare `permissions: {}` at workflow level. Language jobs receive only `contents: read`; `ci-required` receives no repository permissions. Zizmor additionally receives `actions: read` for online analysis. Scorecard receives only `contents: read`.
+- Declare `permissions: {}` at workflow level. Language jobs receive only `contents: read`; `ci-required` receives no repository permissions. Zizmor additionally receives `actions: read` for online analysis. Scorecard and the API probe receive only `contents: read`.
 - Pin external actions to verified full commit SHAs, tools to exact versions, and npm dependencies to the lockfile. Dependabot checks actions and npm weekly with a seven-day cooldown for version updates; security updates are handled separately by Dependabot.
 - Disable checkout credential persistence. Do not use `pull_request_target`, checkout arbitrary PR content in privileged jobs, or interpolate untrusted input into shell scripts. No CI job requires a PAT or deploy credential.
 - Limit job time and cancel superseded runs. Keep fixture tests independent of mutable API results. Retain reports for seven days, without credentials or raw API payloads.
 - Review findings and fix their causes rather than introducing broad suppressions or disabling failure exit codes.
+
+## Real API experiment
+
+`api-probe.yml` is intentionally manual: it spends shared GitHub API allowance to measure three public repositories with at most ten requests each. A manual trigger is necessary here to keep live measurements intentional and outside PR checks. Its Go step receives only the workflow token through its environment, logs no token, and uploads sanitized count/coverage reports for seven days. Run it after the workflow exists on `main`; inspect each report rather than treating a successful job as complete coverage.
 
 ## OpenSSF reports and repository settings
 
