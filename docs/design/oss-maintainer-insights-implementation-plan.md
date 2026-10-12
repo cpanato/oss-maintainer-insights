@@ -1,6 +1,6 @@
 # OSS Maintainer Insights Implementation Plan
 
-Status: execution plan; milestones 1–2 implemented, Actions credential and Pages-origin validation pending
+Status: execution plan; milestones 1–2 implemented, Actions credential access verified, Pages-origin validation pending
 Date: 11 October 2026
 Reference: [design document](oss-maintainer-insights-design.md)
 
