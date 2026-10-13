@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import type { Page, Route } from "@playwright/test";
+import reviewedCatalog from "../../catalog/repositories.json" with { type: "json" };
 
 const headers = {
   "access-control-allow-origin": "*",
@@ -627,10 +628,11 @@ test("saved projects lead to saved data through keyboard-accessible project link
   const catalog = page.getByRole("region", {
     name: "Explore the saved catalog",
   });
-  await expect(catalog.getByRole("link")).toHaveCount(9);
+  await expect(catalog.getByRole("link")).toHaveCount(reviewedCatalog.length);
   for (const repository of [
     "cert-manager/cert-manager",
     "argoproj/argo-cd",
+    "argoproj/argo-helm",
     "sigstore/rekor",
   ]) {
     await expect(
