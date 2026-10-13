@@ -1,0 +1,1397 @@
+{
+  "generation": 1,
+  "observed_at": "2026-10-13T16:16:02Z",
+  "pr": {
+    "updated_at": "2026-09-16T19:47:14Z",
+    "id": 4502936231,
+    "number": 9333,
+    "user": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2026-09-11T05:44:29Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-09-16T19:47:14Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "9333": {
+        "id": 4502936231,
+        "updated_at": "2026-09-16T19:47:14Z",
+        "checked_at": "2026-10-13T16:16:02Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.1.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/9333/comments?per_page=100": {
+        "etag": "W/\"b36dfbf3f46595b575e10778e1b4f0faefac657b6224305e564a190fc0edba4e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5630058761,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-11T05:44:32Z"
+          },
+          {
+            "id": 5630064905,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-11T05:45:17Z"
+          },
+          {
+            "id": 5631381388,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-11T08:05:37Z"
+          },
+          {
+            "id": 5633834852,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-11T11:35:41Z"
+          },
+          {
+            "id": 5640881663,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-11T21:32:33Z"
+          },
+          {
+            "id": 5644737400,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-12T08:28:36Z"
+          },
+          {
+            "id": 5644738732,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-12T08:28:49Z"
+          },
+          {
+            "id": 5687236859,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T19:56:06Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 5703534054,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T19:46:01Z"
+          },
+          {
+            "id": 5703536034,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-16T19:46:11Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/9333/comments?per_page=100": {
+        "etag": "W/\"9df2da44bd196738e86f6f620f1f77d3c5582232d77411974f26c724adc208ec\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3993213922,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-11T20:39:48Z"
+          },
+          {
+            "id": 3993466494,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-11T21:17:20Z"
+          },
+          {
+            "id": 4000583071,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-13T19:11:59Z"
+          },
+          {
+            "id": 4000594546,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-13T19:16:49Z"
+          },
+          {
+            "id": 4000603804,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-13T19:20:22Z"
+          },
+          {
+            "id": 4000627376,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-13T19:29:10Z"
+          },
+          {
+            "id": 4014564212,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T10:27:58Z"
+          },
+          {
+            "id": 4014564451,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T10:28:00Z"
+          },
+          {
+            "id": 4014564634,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T10:28:01Z"
+          },
+          {
+            "id": 4014564856,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T10:28:02Z"
+          },
+          {
+            "id": 4014565057,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T10:28:04Z"
+          },
+          {
+            "id": 4014565252,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T10:28:05Z"
+          },
+          {
+            "id": 4014565405,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T10:28:06Z"
+          },
+          {
+            "id": 4014565620,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T10:28:07Z"
+          },
+          {
+            "id": 4016731538,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T14:30:12Z"
+          },
+          {
+            "id": 4017518869,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T15:46:30Z"
+          },
+          {
+            "id": 4018480693,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T17:38:03Z"
+          },
+          {
+            "id": 4018506529,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T17:41:20Z"
+          },
+          {
+            "id": 4018556641,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T17:47:21Z"
+          },
+          {
+            "id": 4018720261,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T18:06:11Z"
+          },
+          {
+            "id": 4018720303,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T18:06:12Z"
+          },
+          {
+            "id": 4018720348,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T18:06:12Z"
+          },
+          {
+            "id": 4018720387,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T18:06:12Z"
+          },
+          {
+            "id": 4018720442,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T18:06:13Z"
+          },
+          {
+            "id": 4019033144,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T18:42:32Z"
+          },
+          {
+            "id": 4019094153,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T18:48:59Z"
+          },
+          {
+            "id": 4019253569,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T19:07:25Z"
+          },
+          {
+            "id": 4019253640,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T19:07:26Z"
+          },
+          {
+            "id": 4019253679,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T19:07:26Z"
+          },
+          {
+            "id": 4019253713,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T19:07:27Z"
+          },
+          {
+            "id": 4019412280,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T19:26:16Z"
+          },
+          {
+            "id": 4019906627,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T20:27:58Z"
+          },
+          {
+            "id": 4019906677,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T20:27:59Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/9333/reviews?per_page=100": {
+        "etag": "W/\"c7496f4ec6b973dcf7d65891e6288cab3d933117f9580e852c4a68ef3032741d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5183232776,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-09-11T20:39:49Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5183498539,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-11T21:17:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5183518823,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-09-11T21:20:35Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5191849714,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-09-13T19:11:59Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5191860161,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-13T19:16:49Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5191874795,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-09-13T19:20:22Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5191918893,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-13T19:29:11Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5191941636,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-09-13T19:33:03Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5208688102,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T10:27:58Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5208688504,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T10:28:00Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5208688811,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T10:28:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5208689131,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T10:28:02Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5208689419,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T10:28:04Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5208689720,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T10:28:05Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5208689954,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T10:28:06Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5208690242,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T10:28:07Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5211390295,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T14:30:12Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5212326702,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T15:46:30Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5213645325,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T17:38:04Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5213678077,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T17:41:21Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5213741671,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T17:47:21Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5213959485,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-09-15T18:06:13Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5214369632,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T18:42:32Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5214451766,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T18:48:59Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5214647596,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-09-15T19:07:27Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5214834921,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T19:26:16Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5215398574,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-09-15T20:27:59Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4502936231,
+    "author": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2026-09-11T05:44:29Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5183232776",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-11T20:39:49Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5183498539",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-11T21:17:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5183518823",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-11T21:20:35Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5191849714",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-13T19:11:59Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5191860161",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-13T19:16:49Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5191874795",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-13T19:20:22Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5191918893",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-13T19:29:11Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5191941636",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-13T19:33:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5208688102",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:27:58Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5208688504",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5208688811",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5208689131",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:02Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5208689419",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:04Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5208689720",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5208689954",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5208690242",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:07Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5211390295",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T14:30:12Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5212326702",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T15:46:30Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5213645325",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T17:38:04Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5213678077",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T17:41:21Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5213741671",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T17:47:21Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5213959485",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T18:06:13Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5214369632",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T18:42:32Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5214451766",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T18:48:59Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5214647596",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T19:07:27Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5214834921",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T19:26:16Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5215398574",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T20:27:59Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5630058761",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-11T05:44:32Z"
+      },
+      {
+        "id": "5630064905",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-11T05:45:17Z"
+      },
+      {
+        "id": "5631381388",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-11T08:05:37Z"
+      },
+      {
+        "id": "5633834852",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-11T11:35:41Z"
+      },
+      {
+        "id": "5640881663",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-11T21:32:33Z"
+      },
+      {
+        "id": "5644737400",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-12T08:28:36Z"
+      },
+      {
+        "id": "5644738732",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-12T08:28:49Z"
+      },
+      {
+        "id": "5687236859",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T19:56:06Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "5703534054",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T19:46:01Z"
+      },
+      {
+        "id": "5703536034",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-16T19:46:11Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3993213922",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-11T20:39:48Z"
+      },
+      {
+        "id": "3993466494",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-11T21:17:20Z"
+      },
+      {
+        "id": "4000583071",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-13T19:11:59Z"
+      },
+      {
+        "id": "4000594546",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-13T19:16:49Z"
+      },
+      {
+        "id": "4000603804",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-13T19:20:22Z"
+      },
+      {
+        "id": "4000627376",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-13T19:29:10Z"
+      },
+      {
+        "id": "4014564212",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:27:58Z"
+      },
+      {
+        "id": "4014564451",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:00Z"
+      },
+      {
+        "id": "4014564634",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:01Z"
+      },
+      {
+        "id": "4014564856",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:02Z"
+      },
+      {
+        "id": "4014565057",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:04Z"
+      },
+      {
+        "id": "4014565252",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:05Z"
+      },
+      {
+        "id": "4014565405",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:06Z"
+      },
+      {
+        "id": "4014565620",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T10:28:07Z"
+      },
+      {
+        "id": "4016731538",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T14:30:12Z"
+      },
+      {
+        "id": "4017518869",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T15:46:30Z"
+      },
+      {
+        "id": "4018480693",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T17:38:03Z"
+      },
+      {
+        "id": "4018506529",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T17:41:20Z"
+      },
+      {
+        "id": "4018556641",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T17:47:21Z"
+      },
+      {
+        "id": "4018720261",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T18:06:11Z"
+      },
+      {
+        "id": "4018720303",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T18:06:12Z"
+      },
+      {
+        "id": "4018720348",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T18:06:12Z"
+      },
+      {
+        "id": "4018720387",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T18:06:12Z"
+      },
+      {
+        "id": "4018720442",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T18:06:13Z"
+      },
+      {
+        "id": "4019033144",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T18:42:32Z"
+      },
+      {
+        "id": "4019094153",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T18:48:59Z"
+      },
+      {
+        "id": "4019253569",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T19:07:25Z"
+      },
+      {
+        "id": "4019253640",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T19:07:26Z"
+      },
+      {
+        "id": "4019253679",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T19:07:26Z"
+      },
+      {
+        "id": "4019253713",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T19:07:27Z"
+      },
+      {
+        "id": "4019412280",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T19:26:16Z"
+      },
+      {
+        "id": "4019906627",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T20:27:58Z"
+      },
+      {
+        "id": "4019906677",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T20:27:59Z"
+      }
+    ]
+  }
+}

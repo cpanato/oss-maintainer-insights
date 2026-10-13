@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "30071": {
+        "id": 4785322464,
+        "updated_at": "2026-10-11T16:01:41Z",
+        "checked_at": "2026-10-13T16:16:02Z",
+        "state": "open"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.1.0",
     "version": 3,
@@ -73,6 +81,21 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/30071/comments?per_page=100": {
+        "etag": "W/\"cc5f4093cadf244bc1e9a38cad15073090234ba2699978cb813e818bbb59db22\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4218733102,
+            "user": {
+              "id": 136622811,
+              "login": "coderabbitai[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-08T12:11:08Z"
+          }
+        ]
+      },
       "/repositories/120896210/pulls/30071/reviews?per_page=100": {
         "etag": "W/\"aaa3d0af309d7458676ed5ed89f00cd8efbb379342b9bee8544f7833c3d79a12\"",
         "next": "",
@@ -102,18 +125,99 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4785322464,
+    "author": {
+      "id": 1743100,
+      "login": "ppapapetrou76",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-10-08T10:24:16Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5456343699",
+        "actor": {
+          "id": 136622811,
+          "login": "coderabbitai[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-08T12:11:09Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5459185784",
+        "actor": {
+          "id": 3849900,
+          "login": "todaywasawesome",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T15:38:27Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6057809253",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-08T10:24:22Z"
+      },
+      {
+        "id": "6057809953",
+        "actor": {
+          "id": 136622811,
+          "login": "coderabbitai[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-08T10:24:25Z"
+      },
+      {
+        "id": "6057856247",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-08T10:27:19Z"
+      },
+      {
+        "id": "6059049365",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-08T11:39:13Z"
+      },
+      {
+        "id": "6063441302",
+        "actor": {
+          "id": 3849900,
+          "login": "todaywasawesome",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T15:35:36Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "4218733102",
+        "actor": {
+          "id": 136622811,
+          "login": "coderabbitai[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-08T12:11:08Z"
+      }
+    ]
   }
 }
