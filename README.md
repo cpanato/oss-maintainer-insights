@@ -6,7 +6,7 @@ Status: early development. The UI supports saved catalog samples and live querie
 
 ## Development
 
-Requires Node (see `.node-version`) and Go (see `.go-version`).
+Requires Node (see `.node-version`), Go (see `.go-version`), Git, and rsync. Offline publication tests use temporary local Git repositories; they never contact GitHub.
 
 ```sh
 npm ci

@@ -155,3 +155,7 @@ Saved collection now enumerates every eligible human PR created within a frozen 
 ### Prow participation extension
 
 Methodology 1.1.0 adds observed human Prow review commands across repositories, including the Kubernetes and CNCF ecosystems. Acquisition strips source bodies after extracting bounded signals; both metric engines deduplicate GitHub and command sources per reviewer–PR pair and honor actor-local cancellation. Combined participation requires complete review/issue/inline streams. Shared fixtures cover extraction, cancellation, sources, coverage, and language parity. Checkpoint/cache invalidation regenerates source-aware samples while legacy GitHub-only public data remains readable after collection failures. Full historical ingestion and larger repository-wide populations remain follow-up work.
+
+### Publication revision guards
+
+Snapshot runs record the exact data commit restored before collection. Publication requires unchanged source and data revisions and an exact push lease; newer manually merged datasets and concurrent writers are preserved. Pages validates artifact source/data revisions again immediately before deployment. Ref checks use Git transport, and offline tests cover concurrent data updates, source advances, cold starts, and unchanged reruns. Incremental queues and monthly historical ingestion remain the next ordered implementation stages.
