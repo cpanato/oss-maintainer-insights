@@ -305,6 +305,13 @@ async function query(repository: string, refresh = false, allowLive = true) {
   controller = new AbortController();
   const signal = controller.signal;
   input.value = normalized;
+  for (const project of document.querySelectorAll<HTMLAnchorElement>(
+    "[data-repo]",
+  )) {
+    if (project.dataset.repo?.toLowerCase() === normalized.toLowerCase())
+      project.setAttribute("aria-current", "true");
+    else project.removeAttribute("aria-current");
+  }
   const url = new URL(location.href);
   url.searchParams.set("repo", normalized);
   history.replaceState(null, "", url);
@@ -314,7 +321,10 @@ async function query(repository: string, refresh = false, allowLive = true) {
   );
   element("collection-progress").hidden = true;
   const botIds = savedRepositories.get(normalized.toLowerCase())?.bot_ids ?? [];
-  const cached = !refresh && cache.read(normalized, botIds);
+  const cached =
+    !refresh &&
+    !savedRepositories.has(normalized.toLowerCase()) &&
+    cache.read(normalized, botIds);
   if (cached) {
     render(cached, "cache");
     busy(false);
@@ -440,11 +450,36 @@ element("clear-cache").addEventListener("click", () => {
         : "Local storage is unavailable.",
     );
 });
-for (const example of document.querySelectorAll<HTMLButtonElement>(
+for (const example of document.querySelectorAll<HTMLAnchorElement>(
   "[data-repo]",
 ))
-  example.addEventListener("click", () => {
-    if (example.dataset.repo) void query(example.dataset.repo);
+  example.addEventListener("click", (event) => {
+    if (
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey
+    )
+      return;
+    event.preventDefault();
+    const repository = example.dataset.repo;
+    if (repository)
+      void query(repository, false, false).then(() => {
+        if (input.value.toLowerCase() !== repository.toLowerCase()) return;
+        const target =
+          displayed?.result.repository.full_name.toLowerCase() ===
+          repository.toLowerCase()
+            ? element("results")
+            : element("status");
+        target.scrollIntoView({
+          block: "start",
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
+            .matches
+            ? "instant"
+            : "smooth",
+        });
+      });
   });
 const requested = new URL(location.href).searchParams.get("repo");
 if (requested) void query(requested, false, false);

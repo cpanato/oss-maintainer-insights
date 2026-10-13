@@ -178,33 +178,90 @@ h1 em {
   color: var(--accent);
   text-decoration: underline;
 }
-.example-groups {
-  display: grid;
-  gap: 10px;
-  margin: 23px 0 36px;
+.saved-projects {
+  margin: 28px 0 30px;
+  scroll-margin-top: 24px;
 }
-.examples {
+.saved-projects-heading {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  margin: 0;
-  font-size: 11px;
+  justify-content: space-between;
+  gap: 12px;
 }
-.examples > span {
+.saved-projects h2,
+.query-heading {
+  font-size: 23px;
+  margin-bottom: 0;
+}
+.project-count {
+  font-size: 12px;
   color: var(--muted);
-  margin-right: 5px;
+  white-space: nowrap;
 }
-.examples button {
-  border: 1px solid var(--line);
-  background: transparent;
-  border-radius: 5px;
-  padding: 8px 10px;
-  color: #425e68;
+.saved-projects-description,
+.query-description {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 8px 0 16px;
+}
+.project-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px 34px 16px 18px;
+  border: 1px solid #becdc7;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 16px #1b403406;
+}
+.project-card:hover,
+.project-card[aria-current="true"] {
+  background: #eaf3ee;
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.project-group {
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.project-owner {
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.project-name {
+  font-size: 17px;
+  margin: 2px 0 10px;
+  overflow-wrap: anywhere;
+}
+.project-summary {
   font-size: 11px;
+  color: var(--muted);
+  margin-top: auto;
 }
-.examples button:hover {
-  background: #e8eeeb;
+.project-arrow {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  color: var(--accent);
+}
+.query-form {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  margin-bottom: 30px;
 }
 .status-panel {
   font-size: 13px;
@@ -532,6 +589,9 @@ footer {
   .intro {
     padding-top: 44px;
   }
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .metrics {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -572,6 +632,19 @@ footer {
   }
   nav a:last-child {
     display: none;
+  }
+  .project-card {
+    padding: 12px 24px 12px 12px;
+  }
+  .project-owner {
+    display: block;
+  }
+  .project-name {
+    font-size: 15px;
+  }
+  .project-arrow {
+    right: 8px;
+    top: 12px;
   }
   .query-controls {
     flex-wrap: wrap;

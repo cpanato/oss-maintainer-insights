@@ -3,12 +3,27 @@ import "../styles/global.css";
 import InfoTip from "../components/InfoTip.astro";
 const base = import.meta.env.BASE_URL;
 import catalog from "../../../../catalog/repositories.json";
-const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
-  label,
-  repositories: catalog
-    .filter((entry) => entry.group === label)
-    .map((entry) => entry.repository),
-}));
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { parsePublicSnapshot, CATALOG_POLICY } from "../lib/live";
+const projects = catalog.map((entry) => {
+  let snapshot = null;
+  try {
+    snapshot = parsePublicSnapshot(
+      JSON.parse(
+        readFileSync(
+          resolve("public/data", `${entry.repository.replace("/", "--")}.json`),
+          "utf8",
+        ),
+      ),
+      entry.repository,
+    );
+  } catch {
+    // New catalog entries can await their first successful collection.
+  }
+  const [owner, name] = entry.repository.split("/");
+  return { ...entry, owner, name, snapshot };
+});
 ---
 
 <!doctype html>
@@ -37,6 +52,7 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
         </span>
       </a>
       <nav aria-label="Main navigation">
+        <a href="#saved-projects">Projects</a>
         <a href={`${base}methodology/`}>Methodology</a>
         <a href="https://github.com/cpanato/oss-maintainer-insights">
           GitHub ↗
@@ -57,7 +73,52 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
           Explore review participation and first human responses in a public
           GitHub repository. Every number comes with its sample and coverage.
         </p>
+        <section
+          id="saved-projects"
+          class="saved-projects"
+          aria-labelledby="saved-projects-heading"
+        >
+          <div class="saved-projects-heading">
+            <h2 id="saved-projects-heading">Explore the saved catalog</h2>
+            <span class="project-count">{projects.length} projects</span>
+          </div>
+          <p class="saved-projects-description">
+            Start with a project below. Saved results load without GitHub API
+            calls; the collector covers eligible PRs created in a 90-day window.
+          </p>
+          <ul class="project-grid">
+            {projects.map((project) => (
+              <li>
+                <a
+                  class="project-card"
+                  data-repo={project.repository}
+                  href={`${base}?repo=${encodeURIComponent(project.repository)}`}
+                  aria-label={`Explore saved data for ${project.repository}`}
+                >
+                  <span class="project-group">{project.group}</span>
+                  <span class="project-name">
+                    <span class="project-owner">{project.owner}/</span>
+                    <strong>{project.name}</strong>
+                  </span>
+                  <span class="project-summary">
+                    {project.snapshot
+                      ? `${project.snapshot.selection.selected.toLocaleString("en-US")} PRs · ${project.snapshot.policy === CATALOG_POLICY ? "90-day window" : "Saved sample"}`
+                      : "Collection pending"}
+                  </span>
+                  <span class="project-arrow" aria-hidden="true">
+                    →
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
         <form id="query" class="query-form">
+          <h2 class="query-heading">Explore another repository</h2>
+          <p class="query-description">
+            Live queries collect a small recent sample. Add a project to the
+            catalog for a complete 90-day collection.
+          </p>
           <label for="repository">GitHub repository</label>
           <div class="query-controls">
             <span class="input-mark" aria-hidden="true">
@@ -85,18 +146,6 @@ const examples = ["OpenSSF", "CNCF", "Community"].map((label) => ({
             </button>
           </div>
         </form>
-        <div class="example-groups" aria-label="Example public repositories">
-          {examples.map((group) => (
-            <div class="examples">
-              <span>{group.label}</span>
-              {group.repositories.map((repository) => (
-                <button type="button" data-repo={repository}>
-                  {repository} ↗
-                </button>
-              ))}
-            </div>
-          ))}
-        </div>
       </section>
       <section class="status-panel" aria-label="Collection status">
         <p id="status" role="status" aria-live="polite">
