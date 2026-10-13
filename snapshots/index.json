@@ -1,26 +1,53 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-13T15:16:20Z",
+  "attempted_at": "2026-10-13T16:00:45Z",
   "entries": [
     {
-      "repository": "sigstore/cosign",
-      "status": "fresh",
-      "requests": 0
-    },
-    {
       "repository": "kubernetes/kubernetes",
-      "status": "fresh",
-      "requests": 0
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
+      "progress": {
+        "window": {
+          "start": "2026-07-15T16:00:46.000Z",
+          "end": "2026-10-13T16:00:46.000Z"
+        },
+        "enumerated_prs": 1900,
+        "eligible_prs": 1753,
+        "covered_prs": 293,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "fresh",
-      "requests": 0
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
+      "progress": {
+        "window": {
+          "start": "2026-07-15T16:05:38.000Z",
+          "end": "2026-10-13T16:05:38.000Z"
+        },
+        "enumerated_prs": 800,
+        "eligible_prs": 480,
+        "covered_prs": 297,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "helm/helm",
-      "status": "fresh",
-      "requests": 0
+      "status": "updated",
+      "requests": 605,
+      "progress": {
+        "window": {
+          "start": "2026-07-15T16:10:20.000Z",
+          "end": "2026-10-13T16:10:20.000Z"
+        },
+        "enumerated_prs": 400,
+        "eligible_prs": 200,
+        "covered_prs": 200,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "cert-manager/cert-manager",
@@ -44,13 +71,48 @@
     },
     {
       "repository": "ossf/scorecard",
-      "status": "fresh",
-      "requests": 0
+      "status": "updated",
+      "requests": 267,
+      "progress": {
+        "window": {
+          "start": "2026-07-15T16:13:24.000Z",
+          "end": "2026-10-13T16:13:24.000Z"
+        },
+        "enumerated_prs": 200,
+        "eligible_prs": 88,
+        "covered_prs": 88,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "ossf/allstar",
-      "status": "fresh",
-      "requests": 0
+      "status": "updated",
+      "requests": 35,
+      "progress": {
+        "window": {
+          "start": "2026-07-15T16:14:42.000Z",
+          "end": "2026-10-13T16:14:42.000Z"
+        },
+        "enumerated_prs": 100,
+        "eligible_prs": 11,
+        "covered_prs": 11,
+        "enumeration_complete": true
+      }
+    },
+    {
+      "repository": "sigstore/cosign",
+      "status": "updated",
+      "requests": 207,
+      "progress": {
+        "window": {
+          "start": "2026-07-15T16:14:54.000Z",
+          "end": "2026-10-13T16:14:54.000Z"
+        },
+        "enumerated_prs": 200,
+        "eligible_prs": 68,
+        "covered_prs": 68,
+        "enumeration_complete": true
+      }
     }
   ]
 }

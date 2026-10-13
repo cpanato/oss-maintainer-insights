@@ -1,0 +1,267 @@
+{
+  "generation": 1,
+  "observed_at": "2026-10-13T16:16:02Z",
+  "pr": {
+    "updated_at": "2026-10-13T12:50:40Z",
+    "id": 4835276248,
+    "number": 9464,
+    "user": {
+      "id": 155569926,
+      "login": "dlanov",
+      "type": "User"
+    },
+    "created_at": "2026-10-12T21:36:55Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-10-13T12:50:39Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "9464": {
+        "id": 4835276248,
+        "updated_at": "2026-10-13T12:50:40Z",
+        "checked_at": "2026-10-13T16:16:02Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.1.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/9464/comments?per_page=100": {
+        "etag": "W/\"7fb4458df3193271e708f75e5d2d6f2836f939482f7cd594e9ac1c37ba44cc74\"",
+        "next": "",
+        "value": [
+          {
+            "id": 6133069447,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-12T21:37:06Z"
+          },
+          {
+            "id": 6136335621,
+            "user": {
+              "id": 57584831,
+              "login": "lunarwhite",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T01:51:46Z"
+          },
+          {
+            "id": 6136355091,
+            "user": {
+              "id": 57584831,
+              "login": "lunarwhite",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T01:53:34Z"
+          },
+          {
+            "id": 6137369775,
+            "user": {
+              "id": 11522166,
+              "login": "hjoshi123",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T03:13:00Z"
+          },
+          {
+            "id": 6137504308,
+            "user": {
+              "id": 57584831,
+              "login": "lunarwhite",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T03:25:00Z"
+          },
+          {
+            "id": 6144972051,
+            "user": {
+              "id": 11522166,
+              "login": "hjoshi123",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T11:55:26Z"
+          },
+          {
+            "id": 6145924267,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-13T12:49:38Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/9464/comments?per_page=100": {
+        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/9464/reviews?per_page=100": {
+        "etag": "W/\"1ad231f867b889025b91121ba71be021765b58ac24307a45f3e6a39992bf0abb\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5497267146,
+            "user": {
+              "id": 57584831,
+              "login": "lunarwhite",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-13T00:09:18Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 5503753003,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-13T12:49:28Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5503765157,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-10-13T12:50:30Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4835276248,
+    "author": {
+      "id": 155569926,
+      "login": "dlanov",
+      "type": "User"
+    },
+    "created_at": "2026-10-12T21:36:55Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5497267146",
+        "actor": {
+          "id": 57584831,
+          "login": "lunarwhite",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T00:09:18Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "5503753003",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T12:49:28Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5503765157",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-13T12:50:30Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6133069447",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-12T21:37:06Z"
+      },
+      {
+        "id": "6136335621",
+        "actor": {
+          "id": 57584831,
+          "login": "lunarwhite",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T01:51:46Z"
+      },
+      {
+        "id": "6136355091",
+        "actor": {
+          "id": 57584831,
+          "login": "lunarwhite",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T01:53:34Z"
+      },
+      {
+        "id": "6137369775",
+        "actor": {
+          "id": 11522166,
+          "login": "hjoshi123",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T03:13:00Z"
+      },
+      {
+        "id": "6137504308",
+        "actor": {
+          "id": 57584831,
+          "login": "lunarwhite",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T03:25:00Z"
+      },
+      {
+        "id": "6144972051",
+        "actor": {
+          "id": 11522166,
+          "login": "hjoshi123",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T11:55:26Z"
+      },
+      {
+        "id": "6145924267",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-13T12:49:38Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
