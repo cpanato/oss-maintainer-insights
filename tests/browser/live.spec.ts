@@ -242,13 +242,32 @@ test("switching repositories prevents an older in-flight query replacing newer r
   });
   await page.goto("./?repo=old/repo");
   await expect.poll(() => !!held).toBe(true);
-  await page.getByRole("button", { name: "ossf/scorecard" }).click();
-  await expect(page.getByRole("status")).toContainText("Sample complete");
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } =
+    await import("../../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.result.repository.full_name = "ossf/scorecard";
+  await page.route("**/data/ossf--scorecard.json", (route) =>
+    route.fulfill({ json: saved }),
+  );
+  await page
+    .getByRole("link", {
+      name: "Explore saved data for ossf/scorecard",
+      exact: true,
+    })
+    .click();
+  await expect(page.getByRole("status")).toContainText("No GitHub API calls");
   await held?.fulfill({
     json: { id: 123, full_name: "old/repo", private: false },
     headers,
   });
-  await expect(page.locator("#repo-name")).toHaveText("example/repo");
+  await expect(page.locator("#repo-name")).toHaveText("ossf/scorecard");
   await expect(page).toHaveURL(/repo=ossf%2Fscorecard/);
 });
 
@@ -566,7 +585,7 @@ test("uncatalogued deep links display a prominent catalog contribution guide", a
   page,
 }) => {
   await fixture(page);
-  await page.goto("./?repo=sigstore%2Frekor");
+  await page.goto("./?repo=example%2Fnot-saved");
   await expect(page.locator("#contribution")).toBeVisible();
   await expect(page.locator("#contribution")).toContainText(
     "Want more data for this repository?",
@@ -582,4 +601,135 @@ test("uncatalogued deep links display a prominent catalog contribution guide", a
   await expect(
     page.getByRole("heading", { name: "Open a catalog pull request" }),
   ).toBeVisible();
+});
+
+test("saved projects lead to saved data through keyboard-accessible project links", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } =
+    await import("../../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.result.repository.full_name = "kubernetes/kubernetes";
+  await page.route("**/data/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ json: saved }),
+  );
+  await page.goto("./");
+  const catalog = page.getByRole("region", {
+    name: "Explore the saved catalog",
+  });
+  await expect(catalog.getByRole("link")).toHaveCount(9);
+  for (const repository of [
+    "cert-manager/cert-manager",
+    "argoproj/argo-cd",
+    "sigstore/rekor",
+  ]) {
+    await expect(
+      catalog.getByRole("link", {
+        name: `Explore saved data for ${repository}`,
+        exact: true,
+      }),
+    ).toBeVisible();
+  }
+  await expect(
+    catalog.getByRole("link", { name: /github-actions-dashboard/ }),
+  ).toHaveCount(0);
+  const project = catalog.getByRole("link", {
+    name: "Explore saved data for kubernetes/kubernetes",
+    exact: true,
+  });
+  await expect(project).toHaveAttribute(
+    "href",
+    "/?repo=kubernetes%2Fkubernetes",
+  );
+  expect(
+    await catalog.evaluate(
+      (e) =>
+        !!(
+          e.compareDocumentPosition(document.querySelector("#query")!) &
+          Node.DOCUMENT_POSITION_FOLLOWING
+        ),
+    ),
+  ).toBe(true);
+  await project.focus();
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("status")).toContainText("No GitHub API calls");
+  await expect(project).toHaveAttribute("aria-current", "true");
+  await expect(page.locator("#repo-name")).toHaveText("kubernetes/kubernetes");
+  expect(calls).toEqual([]);
+});
+
+test("a catalog project awaiting data never starts a live query on selection", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("./");
+  const project = page.getByRole("link", {
+    name: "Explore saved data for sigstore/rekor",
+    exact: true,
+  });
+  await project.click();
+  await expect(page.getByRole("status")).toContainText(
+    "A saved snapshot is not available yet",
+  );
+  await expect(page.locator("#results")).toBeHidden();
+  await expect(project).toHaveAttribute("aria-current", "true");
+  expect(calls).toEqual([]);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});
+
+test("saved catalog results take priority over a cached smaller live query", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } =
+    await import("../../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.result.repository.full_name = "kubernetes/kubernetes";
+  await page.route("**/data/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ json: saved }),
+  );
+  await page.route(
+    "https://api.github.com/repos/kubernetes/kubernetes",
+    (route) =>
+      route.fulfill({
+        json: { id: 42, full_name: "kubernetes/kubernetes", private: false },
+        headers,
+      }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect(page.getByRole("status")).toContainText("No GitHub API calls");
+  await page.getByRole("button", { name: "Refresh live" }).click();
+  await expect(page.getByRole("status")).toContainText(
+    "Saved locally for one hour",
+  );
+  await expect(page.locator("#sample-description")).toContainText(
+    "2 selected PRs",
+  );
+  expect(calls).toHaveLength(7);
+  await page.reload();
+  await expect(page.getByRole("status")).toContainText("No GitHub API calls");
+  await expect(page.locator("#sample-description")).toContainText(
+    "21 eligible PRs",
+  );
+  expect(calls).toHaveLength(7);
 });
