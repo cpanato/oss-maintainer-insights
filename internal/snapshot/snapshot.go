@@ -51,14 +51,15 @@ type SampleAge struct {
 
 // Public contains aggregates only. Source events and validators never enter website artifacts.
 type Public struct {
-	SampleAge *SampleAge      `json:"sample_age,omitempty"`
-	Policy    string          `json:"policy"`
-	Result    analysis.Result `json:"result"`
-	Selection Selection       `json:"selection"`
-	Requests  int             `json:"requests"`
-	Rate      Rate            `json:"rate"`
-	Failures  []Failure       `json:"failures"`
-	Complete  bool            `json:"complete"`
+	Collection *Collection     `json:"collection,omitempty"`
+	SampleAge  *SampleAge      `json:"sample_age,omitempty"`
+	Policy     string          `json:"policy"`
+	Result     analysis.Result `json:"result"`
+	Selection  Selection       `json:"selection"`
+	Requests   int             `json:"requests"`
+	Rate       Rate            `json:"rate"`
+	Failures   []Failure       `json:"failures"`
+	Complete   bool            `json:"complete"`
 }
 type Page struct {
 	ETag  string          `json:"etag"`
@@ -74,16 +75,18 @@ type Progress struct {
 }
 
 type State struct {
-	Progress           *Progress       `json:"progress,omitempty"`
-	RepositoryID       int64           `json:"repository_id,omitempty"`
-	ObservedAt         string          `json:"observed_at,omitempty"`
-	Pending            bool            `json:"pending,omitempty"`
-	MethodologyVersion string          `json:"methodology_version,omitempty"`
-	BotIDs             []int64         `json:"bot_ids,omitempty"`
-	Version            int             `json:"version"`
-	Policy             string          `json:"policy"`
-	Repository         string          `json:"repository"`
-	Pages              map[string]Page `json:"pages"`
+	Tracked            map[int]TrackedPR `json:"tracked_prs,omitempty"`
+	Incremental        bool              `json:"incremental,omitempty"`
+	Progress           *Progress         `json:"progress,omitempty"`
+	RepositoryID       int64             `json:"repository_id,omitempty"`
+	ObservedAt         string            `json:"observed_at,omitempty"`
+	Pending            bool              `json:"pending,omitempty"`
+	MethodologyVersion string            `json:"methodology_version,omitempty"`
+	BotIDs             []int64           `json:"bot_ids,omitempty"`
+	Version            int               `json:"version"`
+	Policy             string            `json:"policy"`
+	Repository         string            `json:"repository"`
+	Pages              map[string]Page   `json:"pages"`
 }
 type Getter interface {
 	GetConditional(context.Context, string, any, string) (http.Header, error)
@@ -91,23 +94,35 @@ type Getter interface {
 	RateLimit() github.RateLimit
 }
 type reader struct {
-	resume     bool
-	checkpoint func(State) error
-	client     Getter
-	previous   State
-	next       State
+	replay      map[string]bool
+	incremental bool
+	resume      bool
+	checkpoint  func(State) error
+	client      Getter
+	previous    State
+	next        State
 }
 
 func (r *reader) get(ctx context.Context, path string, destination any) (string, error) {
 	cached := r.previous.Pages[path]
-	if r.resume && !strings.HasPrefix(path, "/repos/") && len(cached.Value) > 0 {
+	if (r.resume || r.replay[path]) && !strings.HasPrefix(path, "/repos/") && len(cached.Value) > 0 {
 		if err := json.Unmarshal(cached.Value, destination); err != nil {
 			return "", &github.Failure{Reason: "invalid_response"}
 		}
-		r.next.Pages[path] = cached
+		value, err := json.Marshal(destination)
+		if err != nil {
+			return "", err
+		}
+		r.next.Pages[path] = Page{ETag: cached.ETag, Next: cached.Next, Value: value}
 		return cached.Next, nil
 	}
-	headers, err := r.client.GetConditional(ctx, path, destination, cached.ETag)
+	etag := cached.ETag
+	// Older checkpoints stripped updated_at from typed PR pages. A one-time
+	// unconditional fetch restores the metadata needed for safe reuse decisions.
+	if _, prs := destination.(*[]rawPR); prs && r.incremental && !r.resume && !cachedPRUpdates(cached) {
+		etag = ""
+	}
+	headers, err := r.client.GetConditional(ctx, path, destination, etag)
 	var next string
 	if errors.Is(err, github.ErrNotModified) {
 		if len(cached.Value) == 0 {
@@ -180,6 +195,7 @@ func timestamp(value string) (time.Time, error) {
 }
 
 type rawPR struct {
+	Updated string    `json:"updated_at,omitempty"`
 	ID      int64     `json:"id"`
 	Number  int       `json:"number"`
 	User    *rawActor `json:"user"`
@@ -317,23 +333,23 @@ func reason(err error) string {
 
 // Collect revalidates every selected stream, including older PRs. Unchanged pages use sanitized checkpoints.
 func Collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State) (Public, State, error) {
-	return collect(ctx, client, entry, observed, previous, false, false, nil)
+	return collect(ctx, client, entry, observed, previous, false, false, false, nil)
 }
 
 // CollectCatalog enumerates the complete eligible 90-day creation cohort.
 func CollectCatalog(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State) (Public, State, error) {
-	return collect(ctx, client, entry, observed, previous, true, false, nil)
+	return collect(ctx, client, entry, observed, previous, true, false, false, nil)
 }
 
 // CollectCatalogWithCheckpoint resumes a pending bounded sample at its frozen
 // observation time and reports sanitized page progress to the caller.
 func CollectCatalogWithCheckpoint(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, checkpoint func(State) error) (Public, State, error) {
-	return collect(ctx, client, entry, observed, previous, true, true, checkpoint)
+	return collect(ctx, client, entry, observed, previous, true, true, false, checkpoint)
 }
 
 const CatalogPolicy = "all-human-prs-created-in-90-days-v1"
 
-func collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, catalog, resume bool, checkpoint func(State) error) (Public, State, error) {
+func collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, catalog, resume, incremental bool, checkpoint func(State) error) (Public, State, error) {
 	observed = observed.UTC().Truncate(time.Millisecond)
 	policy := QueryPolicy
 	if catalog {
@@ -347,7 +363,7 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		observed = observed.Truncate(time.Second)
 	}
 	compatiblePolicy := previous.Policy == policy || (catalog && slices.Contains([]string{QueryPolicy, "three-age-bands-eighteen-human-prs-90-days-v1", "three-age-bands-three-hundred-human-prs-90-days-v1"}, previous.Policy))
-	if previous.Version != 2 || !compatiblePolicy || !strings.EqualFold(previous.Repository, entry.Repository) {
+	if (previous.Version != 2 && previous.Version != 3) || !compatiblePolicy || !strings.EqualFold(previous.Repository, entry.Repository) {
 		previous = State{}
 	}
 	pendingAt, pendingErr := timestamp(previous.ObservedAt)
@@ -360,6 +376,9 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		}
 	}
 	if catalog {
+		state.Version = 3
+		state.Tracked = map[int]TrackedPR{}
+		state.Incremental = incremental || (resume && previous.Incremental)
 		state.ObservedAt = observed.Format(time.RFC3339)
 		state.Pending = true
 		state.MethodologyVersion = analysis.MethodologyVersion
@@ -372,7 +391,7 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		progress := *previous.Progress
 		state.Progress = &progress
 	}
-	r := reader{client: client, previous: previous, next: state, resume: resume, checkpoint: checkpoint}
+	r := reader{client: client, previous: previous, next: state, resume: resume, checkpoint: checkpoint, incremental: state.Incremental, replay: map[string]bool{}}
 	path, err := github.RepositoryPath(entry.Repository)
 	if err != nil {
 		return Public{}, r.next, err
@@ -484,6 +503,13 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		}
 		for index, raw := range eligible {
 			pr := &input.PullRequests[index]
+			reused := r.reuseClosedPR(raw, path, observed)
+			priorTrack, tracked := r.previous.Tracked[raw.Number]
+			checkedBefore, checkedErr := timestamp(priorTrack.CheckedAt)
+			tracked = tracked && checkedErr == nil && !observed.Before(checkedBefore)
+			if r.resume && tracked && priorTrack.ID == raw.ID {
+				r.next.Tracked[raw.Number] = priorTrack
+			}
 			for _, stream := range []string{"reviews", "issue_comments", "review_comments"} {
 				endpoint := fmt.Sprintf("%s/pulls/%d/reviews?per_page=100", path, raw.Number)
 				if stream == "issue_comments" {
@@ -514,6 +540,11 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 				}
 			}
 			if pr.Coverage.Reviews && pr.Coverage.IssueComments && pr.Coverage.ReviewComments {
+				checkedAt := observed.Format(time.RFC3339)
+				if reused || (r.resume && tracked && priorTrack.ID == raw.ID) {
+					checkedAt = priorTrack.CheckedAt
+				}
+				r.next.Tracked[raw.Number] = TrackedPR{ID: raw.ID, UpdatedAt: raw.Updated, CheckedAt: checkedAt, State: raw.State}
 				if !cachedCoverage[raw.ID] {
 					r.next.Progress.CoveredPRs++
 				}
@@ -591,6 +622,9 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 			}
 		}
 		public.SampleAge = age
+	}
+	if r.incremental {
+		public.Collection = r.collectionSummary(eligible, observed)
 	}
 	if err := schemas.Validate("repository-snapshot", public); err != nil {
 		return Public{}, r.next, err

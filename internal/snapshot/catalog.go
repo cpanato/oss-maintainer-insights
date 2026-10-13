@@ -44,6 +44,12 @@ func (r *reader) catalogPRs(ctx context.Context, path, _ string, botIDs []int64,
 				return nil, selection, &github.Failure{Reason: "invalid_response"}
 			}
 			previousCreated = created
+			if pr.Updated != "" {
+				updated, err := timestamp(pr.Updated)
+				if err != nil || updated.Before(created) {
+					return nil, selection, &github.Failure{Reason: "invalid_response"}
+				}
+			}
 			if seen[pr.ID] {
 				continue
 			}

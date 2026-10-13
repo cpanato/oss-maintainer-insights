@@ -878,3 +878,38 @@ test("review pagination resets on repository changes and works on mobile", async
   ).toBe(true);
   expect(calls).toEqual([]);
 });
+
+test("incremental saved results explain event freshness without live API calls", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } =
+    await import("../../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/incremental-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.result.repository.full_name = "kubernetes/kubernetes";
+  await page.route("**/data/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ json: saved }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect(page.getByRole("status")).toContainText("No GitHub API calls");
+  await expect(page.locator("#event-freshness")).toContainText(
+    "3 PRs revalidated",
+  );
+  await expect(page.locator("#event-freshness")).toContainText(
+    "18 unchanged closed PRs reused",
+  );
+  await expect(page.locator("#event-freshness")).toContainText(
+    "7-day reconciliation target",
+  );
+  await expect(page.locator("#event-freshness")).toContainText(
+    "Population coverage and event freshness are separate",
+  );
+  expect(calls).toEqual([]);
+});

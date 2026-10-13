@@ -126,6 +126,15 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 	}
 	ctx, cancel := context.WithTimeout(ctx, 90*time.Minute)
 	defer cancel()
+	queuePath := filepath.Join(*stateDirectory, "_queue.json")
+	var queue collectionQueue
+	if readJSON(queuePath, &queue) != nil {
+		queue = collectionQueue{}
+	}
+	entries, queue = rotateCatalog(entries, queue)
+	if err := atomicJSON(queuePath, queue); err != nil {
+		return err
+	}
 	now := time.Now().UTC()
 	report := manifest{SchemaVersion: 1, AttemptedAt: now.Format(time.RFC3339), Entries: []attempt{}}
 	for _, entry := range entries {
@@ -141,7 +150,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 		// Reuse body-free observations from a legacy sample while enumerating the
 		// entire creation window. Its cached streams become part of the pending
 		// frozen window; missing PR pages and streams still come from GitHub.
-		if validPrior && prior.Complete && prior.Policy != snapshot.CatalogPolicy && prior.Result.MethodologyVersion == analysis.MethodologyVersion && previous.Version == 2 && previous.Policy == prior.Policy && strings.EqualFold(previous.Repository, entry.Repository) {
+		if validPrior && prior.Complete && prior.Policy != snapshot.CatalogPolicy && prior.Result.MethodologyVersion == analysis.MethodologyVersion && (previous.Version == 2 || previous.Version == 3) && previous.Policy == prior.Policy && strings.EqualFold(previous.Repository, entry.Repository) {
 			previous.Policy = snapshot.CatalogPolicy
 			previous.Pending = true
 			previous.ObservedAt = prior.Result.CollectedAt
@@ -199,7 +208,11 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 			}
 			return checkpointErr
 		}
-		current, state, collectErr := snapshot.CollectCatalogWithCheckpoint(ctx, client, entry, time.Time{}, previous, checkpoint)
+		collect := snapshot.CollectCatalogIncrementalWithCheckpoint
+		if *force {
+			collect = snapshot.CollectCatalogWithCheckpoint
+		}
+		current, state, collectErr := collect(ctx, client, entry, time.Time{}, previous, checkpoint)
 		if checkpointErr != nil {
 			return checkpointErr
 		}

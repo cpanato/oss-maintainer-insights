@@ -140,6 +140,37 @@
           "format": "date-time"
         }
       }
+    },
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "refreshed_prs",
+        "reused_prs",
+        "reconciliation_interval_days"
+      ],
+      "properties": {
+        "mode": {
+          "const": "incremental"
+        },
+        "refreshed_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reused_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "events_checked_since": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "reconciliation_interval_days": {
+          "const": 7
+        }
+      }
     }
   },
   "allOf": [
@@ -267,6 +298,21 @@
                 "maximum": 300
               }
             }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["collection"],
+        "properties": {
+          "collection": {}
+        }
+      },
+      "then": {
+        "properties": {
+          "policy": {
+            "const": "all-human-prs-created-in-90-days-v1"
           }
         }
       }
