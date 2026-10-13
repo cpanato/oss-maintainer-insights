@@ -1,6 +1,6 @@
 # Contributing repositories
 
-The saved catalog serves pre-generated public repository creation cohorts. Historical ingestion and monthly trends are still in development. Adding an entry requests full collection of eligible PRs created within a 90-day window. It does not promise monthly historical series or immediate completion.
+The saved catalog serves pre-generated public creation cohorts and monthly historical trends after backfill completes. Adding an entry requests full collection of eligible PRs created within a 90-day window, plus a separate review-history backfill across PRs of every creation age. Large historical populations can remain pending across many executions; inclusion does not promise immediate completion.
 
 1. Fork this repository and create a branch.
 2. Edit `catalog/repositories.json`, adding an object such as `{ "repository": "owner/repository", "group": "Community" }`. Use a public, canonical GitHub repository name. Choose `OpenSSF` or `CNCF` only for an associated project; otherwise use `Community`.

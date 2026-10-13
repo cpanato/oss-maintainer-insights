@@ -188,3 +188,31 @@ Version-2 checkpoints remain readable. Legacy listing pages that omitted `update
 Public `collection` metadata separates population coverage from event freshness: counts of PRs checked for the window and unchanged closed PRs reused, the earliest event-check time, and the reconciliation target. The website exposes this age. The target is not a guarantee of wall-clock freshness: API limits and pending work can delay completion. Live queries keep their existing bounds and behavior. Metric methodology remains 1.1.0.
 
 The private `_queue.json` rotates the first catalog project each execution, including failed/interrupted runs. This prevents the same leading projects from always taking a shared API allowance. Catalog removals, unknown versions, and malformed queue state safely reset the starting position. The queue and tracked PR metadata stay on `data` under checkpoints and outside Pages artifacts.
+
+## Monthly historical review backfill
+
+`go run ./cmd/collector history` separately enumerates **every PR**, without a creation-date cutoff or population cap. Old PRs can receive reviews within the requested window. All eligible human, non-draft PRs require complete submitted-review, issue-comment, and inline-comment streams before publication. Listing uses REST pagination rather than the search API's 1,000-result ceiling. Source events before the window are retained privately in sanitized checkpoints because earliest-pair deduplication and Prow cancellations require that context.
+
+The collector freezes a 90-day UTC observation window across interruptions and splits it at calendar-month boundaries. The first and last months can be partial and expose their exact half-open windows. Creation counts and first response use each month's creation cohort; historical review units include older PRs and belong to each pair's earliest currently qualifying review month. Repeated pairs in later months do not count again. Outcomes, dismissals, and command cancellations reflect the observed source state, rather than reconstructing an immutable past state.
+
+Private checkpoints are sharded under `checkpoints/history/<owner--repo>/pages/` and `prs/`, with a small cursor advanced only after required pages are validated. A failed or interrupted stream keeps completed pages for replay. Completed generations refresh listing metadata, open/changed PRs, and expired event streams; unchanged closed streams have a seven-day reconciliation target. Repository identity, methodology, and bot-list changes prevent event reuse. Forced completed refreshes revalidate all streams; pending generations still resume. Public collection metadata records event-check age separately from coverage.
+
+The hourly workflow prioritizes current creation cohorts, then runs history with 100 attempts per project, a five-minute overall deadline, and its own persisted rotating queue. With ten projects the historical request ceiling is 1,000 attempts, including metadata, pagination, retries, and conditional requests. The deadline and GitHub limits can stop earlier. The 100-remaining reserve still leaves room for publication. The initial backfill can take many runs; exhaustive collection on very large repositories can remain pending for a long time. No incomplete monthly series replaces a complete published series.
+
+Public data lives under `snapshots/history/` on `data`; `history/index.json` reports pending coverage and preserved results. Recursive restoration and publication keep both historical directories and per-PR checkpoints across runs. Only public aggregate files enter Pages. Missing historical data never triggers automatic live collection in the browser. Charts and tables use the same monthly aggregates, with dates, population, coverage, event freshness, and methodology visible.
+
+For local work, use a reviewed subset catalog and a separate output/state directory:
+
+```sh
+go run ./cmd/collector history --catalog path/to/pilot-catalog.json \
+  --output .cache/history-public --state .cache/history-private \
+  --github-cli --requests=1300 --timeout=90m --rate-limit-wait=65m
+```
+
+Both commands are resumable and do not publish by themselves. Each attempt is bounded; rerun against the same state to continue. Per-document disk checkpoints are limited to 64 MiB by the shared strict reader. Final aggregation currently loads eligible normalized PR records into memory; storage and memory costs must be measured before extending the window beyond 90 days. A GitHub App or a more efficient acquisition strategy may be needed for the largest repositories.
+
+### First historical pilot
+
+On 13 October 2026, local GitHub CLI collection for `ossf/allstar` completed exhaustive REST enumeration of 708 PRs and all event streams for 244 eligible human, non-draft PRs. Three resumable attempts used 100, 426, and 218 requests respectively (744 total); the first stopped at its budget and the second at a timeout. The frozen window is `2026-07-15T15:00:01Z`–`2026-10-13T15:00:01Z`. Four monthly aggregates have creation-cohort counts of 1, 4, 5, and 1, and review-unit counts of 0, 0, 1, and 0. The TypeScript engine independently reproduced all four Go monthly results from the sanitized per-PR records. These counters describe this observed window, not all past maintenance activity.
+
+The September unit is traceable to the qualifying review on [Allstar PR #894](https://github.com/ossf/allstar/pull/894), review event ID `5257038751`, submitted on `2026-09-19T18:35:59Z`. Reviews on PRs predating the target window are included in the acquisition population, even when they produce no new qualifying pair within the window. Shared fixtures additionally exercise older-PR review events in the target month. The complete pilot files remain separate from source changes and require data publication after the historical implementation is merged.

@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cpanato.github.io/oss-maintainer-insights/schemas/repository-history.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "policy",
+    "repository",
+    "collected_at",
+    "window",
+    "progress",
+    "collection",
+    "months"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "policy": {
+      "const": "all-pr-review-history-90-days-v1"
+    },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "full_name"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "full_name": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9-]*/[A-Za-z0-9_.-]+$"
+        }
+      }
+    },
+    "collected_at": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z$"
+    },
+    "window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z$"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d{3})?Z$"
+        }
+      }
+    },
+    "progress": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "window",
+        "enumerated_prs",
+        "eligible_prs",
+        "covered_prs",
+        "enumeration_complete"
+      ],
+      "properties": {
+        "window": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["start", "end"],
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            },
+            "end": {
+              "type": "string",
+              "format": "date-time",
+              "pattern": "Z$"
+            }
+          }
+        },
+        "enumeration_complete": {
+          "const": true
+        },
+        "enumerated_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "eligible_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "covered_prs": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "collection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "refreshed_prs",
+        "reused_prs",
+        "reconciliation_interval_days"
+      ],
+      "properties": {
+        "mode": {
+          "const": "incremental"
+        },
+        "refreshed_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reused_prs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "events_checked_since": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "Z$"
+        },
+        "reconciliation_interval_days": {
+          "const": 7
+        }
+      }
+    },
+    "months": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4,
+      "items": {
+        "allOf": [
+          {
+            "$ref": "analysis-result.schema.json"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "mode": {
+                "const": "historical"
+              },
+              "methodology_version": {
+                "const": "1.1.0"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

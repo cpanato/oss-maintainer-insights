@@ -16,6 +16,7 @@ addFormats(ajv);
 const names = [
   "analysis-result",
   "repository-snapshot",
+  "repository-history",
   "snapshot-index",
   "build-manifest",
 ];
@@ -62,7 +63,9 @@ for (const entry of readdirSync(site, {
       ? "build-manifest"
       : entry.name === "index.json"
         ? "snapshot-index"
-        : "repository-snapshot",
+        : path.includes("/history/")
+          ? "repository-history"
+          : "repository-snapshot",
     read(path),
   );
 }

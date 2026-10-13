@@ -369,6 +369,51 @@ const projects = catalog.map((entry) => {
         </section>
       </section>
       <section
+        id="monthly-history"
+        class="panel"
+        hidden
+        aria-labelledby="history-title"
+      >
+        <p class="eyebrow">SAVED HISTORICAL ACTIVITY</p>
+        <h2 id="history-title">Monthly trends</h2>
+        <p id="history-status" aria-live="polite"></p>
+        <div id="history-data" hidden>
+          <p id="history-scope" class="muted"></p>
+          <h3>Review units by month</h3>
+          <ol
+            id="history-bars"
+            class="history-bars"
+            aria-label="Monthly review units"
+          ></ol>
+          <div class="table-scroll">
+            <table>
+              <caption>
+                Monthly review activity and PR creation cohorts (UTC)
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Window</th>
+                  <th scope="col">PRs created</th>
+                  <th scope="col">Review units</th>
+                  <th scope="col">Review participants</th>
+                  <th scope="col">First response median</th>
+                  <th scope="col">Responded / covered PRs</th>
+                </tr>
+              </thead>
+              <tbody id="history-rows"></tbody>
+            </table>
+          </div>
+          <p class="muted">
+            Review activity includes eligible PRs created before the window.
+            Each reviewer–PR pair belongs to its earliest currently qualifying
+            review month, including Prow commands. PR counts and response times
+            use PRs created within each month. First-response medians require at
+            least five responses. Partial months cover only the dates shown;
+            outcomes and review states reflect the latest observation.
+          </p>
+        </div>
+      </section>
+      <section
         id="empty-state"
         class="overview-grid"
         aria-label="What you can explore"
@@ -401,11 +446,11 @@ const projects = catalog.map((entry) => {
 
       <section class="catalog-note">
         <div>
-          <span class="tag">IN DEVELOPMENT</span>
-          <h3>A longer view, coming next.</h3>
+          <span class="tag">SAVED HISTORY</span>
+          <h3>A longer view of review activity.</h3>
           <p>
-            Historical ingestion will add monthly trends. Saved samples and live
-            queries are available now.
+            Catalog projects receive a resumable historical backfill. Monthly
+            trends appear after all required PR and event pages are collected.
           </p>
         </div>
         <a href={`${base}methodology/`}>

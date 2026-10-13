@@ -12,6 +12,7 @@ import {
   parseCollectionProgress,
 } from "./live.js";
 import type { PublicSnapshot } from "./live.js";
+import { parseRepositoryHistory } from "./history.js";
 import catalog from "../../../../catalog/repositories.json" with { type: "json" };
 const catalogEntries: { repository: string; bot_ids?: number[] }[] = catalog;
 const savedRepositories = new Map(
@@ -74,6 +75,121 @@ function duration(ms: number): string {
   if (ms < 3600000) return `${(ms / 60000).toFixed(1)} min`;
   if (ms < 86400000) return `${(ms / 3600000).toFixed(1)} h`;
   return `${(ms / 86400000).toFixed(1)} days`;
+}
+
+async function loadHistory(
+  repository: string,
+  signal: AbortSignal,
+  current: number,
+) {
+  element("monthly-history").hidden = false;
+  element("history-data").hidden = true;
+  text("history-status", "Loading saved monthly history.");
+  const base = `${import.meta.env.BASE_URL}data/history/`;
+  try {
+    const [seriesResponse, progressResponse] = await Promise.all([
+      fetch(`${base}${repository.toLowerCase().replace("/", "--")}.json`, {
+        signal,
+        credentials: "omit",
+      }),
+      fetch(`${base}index.json`, { signal, credentials: "omit" }),
+    ]);
+    const series = seriesResponse.ok
+      ? parseRepositoryHistory(
+          (await seriesResponse.json()) as unknown,
+          repository,
+        )
+      : null;
+    const progress = progressResponse.ok
+      ? parseCollectionProgress(
+          (await progressResponse.json()) as unknown,
+          repository,
+        )
+      : null;
+    if (current !== generation || signal.aborted) return;
+    const pending = progress
+      ? `Historical backfill in progress: ${progress.enumerated_prs} PRs inspected across all creation dates; ${progress.covered_prs} eligible PRs have complete review and comment streams. ${progress.enumeration_complete ? "Enumeration finished." : "More PR pages remain."} Window: ${progress.window.start.slice(0, 10)}–${progress.window.end.slice(0, 10)} (UTC).${series ? " The previous complete history remains visible." : " Monthly trends will appear after full enumeration and event collection."}`
+      : "";
+    if (!series) {
+      text(
+        "history-status",
+        pending ||
+          "Monthly history is not available yet. Historical collection includes old PRs and can take multiple runs; no GitHub API calls are made from this view.",
+      );
+      return;
+    }
+    text(
+      "history-status",
+      `${pending}${pending ? " " : ""}Complete historical coverage · Observed ${new Date(series.collected_at).toLocaleString()} · Methodology ${series.months[0]!.methodology_version}.`,
+    );
+    text(
+      "history-scope",
+      `${series.window.start.slice(0, 10)}–${series.window.end.slice(0, 10)} (UTC) · ${series.progress.enumerated_prs} PRs inspected, including older PRs · ${series.progress.covered_prs} eligible PRs with complete event streams.${series.collection.events_checked_since ? ` Event streams checked on or after ${new Date(series.collection.events_checked_since).toLocaleString()}.` : ""} Closed-PR reconciliation has a seven-day target; API limits can delay updates. Partial calendar months are labeled below.`,
+    );
+    const bars = element("history-bars");
+    const rows = element("history-rows");
+    bars.replaceChildren();
+    rows.replaceChildren();
+    const maximum = Math.max(
+      1,
+      ...series.months.map((month) => month.review_activity.review_units),
+    );
+    for (const month of series.months) {
+      const start = new Date(month.window.start);
+      const end = new Date(month.window.end);
+      const fullStart = Date.UTC(
+        start.getUTCFullYear(),
+        start.getUTCMonth(),
+        1,
+      );
+      const fullEnd = Date.UTC(
+        start.getUTCFullYear(),
+        start.getUTCMonth() + 1,
+        1,
+      );
+      const partial =
+        start.getTime() !== fullStart || end.getTime() !== fullEnd;
+      const label = `${start.toLocaleDateString(undefined, { month: "short", year: "numeric", timeZone: "UTC" })}${partial ? " (partial)" : ""}`;
+      const units = month.review_activity.review_units;
+      const bar = document.createElement("li");
+      const title = document.createElement("span");
+      title.textContent = `${label}: ${units} review units`;
+      const track = document.createElement("span");
+      track.className = "history-track";
+      track.setAttribute("aria-hidden", "true");
+      const fill = document.createElement("span");
+      fill.style.width = `${(units / maximum) * 100}%`;
+      track.append(fill);
+      bar.append(title, track);
+      bars.append(bar);
+      const row = document.createElement("tr");
+      const window = document.createElement("th");
+      window.scope = "row";
+      window.textContent = `${label} · ${month.window.start.slice(0, 10)}–${month.window.end.slice(0, 10)} (end exclusive)`;
+      row.append(window);
+      for (const value of [
+        String(month.creation_cohort.eligible_prs),
+        String(units),
+        String(month.review_activity.participants),
+        month.first_response.median_ms.value === null
+          ? "Insufficient data"
+          : duration(month.first_response.median_ms.value),
+        `${month.first_response.responded_prs} / ${month.first_response.covered_prs}`,
+      ]) {
+        const cell = document.createElement("td");
+        cell.textContent = value;
+        row.append(cell);
+      }
+      rows.append(row);
+    }
+    element("history-data").hidden = false;
+  } catch {
+    if (current === generation && !signal.aborted)
+      text(
+        "history-status",
+        "Saved monthly history could not be loaded. Try again later; the recent repository results remain available.",
+      );
+  }
 }
 function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   if (displayed?.result.repository.id !== snapshot.result.repository.id)
@@ -359,6 +475,9 @@ async function query(repository: string, refresh = false, allowLive = true) {
   const current = ++generation;
   controller = new AbortController();
   const signal = controller.signal;
+  element("monthly-history").hidden = true;
+  if (savedRepositories.has(normalized.toLowerCase()))
+    void loadHistory(normalized, signal, current);
   input.value = normalized;
   for (const project of document.querySelectorAll<HTMLAnchorElement>(
     "[data-repo]",

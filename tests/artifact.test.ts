@@ -28,6 +28,21 @@ void test("website boundary validates public JSON and rejects source records and
       snapshot,
     );
     assert.match(run().toString(), /validated/);
+    const historyDirectory = join(directory, "history");
+    mkdirSync(historyDirectory);
+    const history = join(historyDirectory, "example--repo.json");
+    copyFileSync(
+      new URL("./fixtures/history-expected.json", import.meta.url),
+      history,
+    );
+    assert.match(run().toString(), /validated/);
+    const historical = JSON.parse(readFileSync(history, "utf8")) as Record<
+      string,
+      unknown
+    >;
+    writeFileSync(history, JSON.stringify({ ...historical, pages: {} }));
+    assert.throws(run, /Invalid repository-history/);
+    rmSync(historyDirectory, { recursive: true });
     const raw = JSON.parse(readFileSync(snapshot, "utf8")) as Record<
       string,
       unknown

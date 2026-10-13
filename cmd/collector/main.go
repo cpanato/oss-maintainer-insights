@@ -1,5 +1,4 @@
 // The collector exposes offline analysis, API probes, and pre-generated public samples.
-// Historical ingestion and checkpoint persistence follow in a later milestone.
 package main
 
 import (
@@ -25,6 +24,9 @@ func run(args []string, input io.Reader, output io.Writer) error {
 }
 
 func runContext(ctx context.Context, args []string, input io.Reader, output io.Writer) error {
+	if len(args) > 0 && args[0] == "history" {
+		return runHistory(ctx, args[1:], output)
+	}
 	if len(args) > 0 && args[0] == "snapshots" {
 		return runSnapshots(ctx, args[1:], output)
 	}
@@ -32,7 +34,7 @@ func runContext(ctx context.Context, args []string, input io.Reader, output io.W
 		return runProbe(ctx, args[1:], output)
 	}
 	if len(args) != 1 || args[0] != "analyze" {
-		return fmt.Errorf("usage: collector analyze < normalized-input.json | collector probe [--requests=10] owner/repo | collector snapshots [--force]")
+		return fmt.Errorf("usage: collector analyze < normalized-input.json | collector probe [--requests=10] owner/repo | collector snapshots [--force] | collector history [--requests=100]")
 	}
 	data, err := io.ReadAll(io.LimitReader(input, 8*1024*1024+1))
 	if err != nil {
