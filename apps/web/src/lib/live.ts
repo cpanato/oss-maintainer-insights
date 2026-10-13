@@ -57,6 +57,13 @@ export interface PublicSnapshot {
     | typeof LEGACY_CATALOG_POLICY
     | typeof BAND_CATALOG_POLICY;
   sample_age?: { oldest_created_at: string; newest_created_at: string };
+  collection?: {
+    mode: "incremental";
+    refreshed_prs: number;
+    reused_prs: number;
+    events_checked_since?: string;
+    reconciliation_interval_days: 7;
+  };
   result: AnalysisResult;
   selection: {
     listed: number;
@@ -95,6 +102,20 @@ export function parsePublicSnapshot(
     snapshot.selection.eligible_on_page > snapshot.selection.listed
   )
     return null;
+  if (snapshot.collection) {
+    const collection = snapshot.collection;
+    const covered = collection.refreshed_prs + collection.reused_prs;
+    if (
+      snapshot.policy !== CATALOG_POLICY ||
+      covered > snapshot.selection.selected ||
+      (snapshot.complete && covered !== snapshot.selection.selected) ||
+      (covered > 0 && !collection.events_checked_since) ||
+      (collection.events_checked_since &&
+        Date.parse(collection.events_checked_since) >
+          Date.parse(snapshot.result.collected_at))
+    )
+      return null;
+  }
   const reviews = snapshot.result.review_activity;
   const response = snapshot.result.first_response;
   if (

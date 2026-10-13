@@ -130,6 +130,14 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
     "author-note",
     `${result.creation_cohort.eligible_prs} eligible PRs in this ${fullWindow ? "creation window" : "sample"}`,
   );
+  element("event-freshness").hidden = !snapshot.collection;
+  if (snapshot.collection) {
+    const collection = snapshot.collection;
+    text(
+      "event-freshness",
+      `Incremental collection: ${collection.refreshed_prs} PRs revalidated for this window; ${collection.reused_prs} unchanged closed PRs reused.${collection.events_checked_since ? ` Event streams last checked on or after ${new Date(collection.events_checked_since).toLocaleString()}.` : ""} Open or changed PRs are revalidated; closed PRs have a ${collection.reconciliation_interval_days}-day reconciliation target. API limits can delay updates. Population coverage and event freshness are separate.`,
+    );
+  }
   text(
     "reviewers",
     reviews.coverage === "unavailable" ? "—" : String(reviews.participants),

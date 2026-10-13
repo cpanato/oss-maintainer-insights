@@ -159,3 +159,7 @@ Methodology 1.1.0 adds observed human Prow review commands across repositories, 
 ### Publication revision guards
 
 Snapshot runs record the exact data commit restored before collection. Publication requires unchanged source and data revisions and an exact push lease; newer manually merged datasets and concurrent writers are preserved. Pages validates artifact source/data revisions again immediately before deployment. Ref checks use Git transport, and offline tests cover concurrent data updates, source advances, cold starts, and unchanged reruns. Incremental queues and monthly historical ingestion remain the next ordered implementation stages.
+
+### Incremental creation-cohort collection
+
+Version-3 private checkpoints track PR update metadata and event-check time while retaining version-2 read compatibility. Scheduled Go collection reuses unchanged closed event streams, refreshes new/changed/open PRs, and targets seven-day closed-PR reconciliation. The current creation cohort is enumerated on every refresh; no PR population cap is introduced. A persisted rotating project queue prevents fixed-order starvation under a shared rate limit. Public collection metadata and the UI disclose event age and cache reuse independently of population coverage. Monthly historical review windows, including reviews on older PRs, remain the next implementation stage.

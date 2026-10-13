@@ -53,3 +53,25 @@ void test("public snapshots validate aggregates and reject internal records or i
     null,
   );
 });
+
+void test("incremental snapshots distinguish event freshness and reject contradictory collection metadata", () => {
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("./fixtures/incremental-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  assert.ok(saved);
+  assert.equal(saved.collection?.reused_prs, 18);
+  for (const collection of [
+    { ...saved.collection, refreshed_prs: 99 },
+    { ...saved.collection, events_checked_since: "2026-10-13T12:00:00Z" },
+    { ...saved.collection, refreshed_prs: 0 },
+    { ...saved.collection, events_checked_since: undefined },
+  ])
+    assert.equal(
+      parsePublicSnapshot({ ...saved, collection }, "example/repo"),
+      null,
+    );
+});
