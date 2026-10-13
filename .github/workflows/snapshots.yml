@@ -40,6 +40,8 @@ jobs:
     if: github.repository == 'cpanato/oss-maintainer-insights'
     runs-on: ubuntu-latest
     timeout-minutes: 95
+    outputs:
+      data-base-revision: ${{ steps.restore.outputs.revision }}
 
     permissions:
       contents: read
@@ -57,6 +59,7 @@ jobs:
           cache: false
 
       - name: Restore saved data and checkpoints from the data branch
+        id: restore
         if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -66,14 +69,19 @@ jobs:
           set -euo pipefail
           shopt -s nullglob
           mkdir -p generated-data .cache/snapshots .data-source
-          existing=$(gh api "repos/$GH_REPO/git/matching-refs/heads/data" --jq '.[] | select(.ref == "refs/heads/data") | .ref')
-          if [[ -n "$existing" ]]; then
-            git -c credential.helper='!gh auth git-credential' fetch "https://github.com/$GH_REPO.git" data:refs/remotes/origin/data
-            git archive refs/remotes/origin/data | tar -x -C .data-source
+          source scripts/snapshot-publication-common.sh
+          snapshot_read_refs
+          if [[ -n "$snapshot_data" ]]; then
+            snapshot_git fetch "$snapshot_remote" refs/heads/data
+            revision=$(git rev-parse FETCH_HEAD)
+            snapshot_output revision "$revision"
+            git archive "$revision" | tar -x -C .data-source
             samples=(.data-source/snapshots/*.json)
             if (( ${#samples[@]} )); then cp "${samples[@]}" generated-data/; fi
             checkpoints=(.data-source/checkpoints/*.json)
             if (( ${#checkpoints[@]} )); then cp "${checkpoints[@]}" .cache/snapshots/; fi
+          else
+            snapshot_output revision ''
           fi
 
       - name: Collect bounded public samples in Go
@@ -144,35 +152,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           SOURCE_REVISION: ${{ github.sha }}
+          DATA_BASE_REVISION: ${{ needs.collect.outputs.data-base-revision }}
         shell: bash
         run: |
-          set -euo pipefail
-          current_main=$(gh api "repos/$GH_REPO/git/ref/heads/main" --jq .object.sha)
-          if [[ "$current_main" != "$SOURCE_REVISION" ]]; then
-            printf 'current=false\n' >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          worktree=$(mktemp -d "$RUNNER_TEMP/snapshot-data.XXXXXX")
-          existing=$(gh api "repos/$GH_REPO/git/matching-refs/heads/data" --jq '.[] | select(.ref == "refs/heads/data") | .ref')
-          if [[ -n "$existing" ]]; then
-            git -c credential.helper='!gh auth git-credential' fetch "https://github.com/$GH_REPO.git" data:refs/remotes/origin/data
-            git worktree add --detach "$worktree" refs/remotes/origin/data
-          else
-            git worktree add --detach "$worktree" "$SOURCE_REVISION"
-            git -C "$worktree" switch --orphan data
-          fi
-          mkdir -p .cache/snapshots "$worktree/snapshots" "$worktree/checkpoints"
-          rsync -a --delete generated-data/ "$worktree/snapshots/"
-          rsync -a --delete .cache/snapshots/ "$worktree/checkpoints/"
-          printf '%s\n' "$SOURCE_REVISION" > "$worktree/source-revision.txt"
-          git -C "$worktree" config user.name 'github-actions[bot]'
-          git -C "$worktree" config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git -C "$worktree" add snapshots checkpoints source-revision.txt
-          if ! git -C "$worktree" diff --cached --quiet; then
-            git -C "$worktree" -c commit.gpgsign=false commit -m 'data: refresh bounded repository samples'
-            git -C "$worktree" -c credential.helper='!gh auth git-credential' push "https://github.com/$GH_REPO.git" HEAD:refs/heads/data
-          fi
-          printf 'revision=%s\ncurrent=true\n' "$(git -C "$worktree" rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          bash scripts/publish-snapshots.sh
 
   build-pages:
     name: Build Pages with public snapshots
@@ -221,7 +204,7 @@ jobs:
 
   deploy-pages:
     name: Deploy GitHub Pages
-    needs: build-pages
+    needs: [build-pages, publish-data]
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment:
@@ -229,13 +212,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     permissions:
+      contents: read # Read the revision guard script from the source build.
       pages: write # Publish the validated public website artifact.
       id-token: write # Authenticate the default-branch Pages deployment.
 
     steps:
+      - name: Checkout source revision
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
       - name: Verify Pages configuration
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
 
+      - name: Reject superseded source or data revisions
+        id: guard
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_REVISION: ${{ github.sha }}
+          DATA_REVISION: ${{ needs.publish-data.outputs.revision }}
+        run: bash scripts/check-snapshot-revisions.sh
+
       - name: Deploy public website
         id: deployment
+        if: steps.guard.outputs.current == 'true'
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
