@@ -251,6 +251,17 @@ const projects = catalog.map((entry) => {
               Prow commands count once.
             </p>
             <p id="review-sources" class="muted"></p>
+            <div id="review-controls" class="review-controls" hidden>
+              <label for="review-page-size">Participants per page</label>
+              <select
+                id="review-page-size"
+                aria-controls="distribution review-table"
+              >
+                {[10, 20, 50, 100, 200].map((size) => (
+                  <option value={size}>{size}</option>
+                ))}
+              </select>
+            </div>
             <div
               id="distribution"
               class="distribution"
@@ -302,6 +313,36 @@ const projects = catalog.map((entry) => {
                 <tbody id="review-table"></tbody>
               </table>
             </div>
+            <nav
+              id="review-pagination"
+              class="review-pagination"
+              aria-label="Review participation pagination"
+              hidden
+            >
+              <p
+                id="review-page-summary"
+                aria-live="polite"
+                aria-atomic="true"
+              ></p>
+              <div class="review-page-buttons">
+                <button
+                  id="review-previous"
+                  type="button"
+                  class="secondary"
+                  aria-controls="distribution review-table"
+                >
+                  Previous
+                </button>
+                <button
+                  id="review-next"
+                  type="button"
+                  class="secondary"
+                  aria-controls="distribution review-table"
+                >
+                  Next
+                </button>
+              </div>
+            </nav>
             <p id="distribution-empty" hidden>
               No qualifying reviews across the covered PRs.
             </p>
