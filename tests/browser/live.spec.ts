@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import type { Page, Route } from "@playwright/test";
 import reviewedCatalog from "../../catalog/repositories.json" with { type: "json" };
+import historicalFixture from "../fixtures/history-expected.json" with { type: "json" };
 
 const headers = {
   "access-control-allow-origin": "*",
@@ -10,6 +11,119 @@ const headers = {
   "x-ratelimit-remaining": "55",
   "x-ratelimit-limit": "60",
 };
+
+test("saved monthly trends include old PR review activity and accessible partial-month tables", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  const history = structuredClone(historicalFixture);
+  history.repository.full_name = "kubernetes/kubernetes";
+  for (const month of history.months)
+    month.repository.full_name = "kubernetes/kubernetes";
+  await page.route("**/data/history/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ json: history }),
+  );
+  await page.route("**/data/history/index.json", (route) =>
+    route.fulfill({ status: 404 }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  const section = page.getByRole("region", { name: "Monthly trends" });
+  await expect(section).toBeVisible();
+  await expect(section).toContainText("Complete historical coverage");
+  await expect(section).toContainText("including older PRs");
+  await expect(section.getByRole("listitem")).toHaveCount(4);
+  await expect(section.getByRole("row")).toHaveCount(5);
+  await expect(
+    section.getByRole("listitem").filter({ hasText: "(partial)" }),
+  ).toHaveCount(2);
+  await expect(section.getByRole("row").nth(2)).toContainText("Aug");
+  await expect(
+    section.getByRole("row").nth(2).getByRole("cell").nth(0),
+  ).toHaveText("0");
+  await expect(
+    section.getByRole("row").nth(2).getByRole("cell").nth(1),
+  ).toHaveText("1");
+  await page.setViewportSize({ width: 390, height: 844 });
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth + 1,
+    ),
+  ).toBe(true);
+  expect(calls).toEqual([]);
+});
+
+test("pending historical coverage shows the exhaustive backlog without an automatic live query", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  await page.route("**/data/history/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ status: 404 }),
+  );
+  await page.route("**/data/history/index.json", (route) =>
+    route.fulfill({
+      json: {
+        schema_version: 1,
+        attempted_at: "2026-10-13T00:00:00Z",
+        entries: [
+          {
+            repository: "kubernetes/kubernetes",
+            status: "pending",
+            requests: 100,
+            progress: {
+              window: historicalFixture.window,
+              enumerated_prs: 31,
+              eligible_prs: 30,
+              covered_prs: 30,
+              enumeration_complete: false,
+            },
+          },
+        ],
+      },
+    }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect(page.locator("#history-status")).toContainText(
+    "Historical backfill in progress: 31 PRs inspected across all creation dates",
+  );
+  await expect(page.locator("#history-status")).toContainText(
+    "Monthly trends will appear after full enumeration",
+  );
+  await expect(page.locator("#history-data")).toBeHidden();
+  expect(calls).toEqual([]);
+});
+
+test("a delayed history response cannot replace another project's historical state", async ({
+  page,
+}) => {
+  await fixture(page);
+  let delayed: Route | null = null;
+  await page.route("**/data/history/index.json", (route) =>
+    route.fulfill({ status: 404 }),
+  );
+  await page.route("**/data/history/kubernetes--kubernetes.json", (route) => {
+    delayed = route;
+  });
+  await page.route("**/data/history/sigstore--cosign.json", (route) =>
+    route.fulfill({ status: 404 }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect.poll(() => delayed !== null).toBe(true);
+  await page
+    .getByRole("link", {
+      name: "Explore saved data for sigstore/cosign",
+      exact: true,
+    })
+    .click();
+  await expect(page.locator("#history-status")).toContainText(
+    "Monthly history is not available yet",
+  );
+  const route = delayed as Route | null;
+  await route?.fulfill({ json: historicalFixture }).catch(() => {});
+  await expect(page.locator("#history-data")).toBeHidden();
+  await expect(page.locator("#history-status")).toContainText(
+    "Monthly history is not available yet",
+  );
+});
 const created = new Date(Date.now() - 2 * 86400000).toISOString();
 const responded = new Date(Date.parse(created) + 3600000).toISOString();
 const account = (id: number) => ({ id, login: `person-${id}`, type: "User" });

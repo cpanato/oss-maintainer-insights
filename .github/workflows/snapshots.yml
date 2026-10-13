@@ -39,7 +39,7 @@ jobs:
     name: Generate saved repository samples
     if: github.repository == 'cpanato/oss-maintainer-insights'
     runs-on: ubuntu-latest
-    timeout-minutes: 95
+    timeout-minutes: 105 # 90-minute cohort deadline, five-minute history, and setup/artifact margin.
     outputs:
       data-base-revision: ${{ steps.restore.outputs.revision }}
 
@@ -67,7 +67,6 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          shopt -s nullglob
           mkdir -p generated-data .cache/snapshots .data-source
           source scripts/snapshot-publication-common.sh
           snapshot_read_refs
@@ -76,10 +75,8 @@ jobs:
             revision=$(git rev-parse FETCH_HEAD)
             snapshot_output revision "$revision"
             git archive "$revision" | tar -x -C .data-source
-            samples=(.data-source/snapshots/*.json)
-            if (( ${#samples[@]} )); then cp "${samples[@]}" generated-data/; fi
-            checkpoints=(.data-source/checkpoints/*.json)
-            if (( ${#checkpoints[@]} )); then cp "${checkpoints[@]}" .cache/snapshots/; fi
+            if [[ -d .data-source/snapshots ]]; then cp -a .data-source/snapshots/. generated-data/; fi
+            if [[ -d .data-source/checkpoints ]]; then cp -a .data-source/checkpoints/. .cache/snapshots/; fi
           else
             snapshot_output revision ''
           fi
@@ -96,6 +93,12 @@ jobs:
             flags+=(--force)
           fi
           go run ./cmd/collector snapshots --output generated-data --state .cache/snapshots "${flags[@]}"
+
+      - name: Resume historical review backfill in Go
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        # A separate small budget leaves current creation cohorts first priority.
+        run: go run ./cmd/collector history --output generated-data/history --state .cache/snapshots/history --requests=100
 
       - name: Upload public aggregate samples
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

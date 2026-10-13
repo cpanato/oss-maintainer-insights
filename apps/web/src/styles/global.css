@@ -758,6 +758,30 @@ footer {
   color: var(--muted);
 }
 
+.history-bars {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+.history-bars li {
+  display: grid;
+  gap: 0.4rem;
+}
+.history-track {
+  height: 0.8rem;
+  background: var(--line);
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.history-track > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+#monthly-history {
+  margin-block: 2rem;
+}
 .table-scroll {
   max-width: 100%;
   overflow-x: auto;

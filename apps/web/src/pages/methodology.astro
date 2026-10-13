@@ -74,9 +74,11 @@ const base = import.meta.env.BASE_URL;
         <p>
           This covers PRs created in the window, not every review performed in
           the repository: reviews on older PRs are outside the cohort. GitHub
-          pagination is not an atomic historical snapshot. Monthly historical
-          series and reconciliation remain future work. The UI shows window
-          dates, collection age, coverage, and pending collection progress.
+          pagination is not an atomic historical snapshot. A separate historical
+          collector scans PRs of every creation age for monthly review activity.
+          Monthly series appear after exhaustive event collection, and partial
+          calendar months show their exact UTC dates. The UI shows window dates,
+          collection age, coverage, and pending collection progress.
         </p>
       </section>
       <section class="panel">
@@ -136,8 +138,9 @@ const base = import.meta.env.BASE_URL;
           Browser queries are unauthenticated and contain no credentials.
           Comment bodies and PR titles are not retained in the analysis or
           cache. Unknown automation and changes to current review states are
-          limitations. Historical trends and a reviewed repository catalog are
-          planned separately.
+          limitations. Saved monthly trends include reviews on older PRs and
+          expose collection progress and event-check age. Reconciliation can
+          revise past months when qualifying source states change.
         </p>
         <p>
           <a href="https://github.com/cpanato/oss-maintainer-insights/blob/main/docs/methodology.md">
