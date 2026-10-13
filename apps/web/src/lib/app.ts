@@ -39,6 +39,9 @@ const cache = new LiveCache(storage);
 let controller: AbortController | null = null;
 let generation = 0;
 let displayed: PublicSnapshot | null = null;
+let reviewPage = 1;
+let reviewPageSize = 10;
+const reviewPageSizes = [10, 20, 50, 100, 200];
 const labels: Record<string, string> = {
   invalid_input:
     "Enter owner/repository or a public github.com repository URL.",
@@ -73,6 +76,8 @@ function duration(ms: number): string {
   return `${(ms / 86400000).toFixed(1)} days`;
 }
 function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
+  if (displayed?.result.repository.id !== snapshot.result.repository.id)
+    reviewPage = 1;
   displayed = snapshot;
   const { result, selection } = snapshot;
   const catalogSample = [
@@ -168,51 +173,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
     "review-sources",
     `${sources.github_review_units} GitHub review units · ${sources.prow_command_units} Prow command units. Pairs appearing in both sources count once in the total.${result.methodology_version === "1.0.0" ? " Legacy snapshot: Prow commands were not included." : ""}`,
   );
-  const bars = element("distribution");
-  const table = element("review-table");
-  bars.replaceChildren();
-  table.replaceChildren();
-  for (const item of reviews.distribution) {
-    const share = item.review_units / reviews.review_units;
-    const bar = document.createElement("div");
-    bar.className = "bar-row";
-    const name = document.createElement("span");
-    name.textContent = item.actor.login;
-    const track = document.createElement("div");
-    track.className = "bar-track";
-    const fill = document.createElement("div");
-    fill.className = "bar-fill";
-    fill.style.width = `${share * 100}%`;
-    const percent = document.createElement("span");
-    percent.textContent = `${Math.round(share * 100)}%`;
-    track.append(fill);
-    bar.append(name, track, percent);
-    bars.append(bar);
-    const row = document.createElement("tr");
-    const account = document.createElement("td");
-    const link = document.createElement("a");
-    link.href = `https://github.com/${encodeURIComponent(item.actor.login)}`;
-    link.textContent = item.actor.login;
-    account.append(link);
-    row.append(account);
-    for (const value of [
-      String(item.review_units),
-      `GitHub: ${item.sources?.github_review_units ?? item.review_units} · Prow: ${item.sources?.prow_command_units ?? 0}`,
-      `${(share * 100).toFixed(1)}%`,
-    ]) {
-      const cell = document.createElement("td");
-      cell.textContent = value;
-      row.append(cell);
-    }
-    table.append(row);
-  }
-  element("distribution-empty").hidden = reviews.distribution.length > 0;
-  text(
-    "distribution-empty",
-    reviews.coverage === "unavailable"
-      ? "Review data is unavailable for this sample."
-      : "No qualifying reviews in the covered sample.",
-  );
+  renderReviewPage();
   const coverage = element("coverage");
   coverage.replaceChildren();
   for (const [name, value] of [
@@ -285,6 +246,92 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
     outcomes.append(item);
   }
 }
+function renderReviewPage() {
+  if (!displayed) return;
+  const reviews = displayed.result.review_activity;
+  const count = reviews.distribution.length;
+  const pages = Math.max(1, Math.ceil(count / reviewPageSize));
+  reviewPage = Math.min(reviewPage, pages);
+  const start = (reviewPage - 1) * reviewPageSize;
+  element("review-controls").hidden = count === 0;
+  element("review-pagination").hidden = count === 0;
+  text(
+    "review-page-summary",
+    `Showing ${count ? start + 1 : 0}–${Math.min(start + reviewPageSize, count)} of ${count} participants · Page ${reviewPage} of ${pages}`,
+  );
+  element<HTMLButtonElement>("review-previous").disabled = reviewPage === 1;
+  element<HTMLButtonElement>("review-next").disabled = reviewPage === pages;
+  const bars = element("distribution");
+  const table = element("review-table");
+  bars.replaceChildren();
+  table.replaceChildren();
+  for (const item of reviews.distribution.slice(
+    start,
+    start + reviewPageSize,
+  )) {
+    const share = item.review_units / reviews.review_units;
+    const bar = document.createElement("div");
+    bar.className = "bar-row";
+    const name = document.createElement("span");
+    name.textContent = item.actor.login;
+    const track = document.createElement("div");
+    track.className = "bar-track";
+    const fill = document.createElement("div");
+    fill.className = "bar-fill";
+    fill.style.width = `${share * 100}%`;
+    const percent = document.createElement("span");
+    percent.textContent = `${Math.round(share * 100)}%`;
+    track.append(fill);
+    bar.append(name, track, percent);
+    bars.append(bar);
+    const row = document.createElement("tr");
+    const account = document.createElement("td");
+    const link = document.createElement("a");
+    link.href = `https://github.com/${encodeURIComponent(item.actor.login)}`;
+    link.textContent = item.actor.login;
+    account.append(link);
+    row.append(account);
+    for (const value of [
+      String(item.review_units),
+      `GitHub: ${item.sources?.github_review_units ?? item.review_units} · Prow: ${item.sources?.prow_command_units ?? 0}`,
+      `${(share * 100).toFixed(1)}%`,
+    ]) {
+      const cell = document.createElement("td");
+      cell.textContent = value;
+      row.append(cell);
+    }
+    table.append(row);
+  }
+  element("distribution-empty").hidden = reviews.distribution.length > 0;
+  text(
+    "distribution-empty",
+    reviews.coverage === "unavailable"
+      ? "Review data is unavailable for this sample."
+      : "No qualifying reviews in the covered sample.",
+  );
+}
+element<HTMLSelectElement>("review-page-size").addEventListener(
+  "change",
+  (event) => {
+    const size = Number((event.currentTarget as HTMLSelectElement).value);
+    reviewPageSize = reviewPageSizes.includes(size) ? size : 10;
+    reviewPage = 1;
+    renderReviewPage();
+  },
+);
+element("review-previous").addEventListener("click", () => {
+  reviewPage = Math.max(1, reviewPage - 1);
+  renderReviewPage();
+});
+element("review-next").addEventListener("click", () => {
+  if (
+    displayed &&
+    reviewPage * reviewPageSize <
+      displayed.result.review_activity.distribution.length
+  )
+    reviewPage++;
+  renderReviewPage();
+});
 function busy(value: boolean) {
   element<HTMLButtonElement>("inspect").disabled = value;
   element<HTMLButtonElement>("refresh").disabled = value;

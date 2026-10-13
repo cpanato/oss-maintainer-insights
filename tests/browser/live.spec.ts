@@ -209,6 +209,8 @@ test("empty successful enumeration has complete sample coverage and insufficient
   );
   await expect(page.locator("#response")).toHaveText("—");
   await expect(page.locator("#coverage")).toContainText("0/0");
+  await expect(page.locator("#review-controls")).toBeHidden();
+  await expect(page.locator("#review-pagination")).toBeHidden();
   expect(calls).toHaveLength(2);
 });
 for (const status of [403, 429]) {
@@ -732,4 +734,147 @@ test("saved catalog results take priority over a cached smaller live query", asy
     "21 eligible PRs",
   );
   expect(calls).toHaveLength(7);
+});
+
+async function paginatedSavedFixture(
+  page: Page,
+  repository: string,
+  participants: number,
+) {
+  const { readFileSync } = await import("node:fs");
+  const { parsePublicSnapshot } =
+    await import("../../apps/web/src/lib/live.js");
+  const raw: unknown = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/catalog-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  const saved = parsePublicSnapshot(raw, "example/repo")!;
+  saved.result.repository = {
+    id: repository === "kubernetes/kubernetes" ? 42 : 43,
+    full_name: repository,
+  };
+  const reviews = saved.result.review_activity;
+  reviews.participants = participants;
+  reviews.review_units = participants;
+  reviews.sources = {
+    github_review_units: participants,
+    prow_command_units: 0,
+  };
+  reviews.distribution = Array.from({ length: participants }, (_, index) => ({
+    actor: {
+      id: index + 100,
+      login: `reviewer-${String(index + 1).padStart(3, "0")}`,
+      type: "User",
+    },
+    review_units: 1,
+    sources: { github_review_units: 1, prow_command_units: 0 },
+  }));
+  reviews.concentration_80 = {
+    value: Math.ceil(participants * 0.8),
+    status: "available",
+  };
+  reviews.largest_reviewer_share = {
+    value: 1 / participants,
+    status: "available",
+  };
+  expect(parsePublicSnapshot(saved, repository)).not.toBeNull();
+  await page.route(`**/data/${repository.replace("/", "--")}.json`, (route) =>
+    route.fulfill({ json: saved }),
+  );
+}
+
+test("review activity paginates bars and rows without changing totals or fetching GitHub", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  await paginatedSavedFixture(page, "kubernetes/kubernetes", 205);
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect(page.getByRole("status")).toContainText("No GitHub API calls");
+  const rows = page.locator("#review-table tr");
+  const size = page.getByLabel("Participants per page");
+  const next = page.getByRole("button", { name: "Next", exact: true });
+  const previous = page.getByRole("button", { name: "Previous", exact: true });
+  await expect(size).toHaveValue("10");
+  await expect(size.locator("option")).toHaveText([
+    "10",
+    "20",
+    "50",
+    "100",
+    "200",
+  ]);
+  await expect(rows).toHaveCount(10);
+  await expect(page.locator("#distribution .bar-row")).toHaveCount(10);
+  await expect(page.locator("#review-page-summary")).toHaveText(
+    "Showing 1–10 of 205 participants · Page 1 of 21",
+  );
+  await expect(previous).toBeDisabled();
+  await next.click();
+  await expect(rows.first()).toContainText("reviewer-011");
+  await expect(page.locator("#review-page-summary")).toContainText(
+    "Page 2 of 21",
+  );
+  for (const value of ["20", "50", "100", "200"]) {
+    await size.selectOption(value);
+    await expect(rows).toHaveCount(Number(value));
+    await expect(page.locator("#distribution .bar-row")).toHaveCount(
+      Number(value),
+    );
+    await expect(rows.first()).toContainText("reviewer-001");
+    await expect(previous).toBeDisabled();
+  }
+  await next.click();
+  await expect(rows).toHaveCount(5);
+  await expect(page.locator("#distribution .bar-row")).toHaveCount(5);
+  await expect(page.locator("#review-page-summary")).toHaveText(
+    "Showing 201–205 of 205 participants · Page 2 of 2",
+  );
+  await expect(rows.first()).toContainText("reviewer-201");
+  await expect(rows.last()).toContainText("reviewer-205");
+  await expect(next).toBeDisabled();
+  await expect(rows.first()).toContainText("0.5%");
+  await expect(page.locator("#reviewers")).toHaveText("205");
+  await expect(page.locator("#review-units")).toHaveText("205 review units");
+  await previous.click();
+  await expect(rows.first()).toContainText("reviewer-001");
+  await size.selectOption("10");
+  await expect(rows).toHaveCount(10);
+  expect(calls).toEqual([]);
+});
+
+test("review pagination resets on repository changes and works on mobile", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  await paginatedSavedFixture(page, "kubernetes/kubernetes", 25);
+  await paginatedSavedFixture(page, "helm/helm", 3);
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await page.getByRole("button", { name: "Next", exact: true }).click();
+  await expect(page.locator("#review-page-summary")).toContainText(
+    "Page 2 of 3",
+  );
+  await page
+    .getByRole("link", {
+      name: "Explore saved data for helm/helm",
+      exact: true,
+    })
+    .click();
+  await expect(page.locator("#review-page-summary")).toHaveText(
+    "Showing 1–3 of 3 participants · Page 1 of 1",
+  );
+  await expect(page.locator("#review-table tr")).toHaveCount(3);
+  await expect(
+    page.getByRole("button", { name: "Next", exact: true }),
+  ).toBeDisabled();
+  await expect(
+    page.getByRole("button", { name: "Previous", exact: true }),
+  ).toBeDisabled();
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+  expect(calls).toEqual([]);
 });

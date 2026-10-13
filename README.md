@@ -24,6 +24,8 @@ npx playwright install chromium
 npm run test:browser
 ```
 
+Review activity shows 10 participants per page by default, with 10, 20, 50, 100, and 200 available. Pagination changes only the visible rows and bars; totals and shares use the entire collected dataset and page changes make no API requests.
+
 Go checks (see [CI practices](docs/ci.md) for the full list):
 
 ```sh
