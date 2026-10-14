@@ -93,7 +93,7 @@ func runHistory(ctx context.Context, args []string, output io.Writer) error {
 		}
 		policy := github.DefaultPolicy()
 		policy.MaxRequests = *requests
-		policy.MinimumRemaining = 100
+		policy.MinimumRemaining = 250
 		policy.MaxWait = *maxWait
 		options := github.Options{Policy: policy, Token: os.Getenv("GITHUB_TOKEN")}
 		if *useCLI {

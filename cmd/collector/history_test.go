@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"testing"
 	"time"
@@ -86,5 +87,31 @@ func TestHistoricalCLIResumesPublishesOnlyCompleteAggregatesAndPreservesThemOnFa
 	var report manifest
 	if err := readJSON(filepath.Join(public, "index.json"), &report); err != nil || report.Entries[0].Status != "preserved" {
 		t.Fatal("missing preserved-data status")
+	}
+}
+
+func TestHistoryReservesPublicationQuota(t *testing.T) {
+	directory := t.TempDir()
+	catalog := filepath.Join(directory, "catalog.json")
+	if err := os.WriteFile(catalog, []byte(`[{"repository":"example/repo"}]`), 0o600); err != nil {
+		t.Fatal(err)
+	}
+	previous := http.DefaultClient
+	defer func() { http.DefaultClient = previous }()
+	calls := 0
+	http.DefaultClient = &http.Client{Transport: snapshotTransport(func(_ *http.Request) (*http.Response, error) {
+		calls++
+		return &http.Response{StatusCode: 200, Header: http.Header{"X-Ratelimit-Remaining": []string{"250"}, "X-Ratelimit-Reset": []string{strconv.FormatInt(time.Now().Add(time.Hour).Unix(), 10)}}, Body: io.NopCloser(strings.NewReader(`{"id":42,"full_name":"example/repo","private":false}`))}, nil
+	})}
+	var output bytes.Buffer
+	if err := run([]string{"history", "--catalog", catalog, "--output", filepath.Join(directory, "public"), "--state", filepath.Join(directory, "state")}, strings.NewReader(""), &output); err != nil {
+		t.Fatal(err)
+	}
+	var report manifest
+	if err := json.Unmarshal(output.Bytes(), &report); err != nil {
+		t.Fatal(err)
+	}
+	if calls != 1 || len(report.Entries) != 1 || report.Entries[0].Status != "pending" || report.Entries[0].Reason != "rate_limit" {
+		t.Fatalf("history consumed publication reserve: calls=%d report=%+v", calls, report)
 	}
 }
