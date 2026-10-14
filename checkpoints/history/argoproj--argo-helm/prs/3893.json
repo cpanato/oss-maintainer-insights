@@ -16,26 +16,194 @@
     "merged_at": "2026-05-15T15:22:54Z"
   },
   "state": {
+    "tracked_prs": {
+      "3893": {
+        "id": 3676262200,
+        "updated_at": "2026-05-15T15:22:54Z",
+        "checked_at": "2026-10-13T16:16:02Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.1.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-helm",
-    "pages": {}
+    "pages": {
+      "/repositories/106481151/issues/3893/comments?per_page=100": {
+        "etag": "W/\"cb2f1f7e5b0afaaca73ba477448354f5ecc4a4525dcf495833524f99fe64cfe6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4457730535,
+            "user": {
+              "id": 203651076,
+              "login": "Pradesh-S",
+              "type": "User"
+            },
+            "created_at": "2026-05-15T07:05:34Z"
+          }
+        ]
+      },
+      "/repositories/106481151/pulls/3893/comments?per_page=100": {
+        "etag": "W/\"0e4366ec4bd9ca0c3db28e09074ab8ae9d4618d59afd2379af418f8336ddeabd\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3234562262,
+            "user": {
+              "id": 30188755,
+              "login": "yu-croco",
+              "type": "User"
+            },
+            "created_at": "2026-05-13T13:20:30Z"
+          },
+          {
+            "id": 3235181853,
+            "user": {
+              "id": 203651076,
+              "login": "Pradesh-S",
+              "type": "User"
+            },
+            "created_at": "2026-05-13T14:45:53Z"
+          }
+        ]
+      },
+      "/repositories/106481151/pulls/3893/reviews?per_page=100": {
+        "etag": "W/\"16e9ac0f2e17be7d48dcd9a61b9eb72f7bae6ab7826281ccc6fe3df4ede0cbf1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4282006489,
+            "user": {
+              "id": 30188755,
+              "login": "yu-croco",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-13T13:20:30Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4282735066,
+            "user": {
+              "id": 203651076,
+              "login": "Pradesh-S",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-13T14:45:53Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4288542367,
+            "user": {
+              "id": 30188755,
+              "login": "yu-croco",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-14T08:39:49Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4299295462,
+            "user": {
+              "id": 7290987,
+              "login": "mkilchhofer",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-15T15:22:22Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3676262200,
+    "author": {
+      "id": 203651076,
+      "login": "Pradesh-S",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-05-13T12:53:14Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4282006489",
+        "actor": {
+          "id": 30188755,
+          "login": "yu-croco",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T13:20:30Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4282735066",
+        "actor": {
+          "id": 203651076,
+          "login": "Pradesh-S",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T14:45:53Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4288542367",
+        "actor": {
+          "id": 30188755,
+          "login": "yu-croco",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-14T08:39:49Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4299295462",
+        "actor": {
+          "id": 7290987,
+          "login": "mkilchhofer",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-15T15:22:22Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4457730535",
+        "actor": {
+          "id": 203651076,
+          "login": "Pradesh-S",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-15T07:05:34Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3234562262",
+        "actor": {
+          "id": 30188755,
+          "login": "yu-croco",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T13:20:30Z"
+      },
+      {
+        "id": "3235181853",
+        "actor": {
+          "id": 203651076,
+          "login": "Pradesh-S",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T14:45:53Z"
+      }
+    ]
   }
 }
