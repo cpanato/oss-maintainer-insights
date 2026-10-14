@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T07:27:04Z",
+    "updated_at": "2026-10-14T18:48:13Z",
     "id": 4839863353,
     "number": 32744,
     "user": {
@@ -12,38 +12,62 @@
     },
     "created_at": "2026-10-13T07:26:53Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-14T13:26:28Z"
   },
   "state": {
     "tracked_prs": {
       "32744": {
         "id": 4839863353,
-        "updated_at": "2026-10-13T07:27:04Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T18:48:13Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 43723161,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
     "pages": {
       "/repositories/43723161/issues/32744/comments?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"f78eb0434ed1e1f4ed829d2e93ae38b6ebb08858875964e11fb78124865b21db\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6169448285,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T13:26:35Z"
+          }
+        ]
       },
       "/repositories/43723161/pulls/32744/comments?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "\"7ca5b01e2cd0f50f296e5a93227a71b942c1916554ce60d6ba2c3406de7949f8\"",
         "next": "",
         "value": []
       },
       "/repositories/43723161/pulls/32744/reviews?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"55ffc2ccf2393d5fef471221df8798f35aca3bfbe9bd1a00c2d1f6a6ce3aa2ca\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 5518629571,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T13:26:18Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -56,14 +80,38 @@
     },
     "created_at": "2026-10-13T07:26:53Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
-    "issue_comments": [],
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "5518629571",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T13:26:18Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6169448285",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T13:26:35Z"
+      }
+    ],
     "review_comments": []
   }
 }
