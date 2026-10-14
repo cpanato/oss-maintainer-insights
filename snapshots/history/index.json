@@ -1,32 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-14T15:12:29Z",
+  "attempted_at": "2026-10-14T15:28:19Z",
   "entries": [
-    {
-      "repository": "helm/helm",
-      "status": "pending",
-      "reason": "rate_limit",
-      "requests": 1,
-      "progress": {
-        "population": {
-          "inspected_prs": 0,
-          "human_authored_prs": 0,
-          "bot_authored_prs": 0,
-          "draft_prs": 0,
-          "missing_author_prs": 0,
-          "outside_window_prs": 0,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-07-16T15:12:29Z",
-          "end": "2026-10-14T15:12:29Z"
-        },
-        "enumerated_prs": 0,
-        "eligible_prs": 0,
-        "covered_prs": 0,
-        "enumeration_complete": false
-      }
-    },
     {
       "repository": "cert-manager/cert-manager",
       "status": "pending",
@@ -209,6 +184,31 @@
     },
     {
       "repository": "prometheus/prometheus",
+      "status": "pending",
+      "reason": "rate_limit",
+      "requests": 1,
+      "progress": {
+        "population": {
+          "inspected_prs": 0,
+          "human_authored_prs": 0,
+          "bot_authored_prs": 0,
+          "draft_prs": 0,
+          "missing_author_prs": 0,
+          "outside_window_prs": 0,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-07-16T15:12:29Z",
+          "end": "2026-10-14T15:12:29Z"
+        },
+        "enumerated_prs": 0,
+        "eligible_prs": 0,
+        "covered_prs": 0,
+        "enumeration_complete": false
+      }
+    },
+    {
+      "repository": "helm/helm",
       "status": "pending",
       "reason": "rate_limit",
       "requests": 1,
