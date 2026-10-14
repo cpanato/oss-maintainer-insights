@@ -16,12 +16,40 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "32612": {
+        "id": 4415402772,
+        "updated_at": "2026-09-10T03:40:27Z",
+        "checked_at": "2026-10-13T16:16:02Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.1.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
     "pages": {
+      "/repositories/43723161/issues/32612/comments?per_page=100": {
+        "etag": "W/\"a36f43d2aad8589b705780b67472f688c40a220198191506e79b8e002ab71725\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5612424282,
+            "user": {
+              "id": 32741307,
+              "login": "sangharshcs",
+              "type": "User"
+            },
+            "created_at": "2026-09-10T03:40:27Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/32612/comments?per_page=100": {
+        "etag": "\"6e9cd9d5282f3ad26a7216c2ff5531dcc68abdacfab99ef91f23212e0bf7ba5b\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/43723161/pulls/32612/reviews?per_page=100": {
         "etag": "W/\"8236b5b9e2cb9b5d4e680aa4af1cf8d544c54f73247b29392f60d07905659cd6\"",
         "next": "",
@@ -41,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4415402772,
+    "author": {
+      "id": 32741307,
+      "login": "sangharshcs",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-09-01T19:07:35Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5091993651",
+        "actor": {
+          "id": 407675,
+          "login": "scottrigby",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T15:58:25Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5612424282",
+        "actor": {
+          "id": 32741307,
+          "login": "sangharshcs",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-10T03:40:27Z"
+      }
+    ],
+    "review_comments": []
   }
 }
