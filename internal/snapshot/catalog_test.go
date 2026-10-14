@@ -186,7 +186,7 @@ func TestCatalogBudgetPreservesCoverageDenominators(t *testing.T) {
 		t.Fatalf("budget mislabeled progress: %+v", state.Progress)
 	}
 }
-func TestCatalogFiltersBotsAndDrafts(t *testing.T) {
+func TestCatalogIncludesBotPRsAndFiltersDrafts(t *testing.T) {
 	client, observed := catalogSource(t)
 	client.prs[0].User.Type = "Bot"
 	client.prs[7].User.ID = 999
@@ -196,7 +196,7 @@ func TestCatalogFiltersBotsAndDrafts(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if public.Selection.Selected != 18 || public.Selection.Eligible != 18 || public.Result.CreationCohort.Authors != 18 {
+	if public.Selection.Selected != 20 || public.Selection.Eligible != 20 || public.Result.CreationCohort.Authors != 18 {
 		t.Fatalf("ineligible PRs contributed: %+v", public.Selection)
 	}
 }

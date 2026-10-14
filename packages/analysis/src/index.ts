@@ -12,7 +12,7 @@ export { parseReviewCommands } from "./prow.js";
 import { reviewPairs } from "./prow.js";
 
 export const SCHEMA_VERSION = 1;
-export const METHODOLOGY_VERSION = "1.1.0";
+export const METHODOLOGY_VERSION = "1.2.0";
 export const MIN_OBSERVATIONS = 5;
 
 /** Normalize account labels at the API boundary; stable IDs remain identity. */
@@ -103,8 +103,6 @@ export function analyze(input: AnalysisInput): AnalysisResult {
     const author = normalizeActor(pr.author);
     if (pr.draft) exclusions.draft_prs++;
     else if (author === null) exclusions.missing_authors++;
-    else if (author.type === "Bot" || bots.has(author.id))
-      exclusions.bot_authors++;
     else eligible.push(pr);
   }
 
@@ -141,7 +139,11 @@ export function analyze(input: AnalysisInput): AnalysisResult {
   const cohort = eligible.filter(
     (pr) => timestamp(pr.created_at) >= start && timestamp(pr.created_at) < end,
   );
-  const authors = new Set(cohort.map((pr) => pr.author!.id));
+  const authors = new Set(
+    cohort
+      .filter((pr) => pr.author!.type === "User" && !bots.has(pr.author!.id))
+      .map((pr) => pr.author!.id),
+  );
   const outcomes = { open: 0, closed_unmerged: 0, merged: 0 };
   for (const pr of cohort) outcomes[pr.outcome]++;
   const reviewPopulation = input.mode === "live_sample" ? cohort : eligible;

@@ -218,7 +218,7 @@ func TestHistoryForcedRefreshAndChangedExclusionsDoNotReplayACompletedGeneration
 			expectedPRs, expectedCalls := 3, 11
 			if !force {
 				entry.BotIDs = []int64{102}
-				expectedPRs, expectedCalls = 2, 8
+				expectedPRs, expectedCalls = 3, 11
 			}
 			public, progress, err := CollectHistory(context.Background(), f, entry, observed, store, force, nil)
 			if err != nil || progress.CoveredPRs != expectedPRs || public.Collection.RefreshedPRs != expectedPRs || f.used != expectedCalls {
@@ -238,5 +238,72 @@ func TestHistoryRejectsNonsequentialOrChangedListingScope(t *testing.T) {
 		if !errors.As(err, &failure) || failure.Reason != "invalid_response" || progress.CoveredPRs != 0 {
 			t.Fatalf("invalid listing scope accepted: %+v, %v", progress, err)
 		}
+	}
+}
+
+func TestHistoryIncludesTypedAndConfiguredBotPRsAndCountsEveryCategory(t *testing.T) {
+	f, input := historySource(t)
+	root := "/repositories/42/pulls?state=all&sort=created&direction=desc&per_page=100&page=1"
+	prs := f.data[root].([]rawPR)
+	prs[0].User.Type = "Bot"
+	prs[1].User.ID = 999
+	draft := true
+	falseDraft := false
+	prs = append(prs, rawPR{ID: 4, Number: 4, User: &rawActor{ID: 104, Login: "draft-author", Type: "User"}, Created: "2026-09-01T00:00:00Z", Draft: &draft, State: "open"}, rawPR{ID: 5, Number: 5, Created: "2026-09-01T00:00:00Z", Draft: &falseDraft, State: "closed"})
+	f.data[root] = prs
+	observed, _ := time.Parse(time.RFC3339, input.ObservedAt)
+	public, progress, err := CollectHistory(context.Background(), f, Entry{Repository: "example/repo", BotIDs: []int64{999}}, observed, memoryHistory{}, false, nil)
+	if err != nil || progress.EnumeratedPRs != 5 || progress.CoveredPRs != 3 || public.Population.HumanAuthored != 1 || public.Population.BotAuthored != 2 || public.Population.Draft != 1 || public.Population.MissingAuthor != 1 {
+		t.Fatalf("incorrect bot inclusion or breakdown: %+v, %v", public, err)
+	}
+	for index, units := range []int{0, 1, 1, 1} {
+		if public.Months[index].ReviewActivity.ReviewUnits != units {
+			t.Fatal("human reviews on bot PRs were excluded")
+		}
+	}
+	if public.Months[2].CreationCohort.EligiblePRs != 1 || public.Months[2].CreationCohort.Authors != 0 {
+		t.Fatal("bot PRs must affect cohorts without becoming human authors")
+	}
+}
+
+func TestHistoryReinterpretsClosedVersion11StreamsWithoutReusingVersion10(t *testing.T) {
+	for _, version := range []string{"1.1.0", "1.0.0"} {
+		t.Run(version, func(t *testing.T) {
+			f, input := historySource(t)
+			observed, _ := time.Parse(time.RFC3339, input.ObservedAt)
+			store := memoryHistory{}
+			if _, _, err := CollectHistory(context.Background(), f, Entry{Repository: "example/repo"}, observed, store, false, nil); err != nil {
+				t.Fatal(err)
+			}
+			var cursor historyCursor
+			if err := store.Read("cursor.json", &cursor); err != nil {
+				t.Fatal(err)
+			}
+			cursor.MethodologyVersion = version
+			cursor.Progress.Population = nil
+			if err := store.Write("cursor.json", cursor); err != nil {
+				t.Fatal(err)
+			}
+			for _, number := range []int{1, 2, 3} {
+				key := fmt.Sprintf("prs/%d.json", number)
+				var shard historyPR
+				if err := store.Read(key, &shard); err != nil {
+					t.Fatal(err)
+				}
+				shard.State.MethodologyVersion = version
+				if err := store.Write(key, shard); err != nil {
+					t.Fatal(err)
+				}
+			}
+			f.used = 0
+			public, _, err := CollectHistory(context.Background(), f, Entry{Repository: "example/repo"}, observed.Add(time.Hour), store, false, nil)
+			expected := 11
+			if version == "1.1.0" {
+				expected = 2
+			}
+			if err != nil || f.used != expected || public.Months[0].MethodologyVersion != "1.2.0" {
+				t.Fatalf("migration %s: calls %d, %v", version, f.used, err)
+			}
+		})
 	}
 }

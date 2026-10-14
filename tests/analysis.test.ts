@@ -69,19 +69,20 @@ void test("excludes self-responses, bots, missing actors and nonqualifying revie
   assert.equal(result.exclusions.missing_event_actors, 1);
 });
 
-void test("excludes draft, missing and bot authors from every population", () => {
+void test("includes bot-authored PRs while excluding drafts and missing authors", () => {
   const input = fixture();
   input.pull_requests[0]!.draft = true;
   input.pull_requests[1]!.author = null;
   input.pull_requests[2]!.author!.type = "Bot";
   input.bot_ids = [input.pull_requests[3]!.author!.id];
   const result = analyze(input);
-  assert.equal(result.creation_cohort.eligible_prs, 1);
+  assert.equal(result.creation_cohort.eligible_prs, 3);
+  assert.equal(result.creation_cohort.authors, 1);
   assert.equal(result.review_activity.concentration_80.value, null);
   assert.deepEqual(result.exclusions, {
     draft_prs: 1,
     missing_authors: 1,
-    bot_authors: 2,
+    bot_authors: 0,
     bot_events: 0,
     missing_event_actors: 0,
     self_events: 0,

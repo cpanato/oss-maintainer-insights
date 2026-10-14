@@ -27,6 +27,7 @@ type HistoryStore interface {
 }
 
 type History struct {
+	Population    *Population         `json:"population,omitempty"`
 	SchemaVersion int                 `json:"schema_version"`
 	Policy        string              `json:"policy"`
 	Repository    analysis.Repository `json:"repository"`
@@ -93,9 +94,9 @@ func CollectHistory(ctx context.Context, client Getter, entry Entry, observed ti
 		return History{}, Progress{}, err
 	}
 	old, err := timestamp(cursor.ObservedAt)
-	compatible := cursor.Version == 1 && cursor.Generation > 0 && strings.EqualFold(cursor.Repository, entry.Repository) && cursor.MethodologyVersion == analysis.MethodologyVersion && slices.Equal(cursor.BotIDs, entry.BotIDs) && err == nil && !observed.Before(old)
+	compatible := cursor.Version == 1 && cursor.Generation > 0 && cursor.Progress.Population != nil && strings.EqualFold(cursor.Repository, entry.Repository) && cursor.MethodologyVersion == analysis.MethodologyVersion && slices.Equal(cursor.BotIDs, entry.BotIDs) && err == nil && !observed.Before(old)
 	if !compatible || !cursor.Pending {
-		cursor = historyCursor{Generation: cursor.Generation + 1, Version: 1, Repository: entry.Repository, ObservedAt: observed.Format(time.RFC3339), MethodologyVersion: analysis.MethodologyVersion, BotIDs: append([]int64{}, entry.BotIDs...), Page: 1, Pending: true, Progress: Progress{Window: analysis.Window{Start: observed.Add(-90 * 24 * time.Hour).Format(time.RFC3339), End: observed.Format(time.RFC3339)}}}
+		cursor = historyCursor{Generation: cursor.Generation + 1, Version: 1, Repository: entry.Repository, ObservedAt: observed.Format(time.RFC3339), MethodologyVersion: analysis.MethodologyVersion, BotIDs: append([]int64{}, entry.BotIDs...), Page: 1, Pending: true, Progress: Progress{Population: &Population{}, Window: analysis.Window{Start: observed.Add(-90 * 24 * time.Hour).Format(time.RFC3339), End: observed.Format(time.RFC3339)}}}
 	} else {
 		observed = old
 	}
@@ -134,10 +135,6 @@ func CollectHistory(ctx context.Context, client Getter, entry Entry, observed ti
 		return History{}, cursor.Progress, err
 	}
 	path = "/repositories/" + strconv.FormatInt(metadata.ID, 10)
-	bots := map[int64]bool{}
-	for _, id := range entry.BotIDs {
-		bots[id] = true
-	}
 	seen := map[int64]bool{}
 	// Rebuild identities from completed pages instead of rewriting a growing
 	// repository-wide record map after every PR.
@@ -185,7 +182,7 @@ func CollectHistory(ctx context.Context, client Getter, entry Entry, observed ti
 		}
 		for cursor.Record < len(records) {
 			raw := records[cursor.Record]
-			user, actorErr := actor(raw.User)
+			_, actorErr := actor(raw.User)
 			created, createdErr := timestamp(raw.Created)
 			if raw.ID <= 0 || raw.ID > 9007199254740991 || raw.Number <= 0 || raw.Draft == nil || (raw.State != "open" && raw.State != "closed") || actorErr != nil || createdErr != nil {
 				return History{}, cursor.Progress, &github.Failure{Reason: "invalid_response"}
@@ -202,7 +199,11 @@ func CollectHistory(ctx context.Context, client Getter, entry Entry, observed ti
 				}
 			}
 			if !seen[raw.ID] {
-				eligible := created.Before(observed) && !*raw.Draft && user != nil && user.Type == "User" && !bots[user.ID]
+				population := *cursor.Progress.Population
+				eligible, err := population.record(raw, time.Time{}, observed, entry.BotIDs)
+				if err != nil {
+					return History{}, cursor.Progress, err
+				}
 				if eligible {
 					if err := historyEvents(ctx, client, entry, path, raw, observed, cursor.Generation, store, force); err != nil {
 						return History{}, cursor.Progress, err
@@ -210,6 +211,7 @@ func CollectHistory(ctx context.Context, client Getter, entry Entry, observed ti
 					cursor.Progress.EligiblePRs++
 					cursor.Progress.CoveredPRs++
 				}
+				cursor.Progress.Population = &population
 				cursor.Progress.EnumeratedPRs++
 				seen[raw.ID] = true
 			}
@@ -245,7 +247,7 @@ func historyEvents(ctx context.Context, client Getter, entry Entry, path string,
 	if err := historyRead(store, key, &shard); err != nil {
 		return err
 	}
-	compatible := shard.State.RepositoryID == 0 || (shard.State.RepositoryID == mustRepositoryID(path) && shard.Raw.ID == raw.ID && shard.State.MethodologyVersion == analysis.MethodologyVersion && slices.Equal(shard.State.BotIDs, entry.BotIDs))
+	compatible := shard.State.RepositoryID == 0 || (shard.State.RepositoryID == mustRepositoryID(path) && shard.Raw.ID == raw.ID && compatibleEventMethodology(shard.State.MethodologyVersion) && slices.Equal(shard.State.BotIDs, entry.BotIDs))
 	if !compatible {
 		shard = historyPR{}
 	}
@@ -318,10 +320,7 @@ func historyAggregate(entry Entry, id int64, name string, cursor historyCursor, 
 	input := analysis.Input{SchemaVersion: 1, Repository: analysis.Repository{ID: id, FullName: name}, Mode: "historical", ObservedAt: cursor.ObservedAt, BotIDs: append([]int64{}, entry.BotIDs...), Enumeration: analysis.Enumeration{CreationCohort: true, ReviewActivity: true}, PullRequests: []analysis.PullRequest{}}
 	collection := Collection{Mode: "incremental", ReconciliationDays: 7}
 	seen := map[int64]bool{}
-	bots := map[int64]bool{}
-	for _, bot := range entry.BotIDs {
-		bots[bot] = true
-	}
+	population := &Population{}
 	observed, _ := timestamp(cursor.ObservedAt)
 	for page := 1; page <= cursor.Page; page++ {
 		var listing historyListing
@@ -337,12 +336,11 @@ func historyAggregate(entry Entry, id int64, name string, cursor historyCursor, 
 				continue
 			}
 			seen[raw.ID] = true
-			user, err := actor(raw.User)
-			created, dateErr := timestamp(raw.Created)
-			if err != nil || dateErr != nil || raw.Draft == nil {
-				return History{}, &github.Failure{Reason: "invalid_response"}
+			included, err := population.record(raw, time.Time{}, observed, entry.BotIDs)
+			if err != nil {
+				return History{}, err
 			}
-			if *raw.Draft || user == nil || user.Type != "User" || bots[user.ID] || !created.Before(observed) {
+			if !included {
 				continue
 			}
 			var shard historyPR
@@ -367,7 +365,7 @@ func historyAggregate(entry Entry, id int64, name string, cursor historyCursor, 
 	if len(input.PullRequests) != cursor.Progress.EligiblePRs {
 		return History{}, errors.New("historical event coverage does not match enumeration")
 	}
-	public := History{SchemaVersion: 1, Policy: HistoryPolicy, Repository: input.Repository, CollectedAt: cursor.ObservedAt, Window: cursor.Progress.Window, Progress: cursor.Progress, Collection: collection, Months: []analysis.Result{}}
+	public := History{Population: population, SchemaVersion: 1, Policy: HistoryPolicy, Repository: input.Repository, CollectedAt: cursor.ObservedAt, Window: cursor.Progress.Window, Progress: cursor.Progress, Collection: collection, Months: []analysis.Result{}}
 	start, _ := timestamp(public.Window.Start)
 	end, _ := timestamp(public.Window.End)
 	for start.Before(end) {

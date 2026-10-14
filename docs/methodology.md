@@ -1,4 +1,4 @@
-# Methodology 1.1.0
+# Methodology 1.2.0
 
 The Go and TypeScript engines implement the same deterministic rules. Shared JSON fixtures, expected results, and cross-language tests are the authority for behavior. Accounts are identified by GitHub user ID; login is a display label. Results describe observed activity, not an authoritative maintainer roster or a project health score.
 
@@ -6,7 +6,7 @@ The Go and TypeScript engines implement the same deterministic rules. Shared JSO
 
 Inputs conform to `schemas/analysis-input.schema.json`. Dates are UTC timestamps ending in `Z`, with optional millisecond precision. Windows are half-open: start inclusive, end exclusive. Window end cannot exceed the explicitly provided observation time. PR records and source event IDs within each stream must be unique; acquisition must upsert repeated API records before analysis.
 
-Exclude currently draft PRs, missing authors, accounts typed `Bot`, and versioned explicit bot IDs. Draft time cannot be reconstructed. Bot and missing actors, self events, and excluded PRs have separate counters. Event exclusion counters count source-event occurrences on eligible PRs, once even when the event could serve multiple metrics. Unknown automation is a limitation.
+Include PRs created by humans, accounts typed `Bot`, and versioned explicit automation IDs. Exclude currently draft PRs and missing authors. Bot review/comment actors remain excluded, including configured automation IDs; bot-authored PRs can still receive qualifying human reviews and responses. Distinct author counts include only humans. Draft time cannot be reconstructed. Bot and missing actors, self events, and excluded PRs have separate counters. Event exclusion counters count source-event occurrences on eligible PRs, once even when the event could serve multiple metrics. Unknown automation is a limitation.
 
 Creation cohorts contain eligible PRs created within the window. They determine distinct authors, observed outcomes, and first response. Historical review windows also include older eligible PRs. Live inputs contain the bounded selected PR sample; the analysis engine does not select or fetch PRs itself.
 
@@ -42,7 +42,7 @@ Methodology changes require updates to both engines, fixtures, tests, and either
 
 ## Saved catalog selection
 
-Catalog snapshots enumerate every eligible human-authored, non-draft PR created within a frozen 90-day window. The collector paginates the REST PR listing from newest creation time until the window boundary or the end of the listing. It does not use search, impose a PR population limit, or select by review/response activity. PR creation timestamps and outcomes come from typed PR records. Duplicate IDs across shifting pages count once. GitHub pagination is not atomic; deletions and changes during traversal cannot be reconstructed as a historical snapshot.
+Catalog snapshots enumerate every eligible human- or bot-authored, non-draft PR created within a frozen 90-day window. The collector paginates the REST PR listing from newest creation time until the window boundary or the end of the listing. It does not use search, impose a PR population limit, or select by review/response activity. PR creation timestamps and outcomes come from typed PR records. Duplicate IDs across shifting pages count once. GitHub pagination is not atomic; deletions and changes during traversal cannot be reconstructed as a historical snapshot.
 
 Execution request limits bound work per run. Sanitized checkpoints persist completed pages and progress; subsequent executions resume the same window until enumeration and all three event streams finish. Only a fully complete window replaces public results. Old eighteen/three-hundred-PR samples remain readable and explicitly labeled while collection is pending. Reviews on PRs created before the window are outside this creation cohort. A separate historical collector enumerates PRs of every creation age and publishes monthly review windows only after exhaustive event coverage. Browser queries retain the newest-eight policy and 20-attempt budget. Go and TypeScript use the same metric engine, source definitions, and sufficiency thresholds.
 
@@ -50,4 +50,12 @@ Monthly history partitions a frozen 90-day window at UTC calendar-month boundari
 
 ## Migration from 1.0.0
 
-Methodology 1.0.0 counted only GitHub submitted reviews and required only the review stream for participation. Version 1.1.0 includes Prow signals and requires all three event streams. The browser cache key changes with methodology; collector checkpoint version 2 forces comment-body extraction instead of reusing old body-free pages. Fresh legacy datasets trigger recollection. Partial updates preserve complete public results across policy migrations. Failed migration preserves prior public JSON, which remains readable and is visibly labeled as legacy GitHub-only data. New output always uses 1.1.0 with source breakdowns.
+Methodology 1.0.0 counted only GitHub submitted reviews and required only the review stream for participation. Version 1.1.0 includes Prow signals and requires all three event streams. The browser cache key changes with methodology; collector checkpoint version 2 forces comment-body extraction instead of reusing old body-free pages. Fresh legacy datasets trigger recollection. Partial updates preserve complete public results across policy migrations. Failed migration preserves prior public JSON, which remains readable and is visibly labeled as legacy GitHub-only data. New output uses 1.2.0 with source and population breakdowns.
+
+## Bot-authored PR inclusion and population reporting
+
+Version 1.2.0 includes non-draft bot-authored PRs even when they have no human reviews. This avoids selecting PRs based on observed participation. Human reviews, Prow signals, and first responses on these PRs count under the same deduplication, state, self-event, coverage, and sufficiency rules. Bot review/comment events never count as human participation. The legacy `exclusions.bot_authors` field is zero under 1.2; acquisition population counts identify bot-authored PRs separately.
+
+Population metadata assigns each unique inspected PR to exactly one category: created at/after observation, outside a creation-cohort window, draft, missing/deleted author, or eligible human/bot author. Date filters take precedence; drafts take precedence over author categories. Historical collection does not apply a creation-date lower bound, so older PRs remain eligible. Category counts describe retrieved metadata; live sampling can select fewer PRs than the eligible total. Complete event coverage means every required page was fetched, not that every PR received a review.
+
+Windows show duration in days and full UTC timestamps, start inclusive and end exclusive. Older datasets without population metadata show that the breakdown was not recorded. Version 1.0/1.1 datasets remain readable and visibly disclose their bot-authored PR exclusion until a complete 1.2 replacement is ready; monthly series must have one methodology throughout. Closed, unchanged 1.1 event streams can be reinterpreted with the 1.2 engine within the reconciliation target, because event normalization did not change. Version 1.0 streams remain incompatible because they lack Prow extraction. Population enumeration, open/changed/expired PRs, and newly included bot PRs still need acquisition.

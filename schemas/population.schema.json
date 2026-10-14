@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cpanato.github.io/oss-maintainer-insights/schemas/population.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "inspected_prs",
+    "human_authored_prs",
+    "bot_authored_prs",
+    "draft_prs",
+    "missing_author_prs",
+    "outside_window_prs",
+    "after_observation_prs"
+  ],
+  "properties": {
+    "inspected_prs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "human_authored_prs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "bot_authored_prs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "draft_prs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "missing_author_prs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "outside_window_prs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "after_observation_prs": {
+      "type": "integer",
+      "minimum": 0
+    }
+  }
+}

@@ -7,12 +7,84 @@ import {
   LiveCache,
   parsePublicSnapshot,
   CATALOG_POLICY,
+  OLD_FULL_CATALOG_POLICY,
   LEGACY_CATALOG_POLICY,
   BAND_CATALOG_POLICY,
   parseCollectionProgress,
 } from "./live.js";
 import type { PublicSnapshot } from "./live.js";
 import { parseRepositoryHistory } from "./history.js";
+import type { Population } from "./population.js";
+
+function windowLabel(window: { start: string; end: string }): string {
+  const days = (Date.parse(window.end) - Date.parse(window.start)) / 86400000;
+  const utc = (value: string) =>
+    new Date(value)
+      .toISOString()
+      .replace("T", " ")
+      .replace(".000Z", "Z")
+      .replace("Z", " UTC");
+  return `${Number(days.toFixed(2))} days · ${utc(window.start)} (inclusive) → ${utc(window.end)} (exclusive)`;
+}
+
+function renderPopulation(
+  prefix: string,
+  population: Population | undefined,
+  methodology: string,
+  covered: number,
+  selected: number,
+) {
+  const rows = element(`${prefix}-population-rows`);
+  rows.replaceChildren();
+  const legacy = methodology !== "1.2.0";
+  const historical = prefix.startsWith("history");
+  const detail = !population
+    ? " This older dataset did not record a category breakdown."
+    : historical
+      ? " Each inspected PR appears in exactly one category below. The review window includes PRs of every creation age."
+      : " Each inspected PR appears in exactly one category below. Sampling can select fewer PRs than the eligible population.";
+  text(
+    `${prefix}-population-note`,
+    `${covered}/${selected} analyzed PRs have all required review and comment pages collected. This does not mean every PR received a review.${legacy ? ` Saved methodology ${methodology} excluded bot-authored PRs. Updated data is required to include human reviews on those PRs.` : " PRs created by bots are included; reviews and comments by bots do not count as human participation."}${detail}`,
+  );
+  element(`${prefix}-population-table`).hidden = !population;
+  if (!population) return;
+  for (const [label, count, status] of [
+    ["Human-authored PRs", population.human_authored_prs, "Included"],
+    [
+      "Bot-authored PRs",
+      population.bot_authored_prs,
+      legacy ? "Excluded by legacy methodology" : "Included",
+    ],
+    ["Draft PRs", population.draft_prs, "Excluded"],
+    ["Missing or deleted author", population.missing_author_prs, "Excluded"],
+    [
+      "Created outside this creation window",
+      population.outside_window_prs,
+      "Excluded from creation cohort",
+    ],
+    [
+      "Created at or after observation",
+      population.after_observation_prs,
+      "Excluded",
+    ],
+    ["Total inspected PRs", population.inspected_prs, "All categories"],
+  ] as const) {
+    if (historical && label === "Created outside this creation window")
+      continue;
+    const row = document.createElement("tr");
+    const name = document.createElement("th");
+    name.scope = "row";
+    name.textContent = label;
+    row.append(name);
+    for (const value of [String(count), status]) {
+      const cell = document.createElement("td");
+      cell.textContent = value;
+      row.append(cell);
+    }
+    rows.append(row);
+  }
+}
 import catalog from "../../../../catalog/repositories.json" with { type: "json" };
 const catalogEntries: { repository: string; bot_ids?: number[] }[] = catalog;
 const savedRepositories = new Map(
@@ -84,6 +156,7 @@ async function loadHistory(
 ) {
   element("monthly-history").hidden = false;
   element("history-data").hidden = true;
+  element("history-progress-breakdown").hidden = true;
   text("history-status", "Loading saved monthly history.");
   const base = `${import.meta.env.BASE_URL}data/history/`;
   try {
@@ -107,8 +180,19 @@ async function loadHistory(
         )
       : null;
     if (current !== generation || signal.aborted) return;
+    if (progress?.population) {
+      element("history-progress-breakdown").hidden = false;
+      renderPopulation(
+        "history-progress",
+        progress.population,
+        "1.2.0",
+        progress.covered_prs,
+        progress.eligible_prs,
+      );
+    }
+
     const pending = progress
-      ? `Historical backfill in progress: ${progress.enumerated_prs} PRs inspected across all creation dates; ${progress.covered_prs} eligible PRs have complete review and comment streams. ${progress.enumeration_complete ? "Enumeration finished." : "More PR pages remain."} Window: ${progress.window.start.slice(0, 10)}–${progress.window.end.slice(0, 10)} (UTC).${series ? " The previous complete history remains visible." : " Monthly trends will appear after full enumeration and event collection."}`
+      ? `Historical backfill in progress: ${progress.enumerated_prs} PRs inspected across all creation dates; ${progress.covered_prs}/${progress.eligible_prs} eligible PRs have all review and comment pages collected. ${progress.enumeration_complete ? "Enumeration finished." : "More PR pages remain."} Window: ${windowLabel(progress.window)}.${series ? " The previous complete history remains visible." : " Monthly trends will appear after full enumeration and event collection."}`
       : "";
     if (!series) {
       text(
@@ -120,11 +204,18 @@ async function loadHistory(
     }
     text(
       "history-status",
-      `${pending}${pending ? " " : ""}Complete historical coverage · Observed ${new Date(series.collected_at).toLocaleString()} · Methodology ${series.months[0]!.methodology_version}.`,
+      `${pending}${pending ? " " : ""}Complete historical coverage · Observed ${new Date(series.collected_at).toISOString().replace("T", " ").replace(".000Z", "Z").replace("Z", " UTC")} · Methodology ${series.months[0]!.methodology_version}.`,
     );
     text(
       "history-scope",
-      `${series.window.start.slice(0, 10)}–${series.window.end.slice(0, 10)} (UTC) · ${series.progress.enumerated_prs} PRs inspected, including older PRs · ${series.progress.covered_prs} eligible PRs with complete event streams.${series.collection.events_checked_since ? ` Event streams checked on or after ${new Date(series.collection.events_checked_since).toLocaleString()}.` : ""} Closed-PR reconciliation has a seven-day target; API limits can delay updates. Partial calendar months are labeled below.`,
+      `${windowLabel(series.window)} · ${series.progress.enumerated_prs} PRs inspected across all creation dates, including older PRs · ${series.progress.eligible_prs} eligible for analysis · ${series.progress.covered_prs}/${series.progress.eligible_prs} with all event pages collected.${series.collection.events_checked_since ? ` Event streams checked on or after ${new Date(series.collection.events_checked_since).toISOString().replace("T", " ").replace(".000Z", "Z").replace("Z", " UTC")}.` : ""} Closed-PR reconciliation has a seven-day target; API limits can delay updates. Partial calendar months are labeled below.`,
+    );
+    renderPopulation(
+      "history",
+      series.population,
+      series.months[0]!.methodology_version,
+      series.progress.covered_prs,
+      series.progress.eligible_prs,
     );
     const bars = element("history-bars");
     const rows = element("history-rows");
@@ -198,10 +289,17 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   const { result, selection } = snapshot;
   const catalogSample = [
     CATALOG_POLICY,
+    OLD_FULL_CATALOG_POLICY,
     LEGACY_CATALOG_POLICY,
     BAND_CATALOG_POLICY,
   ].includes(snapshot.policy);
-  const fullWindow = snapshot.policy === CATALOG_POLICY;
+  const fullWindow = [CATALOG_POLICY, OLD_FULL_CATALOG_POLICY].includes(
+    snapshot.policy,
+  );
+  const authorsIncluded =
+    result.methodology_version === "1.2.0"
+      ? "human- or bot-authored"
+      : "human-authored";
   const bandLimit = snapshot.policy === LEGACY_CATALOG_POLICY ? 6 : 100;
   text(
     "population-label",
@@ -235,7 +333,15 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   );
   text(
     "sample-scope",
-    `${fullWindow ? "Metrics cover all eligible human-authored, non-draft PRs created in this window. Reviews on PRs created before the window are outside this collection." : `All metrics below describe these ${selection.selected} selected PRs. They do not count all PRs, reviews, or contributors in this repository during the ${windowDays}-day window.`}${snapshot.selection.truncated || snapshot.selection.list_has_more ? " More PRs exist beyond the sample limit." : ""}${catalogSample ? " Refresh live replaces this view with a smaller sample of up to 8 recent PRs." : ""}`,
+    `${fullWindow ? `Metrics cover all eligible ${authorsIncluded}, non-draft PRs created in this window. Reviews on PRs created before the window are outside this collection.` : `All metrics below describe these ${selection.selected} selected PRs. They do not count all PRs, reviews, or contributors in this repository during the ${windowDays}-day window.`}${snapshot.selection.truncated || snapshot.selection.list_has_more ? " More PRs exist beyond the sample limit." : ""}${catalogSample ? " Refresh live replaces this view with a smaller sample of up to 8 recent PRs." : ""}`,
+  );
+  text("data-window", windowLabel(result.window));
+  renderPopulation(
+    "snapshot",
+    snapshot.population,
+    result.methodology_version,
+    result.review_activity.covered_prs,
+    selection.selected,
   );
   text(
     "freshness",
@@ -344,7 +450,7 @@ function render(snapshot: PublicSnapshot, source: "live" | "cache" | "saved") {
   }
   text(
     "coverage-notes",
-    `${fullWindow ? "All eligible human-authored, non-draft PRs created within the 90-day window are enumerated through GitHub PR pages. Reviews on PRs created before the window are outside this collection. GitHub pagination is not an atomic historical snapshot." : catalogSample ? `Up to ${bandLimit} eligible human-authored, non-draft PRs from each of three 30-day creation bands are selected, newest first within each band. Each band inspects at most ${snapshot.policy === BAND_CATALOG_POLICY ? 100 : 30} search candidates. Empty bands stay empty; PRs are not replaced because they lack responses. This is a bounded sample, not a random sample or full 90-day census.` : "The newest eligible human-authored, non-draft PRs from the first 30-record page are selected, up to 8."}${selection.truncated || selection.list_has_more ? " The repository contains PRs outside this bounded sample." : ""} Uncovered PRs are not counted as unanswered. Bots, deleted actors, and self responses are excluded.`,
+    `${fullWindow ? `All eligible ${authorsIncluded}, non-draft PRs created within the 90-day window are enumerated through GitHub PR pages. Reviews on PRs created before the window are outside this collection. GitHub pagination is not an atomic historical snapshot.` : catalogSample ? `Up to ${bandLimit} eligible human-authored, non-draft PRs from each of three 30-day creation bands are selected. This is a bounded sample, not a full 90-day census.` : `The newest eligible ${authorsIncluded}, non-draft PRs from the first 30-record page are selected, up to 8.`}${selection.truncated || selection.list_has_more ? " The repository contains PRs outside this bounded sample." : ""} Uncovered PRs are not counted as unanswered. Bot review/comment events, missing actors, and self responses are excluded.`,
   );
   const failures = element("failure-list");
   failures.replaceChildren();
@@ -537,7 +643,7 @@ async function query(repository: string, refresh = false, allowLive = true) {
       if (progress) {
         text(
           "collection-progress",
-          `Full 90-day collection in progress (${progress.window.start.slice(0, 10)}–${progress.window.end.slice(0, 10)}, UTC): ${progress.enumerated_prs} PRs inspected, ${progress.eligible_prs} eligible, ${progress.covered_prs} with complete review and comment streams. ${progress.enumeration_complete ? "PR enumeration finished; event collection continues." : "More PR pages remain to be enumerated."}${saved ? " The previous saved result remains visible until this collection completes." : " Results will be published when this collection completes."}`,
+          `Full collection in progress (${windowLabel(progress.window)}): ${progress.enumerated_prs} PRs inspected, ${progress.eligible_prs} eligible, ${progress.covered_prs} with complete review and comment streams. ${progress.enumeration_complete ? "PR enumeration finished; event collection continues." : "More PR pages remain to be enumerated."}${saved ? " The previous saved result remains visible until this collection completes." : " Results will be published when this collection completes."}`,
         );
         element("collection-progress").hidden = false;
       }

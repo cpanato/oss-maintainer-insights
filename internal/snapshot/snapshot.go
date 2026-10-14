@@ -18,7 +18,7 @@ import (
 	"github.com/cpanato/oss-maintainer-insights/schemas"
 )
 
-const QueryPolicy = "newest-eight-human-prs-90-days-v1"
+const QueryPolicy = "newest-eight-non-draft-prs-90-days-v2"
 
 type Entry struct {
 	Repository string  `json:"repository"`
@@ -51,6 +51,7 @@ type SampleAge struct {
 
 // Public contains aggregates only. Source events and validators never enter website artifacts.
 type Public struct {
+	Population *Population     `json:"population,omitempty"`
 	Collection *Collection     `json:"collection,omitempty"`
 	SampleAge  *SampleAge      `json:"sample_age,omitempty"`
 	Policy     string          `json:"policy"`
@@ -67,6 +68,7 @@ type Page struct {
 	Value json.RawMessage `json:"value"`
 }
 type Progress struct {
+	Population          *Population     `json:"population,omitempty"`
 	Window              analysis.Window `json:"window"`
 	EnumeratedPRs       int             `json:"enumerated_prs"`
 	EligiblePRs         int             `json:"eligible_prs"`
@@ -94,6 +96,7 @@ type Getter interface {
 	RateLimit() github.RateLimit
 }
 type reader struct {
+	population  *Population
 	replay      map[string]bool
 	incremental bool
 	resume      bool
@@ -347,7 +350,7 @@ func CollectCatalogWithCheckpoint(ctx context.Context, client Getter, entry Entr
 	return collect(ctx, client, entry, observed, previous, true, true, false, checkpoint)
 }
 
-const CatalogPolicy = "all-human-prs-created-in-90-days-v1"
+const CatalogPolicy = "all-non-draft-prs-created-in-90-days-v2"
 
 func collect(ctx context.Context, client Getter, entry Entry, observed time.Time, previous State, catalog, resume, incremental bool, checkpoint func(State) error) (Public, State, error) {
 	observed = observed.UTC().Truncate(time.Millisecond)
@@ -362,7 +365,7 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		}
 		observed = observed.Truncate(time.Second)
 	}
-	compatiblePolicy := previous.Policy == policy || (catalog && slices.Contains([]string{QueryPolicy, "three-age-bands-eighteen-human-prs-90-days-v1", "three-age-bands-three-hundred-human-prs-90-days-v1"}, previous.Policy))
+	compatiblePolicy := previous.Policy == policy || (catalog && slices.Contains([]string{QueryPolicy, "newest-eight-human-prs-90-days-v1", "all-human-prs-created-in-90-days-v1", "three-age-bands-eighteen-human-prs-90-days-v1", "three-age-bands-three-hundred-human-prs-90-days-v1"}, previous.Policy))
 	if (previous.Version != 2 && previous.Version != 3) || !compatiblePolicy || !strings.EqualFold(previous.Repository, entry.Repository) {
 		previous = State{}
 	}
@@ -391,7 +394,7 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		progress := *previous.Progress
 		state.Progress = &progress
 	}
-	r := reader{client: client, previous: previous, next: state, resume: resume, checkpoint: checkpoint, incremental: state.Incremental, replay: map[string]bool{}}
+	r := reader{population: &Population{}, client: client, previous: previous, next: state, resume: resume, checkpoint: checkpoint, incremental: state.Incremental, replay: map[string]bool{}}
 	path, err := github.RepositoryPath(entry.Repository)
 	if err != nil {
 		return Public{}, r.next, err
@@ -435,10 +438,6 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		if records == nil || len(records) > 30 {
 			return Public{}, r.next, &github.Failure{Reason: "invalid_response"}
 		}
-		bots := map[int64]bool{}
-		for _, id := range entry.BotIDs {
-			bots[id] = true
-		}
 		if observed.IsZero() {
 			observed = time.Now().UTC().Truncate(time.Millisecond)
 		}
@@ -450,15 +449,11 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 				return Public{}, r.next, &github.Failure{Reason: "invalid_response"}
 			}
 			seen[pr.ID] = true
-			created, err := timestamp(pr.Created)
+			included, err := r.population.record(pr, start, observed, entry.BotIDs)
 			if err != nil {
 				return Public{}, r.next, err
 			}
-			user, err := actor(pr.User)
-			if err != nil {
-				return Public{}, r.next, err
-			}
-			if *pr.Draft || user == nil || user.Type != "User" || bots[user.ID] || created.Before(start) || !created.Before(observed) {
+			if !included {
 				continue
 			}
 			eligible = append(eligible, pr)
@@ -608,6 +603,7 @@ func collect(ctx context.Context, client Getter, entry Entry, observed time.Time
 		reset = &value
 	}
 	public := Public{Policy: policy, Result: result, Selection: selection, Requests: client.RequestsUsed(), Rate: Rate{Remaining: rate.Remaining, Limit: rate.Limit, ResetAt: reset}, Failures: failures, Complete: complete}
+	public.Population = r.population
 	if catalog && len(eligible) > 0 {
 		age := &SampleAge{Oldest: eligible[0].Created, Newest: eligible[0].Created}
 		for _, pr := range eligible {

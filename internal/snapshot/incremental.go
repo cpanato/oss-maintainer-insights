@@ -12,6 +12,12 @@ import (
 
 const reconciliationInterval = 7 * 24 * time.Hour
 
+// Version 1.2 changes PR eligibility, not event normalization. Complete unchanged
+// 1.1 streams can be reinterpreted by the new engine; 1.0 lacks Prow signals.
+func compatibleEventMethodology(previous string) bool {
+	return previous == analysis.MethodologyVersion || (previous == "1.1.0" && analysis.MethodologyVersion == "1.2.0")
+}
+
 // TrackedPR records the metadata used to decide when cached event streams need
 // revalidation. It is private collection state, never a published source row.
 type TrackedPR struct {
@@ -50,7 +56,7 @@ func cachedPRUpdates(page Page) bool {
 }
 
 func (r *reader) reuseClosedPR(pr rawPR, path string, observed time.Time) bool {
-	if !r.incremental || r.resume || pr.State != "closed" || pr.Updated == "" || r.previous.RepositoryID != r.next.RepositoryID || r.previous.MethodologyVersion != analysis.MethodologyVersion {
+	if !r.incremental || r.resume || pr.State != "closed" || pr.Updated == "" || r.previous.RepositoryID != r.next.RepositoryID || !compatibleEventMethodology(r.previous.MethodologyVersion) {
 		return false
 	}
 	// Changed exclusion rules must not reuse a previous interpretation of events.

@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-const MethodologyVersion = "1.1.0"
+const MethodologyVersion = "1.2.0"
 const MinObservations = 5
 
 func utc(value string) (time.Time, error) {
@@ -124,8 +124,6 @@ func Analyze(input Input) (Result, error) {
 			result.Exclusions.DraftPRs++
 		} else if pr.Author == nil {
 			result.Exclusions.MissingAuthors++
-		} else if pr.Author.Type == "Bot" || bots[pr.Author.ID] {
-			result.Exclusions.BotAuthors++
 		} else {
 			eligible = append(eligible, pr)
 		}
@@ -169,7 +167,9 @@ func Analyze(input Input) (Result, error) {
 		events[pr.ID] = s
 		if !createdAt[pr.ID].Before(start) && createdAt[pr.ID].Before(end) {
 			cohort = append(cohort, pr)
-			authors[pr.Author.ID] = true
+			if pr.Author.Type == "User" && !bots[pr.Author.ID] {
+				authors[pr.Author.ID] = true
+			}
 			switch pr.Outcome {
 			case "open":
 				result.CreationCohort.Outcomes.Open++

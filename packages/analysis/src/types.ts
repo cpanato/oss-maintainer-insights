@@ -60,7 +60,7 @@ export interface Metric {
 
 export interface AnalysisResult {
   schema_version: 1;
-  methodology_version: "1.0.0" | "1.1.0";
+  methodology_version: "1.0.0" | "1.1.0" | "1.2.0";
   repository: AnalysisInput["repository"];
   mode: AnalysisInput["mode"];
   collected_at: string;

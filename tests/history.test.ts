@@ -55,3 +55,23 @@ void test("historical publication rejects mixed repositories, gaps, partial popu
     value.months[1]!.review_activity.coverage = "partial";
   });
 });
+
+void test("legacy saved history remains readable and mixed methodology or contradictory population is rejected", async () => {
+  const { readFileSync } = await import("node:fs");
+  const legacy: unknown = JSON.parse(
+    readFileSync(
+      new URL("./fixtures/legacy-history.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  assert.ok(parseRepositoryHistory(legacy, "example/repo"));
+  const mixed = structuredClone(expected);
+  mixed.months[0]!.methodology_version = "1.1.0";
+  assert.equal(parseRepositoryHistory(mixed, "example/repo"), null);
+  const wrong = structuredClone(expected);
+  wrong.population.bot_authored_prs++;
+  assert.equal(parseRepositoryHistory(wrong, "example/repo"), null);
+  const missing = { ...expected };
+  Reflect.deleteProperty(missing, "population");
+  assert.equal(parseRepositoryHistory(missing, "example/repo"), null);
+});

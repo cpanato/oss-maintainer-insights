@@ -185,7 +185,25 @@ const projects = catalog.map((entry) => {
             </button>
           </div>
         </div>
+        <p id="data-window" class="muted"></p>
         <p id="sample-scope" class="muted"></p>
+        <section aria-labelledby="snapshot-population-title">
+          <h3 id="snapshot-population-title">PR inclusion and exclusions</h3>
+          <p id="snapshot-population-note" class="muted"></p>
+          <div id="snapshot-population-table" class="table-scroll" hidden>
+            <table>
+              <caption>Inspected PRs by category</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Category</th>
+                  <th scope="col">PRs</th>
+                  <th scope="col">Treatment</th>
+                </tr>
+              </thead>
+              <tbody id="snapshot-population-rows"></tbody>
+            </table>
+          </div>
+        </section>
         <p id="freshness" class="freshness"></p>
         <p id="event-freshness" class="muted" hidden></p>
         <div class="metrics">
@@ -195,7 +213,7 @@ const projects = catalog.map((entry) => {
               <InfoTip
                 id="metric-help-0"
                 label="PR authors"
-                explanation="Distinct human authors of the selected eligible PRs. Bots and draft PRs are excluded."
+                explanation="Distinct human authors of the analyzed PR creation cohort. Bot-authored PRs affect review and response metrics but bots do not count as human authors."
               />
             </p>
             <strong id="authors">—</strong>
@@ -377,8 +395,50 @@ const projects = catalog.map((entry) => {
         <p class="eyebrow">SAVED HISTORICAL ACTIVITY</p>
         <h2 id="history-title">Monthly trends</h2>
         <p id="history-status" aria-live="polite"></p>
+        <div id="history-progress-breakdown" hidden>
+          <h3>Backfill progress by PR category</h3>
+          <p class="muted">
+            These counts cover PRs inspected so far. More PR pages can remain;
+            this is not the final repository total.
+          </p>
+          <p id="history-progress-population-note" class="muted"></p>
+          <div
+            id="history-progress-population-table"
+            class="table-scroll"
+            hidden
+          >
+            <table>
+              <caption>Inspected backfill PRs by category</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Category</th>
+                  <th scope="col">PRs</th>
+                  <th scope="col">Treatment</th>
+                </tr>
+              </thead>
+              <tbody id="history-progress-population-rows"></tbody>
+            </table>
+          </div>
+        </div>
         <div id="history-data" hidden>
           <p id="history-scope" class="muted"></p>
+          <section aria-labelledby="history-population-title">
+            <h3 id="history-population-title">PR inclusion and exclusions</h3>
+            <p id="history-population-note" class="muted"></p>
+            <div id="history-population-table" class="table-scroll" hidden>
+              <table>
+                <caption>Inspected PRs by category</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Category</th>
+                    <th scope="col">PRs</th>
+                    <th scope="col">Treatment</th>
+                  </tr>
+                </thead>
+                <tbody id="history-population-rows"></tbody>
+              </table>
+            </div>
+          </section>
           <h3>Review units by month</h3>
           <ol
             id="history-bars"

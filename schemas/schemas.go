@@ -16,7 +16,7 @@ var documents embed.FS
 var initialize = sync.OnceValues(func() (map[string]*jsonschema.Schema, error) {
 	compiler := jsonschema.NewCompiler()
 	compiler.AssertFormat()
-	names := []string{"analysis-input", "analysis-result", "catalog", "repository-snapshot", "repository-history", "snapshot-index", "build-manifest"}
+	names := []string{"analysis-input", "analysis-result", "population", "catalog", "repository-snapshot", "repository-history", "snapshot-index", "build-manifest"}
 	for _, name := range names {
 		data, err := documents.ReadFile(name + ".schema.json")
 		if err != nil {

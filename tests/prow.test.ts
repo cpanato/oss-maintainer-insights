@@ -27,7 +27,7 @@ void test("Prow participation deduplicates sources, respects actor-local cancell
   ) as AnalysisInput;
   const before = structuredClone(input);
   const result = analyze(input);
-  assert.equal(result.methodology_version, "1.1.0");
+  assert.equal(result.methodology_version, "1.2.0");
   assert.equal(result.review_activity.review_units, 8);
   assert.equal(result.review_activity.participants, 5);
   assert.deepEqual(result.review_activity.sources, {

@@ -62,7 +62,7 @@ Browser requests go directly to `api.github.com`. Scheduled requests run only in
 
 Default live query: one repository request and one PR list request, then review requests for up to eight eligible PRs. Limit the entire query to 20 GitHub requests, including pagination, comments, and retries. Fetch serially, support cancellation, and stop early when the remaining API allowance is low. This is a product budget, not an API guarantee.
 
-List PRs with `state=all`, `sort=created`, `direction=desc`, and `per_page=30`. Keep human-authored PRs created within the preceding 90 days, exclude PRs currently marked draft, and choose the newest eight. Do not replace selected PRs because they have no reviews. If the list page contains more eligible PRs, the sample is truncated. If drafts or bots consume the page, disclose the resulting smaller sample rather than fetching unbounded pages.
+List PRs with `state=all`, `sort=created`, `direction=desc`, and `per_page=30`. Keep human- or bot-authored PRs created within the preceding 90 days, exclude PRs currently marked draft, and choose the newest eight. Do not replace selected PRs because they have no reviews. If the list page contains more eligible PRs, the sample is truncated. If drafts or missing authors consume the page, disclose the resulting smaller sample rather than fetching unbounded pages.
 
 Fetch submitted reviews for each selected PR. Fetch issue comments and inline review comments only while the remaining budget permits. Follow pagination links; a PR with incomplete event pagination cannot contribute to a metric requiring complete event coverage. Show each metric's eligible PR count separately. If review participation cannot be completed for all selected PRs, show the covered subset and mark it partial.
 
@@ -72,7 +72,7 @@ Cache normalized results in localStorage for one hour using repository ID, query
 
 ## Metric definitions
 
-All dates use UTC. Monthly windows are half-open intervals: start inclusive, end exclusive. Identify people by GitHub user ID and use login only as a display label. Exclude accounts typed `Bot` and a versioned explicit bot list. Unknown automation remains a documented limitation. Exclude deleted or missing actors from actor-based calculations and disclose exclusions.
+All dates use UTC. Monthly windows are half-open intervals: start inclusive, end exclusive. Identify people by GitHub user ID and use login only as a display label. Exclude accounts typed `Bot` and a versioned explicit bot list from human actor counts and review/comment events. Include their authored PRs so human reviews and responses on automation PRs are represented. Unknown automation remains a documented limitation. Exclude deleted or missing actors from actor-based calculations and disclose exclusions.
 
 | Metric                  | Definition                                                                              | Interpretation                                    |
 | ----------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------- |

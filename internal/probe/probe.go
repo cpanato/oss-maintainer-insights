@@ -57,8 +57,9 @@ type pullRequest struct {
 	CreatedAt time.Time `json:"created_at"`
 	Draft     *bool     `json:"draft"`
 	User      *struct {
-		ID   int64  `json:"id"`
-		Type string `json:"type"`
+		Login string `json:"login"`
+		ID    int64  `json:"id"`
+		Type  string `json:"type"`
 	} `json:"user"`
 }
 
@@ -199,7 +200,7 @@ func enumerate(ctx context.Context, client Getter, path string, observed time.Ti
 		report.EnumerationPages++
 		report.ListedPRs += len(prs)
 		for _, pr := range prs {
-			if *pr.Draft || pr.User == nil || pr.User.ID <= 0 || pr.User.Type != "User" {
+			if *pr.Draft || pr.User == nil || pr.User.ID <= 0 || pr.User.Login == "ghost" || (pr.User.Type != "User" && pr.User.Type != "Bot") {
 				continue
 			}
 			report.EligibleReviewPRs++
