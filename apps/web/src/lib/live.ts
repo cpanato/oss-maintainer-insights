@@ -5,6 +5,9 @@ import inputSchema from "../../../../schemas/analysis-input.schema.json" with { 
 import resultSchema from "../../../../schemas/analysis-result.schema.json" with { type: "json" };
 import indexSchema from "../../../../schemas/snapshot-index.schema.json" with { type: "json" };
 import snapshotSchema from "../../../../schemas/repository-snapshot.schema.json" with { type: "json" };
+import populationSchema from "../../../../schemas/population.schema.json" with { type: "json" };
+import { classifyPopulation, populationMatches } from "./population.js";
+import type { Population } from "./population.js";
 const validator = new Ajv({ strict: true });
 // NodeNext and Astro's bundler resolve this CommonJS export to different types.
 // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
@@ -12,6 +15,7 @@ const applyFormats: FormatsPlugin = addFormats as unknown as FormatsPlugin;
 applyFormats(validator);
 const validInput = validator.compile(inputSchema);
 validator.addSchema(resultSchema);
+validator.addSchema(populationSchema);
 const validPublic = validator.compile(snapshotSchema);
 const validIndex = validator.compile(indexSchema);
 import {
@@ -39,20 +43,25 @@ import type {
   RateLimit,
 } from "../../../../packages/github/src/index.js";
 
-export const QUERY_POLICY = "newest-eight-human-prs-90-days-v1";
+export const OLD_QUERY_POLICY = "newest-eight-human-prs-90-days-v1";
+export const QUERY_POLICY = "newest-eight-non-draft-prs-90-days-v2";
 export const LEGACY_CATALOG_POLICY =
   "three-age-bands-eighteen-human-prs-90-days-v1";
 export const BAND_CATALOG_POLICY =
   "three-age-bands-three-hundred-human-prs-90-days-v1";
-export const CATALOG_POLICY = "all-human-prs-created-in-90-days-v1";
+export const OLD_FULL_CATALOG_POLICY = "all-human-prs-created-in-90-days-v1";
+export const CATALOG_POLICY = "all-non-draft-prs-created-in-90-days-v2";
 export interface StreamFailure {
   pr: number;
   stream: string;
   reason: FailureReason;
 }
 export interface PublicSnapshot {
+  population?: Population;
   policy:
     | typeof QUERY_POLICY
+    | typeof OLD_QUERY_POLICY
+    | typeof OLD_FULL_CATALOG_POLICY
     | typeof CATALOG_POLICY
     | typeof LEGACY_CATALOG_POLICY
     | typeof BAND_CATALOG_POLICY;
@@ -93,7 +102,7 @@ export function parsePublicSnapshot(
       normalizeRepository(repository).toLowerCase() ||
     snapshot.result.mode !== "live_sample" ||
     (snapshot.policy === CATALOG_POLICY && !snapshot.complete) ||
-    !["1.0.0", METHODOLOGY_VERSION].includes(
+    !["1.0.0", "1.1.0", METHODOLOGY_VERSION].includes(
       snapshot.result.methodology_version,
     ) ||
     snapshot.selection.selected !==
@@ -102,11 +111,22 @@ export function parsePublicSnapshot(
     snapshot.selection.eligible_on_page > snapshot.selection.listed
   )
     return null;
+  if (
+    (snapshot.result.methodology_version === METHODOLOGY_VERSION &&
+      !snapshot.population) ||
+    (snapshot.population &&
+      !populationMatches(
+        snapshot.population,
+        snapshot.selection.listed,
+        snapshot.selection.eligible_on_page,
+      ))
+  )
+    return null;
   if (snapshot.collection) {
     const collection = snapshot.collection;
     const covered = collection.refreshed_prs + collection.reused_prs;
     if (
-      snapshot.policy !== CATALOG_POLICY ||
+      ![CATALOG_POLICY, OLD_FULL_CATALOG_POLICY].includes(snapshot.policy) ||
       covered > snapshot.selection.selected ||
       (snapshot.complete && covered !== snapshot.selection.selected) ||
       (covered > 0 && !collection.events_checked_since) ||
@@ -129,7 +149,7 @@ export function parsePublicSnapshot(
         response.covered_prs !== response.eligible_prs))
   )
     return null;
-  if (snapshot.result.methodology_version === METHODOLOGY_VERSION) {
+  if (snapshot.result.methodology_version !== "1.0.0") {
     const validSources = (units: number, sources: typeof reviews.sources) =>
       !!sources &&
       Math.max(sources.github_review_units, sources.prow_command_units) <=
@@ -319,8 +339,6 @@ export async function collectLive(
     ({ pr }) =>
       !pr.draft &&
       pr.author !== null &&
-      pr.author.type === "User" &&
-      !bots.has(pr.author.id) &&
       Date.parse(pr.created_at) >= start &&
       Date.parse(pr.created_at) < observed,
   );
@@ -345,6 +363,12 @@ export async function collectLive(
   };
   const failures: StreamFailure[] = [];
   const snapshot = (): LiveSnapshot => ({
+    population: classifyPopulation(
+      listed.map(({ pr }) => pr),
+      start,
+      observed,
+      [...bots],
+    ),
     policy: QUERY_POLICY,
     input: structuredClone(input),
     result: analyze(input),
@@ -523,6 +547,7 @@ export class LiveCache {
 }
 
 export interface CollectionProgress {
+  population?: Population;
   window: { start: string; end: string };
   enumerated_prs: number;
   eligible_prs: number;
@@ -545,6 +570,15 @@ export function parseCollectionProgress(
     (item) => item.repository.toLowerCase() === repository.toLowerCase(),
   );
   const progress = entry?.status === "pending" ? entry.progress : undefined;
+  if (
+    progress?.population &&
+    !populationMatches(
+      progress.population,
+      progress.enumerated_prs,
+      progress.eligible_prs,
+    )
+  )
+    return null;
   if (
     !progress ||
     progress.covered_prs > progress.eligible_prs ||

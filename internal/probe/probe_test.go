@@ -99,13 +99,13 @@ func TestRejectsPrivateRepositoriesAndInvalidMetadata(t *testing.T) {
 		}
 	}
 }
-func TestExcludesDraftBotsAndMissingActorsFromCostModel(t *testing.T) {
+func TestIncludesBotPRsAndExcludesDraftMissingAuthorsFromCostModel(t *testing.T) {
 	c := &fakeClient{max: 10, responses: []fakeResponse{{body: metadata}, {body: `[
  {"id":1,"number":1,"created_at":"2020-01-01T00:00:00Z","draft":true,"user":{"id":1,"type":"User"}},
  {"id":2,"number":2,"created_at":"2020-01-01T00:00:00Z","draft":false,"user":{"id":2,"type":"Bot"}},
- {"id":3,"number":3,"created_at":"2020-01-01T00:00:00Z","draft":false,"user":null}]`}}}
+ {"id":3,"number":3,"created_at":"2020-01-01T00:00:00Z","draft":false,"user":null}]`}, {body: `[]`}, {body: `[]`}, {body: `[]`}}}
 	report := Run(context.Background(), c, "example/project", observed, false)
-	if !report.EnumerationComplete || report.EligibleReviewPRs != 0 || len(report.EventSamples) != 0 || report.BackfillRequestLowerBound != 2 {
+	if !report.EnumerationComplete || report.EligibleReviewPRs != 1 || len(report.EventSamples) != 1 || report.BackfillRequestLowerBound != 3 || report.Requests != 5 {
 		t.Fatalf("incorrect exclusions: %+v", report)
 	}
 }

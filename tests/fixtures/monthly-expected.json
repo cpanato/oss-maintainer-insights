@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "methodology_version": "1.1.0",
+  "methodology_version": "1.2.0",
   "repository": {
     "id": 123,
     "full_name": "example/project"
@@ -34,6 +34,10 @@
     "covered_prs": 5,
     "coverage": "complete_for_window",
     "review_units": 5,
+    "sources": {
+      "github_review_units": 5,
+      "prow_command_units": 0
+    },
     "participants": 2,
     "distribution": [
       {
@@ -68,10 +72,6 @@
     "largest_reviewer_share": {
       "value": 0.8,
       "status": "available"
-    },
-    "sources": {
-      "github_review_units": 5,
-      "prow_command_units": 0
     }
   },
   "first_response": {

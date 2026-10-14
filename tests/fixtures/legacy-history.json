@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "policy": "all-pr-review-history-90-days-v1",
+  "repository": {
+    "id": 42,
+    "full_name": "example/repo"
+  },
+  "collected_at": "2026-10-13T00:00:00Z",
+  "window": {
+    "start": "2026-07-15T00:00:00Z",
+    "end": "2026-10-13T00:00:00Z"
+  },
+  "progress": {
+    "window": {
+      "start": "2026-07-15T00:00:00Z",
+      "end": "2026-10-13T00:00:00Z"
+    },
+    "enumerated_prs": 3,
+    "eligible_prs": 3,
+    "covered_prs": 3,
+    "enumeration_complete": true
+  },
+  "collection": {
+    "mode": "incremental",
+    "refreshed_prs": 3,
+    "reused_prs": 0,
+    "events_checked_since": "2026-10-13T00:00:00Z",
+    "reconciliation_interval_days": 7
+  },
+  "months": [
+    {
+      "schema_version": 1,
+      "methodology_version": "1.1.0",
+      "repository": {
+        "id": 42,
+        "full_name": "example/repo"
+      },
+      "mode": "historical",
+      "collected_at": "2026-10-13T00:00:00Z",
+      "window": {
+        "start": "2026-07-15T00:00:00Z",
+        "end": "2026-08-01T00:00:00Z"
+      },
+      "exclusions": {
+        "draft_prs": 0,
+        "bot_authors": 0,
+        "missing_authors": 0,
+        "bot_events": 0,
+        "missing_event_actors": 0,
+        "self_events": 0
+      },
+      "creation_cohort": {
+        "eligible_prs": 0,
+        "coverage": "complete_for_window",
+        "authors": 0,
+        "outcomes": {
+          "open": 0,
+          "closed_unmerged": 0,
+          "merged": 0
+        }
+      },
+      "review_activity": {
+        "eligible_prs": 3,
+        "covered_prs": 3,
+        "coverage": "complete_for_window",
+        "review_units": 0,
+        "sources": {
+          "github_review_units": 0,
+          "prow_command_units": 0
+        },
+        "participants": 0,
+        "distribution": [],
+        "concentration_80": {
+          "value": null,
+          "status": "insufficient_data"
+        },
+        "largest_reviewer_share": {
+          "value": null,
+          "status": "insufficient_data"
+        }
+      },
+      "first_response": {
+        "eligible_prs": 0,
+        "covered_prs": 0,
+        "coverage": "complete_for_window",
+        "responded_prs": 0,
+        "unanswered_prs": 0,
+        "median_ms": {
+          "value": null,
+          "status": "insufficient_data"
+        }
+      }
+    },
+    {
+      "schema_version": 1,
+      "methodology_version": "1.1.0",
+      "repository": {
+        "id": 42,
+        "full_name": "example/repo"
+      },
+      "mode": "historical",
+      "collected_at": "2026-10-13T00:00:00Z",
+      "window": {
+        "start": "2026-08-01T00:00:00Z",
+        "end": "2026-09-01T00:00:00Z"
+      },
+      "exclusions": {
+        "draft_prs": 0,
+        "bot_authors": 0,
+        "missing_authors": 0,
+        "bot_events": 0,
+        "missing_event_actors": 0,
+        "self_events": 0
+      },
+      "creation_cohort": {
+        "eligible_prs": 0,
+        "coverage": "complete_for_window",
+        "authors": 0,
+        "outcomes": {
+          "open": 0,
+          "closed_unmerged": 0,
+          "merged": 0
+        }
+      },
+      "review_activity": {
+        "eligible_prs": 3,
+        "covered_prs": 3,
+        "coverage": "complete_for_window",
+        "review_units": 1,
+        "sources": {
+          "github_review_units": 1,
+          "prow_command_units": 0
+        },
+        "participants": 1,
+        "distribution": [
+          {
+            "actor": {
+              "id": 201,
+              "login": "reviewer-one",
+              "type": "User"
+            },
+            "review_units": 1,
+            "sources": {
+              "github_review_units": 1,
+              "prow_command_units": 0
+            }
+          }
+        ],
+        "concentration_80": {
+          "value": null,
+          "status": "insufficient_data"
+        },
+        "largest_reviewer_share": {
+          "value": null,
+          "status": "insufficient_data"
+        }
+      },
+      "first_response": {
+        "eligible_prs": 0,
+        "covered_prs": 0,
+        "coverage": "complete_for_window",
+        "responded_prs": 0,
+        "unanswered_prs": 0,
+        "median_ms": {
+          "value": null,
+          "status": "insufficient_data"
+        }
+      }
+    },
+    {
+      "schema_version": 1,
+      "methodology_version": "1.1.0",
+      "repository": {
+        "id": 42,
+        "full_name": "example/repo"
+      },
+      "mode": "historical",
+      "collected_at": "2026-10-13T00:00:00Z",
+      "window": {
+        "start": "2026-09-01T00:00:00Z",
+        "end": "2026-10-01T00:00:00Z"
+      },
+      "exclusions": {
+        "draft_prs": 0,
+        "bot_authors": 0,
+        "missing_authors": 0,
+        "bot_events": 0,
+        "missing_event_actors": 0,
+        "self_events": 0
+      },
+      "creation_cohort": {
+        "eligible_prs": 1,
+        "coverage": "complete_for_window",
+        "authors": 1,
+        "outcomes": {
+          "open": 0,
+          "closed_unmerged": 1,
+          "merged": 0
+        }
+      },
+      "review_activity": {
+        "eligible_prs": 3,
+        "covered_prs": 3,
+        "coverage": "complete_for_window",
+        "review_units": 1,
+        "sources": {
+          "github_review_units": 1,
+          "prow_command_units": 0
+        },
+        "participants": 1,
+        "distribution": [
+          {
+            "actor": {
+              "id": 202,
+              "login": "reviewer-two",
+              "type": "User"
+            },
+            "review_units": 1,
+            "sources": {
+              "github_review_units": 1,
+              "prow_command_units": 0
+            }
+          }
+        ],
+        "concentration_80": {
+          "value": null,
+          "status": "insufficient_data"
+        },
+        "largest_reviewer_share": {
+          "value": null,
+          "status": "insufficient_data"
+        }
+      },
+      "first_response": {
+        "eligible_prs": 1,
+        "covered_prs": 1,
+        "coverage": "complete_for_window",
+        "responded_prs": 1,
+        "unanswered_prs": 0,
+        "median_ms": {
+          "value": null,
+          "status": "insufficient_data"
+        }
+      }
+    },
+    {
+      "schema_version": 1,
+      "methodology_version": "1.1.0",
+      "repository": {
+        "id": 42,
+        "full_name": "example/repo"
+      },
+      "mode": "historical",
+      "collected_at": "2026-10-13T00:00:00Z",
+      "window": {
+        "start": "2026-10-01T00:00:00Z",
+        "end": "2026-10-13T00:00:00Z"
+      },
+      "exclusions": {
+        "draft_prs": 0,
+        "bot_authors": 0,
+        "missing_authors": 0,
+        "bot_events": 0,
+        "missing_event_actors": 0,
+        "self_events": 0
+      },
+      "creation_cohort": {
+        "eligible_prs": 0,
+        "coverage": "complete_for_window",
+        "authors": 0,
+        "outcomes": {
+          "open": 0,
+          "closed_unmerged": 0,
+          "merged": 0
+        }
+      },
+      "review_activity": {
+        "eligible_prs": 3,
+        "covered_prs": 3,
+        "coverage": "complete_for_window",
+        "review_units": 1,
+        "sources": {
+          "github_review_units": 0,
+          "prow_command_units": 1
+        },
+        "participants": 1,
+        "distribution": [
+          {
+            "actor": {
+              "id": 203,
+              "login": "reviewer-three",
+              "type": "User"
+            },
+            "review_units": 1,
+            "sources": {
+              "github_review_units": 0,
+              "prow_command_units": 1
+            }
+          }
+        ],
+        "concentration_80": {
+          "value": null,
+          "status": "insufficient_data"
+        },
+        "largest_reviewer_share": {
+          "value": null,
+          "status": "insufficient_data"
+        }
+      },
+      "first_response": {
+        "eligible_prs": 0,
+        "covered_prs": 0,
+        "coverage": "complete_for_window",
+        "responded_prs": 0,
+        "unanswered_prs": 0,
+        "median_ms": {
+          "value": null,
+          "status": "insufficient_data"
+        }
+      }
+    }
+  ]
+}

@@ -3,6 +3,9 @@ import addFormats from "ajv-formats";
 import type { FormatsPlugin } from "ajv-formats";
 import resultSchema from "../../../../schemas/analysis-result.schema.json" with { type: "json" };
 import historySchema from "../../../../schemas/repository-history.schema.json" with { type: "json" };
+import populationSchema from "../../../../schemas/population.schema.json" with { type: "json" };
+import { populationMatches } from "./population.js";
+import type { Population } from "./population.js";
 import type { AnalysisResult } from "../../../../packages/analysis/src/index.js";
 import type { PublicSnapshot } from "./live.js";
 
@@ -12,9 +15,11 @@ const validator = new Ajv({ strict: true });
 const applyFormats: FormatsPlugin = addFormats as unknown as FormatsPlugin;
 applyFormats(validator);
 validator.addSchema(resultSchema);
+validator.addSchema(populationSchema);
 const valid = validator.compile(historySchema);
 
 export interface RepositoryHistory {
+  population?: Population;
   schema_version: 1;
   policy: "all-pr-review-history-90-days-v1";
   repository: AnalysisResult["repository"];
@@ -42,6 +47,18 @@ export function parseRepositoryHistory(
   const end = Date.parse(history.window.end);
   const progress = history.progress;
   const collection = history.collection;
+  const methodology = history.months[0]!.methodology_version;
+  if (
+    (methodology === "1.2.0" && !history.population) ||
+    (history.population &&
+      (!populationMatches(
+        history.population,
+        progress.enumerated_prs,
+        progress.eligible_prs,
+      ) ||
+        history.population.outside_window_prs !== 0))
+  )
+    return null;
   if (
     history.repository.full_name.toLowerCase() !== repository.toLowerCase() ||
     end - start !== 90 * 86400000 ||
@@ -67,6 +84,7 @@ export function parseRepositoryHistory(
     const response = month.first_response;
     if (
       month.repository.id !== history.repository.id ||
+      month.methodology_version !== methodology ||
       month.repository.full_name !== history.repository.full_name ||
       month.collected_at !== history.collected_at ||
       Date.parse(month.window.start) !== cursor ||

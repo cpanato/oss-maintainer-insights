@@ -51,6 +51,31 @@ const cases: Record<string, (input: AnalysisInput) => void> = {
     input.bot_ids = [10];
     input.pull_requests[0]!.reviews[0]!.actor = input.pull_requests[0]!.author;
   },
+  "human GitHub and Prow reviews on typed and configured bot PRs": (input) => {
+    input.pull_requests[0]!.author = {
+      id: 501,
+      login: "automation[bot]",
+      type: "Bot",
+    };
+    input.pull_requests[1]!.author = {
+      id: 502,
+      login: "configured-automation",
+      type: "User",
+    };
+    input.bot_ids = [502];
+    input.pull_requests[0]!.issue_comments.push({
+      id: "prow-bot-pr",
+      actor: { id: 91, login: "human", type: "User" },
+      occurred_at: "2026-01-02T00:00:00Z",
+      review_commands: ["approve"],
+    });
+    input.pull_requests[0]!.reviews.push({
+      id: "bot-review",
+      actor: { id: 600, login: "review-bot", type: "Bot" },
+      occurred_at: "2026-01-02T00:00:00Z",
+      state: "APPROVED",
+    });
+  },
   "deleted reviewer": (input) => {
     input.pull_requests[0]!.reviews[0]!.actor = null;
   },

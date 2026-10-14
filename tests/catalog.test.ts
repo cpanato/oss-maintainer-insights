@@ -75,3 +75,27 @@ void test("incremental snapshots distinguish event freshness and reject contradi
       null,
     );
 });
+
+void test("legacy saved samples are readable while new population totals must reconcile", () => {
+  const legacy: unknown = JSON.parse(
+    readFileSync(
+      new URL("./fixtures/legacy-snapshot.json", import.meta.url),
+      "utf8",
+    ),
+  );
+  assert.ok(parsePublicSnapshot(legacy, "example/repo"));
+  const latest = parsePublicSnapshot(
+    JSON.parse(
+      readFileSync(
+        new URL("./fixtures/live-snapshot.json", import.meta.url),
+        "utf8",
+      ),
+    ),
+    "example/repo",
+  )!;
+  const wrong = structuredClone(latest);
+  wrong.population!.bot_authored_prs++;
+  assert.equal(parsePublicSnapshot(wrong, "example/repo"), null);
+  Reflect.deleteProperty(wrong, "population");
+  assert.equal(parsePublicSnapshot(wrong, "example/repo"), null);
+});

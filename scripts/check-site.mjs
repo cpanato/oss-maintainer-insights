@@ -15,6 +15,7 @@ const ajv = new Ajv({ strict: true });
 addFormats(ajv);
 const names = [
   "analysis-result",
+  "population",
   "repository-snapshot",
   "repository-history",
   "snapshot-index",

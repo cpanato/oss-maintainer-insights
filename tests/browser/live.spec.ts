@@ -32,16 +32,28 @@ test("saved monthly trends include old PR review activity and accessible partial
   await expect(section).toContainText("Complete historical coverage");
   await expect(section).toContainText("including older PRs");
   await expect(section.getByRole("listitem")).toHaveCount(4);
-  await expect(section.getByRole("row")).toHaveCount(5);
+  await expect(page.locator("#history-rows").getByRole("row")).toHaveCount(4);
   await expect(
     section.getByRole("listitem").filter({ hasText: "(partial)" }),
   ).toHaveCount(2);
-  await expect(section.getByRole("row").nth(2)).toContainText("Aug");
   await expect(
-    section.getByRole("row").nth(2).getByRole("cell").nth(0),
+    page.locator("#history-rows").getByRole("row").nth(1),
+  ).toContainText("Aug");
+  await expect(
+    page
+      .locator("#history-rows")
+      .getByRole("row")
+      .nth(1)
+      .getByRole("cell")
+      .nth(0),
   ).toHaveText("0");
   await expect(
-    section.getByRole("row").nth(2).getByRole("cell").nth(1),
+    page
+      .locator("#history-rows")
+      .getByRole("row")
+      .nth(1)
+      .getByRole("cell")
+      .nth(1),
   ).toHaveText("1");
   await page.setViewportSize({ width: 390, height: 844 });
   expect(
@@ -208,7 +220,9 @@ test("complete small sample displays denominators, caches, refreshes and clears"
   await expect(page.locator("#response-note")).toContainText(
     "Sample has 2 human responses",
   );
-  await expect(page.getByRole("table")).toContainText("100.0%");
+  await expect(
+    page.getByRole("table", { name: "Review participation data" }),
+  ).toContainText("100.0%");
   const stored = await page.evaluate(() => JSON.stringify(localStorage));
   expect(stored).not.toContain("PRIVATE_BODY_MARKER");
   await page.reload();
@@ -421,7 +435,7 @@ test("saved complete window explains its scope and response denominator without 
     "All eligible PRs created within this window",
   );
   await expect(page.locator("#sample-scope")).toContainText(
-    "Metrics cover all eligible human-authored, non-draft PRs",
+    "Metrics cover all eligible human- or bot-authored, non-draft PRs",
   );
   await expect(page.locator("#sample-scope")).toContainText(
     "Reviews on PRs created before the window are outside this collection",
@@ -571,8 +585,10 @@ test("Prow command reviews render their sources without duplicate units or store
   await expect(page.locator("#review-sources")).toContainText(
     "2 GitHub review units · 4 Prow command units",
   );
-  await expect(page.getByRole("table")).toContainText("GitHub: 2 · Prow: 2");
-  await expect(page.locator("#freshness")).toContainText("Methodology 1.1.0");
+  await expect(
+    page.getByRole("table", { name: "Review participation data" }),
+  ).toContainText("GitHub: 2 · Prow: 2");
+  await expect(page.locator("#freshness")).toContainText("Methodology 1.2.0");
   expect(await page.evaluate(() => JSON.stringify(localStorage))).not.toContain(
     "PRIVATE_BODY_MARKER",
   );
@@ -1027,5 +1043,95 @@ test("incremental saved results explain event freshness without live API calls",
   await expect(page.locator("#event-freshness")).toContainText(
     "Population coverage and event freshness are separate",
   );
+  expect(calls).toEqual([]);
+});
+
+test("historical PR categories include bot authors and show full 90-day UTC boundaries", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  const history = structuredClone(historicalFixture);
+  history.repository.full_name = "kubernetes/kubernetes";
+  for (const month of history.months)
+    month.repository.full_name = "kubernetes/kubernetes";
+  history.population = {
+    inspected_prs: 5,
+    human_authored_prs: 1,
+    bot_authored_prs: 2,
+    draft_prs: 1,
+    missing_author_prs: 1,
+    outside_window_prs: 0,
+    after_observation_prs: 0,
+  };
+  history.progress.population = history.population;
+  history.progress.enumerated_prs = 5;
+  history.months[2]!.creation_cohort.authors = 0;
+  await page.route("**/data/history/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ json: history }),
+  );
+  await page.route("**/data/history/index.json", (route) =>
+    route.fulfill({ status: 404 }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect(page.locator("#history-scope")).toContainText("90 days");
+  await expect(page.locator("#history-scope")).toContainText(
+    "2026-07-15 00:00:00 UTC (inclusive)",
+  );
+  await expect(page.locator("#history-scope")).toContainText(
+    "2026-10-13 00:00:00 UTC (exclusive)",
+  );
+  const rows = page.locator("#history-population-rows");
+  await expect(
+    rows.getByRole("row", { name: "Bot-authored PRs 2 Included", exact: true }),
+  ).toBeVisible();
+  await expect(
+    rows.getByRole("row", { name: "Draft PRs 1 Excluded", exact: true }),
+  ).toBeVisible();
+  await expect(
+    rows.getByRole("row", {
+      name: "Missing or deleted author 1 Excluded",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    rows.getByRole("row", {
+      name: "Total inspected PRs 5 All categories",
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(page.locator("#history-population-note")).toContainText(
+    "does not mean every PR received a review",
+  );
+  expect(calls).toEqual([]);
+});
+
+test("legacy historical data clearly discloses its bot PR exclusion until recollection", async ({
+  page,
+}) => {
+  const calls = await fixture(page);
+  const { readFileSync } = await import("node:fs");
+  const history = JSON.parse(
+    readFileSync(
+      new URL("../fixtures/legacy-history.json", import.meta.url),
+      "utf8",
+    ),
+  ) as typeof historicalFixture;
+  history.repository.full_name = "kubernetes/kubernetes";
+  for (const month of history.months)
+    month.repository.full_name = "kubernetes/kubernetes";
+  await page.route("**/data/history/kubernetes--kubernetes.json", (route) =>
+    route.fulfill({ json: history }),
+  );
+  await page.route("**/data/history/index.json", (route) =>
+    route.fulfill({ status: 404 }),
+  );
+  await page.goto("./?repo=kubernetes/kubernetes");
+  await expect(page.locator("#history-population-note")).toContainText(
+    "Saved methodology 1.1.0 excluded bot-authored PRs",
+  );
+  await expect(page.locator("#history-population-note")).toContainText(
+    "did not record a category breakdown",
+  );
+  await expect(page.locator("#history-population-table")).toBeHidden();
   expect(calls).toEqual([]);
 });

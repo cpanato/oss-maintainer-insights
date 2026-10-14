@@ -1,12 +1,12 @@
 {
-  "policy": "all-human-prs-created-in-90-days-v1",
+  "policy": "all-non-draft-prs-created-in-90-days-v2",
   "sample_age": {
     "oldest_created_at": "2026-08-06T12:00:00Z",
     "newest_created_at": "2026-10-11T12:00:00Z"
   },
   "result": {
     "schema_version": 1,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "repository": {
       "id": 42,
       "full_name": "example/repo"
@@ -101,5 +101,14 @@
     "reused_prs": 18,
     "events_checked_since": "2026-10-11T12:00:00Z",
     "reconciliation_interval_days": 7
+  },
+  "population": {
+    "inspected_prs": 21,
+    "human_authored_prs": 21,
+    "bot_authored_prs": 0,
+    "draft_prs": 0,
+    "missing_author_prs": 0,
+    "outside_window_prs": 0,
+    "after_observation_prs": 0
   }
 }

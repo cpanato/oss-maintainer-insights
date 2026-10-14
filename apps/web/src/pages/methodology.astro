@@ -29,7 +29,7 @@ const base = import.meta.env.BASE_URL;
       </nav>
     </header>
     <main id="main" class="wrap methodology">
-      <p class="eyebrow">METHODOLOGY 1.1.0</p>
+      <p class="eyebrow">METHODOLOGY 1.2.0</p>
       <h1>
         Read the numbers
         <br />
@@ -44,9 +44,10 @@ const base = import.meta.env.BASE_URL;
         <p>
           Each query selects up to eight of the newest eligible PRs created in
           the preceding 90 days from GitHub's first 30-record page, sorted by
-          creation time. Currently draft PRs, bot authors, and deleted authors
-          are excluded. The query does not replace unreviewed PRs with more
-          active ones. This is a sample, not a full 90-day repository census.
+          creation time. Human- and bot-authored PRs are included. Currently
+          draft PRs and missing or deleted authors are excluded. The query does
+          not replace unreviewed PRs with more active ones. This is a sample,
+          not a full 90-day repository census.
         </p>
         <p>
           Queries make at most 20 API requests, including retries, and collect
@@ -59,10 +60,11 @@ const base = import.meta.env.BASE_URL;
       <section class="panel">
         <h2>Saved 90-day creation windows</h2>
         <p>
-          Saved collection enumerates all human-authored, non-draft PRs created
-          within the preceding 90 days, using PR pages sorted by creation time.
-          There is no selected-PR count limit. Bots and configured bot IDs are
-          excluded; PRs without reviews or responses remain in the cohort.
+          Saved collection enumerates all human- or bot-authored, non-draft PRs
+          created within the preceding 90 days, using PR pages sorted by
+          creation time. There is no selected-PR count limit. Bot-authored PRs
+          can receive human reviews; bot review/comment events stay excluded.
+          PRs without reviews or responses remain in the cohort.
         </p>
         <p>
           Request limits bound each execution. Pending checkpoints retain the
@@ -99,7 +101,7 @@ const base = import.meta.env.BASE_URL;
           command or a GitHub review can still retain the pair. Source counts
           distinguish GitHub reviews and Prow commands and can overlap. These
           are observed review intentions; OWNERS authorization and Prow label
-          state are not inferred. Methodology 1.1.0 applies this convention
+          state are not inferred. Methodology 1.2.0 applies this convention
           across repositories.
         </p>
         <p>

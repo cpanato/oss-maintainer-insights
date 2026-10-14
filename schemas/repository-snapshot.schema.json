@@ -18,7 +18,9 @@
         "newest-eight-human-prs-90-days-v1",
         "three-age-bands-eighteen-human-prs-90-days-v1",
         "three-age-bands-three-hundred-human-prs-90-days-v1",
-        "all-human-prs-created-in-90-days-v1"
+        "all-human-prs-created-in-90-days-v1",
+        "newest-eight-non-draft-prs-90-days-v2",
+        "all-non-draft-prs-created-in-90-days-v2"
       ]
     },
     "result": {
@@ -171,6 +173,9 @@
           "const": 7
         }
       }
+    },
+    "population": {
+      "$ref": "population.schema.json"
     }
   },
   "allOf": [
@@ -178,7 +183,10 @@
       "if": {
         "properties": {
           "policy": {
-            "const": "newest-eight-human-prs-90-days-v1"
+            "enum": [
+              "newest-eight-human-prs-90-days-v1",
+              "newest-eight-non-draft-prs-90-days-v2"
+            ]
           }
         }
       },
@@ -215,7 +223,8 @@
             "enum": [
               "three-age-bands-eighteen-human-prs-90-days-v1",
               "three-age-bands-three-hundred-human-prs-90-days-v1",
-              "all-human-prs-created-in-90-days-v1"
+              "all-human-prs-created-in-90-days-v1",
+              "all-non-draft-prs-created-in-90-days-v2"
             ]
           },
           "selection": {
@@ -312,7 +321,32 @@
       "then": {
         "properties": {
           "policy": {
-            "const": "all-human-prs-created-in-90-days-v1"
+            "enum": [
+              "all-human-prs-created-in-90-days-v1",
+              "all-non-draft-prs-created-in-90-days-v2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "result": {
+            "type": "object",
+            "properties": {
+              "methodology_version": {
+                "const": "1.2.0"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "required": ["population"],
+        "properties": {
+          "population": {
+            "$ref": "population.schema.json"
           }
         }
       }

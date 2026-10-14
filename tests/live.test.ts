@@ -61,7 +61,29 @@ function memory(): StorageLike & { values: Map<string, string> } {
     },
   };
 }
-void test("live selection excludes drafts/bots/deleted authors, selects newest eight, and prioritizes reviews", async () => {
+
+void test("human reviews and Prow commands on typed/configured bot PRs count while bot events stay excluded", async () => {
+  const api = client([{ ...pr(44), user: user(44, "Bot") }, pr(45)], (path) =>
+    path.endsWith("/reviews")
+      ? [event(1), { ...event(2), user: user(700, "Bot") }]
+      : path.includes("/issues/")
+        ? [{ ...event(3), user: user(901), body: "/approve" }]
+        : [],
+  );
+  const snapshot = await collectLive("example/repo", {
+    client: api.client,
+    now: () => observed,
+    botIds: [45],
+  });
+  assert.equal(snapshot.complete, true);
+  assert.equal(snapshot.population?.bot_authored_prs, 2);
+  assert.equal(snapshot.result.creation_cohort.eligible_prs, 2);
+  assert.equal(snapshot.result.creation_cohort.authors, 0);
+  assert.equal(snapshot.result.review_activity.review_units, 4);
+  assert.equal(snapshot.result.review_activity.participants, 2);
+  assert.equal(snapshot.result.exclusions.bot_events, 2);
+});
+void test("live selection includes bot PRs, excludes drafts/deleted authors, and selects newest eight", async () => {
   const pulls = Array.from({ length: 12 }, (_, index) => pr(index + 1));
   const api = client([
     ...pulls,
@@ -75,11 +97,11 @@ void test("live selection excludes drafts/bots/deleted authors, selects newest e
     now: () => observed,
   });
   assert.equal(snapshot.selection.selected, 8);
-  assert.equal(snapshot.selection.eligible_on_page, 12);
+  assert.equal(snapshot.selection.eligible_on_page, 13);
   assert.equal(snapshot.selection.truncated, true);
   assert.deepEqual(
     snapshot.input.pull_requests.map((item) => item.id),
-    [112, 111, 110, 109, 108, 107, 106, 105],
+    [141, 112, 111, 110, 109, 108, 107, 106],
   );
   assert.equal(snapshot.requests, 20);
   assert.equal(snapshot.complete, false);
