@@ -16,6 +16,8 @@ npm run dev     # http://127.0.0.1:4321/
 
 Choose a project from the prominent saved catalog to load its saved results, or enter `owner/repository` or a GitHub repository URL in the live query form. Direct links use `?repo=owner/repository`. Project cards show saved PR counts when available and label entries awaiting collection. Catalog entries load saved JSON without GitHub API requests; **Refresh live** explicitly requests a new sample. Other repositories use bounded unauthenticated live queries and offer a [contribution guide](CONTRIBUTING.md). Saved creation cohorts enumerate every eligible human- or bot-authored, non-draft PR created within a frozen 90-day window, across as many executions as needed. Historical review collection separately enumerates PRs of every age, including old PRs reviewed within the window. Monthly charts have equivalent tables, label partial calendar months, and keep creation-cohort and review-activity populations distinct. Earlier complete data remains visible until replacement collection completes; the UI shows backlog and event age. See [operations](docs/operations.md) for limits, caching, and behavior.
 
+The **Collections** page summarizes published creation-cohort and historical backfill states for every catalog project, including inspected/eligible/covered counts, unfinished enumeration, reasons and request usage. It distinguishes preserved datasets from failed or pending attempts and labels shared index timestamps separately from dataset observation times. It is a static published overview, not a live job monitor.
+
 Browser tests use simulated GitHub responses and need no secrets:
 
 ```sh
