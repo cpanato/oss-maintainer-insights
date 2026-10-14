@@ -1,6 +1,6 @@
 # OSS Maintainer Insights Implementation Plan
 
-Status: execution plan; milestones 1–2 implemented, Actions credential access verified, Pages-origin validation pending
+Status: milestones 1–5 implemented; catalog-wide historical backfill and final MVP acceptance remain in progress. Pages deployment has been verified with the Allstar pilot.
 Date: 11 October 2026
 Reference: [design document](oss-maintainer-insights-design.md)
 
@@ -173,3 +173,7 @@ The workflow prioritizes current cohorts and gives historical work a separate sm
 ### Bot-authored PR inclusion and population clarity
 
 Methodology 1.2.0 includes human reviews, Prow commands, and first responses on bot-authored PRs. Non-draft bot PRs remain eligible even when unreviewed; automation events and automation authors remain excluded from human participant/author counts. Both engines and acquisition paths use the same rules. Public population metadata assigns inspected PRs to mutually exclusive inclusion/exclusion categories, and the UI separates eligibility from complete event pagination. Saved, live, and pending historical views disclose categories when available, legacy exclusions when not, and full UTC boundaries with day counts. Old complete datasets remain visible until recomputation finishes. Closed unchanged 1.1 source streams can be reused safely because event normalization is unchanged; missing/new bot streams, open/changed PRs, identity/exclusion changes, and reconciliation expiry still require acquisition.
+
+### Published collection overview
+
+A static Collections page summarizes every catalog project separately for creation cohorts and historical review activity. It exposes published pending/error/completed states, unfinished enumeration, inspected/eligible/covered counts, UTC windows, preserved datasets, request usage and interruption reasons. Shared index timestamps are explicitly separated from per-dataset observation time; the page does not infer currently running jobs. Missing or invalid indexes preserve readable saved datasets while disclosing unavailable attempt details. No API requests or dependencies are added. Catalog-wide complete 1.2 history and final accessibility/mobile acceptance remain operational follow-up work.

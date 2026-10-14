@@ -53,6 +53,7 @@ const projects = catalog.map((entry) => {
       </a>
       <nav aria-label="Main navigation">
         <a href="#saved-projects">Projects</a>
+        <a href={`${base}collections/`}>Collections</a>
         <a href={`${base}methodology/`}>Methodology</a>
         <a href="https://github.com/cpanato/oss-maintainer-insights">
           GitHub ↗
@@ -82,6 +83,11 @@ const projects = catalog.map((entry) => {
             <h2 id="saved-projects-heading">Explore the saved catalog</h2>
             <span class="project-count">{projects.length} projects</span>
           </div>
+          <p class="saved-projects-description">
+            <a class="text-link" href={`${base}collections/`}>
+              View collection progress for all projects →
+            </a>
+          </p>
           <p class="saved-projects-description">
             Start with a project below. Saved results load without GitHub API
             calls; the collector covers eligible PRs created in a 90-day window.

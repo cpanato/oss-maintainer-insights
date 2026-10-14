@@ -758,7 +758,9 @@ test("saved projects lead to saved data through keyboard-accessible project link
   const catalog = page.getByRole("region", {
     name: "Explore the saved catalog",
   });
-  await expect(catalog.getByRole("link")).toHaveCount(reviewedCatalog.length);
+  await expect(
+    catalog.getByRole("link", { name: /^Explore saved data for / }),
+  ).toHaveCount(reviewedCatalog.length);
   for (const repository of [
     "cert-manager/cert-manager",
     "argoproj/argo-cd",

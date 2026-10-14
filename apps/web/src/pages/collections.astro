@@ -1,0 +1,204 @@
+---
+import "../styles/global.css";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import catalog from "../../../../catalog/repositories.json";
+import {
+  collectionRow,
+  parseCollectionIndex,
+  utcDate,
+} from "../lib/collections";
+const base = import.meta.env.BASE_URL;
+function read(name: string): unknown {
+  try {
+    return JSON.parse(
+      readFileSync(resolve("public/data", name), "utf8"),
+    ) as unknown;
+  } catch {
+    return null;
+  }
+}
+const cohorts = parseCollectionIndex(read("index.json"));
+const history = parseCollectionIndex(read("history/index.json"));
+const groups = [
+  {
+    heading: "PR creation cohorts",
+    id: "cohort",
+    index: cohorts,
+    description:
+      "Eligible PRs created within the 90-day window. This population differs from historical review activity.",
+    rows: catalog.map(({ repository }) =>
+      collectionRow(
+        repository,
+        "cohort",
+        cohorts,
+        read(`${repository.replace("/", "--")}.json`),
+      ),
+    ),
+  },
+  {
+    heading: "Historical review activity",
+    id: "history",
+    index: history,
+    description:
+      "Reviews within the 90-day window, including reviews on PRs created before it. Every PR creation age is inspected.",
+    rows: catalog.map(({ repository }) =>
+      collectionRow(
+        repository,
+        "history",
+        history,
+        read(`history/${repository.replace("/", "--")}.json`),
+      ),
+    ),
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Published collection status, coverage and backlog for the OSS Maintainer Insights catalog."
+    />
+    <title>Collection status · OSS Maintainer Insights</title>
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <header class="topbar wrap">
+      <a class="brand" href={base}>
+        OSS Maintainer <strong>Insights</strong>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href={`${base}#saved-projects`}>Projects</a>
+        <a href={`${base}collections/`} aria-current="page">
+          Collections
+        </a>
+        <a href={`${base}methodology/`}>Methodology</a>
+      </nav>
+    </header>
+    <main id="main" class="wrap collection-overview">
+      <p class="eyebrow">SAVED CATALOG</p>
+      <h1>Collection status</h1>
+      <p class="lead">
+        See what is complete, what is waiting, and why. These are the latest
+        published results, not a live view of running jobs.
+      </p>
+      <p class="collection-explanation">
+        Pending collections resume from checkpoints. A request budget limits API
+        calls per execution, not the total number of PRs. Complete means all
+        required pages were collected; it does not mean every PR received a
+        review. Previous saved results remain available while replacement data
+        is collected. Recorded pending counts may change as enumeration or
+        methodology advances.
+      </p>
+      {groups.map((group) => (
+        <section
+          class="collection-group"
+          aria-labelledby={`${group.id}-heading`}
+        >
+          <h2 id={`${group.id}-heading`}>{group.heading}</h2>
+          <p>{group.description}</p>
+          <p class="collection-index-date">
+            Latest published index:{" "}
+            {group.index ? utcDate(group.index.attempted_at) : "Unavailable"}.{" "}
+            {group.index
+              ? "This timestamp belongs to the shared index; individual entries may be retained from earlier attempts."
+              : "Progress could not be read; saved datasets are shown where available."}
+          </p>
+          <p>
+            {group.rows.filter((row) => row.status === "Complete").length}{" "}
+            complete ·{" "}
+            {group.rows.filter((row) => row.status === "Pending").length}{" "}
+            pending ·{" "}
+            {group.rows.filter((row) => row.status === "Error").length} with
+            errors ·{" "}
+            {group.rows.filter((row) => row.status === "Saved sample").length}{" "}
+            saved samples ·{" "}
+            {group.rows.filter((row) => row.status === "Not collected").length}{" "}
+            not collected · {group.rows.length} projects
+          </p>
+          <p class="collection-scroll-hint">
+            Scroll the table horizontally to see coverage, dates and outcomes.
+          </p>
+          <div
+            class="collection-table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label={`${group.heading} table, scroll horizontally on small screens`}
+          >
+            <table class="collection-table">
+              <caption>
+                {group.heading}: published coverage and collection outcomes
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Project</th>
+                  <th scope="col">State</th>
+                  <th scope="col">Window (start inclusive, end exclusive)</th>
+                  <th scope="col">Coverage</th>
+                  <th scope="col">Saved dataset</th>
+                  <th scope="col">Latest recorded outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                {group.rows.map((row) => (
+                  <tr>
+                    <th scope="row">
+                      <a
+                        href={`${base}?repo=${encodeURIComponent(row.repository)}${group.id === "history" ? "#monthly-history" : ""}`}
+                      >
+                        {row.repository}
+                      </a>
+                    </th>
+                    <td>
+                      <span class="collection-state">{row.status}</span>
+                      {row.previous && <p>Previous result available</p>}
+                    </td>
+                    <td>{row.window}</td>
+                    <td>
+                      {row.coverage}
+                      <p>{row.enumeration}</p>
+                    </td>
+                    <td>
+                      Observed at: {row.observed}
+                      {row.methodology && (
+                        <p>
+                          Methodology {row.methodology}
+                          {row.methodology !== "1.2.0" &&
+                            " · excludes bot-authored PRs"}
+                        </p>
+                      )}
+                    </td>
+                    <td>
+                      {row.reason}
+                      <p>Requests in recorded attempt: {row.requests}</p>
+                      {row.indexUnavailable && (
+                        <p>Attempt details unavailable</p>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ))}
+      <p>
+        Collection runs and failure logs are available on{" "}
+        <a
+          class="text-link"
+          href="https://github.com/cpanato/oss-maintainer-insights/actions/workflows/snapshots.yml"
+        >
+          GitHub Actions ↗
+        </a>
+        .
+      </p>
+    </main>
+  </body>
+</html>
