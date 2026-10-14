@@ -1,16 +1,22 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-14T05:22:04Z",
+  "attempted_at": "2026-10-14T10:36:02Z",
   "entries": [
     {
-      "repository": "cert-manager/cert-manager",
-      "status": "fresh",
-      "requests": 0
-    },
-    {
       "repository": "argoproj/argo-cd",
-      "status": "fresh",
-      "requests": 0
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
+      "progress": {
+        "window": {
+          "start": "2026-07-16T10:36:02.000Z",
+          "end": "2026-10-14T10:36:02.000Z"
+        },
+        "enumerated_prs": 1200,
+        "eligible_prs": 668,
+        "covered_prs": 295,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "argoproj/argo-helm",
@@ -19,8 +25,18 @@
     },
     {
       "repository": "sigstore/rekor",
-      "status": "fresh",
-      "requests": 0
+      "status": "updated",
+      "requests": 102,
+      "progress": {
+        "window": {
+          "start": "2026-07-16T10:40:55.000Z",
+          "end": "2026-10-14T10:40:55.000Z"
+        },
+        "enumerated_prs": 200,
+        "eligible_prs": 33,
+        "covered_prs": 33,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "ossf/scorecard",
@@ -49,7 +65,7 @@
         },
         "enumerated_prs": 1900,
         "eligible_prs": 1753,
-        "covered_prs": 1191,
+        "covered_prs": 1490,
         "enumeration_complete": true
       }
     },
@@ -62,6 +78,21 @@
       "repository": "helm/helm",
       "status": "fresh",
       "requests": 0
+    },
+    {
+      "repository": "cert-manager/cert-manager",
+      "status": "updated",
+      "requests": 602,
+      "progress": {
+        "window": {
+          "start": "2026-07-16T10:45:40.000Z",
+          "end": "2026-10-14T10:45:40.000Z"
+        },
+        "enumerated_prs": 400,
+        "eligible_prs": 199,
+        "covered_prs": 199,
+        "enumeration_complete": true
+      }
     }
   ]
 }

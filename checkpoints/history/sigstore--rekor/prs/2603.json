@@ -16,6 +16,14 @@
     "merged_at": "2025-09-02T15:43:55Z"
   },
   "state": {
+    "tracked_prs": {
+      "2603": {
+        "id": 2793086365,
+        "updated_at": "2025-09-02T15:44:01Z",
+        "checked_at": "2026-10-13T16:16:02Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.1.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/272963353/pulls/2603/comments?per_page=100": {
+        "etag": "\"54e68e744e359375b6678f4801b97d6b4241684cbf2e57525ff32ad7cd298564\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/272963353/pulls/2603/reviews?per_page=100": {
         "etag": "W/\"43575150f533e2d000e8569c67074d11cf79c5b7bb6b38e95b768b493ca428bc\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2793086365,
+    "author": {
+      "id": 2845093,
+      "login": "bobcallaway",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-09-02T15:23:47Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3177073924",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-02T15:25:40Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3245832139",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-02T15:30:12Z"
+      }
+    ],
+    "review_comments": []
   }
 }
