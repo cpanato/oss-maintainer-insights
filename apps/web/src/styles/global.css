@@ -49,8 +49,10 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible,
-summary:focus-visible {
-  outline: 3px solid #cc9b35;
+summary:focus-visible,
+main:focus-visible,
+.table-scroll:focus-visible {
+  outline: 3px solid #8b6210;
   outline-offset: 4px;
 }
 [hidden] {
@@ -667,8 +669,15 @@ footer {
   nav {
     gap: 12px;
   }
-  nav a:last-child {
-    display: none;
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-block: 16px;
+  }
+  .topbar nav {
+    flex-wrap: wrap;
+    row-gap: 12px;
   }
   .project-card {
     padding: 12px 24px 12px 12px;
@@ -791,8 +800,8 @@ footer {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0;
   border: 1px solid currentColor;
   border-radius: 50%;
@@ -843,7 +852,7 @@ footer {
   background: white;
 }
 .collection-table-scroll:focus-visible {
-  outline: 3px solid #cc9b35;
+  outline: 3px solid #8b6210;
   outline-offset: 4px;
 }
 .collection-table {

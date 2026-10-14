@@ -177,3 +177,7 @@ Methodology 1.2.0 includes human reviews, Prow commands, and first responses on 
 ### Published collection overview
 
 A static Collections page summarizes every catalog project separately for creation cohorts and historical review activity. It exposes published pending/error/completed states, unfinished enumeration, inspected/eligible/covered counts, UTC windows, preserved datasets, request usage and interruption reasons. Shared index timestamps are explicitly separated from per-dataset observation time; the page does not infer currently running jobs. Missing or invalid indexes preserve readable saved datasets while disclosing unavailable attempt details. No API requests or dependencies are added. Catalog-wide complete 1.2 history and final accessibility/mobile acceptance remain operational follow-up work.
+
+### Accessibility and mobile acceptance review
+
+The review corrects hidden mobile navigation, gives every page an explicit focusable skip-link target, and exposes saved population/monthly tables as named keyboard-scroll regions. Visible focus colors and tooltip target sizes are improved without new dependencies. Offline browser regressions cover every page at 320 CSS pixels, focus transfer, visible links, table scrolling and tooltip dismissal. The deployed Collections page and Allstar 693-PR history were verified on October 14 with source 38af55b and data c5bf4b5, with no browser GitHub API calls or page errors. These checks do not mark unfinished catalog backfills or manual assistive-technology review complete.
