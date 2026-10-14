@@ -18,7 +18,7 @@ Choose a project from the prominent saved catalog to load its saved results, or 
 
 The **Collections** page summarizes published creation-cohort and historical backfill states for every catalog project, including inspected/eligible/covered counts, unfinished enumeration, reasons and request usage. It distinguishes preserved datasets from failed or pending attempts and labels shared index timestamps separately from dataset observation times. It is a static published overview, not a live job monitor.
 
-Browser tests use simulated GitHub responses and need no secrets:
+Browser tests use simulated GitHub responses and need no secrets. See [accessibility and mobile checks](docs/accessibility.md) for keyboard, focus and narrow-screen review:
 
 ```sh
 npm run build

@@ -60,7 +60,7 @@ const projects = catalog.map((entry) => {
         </a>
       </nav>
     </header>
-    <main id="main" class="wrap">
+    <main id="main" tabindex="-1" class="wrap">
       <section class="intro">
         <p class="eyebrow">
           <span class="dot"></span> OPEN SOURCE, IN FOCUS
@@ -196,7 +196,14 @@ const projects = catalog.map((entry) => {
         <section aria-labelledby="snapshot-population-title">
           <h3 id="snapshot-population-title">PR inclusion and exclusions</h3>
           <p id="snapshot-population-note" class="muted"></p>
-          <div id="snapshot-population-table" class="table-scroll" hidden>
+          <div
+            id="snapshot-population-table"
+            class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Snapshot PR categories"
+            hidden
+          >
             <table>
               <caption>Inspected PRs by category</caption>
               <thead>
@@ -295,6 +302,7 @@ const projects = catalog.map((entry) => {
             <div
               class="table-scroll"
               tabindex="0"
+              role="region"
               aria-label="Review participation table"
             >
               <table>
@@ -411,6 +419,9 @@ const projects = catalog.map((entry) => {
           <div
             id="history-progress-population-table"
             class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Historical backfill PR categories"
             hidden
           >
             <table>
@@ -431,7 +442,14 @@ const projects = catalog.map((entry) => {
           <section aria-labelledby="history-population-title">
             <h3 id="history-population-title">PR inclusion and exclusions</h3>
             <p id="history-population-note" class="muted"></p>
-            <div id="history-population-table" class="table-scroll" hidden>
+            <div
+              id="history-population-table"
+              class="table-scroll"
+              tabindex="0"
+              role="region"
+              aria-label="Historical PR categories"
+              hidden
+            >
               <table>
                 <caption>Inspected PRs by category</caption>
                 <thead>
@@ -451,7 +469,12 @@ const projects = catalog.map((entry) => {
             class="history-bars"
             aria-label="Monthly review units"
           ></ol>
-          <div class="table-scroll">
+          <div
+            class="table-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Monthly review activity table"
+          >
             <table>
               <caption>
                 Monthly review activity and PR creation cohorts (UTC)
