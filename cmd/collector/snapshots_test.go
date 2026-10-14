@@ -135,7 +135,7 @@ func TestSnapshotsReservePublicationQuotaAndPersistPendingEnumeration(t *testing
 	calls := 0
 	http.DefaultClient = &http.Client{Transport: snapshotTransport(func(_ *http.Request) (*http.Response, error) {
 		calls++
-		return &http.Response{StatusCode: 200, Header: http.Header{"X-Ratelimit-Remaining": []string{"100"}, "X-Ratelimit-Reset": []string{strconv.FormatInt(time.Now().Add(time.Hour).Unix(), 10)}}, Body: io.NopCloser(strings.NewReader(`{"id":42,"full_name":"example/repo","private":false}`))}, nil
+		return &http.Response{StatusCode: 200, Header: http.Header{"X-Ratelimit-Remaining": []string{"250"}, "X-Ratelimit-Reset": []string{strconv.FormatInt(time.Now().Add(time.Hour).Unix(), 10)}}, Body: io.NopCloser(strings.NewReader(`{"id":42,"full_name":"example/repo","private":false}`))}, nil
 	})}
 	var output bytes.Buffer
 	if err := run([]string{"snapshots", "--catalog", catalog, "--output", filepath.Join(directory, "public"), "--state", filepath.Join(directory, "state")}, strings.NewReader(""), &output); err != nil {

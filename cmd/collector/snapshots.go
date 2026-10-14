@@ -166,7 +166,7 @@ func runSnapshots(ctx context.Context, args []string, output io.Writer) error {
 		policy := github.DefaultPolicy()
 		policy.MaxRequests = min(1300, 9000/len(entries))
 		policy.MaxWait = *maxWait
-		policy.MinimumRemaining = 100
+		policy.MinimumRemaining = 250
 		fmt.Fprintf(os.Stderr, "Collecting %s (all eligible PRs in 90 days, %d request attempts)\n", entry.Repository, policy.MaxRequests)
 		options := github.Options{Policy: policy, Token: os.Getenv("GITHUB_TOKEN"), Sleep: func(ctx context.Context, delay time.Duration) error {
 			if delay > 2*time.Second {
