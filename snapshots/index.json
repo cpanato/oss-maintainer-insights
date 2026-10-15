@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-15T20:31:44Z",
+  "attempted_at": "2026-10-15T23:17:27Z",
   "entries": [
-    {
-      "repository": "argoproj/argo-helm",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "sigstore/rekor",
       "status": "fresh",
@@ -29,9 +24,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 434,
       "progress": {
         "population": {
           "inspected_prs": 1900,
@@ -48,7 +42,7 @@
         },
         "enumerated_prs": 1900,
         "eligible_prs": 1755,
-        "covered_prs": 1610,
+        "covered_prs": 1755,
         "enumeration_complete": true
       }
     },
@@ -69,6 +63,11 @@
     },
     {
       "repository": "argoproj/argo-cd",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "argoproj/argo-helm",
       "status": "fresh",
       "requests": 0
     }

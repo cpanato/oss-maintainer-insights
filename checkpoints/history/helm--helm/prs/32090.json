@@ -1,0 +1,137 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-04-30T14:22:00Z",
+    "id": 3609098815,
+    "number": 32090,
+    "user": {
+      "id": 2975506,
+      "login": "matheuscscp",
+      "type": "User"
+    },
+    "created_at": "2026-04-30T13:26:24Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-04-30T14:19:40Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "32090": {
+        "id": 3609098815,
+        "updated_at": "2026-04-30T14:22:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/32090/comments?per_page=100": {
+        "etag": "W/\"0e11ea03bfa3196198f6ad5b327211b44b09a91de678e919a174e5a78afd53bc\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4353249043,
+            "user": {
+              "id": 2975506,
+              "login": "matheuscscp",
+              "type": "User"
+            },
+            "created_at": "2026-04-30T14:21:57Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/32090/comments?per_page=100": {
+        "etag": "\"df5d1b95a57052c245deab65c7753052b6c928cb4ec9c6b0f8b01e25bb143a82\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32090/reviews?per_page=100": {
+        "etag": "W/\"59b2ff4921a5e1e716a6f5ee1b5bf1529f8fd3f8cafddeda115b3e6a360abf08\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4205511125,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-04-30T13:28:21Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4205898398,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-30T14:19:26Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3609098815,
+    "author": {
+      "id": 2975506,
+      "login": "matheuscscp",
+      "type": "User"
+    },
+    "created_at": "2026-04-30T13:26:24Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4205511125",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-30T13:28:21Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4205898398",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T14:19:26Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4353249043",
+        "actor": {
+          "id": 2975506,
+          "login": "matheuscscp",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T14:21:57Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

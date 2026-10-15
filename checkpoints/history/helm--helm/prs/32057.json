@@ -1,0 +1,137 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-04-20T01:10:55Z",
+    "id": 3552443801,
+    "number": 32057,
+    "user": {
+      "id": 72203459,
+      "login": "MohitSalvi16",
+      "type": "User"
+    },
+    "created_at": "2026-04-19T17:19:02Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-04-20T01:10:55Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "32057": {
+        "id": 3552443801,
+        "updated_at": "2026-04-20T01:10:55Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/32057/comments?per_page=100": {
+        "etag": "W/\"907dbbd3830b0343ceeaecd7c7c0cff9b424cb4cbb23178dc58d9c9db0a3a15b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4276428398,
+            "user": {
+              "id": 256490899,
+              "login": "promptless-for-oss",
+              "type": "User"
+            },
+            "created_at": "2026-04-19T17:24:52Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/32057/comments?per_page=100": {
+        "etag": "\"df5d1b95a57052c245deab65c7753052b6c928cb4ec9c6b0f8b01e25bb143a82\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32057/reviews?per_page=100": {
+        "etag": "W/\"dd877f1e1efac5ec5fdb37022bf1bd2bda3d826b9a0fac443366682f67c982c6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4136300505,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-04-19T17:20:05Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4136804054,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-20T00:47:10Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3552443801,
+    "author": {
+      "id": 72203459,
+      "login": "MohitSalvi16",
+      "type": "User"
+    },
+    "created_at": "2026-04-19T17:19:02Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4136300505",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-19T17:20:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4136804054",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-20T00:47:10Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4276428398",
+        "actor": {
+          "id": 256490899,
+          "login": "promptless-for-oss",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-19T17:24:52Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
