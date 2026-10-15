@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T08:46:08Z",
+    "updated_at": "2026-10-14T02:47:29Z",
     "id": 4840331106,
     "number": 142963,
     "user": {
@@ -19,30 +19,21 @@
     "tracked_prs": {
       "142963": {
         "id": 4840331106,
-        "updated_at": "2026-10-13T08:46:08Z",
-        "checked_at": "2026-10-13T16:16:02Z",
+        "updated_at": "2026-10-14T02:47:29Z",
+        "checked_at": "2026-10-14T15:12:29Z",
         "state": "open"
       }
     },
     "repository_id": 20580498,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
       "/repositories/20580498/issues/142963/comments?per_page=100": {
-        "etag": "W/\"61ae42bbd4852920160d9527137f3bcb404b01a17e13d5a3eaa9e433039466aa\"",
+        "etag": "W/\"27ec60aa039b8ca8bbae6827da9449688ec3af77f4491d8ec3cea3767dd80f05\"",
         "next": "",
         "value": [
-          {
-            "id": 6141243771,
-            "user": {
-              "id": 181008794,
-              "login": "kubernetes-prow[bot]",
-              "type": "Bot"
-            },
-            "created_at": "2026-10-13T08:11:47Z"
-          },
           {
             "id": 6141252270,
             "user": {
@@ -51,16 +42,25 @@
               "type": "Bot"
             },
             "created_at": "2026-10-13T08:12:19Z"
+          },
+          {
+            "id": 6159752884,
+            "user": {
+              "id": 76980726,
+              "login": "my-git9",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T02:47:21Z"
           }
         ]
       },
       "/repositories/20580498/pulls/142963/comments?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "\"220dffacd98a8517838d093614b59c23ad7b32a0e14fa34b5e00673a1b094c66\"",
         "next": "",
         "value": []
       },
       "/repositories/20580498/pulls/142963/reviews?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "\"220dffacd98a8517838d093614b59c23ad7b32a0e14fa34b5e00673a1b094c66\"",
         "next": "",
         "value": []
       }
@@ -84,15 +84,6 @@
     "reviews": [],
     "issue_comments": [
       {
-        "id": "6141243771",
-        "actor": {
-          "id": 181008794,
-          "login": "kubernetes-prow[bot]",
-          "type": "Bot"
-        },
-        "occurred_at": "2026-10-13T08:11:47Z"
-      },
-      {
         "id": "6141252270",
         "actor": {
           "id": 181008794,
@@ -100,6 +91,15 @@
           "type": "Bot"
         },
         "occurred_at": "2026-10-13T08:12:19Z"
+      },
+      {
+        "id": "6159752884",
+        "actor": {
+          "id": 76980726,
+          "login": "my-git9",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T02:47:21Z"
       }
     ],
     "review_comments": []

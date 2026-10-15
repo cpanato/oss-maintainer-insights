@@ -16,6 +16,14 @@
     "merged_at": "2026-10-01T06:18:39Z"
   },
   "state": {
+    "tracked_prs": {
+      "5267": {
+        "id": 4699036712,
+        "updated_at": "2026-10-05T20:27:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/302670797/pulls/5267/comments?per_page=100": {
+        "etag": "\"220dffacd98a8517838d093614b59c23ad7b32a0e14fa34b5e00673a1b094c66\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/302670797/pulls/5267/reviews?per_page=100": {
         "etag": "W/\"204bc16564f2c4b0aa3b53cba006706163847bf2c55e1199f4719421728cd91b\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4699036712,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-10-01T03:49:24Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5375585071",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-01T06:12:04Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5925731185",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-01T06:05:26Z"
+      }
+    ],
+    "review_comments": []
   }
 }

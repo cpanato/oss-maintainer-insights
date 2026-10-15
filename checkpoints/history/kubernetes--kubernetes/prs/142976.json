@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T15:43:56Z",
+    "updated_at": "2026-10-14T11:59:48Z",
     "id": 4843427610,
     "number": 142976,
     "user": {
@@ -19,19 +19,19 @@
     "tracked_prs": {
       "142976": {
         "id": 4843427610,
-        "updated_at": "2026-10-13T15:43:56Z",
-        "checked_at": "2026-10-13T16:16:02Z",
+        "updated_at": "2026-10-14T11:59:48Z",
+        "checked_at": "2026-10-14T15:12:29Z",
         "state": "open"
       }
     },
     "repository_id": 20580498,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
       "/repositories/20580498/issues/142976/comments?per_page=100": {
-        "etag": "W/\"f9886ea91ce97b97c0c045a257dda1cc266e02466b94b65557e5b8c49c231aa7\"",
+        "etag": "W/\"1908059e3ac62755f3ad444d280590956cdbb955d26e59603a6a34f24d376f56\"",
         "next": "",
         "value": [
           {
@@ -44,18 +44,18 @@
             "created_at": "2026-10-13T12:45:49Z"
           },
           {
-            "id": 6145864627,
+            "id": 6165812053,
             "user": {
               "id": 181008794,
               "login": "kubernetes-prow[bot]",
               "type": "Bot"
             },
-            "created_at": "2026-10-13T12:46:22Z"
+            "created_at": "2026-10-14T10:01:39Z"
           }
         ]
       },
       "/repositories/20580498/pulls/142976/comments?per_page=100": {
-        "etag": "W/\"ea482a109e462c5428e84a666892eae79cb0894bed33aded2b7d6f50c7778081\"",
+        "etag": "W/\"8e98b6187cb664eee3bd780f77c2639cddf41b4f73968fb2315e225d0799fbbb\"",
         "next": "",
         "value": [
           {
@@ -66,11 +66,20 @@
               "type": "User"
             },
             "created_at": "2026-10-13T15:43:56Z"
+          },
+          {
+            "id": 4261711175,
+            "user": {
+              "id": 5873433,
+              "login": "serathius",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T17:11:12Z"
           }
         ]
       },
       "/repositories/20580498/pulls/142976/reviews?per_page=100": {
-        "etag": "W/\"9e4fbecc38c84e4245aca9ca56b30786f884f1e18cbb308e3dc61a769079f641\"",
+        "etag": "W/\"e71018a60cc9d2b3140fb5384f74ad03da68b86b2d2fda575c975dc3c0884bd2\"",
         "next": "",
         "value": [
           {
@@ -81,6 +90,16 @@
               "type": "User"
             },
             "submitted_at": "2026-10-13T15:43:56Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5507265690,
+            "user": {
+              "id": 5873433,
+              "login": "serathius",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-13T17:11:12Z",
             "state": "COMMENTED"
           }
         ]
@@ -112,6 +131,16 @@
         },
         "occurred_at": "2026-10-13T15:43:56Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5507265690",
+        "actor": {
+          "id": 5873433,
+          "login": "serathius",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T17:11:12Z",
+        "state": "COMMENTED"
       }
     ],
     "issue_comments": [
@@ -125,13 +154,13 @@
         "occurred_at": "2026-10-13T12:45:49Z"
       },
       {
-        "id": "6145864627",
+        "id": "6165812053",
         "actor": {
           "id": 181008794,
           "login": "kubernetes-prow[bot]",
           "type": "Bot"
         },
-        "occurred_at": "2026-10-13T12:46:22Z"
+        "occurred_at": "2026-10-14T10:01:39Z"
       }
     ],
     "review_comments": [
@@ -143,6 +172,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-13T15:43:56Z"
+      },
+      {
+        "id": "4261711175",
+        "actor": {
+          "id": 5873433,
+          "login": "serathius",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T17:11:12Z"
       }
     ]
   }

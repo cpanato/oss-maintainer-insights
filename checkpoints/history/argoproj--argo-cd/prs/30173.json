@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T16:18:19Z",
+    "updated_at": "2026-10-14T21:12:07Z",
     "id": 4845693049,
     "number": 30173,
     "user": {
@@ -12,26 +12,26 @@
     },
     "created_at": "2026-10-13T15:38:43Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-14T21:09:03Z"
   },
   "state": {
     "tracked_prs": {
       "30173": {
         "id": 4845693049,
-        "updated_at": "2026-10-13T16:18:19Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T21:12:07Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 120896210,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
       "/repositories/120896210/issues/30173/comments?per_page=100": {
-        "etag": "W/\"778d97a74df41ebdd15d4392af58303625cf859367e7b09c4726a1e9019a7a9e\"",
+        "etag": "W/\"4082a2c2390dc6667f93edbce118a221259e576ec3695727adc0d427cc0a5a26\"",
         "next": "",
         "value": [
           {
@@ -69,18 +69,104 @@
               "type": "Bot"
             },
             "created_at": "2026-10-13T16:09:25Z"
+          },
+          {
+            "id": 6155173446,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T21:04:48Z"
+          },
+          {
+            "id": 6175913502,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T18:54:26Z"
+          },
+          {
+            "id": 6175952995,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T18:56:33Z"
+          },
+          {
+            "id": 6175960748,
+            "user": {
+              "id": 136622811,
+              "login": "coderabbitai[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-14T18:56:56Z"
           }
         ]
       },
       "/repositories/120896210/pulls/30173/comments?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"4aa4e4d6b1e560c26db559d463f972f5c6f6fe632bcedd0f0b343890c4d3c035\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 4274975222,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T18:56:31Z"
+          },
+          {
+            "id": 4274975231,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T18:56:31Z"
+          }
+        ]
       },
       "/repositories/120896210/pulls/30173/reviews?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"5b5c4c25589e96b3a9f520df95e03f320893b9782bdcb2b2d49bf9eb7c222de1\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5509929188,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-13T21:03:39Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5522162109,
+            "user": {
+              "id": 136622811,
+              "login": "coderabbitai[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-10-14T17:45:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5523092972,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T18:56:31Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -93,13 +179,44 @@
     },
     "created_at": "2026-10-13T15:38:43Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5509929188",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T21:03:39Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5522162109",
+        "actor": {
+          "id": 136622811,
+          "login": "coderabbitai[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-14T17:45:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5523092972",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T18:56:31Z",
+        "state": "COMMENTED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6149279442",
@@ -136,8 +253,63 @@
           "type": "Bot"
         },
         "occurred_at": "2026-10-13T16:09:25Z"
+      },
+      {
+        "id": "6155173446",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T21:04:48Z"
+      },
+      {
+        "id": "6175913502",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T18:54:26Z"
+      },
+      {
+        "id": "6175952995",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T18:56:33Z"
+      },
+      {
+        "id": "6175960748",
+        "actor": {
+          "id": 136622811,
+          "login": "coderabbitai[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-14T18:56:56Z"
       }
     ],
-    "review_comments": []
+    "review_comments": [
+      {
+        "id": "4274975222",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T18:56:31Z"
+      },
+      {
+        "id": "4274975231",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T18:56:31Z"
+      }
+    ]
   }
 }

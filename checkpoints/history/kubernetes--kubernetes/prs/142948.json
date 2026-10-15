@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-12T15:22:49Z",
+    "updated_at": "2026-10-14T05:51:42Z",
     "id": 4831447798,
     "number": 142948,
     "user": {
@@ -19,19 +19,19 @@
     "tracked_prs": {
       "142948": {
         "id": 4831447798,
-        "updated_at": "2026-10-12T15:22:49Z",
-        "checked_at": "2026-10-13T16:16:02Z",
+        "updated_at": "2026-10-14T05:51:42Z",
+        "checked_at": "2026-10-14T15:12:29Z",
         "state": "open"
       }
     },
     "repository_id": 20580498,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
       "/repositories/20580498/issues/142948/comments?per_page=100": {
-        "etag": "W/\"db131c966ff73c06b8c42eba964401b3a3d12bf059cd8f7a577b612a30d3341e\"",
+        "etag": "W/\"7ff30a3bcd2eb1ffebbf10246a5efbf31ebaeaceeeff67da6254616a989b0538\"",
         "next": "",
         "value": [
           {
@@ -82,14 +82,54 @@
         ]
       },
       "/repositories/20580498/pulls/142948/comments?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"c64d43b6d76c8b100aba15cf6bdd6ce92e41a88d5b503e6fdafc54b3c6fe0bba\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 4263115756,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T19:32:04Z"
+          },
+          {
+            "id": 4267248566,
+            "user": {
+              "id": 170962632,
+              "login": "antcybersec",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T05:51:03Z"
+          }
+        ]
       },
       "/repositories/20580498/pulls/142948/reviews?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"f90f8fe134528b5c6baa756aba875bc278d877bd8cc51c6fe117d1e73592ceed\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5508909538,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-13T19:32:07Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5513614060,
+            "user": {
+              "id": 170962632,
+              "login": "antcybersec",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T05:51:03Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -108,7 +148,28 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5508909538",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T19:32:07Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5513614060",
+        "actor": {
+          "id": 170962632,
+          "login": "antcybersec",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T05:51:03Z",
+        "state": "COMMENTED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6127221307",
@@ -156,6 +217,25 @@
         "occurred_at": "2026-10-12T15:21:18Z"
       }
     ],
-    "review_comments": []
+    "review_comments": [
+      {
+        "id": "4263115756",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T19:32:04Z"
+      },
+      {
+        "id": "4267248566",
+        "actor": {
+          "id": 170962632,
+          "login": "antcybersec",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T05:51:03Z"
+      }
+    ]
   }
 }

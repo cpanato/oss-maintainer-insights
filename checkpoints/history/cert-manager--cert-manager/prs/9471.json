@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T15:26:14Z",
+    "updated_at": "2026-10-14T09:55:38Z",
     "id": 4845532047,
     "number": 9471,
     "user": {
@@ -12,26 +12,26 @@
     },
     "created_at": "2026-10-13T15:25:55Z",
     "draft": false,
-    "state": "open",
+    "state": "closed",
     "merged_at": null
   },
   "state": {
     "tracked_prs": {
       "9471": {
         "id": 4845532047,
-        "updated_at": "2026-10-13T15:26:14Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T09:55:38Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 92313258,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/9471/comments?per_page=100": {
-        "etag": "W/\"f2d5588afaeae0d1aa877d5ae36695b18a21244184b36f91f1de46770d9ce3d9\"",
+        "etag": "W/\"304eaa3abbeb0bdb2564cf30deebb359d5da0f72052eaea9036188c1b27bc11b\"",
         "next": "",
         "value": [
           {
@@ -42,16 +42,25 @@
               "type": "Bot"
             },
             "created_at": "2026-10-13T15:26:06Z"
+          },
+          {
+            "id": 6165694689,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T09:55:06Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9471/comments?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "\"220dffacd98a8517838d093614b59c23ad7b32a0e14fa34b5e00673a1b094c66\"",
         "next": "",
         "value": []
       },
       "/repositories/92313258/pulls/9471/reviews?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "\"220dffacd98a8517838d093614b59c23ad7b32a0e14fa34b5e00673a1b094c66\"",
         "next": "",
         "value": []
       }
@@ -66,7 +75,7 @@
     },
     "created_at": "2026-10-13T15:25:55Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "closed_unmerged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -82,6 +91,15 @@
           "type": "Bot"
         },
         "occurred_at": "2026-10-13T15:26:06Z"
+      },
+      {
+        "id": "6165694689",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T09:55:06Z"
       }
     ],
     "review_comments": []

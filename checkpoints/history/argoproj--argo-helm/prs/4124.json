@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T06:29:33Z",
+    "updated_at": "2026-10-14T20:24:12Z",
     "id": 4794651620,
     "number": 4124,
     "user": {
@@ -12,31 +12,41 @@
     },
     "created_at": "2026-10-09T01:04:29Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-14T20:24:12Z"
   },
   "state": {
     "tracked_prs": {
       "4124": {
         "id": 4794651620,
-        "updated_at": "2026-10-13T06:29:33Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T20:24:12Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 106481151,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-helm",
     "pages": {
       "/repositories/106481151/issues/4124/comments?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"cf43bf75898b0cf42bf7c90adab47fe0d79445686edaa8705a3a6b548150c097\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6169880801,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T13:48:00Z"
+          }
+        ]
       },
       "/repositories/106481151/pulls/4124/comments?per_page=100": {
-        "etag": "W/\"2c063f4b449e66882841c0e0cc3dcb8a657c91c16b765e3feee5fcdc6de1012d\"",
+        "etag": "W/\"e2fd3713633e8b6b9ec54aa469fc8631559a903741c4e3992e59de398cd2580c\"",
         "next": "",
         "value": [
           {
@@ -101,11 +111,65 @@
               "type": "User"
             },
             "created_at": "2026-10-09T14:16:42Z"
+          },
+          {
+            "id": 4267543568,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T06:36:58Z"
+          },
+          {
+            "id": 4267543576,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T06:36:58Z"
+          },
+          {
+            "id": 4271593404,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T13:45:40Z"
+          },
+          {
+            "id": 4271593985,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T13:45:42Z"
+          },
+          {
+            "id": 4272382834,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T14:51:50Z"
+          },
+          {
+            "id": 4272556915,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T15:06:45Z"
           }
         ]
       },
       "/repositories/106481151/pulls/4124/reviews?per_page=100": {
-        "etag": "W/\"89a05a38f7d70681f6a968891d4b986510228af27ede4e0274bca0275572a084\"",
+        "etag": "W/\"b5f8627dba821944602369358574b2f6e97e1f2c4f803b8e2a0587f12d35bf5a\"",
         "next": "",
         "value": [
           {
@@ -157,6 +221,76 @@
             },
             "submitted_at": "2026-10-09T14:16:42Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5513967378,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T06:36:58Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5518922248,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T13:45:40Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5518922856,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T13:45:43Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5519894015,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T14:51:50Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5520104348,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T15:06:45Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5523654725,
+            "user": {
+              "id": 7290987,
+              "login": "mkilchhofer",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T19:41:12Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5524180497,
+            "user": {
+              "id": 21042968,
+              "login": "mbevc1",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T20:23:59Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -171,7 +305,7 @@
     },
     "created_at": "2026-10-09T01:04:29Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -227,9 +361,89 @@
         },
         "occurred_at": "2026-10-09T14:16:42Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5513967378",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T06:36:58Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5518922248",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T13:45:40Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5518922856",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T13:45:43Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5519894015",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T14:51:50Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5520104348",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T15:06:45Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5523654725",
+        "actor": {
+          "id": 7290987,
+          "login": "mkilchhofer",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T19:41:12Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5524180497",
+        "actor": {
+          "id": 21042968,
+          "login": "mbevc1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T20:23:59Z",
+        "state": "APPROVED"
       }
     ],
-    "issue_comments": [],
+    "issue_comments": [
+      {
+        "id": "6169880801",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T13:48:00Z"
+      }
+    ],
     "review_comments": [
       {
         "id": "4227716402",
@@ -293,6 +507,60 @@
           "type": "User"
         },
         "occurred_at": "2026-10-09T14:16:42Z"
+      },
+      {
+        "id": "4267543568",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T06:36:58Z"
+      },
+      {
+        "id": "4267543576",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T06:36:58Z"
+      },
+      {
+        "id": "4271593404",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T13:45:40Z"
+      },
+      {
+        "id": "4271593985",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T13:45:42Z"
+      },
+      {
+        "id": "4272382834",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T14:51:50Z"
+      },
+      {
+        "id": "4272556915",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T15:06:45Z"
       }
     ]
   }

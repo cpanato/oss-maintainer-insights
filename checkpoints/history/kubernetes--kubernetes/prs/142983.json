@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T14:48:49Z",
+    "updated_at": "2026-10-14T16:07:49Z",
     "id": 4845022406,
     "number": 142983,
     "user": {
@@ -19,19 +19,19 @@
     "tracked_prs": {
       "142983": {
         "id": 4845022406,
-        "updated_at": "2026-10-13T14:48:49Z",
-        "checked_at": "2026-10-13T16:16:02Z",
+        "updated_at": "2026-10-14T16:07:49Z",
+        "checked_at": "2026-10-14T15:12:29Z",
         "state": "open"
       }
     },
     "repository_id": 20580498,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
       "/repositories/20580498/issues/142983/comments?per_page=100": {
-        "etag": "W/\"4acf6031d94b10081b3ba5b79e32a659e561a5d2d30ccad80becc1e2ef07e2c1\"",
+        "etag": "W/\"77560bc26a0db2ba62af1683e8202ecb98d752a15afcce1d12015fddf6400a5e\"",
         "next": "",
         "value": [
           {
@@ -62,25 +62,125 @@
             "created_at": "2026-10-13T14:48:12Z"
           },
           {
-            "id": 6148275509,
+            "id": 6158940394,
+            "user": {
+              "id": 6629765,
+              "login": "roycaihw",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T01:37:42Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 6159455556,
+            "user": {
+              "id": 6629765,
+              "login": "roycaihw",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T02:21:25Z"
+          },
+          {
+            "id": 6159457670,
             "user": {
               "id": 181008794,
               "login": "kubernetes-prow[bot]",
               "type": "Bot"
             },
-            "created_at": "2026-10-13T14:48:49Z"
+            "created_at": "2026-10-14T02:21:35Z"
+          },
+          {
+            "id": 6164624538,
+            "user": {
+              "id": 232116997,
+              "login": "krishhna24",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T08:53:36Z"
+          },
+          {
+            "id": 6164629140,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-14T08:53:53Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 6172728138,
+            "user": {
+              "id": 6629765,
+              "login": "roycaihw",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T16:07:38Z"
+          },
+          {
+            "id": 6172731470,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-14T16:07:48Z"
           }
         ]
       },
       "/repositories/20580498/pulls/142983/comments?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"44c4449b074d349f94925b8c699d7906fb1de866703be7322e3773c839ead176\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 4265895157,
+            "user": {
+              "id": 6629765,
+              "login": "roycaihw",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T01:40:37Z"
+          },
+          {
+            "id": 4268698651,
+            "user": {
+              "id": 232116997,
+              "login": "krishhna24",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T08:53:32Z"
+          }
+        ]
       },
       "/repositories/20580498/pulls/142983/reviews?per_page=100": {
-        "etag": "\"0859c438570d15634c568bbe21c5a9e5f33826344dd746c7046e2b0950ff46cf\"",
+        "etag": "W/\"5337c87e8b2db488d3c495a2a4884ea27a2f4c7909b49c6b0dee121077f3e237\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5512081147,
+            "user": {
+              "id": 6629765,
+              "login": "roycaihw",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T01:40:37Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5515397710,
+            "user": {
+              "id": 232116997,
+              "login": "krishhna24",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T08:53:33Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -99,7 +199,28 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5512081147",
+        "actor": {
+          "id": 6629765,
+          "login": "roycaihw",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T01:40:37Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5515397710",
+        "actor": {
+          "id": 232116997,
+          "login": "krishhna24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T08:53:33Z",
+        "state": "COMMENTED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6148261120",
@@ -129,15 +250,94 @@
         "occurred_at": "2026-10-13T14:48:12Z"
       },
       {
-        "id": "6148275509",
+        "id": "6158940394",
+        "actor": {
+          "id": 6629765,
+          "login": "roycaihw",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T01:37:42Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "6159455556",
+        "actor": {
+          "id": 6629765,
+          "login": "roycaihw",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T02:21:25Z"
+      },
+      {
+        "id": "6159457670",
         "actor": {
           "id": 181008794,
           "login": "kubernetes-prow[bot]",
           "type": "Bot"
         },
-        "occurred_at": "2026-10-13T14:48:49Z"
+        "occurred_at": "2026-10-14T02:21:35Z"
+      },
+      {
+        "id": "6164624538",
+        "actor": {
+          "id": 232116997,
+          "login": "krishhna24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T08:53:36Z"
+      },
+      {
+        "id": "6164629140",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-14T08:53:53Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "6172728138",
+        "actor": {
+          "id": 6629765,
+          "login": "roycaihw",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T16:07:38Z"
+      },
+      {
+        "id": "6172731470",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-14T16:07:48Z"
       }
     ],
-    "review_comments": []
+    "review_comments": [
+      {
+        "id": "4265895157",
+        "actor": {
+          "id": 6629765,
+          "login": "roycaihw",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T01:40:37Z"
+      },
+      {
+        "id": "4268698651",
+        "actor": {
+          "id": 232116997,
+          "login": "krishhna24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T08:53:32Z"
+      }
+    ]
   }
 }
