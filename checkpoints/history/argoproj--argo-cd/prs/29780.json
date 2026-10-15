@@ -1,6 +1,6 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
     "updated_at": "2026-09-21T15:12:04Z",
     "id": 4569300848,
@@ -16,14 +16,22 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "29780": {
+        "id": 4569300848,
+        "updated_at": "2026-09-21T15:12:04Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
       "/repositories/120896210/issues/29780/comments?per_page=100": {
-        "etag": "W/\"0027ca34c9a4c23269cee07c4fb0865ad6320def25bde88e562974c181309f67\"",
+        "etag": "W/\"07acd272bdd060faf84cf71543b77806d5afa947e64d03f406f4fbb31cc83740\"",
         "next": "",
         "value": [
           {
@@ -100,8 +108,32 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/29780/comments?per_page=100": {
+        "etag": "W/\"d4064a7382222ad7fc2cc4ad4c95c70ad7aaa94e202166d90cdc27a93e18ceba\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4047248058,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-18T13:42:06Z"
+          },
+          {
+            "id": 4047248071,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-18T13:42:06Z"
+          }
+        ]
+      },
       "/repositories/120896210/pulls/29780/reviews?per_page=100": {
-        "etag": "W/\"4b8f1e54310bf725df7383df6ee7da4948f1db600c16138d679fa53188bbbc93\"",
+        "etag": "W/\"0e2f65f945a52b7a52c66fee68b3a2474dae63768a7df3c049853a8150217d35\"",
         "next": "",
         "value": [
           {
@@ -129,18 +161,135 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4569300848,
+    "author": {
+      "id": 96427312,
+      "login": "leilei3167",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-09-18T13:40:11Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5248421423",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-18T13:42:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5259199926",
+        "actor": {
+          "id": 45708547,
+          "login": "choejwoo",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-20T03:04:26Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5730829550",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-18T13:40:16Z"
+      },
+      {
+        "id": "5730837665",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-18T13:40:57Z"
+      },
+      {
+        "id": "5730851542",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-18T13:42:04Z"
+      },
+      {
+        "id": "5730852929",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-18T13:42:11Z"
+      },
+      {
+        "id": "5730877702",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-18T13:44:12Z"
+      },
+      {
+        "id": "5747530401",
+        "actor": {
+          "id": 96427312,
+          "login": "leilei3167",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-20T04:07:48Z"
+      },
+      {
+        "id": "5761235507",
+        "actor": {
+          "id": 45708547,
+          "login": "choejwoo",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-21T13:25:43Z"
+      },
+      {
+        "id": "5761840841",
+        "actor": {
+          "id": 96427312,
+          "login": "leilei3167",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-21T14:08:48Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "4047248058",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-18T13:42:06Z"
+      },
+      {
+        "id": "4047248071",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-18T13:42:06Z"
+      }
+    ]
   }
 }

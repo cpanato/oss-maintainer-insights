@@ -16,12 +16,95 @@
     "merged_at": "2026-02-27T15:46:51Z"
   },
   "state": {
+    "tracked_prs": {
+      "4698": {
+        "id": 3283087490,
+        "updated_at": "2026-05-26T20:08:47Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
     "pages": {
+      "/repositories/335952417/issues/4698/comments?per_page=100": {
+        "etag": "W/\"6eb027ba1272e3313e5602e199d5019c38c2b21741d40219c8c467f7eaf8e46e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3937423851,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-20T22:18:53Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/4698/comments?per_page=100": {
+        "etag": "W/\"2f4fd7408e9001f71f2788bc4558a906cb5b4086fac92d3e2da35c34348120d9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2835215562,
+            "user": {
+              "id": 167759,
+              "login": "steiza",
+              "type": "User"
+            },
+            "created_at": "2026-02-20T21:44:54Z"
+          },
+          {
+            "id": 2835219026,
+            "user": {
+              "id": 167759,
+              "login": "steiza",
+              "type": "User"
+            },
+            "created_at": "2026-02-20T21:46:13Z"
+          },
+          {
+            "id": 2835220846,
+            "user": {
+              "id": 167759,
+              "login": "steiza",
+              "type": "User"
+            },
+            "created_at": "2026-02-20T21:46:54Z"
+          },
+          {
+            "id": 2835225678,
+            "user": {
+              "id": 167759,
+              "login": "steiza",
+              "type": "User"
+            },
+            "created_at": "2026-02-20T21:48:27Z"
+          },
+          {
+            "id": 2835230767,
+            "user": {
+              "id": 167759,
+              "login": "steiza",
+              "type": "User"
+            },
+            "created_at": "2026-02-20T21:50:06Z"
+          },
+          {
+            "id": 2861778545,
+            "user": {
+              "id": 22200198,
+              "login": "piceri",
+              "type": "User"
+            },
+            "created_at": "2026-02-26T23:21:59Z"
+          }
+        ]
+      },
       "/repositories/335952417/pulls/4698/reviews?per_page=100": {
         "etag": "W/\"695063f03cc5448dcf397fb201f5fe863f9faf30b20620818e3abb76ee82f140\"",
         "next": "",
@@ -61,18 +144,118 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3283087490,
+    "author": {
+      "id": 22200198,
+      "login": "piceri",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-02-13T22:57:44Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3834334929",
+        "actor": {
+          "id": 167759,
+          "login": "steiza",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-20T21:50:46Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3864090979",
+        "actor": {
+          "id": 22200198,
+          "login": "piceri",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-26T23:21:59Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3867636783",
+        "actor": {
+          "id": 167759,
+          "login": "steiza",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T15:42:33Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3937423851",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-20T22:18:53Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2835215562",
+        "actor": {
+          "id": 167759,
+          "login": "steiza",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-20T21:44:54Z"
+      },
+      {
+        "id": "2835219026",
+        "actor": {
+          "id": 167759,
+          "login": "steiza",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-20T21:46:13Z"
+      },
+      {
+        "id": "2835220846",
+        "actor": {
+          "id": 167759,
+          "login": "steiza",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-20T21:46:54Z"
+      },
+      {
+        "id": "2835225678",
+        "actor": {
+          "id": 167759,
+          "login": "steiza",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-20T21:48:27Z"
+      },
+      {
+        "id": "2835230767",
+        "actor": {
+          "id": 167759,
+          "login": "steiza",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-20T21:50:06Z"
+      },
+      {
+        "id": "2861778545",
+        "actor": {
+          "id": 22200198,
+          "login": "piceri",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-26T23:21:59Z"
+      }
+    ]
   }
 }

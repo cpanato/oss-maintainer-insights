@@ -16,6 +16,14 @@
     "merged_at": "2026-01-20T13:51:37Z"
   },
   "state": {
+    "tracked_prs": {
+      "2728": {
+        "id": 3187751184,
+        "updated_at": "2026-01-20T13:51:39Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -24,6 +32,11 @@
     "pages": {
       "/repositories/272963353/issues/2728/comments?per_page=100": {
         "etag": "\"fb503f9652989c905e71fe7188f8661151a8dfbc73578dae706a05c0529ff75f\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/272963353/pulls/2728/comments?per_page=100": {
+        "etag": "\"1236038aefc2a8e9e34d3de14ad0411a7f9dafa0215807be403d02671cfeb1bf\"",
         "next": "",
         "value": []
       },
@@ -46,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3187751184,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-01-19T13:05:17Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3682297938",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-20T13:51:32Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

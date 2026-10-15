@@ -1,6 +1,6 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
     "updated_at": "2026-08-12T23:16:18Z",
     "id": 4101971400,
@@ -16,26 +16,96 @@
     "merged_at": "2026-07-22T20:05:15Z"
   },
   "state": {
+    "tracked_prs": {
+      "32426": {
+        "id": 4101971400,
+        "updated_at": "2026-08-12T23:16:18Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
-    "pages": {}
+    "pages": {
+      "/repositories/43723161/issues/32426/comments?per_page=100": {
+        "etag": "\"1236038aefc2a8e9e34d3de14ad0411a7f9dafa0215807be403d02671cfeb1bf\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32426/comments?per_page=100": {
+        "etag": "\"1236038aefc2a8e9e34d3de14ad0411a7f9dafa0215807be403d02671cfeb1bf\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32426/reviews?per_page=100": {
+        "etag": "W/\"1d6b78334658d441e9ac2ffa6f8897b6811e6591e8671b2d3840062e0de92834\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4757869870,
+            "user": {
+              "id": 13884882,
+              "login": "robertsirc",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-22T19:09:58Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4758314239,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-22T20:05:13Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4101971400,
+    "author": {
+      "id": 6032561,
+      "login": "mmorel-35",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-07-21T17:56:15Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4757869870",
+        "actor": {
+          "id": 13884882,
+          "login": "robertsirc",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-22T19:09:58Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4758314239",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-22T20:05:13Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

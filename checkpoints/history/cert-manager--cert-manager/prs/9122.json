@@ -1,0 +1,155 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-08-11T10:57:29Z",
+    "id": 4247857289,
+    "number": 9122,
+    "user": {
+      "id": 29139614,
+      "login": "renovate[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2026-08-10T19:59:22Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-08-11T10:57:28Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "9122": {
+        "id": 4247857289,
+        "updated_at": "2026-08-11T10:57:29Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/9122/comments?per_page=100": {
+        "etag": "W/\"b017a91b5b5484a065e9574bded2247d5aae17a016e775daebd18124747e20de\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5245296424,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-10T19:59:38Z"
+          },
+          {
+            "id": 5252077900,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-08-11T10:40:39Z"
+          },
+          {
+            "id": 5252083631,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-11T10:41:10Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/9122/comments?per_page=100": {
+        "etag": "\"1236038aefc2a8e9e34d3de14ad0411a7f9dafa0215807be403d02671cfeb1bf\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/9122/reviews?per_page=100": {
+        "etag": "W/\"7e7a2135ce00186754905f96546f9aa4dabf1f3ad87b32860c179a4f8c99075d\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 4905328187,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-08-11T10:40:59Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4247857289,
+    "author": {
+      "id": 29139614,
+      "login": "renovate[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2026-08-10T19:59:22Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4905328187",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-11T10:40:59Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5245296424",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-10T19:59:38Z"
+      },
+      {
+        "id": "5252077900",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-11T10:40:39Z"
+      },
+      {
+        "id": "5252083631",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-11T10:41:10Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
