@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T15:28:26Z",
+    "updated_at": "2026-10-14T09:57:26Z",
     "id": 4826797558,
     "number": 142928,
     "user": {
@@ -19,19 +19,19 @@
     "tracked_prs": {
       "142928": {
         "id": 4826797558,
-        "updated_at": "2026-10-13T15:28:26Z",
-        "checked_at": "2026-10-13T16:16:02Z",
+        "updated_at": "2026-10-14T09:57:26Z",
+        "checked_at": "2026-10-14T15:12:29Z",
         "state": "open"
       }
     },
     "repository_id": 20580498,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
       "/repositories/20580498/issues/142928/comments?per_page=100": {
-        "etag": "W/\"d66aa0554acdcc0dcb9fa8ffc0b6d3af9a15d6f607e9b008b7f229eb843b9089\"",
+        "etag": "W/\"346ca679568064d5100826fb98ae10db3fa569de9777407cdd2088832ea2b4ef\"",
         "next": "",
         "value": [
           {
@@ -73,14 +73,62 @@
         ]
       },
       "/repositories/20580498/pulls/142928/comments?per_page=100": {
-        "etag": "\"de055dae744f247d28f97ce2ba071cd0ea3d4ca9712364038574deceb0512090\"",
+        "etag": "W/\"bc37809b5826c81259a8c234a5a9d4241f6b9fe13f53ba46ee7bd57059daf701\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 4268465645,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T08:28:34Z"
+          },
+          {
+            "id": 4268557965,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T08:38:43Z"
+          },
+          {
+            "id": 4269265912,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T09:50:59Z"
+          },
+          {
+            "id": 4269328167,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T09:57:12Z"
+          }
+        ]
       },
       "/repositories/20580498/pulls/142928/reviews?per_page=100": {
-        "etag": "\"de055dae744f247d28f97ce2ba071cd0ea3d4ca9712364038574deceb0512090\"",
+        "etag": "W/\"5ec5287de0e2200151087ff447951186be9be5d591c9e38067da3569d25c0102\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5515110400,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T09:57:25Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -99,7 +147,18 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5515110400",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T09:57:25Z",
+        "state": "COMMENTED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6120516704",
@@ -138,6 +197,43 @@
         "occurred_at": "2026-10-13T15:28:26Z"
       }
     ],
-    "review_comments": []
+    "review_comments": [
+      {
+        "id": "4268465645",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T08:28:34Z"
+      },
+      {
+        "id": "4268557965",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T08:38:43Z"
+      },
+      {
+        "id": "4269265912",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T09:50:59Z"
+      },
+      {
+        "id": "4269328167",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T09:57:12Z"
+      }
+    ]
   }
 }

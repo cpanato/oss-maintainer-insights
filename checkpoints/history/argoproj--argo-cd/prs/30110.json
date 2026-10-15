@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T14:02:43Z",
+    "updated_at": "2026-10-14T08:47:33Z",
     "id": 4798643350,
     "number": 30110,
     "user": {
@@ -12,26 +12,26 @@
     },
     "created_at": "2026-10-09T09:33:20Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-14T08:44:24Z"
   },
   "state": {
     "tracked_prs": {
       "30110": {
         "id": 4798643350,
-        "updated_at": "2026-10-13T14:02:43Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T08:47:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 120896210,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
       "/repositories/120896210/issues/30110/comments?per_page=100": {
-        "etag": "W/\"978600205b3c9eff845e78d1482957eed07bbcc7b42a1f3b4b921bcdbc93ac2b\"",
+        "etag": "W/\"48f3cf86bb4c7a1f3dedba1946b0b0deaff00c10203bc41cf29db1c39f3869f7\"",
         "next": "",
         "value": [
           {
@@ -69,11 +69,38 @@
               "type": "Bot"
             },
             "created_at": "2026-10-09T10:09:21Z"
+          },
+          {
+            "id": 6162517858,
+            "user": {
+              "id": 1743100,
+              "login": "ppapapetrou76",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T06:40:31Z"
+          },
+          {
+            "id": 6163334501,
+            "user": {
+              "id": 1743100,
+              "login": "ppapapetrou76",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T07:35:45Z"
+          },
+          {
+            "id": 6164443175,
+            "user": {
+              "id": 9126448,
+              "login": "dudinea",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T08:43:00Z"
           }
         ]
       },
       "/repositories/120896210/pulls/30110/comments?per_page=100": {
-        "etag": "W/\"475c4dda174058de5f2e737c818d0898f3341264cde0a182537beadf199f7cd0\"",
+        "etag": "W/\"a819722c2aa37a5f0710562d5b81f5aa8baea701a4a72661a6adb4bda8b06ef5\"",
         "next": "",
         "value": [
           {
@@ -178,7 +205,7 @@
         ]
       },
       "/repositories/120896210/pulls/30110/reviews?per_page=100": {
-        "etag": "W/\"f3ebfa96796cc35e99bdcaff48eaf3d27c88c9e7f1f69c041e4ff8dddc5795df\"",
+        "etag": "W/\"56162335d948eb383a4d84ffe15ff08cd3ca040b92fa91f26b8b078d7d87b40e\"",
         "next": "",
         "value": [
           {
@@ -270,6 +297,16 @@
             },
             "submitted_at": "2026-10-13T14:02:16Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5515260154,
+            "user": {
+              "id": 9126448,
+              "login": "dudinea",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T08:42:08Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -284,7 +321,7 @@
     },
     "created_at": "2026-10-09T09:33:20Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -380,6 +417,16 @@
         },
         "occurred_at": "2026-10-13T14:02:16Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5515260154",
+        "actor": {
+          "id": 9126448,
+          "login": "dudinea",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T08:42:08Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -418,6 +465,33 @@
           "type": "Bot"
         },
         "occurred_at": "2026-10-09T10:09:21Z"
+      },
+      {
+        "id": "6162517858",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T06:40:31Z"
+      },
+      {
+        "id": "6163334501",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T07:35:45Z"
+      },
+      {
+        "id": "6164443175",
+        "actor": {
+          "id": 9126448,
+          "login": "dudinea",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T08:43:00Z"
       }
     ],
     "review_comments": [

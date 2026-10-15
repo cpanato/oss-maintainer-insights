@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T10:29:43Z",
+    "updated_at": "2026-10-14T10:55:50Z",
     "id": 4813347603,
     "number": 30125,
     "user": {
@@ -12,26 +12,26 @@
     },
     "created_at": "2026-10-10T18:05:26Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-14T10:52:54Z"
   },
   "state": {
     "tracked_prs": {
       "30125": {
         "id": 4813347603,
-        "updated_at": "2026-10-13T10:29:43Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T10:55:50Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 120896210,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
       "/repositories/120896210/issues/30125/comments?per_page=100": {
-        "etag": "W/\"221103bf12f57214286039ade457e020f91a715e0baa27e2a1906f3debb17b13\"",
+        "etag": "W/\"7e5a007fd364c1649e59defa2ef7f2f7e669c2d8876be9018247cfda2a64caa0\"",
         "next": "",
         "value": [
           {
@@ -82,7 +82,7 @@
         ]
       },
       "/repositories/120896210/pulls/30125/comments?per_page=100": {
-        "etag": "W/\"d2ab71843743a9b4201169669fe11694f8d7a4b2454727f6467fe5636087d9c0\"",
+        "etag": "W/\"9ce7e6ee24380434fe352ae7e88378d94fc1af72ce23081efc79a4350efb2c9b\"",
         "next": "",
         "value": [
           {
@@ -120,11 +120,20 @@
               "type": "User"
             },
             "created_at": "2026-10-13T10:29:23Z"
+          },
+          {
+            "id": 4262385658,
+            "user": {
+              "id": 34629705,
+              "login": "jatin-labs",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T18:19:07Z"
           }
         ]
       },
       "/repositories/120896210/pulls/30125/reviews?per_page=100": {
-        "etag": "W/\"c499b8c2492fc8cbdb0d633a86034a0ece46ae45606ba52ca5eb4406cce6c295\"",
+        "etag": "W/\"24f03f4a83a85058878e36019a03b52de616f3f00cc5211b0b942b679099697d\"",
         "next": "",
         "value": [
           {
@@ -186,6 +195,26 @@
             },
             "submitted_at": "2026-10-13T10:29:42Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5508052759,
+            "user": {
+              "id": 34629705,
+              "login": "jatin-labs",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-13T18:19:07Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5516781892,
+            "user": {
+              "id": 45708547,
+              "login": "choejwoo",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T10:52:19Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -200,7 +229,7 @@
     },
     "created_at": "2026-10-10T18:05:26Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -266,6 +295,26 @@
         },
         "occurred_at": "2026-10-13T10:29:42Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5508052759",
+        "actor": {
+          "id": 34629705,
+          "login": "jatin-labs",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T18:19:07Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5516781892",
+        "actor": {
+          "id": 45708547,
+          "login": "choejwoo",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T10:52:19Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -351,6 +400,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-13T10:29:23Z"
+      },
+      {
+        "id": "4262385658",
+        "actor": {
+          "id": 34629705,
+          "login": "jatin-labs",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T18:19:07Z"
       }
     ]
   }
