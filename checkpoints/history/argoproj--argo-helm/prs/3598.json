@@ -16,6 +16,14 @@
     "merged_at": "2025-11-22T12:31:02Z"
   },
   "state": {
+    "tracked_prs": {
+      "3598": {
+        "id": 3035364963,
+        "updated_at": "2025-11-29T07:24:28Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -46,6 +54,11 @@
           }
         ]
       },
+      "/repositories/106481151/pulls/3598/comments?per_page=100": {
+        "etag": "\"13208f247fd5d28f2b685dbdc1c7e8092f68c5887aac25c3b3663c2fb74496e9\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/106481151/pulls/3598/reviews?per_page=100": {
         "etag": "W/\"3140950c00db545b3993b9ea44976ae22485d0756ba787c8ece05e570c8bef87\"",
         "next": "",
@@ -75,18 +88,62 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3035364963,
+    "author": {
+      "id": 161757507,
+      "login": "argoproj-renovate[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-11-22T00:20:41Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3496578249",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-22T10:47:42Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "3496731538",
+        "actor": {
+          "id": 30188755,
+          "login": "yu-croco",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-22T12:30:09Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3591110831",
+        "actor": {
+          "id": 109060476,
+          "login": "ffahd8775",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-29T07:22:33Z"
+      },
+      {
+        "id": "3591120648",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-29T07:24:28Z"
+      }
+    ],
+    "review_comments": []
   }
 }

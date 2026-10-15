@@ -1,0 +1,157 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-08-12T23:51:26Z",
+    "id": 3879926063,
+    "number": 32230,
+    "user": {
+      "id": 2787248,
+      "login": "gjenkins8",
+      "type": "User"
+    },
+    "created_at": "2026-06-17T01:22:32Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-06-17T19:27:14Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "32230": {
+        "id": 3879926063,
+        "updated_at": "2026-08-12T23:51:26Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/32230/comments?per_page=100": {
+        "etag": "\"13208f247fd5d28f2b685dbdc1c7e8092f68c5887aac25c3b3663c2fb74496e9\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32230/comments?per_page=100": {
+        "etag": "W/\"b262aedcfc432464c22ff428bdb849f7a7037494289ff3e7605edffc56d346d7\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3425013895,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-06-17T01:25:49Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/32230/reviews?per_page=100": {
+        "etag": "W/\"221ddf9c839d178ab9654a635ee2d34311fabf46e06a7c2f44a103cdae79be62\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4511537299,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-06-17T01:25:49Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4515046780,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-17T11:24:47Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4516308846,
+            "user": {
+              "id": 681087,
+              "login": "banjoh",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-17T13:57:49Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3879926063,
+    "author": {
+      "id": 2787248,
+      "login": "gjenkins8",
+      "type": "User"
+    },
+    "created_at": "2026-06-17T01:22:32Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4511537299",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-17T01:25:49Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4515046780",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T11:24:47Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4516308846",
+        "actor": {
+          "id": 681087,
+          "login": "banjoh",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T13:57:49Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "3425013895",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-17T01:25:49Z"
+      }
+    ]
+  }
+}

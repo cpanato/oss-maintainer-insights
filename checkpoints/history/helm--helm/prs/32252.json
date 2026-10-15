@@ -1,0 +1,117 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-08-12T23:34:34Z",
+    "id": 3908917817,
+    "number": 32252,
+    "user": {
+      "id": 2787248,
+      "login": "gjenkins8",
+      "type": "User"
+    },
+    "created_at": "2026-06-22T03:41:05Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-06-22T12:59:46Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "32252": {
+        "id": 3908917817,
+        "updated_at": "2026-08-12T23:34:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/32252/comments?per_page=100": {
+        "etag": "\"13208f247fd5d28f2b685dbdc1c7e8092f68c5887aac25c3b3663c2fb74496e9\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32252/comments?per_page=100": {
+        "etag": "\"13208f247fd5d28f2b685dbdc1c7e8092f68c5887aac25c3b3663c2fb74496e9\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32252/reviews?per_page=100": {
+        "etag": "W/\"fefbcb6fd6304570a2faa3a31018a989a19b36396966a3a64f8e3c62a2e5f7b5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4540932368,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-06-22T03:44:14Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4544248998,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T12:59:10Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3908917817,
+    "author": {
+      "id": 2787248,
+      "login": "gjenkins8",
+      "type": "User"
+    },
+    "created_at": "2026-06-22T03:41:05Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4540932368",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-22T03:44:14Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4544248998",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T12:59:10Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
+  }
+}

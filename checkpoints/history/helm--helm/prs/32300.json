@@ -1,0 +1,201 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-07-09T20:59:01Z",
+    "id": 4013539881,
+    "number": 32300,
+    "user": {
+      "id": 8417720,
+      "login": "benoittgt",
+      "type": "User"
+    },
+    "created_at": "2026-07-08T10:06:12Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-07-09T20:54:52Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "32300": {
+        "id": 4013539881,
+        "updated_at": "2026-07-09T20:59:01Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/32300/comments?per_page=100": {
+        "etag": "\"13208f247fd5d28f2b685dbdc1c7e8092f68c5887aac25c3b3663c2fb74496e9\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32300/comments?per_page=100": {
+        "etag": "W/\"708618bc7fef93232622e03dab3271a02ff733eedc3b63229b90ac9cd0f4138c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3544378533,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "created_at": "2026-07-08T13:34:54Z"
+          },
+          {
+            "id": 3544412102,
+            "user": {
+              "id": 8417720,
+              "login": "benoittgt",
+              "type": "User"
+            },
+            "created_at": "2026-07-08T13:39:27Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/32300/reviews?per_page=100": {
+        "etag": "W/\"365632ae9566f8d6a57c2fb058b7daad05412cd2e7610ede757a62ba0add1313\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4654624150,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-08T13:35:54Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4654661379,
+            "user": {
+              "id": 8417720,
+              "login": "benoittgt",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-08T13:39:27Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4654701997,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-08T13:44:19Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4666677778,
+            "user": {
+              "id": 62991,
+              "login": "mattfarina",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-09T20:54:20Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4013539881,
+    "author": {
+      "id": 8417720,
+      "login": "benoittgt",
+      "type": "User"
+    },
+    "created_at": "2026-07-08T10:06:12Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4654624150",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-08T13:35:54Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4654661379",
+        "actor": {
+          "id": 8417720,
+          "login": "benoittgt",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-08T13:39:27Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4654701997",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-08T13:44:19Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4666677778",
+        "actor": {
+          "id": 62991,
+          "login": "mattfarina",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-09T20:54:20Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "3544378533",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-08T13:34:54Z"
+      },
+      {
+        "id": "3544412102",
+        "actor": {
+          "id": 8417720,
+          "login": "benoittgt",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-08T13:39:27Z"
+      }
+    ]
+  }
+}

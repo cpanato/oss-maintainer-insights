@@ -1,0 +1,177 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-08-12T23:31:08Z",
+    "id": 4027813747,
+    "number": 32320,
+    "user": {
+      "id": 6032561,
+      "login": "mmorel-35",
+      "type": "User"
+    },
+    "created_at": "2026-07-10T08:05:25Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-07-14T20:39:07Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "32320": {
+        "id": 4027813747,
+        "updated_at": "2026-08-12T23:31:08Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/32320/comments?per_page=100": {
+        "etag": "\"13208f247fd5d28f2b685dbdc1c7e8092f68c5887aac25c3b3663c2fb74496e9\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32320/comments?per_page=100": {
+        "etag": "W/\"1e5521d48b0829d8a816a4cf57cd5448a49394a99e7ea4b68ca370f1fdd5b69b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3557347465,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-10T08:09:07Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/32320/reviews?per_page=100": {
+        "etag": "W/\"76a6648fd11f0948bc696c3b38dd3b20440d7d46084a3e66182c19880ec48ff4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4669670255,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-07-10T08:09:08Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4669705969,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-07-10T08:14:19Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4670699679,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-10T10:40:40Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4698353181,
+            "user": {
+              "id": 2787248,
+              "login": "gjenkins8",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-14T20:38:57Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4027813747,
+    "author": {
+      "id": 6032561,
+      "login": "mmorel-35",
+      "type": "User"
+    },
+    "created_at": "2026-07-10T08:05:25Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4669670255",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-10T08:09:08Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4669705969",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-10T08:14:19Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4670699679",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-10T10:40:40Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4698353181",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-14T20:38:57Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "3557347465",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-10T08:09:07Z"
+      }
+    ]
+  }
+}
