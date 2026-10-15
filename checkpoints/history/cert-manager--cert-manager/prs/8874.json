@@ -1,0 +1,159 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-06-13T08:55:30Z",
+    "id": 3859440624,
+    "number": 8874,
+    "user": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2026-06-13T08:31:26Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-06-13T08:55:30Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8874": {
+        "id": 3859440624,
+        "updated_at": "2026-06-13T08:55:30Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8874/comments?per_page=100": {
+        "etag": "W/\"388f386e5e21e47cf0b84fb3dfa6c48c26435ba353abd4912c70db84dc7216f4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4698004627,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-06-13T08:31:44Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 4698053622,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-06-13T08:54:11Z"
+          },
+          {
+            "id": 4698054926,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-06-13T08:54:51Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8874/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8874/reviews?per_page=100": {
+        "etag": "W/\"d54c872469487821a67735a1c2fcdd66b3dd421792df2fd17ddfe10b45a92e3d\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4491185047,
+            "user": {
+              "id": 57584831,
+              "login": "lunarwhite",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-13T08:48:29Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3859440624,
+    "author": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2026-06-13T08:31:26Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4491185047",
+        "actor": {
+          "id": 57584831,
+          "login": "lunarwhite",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-13T08:48:29Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4698004627",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-13T08:31:44Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "4698053622",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-13T08:54:11Z"
+      },
+      {
+        "id": "4698054926",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-13T08:54:51Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

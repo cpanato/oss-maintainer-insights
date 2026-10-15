@@ -1,0 +1,241 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-06-16T05:37:06Z",
+    "id": 3669775260,
+    "number": 8781,
+    "user": {
+      "id": 978965,
+      "login": "wallrj",
+      "type": "User"
+    },
+    "created_at": "2026-05-12T15:19:48Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-06-15T17:59:33Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8781": {
+        "id": 3669775260,
+        "updated_at": "2026-06-16T05:37:06Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8781/comments?per_page=100": {
+        "etag": "W/\"db2b966f5db059411857ecdd79e59cfa27285a157fc904b1a9c736a49f140f87\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4710474699,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-06-15T17:21:33Z"
+          },
+          {
+            "id": 4710476183,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-06-15T17:21:45Z"
+          },
+          {
+            "id": 4710483414,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-06-15T17:22:39Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8781/comments?per_page=100": {
+        "etag": "W/\"d90c97bcdb7c95a50d3226c1e3b29714f5b51ef1389b1d7a26303ab0478213fa\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3231885461,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-05-13T06:07:39Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8781/reviews?per_page=100": {
+        "etag": "W/\"a1fc60993992da2be39b5dae62478db2508b83b55f480f51e1bb3cf1094b93e9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4278793803,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-13T06:07:39Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4496979907,
+            "user": {
+              "id": 57584831,
+              "login": "lunarwhite",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-15T11:36:43Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4499546340,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-06-15T17:18:43Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 4499563045,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-15T17:21:25Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3669775260,
+    "author": {
+      "id": 978965,
+      "login": "wallrj",
+      "type": "User"
+    },
+    "created_at": "2026-05-12T15:19:48Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4278793803",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T06:07:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4496979907",
+        "actor": {
+          "id": 57584831,
+          "login": "lunarwhite",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-15T11:36:43Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4499546340",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-15T17:18:43Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4499563045",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-15T17:21:25Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4710474699",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-15T17:21:33Z"
+      },
+      {
+        "id": "4710476183",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-15T17:21:45Z"
+      },
+      {
+        "id": "4710483414",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-15T17:22:39Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3231885461",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T06:07:39Z"
+      }
+    ]
+  }
+}

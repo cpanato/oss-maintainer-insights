@@ -16,6 +16,14 @@
     "merged_at": "2026-03-03T20:46:11Z"
   },
   "state": {
+    "tracked_prs": {
+      "4548": {
+        "id": 3045013963,
+        "updated_at": "2026-03-03T20:46:23Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -34,6 +42,39 @@
               "type": "Bot"
             },
             "created_at": "2025-11-25T21:02:36Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/4548/comments?per_page=100": {
+        "etag": "W/\"482903c4cea6212c4a56f151984495f48ae35be3c81cec1103e23f0553e75934\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2866565813,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "created_at": "2026-02-27T23:02:20Z"
+          },
+          {
+            "id": 2880205929,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "created_at": "2026-03-03T19:59:42Z"
+          },
+          {
+            "id": 2880373588,
+            "user": {
+              "id": 64337293,
+              "login": "aaronlew02",
+              "type": "User"
+            },
+            "created_at": "2026-03-03T20:40:14Z"
           }
         ]
       },
@@ -96,18 +137,111 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3045013963,
+    "author": {
+      "id": 64337293,
+      "login": "aaronlew02",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-11-25T20:59:52Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3527235429",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-01T21:58:51Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "3869479646",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T23:01:17Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3869481753",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T23:02:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3884754991",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-03T20:32:16Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "3884930984",
+        "actor": {
+          "id": 64337293,
+          "login": "aaronlew02",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-03T20:40:14Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3577578415",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-11-25T21:02:36Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2866565813",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T23:02:20Z"
+      },
+      {
+        "id": "2880205929",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-03T19:59:42Z"
+      },
+      {
+        "id": "2880373588",
+        "actor": {
+          "id": 64337293,
+          "login": "aaronlew02",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-03T20:40:14Z"
+      }
+    ]
   }
 }

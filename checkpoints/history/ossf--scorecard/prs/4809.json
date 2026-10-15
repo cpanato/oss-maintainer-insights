@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-10-10T23:08:58Z",
+    "id": 2881718867,
+    "number": 4809,
+    "user": {
+      "id": 1439341,
+      "login": "martincostello",
+      "type": "User"
+    },
+    "created_at": "2025-10-02T13:00:39Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-10-03T21:54:48Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "4809": {
+        "id": 2881718867,
+        "updated_at": "2025-10-10T23:08:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 302670797,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "ossf/scorecard",
+    "pages": {
+      "/repositories/302670797/issues/4809/comments?per_page=100": {
+        "etag": "W/\"855aec0d84788b14ea277d9cc0106498e038f1ff79b453d82ea9d49f7452f225\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3361145167,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-10-02T13:04:10Z"
+          }
+        ]
+      },
+      "/repositories/302670797/pulls/4809/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/302670797/pulls/4809/reviews?per_page=100": {
+        "etag": "W/\"a6217101d3ac9a0ae27ef192ee067fcfd89f1cd80e9f349b502b2a5bc41ea776\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3294513707,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2025-10-02T13:00:47Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3301083405,
+            "user": {
+              "id": 6064089,
+              "login": "spencerschrock",
+              "type": "User"
+            },
+            "submitted_at": "2025-10-03T21:44:52Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2881718867,
+    "author": {
+      "id": 1439341,
+      "login": "martincostello",
+      "type": "User"
+    },
+    "created_at": "2025-10-02T13:00:39Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3294513707",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-10-02T13:00:47Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3301083405",
+        "actor": {
+          "id": 6064089,
+          "login": "spencerschrock",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-03T21:44:52Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3361145167",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-10-02T13:04:10Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

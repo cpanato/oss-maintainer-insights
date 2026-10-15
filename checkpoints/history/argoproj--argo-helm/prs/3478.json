@@ -16,12 +16,30 @@
     "merged_at": "2025-09-10T17:47:29Z"
   },
   "state": {
+    "tracked_prs": {
+      "3478": {
+        "id": 2816172465,
+        "updated_at": "2025-09-10T17:47:30Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-helm",
     "pages": {
+      "/repositories/106481151/issues/3478/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/106481151/pulls/3478/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/106481151/pulls/3478/reviews?per_page=100": {
         "etag": "W/\"7bbc70adf9ebf85ded7e881f6e83affaddcb0dc9d241832d23b1ef678e12c065\"",
         "next": "",
@@ -51,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2816172465,
+    "author": {
+      "id": 161757507,
+      "login": "argoproj-renovate[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-09-10T17:05:19Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3207058939",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-10T17:06:28Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "3207222439",
+        "actor": {
+          "id": 21042968,
+          "login": "mbevc1",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-10T17:47:22Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

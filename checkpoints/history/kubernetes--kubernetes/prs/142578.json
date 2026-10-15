@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "142578": {
+        "id": 4697982943,
+        "updated_at": "2026-10-01T01:34:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "open"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -73,6 +81,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/142578/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/142578/reviews?per_page=100": {
         "etag": "\"1236038aefc2a8e9e34d3de14ad0411a7f9dafa0215807be403d02671cfeb1bf\"",
         "next": "",
@@ -81,18 +94,68 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4697982943,
+    "author": {
+      "id": 12152047,
+      "login": "harche",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-10-01T01:25:13Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "5922838761",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-01T01:25:16Z"
+      },
+      {
+        "id": "5922846005",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-01T01:25:57Z"
+      },
+      {
+        "id": "5922886935",
+        "actor": {
+          "id": 12152047,
+          "login": "harche",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-01T01:29:49Z"
+      },
+      {
+        "id": "5922935470",
+        "actor": {
+          "id": 12152047,
+          "login": "harche",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-01T01:34:17Z"
+      },
+      {
+        "id": "5922938923",
+        "actor": {
+          "id": 12152047,
+          "login": "harche",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-01T01:34:34Z"
+      }
+    ],
+    "review_comments": []
   }
 }

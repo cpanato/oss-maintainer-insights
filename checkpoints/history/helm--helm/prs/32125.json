@@ -1,0 +1,111 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-06-12T02:08:08Z",
+    "id": 3690122210,
+    "number": 32125,
+    "user": {
+      "id": 1413412,
+      "login": "SebTardif",
+      "type": "User"
+    },
+    "created_at": "2026-05-15T14:17:00Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-05-18T15:00:00Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "32125": {
+        "id": 3690122210,
+        "updated_at": "2026-06-12T02:08:08Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/32125/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32125/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32125/reviews?per_page=100": {
+        "etag": "W/\"b98659527212ab2980562e927b130fdbbd7a48440a1abdf61017ea1a4b241fca\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4298814330,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-05-15T14:19:06Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4311281712,
+            "user": {
+              "id": 2787248,
+              "login": "gjenkins8",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-18T14:59:52Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3690122210,
+    "author": {
+      "id": 1413412,
+      "login": "SebTardif",
+      "type": "User"
+    },
+    "created_at": "2026-05-15T14:17:00Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4298814330",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-15T14:19:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4311281712",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-18T14:59:52Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
+  }
+}

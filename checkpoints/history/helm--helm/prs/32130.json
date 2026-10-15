@@ -1,0 +1,129 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-05-17T18:31:56Z",
+    "id": 3698066901,
+    "number": 32130,
+    "user": {
+      "id": 153052,
+      "login": "sylr",
+      "type": "User"
+    },
+    "created_at": "2026-05-17T18:25:57Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": null
+  },
+  "state": {
+    "tracked_prs": {
+      "32130": {
+        "id": 3698066901,
+        "updated_at": "2026-05-17T18:31:56Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/32130/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/32130/comments?per_page=100": {
+        "etag": "W/\"182bc748e0fa6e7b2ee9ce883a7d77d2f3a66bbdfc2617a5f4b1788d2ff1c491\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3255272911,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-05-17T18:28:48Z"
+          },
+          {
+            "id": 3255272918,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-05-17T18:28:49Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/32130/reviews?per_page=100": {
+        "etag": "W/\"545ec7921639d87b35ee53993aee12929c4f783cefa506346808a7aa766122e8\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4306116074,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-05-17T18:28:49Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3698066901,
+    "author": {
+      "id": 153052,
+      "login": "sylr",
+      "type": "User"
+    },
+    "created_at": "2026-05-17T18:25:57Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4306116074",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-17T18:28:49Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "3255272911",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-17T18:28:48Z"
+      },
+      {
+        "id": "3255272918",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-17T18:28:49Z"
+      }
+    ]
+  }
+}

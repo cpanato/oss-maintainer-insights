@@ -1,0 +1,161 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-09-28T13:14:38Z",
+    "id": 4662353860,
+    "number": 142477,
+    "user": {
+      "id": 2128935,
+      "login": "skitt",
+      "type": "User"
+    },
+    "created_at": "2026-09-28T10:22:10Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-09-28T13:14:35Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "142477": {
+        "id": 4662353860,
+        "updated_at": "2026-09-28T13:14:38Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/142477/comments?per_page=100": {
+        "etag": "W/\"eb394eec16ac45a26612a0ac674834ec6bacff4f57647b70a28ba5e48a959e0c\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 5869003292,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2026-09-28T11:32:02Z"
+          },
+          {
+            "id": 5869074813,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-28T11:37:01Z"
+          },
+          {
+            "id": 5869077898,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-28T11:37:15Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/142477/comments?per_page=100": {
+        "etag": "\"938b76db10bf5aa9720982f11c06b8ba37298940c2f7db7e873fe564faaa89c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/142477/reviews?per_page=100": {
+        "etag": "W/\"25c7eb788bb4aa8a826b6cd7f4be1587423db5f4fc688ad16dd10753b31e1679\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 5337996313,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-28T11:36:54Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4662353860,
+    "author": {
+      "id": 2128935,
+      "login": "skitt",
+      "type": "User"
+    },
+    "created_at": "2026-09-28T10:22:10Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "5337996313",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-28T11:36:54Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "5869003292",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-28T11:32:02Z"
+      },
+      {
+        "id": "5869074813",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-28T11:37:01Z"
+      },
+      {
+        "id": "5869077898",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-28T11:37:15Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
