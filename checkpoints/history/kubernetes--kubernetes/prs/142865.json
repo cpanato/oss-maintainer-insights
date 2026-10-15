@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T16:11:04Z",
+    "updated_at": "2026-10-14T21:59:13Z",
     "id": 4799377214,
     "number": 142865,
     "user": {
@@ -12,26 +12,26 @@
     },
     "created_at": "2026-10-09T10:47:45Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-14T19:44:36Z"
   },
   "state": {
     "tracked_prs": {
       "142865": {
         "id": 4799377214,
-        "updated_at": "2026-10-13T16:11:04Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T21:59:13Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 20580498,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
       "/repositories/20580498/issues/142865/comments?per_page=100": {
-        "etag": "W/\"cd4cec5a642b4f50bc670847e5f78779042ec172e5779dc6345b3814c2440661\"",
+        "etag": "W/\"95a54504e0fa94c9e319965ea3a85027390058454add87787f65d85623943ef1\"",
         "next": "",
         "value": [
           {
@@ -104,15 +104,6 @@
             "created_at": "2026-10-13T11:36:20Z"
           },
           {
-            "id": 6147789005,
-            "user": {
-              "id": 181008794,
-              "login": "kubernetes-prow[bot]",
-              "type": "Bot"
-            },
-            "created_at": "2026-10-13T14:24:50Z"
-          },
-          {
             "id": 6147806947,
             "user": {
               "id": 22076,
@@ -134,27 +125,139 @@
             "created_at": "2026-10-13T14:59:07Z"
           },
           {
-            "id": 6149339390,
+            "review_commands": [
+              "approve"
+            ],
+            "id": 6164872714,
             "user": {
-              "id": 181008794,
-              "login": "kubernetes-prow[bot]",
-              "type": "Bot"
+              "id": 1745006,
+              "login": "jsafrane",
+              "type": "User"
             },
-            "created_at": "2026-10-13T15:41:56Z"
+            "created_at": "2026-10-14T09:07:50Z"
           },
           {
-            "id": 6150865723,
+            "id": 6164878856,
             "user": {
               "id": 181008794,
               "login": "kubernetes-prow[bot]",
               "type": "Bot"
             },
-            "created_at": "2026-10-13T17:03:31Z"
+            "created_at": "2026-10-14T09:08:12Z"
+          },
+          {
+            "id": 6165883944,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T10:05:34Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 6166562371,
+            "user": {
+              "id": 3648838,
+              "login": "atiratree",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T10:44:53Z"
+          },
+          {
+            "id": 6166581531,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-14T10:46:04Z"
+          },
+          {
+            "id": 6168158668,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T12:18:35Z"
+          },
+          {
+            "id": 6168691825,
+            "user": {
+              "id": 3648838,
+              "login": "atiratree",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T12:47:41Z"
+          },
+          {
+            "id": 6170487745,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-14T14:17:29Z"
+          },
+          {
+            "id": 6171183353,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T14:51:19Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 6171228182,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T14:53:30Z"
+          },
+          {
+            "id": 6171231146,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-14T14:53:39Z"
+          },
+          {
+            "id": 6175290052,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T18:21:15Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 6179414437,
+            "user": {
+              "id": 917931,
+              "login": "BenTheElder",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T21:59:13Z"
           }
         ]
       },
       "/repositories/20580498/pulls/142865/comments?per_page=100": {
-        "etag": "W/\"05b43d1367447cf56d0e61e23161b71216d3686bf1f8471159c5be8220d4e8ff\"",
+        "etag": "W/\"6d4a289c65c9e0689b1695d52f2294706cc684ab67c290fd057be0ed6f50fe50\"",
         "next": "",
         "value": [
           {
@@ -336,11 +439,20 @@
               "type": "User"
             },
             "created_at": "2026-10-13T15:19:20Z"
+          },
+          {
+            "id": 4269799866,
+            "user": {
+              "id": 917931,
+              "login": "BenTheElder",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T10:48:11Z"
           }
         ]
       },
       "/repositories/20580498/pulls/142865/reviews?per_page=100": {
-        "etag": "W/\"9b8f13f5444a5d46fdebf4a1be4ba2309437a6ffc19ac6a86a578b18ffa86b25\"",
+        "etag": "W/\"aea339a5e016be7f231bcf3c55948e2c19356f238d54113ca99341fae5af696d\"",
         "next": "",
         "value": [
           {
@@ -495,6 +607,16 @@
             },
             "submitted_at": "2026-10-13T15:41:31Z",
             "state": "APPROVED"
+          },
+          {
+            "id": 5516735822,
+            "user": {
+              "id": 917931,
+              "login": "BenTheElder",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T10:48:11Z",
+            "state": "COMMENTED"
           }
         ]
       }
@@ -509,7 +631,7 @@
     },
     "created_at": "2026-10-09T10:47:45Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -668,6 +790,16 @@
         },
         "occurred_at": "2026-10-13T15:41:31Z",
         "state": "APPROVED"
+      },
+      {
+        "id": "5516735822",
+        "actor": {
+          "id": 917931,
+          "login": "BenTheElder",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T10:48:11Z",
+        "state": "COMMENTED"
       }
     ],
     "issue_comments": [
@@ -741,15 +873,6 @@
         "occurred_at": "2026-10-13T11:36:20Z"
       },
       {
-        "id": "6147789005",
-        "actor": {
-          "id": 181008794,
-          "login": "kubernetes-prow[bot]",
-          "type": "Bot"
-        },
-        "occurred_at": "2026-10-13T14:24:50Z"
-      },
-      {
         "id": "6147806947",
         "actor": {
           "id": 22076,
@@ -771,22 +894,134 @@
         "occurred_at": "2026-10-13T14:59:07Z"
       },
       {
-        "id": "6149339390",
+        "review_commands": [
+          "approve"
+        ],
+        "id": "6164872714",
         "actor": {
-          "id": 181008794,
-          "login": "kubernetes-prow[bot]",
-          "type": "Bot"
+          "id": 1745006,
+          "login": "jsafrane",
+          "type": "User"
         },
-        "occurred_at": "2026-10-13T15:41:56Z"
+        "occurred_at": "2026-10-14T09:07:50Z"
       },
       {
-        "id": "6150865723",
+        "id": "6164878856",
         "actor": {
           "id": 181008794,
           "login": "kubernetes-prow[bot]",
           "type": "Bot"
         },
-        "occurred_at": "2026-10-13T17:03:31Z"
+        "occurred_at": "2026-10-14T09:08:12Z"
+      },
+      {
+        "id": "6165883944",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T10:05:34Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "6166562371",
+        "actor": {
+          "id": 3648838,
+          "login": "atiratree",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T10:44:53Z"
+      },
+      {
+        "id": "6166581531",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-14T10:46:04Z"
+      },
+      {
+        "id": "6168158668",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T12:18:35Z"
+      },
+      {
+        "id": "6168691825",
+        "actor": {
+          "id": 3648838,
+          "login": "atiratree",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T12:47:41Z"
+      },
+      {
+        "id": "6170487745",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-14T14:17:29Z"
+      },
+      {
+        "id": "6171183353",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T14:51:19Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "6171228182",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T14:53:30Z"
+      },
+      {
+        "id": "6171231146",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-14T14:53:39Z"
+      },
+      {
+        "id": "6175290052",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T18:21:15Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "6179414437",
+        "actor": {
+          "id": 917931,
+          "login": "BenTheElder",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T21:59:13Z"
       }
     ],
     "review_comments": [
@@ -969,6 +1204,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-13T15:19:20Z"
+      },
+      {
+        "id": "4269799866",
+        "actor": {
+          "id": 917931,
+          "login": "BenTheElder",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T10:48:11Z"
       }
     ]
   }

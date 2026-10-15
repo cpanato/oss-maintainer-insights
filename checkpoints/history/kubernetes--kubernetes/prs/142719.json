@@ -1,0 +1,961 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-10-09T11:10:06Z",
+    "id": 4757179884,
+    "number": 142719,
+    "user": {
+      "id": 26010563,
+      "login": "GFilipek",
+      "type": "User"
+    },
+    "created_at": "2026-10-06T10:04:51Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-10-09T11:10:03Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "142719": {
+        "id": 4757179884,
+        "updated_at": "2026-10-09T11:10:06Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/142719/comments?per_page=100": {
+        "etag": "W/\"9f3113f25816595c8668147ce1a9f889ec5f8f220eb92ee7003af1acb9fff78d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 6013951450,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-06T10:05:01Z"
+          },
+          {
+            "id": 6013951804,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-06T10:05:02Z"
+          },
+          {
+            "id": 6013991073,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T10:07:30Z"
+          },
+          {
+            "id": 6014131800,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T10:16:14Z"
+          },
+          {
+            "id": 6045224683,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T19:26:24Z"
+          },
+          {
+            "id": 6059555232,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-08T12:10:53Z"
+          },
+          {
+            "id": 6064963806,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-08T17:01:31Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 6077822188,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-09T09:02:43Z"
+          },
+          {
+            "id": 6077825107,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-09T09:02:55Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 6078943703,
+            "user": {
+              "id": 98281017,
+              "login": "dom4ha",
+              "type": "User"
+            },
+            "created_at": "2026-10-09T10:18:54Z"
+          },
+          {
+            "id": 6078948936,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-09T10:19:16Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/142719/comments?per_page=100": {
+        "etag": "W/\"317109910db806abc067ab0ed4c46eb6b5c3cd29a550b64dcb56198ab0bc0a91\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4194853803,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T11:47:34Z"
+          },
+          {
+            "id": 4194883346,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T11:50:51Z"
+          },
+          {
+            "id": 4194977381,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T12:01:55Z"
+          },
+          {
+            "id": 4195051536,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T12:10:31Z"
+          },
+          {
+            "id": 4195087890,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T12:14:47Z"
+          },
+          {
+            "id": 4195210248,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T12:27:28Z"
+          },
+          {
+            "id": 4195280856,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-06T12:34:22Z"
+          },
+          {
+            "id": 4207407676,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:22:03Z"
+          },
+          {
+            "id": 4207473157,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:28:22Z"
+          },
+          {
+            "id": 4207475822,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:28:37Z"
+          },
+          {
+            "id": 4207493420,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:30:19Z"
+          },
+          {
+            "id": 4207589173,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:38:59Z"
+          },
+          {
+            "id": 4207590579,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:39:07Z"
+          },
+          {
+            "id": 4207606598,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:40:35Z"
+          },
+          {
+            "id": 4207614568,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:41:19Z"
+          },
+          {
+            "id": 4207638183,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T13:43:27Z"
+          },
+          {
+            "id": 4210035342,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T17:39:16Z"
+          },
+          {
+            "id": 4210036610,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-07T17:39:24Z"
+          },
+          {
+            "id": 4220985747,
+            "user": {
+              "id": 98281017,
+              "login": "dom4ha",
+              "type": "User"
+            },
+            "created_at": "2026-10-08T15:34:29Z"
+          },
+          {
+            "id": 4221512911,
+            "user": {
+              "id": 98281017,
+              "login": "dom4ha",
+              "type": "User"
+            },
+            "created_at": "2026-10-08T16:24:25Z"
+          },
+          {
+            "id": 4222096744,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "created_at": "2026-10-08T17:23:51Z"
+          },
+          {
+            "id": 4228142176,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "created_at": "2026-10-09T08:24:38Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/142719/reviews?per_page=100": {
+        "etag": "W/\"207525fd6597ff34a2eb8ee0f359a7b776fb441f8c0307956b110225a5254200\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5427848633,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-06T14:08:32Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5443011076,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T13:28:22Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5443014147,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T13:28:37Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5443152808,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T13:39:00Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5443154606,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T13:39:08Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5443175725,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T13:40:35Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5443185359,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T13:41:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5443213983,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T13:43:28Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5442905133,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T13:58:42Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5446066909,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T17:39:16Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5446068707,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T17:39:24Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5459137688,
+            "user": {
+              "id": 98281017,
+              "login": "dom4ha",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-08T16:24:47Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5460451027,
+            "user": {
+              "id": 22770898,
+              "login": "tosi3k",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-08T17:23:51Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5467629423,
+            "user": {
+              "id": 26010563,
+              "login": "GFilipek",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-09T08:24:38Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4757179884,
+    "author": {
+      "id": 26010563,
+      "login": "GFilipek",
+      "type": "User"
+    },
+    "created_at": "2026-10-06T10:04:51Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5427848633",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T14:08:32Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5443011076",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:28:22Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5443014147",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:28:37Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5443152808",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:39:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5443154606",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:39:08Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5443175725",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:40:35Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5443185359",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:41:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5443213983",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:43:28Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5442905133",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:58:42Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5446066909",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T17:39:16Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5446068707",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T17:39:24Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5459137688",
+        "actor": {
+          "id": 98281017,
+          "login": "dom4ha",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T16:24:47Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5460451027",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T17:23:51Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5467629423",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-09T08:24:38Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6013951450",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-06T10:05:01Z"
+      },
+      {
+        "id": "6013951804",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-06T10:05:02Z"
+      },
+      {
+        "id": "6013991073",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T10:07:30Z"
+      },
+      {
+        "id": "6014131800",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T10:16:14Z"
+      },
+      {
+        "id": "6045224683",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T19:26:24Z"
+      },
+      {
+        "id": "6059555232",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T12:10:53Z"
+      },
+      {
+        "id": "6064963806",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T17:01:31Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "6077822188",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-09T09:02:43Z"
+      },
+      {
+        "id": "6077825107",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-09T09:02:55Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "6078943703",
+        "actor": {
+          "id": 98281017,
+          "login": "dom4ha",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-09T10:18:54Z"
+      },
+      {
+        "id": "6078948936",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-09T10:19:16Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "4194853803",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T11:47:34Z"
+      },
+      {
+        "id": "4194883346",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T11:50:51Z"
+      },
+      {
+        "id": "4194977381",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T12:01:55Z"
+      },
+      {
+        "id": "4195051536",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T12:10:31Z"
+      },
+      {
+        "id": "4195087890",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T12:14:47Z"
+      },
+      {
+        "id": "4195210248",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T12:27:28Z"
+      },
+      {
+        "id": "4195280856",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-06T12:34:22Z"
+      },
+      {
+        "id": "4207407676",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:22:03Z"
+      },
+      {
+        "id": "4207473157",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:28:22Z"
+      },
+      {
+        "id": "4207475822",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:28:37Z"
+      },
+      {
+        "id": "4207493420",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:30:19Z"
+      },
+      {
+        "id": "4207589173",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:38:59Z"
+      },
+      {
+        "id": "4207590579",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:39:07Z"
+      },
+      {
+        "id": "4207606598",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:40:35Z"
+      },
+      {
+        "id": "4207614568",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:41:19Z"
+      },
+      {
+        "id": "4207638183",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T13:43:27Z"
+      },
+      {
+        "id": "4210035342",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T17:39:16Z"
+      },
+      {
+        "id": "4210036610",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T17:39:24Z"
+      },
+      {
+        "id": "4220985747",
+        "actor": {
+          "id": 98281017,
+          "login": "dom4ha",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T15:34:29Z"
+      },
+      {
+        "id": "4221512911",
+        "actor": {
+          "id": 98281017,
+          "login": "dom4ha",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T16:24:25Z"
+      },
+      {
+        "id": "4222096744",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-08T17:23:51Z"
+      },
+      {
+        "id": "4228142176",
+        "actor": {
+          "id": 26010563,
+          "login": "GFilipek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-09T08:24:38Z"
+      }
+    ]
+  }
+}

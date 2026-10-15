@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-10-07T15:04:28Z",
+    "id": 4704401384,
+    "number": 29953,
+    "user": {
+      "id": 231928284,
+      "login": "argo-cd-cherry-pick-bot[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2026-10-01T13:37:07Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-10-07T15:04:26Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "29953": {
+        "id": 4704401384,
+        "updated_at": "2026-10-07T15:04:28Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 120896210,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "argoproj/argo-cd",
+    "pages": {
+      "/repositories/120896210/issues/29953/comments?per_page=100": {
+        "etag": "W/\"31cc66d56c3482299cf16092f66c29cf4d48d3c97584748ef4f585f9dad3f821\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5933880549,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-01T14:47:20Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/29953/comments?per_page=100": {
+        "etag": "\"fb503f9652989c905e71fe7188f8661151a8dfbc73578dae706a05c0529ff75f\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/29953/reviews?per_page=100": {
+        "etag": "W/\"d2934721b1085d853a5b7516fb1990a446401dd28d191462511a68df88e23ca5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5380150929,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-01T13:49:20Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 5444331724,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-07T15:04:19Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4704401384,
+    "author": {
+      "id": 231928284,
+      "login": "argo-cd-cherry-pick-bot[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2026-10-01T13:37:07Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5380150929",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-01T13:49:20Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "5444331724",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-07T15:04:19Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5933880549",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-01T14:47:20Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

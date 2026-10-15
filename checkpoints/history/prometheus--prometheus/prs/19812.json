@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T20:42:54Z",
+    "updated_at": "2026-10-14T11:37:45Z",
     "id": 4613038521,
     "number": 19812,
     "user": {
@@ -12,26 +12,26 @@
     },
     "created_at": "2026-09-23T11:32:45Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-14T11:37:43Z"
   },
   "state": {
     "tracked_prs": {
       "19812": {
         "id": 4613038521,
-        "updated_at": "2026-10-13T20:42:54Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T11:37:45Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 6838921,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
     "pages": {
       "/repositories/6838921/issues/19812/comments?per_page=100": {
-        "etag": "W/\"d8622f3aacc68a945fda8bc6eb495c1b272b2edb76a51542d54e70f2ea14445a\"",
+        "etag": "W/\"e5fce18ab60570f398c704f654a085989f2b9ea006176778b0d3e0a14114e569\"",
         "next": "",
         "value": [
           {
@@ -46,7 +46,7 @@
         ]
       },
       "/repositories/6838921/pulls/19812/comments?per_page=100": {
-        "etag": "W/\"c748c220dbea4b0c3cdbc6ea52706e00a0796d22a16b13f54616fce5100790af\"",
+        "etag": "W/\"ede55e5d89f1cfdc1a8a741f8f5d4daaa67cd0337e40fb00223e4099130444e5\"",
         "next": "",
         "value": [
           {
@@ -201,11 +201,74 @@
               "type": "User"
             },
             "created_at": "2026-10-13T16:57:35Z"
+          },
+          {
+            "id": 4263808769,
+            "user": {
+              "id": 6950331,
+              "login": "bwplotka",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T20:43:29Z"
+          },
+          {
+            "id": 4263808938,
+            "user": {
+              "id": 6950331,
+              "login": "bwplotka",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T20:43:31Z"
+          },
+          {
+            "id": 4263809192,
+            "user": {
+              "id": 6950331,
+              "login": "bwplotka",
+              "type": "User"
+            },
+            "created_at": "2026-10-13T20:43:32Z"
+          },
+          {
+            "id": 4267472886,
+            "user": {
+              "id": 13435893,
+              "login": "krajorama",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T06:26:46Z"
+          },
+          {
+            "id": 4267598823,
+            "user": {
+              "id": 13435893,
+              "login": "krajorama",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T06:44:49Z"
+          },
+          {
+            "id": 4268867187,
+            "user": {
+              "id": 6950331,
+              "login": "bwplotka",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T09:11:16Z"
+          },
+          {
+            "id": 4268867500,
+            "user": {
+              "id": 6950331,
+              "login": "bwplotka",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T09:11:18Z"
           }
         ]
       },
       "/repositories/6838921/pulls/19812/reviews?per_page=100": {
-        "etag": "W/\"bf3f49663352efeeaa0dc494da177d573ba12a1fea3da9a2a410eff8f3274c8b\"",
+        "etag": "W/\"05413625f4fd21c9583a0344c943d6d57e9f0466a42f55e1d5a26a5caee9cd41\"",
         "next": "",
         "value": [
           {
@@ -267,6 +330,36 @@
             },
             "submitted_at": "2026-10-13T16:57:35Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5513884149,
+            "user": {
+              "id": 13435893,
+              "login": "krajorama",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T06:50:36Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 5509716308,
+            "user": {
+              "id": 6950331,
+              "login": "bwplotka",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T09:12:40Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5517021612,
+            "user": {
+              "id": 13435893,
+              "login": "krajorama",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T11:14:35Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -281,7 +374,7 @@
     },
     "created_at": "2026-09-23T11:32:45Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -347,6 +440,36 @@
         },
         "occurred_at": "2026-10-13T16:57:35Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5513884149",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T06:50:36Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "5509716308",
+        "actor": {
+          "id": 6950331,
+          "login": "bwplotka",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T09:12:40Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5517021612",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T11:14:35Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -513,6 +636,69 @@
           "type": "User"
         },
         "occurred_at": "2026-10-13T16:57:35Z"
+      },
+      {
+        "id": "4263808769",
+        "actor": {
+          "id": 6950331,
+          "login": "bwplotka",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T20:43:29Z"
+      },
+      {
+        "id": "4263808938",
+        "actor": {
+          "id": 6950331,
+          "login": "bwplotka",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T20:43:31Z"
+      },
+      {
+        "id": "4263809192",
+        "actor": {
+          "id": 6950331,
+          "login": "bwplotka",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-13T20:43:32Z"
+      },
+      {
+        "id": "4267472886",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T06:26:46Z"
+      },
+      {
+        "id": "4267598823",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T06:44:49Z"
+      },
+      {
+        "id": "4268867187",
+        "actor": {
+          "id": 6950331,
+          "login": "bwplotka",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T09:11:16Z"
+      },
+      {
+        "id": "4268867500",
+        "actor": {
+          "id": 6950331,
+          "login": "bwplotka",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T09:11:18Z"
       }
     ]
   }

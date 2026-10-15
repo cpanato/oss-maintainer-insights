@@ -1,8 +1,8 @@
 {
-  "generation": 1,
-  "observed_at": "2026-10-13T16:16:02Z",
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
   "pr": {
-    "updated_at": "2026-10-13T15:50:35Z",
+    "updated_at": "2026-10-14T22:16:12Z",
     "id": 4802098270,
     "number": 142875,
     "user": {
@@ -12,26 +12,26 @@
     },
     "created_at": "2026-10-09T14:55:08Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-14T22:16:09Z"
   },
   "state": {
     "tracked_prs": {
       "142875": {
         "id": 4802098270,
-        "updated_at": "2026-10-13T15:50:35Z",
-        "checked_at": "2026-10-13T16:16:02Z",
-        "state": "open"
+        "updated_at": "2026-10-14T22:16:12Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
       }
     },
     "repository_id": 20580498,
-    "methodology_version": "1.1.0",
+    "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
       "/repositories/20580498/issues/142875/comments?per_page=100": {
-        "etag": "W/\"8c219f53a5eb76635700a40483f65d6d41737df753b040d1727b0c6ebca08d1e\"",
+        "etag": "W/\"43481b91e5bcc336907cba94b33349c76e01c3b730282fdd7e8cf7ee309a6966\"",
         "next": "",
         "value": [
           {
@@ -71,15 +71,6 @@
             "created_at": "2026-10-13T00:50:56Z"
           },
           {
-            "id": 6135604145,
-            "user": {
-              "id": 181008794,
-              "login": "kubernetes-prow[bot]",
-              "type": "Bot"
-            },
-            "created_at": "2026-10-13T00:51:09Z"
-          },
-          {
             "id": 6143142385,
             "user": {
               "id": 22076,
@@ -108,11 +99,41 @@
               "type": "Bot"
             },
             "created_at": "2026-10-13T15:50:33Z"
+          },
+          {
+            "id": 6177091395,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T19:56:18Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 6178738966,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T21:19:24Z"
+          },
+          {
+            "id": 6178741991,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-14T21:19:34Z"
           }
         ]
       },
       "/repositories/20580498/pulls/142875/comments?per_page=100": {
-        "etag": "W/\"0d9729f84fdc029f4fcc4e77c657138b3af76d66002f733cf7b0eb58ebf249af\"",
+        "etag": "W/\"e14c3db24f6a31bf6fe8f75d3c49809cebdaf63233c6ee313e8c2ab85bc1d3a2\"",
         "next": "",
         "value": [
           {
@@ -240,11 +261,20 @@
               "type": "User"
             },
             "created_at": "2026-10-13T15:50:14Z"
+          },
+          {
+            "id": 4275587070,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-10-14T19:57:19Z"
           }
         ]
       },
       "/repositories/20580498/pulls/142875/reviews?per_page=100": {
-        "etag": "W/\"85f096b7a2213d6f3cbe0c4c7d2b88bf69362269a4cb8e655532300fcdf90521\"",
+        "etag": "W/\"dd37aacc7c44720926a2676554569c728cbc6e658f33224edc70f9d02b1123b3\"",
         "next": "",
         "value": [
           {
@@ -289,6 +319,16 @@
             },
             "submitted_at": "2026-10-13T15:50:14Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5523840254,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-14T19:57:19Z",
+            "state": "COMMENTED"
           }
         ]
       }
@@ -303,7 +343,7 @@
     },
     "created_at": "2026-10-09T14:55:08Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -352,6 +392,16 @@
         },
         "occurred_at": "2026-10-13T15:50:14Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5523840254",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T19:57:19Z",
+        "state": "COMMENTED"
       }
     ],
     "issue_comments": [
@@ -392,15 +442,6 @@
         "occurred_at": "2026-10-13T00:50:56Z"
       },
       {
-        "id": "6135604145",
-        "actor": {
-          "id": 181008794,
-          "login": "kubernetes-prow[bot]",
-          "type": "Bot"
-        },
-        "occurred_at": "2026-10-13T00:51:09Z"
-      },
-      {
         "id": "6143142385",
         "actor": {
           "id": 22076,
@@ -429,6 +470,36 @@
           "type": "Bot"
         },
         "occurred_at": "2026-10-13T15:50:33Z"
+      },
+      {
+        "id": "6177091395",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T19:56:18Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "6178738966",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T21:19:24Z"
+      },
+      {
+        "id": "6178741991",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-14T21:19:34Z"
       }
     ],
     "review_comments": [
@@ -557,6 +628,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-13T15:50:14Z"
+      },
+      {
+        "id": "4275587070",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-14T19:57:19Z"
       }
     ]
   }

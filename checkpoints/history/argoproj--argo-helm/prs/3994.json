@@ -16,12 +16,30 @@
     "merged_at": "2026-08-01T04:34:42Z"
   },
   "state": {
+    "tracked_prs": {
+      "3994": {
+        "id": 4181763485,
+        "updated_at": "2026-08-01T04:34:43Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-helm",
     "pages": {
+      "/repositories/106481151/issues/3994/comments?per_page=100": {
+        "etag": "\"fb503f9652989c905e71fe7188f8661151a8dfbc73578dae706a05c0529ff75f\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/106481151/pulls/3994/comments?per_page=100": {
+        "etag": "\"fb503f9652989c905e71fe7188f8661151a8dfbc73578dae706a05c0529ff75f\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/106481151/pulls/3994/reviews?per_page=100": {
         "etag": "W/\"13bd62842926a0282fa8c2f0ac3e5175a13dc9499c2f885cbe731bb6dcfcc2ee\"",
         "next": "",
@@ -51,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4181763485,
+    "author": {
+      "id": 161757507,
+      "login": "argoproj-renovate[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-08-01T00:41:23Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4833517003",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-01T03:29:07Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4833671008",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-01T04:34:40Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }
