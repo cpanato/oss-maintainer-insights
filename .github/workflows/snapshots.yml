@@ -39,7 +39,7 @@ jobs:
     name: Generate saved repository samples
     if: github.repository == 'cpanato/oss-maintainer-insights'
     runs-on: ubuntu-latest
-    timeout-minutes: 105 # 90-minute cohort deadline, five-minute history, and setup/artifact margin.
+    timeout-minutes: 115 # 90-minute cohort deadline, 15-minute history, and setup/artifact margin.
     outputs:
       data-base-revision: ${{ steps.restore.outputs.revision }}
 
@@ -97,8 +97,8 @@ jobs:
       - name: Resume historical review backfill in Go
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        # A separate small budget leaves current creation cohorts first priority.
-        run: go run ./cmd/collector history --output generated-data/history --state .cache/snapshots/history --requests=100
+        # Current cohorts run first; unused API allowance can advance bounded history batches.
+        run: go run ./cmd/collector history --output generated-data/history --state .cache/snapshots/history --requests=300 --timeout=15m
 
       - name: Upload public aggregate samples
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
