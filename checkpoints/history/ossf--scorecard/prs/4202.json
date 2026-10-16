@@ -16,6 +16,14 @@
     "merged_at": "2024-07-03T22:42:06Z"
   },
   "state": {
+    "tracked_prs": {
+      "4202": {
+        "id": 1946803131,
+        "updated_at": "2024-07-03T22:58:31Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -64,6 +72,11 @@
           }
         ]
       },
+      "/repositories/302670797/pulls/4202/comments?per_page=100": {
+        "etag": "\"9ff15d38181f257a84c77849fb36d482a0c4b032a2f0ec208b0fe8b0f04ae11c\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/302670797/pulls/4202/reviews?per_page=100": {
         "etag": "W/\"6af8895a1b0fa4b83b7f67d01c4ed989d22de7a76abdc50386643cc6c0a22c0a\"",
         "next": "",
@@ -103,18 +116,90 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1946803131,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-07-01T08:52:11Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2155272533",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-03T03:31:14Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2157565100",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-03T22:05:20Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2157616772",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-03T22:42:03Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2207390964",
+        "actor": {
+          "id": 6064089,
+          "login": "spencerschrock",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-03T22:08:23Z"
+      },
+      {
+        "id": "2207391334",
+        "actor": {
+          "id": 6064089,
+          "login": "spencerschrock",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-03T22:08:47Z"
+      },
+      {
+        "id": "2207421218",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-03T22:33:26Z"
+      },
+      {
+        "id": "2207441027",
+        "actor": {
+          "id": 6064089,
+          "login": "spencerschrock",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-03T22:58:30Z"
+      }
+    ],
+    "review_comments": []
   }
 }

@@ -16,12 +16,30 @@
     "merged_at": "2024-03-04T13:37:50Z"
   },
   "state": {
+    "tracked_prs": {
+      "2029": {
+        "id": 1754528566,
+        "updated_at": "2024-03-04T13:38:02Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/rekor",
     "pages": {
+      "/repositories/272963353/issues/2029/comments?per_page=100": {
+        "etag": "\"9ff15d38181f257a84c77849fb36d482a0c4b032a2f0ec208b0fe8b0f04ae11c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/272963353/pulls/2029/comments?per_page=100": {
+        "etag": "\"9ff15d38181f257a84c77849fb36d482a0c4b032a2f0ec208b0fe8b0f04ae11c\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/272963353/pulls/2029/reviews?per_page=100": {
         "etag": "W/\"498087ef83b1be9658701204620531807a7ad130291a5f6eb3e087e6a8d18521\"",
         "next": "",
@@ -41,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1754528566,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-03-04T11:31:41Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1914333033",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-04T13:37:45Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

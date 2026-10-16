@@ -1,0 +1,155 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-10-08T14:14:16Z",
+    "id": 2897359117,
+    "number": 8150,
+    "user": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2025-10-08T12:55:33Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-10-08T14:14:16Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8150": {
+        "id": 2897359117,
+        "updated_at": "2025-10-08T14:14:16Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8150/comments?per_page=100": {
+        "etag": "W/\"4d88689477cc64514d384d3b296e7ee78c9522d98ec7bce7393de16208626929\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3381383622,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2025-10-08T12:55:59Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3381756853,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2025-10-08T14:14:01Z"
+          },
+          {
+            "id": 3381757373,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-10-08T14:14:08Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8150/comments?per_page=100": {
+        "etag": "\"9ff15d38181f257a84c77849fb36d482a0c4b032a2f0ec208b0fe8b0f04ae11c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8150/reviews?per_page=100": {
+        "etag": "W/\"bf7f4bd65928bc47e118c42d39ad5585cc0900d89777a54c2599871f249e23cd\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3315011364,
+            "user": {
+              "id": 188351318,
+              "login": "wallrj-cyberark",
+              "type": "User"
+            },
+            "submitted_at": "2025-10-08T14:09:46Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2897359117,
+    "author": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2025-10-08T12:55:33Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3315011364",
+        "actor": {
+          "id": 188351318,
+          "login": "wallrj-cyberark",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-08T14:09:46Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3381383622",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-08T12:55:59Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3381756853",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-08T14:14:01Z"
+      },
+      {
+        "id": "3381757373",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-10-08T14:14:08Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

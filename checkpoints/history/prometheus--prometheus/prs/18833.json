@@ -16,6 +16,14 @@
     "merged_at": "2026-06-30T13:44:49Z"
   },
   "state": {
+    "tracked_prs": {
+      "18833": {
+        "id": 3781995343,
+        "updated_at": "2026-06-30T13:44:49Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -46,6 +54,21 @@
           }
         ]
       },
+      "/repositories/6838921/pulls/18833/comments?per_page=100": {
+        "etag": "W/\"042cd21f3748a715bc6763a7fb153876a93750cdab4281e32687c45807707862\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3498069928,
+            "user": {
+              "id": 13435893,
+              "login": "krajorama",
+              "type": "User"
+            },
+            "created_at": "2026-06-30T10:39:07Z"
+          }
+        ]
+      },
       "/repositories/6838921/pulls/18833/reviews?per_page=100": {
         "etag": "W/\"12223267e64e56794ce8d997fe767f5dcde4fe8e847f410bb3531aa9e3a65101\"",
         "next": "",
@@ -65,18 +88,62 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3781995343,
+    "author": {
+      "id": 1511481,
+      "login": "colega",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-06-01T15:32:17Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4599564965",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-30T12:08:16Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4842718546",
+        "actor": {
+          "id": 1511481,
+          "login": "colega",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-30T11:07:40Z"
+      },
+      {
+        "id": "4843200364",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-30T12:05:53Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3498069928",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-30T10:39:07Z"
+      }
+    ]
   }
 }
