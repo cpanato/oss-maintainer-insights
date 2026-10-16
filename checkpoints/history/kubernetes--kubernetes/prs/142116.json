@@ -1,0 +1,793 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-09-16T20:13:26Z",
+    "id": 4534385071,
+    "number": 142116,
+    "user": {
+      "id": 22185274,
+      "login": "yongruilin",
+      "type": "User"
+    },
+    "created_at": "2026-09-15T07:20:26Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-09-16T20:13:24Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "142116": {
+        "id": 4534385071,
+        "updated_at": "2026-09-16T20:13:26Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/142116/comments?per_page=100": {
+        "etag": "W/\"72f49dad056c1c8ee6efd2fab1ac42497ccd5dfd745a206149d9a96bfb157cb0\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5676356846,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-15T07:20:36Z"
+          },
+          {
+            "id": 5676392853,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T07:23:45Z"
+          },
+          {
+            "id": 5689365119,
+            "user": {
+              "id": 5595220,
+              "login": "thockin",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T23:12:27Z"
+          },
+          {
+            "id": 5691512030,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T03:16:50Z"
+          },
+          {
+            "id": 5701818556,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T17:35:34Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 5702522464,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T18:28:40Z"
+          },
+          {
+            "id": 5702524518,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-16T18:28:48Z"
+          },
+          {
+            "id": 5702528758,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-16T18:29:04Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/142116/comments?per_page=100": {
+        "etag": "W/\"f07d1abb4ea1a3835cb7fe432db9603482e73d094ac6db9a8d70f104fe9311fe\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4021067411,
+            "user": {
+              "id": 5595220,
+              "login": "thockin",
+              "type": "User"
+            },
+            "created_at": "2026-09-15T23:18:39Z"
+          },
+          {
+            "id": 4021838464,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T02:00:48Z"
+          },
+          {
+            "id": 4021838472,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T02:00:48Z"
+          },
+          {
+            "id": 4021838476,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T02:00:48Z"
+          },
+          {
+            "id": 4021881315,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T02:10:36Z"
+          },
+          {
+            "id": 4022146129,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T03:08:27Z"
+          },
+          {
+            "id": 4022189257,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T03:18:24Z"
+          },
+          {
+            "id": 4022191255,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T03:18:53Z"
+          },
+          {
+            "id": 4022195416,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T03:19:55Z"
+          },
+          {
+            "id": 4026600234,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T13:31:24Z"
+          },
+          {
+            "id": 4026600266,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T13:31:24Z"
+          },
+          {
+            "id": 4026600279,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T13:31:24Z"
+          },
+          {
+            "id": 4028127623,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T16:04:56Z"
+          },
+          {
+            "id": 4028269882,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T16:20:26Z"
+          },
+          {
+            "id": 4028928748,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T17:34:31Z"
+          },
+          {
+            "id": 4028934239,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T17:35:07Z"
+          },
+          {
+            "id": 4028936971,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2026-09-16T17:35:24Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/142116/reviews?per_page=100": {
+        "etag": "W/\"5882b6848ca0b3da6ee9b86d13122a0f8378435c908d7323198e500741afdea3\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5216819739,
+            "user": {
+              "id": 5595220,
+              "login": "thockin",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T23:18:39Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5216833612,
+            "user": {
+              "id": 5595220,
+              "login": "thockin",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-15T23:20:38Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5217755054,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T02:10:36Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5217707028,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T03:13:42Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5218159169,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T03:18:24Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5218161376,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T03:18:53Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5218165811,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T03:19:55Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5223351755,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T13:51:56Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5225176775,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T16:04:56Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5225341231,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T16:20:26Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5226118175,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T17:34:31Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5226124751,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T17:35:08Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5226127890,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "submitted_at": "2026-09-16T17:35:24Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 4534385071,
+    "author": {
+      "id": 22185274,
+      "login": "yongruilin",
+      "type": "User"
+    },
+    "created_at": "2026-09-15T07:20:26Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5216819739",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T23:18:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5216833612",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T23:20:38Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5217755054",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T02:10:36Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5217707028",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:13:42Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5218159169",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:18:24Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5218161376",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:18:53Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5218165811",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:19:55Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5223351755",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T13:51:56Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5225176775",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T16:04:56Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5225341231",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T16:20:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5226118175",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T17:34:31Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5226124751",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T17:35:08Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5226127890",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T17:35:24Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5676356846",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-15T07:20:36Z"
+      },
+      {
+        "id": "5676392853",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T07:23:45Z"
+      },
+      {
+        "id": "5689365119",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T23:12:27Z"
+      },
+      {
+        "id": "5691512030",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:16:50Z"
+      },
+      {
+        "id": "5701818556",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T17:35:34Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "5702522464",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T18:28:40Z"
+      },
+      {
+        "id": "5702524518",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-16T18:28:48Z"
+      },
+      {
+        "id": "5702528758",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-16T18:29:04Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "4021067411",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-15T23:18:39Z"
+      },
+      {
+        "id": "4021838464",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T02:00:48Z"
+      },
+      {
+        "id": "4021838472",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T02:00:48Z"
+      },
+      {
+        "id": "4021838476",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T02:00:48Z"
+      },
+      {
+        "id": "4021881315",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T02:10:36Z"
+      },
+      {
+        "id": "4022146129",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:08:27Z"
+      },
+      {
+        "id": "4022189257",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:18:24Z"
+      },
+      {
+        "id": "4022191255",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:18:53Z"
+      },
+      {
+        "id": "4022195416",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T03:19:55Z"
+      },
+      {
+        "id": "4026600234",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T13:31:24Z"
+      },
+      {
+        "id": "4026600266",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T13:31:24Z"
+      },
+      {
+        "id": "4026600279",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T13:31:24Z"
+      },
+      {
+        "id": "4028127623",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T16:04:56Z"
+      },
+      {
+        "id": "4028269882",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T16:20:26Z"
+      },
+      {
+        "id": "4028928748",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T17:34:31Z"
+      },
+      {
+        "id": "4028934239",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T17:35:07Z"
+      },
+      {
+        "id": "4028936971",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-16T17:35:24Z"
+      }
+    ]
+  }
+}

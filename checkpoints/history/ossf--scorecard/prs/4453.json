@@ -16,26 +16,76 @@
     "merged_at": "2024-12-12T15:27:46Z"
   },
   "state": {
+    "tracked_prs": {
+      "4453": {
+        "id": 2231919309,
+        "updated_at": "2024-12-12T15:27:48Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
-    "pages": {}
+    "pages": {
+      "/repositories/302670797/issues/4453/comments?per_page=100": {
+        "etag": "\"950a3ce30d96b7d00a752f5853fbfc0f304bd1bf38cfbeb2dddbc0e02845cffb\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/302670797/pulls/4453/comments?per_page=100": {
+        "etag": "\"950a3ce30d96b7d00a752f5853fbfc0f304bd1bf38cfbeb2dddbc0e02845cffb\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/302670797/pulls/4453/reviews?per_page=100": {
+        "etag": "W/\"509748ec8f2168b0120184df33757f73e43611473ee2c9f4b5415e1b507bf410\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2500011046,
+            "user": {
+              "id": 6064089,
+              "login": "spencerschrock",
+              "type": "User"
+            },
+            "submitted_at": "2024-12-12T15:27:42Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2231919309,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-12-12T15:04:27Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2500011046",
+        "actor": {
+          "id": 6064089,
+          "login": "spencerschrock",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-12T15:27:42Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

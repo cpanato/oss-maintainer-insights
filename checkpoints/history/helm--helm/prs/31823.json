@@ -16,26 +16,76 @@
     "merged_at": "2026-02-11T05:45:47Z"
   },
   "state": {
+    "tracked_prs": {
+      "31823": {
+        "id": 3264967393,
+        "updated_at": "2026-03-11T23:27:41Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
-    "pages": {}
+    "pages": {
+      "/repositories/43723161/issues/31823/comments?per_page=100": {
+        "etag": "\"950a3ce30d96b7d00a752f5853fbfc0f304bd1bf38cfbeb2dddbc0e02845cffb\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/31823/comments?per_page=100": {
+        "etag": "\"950a3ce30d96b7d00a752f5853fbfc0f304bd1bf38cfbeb2dddbc0e02845cffb\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/31823/reviews?per_page=100": {
+        "etag": "W/\"2d105d39158d3200c982b5361179614b8bd63a9214983ea44b26f990949b1f6f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3782849341,
+            "user": {
+              "id": 952828,
+              "login": "joejulian",
+              "type": "User"
+            },
+            "submitted_at": "2026-02-11T05:13:15Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3264967393,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-02-10T00:15:39Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3782849341",
+        "actor": {
+          "id": 952828,
+          "login": "joejulian",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-11T05:13:15Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

@@ -1,0 +1,137 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-02-03T11:08:23Z",
+    "id": 3200157526,
+    "number": 8436,
+    "user": {
+      "id": 165075012,
+      "login": "cert-manager-bot",
+      "type": "User"
+    },
+    "created_at": "2026-01-22T17:00:09Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-01-23T14:29:00Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8436": {
+        "id": 3200157526,
+        "updated_at": "2026-02-03T11:08:23Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8436/comments?per_page=100": {
+        "etag": "W/\"b78d5a4a2a3d65e76e559436efb07bd32f115433051fefbf3aed62f25b7e358f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3785580654,
+            "user": {
+              "id": 1972547,
+              "login": "SgtCoDFish",
+              "type": "User"
+            },
+            "created_at": "2026-01-22T17:11:59Z"
+          },
+          {
+            "id": 3790502183,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-01-23T14:27:55Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8436/comments?per_page=100": {
+        "etag": "\"950a3ce30d96b7d00a752f5853fbfc0f304bd1bf38cfbeb2dddbc0e02845cffb\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8436/reviews?per_page=100": {
+        "etag": "W/\"c0f601e9dd7dd5525dc129d99de213c019d80464bef5fe0e3e4caadefa73a284\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3697788985,
+            "user": {
+              "id": 1972547,
+              "login": "SgtCoDFish",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-23T14:27:44Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3200157526,
+    "author": {
+      "id": 165075012,
+      "login": "cert-manager-bot",
+      "type": "User"
+    },
+    "created_at": "2026-01-22T17:00:09Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3697788985",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-23T14:27:44Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3785580654",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-22T17:11:59Z"
+      },
+      {
+        "id": "3790502183",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-01-23T14:27:55Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
