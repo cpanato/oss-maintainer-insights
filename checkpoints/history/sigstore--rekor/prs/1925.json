@@ -16,6 +16,14 @@
     "merged_at": "2023-12-21T11:58:36Z"
   },
   "state": {
+    "tracked_prs": {
+      "1925": {
+        "id": 1653561835,
+        "updated_at": "2023-12-21T11:58:49Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/272963353/pulls/1925/comments?per_page=100": {
+        "etag": "\"283417daf37c126d71f296fb735e5842538a05d7a837ffd465914d4ab136dff7\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/272963353/pulls/1925/reviews?per_page=100": {
         "etag": "W/\"4c3de7d4ba19334506e621014b35902de9055bb1e76a38c8a0a5e5c8fbe06231\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1653561835,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-12-21T11:03:00Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1792822158",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2023-12-21T11:58:31Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1866067265",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-12-21T11:08:11Z"
+      }
+    ],
+    "review_comments": []
   }
 }

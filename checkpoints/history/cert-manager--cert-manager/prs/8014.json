@@ -16,12 +16,58 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "8014": {
+        "id": 2777003681,
+        "updated_at": "2025-09-02T21:10:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
     "pages": {
+      "/repositories/92313258/issues/8014/comments?per_page=100": {
+        "etag": "W/\"d31c7a0d0d2b5247f32b28d31a33e532d1d1270039d8ee0ecd81c5cecf764e71\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3226557617,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-08-27T02:46:29Z"
+          },
+          {
+            "id": 3246641734,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-02T20:09:20Z"
+          },
+          {
+            "id": 3246790553,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-02T21:07:05Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8014/comments?per_page=100": {
+        "etag": "\"283417daf37c126d71f296fb735e5842538a05d7a837ffd465914d4ab136dff7\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/92313258/pulls/8014/reviews?per_page=100": {
         "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
         "next": "",
@@ -30,18 +76,50 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2777003681,
+    "author": {
+      "id": 41898282,
+      "login": "github-actions[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-08-27T02:46:21Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "3226557617",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-08-27T02:46:29Z"
+      },
+      {
+        "id": "3246641734",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-02T20:09:20Z"
+      },
+      {
+        "id": "3246790553",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-02T21:07:05Z"
+      }
+    ],
+    "review_comments": []
   }
 }

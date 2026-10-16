@@ -16,12 +16,30 @@
     "merged_at": "2025-08-28T16:56:50Z"
   },
   "state": {
+    "tracked_prs": {
+      "31210": {
+        "id": 2780178845,
+        "updated_at": "2025-08-28T16:56:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
     "pages": {
+      "/repositories/43723161/issues/31210/comments?per_page=100": {
+        "etag": "\"283417daf37c126d71f296fb735e5842538a05d7a837ffd465914d4ab136dff7\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/31210/comments?per_page=100": {
+        "etag": "\"283417daf37c126d71f296fb735e5842538a05d7a837ffd465914d4ab136dff7\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/43723161/pulls/31210/reviews?per_page=100": {
         "etag": "W/\"2a329b8ab0878115a0f1c2bb15cce63ce5e531b00ebdf8f24f3154a63b3452b5\"",
         "next": "",
@@ -41,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2780178845,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-08-28T02:17:49Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3165703983",
+        "actor": {
+          "id": 13884882,
+          "login": "robertsirc",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-28T16:51:09Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

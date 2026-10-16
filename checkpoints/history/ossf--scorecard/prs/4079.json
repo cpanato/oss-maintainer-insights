@@ -16,26 +16,96 @@
     "merged_at": "2024-05-03T21:50:50Z"
   },
   "state": {
+    "tracked_prs": {
+      "4079": {
+        "id": 1854095596,
+        "updated_at": "2024-05-03T21:50:50Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
-    "pages": {}
+    "pages": {
+      "/repositories/302670797/issues/4079/comments?per_page=100": {
+        "etag": "W/\"3a8c03f8efb8a1275bf171aede880cca4f01b7aeda13572b9563ed0e768b37c0\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2093786764,
+            "user": {
+              "id": 6064089,
+              "login": "spencerschrock",
+              "type": "User"
+            },
+            "created_at": "2024-05-03T21:28:08Z"
+          }
+        ]
+      },
+      "/repositories/302670797/pulls/4079/comments?per_page=100": {
+        "etag": "\"283417daf37c126d71f296fb735e5842538a05d7a837ffd465914d4ab136dff7\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/302670797/pulls/4079/reviews?per_page=100": {
+        "etag": "W/\"a272affd53a20d4aab0ce168253e2d0268c8980a1ac9d049c6c0c1a98800faae\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2039016562,
+            "user": {
+              "id": 6064089,
+              "login": "spencerschrock",
+              "type": "User"
+            },
+            "submitted_at": "2024-05-03T21:25:50Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1854095596,
+    "author": {
+      "id": 13962277,
+      "login": "seelder",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-05-03T21:02:27Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2039016562",
+        "actor": {
+          "id": 6064089,
+          "login": "spencerschrock",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-03T21:25:50Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2093786764",
+        "actor": {
+          "id": 6064089,
+          "login": "spencerschrock",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-03T21:28:08Z"
+      }
+    ],
+    "review_comments": []
   }
 }
