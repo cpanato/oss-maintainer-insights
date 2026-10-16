@@ -16,26 +16,114 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "4033": {
+        "id": 2313201333,
+        "updated_at": "2025-02-03T17:15:54Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
-    "pages": {}
+    "pages": {
+      "/repositories/335952417/issues/4033/comments?per_page=100": {
+        "etag": "W/\"9d38e46fc7a6ee8f52b4668096af9314ea2b7938b3dac3dc2a64b14c88ee9e83\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2631598380,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2025-02-03T17:14:29Z"
+          },
+          {
+            "id": 2631601492,
+            "user": {
+              "id": 49699333,
+              "login": "dependabot[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-02-03T17:15:51Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/4033/comments?per_page=100": {
+        "etag": "\"519e377d3ded48d7ad8a8bd80773d0c88b777202db7d8fe70d64a18fc6b21abd\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/4033/reviews?per_page=100": {
+        "etag": "W/\"f46cf726c57705f6d593aea8218fb45eaf2d89387da87ec85ee6ce730d85c56d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2590548951,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "submitted_at": "2025-02-03T17:14:21Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2313201333,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-02-03T16:51:03Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2590548951",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-03T17:14:21Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2631598380",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-03T17:14:29Z"
+      },
+      {
+        "id": "2631601492",
+        "actor": {
+          "id": 49699333,
+          "login": "dependabot[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-02-03T17:15:51Z"
+      }
+    ],
+    "review_comments": []
   }
 }

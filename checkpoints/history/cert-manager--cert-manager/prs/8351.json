@@ -1,0 +1,159 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-12-19T05:57:11Z",
+    "id": 3112208414,
+    "number": 8351,
+    "user": {
+      "id": 29139614,
+      "login": "renovate[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2025-12-18T04:26:25Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-12-19T05:56:12Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8351": {
+        "id": 3112208414,
+        "updated_at": "2025-12-19T05:57:11Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8351/comments?per_page=100": {
+        "etag": "W/\"49eb0d210b00c42db70085661a37c6d42e37adca6f43c75a1d75d4dfae81f09e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3668308702,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-18T04:26:35Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3672517475,
+            "user": {
+              "id": 11522166,
+              "login": "hjoshi123",
+              "type": "User"
+            },
+            "created_at": "2025-12-18T22:29:47Z"
+          },
+          {
+            "id": 3673654762,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-19T05:55:19Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8351/comments?per_page=100": {
+        "etag": "\"519e377d3ded48d7ad8a8bd80773d0c88b777202db7d8fe70d64a18fc6b21abd\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8351/reviews?per_page=100": {
+        "etag": "W/\"84b02384edbb1e282c1f20dc11b9de014b3a11472c9c5224cbcdc5bf68945946\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 3596976738,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2025-12-19T05:55:10Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3112208414,
+    "author": {
+      "id": 29139614,
+      "login": "renovate[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2025-12-18T04:26:25Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "3596976738",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-19T05:55:10Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3668308702",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-12-18T04:26:35Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3672517475",
+        "actor": {
+          "id": 11522166,
+          "login": "hjoshi123",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-18T22:29:47Z"
+      },
+      {
+        "id": "3673654762",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-12-19T05:55:19Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

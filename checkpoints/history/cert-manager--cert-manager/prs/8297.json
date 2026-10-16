@@ -1,0 +1,155 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-12-04T12:28:03Z",
+    "id": 3069161619,
+    "number": 8297,
+    "user": {
+      "id": 2119212,
+      "login": "jsoref",
+      "type": "User"
+    },
+    "created_at": "2025-12-03T22:39:30Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-12-04T09:53:49Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8297": {
+        "id": 3069161619,
+        "updated_at": "2025-12-04T12:28:03Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8297/comments?per_page=100": {
+        "etag": "W/\"6f58deefc0ac836cae1d3046770ad4233b3e62b401dde6a3bbb298c1c1389474\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3609204335,
+            "user": {
+              "id": 2119212,
+              "login": "jsoref",
+              "type": "User"
+            },
+            "created_at": "2025-12-03T23:03:47Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3611127052,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2025-12-04T09:40:20Z"
+          },
+          {
+            "id": 3611127799,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-04T09:40:32Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8297/comments?per_page=100": {
+        "etag": "\"519e377d3ded48d7ad8a8bd80773d0c88b777202db7d8fe70d64a18fc6b21abd\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8297/reviews?per_page=100": {
+        "etag": "W/\"e39dcdfa9ecddf0d57b8a39395fba7e4989492480c09c8d4f3945f17ea1c6e01\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3538952381,
+            "user": {
+              "id": 188351318,
+              "login": "wallrj-cyberark",
+              "type": "User"
+            },
+            "submitted_at": "2025-12-04T09:31:41Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3069161619,
+    "author": {
+      "id": 2119212,
+      "login": "jsoref",
+      "type": "User"
+    },
+    "created_at": "2025-12-03T22:39:30Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3538952381",
+        "actor": {
+          "id": 188351318,
+          "login": "wallrj-cyberark",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-04T09:31:41Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3609204335",
+        "actor": {
+          "id": 2119212,
+          "login": "jsoref",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-03T23:03:47Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3611127052",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-04T09:40:20Z"
+      },
+      {
+        "id": "3611127799",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-12-04T09:40:32Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

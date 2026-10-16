@@ -16,12 +16,104 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "29048": {
+        "id": 4202348791,
+        "updated_at": "2026-10-01T15:33:42Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/29048/comments?per_page=100": {
+        "etag": "W/\"b65ac75c0a7478cd24cdc774736113c51ba493859f7af42ff1c6e54a14a7d684\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5177671453,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-04T10:20:50Z"
+          },
+          {
+            "id": 5177701748,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-04T10:24:02Z"
+          },
+          {
+            "id": 5177749860,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-04T10:27:35Z"
+          },
+          {
+            "id": 5177778612,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-04T10:29:23Z"
+          },
+          {
+            "id": 5178479542,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-04T11:39:20Z"
+          },
+          {
+            "id": 5191752034,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "created_at": "2026-08-05T12:32:20Z"
+          },
+          {
+            "id": 5192715704,
+            "user": {
+              "id": 81048645,
+              "login": "kuci-JK",
+              "type": "User"
+            },
+            "created_at": "2026-08-05T13:59:19Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/29048/comments?per_page=100": {
+        "etag": "W/\"574392434c06c4504e660e5174ca3144e679a70d1455af416bf424f48ae5c787\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3711494235,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-04T10:29:25Z"
+          }
+        ]
+      },
       "/repositories/120896210/pulls/29048/reviews?per_page=100": {
         "etag": "W/\"abef7628461a025e404b8dc54b09feb2f55f86f6c76fe7dba1ed36a1daf99e23\"",
         "next": "",
@@ -61,18 +153,127 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4202348791,
+    "author": {
+      "id": 81048645,
+      "login": "kuci-JK",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-08-04T10:20:46Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4853189759",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-04T10:29:25Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4854364981",
+        "actor": {
+          "id": 45708547,
+          "login": "choejwoo",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-04T12:31:08Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4864345713",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-05T12:32:40Z",
+        "state": "CHANGES_REQUESTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5177671453",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-04T10:20:50Z"
+      },
+      {
+        "id": "5177701748",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-04T10:24:02Z"
+      },
+      {
+        "id": "5177749860",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-04T10:27:35Z"
+      },
+      {
+        "id": "5177778612",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-04T10:29:23Z"
+      },
+      {
+        "id": "5178479542",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-04T11:39:20Z"
+      },
+      {
+        "id": "5191752034",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-05T12:32:20Z"
+      },
+      {
+        "id": "5192715704",
+        "actor": {
+          "id": 81048645,
+          "login": "kuci-JK",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-05T13:59:19Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3711494235",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-04T10:29:25Z"
+      }
+    ]
   }
 }
