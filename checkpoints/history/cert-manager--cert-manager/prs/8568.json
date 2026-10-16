@@ -1,0 +1,137 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-03-03T12:57:43Z",
+    "id": 3348367282,
+    "number": 8568,
+    "user": {
+      "id": 6429715,
+      "login": "archy-rock3t-cloud",
+      "type": "User"
+    },
+    "created_at": "2026-03-03T11:13:57Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-03-03T12:32:00Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8568": {
+        "id": 3348367282,
+        "updated_at": "2026-03-03T12:57:43Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8568/comments?per_page=100": {
+        "etag": "W/\"563259137ac4bb6baca5b87b3ea8f98fc8242275a15f9a4925413952592b2a20\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3990322061,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-03-03T11:14:08Z"
+          },
+          {
+            "id": 3990643446,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-03-03T12:18:28Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8568/comments?per_page=100": {
+        "etag": "\"37dbf8b2ee6c31f9ac699b9b060c3039d2a106cec27c261f6dfc8fef2bfe0cd0\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8568/reviews?per_page=100": {
+        "etag": "W/\"db33ea06005752fe387d0c6263ef805d50c789bc4c505e9ef7305e91a52becd1\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3882197414,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-03T12:18:21Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3348367282,
+    "author": {
+      "id": 6429715,
+      "login": "archy-rock3t-cloud",
+      "type": "User"
+    },
+    "created_at": "2026-03-03T11:13:57Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3882197414",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-03T12:18:21Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3990322061",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-03-03T11:14:08Z"
+      },
+      {
+        "id": "3990643446",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-03-03T12:18:28Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

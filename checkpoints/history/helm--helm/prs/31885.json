@@ -1,0 +1,233 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-06-12T03:04:16Z",
+    "id": 3336797637,
+    "number": 31885,
+    "user": {
+      "id": 6032561,
+      "login": "mmorel-35",
+      "type": "User"
+    },
+    "created_at": "2026-02-27T18:15:53Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-05-30T11:19:51Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "31885": {
+        "id": 3336797637,
+        "updated_at": "2026-06-12T03:04:16Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/31885/comments?per_page=100": {
+        "etag": "\"37dbf8b2ee6c31f9ac699b9b060c3039d2a106cec27c261f6dfc8fef2bfe0cd0\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/31885/comments?per_page=100": {
+        "etag": "W/\"9c4ca6441bd84c42240c0e159046d3b5b62c208e98cab23cdd1f8bd853f15fa6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2865594675,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-27T18:18:37Z"
+          },
+          {
+            "id": 2865628812,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-27T18:28:01Z"
+          },
+          {
+            "id": 2865628834,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-27T18:28:02Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/31885/reviews?per_page=100": {
+        "etag": "W/\"caf9153a1590452e6f7623c45c7af1822b7eca9fc7b14cf2fc5ff445d6ec35d6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3868362855,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-02-27T18:18:37Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3868402014,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-02-27T18:28:02Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3948375934,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-03-14T07:49:32Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4394351156,
+            "user": {
+              "id": 2787248,
+              "login": "gjenkins8",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-30T04:24:29Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4395229315,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-30T11:19:40Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3336797637,
+    "author": {
+      "id": 6032561,
+      "login": "mmorel-35",
+      "type": "User"
+    },
+    "created_at": "2026-02-27T18:15:53Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3868362855",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T18:18:37Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3868402014",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T18:28:02Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3948375934",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-03-14T07:49:32Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4394351156",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-30T04:24:29Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4395229315",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-30T11:19:40Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "2865594675",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T18:18:37Z"
+      },
+      {
+        "id": "2865628812",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T18:28:01Z"
+      },
+      {
+        "id": "2865628834",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T18:28:02Z"
+      }
+    ]
+  }
+}

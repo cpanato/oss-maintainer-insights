@@ -16,26 +16,224 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "29325": {
+        "id": 4337269245,
+        "updated_at": "2026-09-24T17:33:05Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "open"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/29325/comments?per_page=100": {
+        "etag": "W/\"b76b543c356daa388e5ad2abccb9c6d20892cd2c549bc4a05c81d85149c4e2ff\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5378842352,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-22T07:01:41Z"
+          },
+          {
+            "id": 5378852573,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-22T07:02:25Z"
+          },
+          {
+            "id": 5378879119,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-22T07:04:26Z"
+          },
+          {
+            "id": 5378890875,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-22T07:05:20Z"
+          },
+          {
+            "id": 5381507992,
+            "user": {
+              "id": 147061193,
+              "login": "lemon0333",
+              "type": "User"
+            },
+            "created_at": "2026-08-22T16:48:47Z"
+          },
+          {
+            "id": 5381511336,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-22T16:49:34Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/29325/comments?per_page=100": {
+        "etag": "W/\"b6d56d944e8fa6e4d1b34ef951aab3bc2bb5c9d0bc189e3e344c396c353866cd\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3835474123,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-22T07:05:21Z"
+          },
+          {
+            "id": 3835474125,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-08-22T07:05:21Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/29325/reviews?per_page=100": {
+        "etag": "W/\"504ac08ff61ad8df02e85ae5eb4254a04565fddf2a8b34360368c70c6459cadd\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4999450110,
+            "user": {
+              "id": 151058649,
+              "login": "qodo-code-review[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-08-22T07:05:21Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4337269245,
+    "author": {
+      "id": 147061193,
+      "login": "lemon0333",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-08-22T07:01:35Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4999450110",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-22T07:05:21Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5378842352",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-22T07:01:41Z"
+      },
+      {
+        "id": "5378852573",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-22T07:02:25Z"
+      },
+      {
+        "id": "5378879119",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-22T07:04:26Z"
+      },
+      {
+        "id": "5378890875",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-22T07:05:20Z"
+      },
+      {
+        "id": "5381507992",
+        "actor": {
+          "id": 147061193,
+          "login": "lemon0333",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-22T16:48:47Z"
+      },
+      {
+        "id": "5381511336",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-22T16:49:34Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3835474123",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-22T07:05:21Z"
+      },
+      {
+        "id": "3835474125",
+        "actor": {
+          "id": 151058649,
+          "login": "qodo-code-review[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-22T07:05:21Z"
+      }
+    ]
   }
 }

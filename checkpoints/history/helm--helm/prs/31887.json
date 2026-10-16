@@ -1,0 +1,287 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-10-01T00:41:51Z",
+    "id": 3337342249,
+    "number": 31887,
+    "user": {
+      "id": 108543824,
+      "login": "john-weathers",
+      "type": "User"
+    },
+    "created_at": "2026-02-27T21:13:36Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": null
+  },
+  "state": {
+    "tracked_prs": {
+      "31887": {
+        "id": 3337342249,
+        "updated_at": "2026-10-01T00:41:51Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/31887/comments?per_page=100": {
+        "etag": "W/\"fa66ad0b857356a16cb8cde35599fcbdb04a0130f41dfe714a569294a86d11b9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3975136853,
+            "user": {
+              "id": 256490899,
+              "login": "promptless-for-oss",
+              "type": "User"
+            },
+            "created_at": "2026-02-27T21:18:22Z"
+          },
+          {
+            "id": 4199354849,
+            "user": {
+              "id": 108543824,
+              "login": "john-weathers",
+              "type": "User"
+            },
+            "created_at": "2026-04-07T13:35:40Z"
+          },
+          {
+            "id": 5486795697,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-09-01T00:40:09Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/31887/comments?per_page=100": {
+        "etag": "W/\"e5ca7535c7351d2d47789304c3b7a1ae7237f152a55766c6503440cd455ec6d3\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2866242071,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-27T21:16:44Z"
+          },
+          {
+            "id": 2866242108,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-27T21:16:44Z"
+          },
+          {
+            "id": 2866242117,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-27T21:16:45Z"
+          },
+          {
+            "id": 2866243593,
+            "user": {
+              "id": 108543824,
+              "login": "john-weathers",
+              "type": "User"
+            },
+            "created_at": "2026-02-27T21:17:16Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/31887/reviews?per_page=100": {
+        "etag": "W/\"73d7fd9daffb39fc1060b5ec76683be8e9c991d31fc0c0e0c690c3a0e2a4e875\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3869122572,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-02-27T21:16:45Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3869124293,
+            "user": {
+              "id": 108543824,
+              "login": "john-weathers",
+              "type": "User"
+            },
+            "submitted_at": "2026-02-27T21:17:16Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3908977784,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-07T15:54:06Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4407982267,
+            "user": {
+              "id": 98232499,
+              "login": "StantonMatt",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-02T08:34:46Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3337342249,
+    "author": {
+      "id": 108543824,
+      "login": "john-weathers",
+      "type": "User"
+    },
+    "created_at": "2026-02-27T21:13:36Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3869122572",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T21:16:45Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3869124293",
+        "actor": {
+          "id": 108543824,
+          "login": "john-weathers",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T21:17:16Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3908977784",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T15:54:06Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4407982267",
+        "actor": {
+          "id": 98232499,
+          "login": "StantonMatt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-02T08:34:46Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3975136853",
+        "actor": {
+          "id": 256490899,
+          "login": "promptless-for-oss",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T21:18:22Z"
+      },
+      {
+        "id": "4199354849",
+        "actor": {
+          "id": 108543824,
+          "login": "john-weathers",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-07T13:35:40Z"
+      },
+      {
+        "id": "5486795697",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-01T00:40:09Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2866242071",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T21:16:44Z"
+      },
+      {
+        "id": "2866242108",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T21:16:44Z"
+      },
+      {
+        "id": "2866242117",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-27T21:16:45Z"
+      },
+      {
+        "id": "2866243593",
+        "actor": {
+          "id": 108543824,
+          "login": "john-weathers",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T21:17:16Z"
+      }
+    ]
+  }
+}
