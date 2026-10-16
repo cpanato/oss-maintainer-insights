@@ -16,26 +16,92 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "18693": {
+        "id": 3683571799,
+        "updated_at": "2026-07-20T22:33:38Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "open"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
-    "pages": {}
+    "pages": {
+      "/repositories/6838921/issues/18693/comments?per_page=100": {
+        "etag": "W/\"53a923912d9b65a7f6d321711ddc9cb5d193c0c9935ae80de0e5d78e5daf976b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4487216346,
+            "user": {
+              "id": 13435893,
+              "login": "krajorama",
+              "type": "User"
+            },
+            "created_at": "2026-05-19T11:19:58Z"
+          },
+          {
+            "id": 4487847545,
+            "user": {
+              "id": 93263133,
+              "login": "Jyotishmoy12",
+              "type": "User"
+            },
+            "created_at": "2026-05-19T12:44:49Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/18693/comments?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/18693/reviews?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3683571799,
+    "author": {
+      "id": 93263133,
+      "login": "Jyotishmoy12",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-05-14T14:35:23Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "4487216346",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-19T11:19:58Z"
+      },
+      {
+        "id": "4487847545",
+        "actor": {
+          "id": 93263133,
+          "login": "Jyotishmoy12",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-19T12:44:49Z"
+      }
+    ],
+    "review_comments": []
   }
 }

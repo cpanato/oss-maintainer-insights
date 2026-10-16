@@ -16,6 +16,14 @@
     "merged_at": "2026-09-22T18:14:26Z"
   },
   "state": {
+    "tracked_prs": {
+      "141789": {
+        "id": 4420092976,
+        "updated_at": "2026-09-29T06:39:56Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -190,6 +198,93 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/141789/comments?per_page=100": {
+        "etag": "W/\"328647fac9c1c3e2314ee6b100e331a8be4df9f3ee48cba8550d84cb0d8d2503\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3912233396,
+            "user": {
+              "id": 44148422,
+              "login": "jdzikowski",
+              "type": "User"
+            },
+            "created_at": "2026-09-02T08:33:54Z"
+          },
+          {
+            "id": 3912235721,
+            "user": {
+              "id": 44148422,
+              "login": "jdzikowski",
+              "type": "User"
+            },
+            "created_at": "2026-09-02T08:34:13Z"
+          },
+          {
+            "id": 3912254728,
+            "user": {
+              "id": 44148422,
+              "login": "jdzikowski",
+              "type": "User"
+            },
+            "created_at": "2026-09-02T08:36:50Z"
+          },
+          {
+            "id": 3912399372,
+            "user": {
+              "id": 44148422,
+              "login": "jdzikowski",
+              "type": "User"
+            },
+            "created_at": "2026-09-02T08:55:13Z"
+          },
+          {
+            "id": 3912455961,
+            "user": {
+              "id": 34347792,
+              "login": "wasylkowski-a",
+              "type": "User"
+            },
+            "created_at": "2026-09-02T09:02:16Z"
+          },
+          {
+            "id": 3912457286,
+            "user": {
+              "id": 34347792,
+              "login": "wasylkowski-a",
+              "type": "User"
+            },
+            "created_at": "2026-09-02T09:02:24Z"
+          },
+          {
+            "id": 3912458297,
+            "user": {
+              "id": 34347792,
+              "login": "wasylkowski-a",
+              "type": "User"
+            },
+            "created_at": "2026-09-02T09:02:31Z"
+          },
+          {
+            "id": 3912459449,
+            "user": {
+              "id": 34347792,
+              "login": "wasylkowski-a",
+              "type": "User"
+            },
+            "created_at": "2026-09-02T09:02:39Z"
+          },
+          {
+            "id": 4073149365,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "created_at": "2026-09-22T15:04:27Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/141789/reviews?per_page=100": {
         "etag": "W/\"ce9486628e1fb36745f31e956136071c9ba5d1a48ae3171e009d5d4ccb4a28a5\"",
         "next": "",
@@ -276,18 +371,345 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4420092976,
+    "author": {
+      "id": 34347792,
+      "login": "wasylkowski-a",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-09-02T08:06:34Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "5087387204",
+        "actor": {
+          "id": 44148422,
+          "login": "jdzikowski",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:56:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5087652315",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T09:02:16Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5087654163",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T09:02:25Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5087655452",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T09:02:31Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5087657169",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T09:02:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "5252603024",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-18T21:05:02Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "5279912652",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-22T15:05:30Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5506490866",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-02T08:06:45Z"
+      },
+      {
+        "id": "5506538436",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:10:56Z"
+      },
+      {
+        "id": "5506569760",
+        "actor": {
+          "id": 44148422,
+          "login": "jdzikowski",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:13:43Z"
+      },
+      {
+        "id": "5506985661",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:50:44Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "5507050644",
+        "actor": {
+          "id": 44148422,
+          "login": "jdzikowski",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:56:29Z"
+      },
+      {
+        "id": "5507052402",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-02T08:56:38Z"
+      },
+      {
+        "id": "5507937231",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T10:10:16Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "5507939414",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T10:10:28Z"
+      },
+      {
+        "id": "5507941369",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-02T10:10:38Z"
+      },
+      {
+        "id": "5521227455",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-03T05:57:15Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "5591679855",
+        "actor": {
+          "id": 10984162,
+          "login": "siyuanfoundation",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-08T20:49:59Z"
+      },
+      {
+        "id": "5591681226",
+        "actor": {
+          "id": 10984162,
+          "login": "siyuanfoundation",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-08T20:50:07Z"
+      },
+      {
+        "id": "5746808561",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-20T01:44:33Z"
+      },
+      {
+        "id": "5778904900",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-22T15:05:45Z"
+      },
+      {
+        "id": "5778907587",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-09-22T15:05:55Z"
+      },
+      {
+        "id": "5780891482",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-22T17:21:41Z"
+      },
+      {
+        "id": "5885054582",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-29T06:39:55Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3912233396",
+        "actor": {
+          "id": 44148422,
+          "login": "jdzikowski",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:33:54Z"
+      },
+      {
+        "id": "3912235721",
+        "actor": {
+          "id": 44148422,
+          "login": "jdzikowski",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:34:13Z"
+      },
+      {
+        "id": "3912254728",
+        "actor": {
+          "id": 44148422,
+          "login": "jdzikowski",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:36:50Z"
+      },
+      {
+        "id": "3912399372",
+        "actor": {
+          "id": 44148422,
+          "login": "jdzikowski",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T08:55:13Z"
+      },
+      {
+        "id": "3912455961",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T09:02:16Z"
+      },
+      {
+        "id": "3912457286",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T09:02:24Z"
+      },
+      {
+        "id": "3912458297",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T09:02:31Z"
+      },
+      {
+        "id": "3912459449",
+        "actor": {
+          "id": 34347792,
+          "login": "wasylkowski-a",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-02T09:02:39Z"
+      },
+      {
+        "id": "4073149365",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-22T15:04:27Z"
+      }
+    ]
   }
 }

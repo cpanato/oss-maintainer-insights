@@ -1,0 +1,161 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-09-01T08:45:09Z",
+    "id": 2788032875,
+    "number": 8022,
+    "user": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2025-08-31T20:16:13Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-09-01T08:45:09Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8022": {
+        "id": 2788032875,
+        "updated_at": "2025-09-01T08:45:09Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8022/comments?per_page=100": {
+        "etag": "W/\"a02b1d8f2d9495926ee1a3f32b8350cbbb1193616b24c6c334a4bc3d344be4b7\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3241359365,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-01T08:20:06Z"
+          },
+          {
+            "id": 3241450498,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-01T08:44:08Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8022/comments?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8022/reviews?per_page=100": {
+        "etag": "W/\"abcbfb6212f45bcb2973a0d96e233988b184196a9ad7e3ed2fa4a8e824c3341d\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3172609199,
+            "user": {
+              "id": 11051419,
+              "login": "hawksight",
+              "type": "User"
+            },
+            "submitted_at": "2025-09-01T08:19:59Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3172709521,
+            "user": {
+              "id": 2195781,
+              "login": "maelvls",
+              "type": "User"
+            },
+            "submitted_at": "2025-09-01T08:44:00Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2788032875,
+    "author": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2025-08-31T20:16:13Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3172609199",
+        "actor": {
+          "id": 11051419,
+          "login": "hawksight",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-01T08:19:59Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3172709521",
+        "actor": {
+          "id": 2195781,
+          "login": "maelvls",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-01T08:44:00Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3241359365",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-01T08:20:06Z"
+      },
+      {
+        "id": "3241450498",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-01T08:44:08Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

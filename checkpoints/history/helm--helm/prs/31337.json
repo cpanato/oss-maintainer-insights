@@ -1,0 +1,157 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-10-29T19:24:21Z",
+    "id": 2862284593,
+    "number": 31337,
+    "user": {
+      "id": 38054321,
+      "login": "rachelvweber",
+      "type": "User"
+    },
+    "created_at": "2025-09-26T01:21:17Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-10-22T19:40:33Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "31337": {
+        "id": 2862284593,
+        "updated_at": "2025-10-29T19:24:21Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/31337/comments?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/31337/comments?per_page=100": {
+        "etag": "W/\"04f8b5753ea156183247d04f48196ee7d2ca13def4ee28b4aa535052685bf12f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2380639446,
+            "user": {
+              "id": 38054321,
+              "login": "rachelvweber",
+              "type": "User"
+            },
+            "created_at": "2025-09-26T01:23:27Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/31337/reviews?per_page=100": {
+        "etag": "W/\"7eccbe89da380d42dbfb05914f55d402ca951d0ed55cae0913fb33a212a26040\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3269857015,
+            "user": {
+              "id": 38054321,
+              "login": "rachelvweber",
+              "type": "User"
+            },
+            "submitted_at": "2025-09-26T01:23:28Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3275086393,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2025-09-27T20:08:40Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 3367292558,
+            "user": {
+              "id": 13884882,
+              "login": "robertsirc",
+              "type": "User"
+            },
+            "submitted_at": "2025-10-22T19:40:11Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2862284593,
+    "author": {
+      "id": 38054321,
+      "login": "rachelvweber",
+      "type": "User"
+    },
+    "created_at": "2025-09-26T01:21:17Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3269857015",
+        "actor": {
+          "id": 38054321,
+          "login": "rachelvweber",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-26T01:23:28Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3275086393",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-27T20:08:40Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "3367292558",
+        "actor": {
+          "id": 13884882,
+          "login": "robertsirc",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-22T19:40:11Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "2380639446",
+        "actor": {
+          "id": 38054321,
+          "login": "rachelvweber",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-26T01:23:27Z"
+      }
+    ]
+  }
+}

@@ -10,14 +10,14 @@
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 55,
-    "reused_prs": 301,
+    "refreshed_prs": 54,
+    "reused_prs": 302,
     "events_checked_since": "2026-10-14T15:12:29Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-07-18T17:15:54Z",
-    "newest_created_at": "2026-10-15T16:05:59Z"
+    "oldest_created_at": "2026-07-19T09:50:58Z",
+    "newest_created_at": "2026-10-16T13:03:22Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,16 +28,16 @@
       "full_name": "cert-manager/cert-manager"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-15T17:36:17.000Z",
+    "collected_at": "2026-10-16T20:09:35.000Z",
     "window": {
-      "start": "2026-07-17T17:36:17.000Z",
-      "end": "2026-10-15T17:36:17.000Z"
+      "start": "2026-07-18T20:09:35.000Z",
+      "end": "2026-10-16T20:09:35.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 952,
+      "bot_events": 950,
       "missing_event_actors": 0,
       "self_events": 619
     },
@@ -46,20 +46,20 @@
       "coverage": "complete_for_sample",
       "authors": 59,
       "outcomes": {
-        "open": 53,
-        "closed_unmerged": 35,
+        "open": 54,
+        "closed_unmerged": 34,
         "merged": 268
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 202,
+        "github_review_units": 201,
         "prow_command_units": 220
       },
       "eligible_prs": 356,
       "covered_prs": 356,
       "coverage": "complete_for_sample",
-      "review_units": 273,
+      "review_units": 272,
       "participants": 14,
       "distribution": [
         {
@@ -100,7 +100,7 @@
         },
         {
           "sources": {
-            "github_review_units": 18,
+            "github_review_units": 17,
             "prow_command_units": 3
           },
           "actor": {
@@ -108,7 +108,7 @@
             "login": "lunarwhite",
             "type": "User"
           },
-          "review_units": 20
+          "review_units": 19
         },
         {
           "sources": {
@@ -236,7 +236,7 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5054945054945055,
+        "value": 0.5073529411764706,
         "status": "available"
       }
     },
@@ -244,10 +244,10 @@
       "eligible_prs": 356,
       "covered_prs": 356,
       "coverage": "complete_for_sample",
-      "responded_prs": 273,
-      "unanswered_prs": 83,
+      "responded_prs": 272,
+      "unanswered_prs": 84,
       "median_ms": {
-        "value": 50075000,
+        "value": 49830500,
         "status": "available"
       }
     }
@@ -259,11 +259,11 @@
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 170,
+  "requests": 167,
   "rate": {
-    "remaining": 1712,
+    "remaining": 3752,
     "limit": 5000,
-    "resetAt": 1792088416000
+    "resetAt": 1792184634000
   },
   "failures": [],
   "complete": true

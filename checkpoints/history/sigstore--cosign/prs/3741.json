@@ -16,6 +16,14 @@
     "merged_at": "2024-06-18T18:41:23Z"
   },
   "state": {
+    "tracked_prs": {
+      "3741": {
+        "id": 1926997991,
+        "updated_at": "2024-06-18T18:41:36Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -36,6 +44,11 @@
             "created_at": "2024-06-18T18:07:22Z"
           }
         ]
+      },
+      "/repositories/335952417/pulls/3741/comments?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
       },
       "/repositories/335952417/pulls/3741/reviews?per_page=100": {
         "etag": "W/\"15500cfb4b1fe650bda4b3ece2a54ded7609c8470f0907c238e8cc96960c5221\"",
@@ -66,18 +79,53 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1926997991,
+    "author": {
+      "id": 17863526,
+      "login": "jonjohnsonjr",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-06-18T18:05:20Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2126225344",
+        "actor": {
+          "id": 210737,
+          "login": "imjasonh",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-18T18:34:45Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2126235842",
+        "actor": {
+          "id": 2442466,
+          "login": "mattmoor",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-18T18:41:10Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2176682003",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-06-18T18:07:22Z"
+      }
+    ],
+    "review_comments": []
   }
 }

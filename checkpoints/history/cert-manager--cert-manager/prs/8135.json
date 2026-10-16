@@ -1,0 +1,173 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-10-03T08:34:15Z",
+    "id": 2883586144,
+    "number": 8135,
+    "user": {
+      "id": 157150467,
+      "login": "octo-sts[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2025-10-03T02:32:04Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-10-03T08:34:15Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8135": {
+        "id": 2883586144,
+        "updated_at": "2025-10-03T08:34:15Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8135/comments?per_page=100": {
+        "etag": "W/\"a42c630cc46fde2d896e8d9ec83a51b94597eab97cbd9704913468a70d996d11\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3363935088,
+            "user": {
+              "id": 157150467,
+              "login": "octo-sts[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-10-03T02:32:06Z"
+          },
+          {
+            "id": 3363935274,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-10-03T02:32:14Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3364723124,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2025-10-03T08:15:18Z"
+          },
+          {
+            "id": 3364723471,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-10-03T08:15:26Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8135/comments?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8135/reviews?per_page=100": {
+        "etag": "W/\"c4e2f4ae5304395a55cbd059944aab4db35d237ef70320f2934401f5f93433ec\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3297942423,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2025-10-03T08:15:01Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2883586144,
+    "author": {
+      "id": 157150467,
+      "login": "octo-sts[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2025-10-03T02:32:04Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3297942423",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-03T08:15:01Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3363935088",
+        "actor": {
+          "id": 157150467,
+          "login": "octo-sts[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-10-03T02:32:06Z"
+      },
+      {
+        "id": "3363935274",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-10-03T02:32:14Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3364723124",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-03T08:15:18Z"
+      },
+      {
+        "id": "3364723471",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-10-03T08:15:26Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

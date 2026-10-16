@@ -1,0 +1,173 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-09-19T22:36:20Z",
+    "id": 2845170275,
+    "number": 8098,
+    "user": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2025-09-19T21:01:52Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-09-19T22:36:20Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8098": {
+        "id": 2845170275,
+        "updated_at": "2025-09-19T22:36:20Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8098/comments?per_page=100": {
+        "etag": "W/\"a4179e16750327e9de4135a2f3f3e9b184fc39fbbe0ba9965f38b8ec17089607\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3313800688,
+            "user": {
+              "id": 157150467,
+              "login": "octo-sts[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-19T21:04:51Z"
+          },
+          {
+            "id": 3313805488,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2025-09-19T21:07:08Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3314039219,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2025-09-19T22:35:28Z"
+          },
+          {
+            "id": 3314039462,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-19T22:35:35Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8098/comments?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8098/reviews?per_page=100": {
+        "etag": "W/\"0cbeea1e84e4bce0559b337add8b4ef53ec5aa418f7ca91b86fa38cea850de39\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3247096496,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2025-09-19T21:02:10Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2845170275,
+    "author": {
+      "id": 1142578,
+      "login": "erikgb",
+      "type": "User"
+    },
+    "created_at": "2025-09-19T21:01:52Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3247096496",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-19T21:02:10Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3313800688",
+        "actor": {
+          "id": 157150467,
+          "login": "octo-sts[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-19T21:04:51Z"
+      },
+      {
+        "id": "3313805488",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-19T21:07:08Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3314039219",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-19T22:35:28Z"
+      },
+      {
+        "id": "3314039462",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-19T22:35:35Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

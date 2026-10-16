@@ -1,0 +1,159 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-10-15T15:57:42Z",
+    "id": 2782497249,
+    "number": 8017,
+    "user": {
+      "id": 15379715,
+      "login": "ThatsMrTalbot",
+      "type": "User"
+    },
+    "created_at": "2025-08-28T17:32:15Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-08-28T18:15:05Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8017": {
+        "id": 2782497249,
+        "updated_at": "2025-10-15T15:57:42Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/8017/comments?per_page=100": {
+        "etag": "W/\"61d53ff813c7f0a4fbe0f1914e25ef69f332547a936c87e48d9afad371f9d797\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 3234480477,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2025-08-28T18:14:03Z"
+          },
+          {
+            "id": 3234480809,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-08-28T18:14:11Z"
+          },
+          {
+            "id": 3407176094,
+            "user": {
+              "id": 188351318,
+              "login": "wallrj-cyberark",
+              "type": "User"
+            },
+            "created_at": "2025-10-15T15:57:42Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8017/comments?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8017/reviews?per_page=100": {
+        "etag": "W/\"6cbdf04041c3d4258d07af94c6310466b7dead6f452b1a524bd2a5fc9b61cdc3\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3165970171,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2025-08-28T18:00:44Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2782497249,
+    "author": {
+      "id": 15379715,
+      "login": "ThatsMrTalbot",
+      "type": "User"
+    },
+    "created_at": "2025-08-28T17:32:15Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3165970171",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-28T18:00:44Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "3234480477",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-28T18:14:03Z"
+      },
+      {
+        "id": "3234480809",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-08-28T18:14:11Z"
+      },
+      {
+        "id": "3407176094",
+        "actor": {
+          "id": 188351318,
+          "login": "wallrj-cyberark",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-15T15:57:42Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

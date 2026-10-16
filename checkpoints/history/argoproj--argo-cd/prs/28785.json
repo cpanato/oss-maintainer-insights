@@ -16,26 +16,150 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "28785": {
+        "id": 4082526081,
+        "updated_at": "2026-08-23T14:43:01Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "open"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/28785/comments?per_page=100": {
+        "etag": "W/\"1715f73b785c287a9d20e19d751f63a6f9061fb2893f5087bf965c3747db94bc\"",
+        "next": "",
+        "value": [
+          {
+            "id": 5011515151,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-18T13:55:08Z"
+          },
+          {
+            "id": 5011523336,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-18T13:57:51Z"
+          },
+          {
+            "id": 5012051888,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-18T16:37:09Z"
+          },
+          {
+            "id": 5121988532,
+            "user": {
+              "id": 183540294,
+              "login": "gagan-zs",
+              "type": "User"
+            },
+            "created_at": "2026-07-29T18:33:18Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/28785/comments?per_page=100": {
+        "etag": "\"182eb070f0fb00dec30d6923539dde71d85314a2353fb0dde40a8a7a241b2089\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/28785/reviews?per_page=100": {
+        "etag": "W/\"c07f37bd19c46f99b8010b6ab8954751644413c28946cbdbb32f81792f871d55\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4964707013,
+            "user": {
+              "id": 1801407,
+              "login": "jwitko",
+              "type": "User"
+            },
+            "submitted_at": "2026-08-18T18:57:24Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4082526081,
+    "author": {
+      "id": 215049211,
+      "login": "vishnu97770",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-07-18T13:55:02Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4964707013",
+        "actor": {
+          "id": 1801407,
+          "login": "jwitko",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-18T18:57:24Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5011515151",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-18T13:55:08Z"
+      },
+      {
+        "id": "5011523336",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-18T13:57:51Z"
+      },
+      {
+        "id": "5012051888",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-18T16:37:09Z"
+      },
+      {
+        "id": "5121988532",
+        "actor": {
+          "id": 183540294,
+          "login": "gagan-zs",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-29T18:33:18Z"
+      }
+    ],
+    "review_comments": []
   }
 }
