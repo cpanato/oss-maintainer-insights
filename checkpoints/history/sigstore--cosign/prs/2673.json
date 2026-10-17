@@ -16,12 +16,104 @@
     "merged_at": "2023-02-10T15:14:29Z"
   },
   "state": {
+    "tracked_prs": {
+      "2673": {
+        "id": 1220335805,
+        "updated_at": "2023-02-10T18:19:23Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
     "pages": {
+      "/repositories/335952417/issues/2673/comments?per_page=100": {
+        "etag": "W/\"5f842fef98833384945f305cb659b88f670365ab376993d7108fd94e1b30a50e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1407439140,
+            "user": {
+              "id": 65553080,
+              "login": "codecov-commenter",
+              "type": "User"
+            },
+            "created_at": "2023-01-28T16:53:16Z"
+          },
+          {
+            "id": 1407440669,
+            "user": {
+              "id": 1447686,
+              "login": "Itxaka",
+              "type": "User"
+            },
+            "created_at": "2023-01-28T17:02:03Z"
+          },
+          {
+            "id": 1419759475,
+            "user": {
+              "id": 29541485,
+              "login": "ChrisJBurns",
+              "type": "User"
+            },
+            "created_at": "2023-02-06T21:09:39Z"
+          },
+          {
+            "id": 1425922391,
+            "user": {
+              "id": 873857,
+              "login": "znewman01",
+              "type": "User"
+            },
+            "created_at": "2023-02-10T14:57:36Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/2673/comments?per_page=100": {
+        "etag": "W/\"b6238fb364c46dcb184b92a5c11426ada117cfbd345493b6a4e3f2443932e36d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1089776115,
+            "user": {
+              "id": 1447686,
+              "login": "Itxaka",
+              "type": "User"
+            },
+            "created_at": "2023-01-28T16:59:37Z"
+          },
+          {
+            "id": 1089776267,
+            "user": {
+              "id": 29541485,
+              "login": "ChrisJBurns",
+              "type": "User"
+            },
+            "created_at": "2023-01-28T17:01:02Z"
+          },
+          {
+            "id": 1097884168,
+            "user": {
+              "id": 873857,
+              "login": "znewman01",
+              "type": "User"
+            },
+            "created_at": "2023-02-06T20:28:01Z"
+          },
+          {
+            "id": 1097885806,
+            "user": {
+              "id": 29541485,
+              "login": "ChrisJBurns",
+              "type": "User"
+            },
+            "created_at": "2023-02-06T20:29:57Z"
+          }
+        ]
+      },
       "/repositories/335952417/pulls/2673/reviews?per_page=100": {
         "etag": "W/\"82a39856ce706fde937abc6310f4bd7de4564b925011d2071ed0f7645971628f\"",
         "next": "",
@@ -91,18 +183,157 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1220335805,
+    "author": {
+      "id": 29541485,
+      "login": "ChrisJBurns",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-01-28T16:51:02Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1273972502",
+        "actor": {
+          "id": 1447686,
+          "login": "Itxaka",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-28T16:59:46Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1273972656",
+        "actor": {
+          "id": 29541485,
+          "login": "ChrisJBurns",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-28T17:01:02Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1285958066",
+        "actor": {
+          "id": 873857,
+          "login": "znewman01",
+          "type": "User"
+        },
+        "occurred_at": "2023-02-06T20:28:40Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "1285960655",
+        "actor": {
+          "id": 29541485,
+          "login": "ChrisJBurns",
+          "type": "User"
+        },
+        "occurred_at": "2023-02-06T20:29:58Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1285995334",
+        "actor": {
+          "id": 873857,
+          "login": "znewman01",
+          "type": "User"
+        },
+        "occurred_at": "2023-02-06T20:55:40Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "1293364937",
+        "actor": {
+          "id": 873857,
+          "login": "znewman01",
+          "type": "User"
+        },
+        "occurred_at": "2023-02-10T15:14:26Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1407439140",
+        "actor": {
+          "id": 65553080,
+          "login": "codecov-commenter",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-28T16:53:16Z"
+      },
+      {
+        "id": "1407440669",
+        "actor": {
+          "id": 1447686,
+          "login": "Itxaka",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-28T17:02:03Z"
+      },
+      {
+        "id": "1419759475",
+        "actor": {
+          "id": 29541485,
+          "login": "ChrisJBurns",
+          "type": "User"
+        },
+        "occurred_at": "2023-02-06T21:09:39Z"
+      },
+      {
+        "id": "1425922391",
+        "actor": {
+          "id": 873857,
+          "login": "znewman01",
+          "type": "User"
+        },
+        "occurred_at": "2023-02-10T14:57:36Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1089776115",
+        "actor": {
+          "id": 1447686,
+          "login": "Itxaka",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-28T16:59:37Z"
+      },
+      {
+        "id": "1089776267",
+        "actor": {
+          "id": 29541485,
+          "login": "ChrisJBurns",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-28T17:01:02Z"
+      },
+      {
+        "id": "1097884168",
+        "actor": {
+          "id": 873857,
+          "login": "znewman01",
+          "type": "User"
+        },
+        "occurred_at": "2023-02-06T20:28:01Z"
+      },
+      {
+        "id": "1097885806",
+        "actor": {
+          "id": 29541485,
+          "login": "ChrisJBurns",
+          "type": "User"
+        },
+        "occurred_at": "2023-02-06T20:29:57Z"
+      }
+    ]
   }
 }

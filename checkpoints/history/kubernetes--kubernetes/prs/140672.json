@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "140672": {
+        "id": 4075699922,
+        "updated_at": "2026-09-08T03:08:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "open"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -55,6 +63,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/140672/comments?per_page=100": {
+        "etag": "\"66249bfc571ae452d2bd00caa3b36b08c464870eedbba6c1faf10f323a3a8399\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/140672/reviews?per_page=100": {
         "etag": "\"3f6a722d32d491bc642992c49b2ba5d1638293f51739fbc142ab931d7a0f60cc\"",
         "next": "",
@@ -63,18 +76,50 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4075699922,
+    "author": {
+      "id": 15710934,
+      "login": "huww98",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-07-17T10:22:19Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "5002049154",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-17T10:22:29Z"
+      },
+      {
+        "id": "5002050639",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-17T10:22:38Z"
+      },
+      {
+        "id": "5578299127",
+        "actor": {
+          "id": 15710934,
+          "login": "huww98",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-08T02:42:10Z"
+      }
+    ],
+    "review_comments": []
   }
 }

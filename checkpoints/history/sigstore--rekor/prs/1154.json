@@ -16,26 +16,76 @@
     "merged_at": "2022-10-26T11:40:27Z"
   },
   "state": {
+    "tracked_prs": {
+      "1154": {
+        "id": 1100126931,
+        "updated_at": "2022-10-26T11:40:39Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/rekor",
-    "pages": {}
+    "pages": {
+      "/repositories/272963353/issues/1154/comments?per_page=100": {
+        "etag": "\"66249bfc571ae452d2bd00caa3b36b08c464870eedbba6c1faf10f323a3a8399\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/272963353/pulls/1154/comments?per_page=100": {
+        "etag": "\"66249bfc571ae452d2bd00caa3b36b08c464870eedbba6c1faf10f323a3a8399\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/272963353/pulls/1154/reviews?per_page=100": {
+        "etag": "W/\"f3482b7972f8f76063423ff2d2c316c0e02477353b526d21c3964f2e8bc1a8b8\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1156343762,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "submitted_at": "2022-10-26T11:37:37Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1100126931,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-10-26T11:21:18Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1156343762",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-10-26T11:37:37Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

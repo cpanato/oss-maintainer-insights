@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 400,
-    "human_authored_prs": 194,
-    "bot_authored_prs": 162,
+    "human_authored_prs": 189,
+    "bot_authored_prs": 161,
     "draft_prs": 11,
     "missing_author_prs": 0,
-    "outside_window_prs": 33,
+    "outside_window_prs": 39,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 54,
-    "reused_prs": 302,
+    "refreshed_prs": 52,
+    "reused_prs": 298,
     "events_checked_since": "2026-10-14T15:12:29Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-07-19T09:50:58Z",
-    "newest_created_at": "2026-10-16T13:03:22Z"
+    "oldest_created_at": "2026-07-20T00:17:46Z",
+    "newest_created_at": "2026-10-17T00:23:09Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,51 +28,51 @@
       "full_name": "cert-manager/cert-manager"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-16T20:09:35.000Z",
+    "collected_at": "2026-10-17T21:52:47.000Z",
     "window": {
-      "start": "2026-07-18T20:09:35.000Z",
-      "end": "2026-10-16T20:09:35.000Z"
+      "start": "2026-07-19T21:52:47.000Z",
+      "end": "2026-10-17T21:52:47.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 950,
+      "bot_events": 926,
       "missing_event_actors": 0,
-      "self_events": 619
+      "self_events": 609
     },
     "creation_cohort": {
-      "eligible_prs": 356,
+      "eligible_prs": 350,
       "coverage": "complete_for_sample",
-      "authors": 59,
+      "authors": 58,
       "outcomes": {
-        "open": 54,
-        "closed_unmerged": 34,
-        "merged": 268
+        "open": 52,
+        "closed_unmerged": 32,
+        "merged": 266
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 201,
-        "prow_command_units": 220
+        "github_review_units": 197,
+        "prow_command_units": 219
       },
-      "eligible_prs": 356,
-      "covered_prs": 356,
+      "eligible_prs": 350,
+      "covered_prs": 350,
       "coverage": "complete_for_sample",
-      "review_units": 272,
+      "review_units": 267,
       "participants": 14,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 95,
-            "prow_command_units": 124
+            "github_review_units": 93,
+            "prow_command_units": 123
           },
           "actor": {
             "id": 978965,
             "login": "wallrj",
             "type": "User"
           },
-          "review_units": 138
+          "review_units": 135
         },
         {
           "sources": {
@@ -88,7 +88,7 @@
         },
         {
           "sources": {
-            "github_review_units": 7,
+            "github_review_units": 6,
             "prow_command_units": 21
           },
           "actor": {
@@ -96,11 +96,11 @@
             "login": "hjoshi123",
             "type": "User"
           },
-          "review_units": 24
+          "review_units": 23
         },
         {
           "sources": {
-            "github_review_units": 17,
+            "github_review_units": 16,
             "prow_command_units": 3
           },
           "actor": {
@@ -108,7 +108,7 @@
             "login": "lunarwhite",
             "type": "User"
           },
-          "review_units": 19
+          "review_units": 18
         },
         {
           "sources": {
@@ -236,34 +236,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5073529411764706,
+        "value": 0.5056179775280899,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 356,
-      "covered_prs": 356,
+      "eligible_prs": 350,
+      "covered_prs": 350,
       "coverage": "complete_for_sample",
-      "responded_prs": 272,
-      "unanswered_prs": 84,
+      "responded_prs": 269,
+      "unanswered_prs": 81,
       "median_ms": {
-        "value": 49830500,
+        "value": 47857000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 400,
-    "selected": 356,
-    "eligible_on_page": 356,
+    "selected": 350,
+    "eligible_on_page": 350,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 167,
+  "requests": 161,
   "rate": {
-    "remaining": 3752,
+    "remaining": 2878,
     "limit": 5000,
-    "resetAt": 1792184634000
+    "resetAt": 1792277134000
   },
   "failures": [],
   "complete": true

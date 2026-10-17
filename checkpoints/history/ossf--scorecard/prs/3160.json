@@ -16,12 +16,58 @@
     "merged_at": "2023-06-13T23:19:49Z"
   },
   "state": {
+    "tracked_prs": {
+      "3160": {
+        "id": 1390158241,
+        "updated_at": "2023-06-13T23:19:50Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
     "pages": {
+      "/repositories/302670797/issues/3160/comments?per_page=100": {
+        "etag": "W/\"01e17e5e3ebf532c1a35b3e9df9521ae2f6d9f9ce250db0594a865051a03f927\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1590108653,
+            "user": {
+              "id": 172697,
+              "login": "naveensrinivasan",
+              "type": "User"
+            },
+            "created_at": "2023-06-13T22:08:48Z"
+          },
+          {
+            "id": 1590109072,
+            "user": {
+              "id": 172697,
+              "login": "naveensrinivasan",
+              "type": "User"
+            },
+            "created_at": "2023-06-13T22:08:54Z"
+          },
+          {
+            "id": 1590131563,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2023-06-13T22:20:53Z"
+          }
+        ]
+      },
+      "/repositories/302670797/pulls/3160/comments?per_page=100": {
+        "etag": "\"66249bfc571ae452d2bd00caa3b36b08c464870eedbba6c1faf10f323a3a8399\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/302670797/pulls/3160/reviews?per_page=100": {
         "etag": "W/\"48018344e666bcf26b866eaa7e3fcb6872338495e1d053a4c8b4a267614ac6ac\"",
         "next": "",
@@ -41,18 +87,61 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1390158241,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-06-13T08:58:02Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1478134082",
+        "actor": {
+          "id": 172697,
+          "login": "naveensrinivasan",
+          "type": "User"
+        },
+        "occurred_at": "2023-06-13T22:08:39Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1590108653",
+        "actor": {
+          "id": 172697,
+          "login": "naveensrinivasan",
+          "type": "User"
+        },
+        "occurred_at": "2023-06-13T22:08:48Z"
+      },
+      {
+        "id": "1590109072",
+        "actor": {
+          "id": 172697,
+          "login": "naveensrinivasan",
+          "type": "User"
+        },
+        "occurred_at": "2023-06-13T22:08:54Z"
+      },
+      {
+        "id": "1590131563",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-06-13T22:20:53Z"
+      }
+    ],
+    "review_comments": []
   }
 }
