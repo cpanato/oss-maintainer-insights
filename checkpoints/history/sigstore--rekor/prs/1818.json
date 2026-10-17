@@ -16,26 +16,192 @@
     "merged_at": "2023-11-08T17:54:14Z"
   },
   "state": {
+    "tracked_prs": {
+      "1818": {
+        "id": 1593035164,
+        "updated_at": "2023-11-08T17:54:29Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/rekor",
-    "pages": {}
+    "pages": {
+      "/repositories/272963353/issues/1818/comments?per_page=100": {
+        "etag": "W/\"398e0a0d0037cb35f42ecdc9434acf666f3076f2155562e6ee29054e59b41588\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1802344011,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2023-11-08T17:29:20Z"
+          },
+          {
+            "id": 1802363199,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2023-11-08T17:42:21Z"
+          }
+        ]
+      },
+      "/repositories/272963353/pulls/1818/comments?per_page=100": {
+        "etag": "W/\"4fb14729a5ed83383ca9775554e7e617d161ca0357e2edb47d7fe8d6edf1c79b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1386969983,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "created_at": "2023-11-08T17:24:39Z"
+          },
+          {
+            "id": 1386990067,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2023-11-08T17:41:01Z"
+          }
+        ]
+      },
+      "/repositories/272963353/pulls/1818/reviews?per_page=100": {
+        "etag": "W/\"0193d3e3ab5231f25360cbf041d473aaac798f6e6bcc9becfe40f070c5eb061a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1720899275,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-08T17:24:39Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1720937813,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-08T17:41:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1720946662,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-08T17:45:37Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1593035164,
+    "author": {
+      "id": 2845093,
+      "login": "bobcallaway",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-11-08T17:21:24Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1720899275",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-08T17:24:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1720937813",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-08T17:41:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1720946662",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-08T17:45:37Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1802344011",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-11-08T17:29:20Z"
+      },
+      {
+        "id": "1802363199",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-08T17:42:21Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1386969983",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-08T17:24:39Z"
+      },
+      {
+        "id": "1386990067",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-08T17:41:01Z"
+      }
+    ]
   }
 }

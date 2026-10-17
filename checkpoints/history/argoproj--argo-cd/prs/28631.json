@@ -16,12 +16,58 @@
     "merged_at": "2026-07-08T14:58:35Z"
   },
   "state": {
+    "tracked_prs": {
+      "28631": {
+        "id": 4014726561,
+        "updated_at": "2026-10-06T15:02:04Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/28631/comments?per_page=100": {
+        "etag": "W/\"18a6b7cc6d25ca4d36c2e1e071f938131281f3dbe9345e03feba52df07133926\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4915172734,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-08T13:15:51Z"
+          },
+          {
+            "id": 4915198761,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-08T13:18:45Z"
+          },
+          {
+            "id": 4915720462,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-08T14:14:18Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/28631/comments?per_page=100": {
+        "etag": "\"c338d221b3bda0a4a7aa472de466cf0ce42de5a22b1df0417f0e0a8bb48e422f\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/28631/reviews?per_page=100": {
         "etag": "W/\"c52bc8cc342aff5c3e2dfc06691d93ea1bea65463275abd7adcbd6fd965aca3e\"",
         "next": "",
@@ -41,18 +87,61 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 4014726561,
+    "author": {
+      "id": 45708547,
+      "login": "choejwoo",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-07-08T13:15:46Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4655351226",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-08T14:58:21Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4915172734",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-08T13:15:51Z"
+      },
+      {
+        "id": "4915198761",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-08T13:18:45Z"
+      },
+      {
+        "id": "4915720462",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-08T14:14:18Z"
+      }
+    ],
+    "review_comments": []
   }
 }
