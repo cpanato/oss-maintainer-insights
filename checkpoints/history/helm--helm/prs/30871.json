@@ -16,26 +16,122 @@
     "merged_at": "2025-05-20T17:57:13Z"
   },
   "state": {
+    "tracked_prs": {
+      "30871": {
+        "id": 2526199176,
+        "updated_at": "2025-11-05T22:59:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
-    "pages": {}
+    "pages": {
+      "/repositories/43723161/issues/30871/comments?per_page=100": {
+        "etag": "\"3cf17969b5e32c0cdcba0b8fb9909c18e9debd4f39741c17186ba6c7eb103984\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/30871/comments?per_page=100": {
+        "etag": "\"3cf17969b5e32c0cdcba0b8fb9909c18e9debd4f39741c17186ba6c7eb103984\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/30871/reviews?per_page=100": {
+        "etag": "W/\"116f3900dce708912702beddda045d86e01be0e242a45b3da91ae66d3ebf6b4f\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2848356346,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "submitted_at": "2025-05-17T17:19:01Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 2848357846,
+            "user": {
+              "id": 13884882,
+              "login": "robertsirc",
+              "type": "User"
+            },
+            "submitted_at": "2025-05-17T17:27:28Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 2855121551,
+            "user": {
+              "id": 62991,
+              "login": "mattfarina",
+              "type": "User"
+            },
+            "submitted_at": "2025-05-20T17:57:03Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2526199176,
+    "author": {
+      "id": 2787248,
+      "login": "gjenkins8",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-05-17T16:11:03Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2848356346",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-17T17:19:01Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2848357846",
+        "actor": {
+          "id": 13884882,
+          "login": "robertsirc",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-17T17:27:28Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2855121551",
+        "actor": {
+          "id": 62991,
+          "login": "mattfarina",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T17:57:03Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

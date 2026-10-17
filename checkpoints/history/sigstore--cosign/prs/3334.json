@@ -16,6 +16,14 @@
     "merged_at": "2023-11-06T19:57:43Z"
   },
   "state": {
+    "tracked_prs": {
+      "3334": {
+        "id": 1583502439,
+        "updated_at": "2023-12-05T13:05:41Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -136,6 +144,11 @@
           }
         ]
       },
+      "/repositories/335952417/pulls/3334/comments?per_page=100": {
+        "etag": "\"3cf17969b5e32c0cdcba0b8fb9909c18e9debd4f39741c17186ba6c7eb103984\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/335952417/pulls/3334/reviews?per_page=100": {
         "etag": "W/\"4f2e0d55fb21c4d1c68ae1ee7749bfdb863e5aed5f1ffb5239aa4649b3f3ae1a\"",
         "next": "",
@@ -165,18 +178,152 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1583502439,
+    "author": {
+      "id": 23390784,
+      "login": "dylrich",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-11-02T00:49:19Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1709432638",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T04:33:09Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "1716132535",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-06T19:54:54Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1789916650",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-11-02T01:24:57Z"
+      },
+      {
+        "id": "1789928849",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T01:41:44Z"
+      },
+      {
+        "id": "1789930419",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T01:44:19Z"
+      },
+      {
+        "id": "1789931169",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T01:45:10Z"
+      },
+      {
+        "id": "1790006354",
+        "actor": {
+          "id": 23390784,
+          "login": "dylrich",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T03:27:11Z"
+      },
+      {
+        "id": "1790049467",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T04:32:54Z"
+      },
+      {
+        "id": "1790977995",
+        "actor": {
+          "id": 23390784,
+          "login": "dylrich",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T15:39:03Z"
+      },
+      {
+        "id": "1791495933",
+        "actor": {
+          "id": 23390784,
+          "login": "dylrich",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T20:30:01Z"
+      },
+      {
+        "id": "1796283717",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-06T19:57:39Z"
+      },
+      {
+        "id": "1838259445",
+        "actor": {
+          "id": 65091408,
+          "login": "viveksahu26",
+          "type": "User"
+        },
+        "occurred_at": "2023-12-04T10:32:05Z"
+      },
+      {
+        "id": "1839218288",
+        "actor": {
+          "id": 23390784,
+          "login": "dylrich",
+          "type": "User"
+        },
+        "occurred_at": "2023-12-04T18:21:53Z"
+      },
+      {
+        "id": "1840634310",
+        "actor": {
+          "id": 65091408,
+          "login": "viveksahu26",
+          "type": "User"
+        },
+        "occurred_at": "2023-12-05T11:48:30Z"
+      }
+    ],
+    "review_comments": []
   }
 }

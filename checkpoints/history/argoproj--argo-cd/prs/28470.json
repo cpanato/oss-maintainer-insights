@@ -16,6 +16,14 @@
     "merged_at": "2026-06-28T12:55:13Z"
   },
   "state": {
+    "tracked_prs": {
+      "28470": {
+        "id": 3949482825,
+        "updated_at": "2026-07-31T13:42:37Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -46,6 +54,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/28470/comments?per_page=100": {
+        "etag": "\"3cf17969b5e32c0cdcba0b8fb9909c18e9debd4f39741c17186ba6c7eb103984\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/28470/reviews?per_page=100": {
         "etag": "W/\"e893e699ff63258b34920788f92f67d1e3c0d806595bb198a9ed6e527a402f7f\"",
         "next": "",
@@ -65,18 +78,52 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3949482825,
+    "author": {
+      "id": 41898282,
+      "login": "github-actions[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-06-28T01:07:01Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4587526825",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-28T12:33:05Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4823702782",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-28T01:07:06Z"
+      },
+      {
+        "id": "4826106688",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-28T12:33:52Z"
+      }
+    ],
+    "review_comments": []
   }
 }

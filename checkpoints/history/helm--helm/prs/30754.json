@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-04-21T15:57:56Z",
+    "id": 2458978969,
+    "number": 30754,
+    "user": {
+      "id": 62991,
+      "login": "mattfarina",
+      "type": "User"
+    },
+    "created_at": "2025-04-14T23:32:53Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-04-16T14:18:46Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "30754": {
+        "id": 2458978969,
+        "updated_at": "2025-04-21T15:57:56Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/30754/comments?per_page=100": {
+        "etag": "\"3cf17969b5e32c0cdcba0b8fb9909c18e9debd4f39741c17186ba6c7eb103984\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/30754/comments?per_page=100": {
+        "etag": "W/\"14af2c542d1c3254698ca364976cfc4ae398d440e51ea6544235b9279ee1e269\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2043166740,
+            "user": {
+              "id": 62991,
+              "login": "mattfarina",
+              "type": "User"
+            },
+            "created_at": "2025-04-14T23:34:11Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/30754/reviews?per_page=100": {
+        "etag": "W/\"2ac1477c24447bc4ba3c3f0627994402a8d38922d693695b3c3a1a64b973a227\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2766034339,
+            "user": {
+              "id": 62991,
+              "login": "mattfarina",
+              "type": "User"
+            },
+            "submitted_at": "2025-04-14T23:34:12Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2769830951,
+            "user": {
+              "id": 13884882,
+              "login": "robertsirc",
+              "type": "User"
+            },
+            "submitted_at": "2025-04-15T21:01:35Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2458978969,
+    "author": {
+      "id": 62991,
+      "login": "mattfarina",
+      "type": "User"
+    },
+    "created_at": "2025-04-14T23:32:53Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2766034339",
+        "actor": {
+          "id": 62991,
+          "login": "mattfarina",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-14T23:34:12Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2769830951",
+        "actor": {
+          "id": 13884882,
+          "login": "robertsirc",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-15T21:01:35Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "2043166740",
+        "actor": {
+          "id": 62991,
+          "login": "mattfarina",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-14T23:34:11Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-05-14T10:57:50Z",
+    "id": 2460882091,
+    "number": 7690,
+    "user": {
+      "id": 978965,
+      "login": "wallrj",
+      "type": "User"
+    },
+    "created_at": "2025-04-15T14:23:22Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-04-15T15:24:47Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "7690": {
+        "id": 2460882091,
+        "updated_at": "2025-05-14T10:57:50Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/7690/comments?per_page=100": {
+        "etag": "W/\"db9f46d2b1950c930514f51bccf196f7dde29eb9540d77f58496dd1ffd636e73\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2806189115,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-04-15T15:24:14Z"
+          },
+          {
+            "id": 2879752759,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2025-05-14T10:57:48Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/7690/comments?per_page=100": {
+        "etag": "W/\"92180db9f3ca557db359b4df73136edf8a2181471244cbfc158fcc68505dec16\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2044850146,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2025-04-15T15:01:00Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/7690/reviews?per_page=100": {
+        "etag": "W/\"ab58d2771cdf272751649db6b60c7544feab6fcced8f5de152b70214f933ed31\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2768776574,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2025-04-15T15:01:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2768861578,
+            "user": {
+              "id": 1972547,
+              "login": "SgtCoDFish",
+              "type": "User"
+            },
+            "submitted_at": "2025-04-15T15:24:06Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2460882091,
+    "author": {
+      "id": 978965,
+      "login": "wallrj",
+      "type": "User"
+    },
+    "created_at": "2025-04-15T14:23:22Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2768776574",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-04-15T15:01:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2768861578",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-15T15:24:06Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2806189115",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-04-15T15:24:14Z"
+      },
+      {
+        "id": "2879752759",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-14T10:57:48Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2044850146",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-04-15T15:01:00Z"
+      }
+    ]
+  }
+}

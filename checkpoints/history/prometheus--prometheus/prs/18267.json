@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-03-10T09:42:45Z",
+    "id": 3377462730,
+    "number": 18267,
+    "user": {
+      "id": 13435893,
+      "login": "krajorama",
+      "type": "User"
+    },
+    "created_at": "2026-03-10T08:42:56Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-03-10T09:42:44Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "18267": {
+        "id": 3377462730,
+        "updated_at": "2026-03-10T09:42:45Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 6838921,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "prometheus/prometheus",
+    "pages": {
+      "/repositories/6838921/issues/18267/comments?per_page=100": {
+        "etag": "\"3cf17969b5e32c0cdcba0b8fb9909c18e9debd4f39741c17186ba6c7eb103984\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/18267/comments?per_page=100": {
+        "etag": "W/\"d9137057f700d9cf877fb90445c86b0bc463c3e9332bc514e3cca962cd69acf7\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2910352955,
+            "user": {
+              "id": 33557095,
+              "login": "rexagod",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T09:10:10Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/18267/reviews?per_page=100": {
+        "etag": "W/\"3faa7f8379274e8da25743fa3895e15b4fec7ce40ae57e28c5fc866d2e20d064\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3920875707,
+            "user": {
+              "id": 33557095,
+              "login": "rexagod",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-10T09:10:10Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3920906733,
+            "user": {
+              "id": 4546722,
+              "login": "brancz",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-10T09:15:47Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3377462730,
+    "author": {
+      "id": 13435893,
+      "login": "krajorama",
+      "type": "User"
+    },
+    "created_at": "2026-03-10T08:42:56Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3920875707",
+        "actor": {
+          "id": 33557095,
+          "login": "rexagod",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T09:10:10Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3920906733",
+        "actor": {
+          "id": 4546722,
+          "login": "brancz",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T09:15:47Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "2910352955",
+        "actor": {
+          "id": 33557095,
+          "login": "rexagod",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T09:10:10Z"
+      }
+    ]
+  }
+}

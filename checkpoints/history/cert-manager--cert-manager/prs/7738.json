@@ -16,26 +16,74 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "7738": {
+        "id": 2505235309,
+        "updated_at": "2025-05-08T17:36:14Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
-    "pages": {}
+    "pages": {
+      "/repositories/92313258/issues/7738/comments?per_page=100": {
+        "etag": "W/\"1f2a3765eeca23c3dbafe084003e83f02f049a121280ee91fa208c9e06a94168\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2859904187,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-05-07T18:58:42Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/7738/comments?per_page=100": {
+        "etag": "\"3cf17969b5e32c0cdcba0b8fb9909c18e9debd4f39741c17186ba6c7eb103984\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/7738/reviews?per_page=100": {
+        "etag": "\"3cf17969b5e32c0cdcba0b8fb9909c18e9debd4f39741c17186ba6c7eb103984\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2505235309,
+    "author": {
+      "id": 2119212,
+      "login": "jsoref",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-05-07T18:58:35Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "2859904187",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-05-07T18:58:42Z"
+      }
+    ],
+    "review_comments": []
   }
 }
