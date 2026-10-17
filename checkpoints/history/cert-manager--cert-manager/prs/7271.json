@@ -1,0 +1,145 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-09-12T09:53:07Z",
+    "id": 2068207370,
+    "number": 7271,
+    "user": {
+      "id": 1972547,
+      "login": "SgtCoDFish",
+      "type": "User"
+    },
+    "created_at": "2024-09-12T09:24:55Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-09-12T09:37:18Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "7271": {
+        "id": 2068207370,
+        "updated_at": "2024-09-12T09:53:07Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/7271/comments?per_page=100": {
+        "etag": "W/\"c76a06af59b4e70690aaf470942f404a9b4a1beefb369df3f2c347532a73040c\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2345741338,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2024-09-12T09:26:26Z"
+          },
+          {
+            "id": 2345741569,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2024-09-12T09:26:33Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/7271/comments?per_page=100": {
+        "etag": "\"d9a7c9a62f6b3a360f4cc1a47c0215b451cc09f159d2beef60b0e4ca8f022221\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/7271/reviews?per_page=100": {
+        "etag": "W/\"3839a371e2333e99ef500f37b4c156941ba7aa81d2354eaf3d273cebe654fb29\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2299730850,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "submitted_at": "2024-09-12T09:26:07Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2068207370,
+    "author": {
+      "id": 1972547,
+      "login": "SgtCoDFish",
+      "type": "User"
+    },
+    "created_at": "2024-09-12T09:24:55Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2299730850",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2024-09-12T09:26:07Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2345741338",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2024-09-12T09:26:26Z"
+      },
+      {
+        "id": "2345741569",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-09-12T09:26:33Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

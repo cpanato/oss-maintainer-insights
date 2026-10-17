@@ -1,0 +1,179 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-08-21T14:00:05Z",
+    "id": 2029269409,
+    "number": 7242,
+    "user": {
+      "id": 42113979,
+      "login": "inteon",
+      "type": "User"
+    },
+    "created_at": "2024-08-21T08:50:03Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-08-21T14:00:05Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "7242": {
+        "id": 2029269409,
+        "updated_at": "2024-08-21T14:00:05Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/7242/comments?per_page=100": {
+        "etag": "W/\"ab032fd138ce2e3351f1585a2216f7c9f9c126b23701e6d8075e5226fb06fc0d\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2302093340,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2024-08-21T13:41:59Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 2302128532,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2024-08-21T13:59:31Z"
+          },
+          {
+            "id": 2302128746,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2024-08-21T13:59:37Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/7242/comments?per_page=100": {
+        "etag": "W/\"3f6ff226daf1f9ef3be1b0fdc14e170c9dbdbf7c0f14ec67bd005e997c359efb\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1724980008,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2024-08-21T12:37:53Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/7242/reviews?per_page=100": {
+        "etag": "W/\"33ce63aab6a54c5a47edb59a4d5228698bbec1d5e7fba0d1c52d18653e9d8ada\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2250685766,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "submitted_at": "2024-08-21T12:37:54Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2029269409,
+    "author": {
+      "id": 42113979,
+      "login": "inteon",
+      "type": "User"
+    },
+    "created_at": "2024-08-21T08:50:03Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2250685766",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2024-08-21T12:37:54Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2302093340",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2024-08-21T13:41:59Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "2302128532",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2024-08-21T13:59:31Z"
+      },
+      {
+        "id": "2302128746",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-08-21T13:59:37Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1724980008",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2024-08-21T12:37:53Z"
+      }
+    ]
+  }
+}
