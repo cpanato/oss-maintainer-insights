@@ -16,6 +16,14 @@
     "merged_at": "2026-06-09T11:59:07Z"
   },
   "state": {
+    "tracked_prs": {
+      "28076": {
+        "id": 3776550191,
+        "updated_at": "2026-09-07T12:01:38Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -79,6 +87,93 @@
               "type": "User"
             },
             "created_at": "2026-06-04T17:31:00Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/28076/comments?per_page=100": {
+        "etag": "W/\"14c459a289c7eeb161ce9c6fec4a5214e58a83ab5c9de983a13de78a4bb965a1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3350104773,
+            "user": {
+              "id": 1743100,
+              "login": "ppapapetrou76",
+              "type": "User"
+            },
+            "created_at": "2026-06-03T16:10:04Z"
+          },
+          {
+            "id": 3350107788,
+            "user": {
+              "id": 1743100,
+              "login": "ppapapetrou76",
+              "type": "User"
+            },
+            "created_at": "2026-06-03T16:10:30Z"
+          },
+          {
+            "id": 3350142721,
+            "user": {
+              "id": 1743100,
+              "login": "ppapapetrou76",
+              "type": "User"
+            },
+            "created_at": "2026-06-03T16:15:24Z"
+          },
+          {
+            "id": 3350701729,
+            "user": {
+              "id": 9126448,
+              "login": "dudinea",
+              "type": "User"
+            },
+            "created_at": "2026-06-03T17:47:52Z"
+          },
+          {
+            "id": 3350989451,
+            "user": {
+              "id": 9126448,
+              "login": "dudinea",
+              "type": "User"
+            },
+            "created_at": "2026-06-03T18:36:57Z"
+          },
+          {
+            "id": 3356222124,
+            "user": {
+              "id": 19544836,
+              "login": "reggie-k",
+              "type": "User"
+            },
+            "created_at": "2026-06-04T13:13:09Z"
+          },
+          {
+            "id": 3357826304,
+            "user": {
+              "id": 19544836,
+              "login": "reggie-k",
+              "type": "User"
+            },
+            "created_at": "2026-06-04T17:30:07Z"
+          },
+          {
+            "id": 3372745370,
+            "user": {
+              "id": 1227954,
+              "login": "blakepettersson",
+              "type": "User"
+            },
+            "created_at": "2026-06-08T11:15:16Z"
+          },
+          {
+            "id": 3373503901,
+            "user": {
+              "id": 19544836,
+              "login": "reggie-k",
+              "type": "User"
+            },
+            "created_at": "2026-06-08T13:20:42Z"
           }
         ]
       },
@@ -181,18 +276,250 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3776550191,
+    "author": {
+      "id": 19544836,
+      "login": "reggie-k",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-05-31T14:06:30Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4420457904",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-03T16:16:51Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4421239113",
+        "actor": {
+          "id": 9126448,
+          "login": "dudinea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-03T19:09:24Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "4422458028",
+        "actor": {
+          "id": 9126448,
+          "login": "dudinea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-03T20:22:04Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4428092416",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-04T13:13:09Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4430049264",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-04T17:30:07Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4448941060",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-08T11:15:16Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4449853280",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-08T13:20:42Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4455859406",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-09T06:31:59Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4458134075",
+        "actor": {
+          "id": 9126448,
+          "login": "dudinea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-09T11:35:05Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4586955794",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-31T14:06:37Z"
+      },
+      {
+        "id": "4596769893",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-01T21:46:13Z"
+      },
+      {
+        "id": "4597025182",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-01T22:31:09Z"
+      },
+      {
+        "id": "4622808683",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-04T13:55:51Z"
+      },
+      {
+        "id": "4622859267",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-04T14:01:45Z"
+      },
+      {
+        "id": "4624621841",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-04T17:31:00Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3350104773",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-03T16:10:04Z"
+      },
+      {
+        "id": "3350107788",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-03T16:10:30Z"
+      },
+      {
+        "id": "3350142721",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-03T16:15:24Z"
+      },
+      {
+        "id": "3350701729",
+        "actor": {
+          "id": 9126448,
+          "login": "dudinea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-03T17:47:52Z"
+      },
+      {
+        "id": "3350989451",
+        "actor": {
+          "id": 9126448,
+          "login": "dudinea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-03T18:36:57Z"
+      },
+      {
+        "id": "3356222124",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-04T13:13:09Z"
+      },
+      {
+        "id": "3357826304",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-04T17:30:07Z"
+      },
+      {
+        "id": "3372745370",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-08T11:15:16Z"
+      },
+      {
+        "id": "3373503901",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-08T13:20:42Z"
+      }
+    ]
   }
 }

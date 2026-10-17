@@ -16,26 +16,146 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "13525": {
+        "id": 2231729468,
+        "updated_at": "2025-11-11T00:23:41Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
-    "pages": {}
+    "pages": {
+      "/repositories/43723161/issues/13525/comments?per_page=100": {
+        "etag": "W/\"d482c71c600b42bd751437cf6943e0c250b739d2ed3e4d104afe1b3bd4189e6f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2613288832,
+            "user": {
+              "id": 13884882,
+              "login": "robertsirc",
+              "type": "User"
+            },
+            "created_at": "2025-01-24T20:02:38Z"
+          },
+          {
+            "id": 2614085930,
+            "user": {
+              "id": 2787248,
+              "login": "gjenkins8",
+              "type": "User"
+            },
+            "created_at": "2025-01-25T20:12:55Z"
+          },
+          {
+            "id": 2917175737,
+            "user": {
+              "id": 2787248,
+              "login": "gjenkins8",
+              "type": "User"
+            },
+            "created_at": "2025-05-28T18:02:11Z"
+          },
+          {
+            "id": 3067040516,
+            "user": {
+              "id": 104113,
+              "login": "TerryHowe",
+              "type": "User"
+            },
+            "created_at": "2025-07-13T13:11:10Z"
+          },
+          {
+            "id": 3393763474,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-10-12T00:22:39Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/13525/comments?per_page=100": {
+        "etag": "\"c044311b28f98180b93f858e63a0dc68d1f9ed7f4db54b5c781cd72fe3b0ce6a\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/13525/reviews?per_page=100": {
+        "etag": "\"c044311b28f98180b93f858e63a0dc68d1f9ed7f4db54b5c781cd72fe3b0ce6a\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2231729468,
+    "author": {
+      "id": 228035,
+      "login": "killerwhile",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-12-12T13:42:18Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "2613288832",
+        "actor": {
+          "id": 13884882,
+          "login": "robertsirc",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-24T20:02:38Z"
+      },
+      {
+        "id": "2614085930",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-25T20:12:55Z"
+      },
+      {
+        "id": "2917175737",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-28T18:02:11Z"
+      },
+      {
+        "id": "3067040516",
+        "actor": {
+          "id": 104113,
+          "login": "TerryHowe",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-13T13:11:10Z"
+      },
+      {
+        "id": "3393763474",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-10-12T00:22:39Z"
+      }
+    ],
+    "review_comments": []
   }
 }

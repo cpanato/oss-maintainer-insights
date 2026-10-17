@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-12-12T17:18:09Z",
+    "id": 2220261052,
+    "number": 13509,
+    "user": {
+      "id": 2787248,
+      "login": "gjenkins8",
+      "type": "User"
+    },
+    "created_at": "2024-12-06T14:58:56Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-12-06T20:13:26Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "13509": {
+        "id": 2220261052,
+        "updated_at": "2024-12-12T17:18:09Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 43723161,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "helm/helm",
+    "pages": {
+      "/repositories/43723161/issues/13509/comments?per_page=100": {
+        "etag": "\"c044311b28f98180b93f858e63a0dc68d1f9ed7f4db54b5c781cd72fe3b0ce6a\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/13509/comments?per_page=100": {
+        "etag": "W/\"f053fda4eae8f5b9f13cb57d773adad0410cb6a934e47189c27de7bc439df355\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1873527812,
+            "user": {
+              "id": 2787248,
+              "login": "gjenkins8",
+              "type": "User"
+            },
+            "created_at": "2024-12-06T15:38:48Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/13509/reviews?per_page=100": {
+        "etag": "W/\"18f86e3eac51b4e353ef6a199498585861fb0d3f23107cb88e88acc96917145e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2485154232,
+            "user": {
+              "id": 2787248,
+              "login": "gjenkins8",
+              "type": "User"
+            },
+            "submitted_at": "2024-12-06T15:38:48Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2485777450,
+            "user": {
+              "id": 62991,
+              "login": "mattfarina",
+              "type": "User"
+            },
+            "submitted_at": "2024-12-06T20:13:21Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2220261052,
+    "author": {
+      "id": 2787248,
+      "login": "gjenkins8",
+      "type": "User"
+    },
+    "created_at": "2024-12-06T14:58:56Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2485154232",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-06T15:38:48Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2485777450",
+        "actor": {
+          "id": 62991,
+          "login": "mattfarina",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-06T20:13:21Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "1873527812",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-06T15:38:48Z"
+      }
+    ]
+  }
+}

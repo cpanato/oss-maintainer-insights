@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-01-06T13:07:23Z",
+    "id": 3142897325,
+    "number": 17773,
+    "user": {
+      "id": 1776320,
+      "login": "pr00se",
+      "type": "User"
+    },
+    "created_at": "2026-01-02T20:59:21Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-01-06T13:07:23Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "17773": {
+        "id": 3142897325,
+        "updated_at": "2026-01-06T13:07:23Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 6838921,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "prometheus/prometheus",
+    "pages": {
+      "/repositories/6838921/issues/17773/comments?per_page=100": {
+        "etag": "\"c044311b28f98180b93f858e63a0dc68d1f9ed7f4db54b5c781cd72fe3b0ce6a\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/17773/comments?per_page=100": {
+        "etag": "W/\"82eaf999da7ed0b3fd60adf08d892b7b25b39c8706b2155392db0c164982fa62\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2659727991,
+            "user": {
+              "id": 281303,
+              "login": "aknuds1",
+              "type": "User"
+            },
+            "created_at": "2026-01-04T15:07:10Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/17773/reviews?per_page=100": {
+        "etag": "W/\"c28310b26857b9dd78022b8475ebc9ca5404d0ef254b6cd3a5514023eb252815\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3625048350,
+            "user": {
+              "id": 281303,
+              "login": "aknuds1",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-04T15:08:25Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3627666245,
+            "user": {
+              "id": 281303,
+              "login": "aknuds1",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-05T16:58:31Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3142897325,
+    "author": {
+      "id": 1776320,
+      "login": "pr00se",
+      "type": "User"
+    },
+    "created_at": "2026-01-02T20:59:21Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3625048350",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-04T15:08:25Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3627666245",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-05T16:58:31Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "2659727991",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-04T15:07:10Z"
+      }
+    ]
+  }
+}

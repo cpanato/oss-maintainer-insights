@@ -16,12 +16,40 @@
     "merged_at": "2023-03-11T14:07:25Z"
   },
   "state": {
+    "tracked_prs": {
+      "1377": {
+        "id": 1266295895,
+        "updated_at": "2023-03-11T14:07:39Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/rekor",
     "pages": {
+      "/repositories/272963353/issues/1377/comments?per_page=100": {
+        "etag": "W/\"e9d62da3db882747fcb67ad373ca055a9ef51ff750e0cee479b1d6344a7f27d7\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1458202409,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2023-03-07T13:46:30Z"
+          }
+        ]
+      },
+      "/repositories/272963353/pulls/1377/comments?per_page=100": {
+        "etag": "\"c044311b28f98180b93f858e63a0dc68d1f9ed7f4db54b5c781cd72fe3b0ce6a\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/272963353/pulls/1377/reviews?per_page=100": {
         "etag": "W/\"066c7eaa80ec900bdeaa103ec160dce5df1eb068e5ab62bb7aead3241542d081\"",
         "next": "",
@@ -41,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1266295895,
+    "author": {
+      "id": 44787359,
+      "login": "AdamKorcz",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-03-07T13:38:27Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1328727690",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2023-03-07T15:03:26Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1458202409",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-03-07T13:46:30Z"
+      }
+    ],
+    "review_comments": []
   }
 }

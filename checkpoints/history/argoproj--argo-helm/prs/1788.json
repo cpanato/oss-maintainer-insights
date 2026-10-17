@@ -16,26 +16,116 @@
     "merged_at": "2023-01-21T12:07:14Z"
   },
   "state": {
+    "tracked_prs": {
+      "1788": {
+        "id": 1212338344,
+        "updated_at": "2023-01-21T12:07:18Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-helm",
-    "pages": {}
+    "pages": {
+      "/repositories/106481151/issues/1788/comments?per_page=100": {
+        "etag": "\"c044311b28f98180b93f858e63a0dc68d1f9ed7f4db54b5c781cd72fe3b0ce6a\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/106481151/pulls/1788/comments?per_page=100": {
+        "etag": "W/\"79116a0cdfb40cb23e65eccefa3290403a8c686ec33bb61c00c54a9cdf193c8b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1083281159,
+            "user": {
+              "id": 19188617,
+              "login": "pdrastil",
+              "type": "User"
+            },
+            "created_at": "2023-01-21T11:54:28Z"
+          }
+        ]
+      },
+      "/repositories/106481151/pulls/1788/reviews?per_page=100": {
+        "etag": "W/\"28fe4e9e3ad93f26e995d38f6d063f08b23a3616831a26914bc6c8127d1a0c7c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1264618210,
+            "user": {
+              "id": 19188617,
+              "login": "pdrastil",
+              "type": "User"
+            },
+            "submitted_at": "2023-01-21T11:54:28Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1264619062,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "submitted_at": "2023-01-21T12:05:28Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1212338344,
+    "author": {
+      "id": 19188617,
+      "login": "pdrastil",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-01-21T11:39:10Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1264618210",
+        "actor": {
+          "id": 19188617,
+          "login": "pdrastil",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-21T11:54:28Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1264619062",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-21T12:05:28Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "1083281159",
+        "actor": {
+          "id": 19188617,
+          "login": "pdrastil",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-21T11:54:28Z"
+      }
+    ]
   }
 }
