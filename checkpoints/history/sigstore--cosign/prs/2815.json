@@ -16,26 +16,96 @@
     "merged_at": "2023-03-16T17:29:09Z"
   },
   "state": {
+    "tracked_prs": {
+      "2815": {
+        "id": 1278980002,
+        "updated_at": "2023-03-16T17:29:24Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
-    "pages": {}
+    "pages": {
+      "/repositories/335952417/issues/2815/comments?per_page=100": {
+        "etag": "W/\"56bf4434890fd49efa413232114bb9f4ff64904bf44d421330b71aec82b4bec1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1472385213,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2023-03-16T17:16:23Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/2815/comments?per_page=100": {
+        "etag": "\"3f6a722d32d491bc642992c49b2ba5d1638293f51739fbc142ab931d7a0f60cc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/2815/reviews?per_page=100": {
+        "etag": "W/\"db6e572ece47d2dc48d354fb30ab27ec5c0a7b6ac4acb93efebb2e405c1d4615\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1344350976,
+            "user": {
+              "id": 3602792,
+              "login": "hectorj2f",
+              "type": "User"
+            },
+            "submitted_at": "2023-03-16T17:12:47Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1278980002,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-03-16T17:00:36Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1344350976",
+        "actor": {
+          "id": 3602792,
+          "login": "hectorj2f",
+          "type": "User"
+        },
+        "occurred_at": "2023-03-16T17:12:47Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1472385213",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-03-16T17:16:23Z"
+      }
+    ],
+    "review_comments": []
   }
 }

@@ -16,26 +16,136 @@
     "merged_at": "2024-06-11T15:11:01Z"
   },
   "state": {
+    "tracked_prs": {
+      "7072": {
+        "id": 1906154075,
+        "updated_at": "2024-06-11T15:11:01Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
-    "pages": {}
+    "pages": {
+      "/repositories/92313258/issues/7072/comments?per_page=100": {
+        "etag": "W/\"d4a7aa734b5377943e3b9560b3e0339ae6336dd6e1da5262fd146ea14b5a22ce\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2151159357,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2024-06-06T00:20:00Z"
+          },
+          {
+            "id": 2158403348,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2024-06-10T13:36:49Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2161009836,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2024-06-11T15:10:02Z"
+          },
+          {
+            "id": 2161010086,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2024-06-11T15:10:10Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/7072/comments?per_page=100": {
+        "etag": "\"3f6a722d32d491bc642992c49b2ba5d1638293f51739fbc142ab931d7a0f60cc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/7072/reviews?per_page=100": {
+        "etag": "\"3f6a722d32d491bc642992c49b2ba5d1638293f51739fbc142ab931d7a0f60cc\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1906154075,
+    "author": {
+      "id": 41898282,
+      "login": "github-actions[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-06-06T00:19:50Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "2151159357",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-06-06T00:20:00Z"
+      },
+      {
+        "id": "2158403348",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-10T13:36:49Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2161009836",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-11T15:10:02Z"
+      },
+      {
+        "id": "2161010086",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-06-11T15:10:10Z"
+      }
+    ],
+    "review_comments": []
   }
 }

@@ -16,26 +16,76 @@
     "merged_at": "2025-12-23T09:20:38Z"
   },
   "state": {
+    "tracked_prs": {
+      "17725": {
+        "id": 3121241952,
+        "updated_at": "2025-12-23T09:20:39Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
-    "pages": {}
+    "pages": {
+      "/repositories/6838921/issues/17725/comments?per_page=100": {
+        "etag": "\"3f6a722d32d491bc642992c49b2ba5d1638293f51739fbc142ab931d7a0f60cc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/17725/comments?per_page=100": {
+        "etag": "\"3f6a722d32d491bc642992c49b2ba5d1638293f51739fbc142ab931d7a0f60cc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/17725/reviews?per_page=100": {
+        "etag": "W/\"80a8c0e5e6e82fdf1cc66a133420d8bdba1a80716e279bb2393cfa1e9aff7043\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3607184024,
+            "user": {
+              "id": 281303,
+              "login": "aknuds1",
+              "type": "User"
+            },
+            "submitted_at": "2025-12-23T09:01:37Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3121241952,
+    "author": {
+      "id": 29139614,
+      "login": "renovate[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-12-22T00:46:47Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3607184024",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-23T09:01:37Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

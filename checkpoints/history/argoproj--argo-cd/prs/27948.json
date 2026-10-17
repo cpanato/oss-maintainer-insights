@@ -16,26 +16,246 @@
     "merged_at": "2026-06-10T14:28:02Z"
   },
   "state": {
+    "tracked_prs": {
+      "27948": {
+        "id": 3719697391,
+        "updated_at": "2026-09-08T14:32:24Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/27948/comments?per_page=100": {
+        "etag": "W/\"92b615d0270afef91b4ed311f2e7e6822bf6ed8c7b16c2caee74f405e3557eda\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4502903881,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-05-20T21:46:08Z"
+          },
+          {
+            "id": 4503306995,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-05-20T22:55:26Z"
+          },
+          {
+            "id": 4545550264,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2026-05-26T15:19:03Z"
+          },
+          {
+            "id": 4662006498,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-06-09T16:53:31Z"
+          },
+          {
+            "id": 4666685812,
+            "user": {
+              "id": 43001203,
+              "login": "GuruduGanesh",
+              "type": "User"
+            },
+            "created_at": "2026-06-10T04:58:26Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/27948/comments?per_page=100": {
+        "etag": "W/\"4c8a8d89c5dde60d798b409b1fccb8fbdbc93408391d95a1ecc9b808ac59e186\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3381061155,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2026-06-09T13:39:39Z"
+          },
+          {
+            "id": 3385620228,
+            "user": {
+              "id": 43001203,
+              "login": "GuruduGanesh",
+              "type": "User"
+            },
+            "created_at": "2026-06-10T05:00:41Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/27948/reviews?per_page=100": {
+        "etag": "W/\"bd1866ee57fec8037ace7f6204618123a513db1fa2878fea110e3019a1c1782c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4459134316,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-09T13:39:39Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4464666083,
+            "user": {
+              "id": 43001203,
+              "login": "GuruduGanesh",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-10T05:00:41Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4468801418,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-10T14:27:49Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3719697391,
+    "author": {
+      "id": 43001203,
+      "login": "GuruduGanesh",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-05-20T21:46:01Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4459134316",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-09T13:39:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4464666083",
+        "actor": {
+          "id": 43001203,
+          "login": "GuruduGanesh",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-10T05:00:41Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4468801418",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-10T14:27:49Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4502903881",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-20T21:46:08Z"
+      },
+      {
+        "id": "4503306995",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-20T22:55:26Z"
+      },
+      {
+        "id": "4545550264",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-26T15:19:03Z"
+      },
+      {
+        "id": "4662006498",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-09T16:53:31Z"
+      },
+      {
+        "id": "4666685812",
+        "actor": {
+          "id": 43001203,
+          "login": "GuruduGanesh",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-10T04:58:26Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3381061155",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-09T13:39:39Z"
+      },
+      {
+        "id": "3385620228",
+        "actor": {
+          "id": 43001203,
+          "login": "GuruduGanesh",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-10T05:00:41Z"
+      }
+    ]
   }
 }
