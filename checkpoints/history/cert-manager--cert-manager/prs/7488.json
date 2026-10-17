@@ -1,0 +1,317 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-01-08T12:38:03Z",
+    "id": 2259706879,
+    "number": 7488,
+    "user": {
+      "id": 2119212,
+      "login": "jsoref",
+      "type": "User"
+    },
+    "created_at": "2025-01-03T19:41:40Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-01-08T07:37:38Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "7488": {
+        "id": 2259706879,
+        "updated_at": "2025-01-08T12:38:03Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/7488/comments?per_page=100": {
+        "etag": "W/\"95940f7c722094560bc0951a92436f78e547792e857a06306c1e6ca1feb67d2c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2573392895,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2025-01-06T15:51:36Z"
+          },
+          {
+            "id": 2573414901,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2025-01-06T16:02:59Z"
+          },
+          {
+            "id": 2573521875,
+            "user": {
+              "id": 2119212,
+              "login": "jsoref",
+              "type": "User"
+            },
+            "created_at": "2025-01-06T16:59:37Z"
+          },
+          {
+            "id": 2574800305,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2025-01-07T09:30:26Z"
+          },
+          {
+            "id": 2574802551,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2025-01-07T09:31:26Z"
+          },
+          {
+            "id": 2575792175,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-01-07T16:55:48Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2575793588,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2025-01-07T16:56:27Z"
+          },
+          {
+            "id": 2576940245,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2025-01-08T07:36:50Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/7488/comments?per_page=100": {
+        "etag": "\"3845d532ff748ffd90b2477e6404828fbbf73a6a9403d61e53f316e9db908122\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/7488/reviews?per_page=100": {
+        "etag": "W/\"4edae811507a802734de145fd477dd7dc63d4fbed41b7ae17d77c4fe64999aa1\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2530525449,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-04T09:10:16Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2531585703,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-06T08:19:41Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2532435557,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-06T15:51:26Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2534923484,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-07T16:55:42Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2259706879,
+    "author": {
+      "id": 2119212,
+      "login": "jsoref",
+      "type": "User"
+    },
+    "created_at": "2025-01-03T19:41:40Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2530525449",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-04T09:10:16Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2531585703",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T08:19:41Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2532435557",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T15:51:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2534923484",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-07T16:55:42Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2573392895",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T15:51:36Z"
+      },
+      {
+        "id": "2573414901",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T16:02:59Z"
+      },
+      {
+        "id": "2573521875",
+        "actor": {
+          "id": 2119212,
+          "login": "jsoref",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T16:59:37Z"
+      },
+      {
+        "id": "2574800305",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-07T09:30:26Z"
+      },
+      {
+        "id": "2574802551",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-07T09:31:26Z"
+      },
+      {
+        "id": "2575792175",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-01-07T16:55:48Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2575793588",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-07T16:56:27Z"
+      },
+      {
+        "id": "2576940245",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-08T07:36:50Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

@@ -16,12 +16,67 @@
     "merged_at": "2025-10-10T20:55:18Z"
   },
   "state": {
+    "tracked_prs": {
+      "30712": {
+        "id": 2429358329,
+        "updated_at": "2025-10-10T21:16:23Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
     "pages": {
+      "/repositories/43723161/issues/30712/comments?per_page=100": {
+        "etag": "\"3845d532ff748ffd90b2477e6404828fbbf73a6a9403d61e53f316e9db908122\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/30712/comments?per_page=100": {
+        "etag": "W/\"6918a77f509726fc3ab123604babd4857673f20c80cf44e6cb3ee2b78dabe0d9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2366347203,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-21T18:50:22Z"
+          },
+          {
+            "id": 2411783585,
+            "user": {
+              "id": 8417720,
+              "login": "benoittgt",
+              "type": "User"
+            },
+            "created_at": "2025-10-07T20:12:06Z"
+          },
+          {
+            "id": 2417446037,
+            "user": {
+              "id": 2787248,
+              "login": "gjenkins8",
+              "type": "User"
+            },
+            "created_at": "2025-10-09T17:21:06Z"
+          },
+          {
+            "id": 2417939057,
+            "user": {
+              "id": 8417720,
+              "login": "benoittgt",
+              "type": "User"
+            },
+            "created_at": "2025-10-09T20:55:21Z"
+          }
+        ]
+      },
       "/repositories/43723161/pulls/30712/reviews?per_page=100": {
         "etag": "W/\"587a19b558810dc1387600879c54a1e6184a10010e53ae75a7edefb9cf4c0a03\"",
         "next": "",
@@ -101,18 +156,130 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2429358329,
+    "author": {
+      "id": 2787248,
+      "login": "gjenkins8",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-03-31T16:13:50Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2744963004",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-04-05T18:33:40Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3250121935",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-21T18:50:23Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3311728558",
+        "actor": {
+          "id": 8417720,
+          "login": "benoittgt",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-07T20:07:21Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3311743173",
+        "actor": {
+          "id": 8417720,
+          "login": "benoittgt",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-07T20:12:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3319925931",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-09T17:21:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3320614234",
+        "actor": {
+          "id": 8417720,
+          "login": "benoittgt",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-09T20:55:21Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3325903030",
+        "actor": {
+          "id": 62991,
+          "login": "mattfarina",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-10T20:55:09Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "2366347203",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-21T18:50:22Z"
+      },
+      {
+        "id": "2411783585",
+        "actor": {
+          "id": 8417720,
+          "login": "benoittgt",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-07T20:12:06Z"
+      },
+      {
+        "id": "2417446037",
+        "actor": {
+          "id": 2787248,
+          "login": "gjenkins8",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-09T17:21:06Z"
+      },
+      {
+        "id": "2417939057",
+        "actor": {
+          "id": 8417720,
+          "login": "benoittgt",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-09T20:55:21Z"
+      }
+    ]
   }
 }

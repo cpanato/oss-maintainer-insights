@@ -16,6 +16,14 @@
     "merged_at": "2023-07-28T11:39:37Z"
   },
   "state": {
+    "tracked_prs": {
+      "1601": {
+        "id": 1452871537,
+        "updated_at": "2023-07-28T11:39:51Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -46,6 +54,11 @@
           }
         ]
       },
+      "/repositories/272963353/pulls/1601/comments?per_page=100": {
+        "etag": "\"3845d532ff748ffd90b2477e6404828fbbf73a6a9403d61e53f316e9db908122\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/272963353/pulls/1601/reviews?per_page=100": {
         "etag": "W/\"b3c9cf7f8b83d6fd70d83df93bd9bd200c6ac32c571a117e19871bde837ae130\"",
         "next": "",
@@ -75,18 +88,62 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1452871537,
+    "author": {
+      "id": 8418760,
+      "login": "Hayden-IO",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-07-27T23:10:36Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1551574975",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-28T08:03:06Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1551955683",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-28T11:39:14Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1654726030",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-27T23:13:04Z"
+      },
+      {
+        "id": "1654740017",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-07-27T23:18:40Z"
+      }
+    ],
+    "review_comments": []
   }
 }
