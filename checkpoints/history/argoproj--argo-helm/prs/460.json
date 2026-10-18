@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2020-10-05T17:08:55Z",
+    "id": 495198753,
+    "number": 460,
+    "user": {
+      "id": 6958642,
+      "login": "vladlosev",
+      "type": "User"
+    },
+    "created_at": "2020-09-30T01:27:08Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2020-10-05T16:45:49Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "460": {
+        "id": 495198753,
+        "updated_at": "2020-10-05T17:08:55Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 106481151,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "argoproj/argo-helm",
+    "pages": {
+      "/repositories/106481151/issues/460/comments?per_page=100": {
+        "etag": "\"4db64d29c4a5a4bcd1ec922e8457e80740fb58678360d13a8143f4f9ac4b8202\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/106481151/pulls/460/comments?per_page=100": {
+        "etag": "W/\"a5d3993cfd7f26ab6d63667416076d7de5dcd948c7d9b0e54a81d4efe1e17828\"",
+        "next": "",
+        "value": [
+          {
+            "id": 499731426,
+            "user": {
+              "id": 141908,
+              "login": "stefansedich",
+              "type": "User"
+            },
+            "created_at": "2020-10-05T16:40:00Z"
+          }
+        ]
+      },
+      "/repositories/106481151/pulls/460/reviews?per_page=100": {
+        "etag": "W/\"fa7fb9f67d6ff966442867de1d6682879a9251070fcead763fa1e33eb09b11b0\"",
+        "next": "",
+        "value": [
+          {
+            "id": 502234425,
+            "user": {
+              "id": 141908,
+              "login": "stefansedich",
+              "type": "User"
+            },
+            "submitted_at": "2020-10-05T16:40:00Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 502238725,
+            "user": {
+              "id": 141908,
+              "login": "stefansedich",
+              "type": "User"
+            },
+            "submitted_at": "2020-10-05T16:45:42Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 495198753,
+    "author": {
+      "id": 6958642,
+      "login": "vladlosev",
+      "type": "User"
+    },
+    "created_at": "2020-09-30T01:27:08Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "502234425",
+        "actor": {
+          "id": 141908,
+          "login": "stefansedich",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-05T16:40:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "502238725",
+        "actor": {
+          "id": 141908,
+          "login": "stefansedich",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-05T16:45:42Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "499731426",
+        "actor": {
+          "id": 141908,
+          "login": "stefansedich",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-05T16:40:00Z"
+      }
+    ]
+  }
+}

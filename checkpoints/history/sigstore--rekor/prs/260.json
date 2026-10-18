@@ -16,12 +16,59 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "260": {
+        "id": 612476462,
+        "updated_at": "2021-04-27T16:39:32Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/rekor",
     "pages": {
+      "/repositories/272963353/issues/260/comments?per_page=100": {
+        "etag": "W/\"283674c9db3db15377c7c8985cd173207d8aa9ee2cc22c8be7f474c409eee918\"",
+        "next": "",
+        "value": [
+          {
+            "id": 817207891,
+            "user": {
+              "id": 5194569,
+              "login": "asraa",
+              "type": "User"
+            },
+            "created_at": "2021-04-10T21:59:44Z"
+          },
+          {
+            "id": 827750099,
+            "user": {
+              "id": 5194569,
+              "login": "asraa",
+              "type": "User"
+            },
+            "created_at": "2021-04-27T16:39:31Z"
+          }
+        ]
+      },
+      "/repositories/272963353/pulls/260/comments?per_page=100": {
+        "etag": "W/\"ad1ea0312e01c21516f0f1e752f693f467124e78e10110b6048f2819efed43c4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 610655008,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "created_at": "2021-04-09T14:06:53Z"
+          }
+        ]
+      },
       "/repositories/272963353/pulls/260/reviews?per_page=100": {
         "etag": "W/\"3dba6d9700af91cea6c303b90ff98975e997a3ee385fa128cd071b8a98bd15ed\"",
         "next": "",
@@ -51,18 +98,72 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 612476462,
+    "author": {
+      "id": 5194569,
+      "login": "asraa",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-04-09T13:53:59Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "632453082",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-04-09T14:46:30Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "632828511",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2021-04-09T22:51:48Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "817207891",
+        "actor": {
+          "id": 5194569,
+          "login": "asraa",
+          "type": "User"
+        },
+        "occurred_at": "2021-04-10T21:59:44Z"
+      },
+      {
+        "id": "827750099",
+        "actor": {
+          "id": 5194569,
+          "login": "asraa",
+          "type": "User"
+        },
+        "occurred_at": "2021-04-27T16:39:31Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "610655008",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-04-09T14:06:53Z"
+      }
+    ]
   }
 }

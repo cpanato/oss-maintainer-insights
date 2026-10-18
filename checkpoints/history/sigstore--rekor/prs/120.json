@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2021-01-20T15:22:13Z",
+    "id": 558255594,
+    "number": 120,
+    "user": {
+      "id": 1714486,
+      "login": "dlorenc",
+      "type": "User"
+    },
+    "created_at": "2021-01-20T13:50:15Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2021-01-20T15:22:11Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "120": {
+        "id": 558255594,
+        "updated_at": "2021-01-20T15:22:13Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 272963353,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "sigstore/rekor",
+    "pages": {
+      "/repositories/272963353/issues/120/comments?per_page=100": {
+        "etag": "\"4db64d29c4a5a4bcd1ec922e8457e80740fb58678360d13a8143f4f9ac4b8202\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/272963353/pulls/120/comments?per_page=100": {
+        "etag": "W/\"15805cdf96c85ed9e7a0b3bdbaf46697deb8d600ad29b00ea6f1f8cd7ed7fb90\"",
+        "next": "",
+        "value": [
+          {
+            "id": 560983183,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2021-01-20T14:04:37Z"
+          }
+        ]
+      },
+      "/repositories/272963353/pulls/120/reviews?per_page=100": {
+        "etag": "W/\"59f430c9844c5e560f693ea13a1253d31cc4e02bc18d1f399199f39924a4c76c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 572250201,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "submitted_at": "2021-01-20T14:15:47Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 572293887,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "submitted_at": "2021-01-20T14:47:32Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 558255594,
+    "author": {
+      "id": 1714486,
+      "login": "dlorenc",
+      "type": "User"
+    },
+    "created_at": "2021-01-20T13:50:15Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "572250201",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2021-01-20T14:15:47Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "572293887",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2021-01-20T14:47:32Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "560983183",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2021-01-20T14:04:37Z"
+      }
+    ]
+  }
+}

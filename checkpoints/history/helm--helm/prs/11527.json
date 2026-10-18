@@ -16,26 +16,186 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "11527": {
+        "id": 1117348583,
+        "updated_at": "2026-01-02T12:13:24Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
-    "pages": {}
+    "pages": {
+      "/repositories/43723161/issues/11527/comments?per_page=100": {
+        "etag": "W/\"fbe7740c32f6ce72312142c164d9435555d035983e3a3f66950e697a1b645bf9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1343085560,
+            "user": {
+              "id": 89193,
+              "login": "technosophos",
+              "type": "User"
+            },
+            "created_at": "2022-12-08T17:52:33Z"
+          },
+          {
+            "id": 1356225090,
+            "user": {
+              "id": 40897694,
+              "login": "digitalstudium",
+              "type": "User"
+            },
+            "created_at": "2022-12-17T11:54:46Z"
+          },
+          {
+            "id": 1356225907,
+            "user": {
+              "id": 40897694,
+              "login": "digitalstudium",
+              "type": "User"
+            },
+            "created_at": "2022-12-17T11:59:34Z"
+          },
+          {
+            "id": 2118188254,
+            "user": {
+              "id": 497092,
+              "login": "hedayat",
+              "type": "User"
+            },
+            "created_at": "2024-05-17T18:42:53Z"
+          },
+          {
+            "id": 2141924118,
+            "user": {
+              "id": 123629048,
+              "login": "intetinte",
+              "type": "User"
+            },
+            "created_at": "2024-05-31T12:07:42Z"
+          },
+          {
+            "id": 3703100576,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-01-01T00:29:08Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/11527/comments?per_page=100": {
+        "etag": "\"4db64d29c4a5a4bcd1ec922e8457e80740fb58678360d13a8143f4f9ac4b8202\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/11527/reviews?per_page=100": {
+        "etag": "W/\"b46e68fe289ebb375fad98af33d616288071cea07d644e3be0293b297dcbd90f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2059424815,
+            "user": {
+              "id": 407675,
+              "login": "scottrigby",
+              "type": "User"
+            },
+            "submitted_at": "2024-05-16T02:24:39Z",
+            "state": "CHANGES_REQUESTED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1117348583,
+    "author": {
+      "id": 17778211,
+      "login": "pbusko",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-11-10T08:53:41Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2059424815",
+        "actor": {
+          "id": 407675,
+          "login": "scottrigby",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-16T02:24:39Z",
+        "state": "CHANGES_REQUESTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1343085560",
+        "actor": {
+          "id": 89193,
+          "login": "technosophos",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-08T17:52:33Z"
+      },
+      {
+        "id": "1356225090",
+        "actor": {
+          "id": 40897694,
+          "login": "digitalstudium",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-17T11:54:46Z"
+      },
+      {
+        "id": "1356225907",
+        "actor": {
+          "id": 40897694,
+          "login": "digitalstudium",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-17T11:59:34Z"
+      },
+      {
+        "id": "2118188254",
+        "actor": {
+          "id": 497092,
+          "login": "hedayat",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-17T18:42:53Z"
+      },
+      {
+        "id": "2141924118",
+        "actor": {
+          "id": 123629048,
+          "login": "intetinte",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-31T12:07:42Z"
+      },
+      {
+        "id": "3703100576",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-01-01T00:29:08Z"
+      }
+    ],
+    "review_comments": []
   }
 }

@@ -16,12 +16,40 @@
     "merged_at": "2026-03-29T23:15:44Z"
   },
   "state": {
+    "tracked_prs": {
+      "27031": {
+        "id": 3454840130,
+        "updated_at": "2026-06-27T23:30:13Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/27031/comments?per_page=100": {
+        "etag": "W/\"304462aa2141932fd199b8df5a6de33a875b4d5a5a6edfe261a89316403fedd4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4139953988,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-03-27T03:49:25Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/27031/comments?per_page=100": {
+        "etag": "\"4db64d29c4a5a4bcd1ec922e8457e80740fb58678360d13a8143f4f9ac4b8202\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/27031/reviews?per_page=100": {
         "etag": "W/\"7c72a58a71798103642d59dc9781fdd5efe33c5686a5dda254fa1f4b75ca174f\"",
         "next": "",
@@ -41,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3454840130,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-03-27T03:13:05Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4027202361",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-29T20:05:36Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4139953988",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-03-27T03:49:25Z"
+      }
+    ],
+    "review_comments": []
   }
 }

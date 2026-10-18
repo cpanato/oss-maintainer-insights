@@ -16,26 +16,284 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "139750": {
+        "id": 3868392610,
+        "updated_at": "2026-06-17T15:03:15Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
-    "pages": {}
+    "pages": {
+      "/repositories/20580498/issues/139750/comments?per_page=100": {
+        "etag": "W/\"b5d63ec4e286b08ac5a7220e7d05c26947e881c7262724a549c6ea3bee28309d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4708779379,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-15T14:08:43Z"
+          },
+          {
+            "id": 4708779504,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-15T14:08:44Z"
+          },
+          {
+            "id": 4708780511,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-15T14:08:50Z"
+          },
+          {
+            "id": 4731969980,
+            "user": {
+              "id": 259930736,
+              "login": "wilmerdooley",
+              "type": "User"
+            },
+            "created_at": "2026-06-17T15:03:15Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139750/comments?per_page=100": {
+        "etag": "W/\"a584b82ddd054705e03495bf6ee1f56111bfbcfb7e9b25705eab2876a27bb5b0\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3426474504,
+            "user": {
+              "id": 2010320,
+              "login": "pacoxu",
+              "type": "User"
+            },
+            "created_at": "2026-06-17T07:51:12Z"
+          },
+          {
+            "id": 3426547307,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-06-17T08:04:37Z"
+          },
+          {
+            "id": 3426554733,
+            "user": {
+              "id": 2010320,
+              "login": "pacoxu",
+              "type": "User"
+            },
+            "created_at": "2026-06-17T08:06:05Z"
+          },
+          {
+            "id": 3428742728,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-06-17T13:59:45Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139750/reviews?per_page=100": {
+        "etag": "W/\"79ed1d41f3655437dc1e65933b8f6d40312917f9117a899f4af8eacca9910644\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4513509549,
+            "user": {
+              "id": 2010320,
+              "login": "pacoxu",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-17T07:51:11Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4513596445,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-17T08:04:37Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4513605308,
+            "user": {
+              "id": 2010320,
+              "login": "pacoxu",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-17T08:06:05Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4516325718,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-17T13:59:45Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3868392610,
+    "author": {
+      "id": 259930736,
+      "login": "wilmerdooley",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-06-15T14:08:34Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4513509549",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T07:51:11Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4513596445",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T08:04:37Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4513605308",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T08:06:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4516325718",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T13:59:45Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4708779379",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-15T14:08:43Z"
+      },
+      {
+        "id": "4708779504",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-15T14:08:44Z"
+      },
+      {
+        "id": "4708780511",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-15T14:08:50Z"
+      },
+      {
+        "id": "4731969980",
+        "actor": {
+          "id": 259930736,
+          "login": "wilmerdooley",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T15:03:15Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3426474504",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T07:51:12Z"
+      },
+      {
+        "id": "3426547307",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T08:04:37Z"
+      },
+      {
+        "id": "3426554733",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T08:06:05Z"
+      },
+      {
+        "id": "3428742728",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T13:59:45Z"
+      }
+    ]
   }
 }

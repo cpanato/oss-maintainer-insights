@@ -16,6 +16,14 @@
     "merged_at": "2020-10-16T02:31:27Z"
   },
   "state": {
+    "tracked_prs": {
+      "473": {
+        "id": 504167080,
+        "updated_at": "2020-10-16T07:18:15Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -24,6 +32,11 @@
     "pages": {
       "/repositories/106481151/issues/473/comments?per_page=100": {
         "etag": "\"296b9d3da39d9cbad8459907df2e36abde487e7f12c5c0098896de0e67c6078c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/106481151/pulls/473/comments?per_page=100": {
+        "etag": "\"4db64d29c4a5a4bcd1ec922e8457e80740fb58678360d13a8143f4f9ac4b8202\"",
         "next": "",
         "value": []
       },
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 504167080,
+    "author": {
+      "id": 15102637,
+      "login": "chris-vest",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-10-15T14:54:04Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "509944240",
+        "actor": {
+          "id": 603619,
+          "login": "seanson",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-16T00:56:00Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "509970979",
+        "actor": {
+          "id": 603619,
+          "login": "seanson",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-16T02:31:11Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }
