@@ -16,12 +16,85 @@
     "merged_at": "2026-07-06T14:44:28Z"
   },
   "state": {
+    "tracked_prs": {
+      "140142": {
+        "id": 3969367705,
+        "updated_at": "2026-07-06T14:44:30Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/140142/comments?per_page=100": {
+        "etag": "W/\"10114a1e5d9b176dc4bc050f2e56d7f2fb362ee1418a3a70354aa38778068108\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4852591746,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-07-01T09:17:26Z"
+          },
+          {
+            "id": 4874867545,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-07-03T09:38:02Z"
+          },
+          {
+            "id": 4874886559,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-07-03T09:40:40Z"
+          },
+          {
+            "id": 4892914037,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "created_at": "2026-07-06T12:42:56Z"
+          },
+          {
+            "id": 4892916521,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-06T12:43:13Z"
+          },
+          {
+            "id": 4892917190,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-06T12:43:18Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/140142/comments?per_page=100": {
+        "etag": "\"9bf5089cebed240bd959f34390b7d9bae97b7fe651d88d582a05337eeb431eb9\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/140142/reviews?per_page=100": {
         "etag": "W/\"974d2a3d197b18ce732c4e6b62e4d15185ade5a6f8544c56acb0c6ff92bc0b1c\"",
         "next": "",
@@ -45,18 +118,92 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3969367705,
+    "author": {
+      "id": 22076,
+      "login": "pohly",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-07-01T08:56:15Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4635932940",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-06T12:43:06Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4852591746",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-01T09:17:26Z"
+      },
+      {
+        "id": "4874867545",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-03T09:38:02Z"
+      },
+      {
+        "id": "4874886559",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-03T09:40:40Z"
+      },
+      {
+        "id": "4892914037",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-06T12:42:56Z"
+      },
+      {
+        "id": "4892916521",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-06T12:43:13Z"
+      },
+      {
+        "id": "4892917190",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-06T12:43:18Z"
+      }
+    ],
+    "review_comments": []
   }
 }

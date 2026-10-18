@@ -16,12 +16,30 @@
     "merged_at": "2022-02-04T12:24:53Z"
   },
   "state": {
+    "tracked_prs": {
+      "652": {
+        "id": 840152120,
+        "updated_at": "2022-02-04T12:25:39Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/rekor",
     "pages": {
+      "/repositories/272963353/issues/652/comments?per_page=100": {
+        "etag": "\"9bf5089cebed240bd959f34390b7d9bae97b7fe651d88d582a05337eeb431eb9\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/272963353/pulls/652/comments?per_page=100": {
+        "etag": "\"9bf5089cebed240bd959f34390b7d9bae97b7fe651d88d582a05337eeb431eb9\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/272963353/pulls/652/reviews?per_page=100": {
         "etag": "W/\"7ceaeb1c5fb970ad807679e102e521f7606fa99cb23bf02c96173698206078c1\"",
         "next": "",
@@ -41,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 840152120,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-02-04T11:08:11Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "873025628",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-02-04T12:24:49Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

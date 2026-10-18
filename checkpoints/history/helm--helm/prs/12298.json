@@ -16,26 +16,96 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "12298": {
+        "id": 1472030491,
+        "updated_at": "2025-08-22T02:01:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
-    "pages": {}
+    "pages": {
+      "/repositories/43723161/issues/12298/comments?per_page=100": {
+        "etag": "W/\"ccba71d30fcd77fca94dd68e1e4cbb976efbed54ae61785f7723be8f97f50e8d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3212770756,
+            "user": {
+              "id": 407675,
+              "login": "scottrigby",
+              "type": "User"
+            },
+            "created_at": "2025-08-22T02:01:34Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/12298/comments?per_page=100": {
+        "etag": "\"9bf5089cebed240bd959f34390b7d9bae97b7fe651d88d582a05337eeb431eb9\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/12298/reviews?per_page=100": {
+        "etag": "W/\"57ee550678957de5f515d2de328e7b6a378e869d928673c8a02808395f07f8b6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1574485791,
+            "user": {
+              "id": 11087727,
+              "login": "yxxhero",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-11T23:08:30Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1472030491,
+    "author": {
+      "id": 952828,
+      "login": "joejulian",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-08-11T15:57:06Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1574485791",
+        "actor": {
+          "id": 11087727,
+          "login": "yxxhero",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-11T23:08:30Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3212770756",
+        "actor": {
+          "id": 407675,
+          "login": "scottrigby",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-22T02:01:34Z"
+      }
+    ],
+    "review_comments": []
   }
 }
