@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "27288": {
+        "id": 3516681026,
+        "updated_at": "2026-07-12T08:30:10Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -55,6 +63,66 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/27288/comments?per_page=100": {
+        "etag": "W/\"493d7e16997e19bf1dd8bbc251e1544ae3e8c6e5f3db1144d0aa35e0de8ba69e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3067419384,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-04-11T02:20:05Z"
+          },
+          {
+            "id": 3067419394,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-04-11T02:20:05Z"
+          },
+          {
+            "id": 3067419402,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-04-11T02:20:06Z"
+          },
+          {
+            "id": 3067419409,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-04-11T02:20:06Z"
+          },
+          {
+            "id": 3067419414,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-04-11T02:20:06Z"
+          },
+          {
+            "id": 3067419426,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-04-11T02:20:06Z"
+          }
+        ]
+      },
       "/repositories/120896210/pulls/27288/reviews?per_page=100": {
         "etag": "W/\"748d0bd477b9dc458d1a32fa99148cbd5910493f489aaab2db6dee5e8cbf4289\"",
         "next": "",
@@ -74,18 +142,116 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3516681026,
+    "author": {
+      "id": 233792877,
+      "login": "AdeshDeshmukh",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-04-11T02:15:39Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4093210242",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T02:20:07Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4227821220",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T02:15:45Z"
+      },
+      {
+        "id": "4228035055",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T03:14:16Z"
+      },
+      {
+        "id": "4234770030",
+        "actor": {
+          "id": 86051118,
+          "login": "nitishfy",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-13T08:04:13Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3067419384",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T02:20:05Z"
+      },
+      {
+        "id": "3067419394",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T02:20:05Z"
+      },
+      {
+        "id": "3067419402",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T02:20:06Z"
+      },
+      {
+        "id": "3067419409",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T02:20:06Z"
+      },
+      {
+        "id": "3067419414",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T02:20:06Z"
+      },
+      {
+        "id": "3067419426",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-11T02:20:06Z"
+      }
+    ]
   }
 }
