@@ -16,12 +16,30 @@
     "merged_at": "2022-09-07T14:18:25Z"
   },
   "state": {
+    "tracked_prs": {
+      "1031": {
+        "id": 1048615991,
+        "updated_at": "2022-09-07T14:18:42Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/rekor",
     "pages": {
+      "/repositories/272963353/issues/1031/comments?per_page=100": {
+        "etag": "\"ae9629620503de472d8db5f3d13d34df2f444dfb63c6651eb4f7aebd2e4ce82f\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/272963353/pulls/1031/comments?per_page=100": {
+        "etag": "\"ae9629620503de472d8db5f3d13d34df2f444dfb63c6651eb4f7aebd2e4ce82f\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/272963353/pulls/1031/reviews?per_page=100": {
         "etag": "W/\"cd6048ad27f2cb8ab86df6b520accea222e1f189bb6c5bb3b13414626ce4c624\"",
         "next": "",
@@ -51,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1048615991,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-09-07T11:07:36Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1099251219",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-07T14:08:40Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1099267898",
+        "actor": {
+          "id": 5194569,
+          "login": "asraa",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-07T14:18:20Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

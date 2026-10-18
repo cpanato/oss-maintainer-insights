@@ -16,6 +16,14 @@
     "merged_at": "2023-05-17T15:02:25Z"
   },
   "state": {
+    "tracked_prs": {
+      "3023": {
+        "id": 1353756625,
+        "updated_at": "2023-05-17T15:02:26Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -55,6 +63,11 @@
           }
         ]
       },
+      "/repositories/302670797/pulls/3023/comments?per_page=100": {
+        "etag": "\"ae9629620503de472d8db5f3d13d34df2f444dfb63c6651eb4f7aebd2e4ce82f\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/302670797/pulls/3023/reviews?per_page=100": {
         "etag": "W/\"98b04c6555c5955cf3ee8b54de8d6876e58a7973646ab6ce0d1c1698af962260\"",
         "next": "",
@@ -74,18 +87,61 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1353756625,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-05-17T08:57:17Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1430886408",
+        "actor": {
+          "id": 172697,
+          "login": "naveensrinivasan",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-17T14:47:08Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1551025728",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-05-17T09:05:18Z"
+      },
+      {
+        "id": "1551539619",
+        "actor": {
+          "id": 172697,
+          "login": "naveensrinivasan",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-17T14:47:14Z"
+      },
+      {
+        "id": "1551539713",
+        "actor": {
+          "id": 172697,
+          "login": "naveensrinivasan",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-17T14:47:17Z"
+      }
+    ],
+    "review_comments": []
   }
 }

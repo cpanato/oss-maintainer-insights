@@ -16,6 +16,14 @@
     "merged_at": "2022-12-13T13:46:03Z"
   },
   "state": {
+    "tracked_prs": {
+      "2535": {
+        "id": 1160455590,
+        "updated_at": "2022-12-20T11:14:55Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -61,6 +69,57 @@
               "type": "User"
             },
             "created_at": "2022-12-20T11:14:55Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/2535/comments?per_page=100": {
+        "etag": "W/\"fdeb0443a1879cc728cfbbd428948c05daeb477fee2df4ded2939792b1d90f44\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1045836429,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2022-12-12T13:36:30Z"
+          },
+          {
+            "id": 1046118473,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "created_at": "2022-12-12T17:12:03Z"
+          },
+          {
+            "id": 1046120626,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "created_at": "2022-12-12T17:13:46Z"
+          },
+          {
+            "id": 1046859233,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2022-12-13T09:23:43Z"
+          },
+          {
+            "id": 1047407206,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "created_at": "2022-12-13T16:30:22Z"
           }
         ]
       },
@@ -133,18 +192,166 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1160455590,
+    "author": {
+      "id": 4115580,
+      "login": "cpanato",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-12-12T09:52:29Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1213576568",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-12T13:36:31Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1213979533",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-12T17:12:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1213982120",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-12T17:13:46Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1215062928",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-13T09:23:43Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1215197924",
+        "actor": {
+          "id": 3602792,
+          "login": "hectorj2f",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-13T10:39:18Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1215890718",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-13T16:30:22Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1346192488",
+        "actor": {
+          "id": 65553080,
+          "login": "codecov-commenter",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-12T09:56:51Z"
+      },
+      {
+        "id": "1358075256",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-19T18:32:22Z"
+      },
+      {
+        "id": "1359034348",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-20T09:03:09Z"
+      },
+      {
+        "id": "1359201136",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-20T11:14:55Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1045836429",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-12T13:36:30Z"
+      },
+      {
+        "id": "1046118473",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-12T17:12:03Z"
+      },
+      {
+        "id": "1046120626",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-12T17:13:46Z"
+      },
+      {
+        "id": "1046859233",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-13T09:23:43Z"
+      },
+      {
+        "id": "1047407206",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-12-13T16:30:22Z"
+      }
+    ]
   }
 }
