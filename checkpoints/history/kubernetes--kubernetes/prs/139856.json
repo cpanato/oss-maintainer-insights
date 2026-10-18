@@ -1,0 +1,965 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-06-23T17:12:22Z",
+    "id": 3893981713,
+    "number": 139856,
+    "user": {
+      "id": 523590,
+      "login": "jpbetz",
+      "type": "User"
+    },
+    "created_at": "2026-06-18T19:35:13Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-06-23T17:12:19Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "139856": {
+        "id": 3893981713,
+        "updated_at": "2026-06-23T17:12:22Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/139856/comments?per_page=100": {
+        "etag": "W/\"78d830ba61949638287ed5fcbb4e234e0777c1ccd19146d8a5c1706a0609ed02\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4745498834,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T19:35:22Z"
+          },
+          {
+            "id": 4745817908,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T20:20:37Z"
+          },
+          {
+            "id": 4752165501,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T13:54:49Z"
+          },
+          {
+            "id": 4769287858,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T14:20:38Z"
+          },
+          {
+            "id": 4780601551,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-23T15:09:03Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 4780613301,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-23T15:10:30Z"
+          },
+          {
+            "id": 4780614541,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-06-23T15:10:39Z"
+          },
+          {
+            "id": 4780615614,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-06-23T15:10:47Z"
+          },
+          {
+            "id": 4780996622,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-23T15:54:25Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139856/comments?per_page=100": {
+        "etag": "W/\"f76be97d2cbe05dcb3cbf40465959920de98275a0639ed98f3d336d68d0450cf\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3443403849,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T15:33:39Z"
+          },
+          {
+            "id": 3443404893,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T15:33:53Z"
+          },
+          {
+            "id": 3443421847,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T15:37:41Z"
+          },
+          {
+            "id": 3443422589,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T15:37:48Z"
+          },
+          {
+            "id": 3443462364,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T15:46:34Z"
+          },
+          {
+            "id": 3443564409,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T16:10:29Z"
+          },
+          {
+            "id": 3443613899,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T16:23:18Z"
+          },
+          {
+            "id": 3447562013,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-20T22:03:30Z"
+          },
+          {
+            "id": 3452759499,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T13:56:14Z"
+          },
+          {
+            "id": 3452775254,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T13:58:29Z"
+          },
+          {
+            "id": 3452831065,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T14:06:26Z"
+          },
+          {
+            "id": 3452831538,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T14:06:29Z"
+          },
+          {
+            "id": 3452924910,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T14:19:40Z"
+          },
+          {
+            "id": 3452928182,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T14:20:07Z"
+          },
+          {
+            "id": 3453346935,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T15:13:07Z"
+          },
+          {
+            "id": 3453347318,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T15:13:10Z"
+          },
+          {
+            "id": 3453348052,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T15:13:15Z"
+          },
+          {
+            "id": 3453348663,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T15:13:20Z"
+          },
+          {
+            "id": 3454659440,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T18:42:53Z"
+          },
+          {
+            "id": 3460464585,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2026-06-23T14:16:06Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139856/reviews?per_page=100": {
+        "etag": "W/\"fd061dec18136b1de34e8578b3e1fd8d7c0b1755fa85b167569383573f432527\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4533931265,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-19T15:33:39Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4533932376,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-19T15:33:53Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4533950612,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-19T15:37:41Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4533951397,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-19T15:37:48Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4533999110,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-19T16:23:53Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4538873080,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-20T22:03:30Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4544716867,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T13:56:14Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4544739778,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T13:58:30Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4544814109,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T14:06:26Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4544814873,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T14:06:30Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4544935737,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T14:19:40Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4544940144,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T14:20:07Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4545463546,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T15:13:07Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4545464030,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T15:13:10Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4545464902,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T15:13:15Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4545465806,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T15:13:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4547127880,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T18:49:05Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4554147389,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-23T14:16:06Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3893981713,
+    "author": {
+      "id": 523590,
+      "login": "jpbetz",
+      "type": "User"
+    },
+    "created_at": "2026-06-18T19:35:13Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4533931265",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:33:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4533932376",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:33:53Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4533950612",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:37:41Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4533951397",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:37:48Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4533999110",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T16:23:53Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4538873080",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-20T22:03:30Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4544716867",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:56:14Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4544739778",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:58:30Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4544814109",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:06:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4544814873",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:06:30Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4544935737",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:19:40Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4544940144",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:20:07Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4545463546",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:13:07Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4545464030",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:13:10Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4545464902",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:13:15Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4545465806",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:13:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4547127880",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T18:49:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4554147389",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-23T14:16:06Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4745498834",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T19:35:22Z"
+      },
+      {
+        "id": "4745817908",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T20:20:37Z"
+      },
+      {
+        "id": "4752165501",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T13:54:49Z"
+      },
+      {
+        "id": "4769287858",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:20:38Z"
+      },
+      {
+        "id": "4780601551",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-23T15:09:03Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4780613301",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-23T15:10:30Z"
+      },
+      {
+        "id": "4780614541",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-23T15:10:39Z"
+      },
+      {
+        "id": "4780615614",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-23T15:10:47Z"
+      },
+      {
+        "id": "4780996622",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-23T15:54:25Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3443403849",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:33:39Z"
+      },
+      {
+        "id": "3443404893",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:33:53Z"
+      },
+      {
+        "id": "3443421847",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:37:41Z"
+      },
+      {
+        "id": "3443422589",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:37:48Z"
+      },
+      {
+        "id": "3443462364",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T15:46:34Z"
+      },
+      {
+        "id": "3443564409",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T16:10:29Z"
+      },
+      {
+        "id": "3443613899",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T16:23:18Z"
+      },
+      {
+        "id": "3447562013",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-20T22:03:30Z"
+      },
+      {
+        "id": "3452759499",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:56:14Z"
+      },
+      {
+        "id": "3452775254",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:58:29Z"
+      },
+      {
+        "id": "3452831065",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:06:26Z"
+      },
+      {
+        "id": "3452831538",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:06:29Z"
+      },
+      {
+        "id": "3452924910",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:19:40Z"
+      },
+      {
+        "id": "3452928182",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T14:20:07Z"
+      },
+      {
+        "id": "3453346935",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:13:07Z"
+      },
+      {
+        "id": "3453347318",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:13:10Z"
+      },
+      {
+        "id": "3453348052",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:13:15Z"
+      },
+      {
+        "id": "3453348663",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:13:20Z"
+      },
+      {
+        "id": "3454659440",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T18:42:53Z"
+      },
+      {
+        "id": "3460464585",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-23T14:16:06Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-06-18T22:14:49Z",
+    "id": 3885655227,
+    "number": 139825,
+    "user": {
+      "id": 29807814,
+      "login": "michaelasp",
+      "type": "User"
+    },
+    "created_at": "2026-06-17T17:54:31Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-06-18T22:14:47Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "139825": {
+        "id": 3885655227,
+        "updated_at": "2026-06-18T22:14:49Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/139825/comments?per_page=100": {
+        "etag": "W/\"58023439a9f158dc332b66b1b43e271a3300732773a0b4a34743650a1faf3e01\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4733663028,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-17T17:54:40Z"
+          },
+          {
+            "id": 4733664789,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-06-17T17:54:54Z"
+          },
+          {
+            "id": 4746062385,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T20:55:52Z"
+          },
+          {
+            "id": 4746063231,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T20:56:00Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139825/comments?per_page=100": {
+        "etag": "W/\"9d0951043b6a9da40e061c144740477dbd401fba481477ae9336aff39badeb84\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3437611103,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T17:03:03Z"
+          },
+          {
+            "id": 3438748590,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T20:37:40Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139825/reviews?per_page=100": {
+        "etag": "W/\"6100897e5e6ab25d0547deefdad47e7ff9427c769e986746d8134402838e710b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4527024006,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-18T17:03:02Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4528356160,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-18T20:37:41Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 4528461682,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-18T20:55:44Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3885655227,
+    "author": {
+      "id": 29807814,
+      "login": "michaelasp",
+      "type": "User"
+    },
+    "created_at": "2026-06-17T17:54:31Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4527024006",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T17:03:02Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4528356160",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T20:37:41Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4528461682",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T20:55:44Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4733663028",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T17:54:40Z"
+      },
+      {
+        "id": "4733664789",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-17T17:54:54Z"
+      },
+      {
+        "id": "4746062385",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T20:55:52Z"
+      },
+      {
+        "id": "4746063231",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T20:56:00Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3437611103",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T17:03:03Z"
+      },
+      {
+        "id": "3438748590",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T20:37:40Z"
+      }
+    ]
+  }
+}

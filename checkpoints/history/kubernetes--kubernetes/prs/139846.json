@@ -1,0 +1,927 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-06-22T16:11:57Z",
+    "id": 3892141823,
+    "number": 139846,
+    "user": {
+      "id": 6450081,
+      "login": "aojea",
+      "type": "User"
+    },
+    "created_at": "2026-06-18T14:30:27Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-06-22T16:11:55Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "139846": {
+        "id": 3892141823,
+        "updated_at": "2026-06-22T16:11:57Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/139846/comments?per_page=100": {
+        "etag": "W/\"24c656f32363404ca8ba3833408de7eee56fb5c9c15b65784aa4e46a2a2f4571\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4742990345,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T14:30:31Z"
+          },
+          {
+            "id": 4742991308,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T14:30:37Z"
+          },
+          {
+            "id": 4744119389,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T16:36:36Z"
+          },
+          {
+            "id": 4767364672,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T10:33:41Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 4770359444,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T16:06:37Z"
+          },
+          {
+            "id": 4770360866,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-06-22T16:06:46Z"
+          },
+          {
+            "id": 4770362127,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-06-22T16:06:53Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139846/comments?per_page=100": {
+        "etag": "W/\"56b39b3ec39d98527465a580e0e25cc66efb27f98bee560f0e547d93b68150a4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3436768742,
+            "user": {
+              "id": 736329,
+              "login": "adrianmoisey",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T14:54:21Z"
+          },
+          {
+            "id": 3437346074,
+            "user": {
+              "id": 1243336,
+              "login": "joestringer",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T16:17:06Z"
+          },
+          {
+            "id": 3437352885,
+            "user": {
+              "id": 1243336,
+              "login": "joestringer",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T16:18:15Z"
+          },
+          {
+            "id": 3437468311,
+            "user": {
+              "id": 1243336,
+              "login": "joestringer",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T16:37:31Z"
+          },
+          {
+            "id": 3438619653,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-18T20:11:06Z"
+          },
+          {
+            "id": 3442654416,
+            "user": {
+              "id": 1243336,
+              "login": "joestringer",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T13:04:41Z"
+          },
+          {
+            "id": 3443973683,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-19T17:59:01Z"
+          },
+          {
+            "id": 3448439879,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-21T12:49:45Z"
+          },
+          {
+            "id": 3448481993,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-21T13:23:45Z"
+          },
+          {
+            "id": 3448484983,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-21T13:26:10Z"
+          },
+          {
+            "id": 3451215658,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T09:44:37Z"
+          },
+          {
+            "id": 3451262337,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T09:52:03Z"
+          },
+          {
+            "id": 3451268581,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T09:52:59Z"
+          },
+          {
+            "id": 3451286181,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T09:55:40Z"
+          },
+          {
+            "id": 3452590948,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T13:32:27Z"
+          },
+          {
+            "id": 3452600245,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T13:33:56Z"
+          },
+          {
+            "id": 3452618944,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T13:36:52Z"
+          },
+          {
+            "id": 3452634337,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T13:39:16Z"
+          },
+          {
+            "id": 3453355482,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T15:14:10Z"
+          },
+          {
+            "id": 3453407698,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T15:20:29Z"
+          },
+          {
+            "id": 3453729967,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2026-06-22T16:06:29Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139846/reviews?per_page=100": {
+        "etag": "W/\"ff60cc6006121b3b9c5855269a5a9f8977fe0e9be514d25fca627ccfbc9076cf\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4526046585,
+            "user": {
+              "id": 736329,
+              "login": "adrianmoisey",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-18T14:54:21Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4526713736,
+            "user": {
+              "id": 1243336,
+              "login": "joestringer",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-18T16:36:23Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4526864452,
+            "user": {
+              "id": 1243336,
+              "login": "joestringer",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-18T16:37:31Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4528214376,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-18T20:11:06Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4533053789,
+            "user": {
+              "id": 1243336,
+              "login": "joestringer",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-19T13:04:41Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4534591205,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-19T17:59:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4539716631,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-21T12:49:45Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4539754199,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-21T13:23:46Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4539756714,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-21T13:26:10Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4542855091,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T09:44:37Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4542909590,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T09:52:03Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4542917629,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T09:52:59Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4542939212,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T09:55:40Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4544509195,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T13:42:48Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4545474607,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T15:14:10Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4545547643,
+            "user": {
+              "id": 6450081,
+              "login": "aojea",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T15:20:30Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4545944822,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "submitted_at": "2026-06-22T16:06:30Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3892141823,
+    "author": {
+      "id": 6450081,
+      "login": "aojea",
+      "type": "User"
+    },
+    "created_at": "2026-06-18T14:30:27Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4526046585",
+        "actor": {
+          "id": 736329,
+          "login": "adrianmoisey",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T14:54:21Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4526713736",
+        "actor": {
+          "id": 1243336,
+          "login": "joestringer",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T16:36:23Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4526864452",
+        "actor": {
+          "id": 1243336,
+          "login": "joestringer",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T16:37:31Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4528214376",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T20:11:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4533053789",
+        "actor": {
+          "id": 1243336,
+          "login": "joestringer",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T13:04:41Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4534591205",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T17:59:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4539716631",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-21T12:49:45Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4539754199",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-21T13:23:46Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4539756714",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-21T13:26:10Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4542855091",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T09:44:37Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4542909590",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T09:52:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4542917629",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T09:52:59Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4542939212",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T09:55:40Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4544509195",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:42:48Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4545474607",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:14:10Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4545547643",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:20:30Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4545944822",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T16:06:30Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4742990345",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T14:30:31Z"
+      },
+      {
+        "id": "4742991308",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T14:30:37Z"
+      },
+      {
+        "id": "4744119389",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T16:36:36Z"
+      },
+      {
+        "id": "4767364672",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T10:33:41Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4770359444",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T16:06:37Z"
+      },
+      {
+        "id": "4770360866",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-22T16:06:46Z"
+      },
+      {
+        "id": "4770362127",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-22T16:06:53Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3436768742",
+        "actor": {
+          "id": 736329,
+          "login": "adrianmoisey",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T14:54:21Z"
+      },
+      {
+        "id": "3437346074",
+        "actor": {
+          "id": 1243336,
+          "login": "joestringer",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T16:17:06Z"
+      },
+      {
+        "id": "3437352885",
+        "actor": {
+          "id": 1243336,
+          "login": "joestringer",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T16:18:15Z"
+      },
+      {
+        "id": "3437468311",
+        "actor": {
+          "id": 1243336,
+          "login": "joestringer",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T16:37:31Z"
+      },
+      {
+        "id": "3438619653",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-18T20:11:06Z"
+      },
+      {
+        "id": "3442654416",
+        "actor": {
+          "id": 1243336,
+          "login": "joestringer",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T13:04:41Z"
+      },
+      {
+        "id": "3443973683",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T17:59:01Z"
+      },
+      {
+        "id": "3448439879",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-21T12:49:45Z"
+      },
+      {
+        "id": "3448481993",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-21T13:23:45Z"
+      },
+      {
+        "id": "3448484983",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-21T13:26:10Z"
+      },
+      {
+        "id": "3451215658",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T09:44:37Z"
+      },
+      {
+        "id": "3451262337",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T09:52:03Z"
+      },
+      {
+        "id": "3451268581",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T09:52:59Z"
+      },
+      {
+        "id": "3451286181",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T09:55:40Z"
+      },
+      {
+        "id": "3452590948",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:32:27Z"
+      },
+      {
+        "id": "3452600245",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:33:56Z"
+      },
+      {
+        "id": "3452618944",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:36:52Z"
+      },
+      {
+        "id": "3452634337",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T13:39:16Z"
+      },
+      {
+        "id": "3453355482",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:14:10Z"
+      },
+      {
+        "id": "3453407698",
+        "actor": {
+          "id": 6450081,
+          "login": "aojea",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T15:20:29Z"
+      },
+      {
+        "id": "3453729967",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-22T16:06:29Z"
+      }
+    ]
+  }
+}

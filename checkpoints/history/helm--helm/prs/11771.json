@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "11771": {
+        "id": 1218088571,
+        "updated_at": "2026-04-23T00:42:26Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -244,6 +252,11 @@
           }
         ]
       },
+      "/repositories/43723161/pulls/11771/comments?per_page=100": {
+        "etag": "\"296b9d3da39d9cbad8459907df2e36abde487e7f12c5c0098896de0e67c6078c\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/43723161/pulls/11771/reviews?per_page=100": {
         "etag": "\"9b3cfcf328f983b072bf791b0ea4c51daf040aae51db8c5390649dfb2e477221\"",
         "next": "",
@@ -252,18 +265,239 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1218088571,
+    "author": {
+      "id": 460721,
+      "login": "cobexer",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-01-26T16:02:55Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "1915000678",
+        "actor": {
+          "id": 2143270,
+          "login": "ffppmm",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-29T15:55:03Z"
+      },
+      {
+        "id": "1996216682",
+        "actor": {
+          "id": 78882304,
+          "login": "rschamizo",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-14T01:13:30Z"
+      },
+      {
+        "id": "2041618422",
+        "actor": {
+          "id": 58435045,
+          "login": "philthethrill99",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-07T21:43:26Z"
+      },
+      {
+        "id": "2158961921",
+        "actor": {
+          "id": 9556431,
+          "login": "marioloko",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-10T17:51:32Z"
+      },
+      {
+        "id": "2238941424",
+        "actor": {
+          "id": 6358461,
+          "login": "alfsch",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-19T11:26:58Z"
+      },
+      {
+        "id": "2239917660",
+        "actor": {
+          "id": 6216119,
+          "login": "antoinedeschenes",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-19T18:52:18Z"
+      },
+      {
+        "id": "2337570880",
+        "actor": {
+          "id": 314567,
+          "login": "taliesins",
+          "type": "User"
+        },
+        "occurred_at": "2024-09-09T09:13:26Z"
+      },
+      {
+        "id": "2341900807",
+        "actor": {
+          "id": 2143270,
+          "login": "ffppmm",
+          "type": "User"
+        },
+        "occurred_at": "2024-09-10T19:56:27Z"
+      },
+      {
+        "id": "2386058207",
+        "actor": {
+          "id": 2143270,
+          "login": "ffppmm",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-01T14:00:54Z"
+      },
+      {
+        "id": "2462458449",
+        "actor": {
+          "id": 2143270,
+          "login": "ffppmm",
+          "type": "User"
+        },
+        "occurred_at": "2024-11-07T15:01:25Z"
+      },
+      {
+        "id": "2572886379",
+        "actor": {
+          "id": 62403701,
+          "login": "chris-parker-za",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T11:08:33Z"
+      },
+      {
+        "id": "2586875601",
+        "actor": {
+          "id": 1191285,
+          "login": "sabre1041",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-13T11:39:27Z"
+      },
+      {
+        "id": "2729907606",
+        "actor": {
+          "id": 2143270,
+          "login": "ffppmm",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-17T15:13:42Z"
+      },
+      {
+        "id": "2734005501",
+        "actor": {
+          "id": 2143270,
+          "login": "ffppmm",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-18T16:51:23Z"
+      },
+      {
+        "id": "3217501207",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-08-24T00:26:07Z"
+      },
+      {
+        "id": "3276247992",
+        "actor": {
+          "id": 460721,
+          "login": "cobexer",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-10T19:27:21Z"
+      },
+      {
+        "id": "3309627147",
+        "actor": {
+          "id": 460721,
+          "login": "cobexer",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-18T20:36:07Z"
+      },
+      {
+        "id": "3309672491",
+        "actor": {
+          "id": 8417720,
+          "login": "benoittgt",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-18T20:46:24Z"
+      },
+      {
+        "id": "3309681670",
+        "actor": {
+          "id": 460721,
+          "login": "cobexer",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-18T20:48:29Z"
+      },
+      {
+        "id": "3311180017",
+        "actor": {
+          "id": 2143270,
+          "login": "ffppmm",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-19T08:32:31Z"
+      },
+      {
+        "id": "3678240479",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-12-21T00:26:47Z"
+      },
+      {
+        "id": "3686173727",
+        "actor": {
+          "id": 460721,
+          "login": "cobexer",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-23T10:55:19Z"
+      },
+      {
+        "id": "3686777473",
+        "actor": {
+          "id": 1191285,
+          "login": "sabre1041",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-23T14:08:13Z"
+      },
+      {
+        "id": "4114586224",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-03-24T00:28:52Z"
+      }
+    ],
+    "review_comments": []
   }
 }

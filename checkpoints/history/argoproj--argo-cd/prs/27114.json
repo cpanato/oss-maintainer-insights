@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-04-02T16:49:00Z",
+    "id": 3479866874,
+    "number": 27114,
+    "user": {
+      "id": 231928284,
+      "login": "argo-cd-cherry-pick-bot[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2026-04-02T00:54:52Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-04-02T00:58:20Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "27114": {
+        "id": 3479866874,
+        "updated_at": "2026-04-02T16:49:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 120896210,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "argoproj/argo-cd",
+    "pages": {
+      "/repositories/120896210/issues/27114/comments?per_page=100": {
+        "etag": "\"296b9d3da39d9cbad8459907df2e36abde487e7f12c5c0098896de0e67c6078c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/27114/comments?per_page=100": {
+        "etag": "W/\"251d466bdb6025e16751d1a7a4bc3732a69920c14ea6cdef2802160a793eaec0\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3029174239,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "created_at": "2026-04-02T16:49:00Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/27114/reviews?per_page=100": {
+        "etag": "W/\"a9ee678be2ec963a2c54250b8ad6a71cf50a542a7edd41743ff4a301c33bf478\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4047805623,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-02T00:57:01Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 4051890640,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-02T16:49:00Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3479866874,
+    "author": {
+      "id": 231928284,
+      "login": "argo-cd-cherry-pick-bot[bot]",
+      "type": "Bot"
+    },
+    "created_at": "2026-04-02T00:54:52Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4047805623",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-02T00:57:01Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "4051890640",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-02T16:49:00Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "3029174239",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-02T16:49:00Z"
+      }
+    ]
+  }
+}

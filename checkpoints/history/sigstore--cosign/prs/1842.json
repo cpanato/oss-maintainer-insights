@@ -16,12 +16,68 @@
     "merged_at": "2022-05-06T15:21:13Z"
   },
   "state": {
+    "tracked_prs": {
+      "1842": {
+        "id": 928097029,
+        "updated_at": "2022-05-06T15:21:29Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
     "pages": {
+      "/repositories/335952417/issues/1842/comments?per_page=100": {
+        "etag": "W/\"a33ce5a4e49ece4c1e968f9b979b1404424a7485ddac1df2334573121b75b003\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1117945074,
+            "user": {
+              "id": 65553080,
+              "login": "codecov-commenter",
+              "type": "User"
+            },
+            "created_at": "2022-05-04T21:15:01Z"
+          },
+          {
+            "id": 1118954201,
+            "user": {
+              "id": 6331476,
+              "login": "DennyHoang",
+              "type": "User"
+            },
+            "created_at": "2022-05-05T19:09:15Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/1842/comments?per_page=100": {
+        "etag": "W/\"56e0d179e154e714280c45416104a9e856cbc184e18832037212642c2a1ea50e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 866125203,
+            "user": {
+              "id": 3602792,
+              "login": "hectorj2f",
+              "type": "User"
+            },
+            "created_at": "2022-05-05T16:55:00Z"
+          },
+          {
+            "id": 866155754,
+            "user": {
+              "id": 6331476,
+              "login": "DennyHoang",
+              "type": "User"
+            },
+            "created_at": "2022-05-05T17:33:47Z"
+          }
+        ]
+      },
       "/repositories/335952417/pulls/1842/reviews?per_page=100": {
         "etag": "W/\"968c1d381a9fc804d36bff6823e16289724c7c5128e2aa2d1e13b39b17066594\"",
         "next": "",
@@ -71,18 +127,101 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 928097029,
+    "author": {
+      "id": 6331476,
+      "login": "DennyHoang",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-05-04T21:07:36Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "963683373",
+        "actor": {
+          "id": 3602792,
+          "login": "hectorj2f",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T16:55:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "963693749",
+        "actor": {
+          "id": 3602792,
+          "login": "hectorj2f",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T17:04:04Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "963726591",
+        "actor": {
+          "id": 6331476,
+          "login": "DennyHoang",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T17:33:47Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "964008383",
+        "actor": {
+          "id": 3602792,
+          "login": "hectorj2f",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T22:13:57Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1117945074",
+        "actor": {
+          "id": 65553080,
+          "login": "codecov-commenter",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-04T21:15:01Z"
+      },
+      {
+        "id": "1118954201",
+        "actor": {
+          "id": 6331476,
+          "login": "DennyHoang",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T19:09:15Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "866125203",
+        "actor": {
+          "id": 3602792,
+          "login": "hectorj2f",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T16:55:00Z"
+      },
+      {
+        "id": "866155754",
+        "actor": {
+          "id": 6331476,
+          "login": "DennyHoang",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T17:33:47Z"
+      }
+    ]
   }
 }

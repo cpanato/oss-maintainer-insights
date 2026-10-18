@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "139877": {
+        "id": 3898161545,
+        "updated_at": "2026-06-19T13:21:45Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -82,6 +90,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/139877/comments?per_page=100": {
+        "etag": "\"296b9d3da39d9cbad8459907df2e36abde487e7f12c5c0098896de0e67c6078c\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/139877/reviews?per_page=100": {
         "etag": "\"9b3cfcf328f983b072bf791b0ea4c51daf040aae51db8c5390649dfb2e477221\"",
         "next": "",
@@ -90,18 +103,77 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3898161545,
+    "author": {
+      "id": 119105844,
+      "login": "Demiserular",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-06-19T11:22:31Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "4751059731",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T11:22:35Z"
+      },
+      {
+        "id": "4751060142",
+        "actor": {
+          "id": 43480880,
+          "login": "linux-foundation-easycla[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-06-19T11:22:37Z"
+      },
+      {
+        "id": "4751060622",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T11:22:41Z"
+      },
+      {
+        "id": "4751060639",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T11:22:41Z"
+      },
+      {
+        "id": "4751060820",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T11:22:42Z"
+      },
+      {
+        "id": "4751935898",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-06-19T13:21:44Z"
+      }
+    ],
+    "review_comments": []
   }
 }
