@@ -16,12 +16,76 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "17187": {
+        "id": 2824990622,
+        "updated_at": "2026-04-27T06:28:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
     "pages": {
+      "/repositories/6838921/issues/17187/comments?per_page=100": {
+        "etag": "W/\"a78c4d249a64589fd8cabe1a1a7ec6c21d52783dba6a287818644a28f2f58aa2\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3297914139,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2025-09-16T11:15:10Z"
+          },
+          {
+            "id": 3298095330,
+            "user": {
+              "id": 6032561,
+              "login": "mmorel-35",
+              "type": "User"
+            },
+            "created_at": "2025-09-16T11:39:57Z"
+          },
+          {
+            "id": 3357180203,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "created_at": "2025-10-01T16:25:05Z"
+          },
+          {
+            "id": 3357272049,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2025-10-01T16:53:30Z"
+          },
+          {
+            "id": 4030708470,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T11:31:02Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/17187/comments?per_page=100": {
+        "etag": "\"432265d885c7c345c5128ae539a6f96a974bfe6349b09c7d2ffa3d417667c9bd\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/6838921/pulls/17187/reviews?per_page=100": {
         "etag": "\"634e0b66ca692971fcc672f6fa0c435f7978a3f8e3733bec313e66cb1184b805\"",
         "next": "",
@@ -30,18 +94,68 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2824990622,
+    "author": {
+      "id": 6032561,
+      "login": "mmorel-35",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-09-13T09:44:49Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "3297914139",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-16T11:15:10Z"
+      },
+      {
+        "id": "3298095330",
+        "actor": {
+          "id": 6032561,
+          "login": "mmorel-35",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-16T11:39:57Z"
+      },
+      {
+        "id": "3357180203",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T16:25:05Z"
+      },
+      {
+        "id": "3357272049",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T16:53:30Z"
+      },
+      {
+        "id": "4030708470",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T11:31:02Z"
+      }
+    ],
+    "review_comments": []
   }
 }

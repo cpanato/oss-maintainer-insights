@@ -16,26 +16,244 @@
     "merged_at": "2022-05-24T16:30:49Z"
   },
   "state": {
+    "tracked_prs": {
+      "769": {
+        "id": 906607061,
+        "updated_at": "2022-05-24T16:31:06Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/rekor",
-    "pages": {}
+    "pages": {
+      "/repositories/272963353/issues/769/comments?per_page=100": {
+        "etag": "W/\"67097c0bb922e855e7ade2a87b4a07dfcd7232842a1fdf6bf28d9bbcc83ec59b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1095698846,
+            "user": {
+              "id": 65553080,
+              "login": "codecov-commenter",
+              "type": "User"
+            },
+            "created_at": "2022-04-11T23:41:59Z"
+          },
+          {
+            "id": 1097036015,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "created_at": "2022-04-12T18:09:41Z"
+          },
+          {
+            "id": 1097037053,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "created_at": "2022-04-12T18:11:00Z"
+          },
+          {
+            "id": 1097109565,
+            "user": {
+              "id": 1304826,
+              "login": "loosebazooka",
+              "type": "User"
+            },
+            "created_at": "2022-04-12T19:05:47Z"
+          },
+          {
+            "id": 1097121466,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "created_at": "2022-04-12T19:19:00Z"
+          },
+          {
+            "id": 1097131677,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2022-04-12T19:29:52Z"
+          },
+          {
+            "id": 1097141172,
+            "user": {
+              "id": 1304826,
+              "login": "loosebazooka",
+              "type": "User"
+            },
+            "created_at": "2022-04-12T19:40:35Z"
+          }
+        ]
+      },
+      "/repositories/272963353/pulls/769/comments?per_page=100": {
+        "etag": "\"432265d885c7c345c5128ae539a6f96a974bfe6349b09c7d2ffa3d417667c9bd\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/272963353/pulls/769/reviews?per_page=100": {
+        "etag": "W/\"4479de9fca35791da85f6c3529e7dc1406521850d73efcdf5ba0044605a60c92\"",
+        "next": "",
+        "value": [
+          {
+            "id": 939907333,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "submitted_at": "2022-04-12T17:29:33Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 943853041,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "submitted_at": "2022-04-16T12:45:13Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 983418868,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "submitted_at": "2022-05-24T15:10:54Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 906607061,
+    "author": {
+      "id": 2845093,
+      "login": "bobcallaway",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-04-11T23:36:04Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "939907333",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-12T17:29:33Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "943853041",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-16T12:45:13Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "983418868",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-24T15:10:54Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1095698846",
+        "actor": {
+          "id": 65553080,
+          "login": "codecov-commenter",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-11T23:41:59Z"
+      },
+      {
+        "id": "1097036015",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-12T18:09:41Z"
+      },
+      {
+        "id": "1097037053",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-12T18:11:00Z"
+      },
+      {
+        "id": "1097109565",
+        "actor": {
+          "id": 1304826,
+          "login": "loosebazooka",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-12T19:05:47Z"
+      },
+      {
+        "id": "1097121466",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-12T19:19:00Z"
+      },
+      {
+        "id": "1097131677",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-12T19:29:52Z"
+      },
+      {
+        "id": "1097141172",
+        "actor": {
+          "id": 1304826,
+          "login": "loosebazooka",
+          "type": "User"
+        },
+        "occurred_at": "2022-04-12T19:40:35Z"
+      }
+    ],
+    "review_comments": []
   }
 }

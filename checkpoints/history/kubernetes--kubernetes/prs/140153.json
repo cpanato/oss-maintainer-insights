@@ -1,0 +1,179 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-07-08T16:58:38Z",
+    "id": 3970876420,
+    "number": 140153,
+    "user": {
+      "id": 697127,
+      "login": "tchap",
+      "type": "User"
+    },
+    "created_at": "2026-07-01T13:00:28Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-07-08T16:58:36Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "140153": {
+        "id": 3970876420,
+        "updated_at": "2026-07-08T16:58:38Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/140153/comments?per_page=100": {
+        "etag": "W/\"bfc27b2699192da96c713e3c4aa08f19baa9d6de18f667ecf90d025cb460c79c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4855158060,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-01T13:00:38Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4893771456,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2026-07-06T14:10:31Z"
+          },
+          {
+            "id": 4893772976,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-06T14:10:41Z"
+          },
+          {
+            "id": 4916430728,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-08T15:28:29Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/140153/comments?per_page=100": {
+        "etag": "\"432265d885c7c345c5128ae539a6f96a974bfe6349b09c7d2ffa3d417667c9bd\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/140153/reviews?per_page=100": {
+        "etag": "W/\"b131a4ec568f4185e8f5f9ed30604f9b57f1a202cac553c6ca1929b43181704d\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 4655619414,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-08T15:28:15Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3970876420,
+    "author": {
+      "id": 697127,
+      "login": "tchap",
+      "type": "User"
+    },
+    "created_at": "2026-07-01T13:00:28Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4655619414",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-08T15:28:15Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4855158060",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-01T13:00:38Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4893771456",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-06T14:10:31Z"
+      },
+      {
+        "id": "4893772976",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-06T14:10:41Z"
+      },
+      {
+        "id": "4916430728",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-08T15:28:29Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2021-11-29T10:57:12Z",
+    "id": 789932709,
+    "number": 1043,
+    "user": {
+      "id": 969993,
+      "login": "jMarkP",
+      "type": "User"
+    },
+    "created_at": "2021-11-27T13:24:02Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2021-11-29T10:50:40Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "1043": {
+        "id": 789932709,
+        "updated_at": "2021-11-29T10:57:12Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 106481151,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "argoproj/argo-helm",
+    "pages": {
+      "/repositories/106481151/issues/1043/comments?per_page=100": {
+        "etag": "\"432265d885c7c345c5128ae539a6f96a974bfe6349b09c7d2ffa3d417667c9bd\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/106481151/pulls/1043/comments?per_page=100": {
+        "etag": "W/\"a1a483f24add3e7b78854820a0113db212c3db5fd468e5cfbd17e43bd7743ac5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 757781602,
+            "user": {
+              "id": 969993,
+              "login": "jMarkP",
+              "type": "User"
+            },
+            "created_at": "2021-11-27T13:27:51Z"
+          }
+        ]
+      },
+      "/repositories/106481151/pulls/1043/reviews?per_page=100": {
+        "etag": "W/\"0dbd5da612cab90e07b40082eea0d89f90d313bc77a7bc4abddcdb49ef5e183d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 817133127,
+            "user": {
+              "id": 969993,
+              "login": "jMarkP",
+              "type": "User"
+            },
+            "submitted_at": "2021-11-27T13:27:51Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 817637230,
+            "user": {
+              "id": 21042968,
+              "login": "mbevc1",
+              "type": "User"
+            },
+            "submitted_at": "2021-11-29T10:47:42Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 789932709,
+    "author": {
+      "id": 969993,
+      "login": "jMarkP",
+      "type": "User"
+    },
+    "created_at": "2021-11-27T13:24:02Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "817133127",
+        "actor": {
+          "id": 969993,
+          "login": "jMarkP",
+          "type": "User"
+        },
+        "occurred_at": "2021-11-27T13:27:51Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "817637230",
+        "actor": {
+          "id": 21042968,
+          "login": "mbevc1",
+          "type": "User"
+        },
+        "occurred_at": "2021-11-29T10:47:42Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "757781602",
+        "actor": {
+          "id": 969993,
+          "login": "jMarkP",
+          "type": "User"
+        },
+        "occurred_at": "2021-11-27T13:27:51Z"
+      }
+    ]
+  }
+}

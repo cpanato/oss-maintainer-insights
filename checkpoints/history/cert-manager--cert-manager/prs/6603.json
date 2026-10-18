@@ -1,0 +1,159 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-01-05T15:51:09Z",
+    "id": 1666001472,
+    "number": 6603,
+    "user": {
+      "id": 42113979,
+      "login": "inteon",
+      "type": "User"
+    },
+    "created_at": "2024-01-05T11:02:03Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-01-05T15:51:09Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "6603": {
+        "id": 1666001472,
+        "updated_at": "2024-01-05T15:51:09Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/6603/comments?per_page=100": {
+        "etag": "W/\"39030c9c508d2ae4947c66201b2380be9ea5482beba8f8a2dcbb8649c8857a91\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 1878880246,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2024-01-05T15:49:53Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 1878880737,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "created_at": "2024-01-05T15:50:17Z"
+          },
+          {
+            "id": 1878880911,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2024-01-05T15:50:24Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/6603/comments?per_page=100": {
+        "etag": "\"432265d885c7c345c5128ae539a6f96a974bfe6349b09c7d2ffa3d417667c9bd\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/6603/reviews?per_page=100": {
+        "etag": "W/\"d6c09f0b0b10f1d1a92d6631b2b938ccdd2c7c9f3efcc21d4cc70d5a782bab60\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1806208610,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-05T15:49:44Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1666001472,
+    "author": {
+      "id": 42113979,
+      "login": "inteon",
+      "type": "User"
+    },
+    "created_at": "2024-01-05T11:02:03Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1806208610",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-05T15:49:44Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1878880246",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-05T15:49:53Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "1878880737",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-05T15:50:17Z"
+      },
+      {
+        "id": "1878880911",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-05T15:50:24Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

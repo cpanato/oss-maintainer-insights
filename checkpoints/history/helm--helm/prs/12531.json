@@ -16,6 +16,14 @@
     "merged_at": "2023-11-08T19:25:24Z"
   },
   "state": {
+    "tracked_prs": {
+      "12531": {
+        "id": 1577226604,
+        "updated_at": "2023-12-13T20:57:30Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -24,6 +32,11 @@
     "pages": {
       "/repositories/43723161/issues/12531/comments?per_page=100": {
         "etag": "\"634e0b66ca692971fcc672f6fa0c435f7978a3f8e3733bec313e66cb1184b805\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/12531/comments?per_page=100": {
+        "etag": "\"432265d885c7c345c5128ae539a6f96a974bfe6349b09c7d2ffa3d417667c9bd\"",
         "next": "",
         "value": []
       },
@@ -46,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1577226604,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-10-27T21:33:20Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1721111917",
+        "actor": {
+          "id": 62991,
+          "login": "mattfarina",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-08T19:25:04Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

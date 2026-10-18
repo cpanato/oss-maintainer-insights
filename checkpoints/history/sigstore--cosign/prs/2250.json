@@ -16,12 +16,68 @@
     "merged_at": "2022-09-16T13:14:47Z"
   },
   "state": {
+    "tracked_prs": {
+      "2250": {
+        "id": 1056305175,
+        "updated_at": "2022-09-16T13:15:02Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
     "pages": {
+      "/repositories/335952417/issues/2250/comments?per_page=100": {
+        "etag": "W/\"df32329ac39437af84957514dcb01aedb0274a67d0a0d7af1e81fa7b6497a8ee\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1247031737,
+            "user": {
+              "id": 65553080,
+              "login": "codecov-commenter",
+              "type": "User"
+            },
+            "created_at": "2022-09-14T16:39:43Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/2250/comments?per_page=100": {
+        "etag": "W/\"565e11e991a791ce5adf05469ebbb085bad5c762a20410b993b2c6a68873f727\"",
+        "next": "",
+        "value": [
+          {
+            "id": 971068341,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2022-09-14T16:47:35Z"
+          },
+          {
+            "id": 971104217,
+            "user": {
+              "id": 5194569,
+              "login": "asraa",
+              "type": "User"
+            },
+            "created_at": "2022-09-14T17:25:40Z"
+          },
+          {
+            "id": 971595043,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2022-09-15T06:52:55Z"
+          }
+        ]
+      },
       "/repositories/335952417/pulls/2250/reviews?per_page=100": {
         "etag": "W/\"fe34bd2b1a5810bfee781190a126bc9690f15e2450a8b075b9422cd7161218fb\"",
         "next": "",
@@ -101,18 +157,131 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1056305175,
+    "author": {
+      "id": 4115580,
+      "login": "cpanato",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-09-14T16:35:46Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1107874597",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-14T16:46:17Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "1107876564",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-14T16:47:36Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1107928670",
+        "actor": {
+          "id": 5194569,
+          "login": "asraa",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-14T17:25:40Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1108625871",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-15T06:52:55Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1109248098",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-15T13:57:51Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "1109355707",
+        "actor": {
+          "id": 5194569,
+          "login": "asraa",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-15T14:56:08Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "1110665557",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-16T13:13:51Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1247031737",
+        "actor": {
+          "id": 65553080,
+          "login": "codecov-commenter",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-14T16:39:43Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "971068341",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-14T16:47:35Z"
+      },
+      {
+        "id": "971104217",
+        "actor": {
+          "id": 5194569,
+          "login": "asraa",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-14T17:25:40Z"
+      },
+      {
+        "id": "971595043",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2022-09-15T06:52:55Z"
+      }
+    ]
   }
 }
