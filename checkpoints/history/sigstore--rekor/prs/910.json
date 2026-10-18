@@ -16,6 +16,14 @@
     "merged_at": "2022-07-08T12:19:40Z"
   },
   "state": {
+    "tracked_prs": {
+      "910": {
+        "id": 990722360,
+        "updated_at": "2022-07-08T12:20:10Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 272963353,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -36,6 +44,11 @@
             "created_at": "2022-07-07T19:44:15Z"
           }
         ]
+      },
+      "/repositories/272963353/pulls/910/comments?per_page=100": {
+        "etag": "\"634e0b66ca692971fcc672f6fa0c435f7978a3f8e3733bec313e66cb1184b805\"",
+        "next": "",
+        "value": []
       },
       "/repositories/272963353/pulls/910/reviews?per_page=100": {
         "etag": "W/\"dddf20f7647dc4477643e1c2d00f1d616d34d6c962b33d64766bba299e4ec2ed\"",
@@ -66,18 +79,53 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 990722360,
+    "author": {
+      "id": 2845093,
+      "login": "bobcallaway",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-07-07T19:29:25Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1032080176",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-07T19:41:36Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "1032833455",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-08T12:19:36Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1178140575",
+        "actor": {
+          "id": 65553080,
+          "login": "codecov-commenter",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-07T19:44:15Z"
+      }
+    ],
+    "review_comments": []
   }
 }

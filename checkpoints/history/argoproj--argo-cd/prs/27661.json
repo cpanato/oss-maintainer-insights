@@ -16,6 +16,14 @@
     "merged_at": "2026-05-04T10:14:58Z"
   },
   "state": {
+    "tracked_prs": {
+      "27661": {
+        "id": 3620542753,
+        "updated_at": "2026-08-02T10:30:47Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -43,6 +51,48 @@
               "type": "Bot"
             },
             "created_at": "2026-05-03T18:00:28Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/27661/comments?per_page=100": {
+        "etag": "W/\"0270d6fff4956fa8fa46e67d379591d0ab4e95ffbafab38c49eda231a4129afb\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3179728833,
+            "user": {
+              "id": 1743100,
+              "login": "ppapapetrou76",
+              "type": "User"
+            },
+            "created_at": "2026-05-04T06:32:07Z"
+          },
+          {
+            "id": 3179733763,
+            "user": {
+              "id": 1743100,
+              "login": "ppapapetrou76",
+              "type": "User"
+            },
+            "created_at": "2026-05-04T06:33:42Z"
+          },
+          {
+            "id": 3180019048,
+            "user": {
+              "id": 76274657,
+              "login": "ystkfujii",
+              "type": "User"
+            },
+            "created_at": "2026-05-04T07:39:09Z"
+          },
+          {
+            "id": 3180019280,
+            "user": {
+              "id": 76274657,
+              "login": "ystkfujii",
+              "type": "User"
+            },
+            "created_at": "2026-05-04T07:39:12Z"
           }
         ]
       },
@@ -95,18 +145,119 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3620542753,
+    "author": {
+      "id": 76274657,
+      "login": "ystkfujii",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-05-03T17:09:28Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4217834088",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T06:34:17Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4218183498",
+        "actor": {
+          "id": 76274657,
+          "login": "ystkfujii",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T07:39:09Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4218183783",
+        "actor": {
+          "id": 76274657,
+          "login": "ystkfujii",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T07:39:12Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4219125050",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T10:14:27Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4366710532",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-03T17:09:33Z"
+      },
+      {
+        "id": "4366806995",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-05-03T18:00:28Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3179728833",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T06:32:07Z"
+      },
+      {
+        "id": "3179733763",
+        "actor": {
+          "id": 1743100,
+          "login": "ppapapetrou76",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T06:33:42Z"
+      },
+      {
+        "id": "3180019048",
+        "actor": {
+          "id": 76274657,
+          "login": "ystkfujii",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T07:39:09Z"
+      },
+      {
+        "id": "3180019280",
+        "actor": {
+          "id": 76274657,
+          "login": "ystkfujii",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T07:39:12Z"
+      }
+    ]
   }
 }
