@@ -16,26 +16,96 @@
     "merged_at": "2020-05-09T17:00:38Z"
   },
   "state": {
+    "tracked_prs": {
+      "342": {
+        "id": 415502023,
+        "updated_at": "2020-05-10T23:45:57Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-helm",
-    "pages": {}
+    "pages": {
+      "/repositories/106481151/issues/342/comments?per_page=100": {
+        "etag": "W/\"615dbd41dfeaf1de9f3897427ab15013d9d99dcea0a27a9739989fe171665631\"",
+        "next": "",
+        "value": [
+          {
+            "id": 626092570,
+            "user": {
+              "id": 11571300,
+              "login": "CLAassistant",
+              "type": "User"
+            },
+            "created_at": "2020-05-09T02:39:41Z"
+          }
+        ]
+      },
+      "/repositories/106481151/pulls/342/comments?per_page=100": {
+        "etag": "\"0232e0e56decad1e9166fd724ec6b53a174b0dfec3eb01a5b0a15accf183b6c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/106481151/pulls/342/reviews?per_page=100": {
+        "etag": "W/\"017b79d264762d6f431cf2a91c554094a169dfa429e99b5b52118a79851d8dfa\"",
+        "next": "",
+        "value": [
+          {
+            "id": 408667128,
+            "user": {
+              "id": 11903873,
+              "login": "spencergilbert",
+              "type": "User"
+            },
+            "submitted_at": "2020-05-09T17:00:32Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 415502023,
+    "author": {
+      "id": 1088644,
+      "login": "gigawhat",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-05-09T02:39:34Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "408667128",
+        "actor": {
+          "id": 11903873,
+          "login": "spencergilbert",
+          "type": "User"
+        },
+        "occurred_at": "2020-05-09T17:00:32Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "626092570",
+        "actor": {
+          "id": 11571300,
+          "login": "CLAassistant",
+          "type": "User"
+        },
+        "occurred_at": "2020-05-09T02:39:41Z"
+      }
+    ],
+    "review_comments": []
   }
 }

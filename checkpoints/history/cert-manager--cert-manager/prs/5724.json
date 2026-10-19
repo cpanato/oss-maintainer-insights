@@ -16,6 +16,14 @@
     "merged_at": "2023-01-17T13:08:01Z"
   },
   "state": {
+    "tracked_prs": {
+      "5724": {
+        "id": 1196600706,
+        "updated_at": "2023-05-23T08:57:25Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -190,6 +198,11 @@
           }
         ]
       },
+      "/repositories/92313258/pulls/5724/comments?per_page=100": {
+        "etag": "\"0232e0e56decad1e9166fd724ec6b53a174b0dfec3eb01a5b0a15accf183b6c2\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/92313258/pulls/5724/reviews?per_page=100": {
         "etag": "W/\"8636045429aff7814ad7d16402200d1f9bf597ccace1aa9ff59ba3632e4709ac\"",
         "next": "",
@@ -250,18 +263,237 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1196600706,
+    "author": {
+      "id": 7419677,
+      "login": "g-gaston",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-01-13T11:34:16Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1247509591",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T11:48:46Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1248288834",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T18:49:13Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1249802908",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-16T09:18:23Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1251436840",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-17T12:09:26Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1381728003",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T11:34:26Z"
+      },
+      {
+        "id": "1381755615",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T11:57:43Z"
+      },
+      {
+        "id": "1381986666",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T15:02:07Z"
+      },
+      {
+        "id": "1382222913",
+        "actor": {
+          "id": 7419677,
+          "login": "g-gaston",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T18:22:36Z"
+      },
+      {
+        "id": "1382243151",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T18:45:36Z"
+      },
+      {
+        "id": "1382245903",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T18:48:55Z"
+      },
+      {
+        "id": "1382247093",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T18:50:17Z"
+      },
+      {
+        "id": "1382247108",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T18:50:18Z"
+      },
+      {
+        "id": "1382247774",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T18:51:02Z"
+      },
+      {
+        "id": "1382247800",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-13T18:51:04Z"
+      },
+      {
+        "id": "1383718566",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-16T09:17:59Z"
+      },
+      {
+        "id": "1385067752",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-17T09:13:41Z"
+      },
+      {
+        "id": "1385275448",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-17T11:20:45Z"
+      },
+      {
+        "id": "1385330277",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-17T12:09:31Z"
+      },
+      {
+        "id": "1385361099",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-17T12:36:34Z"
+      },
+      {
+        "id": "1385400124",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-17T13:08:54Z"
+      },
+      {
+        "id": "1385400896",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-17T13:09:29Z"
+      },
+      {
+        "id": "1385619691",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2023-01-17T15:40:26Z"
+      }
+    ],
+    "review_comments": []
   }
 }

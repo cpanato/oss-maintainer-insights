@@ -16,26 +16,76 @@
     "merged_at": "2025-04-17T11:05:53Z"
   },
   "state": {
+    "tracked_prs": {
+      "16383": {
+        "id": 2432783196,
+        "updated_at": "2025-04-17T11:05:54Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
-    "pages": {}
+    "pages": {
+      "/repositories/6838921/issues/16383/comments?per_page=100": {
+        "etag": "\"0232e0e56decad1e9166fd724ec6b53a174b0dfec3eb01a5b0a15accf183b6c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/16383/comments?per_page=100": {
+        "etag": "\"0232e0e56decad1e9166fd724ec6b53a174b0dfec3eb01a5b0a15accf183b6c2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/16383/reviews?per_page=100": {
+        "etag": "W/\"8ef1feea7d30d87e8f9f2ae25b4399e3812984b44c46d1f5abd23c625ec342f4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2775371880,
+            "user": {
+              "id": 1560587,
+              "login": "jkroepke",
+              "type": "User"
+            },
+            "submitted_at": "2025-04-17T11:05:51Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2432783196,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-04-01T23:31:19Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2775371880",
+        "actor": {
+          "id": 1560587,
+          "login": "jkroepke",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-17T11:05:51Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }
