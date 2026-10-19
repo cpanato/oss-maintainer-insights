@@ -16,26 +16,96 @@
     "merged_at": "2022-01-18T20:45:35Z"
   },
   "state": {
+    "tracked_prs": {
+      "1486": {
+        "id": 825826034,
+        "updated_at": "2022-01-18T20:45:36Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
-    "pages": {}
+    "pages": {
+      "/repositories/302670797/issues/1486/comments?per_page=100": {
+        "etag": "W/\"65da54b04a5faafbaa3d817227fe70787de4e64f98bb900f74ff65e1fe43a1a8\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1015784776,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2022-01-18T19:57:00Z"
+          }
+        ]
+      },
+      "/repositories/302670797/pulls/1486/comments?per_page=100": {
+        "etag": "\"a18e5192cfeab2223100ea26dbf53209ffc6728505ff308cbd00553b8ae293e7\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/302670797/pulls/1486/reviews?per_page=100": {
+        "etag": "W/\"02c7e9786cf9d006246981c76505836d9e288f5b8a272f0be15df3206e13daf5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 855954150,
+            "user": {
+              "id": 172697,
+              "login": "naveensrinivasan",
+              "type": "User"
+            },
+            "submitted_at": "2022-01-18T20:45:34Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 825826034,
+    "author": {
+      "id": 4825078,
+      "login": "azeemshaikh38",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-01-18T19:51:58Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "855954150",
+        "actor": {
+          "id": 172697,
+          "login": "naveensrinivasan",
+          "type": "User"
+        },
+        "occurred_at": "2022-01-18T20:45:34Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1015784776",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2022-01-18T19:57:00Z"
+      }
+    ],
+    "review_comments": []
   }
 }

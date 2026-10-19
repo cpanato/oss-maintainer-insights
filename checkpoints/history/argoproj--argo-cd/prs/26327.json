@@ -16,6 +16,14 @@
     "merged_at": "2026-02-09T10:45:44Z"
   },
   "state": {
+    "tracked_prs": {
+      "26327": {
+        "id": 3260190028,
+        "updated_at": "2026-02-09T10:49:16Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/26327/comments?per_page=100": {
+        "etag": "\"a18e5192cfeab2223100ea26dbf53209ffc6728505ff308cbd00553b8ae293e7\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/26327/reviews?per_page=100": {
         "etag": "W/\"217ea3c08a0269190805612922675d7f4347ebcdf57f5b76eedf76b66f39a961\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3260190028,
+    "author": {
+      "id": 6032561,
+      "login": "mmorel-35",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-02-08T18:16:32Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3772564724",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-09T10:45:39Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3867796397",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-08T18:16:37Z"
+      }
+    ],
+    "review_comments": []
   }
 }

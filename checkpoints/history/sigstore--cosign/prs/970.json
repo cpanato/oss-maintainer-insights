@@ -1,0 +1,137 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2021-10-29T18:23:37Z",
+    "id": 769447941,
+    "number": 970,
+    "user": {
+      "id": 2442466,
+      "login": "mattmoor",
+      "type": "User"
+    },
+    "created_at": "2021-10-29T18:04:34Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2021-10-29T18:23:21Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "970": {
+        "id": 769447941,
+        "updated_at": "2021-10-29T18:23:37Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 335952417,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "sigstore/cosign",
+    "pages": {
+      "/repositories/335952417/issues/970/comments?per_page=100": {
+        "etag": "W/\"06720c568d5766707174669ffa368511239fdc506827a05931e9e8e26002db4d\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 954944714,
+            "user": {
+              "id": 11279988,
+              "login": "vaikas",
+              "type": "User"
+            },
+            "created_at": "2021-10-29T18:07:33Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/970/comments?per_page=100": {
+        "etag": "\"a18e5192cfeab2223100ea26dbf53209ffc6728505ff308cbd00553b8ae293e7\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/970/reviews?per_page=100": {
+        "etag": "W/\"19b7f84cb377a7f6f003d93d63ec2137b908e351280614f8c21b31a3e845aac5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 793327907,
+            "user": {
+              "id": 11279988,
+              "login": "vaikas",
+              "type": "User"
+            },
+            "submitted_at": "2021-10-29T18:10:02Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 793333944,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "submitted_at": "2021-10-29T18:17:49Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 769447941,
+    "author": {
+      "id": 2442466,
+      "login": "mattmoor",
+      "type": "User"
+    },
+    "created_at": "2021-10-29T18:04:34Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "793327907",
+        "actor": {
+          "id": 11279988,
+          "login": "vaikas",
+          "type": "User"
+        },
+        "occurred_at": "2021-10-29T18:10:02Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "793333944",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-10-29T18:17:49Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "954944714",
+        "actor": {
+          "id": 11279988,
+          "login": "vaikas",
+          "type": "User"
+        },
+        "occurred_at": "2021-10-29T18:07:33Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

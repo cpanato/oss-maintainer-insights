@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2021-11-11T16:54:04Z",
+    "id": 773623611,
+    "number": 999,
+    "user": {
+      "id": 5194569,
+      "login": "asraa",
+      "type": "User"
+    },
+    "created_at": "2021-11-04T19:22:52Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2021-11-04T22:37:52Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "999": {
+        "id": 773623611,
+        "updated_at": "2021-11-11T16:54:04Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 335952417,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "sigstore/cosign",
+    "pages": {
+      "/repositories/335952417/issues/999/comments?per_page=100": {
+        "etag": "W/\"a6b88808c1212b1adcdd39d10bae02c4f77e9f02c05bd2f376da7ffdaca584c1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 961348766,
+            "user": {
+              "id": 5194569,
+              "login": "asraa",
+              "type": "User"
+            },
+            "created_at": "2021-11-04T19:24:06Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/999/comments?per_page=100": {
+        "etag": "\"a18e5192cfeab2223100ea26dbf53209ffc6728505ff308cbd00553b8ae293e7\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/999/reviews?per_page=100": {
+        "etag": "W/\"0ddfbdd584d653a2b8ef24fff2b2494ffd5b109068c9cbce2fc2a9467fa26842\"",
+        "next": "",
+        "value": [
+          {
+            "id": 798222469,
+            "user": {
+              "id": 7058938,
+              "login": "lukehinds",
+              "type": "User"
+            },
+            "submitted_at": "2021-11-04T20:20:11Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 798307522,
+            "user": {
+              "id": 22075926,
+              "login": "lkatalin",
+              "type": "User"
+            },
+            "submitted_at": "2021-11-04T22:06:16Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 773623611,
+    "author": {
+      "id": 5194569,
+      "login": "asraa",
+      "type": "User"
+    },
+    "created_at": "2021-11-04T19:22:52Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "798222469",
+        "actor": {
+          "id": 7058938,
+          "login": "lukehinds",
+          "type": "User"
+        },
+        "occurred_at": "2021-11-04T20:20:11Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "798307522",
+        "actor": {
+          "id": 22075926,
+          "login": "lkatalin",
+          "type": "User"
+        },
+        "occurred_at": "2021-11-04T22:06:16Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "961348766",
+        "actor": {
+          "id": 5194569,
+          "login": "asraa",
+          "type": "User"
+        },
+        "occurred_at": "2021-11-04T19:24:06Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
