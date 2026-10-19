@@ -16,26 +16,210 @@
     "merged_at": "2021-12-06T22:25:54Z"
   },
   "state": {
+    "tracked_prs": {
+      "1145": {
+        "id": 796322121,
+        "updated_at": "2021-12-06T22:26:09Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
-    "pages": {}
+    "pages": {
+      "/repositories/335952417/issues/1145/comments?per_page=100": {
+        "etag": "\"8cdf657bfd2a859564bed21961785353837451e1f1ad2ae04901aad16b6dc73d\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/1145/comments?per_page=100": {
+        "etag": "W/\"3998ecd0a0655a6d71e4b14ee600e83a7a0ff29ca1a5df11afecd19af7c3a7fe\"",
+        "next": "",
+        "value": [
+          {
+            "id": 763431988,
+            "user": {
+              "id": 16693043,
+              "login": "developer-guy",
+              "type": "User"
+            },
+            "created_at": "2021-12-06T22:00:31Z"
+          },
+          {
+            "id": 763432919,
+            "user": {
+              "id": 16693043,
+              "login": "developer-guy",
+              "type": "User"
+            },
+            "created_at": "2021-12-06T22:02:08Z"
+          },
+          {
+            "id": 763434861,
+            "user": {
+              "id": 1200829,
+              "login": "dekkagaijin",
+              "type": "User"
+            },
+            "created_at": "2021-12-06T22:05:24Z"
+          },
+          {
+            "id": 763434897,
+            "user": {
+              "id": 1200829,
+              "login": "dekkagaijin",
+              "type": "User"
+            },
+            "created_at": "2021-12-06T22:05:29Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/1145/reviews?per_page=100": {
+        "etag": "W/\"89f3cace5f2ff5aa28320dd1f513d9daf857c93d5519218ef57ddb61532d1dd5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 824529670,
+            "user": {
+              "id": 16693043,
+              "login": "developer-guy",
+              "type": "User"
+            },
+            "submitted_at": "2021-12-06T22:02:36Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 824533596,
+            "user": {
+              "id": 1200829,
+              "login": "dekkagaijin",
+              "type": "User"
+            },
+            "submitted_at": "2021-12-06T22:05:25Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 824533658,
+            "user": {
+              "id": 1200829,
+              "login": "dekkagaijin",
+              "type": "User"
+            },
+            "submitted_at": "2021-12-06T22:05:29Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 824541349,
+            "user": {
+              "id": 16693043,
+              "login": "developer-guy",
+              "type": "User"
+            },
+            "submitted_at": "2021-12-06T22:12:47Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 796322121,
+    "author": {
+      "id": 1200829,
+      "login": "dekkagaijin",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-12-06T21:56:09Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "824529670",
+        "actor": {
+          "id": 16693043,
+          "login": "developer-guy",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-06T22:02:36Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "824533596",
+        "actor": {
+          "id": 1200829,
+          "login": "dekkagaijin",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-06T22:05:25Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "824533658",
+        "actor": {
+          "id": 1200829,
+          "login": "dekkagaijin",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-06T22:05:29Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "824541349",
+        "actor": {
+          "id": 16693043,
+          "login": "developer-guy",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-06T22:12:47Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "763431988",
+        "actor": {
+          "id": 16693043,
+          "login": "developer-guy",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-06T22:00:31Z"
+      },
+      {
+        "id": "763432919",
+        "actor": {
+          "id": 16693043,
+          "login": "developer-guy",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-06T22:02:08Z"
+      },
+      {
+        "id": "763434861",
+        "actor": {
+          "id": 1200829,
+          "login": "dekkagaijin",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-06T22:05:24Z"
+      },
+      {
+        "id": "763434897",
+        "actor": {
+          "id": 1200829,
+          "login": "dekkagaijin",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-06T22:05:29Z"
+      }
+    ]
   }
 }

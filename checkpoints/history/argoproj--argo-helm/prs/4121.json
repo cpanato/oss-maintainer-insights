@@ -1,8 +1,8 @@
 {
-  "generation": 2,
-  "observed_at": "2026-10-14T15:12:29Z",
+  "generation": 3,
+  "observed_at": "2026-10-19T17:46:11Z",
   "pr": {
-    "updated_at": "2026-10-14T12:34:33Z",
+    "updated_at": "2026-10-16T16:23:57Z",
     "id": 4785041479,
     "number": 4121,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-08T10:00:37Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-16T16:23:57Z"
   },
   "state": {
     "tracked_prs": {
       "4121": {
         "id": 4785041479,
-        "updated_at": "2026-10-14T12:34:33Z",
-        "checked_at": "2026-10-14T15:12:29Z",
-        "state": "open"
+        "updated_at": "2026-10-16T16:23:57Z",
+        "checked_at": "2026-10-19T17:46:11Z",
+        "state": "closed"
       }
     },
     "repository_id": 106481151,
@@ -31,7 +31,7 @@
     "repository": "argoproj/argo-helm",
     "pages": {
       "/repositories/106481151/issues/4121/comments?per_page=100": {
-        "etag": "W/\"320f81f1554dcd2524640288013badb9f91ae85800e02c0eec018796ece7947f\"",
+        "etag": "W/\"b795d33a8bbc7345be3008b741498fef88bbd14c0e474ef1adec9c857d714e04\"",
         "next": "",
         "value": [
           {
@@ -55,12 +55,12 @@
         ]
       },
       "/repositories/106481151/pulls/4121/comments?per_page=100": {
-        "etag": "\"220dffacd98a8517838d093614b59c23ad7b32a0e14fa34b5e00673a1b094c66\"",
+        "etag": "\"8cdf657bfd2a859564bed21961785353837451e1f1ad2ae04901aad16b6dc73d\"",
         "next": "",
         "value": []
       },
       "/repositories/106481151/pulls/4121/reviews?per_page=100": {
-        "etag": "W/\"280ea216d66fb493af5ea222ee653f73585116057934bbe0d0fe17546bcaacfe\"",
+        "etag": "W/\"fdd8358f2a0accfb5583b126fcd2294a3cc4e08d05dfae5ec026419c25fbd105\"",
         "next": "",
         "value": [
           {
@@ -92,6 +92,16 @@
             },
             "submitted_at": "2026-10-13T08:42:42Z",
             "state": "APPROVED"
+          },
+          {
+            "id": 5550635755,
+            "user": {
+              "id": 30188755,
+              "login": "yu-croco",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-16T16:23:41Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -106,7 +116,7 @@
     },
     "created_at": "2026-10-08T10:00:37Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -141,6 +151,16 @@
           "type": "User"
         },
         "occurred_at": "2026-10-13T08:42:42Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5550635755",
+        "actor": {
+          "id": 30188755,
+          "login": "yu-croco",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-16T16:23:41Z",
         "state": "APPROVED"
       }
     ],

@@ -1,0 +1,169 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-01-23T14:03:01Z",
+    "id": 2289830505,
+    "number": 15849,
+    "user": {
+      "id": 5231884,
+      "login": "linasm",
+      "type": "User"
+    },
+    "created_at": "2025-01-21T12:14:26Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-01-23T14:03:01Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "15849": {
+        "id": 2289830505,
+        "updated_at": "2025-01-23T14:03:01Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 6838921,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "prometheus/prometheus",
+    "pages": {
+      "/repositories/6838921/issues/15849/comments?per_page=100": {
+        "etag": "\"8cdf657bfd2a859564bed21961785353837451e1f1ad2ae04901aad16b6dc73d\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/15849/comments?per_page=100": {
+        "etag": "W/\"d504762234f97a470417c9112c0a0a66645e26956ed3ffdeb5c935365fd0b85f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1925583374,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "created_at": "2025-01-22T16:05:27Z"
+          },
+          {
+            "id": 1926454768,
+            "user": {
+              "id": 5231884,
+              "login": "linasm",
+              "type": "User"
+            },
+            "created_at": "2025-01-23T06:50:52Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/15849/reviews?per_page=100": {
+        "etag": "W/\"2f1845c8aaab09ade850dddff4faaac414276dd53aea4416feb32064469517ed\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2567649076,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-22T16:07:56Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 2569004540,
+            "user": {
+              "id": 5231884,
+              "login": "linasm",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-23T06:50:52Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2569951975,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-23T14:02:28Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2289830505,
+    "author": {
+      "id": 5231884,
+      "login": "linasm",
+      "type": "User"
+    },
+    "created_at": "2025-01-21T12:14:26Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2567649076",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T16:07:56Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2569004540",
+        "actor": {
+          "id": 5231884,
+          "login": "linasm",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-23T06:50:52Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2569951975",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-23T14:02:28Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "1925583374",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T16:05:27Z"
+      },
+      {
+        "id": "1926454768",
+        "actor": {
+          "id": 5231884,
+          "login": "linasm",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-23T06:50:52Z"
+      }
+    ]
+  }
+}

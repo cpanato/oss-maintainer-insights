@@ -16,12 +16,30 @@
     "merged_at": "2021-11-18T17:57:17Z"
   },
   "state": {
+    "tracked_prs": {
+      "10372": {
+        "id": 783980948,
+        "updated_at": "2021-11-18T17:57:17Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
     "pages": {
+      "/repositories/43723161/issues/10372/comments?per_page=100": {
+        "etag": "\"8cdf657bfd2a859564bed21961785353837451e1f1ad2ae04901aad16b6dc73d\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/43723161/pulls/10372/comments?per_page=100": {
+        "etag": "\"8cdf657bfd2a859564bed21961785353837451e1f1ad2ae04901aad16b6dc73d\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/43723161/pulls/10372/reviews?per_page=100": {
         "etag": "W/\"6d433c1476433619d13d102e4fdc2324d09e1764069fcddd2c5800c34c2ec5e9\"",
         "next": "",
@@ -41,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 783980948,
+    "author": {
+      "id": 26239939,
+      "login": "zonggen",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-11-18T17:49:53Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "810270060",
+        "actor": {
+          "id": 1360539,
+          "login": "bacongobbler",
+          "type": "User"
+        },
+        "occurred_at": "2021-11-18T17:56:59Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

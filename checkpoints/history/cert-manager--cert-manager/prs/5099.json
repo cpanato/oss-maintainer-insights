@@ -16,6 +16,14 @@
     "merged_at": "2022-05-06T14:50:13Z"
   },
   "state": {
+    "tracked_prs": {
+      "5099": {
+        "id": 928876336,
+        "updated_at": "2025-01-07T13:25:22Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -67,6 +75,11 @@
           }
         ]
       },
+      "/repositories/92313258/pulls/5099/comments?per_page=100": {
+        "etag": "\"8cdf657bfd2a859564bed21961785353837451e1f1ad2ae04901aad16b6dc73d\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/92313258/pulls/5099/reviews?per_page=100": {
         "etag": "W/\"24e29c44bee6f2404c6fec86acf32222b0db964022bc6de05c7b1ac774bae68c\"",
         "next": "",
@@ -90,18 +103,77 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 928876336,
+    "author": {
+      "id": 2119212,
+      "login": "jsoref",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-05-05T16:06:57Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "964767574",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-06T14:49:07Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1118749219",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T16:07:06Z"
+      },
+      {
+        "id": "1118762934",
+        "actor": {
+          "id": 2195781,
+          "login": "maelvls",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T16:19:13Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1118763005",
+        "actor": {
+          "id": 2195781,
+          "login": "maelvls",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-05T16:19:18Z"
+      },
+      {
+        "id": "1119705125",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2022-05-06T14:49:27Z"
+      }
+    ],
+    "review_comments": []
   }
 }

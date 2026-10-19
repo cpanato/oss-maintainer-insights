@@ -16,12 +16,67 @@
     "merged_at": "2026-05-27T18:16:46Z"
   },
   "state": {
+    "tracked_prs": {
+      "139199": {
+        "id": 3719017434,
+        "updated_at": "2026-05-27T18:16:49Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/139199/comments?per_page=100": {
+        "etag": "W/\"71aab7c9c115fb5e4af3447f1d7ea6ba4d52f919de412aa81b612a0c10af2081\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4501879594,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-20T19:26:58Z"
+          },
+          {
+            "id": 4545897326,
+            "user": {
+              "id": 18291632,
+              "login": "marosset",
+              "type": "User"
+            },
+            "created_at": "2026-05-26T15:57:32Z"
+          },
+          {
+            "id": 4556910175,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-27T17:22:42Z"
+          },
+          {
+            "id": 4556911348,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-27T17:22:50Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139199/comments?per_page=100": {
+        "etag": "\"8cdf657bfd2a859564bed21961785353837451e1f1ad2ae04901aad16b6dc73d\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/139199/reviews?per_page=100": {
         "etag": "W/\"9e9f7a0943a02306a100fae13a11cd55008aa8822da65986d35c71d5aa857fc5\"",
         "next": "",
@@ -45,18 +100,74 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3719017434,
+    "author": {
+      "id": 18291632,
+      "login": "marosset",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-05-20T19:26:49Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4374543116",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-27T17:22:34Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4501879594",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-20T19:26:58Z"
+      },
+      {
+        "id": "4545897326",
+        "actor": {
+          "id": 18291632,
+          "login": "marosset",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-26T15:57:32Z"
+      },
+      {
+        "id": "4556910175",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-27T17:22:42Z"
+      },
+      {
+        "id": "4556911348",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-27T17:22:50Z"
+      }
+    ],
+    "review_comments": []
   }
 }
