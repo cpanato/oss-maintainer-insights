@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2021-12-28T07:19:58Z",
+    "id": 808325264,
+    "number": 1241,
+    "user": {
+      "id": 11279988,
+      "login": "vaikas",
+      "type": "User"
+    },
+    "created_at": "2021-12-22T11:43:24Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2021-12-22T17:03:48Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "1241": {
+        "id": 808325264,
+        "updated_at": "2021-12-28T07:19:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 335952417,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "sigstore/cosign",
+    "pages": {
+      "/repositories/335952417/issues/1241/comments?per_page=100": {
+        "etag": "\"43de5987140ff524b3f308a44bf3f17d6b4357836871bc789de811dfb5f0689b\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/1241/comments?per_page=100": {
+        "etag": "W/\"e6f0800890dc4eb17ef3d69bbddea15a091f07b7670995a73cdb94a8c6d23fda\"",
+        "next": "",
+        "value": [
+          {
+            "id": 773885374,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "created_at": "2021-12-22T13:26:06Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/1241/reviews?per_page=100": {
+        "etag": "W/\"81eecf6b58dfe5d73a066dc234d4712f35f11ff68d1f9ea5fc95b1b2f351937a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 838454094,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "submitted_at": "2021-12-22T13:26:09Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 838582750,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "submitted_at": "2021-12-22T15:32:06Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 808325264,
+    "author": {
+      "id": 11279988,
+      "login": "vaikas",
+      "type": "User"
+    },
+    "created_at": "2021-12-22T11:43:24Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "838454094",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-22T13:26:09Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "838582750",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-22T15:32:06Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "773885374",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-22T13:26:06Z"
+      }
+    ]
+  }
+}

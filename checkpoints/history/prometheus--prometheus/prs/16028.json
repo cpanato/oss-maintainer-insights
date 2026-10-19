@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-02-20T22:14:33Z",
+    "id": 2332613721,
+    "number": 16028,
+    "user": {
+      "id": 5225653,
+      "login": "isker",
+      "type": "User"
+    },
+    "created_at": "2025-02-13T01:10:47Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-02-20T22:14:33Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "16028": {
+        "id": 2332613721,
+        "updated_at": "2025-02-20T22:14:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 6838921,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "prometheus/prometheus",
+    "pages": {
+      "/repositories/6838921/issues/16028/comments?per_page=100": {
+        "etag": "\"43de5987140ff524b3f308a44bf3f17d6b4357836871bc789de811dfb5f0689b\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/16028/comments?per_page=100": {
+        "etag": "W/\"b80df996106af15dce701c5fcbb32b3413a15e2119c6a2f887fa6a373e557a00\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1964388561,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "created_at": "2025-02-20T21:51:01Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/16028/reviews?per_page=100": {
+        "etag": "W/\"6f9e3e62eca14b18efa48e226b7c5d4192853930b9e89a612b5e3c10382d97ef\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2631239403,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "submitted_at": "2025-02-20T21:51:34Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 2631241145,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "submitted_at": "2025-02-20T21:52:06Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2332613721,
+    "author": {
+      "id": 5225653,
+      "login": "isker",
+      "type": "User"
+    },
+    "created_at": "2025-02-13T01:10:47Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2631239403",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-20T21:51:34Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2631241145",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-20T21:52:06Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "1964388561",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-20T21:51:01Z"
+      }
+    ]
+  }
+}

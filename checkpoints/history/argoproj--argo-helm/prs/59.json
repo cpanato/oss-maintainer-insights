@@ -16,6 +16,14 @@
     "merged_at": "2019-05-03T17:12:54Z"
   },
   "state": {
+    "tracked_prs": {
+      "59": {
+        "id": 275628342,
+        "updated_at": "2019-05-03T17:12:54Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/106481151/pulls/59/comments?per_page=100": {
+        "etag": "\"43de5987140ff524b3f308a44bf3f17d6b4357836871bc789de811dfb5f0689b\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/106481151/pulls/59/reviews?per_page=100": {
         "etag": "\"05ee16562ac8d1434ef72ffeabb26ee8970ff94e2025989b296355979c8b0f65\"",
         "next": "",
@@ -45,18 +58,32 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 275628342,
+    "author": {
+      "id": 235465,
+      "login": "nalbam",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2019-05-03T08:22:45Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "489003638",
+        "actor": {
+          "id": 11571300,
+          "login": "CLAassistant",
+          "type": "User"
+        },
+        "occurred_at": "2019-05-03T08:22:53Z"
+      }
+    ],
+    "review_comments": []
   }
 }

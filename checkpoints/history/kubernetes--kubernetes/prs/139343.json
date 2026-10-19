@@ -16,26 +16,188 @@
     "merged_at": "2026-05-28T10:58:57Z"
   },
   "state": {
+    "tracked_prs": {
+      "139343": {
+        "id": 3760422363,
+        "updated_at": "2026-05-28T10:58:59Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
-    "pages": {}
+    "pages": {
+      "/repositories/20580498/issues/139343/comments?per_page=100": {
+        "etag": "W/\"0708b8e5e117785780561381e26968d74bfa23fe83fd0913dc8a3476f82139bd\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4561758696,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-28T07:35:59Z"
+          },
+          {
+            "id": 4561759058,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-05-28T07:36:03Z"
+          },
+          {
+            "id": 4561760202,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-28T07:36:15Z"
+          },
+          {
+            "id": 4562374736,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-05-28T09:01:49Z"
+          },
+          {
+            "id": 4562375949,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-05-28T09:01:58Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4562900779,
+            "user": {
+              "id": 194226633,
+              "login": "ania-borowiec",
+              "type": "User"
+            },
+            "created_at": "2026-05-28T10:03:15Z"
+          },
+          {
+            "id": 4562902068,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-28T10:03:24Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/139343/comments?per_page=100": {
+        "etag": "\"43de5987140ff524b3f308a44bf3f17d6b4357836871bc789de811dfb5f0689b\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/139343/reviews?per_page=100": {
+        "etag": "\"43de5987140ff524b3f308a44bf3f17d6b4357836871bc789de811dfb5f0689b\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3760422363,
+    "author": {
+      "id": 87243939,
+      "login": "macsko",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-05-28T07:35:50Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "4561758696",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-28T07:35:59Z"
+      },
+      {
+        "id": "4561759058",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-28T07:36:03Z"
+      },
+      {
+        "id": "4561760202",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-28T07:36:15Z"
+      },
+      {
+        "id": "4562374736",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-28T09:01:49Z"
+      },
+      {
+        "id": "4562375949",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-28T09:01:58Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4562900779",
+        "actor": {
+          "id": 194226633,
+          "login": "ania-borowiec",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-28T10:03:15Z"
+      },
+      {
+        "id": "4562902068",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-28T10:03:24Z"
+      }
+    ],
+    "review_comments": []
   }
 }

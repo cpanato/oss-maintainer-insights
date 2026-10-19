@@ -16,26 +16,96 @@
     "merged_at": "2026-02-25T12:17:55Z"
   },
   "state": {
+    "tracked_prs": {
+      "26606": {
+        "id": 3323559813,
+        "updated_at": "2026-05-26T12:31:10Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/26606/comments?per_page=100": {
+        "etag": "W/\"09e3b929c795f061389a56a4cf7827c8c57a589c6f27baf52dfec0eeb3c3a74f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3956562102,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-25T03:51:43Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/26606/comments?per_page=100": {
+        "etag": "\"43de5987140ff524b3f308a44bf3f17d6b4357836871bc789de811dfb5f0689b\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/26606/reviews?per_page=100": {
+        "etag": "W/\"ca4b6e9a1c9e91047ee60db524e89d91c56e2e5fc2213421f3ad9bdb9a1b396b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3853892757,
+            "user": {
+              "id": 37445536,
+              "login": "rumstead",
+              "type": "User"
+            },
+            "submitted_at": "2026-02-25T12:17:45Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3323559813,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-02-25T03:14:15Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3853892757",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-25T12:17:45Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3956562102",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-25T03:51:43Z"
+      }
+    ],
+    "review_comments": []
   }
 }
