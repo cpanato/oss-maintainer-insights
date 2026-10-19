@@ -16,12 +16,49 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "202": {
+        "id": 359941911,
+        "updated_at": "2020-01-07T11:38:32Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 106481151,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-helm",
     "pages": {
+      "/repositories/106481151/issues/202/comments?per_page=100": {
+        "etag": "W/\"e1db7f0a2bff55c77c6a371435b7a14d5073ba5edcd841803b521933de1cdc6c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 571543730,
+            "user": {
+              "id": 58292905,
+              "login": "claassistantio",
+              "type": "User"
+            },
+            "created_at": "2020-01-07T11:12:54Z"
+          },
+          {
+            "id": 571551574,
+            "user": {
+              "id": 25744354,
+              "login": "bartse",
+              "type": "User"
+            },
+            "created_at": "2020-01-07T11:38:30Z"
+          }
+        ]
+      },
+      "/repositories/106481151/pulls/202/comments?per_page=100": {
+        "etag": "\"05ee16562ac8d1434ef72ffeabb26ee8970ff94e2025989b296355979c8b0f65\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/106481151/pulls/202/reviews?per_page=100": {
         "etag": "\"0232e0e56decad1e9166fd724ec6b53a174b0dfec3eb01a5b0a15accf183b6c2\"",
         "next": "",
@@ -30,18 +67,41 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 359941911,
+    "author": {
+      "id": 25744354,
+      "login": "bartse",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-01-07T11:12:27Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "571543730",
+        "actor": {
+          "id": 58292905,
+          "login": "claassistantio",
+          "type": "User"
+        },
+        "occurred_at": "2020-01-07T11:12:54Z"
+      },
+      {
+        "id": "571551574",
+        "actor": {
+          "id": 25744354,
+          "login": "bartse",
+          "type": "User"
+        },
+        "occurred_at": "2020-01-07T11:38:30Z"
+      }
+    ],
+    "review_comments": []
   }
 }

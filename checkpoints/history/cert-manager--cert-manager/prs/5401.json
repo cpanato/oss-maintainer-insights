@@ -1,0 +1,269 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2022-08-26T16:50:22Z",
+    "id": 1036377774,
+    "number": 5401,
+    "user": {
+      "id": 741106,
+      "login": "sathieu",
+      "type": "User"
+    },
+    "created_at": "2022-08-25T07:42:56Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2022-08-26T16:50:20Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "5401": {
+        "id": 1036377774,
+        "updated_at": "2022-08-26T16:50:22Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/5401/comments?per_page=100": {
+        "etag": "W/\"7df3f8118f1cfa712fd97d508ed8f506aa1da9039beb90d58c0d8e570df34d79\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1226896838,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2022-08-25T07:43:06Z"
+          },
+          {
+            "id": 1226902126,
+            "user": {
+              "id": 741106,
+              "login": "sathieu",
+              "type": "User"
+            },
+            "created_at": "2022-08-25T07:48:18Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1228686034,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2022-08-26T16:16:17Z"
+          },
+          {
+            "id": 1228686129,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2022-08-26T16:16:22Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/5401/comments?per_page=100": {
+        "etag": "W/\"2fcb98fcd1d45aa2c2adc1cfda6fb1eda89f24682ae637c166c72ba3f33c7ced\"",
+        "next": "",
+        "value": [
+          {
+            "id": 956112223,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2022-08-26T14:37:23Z"
+          },
+          {
+            "id": 956122429,
+            "user": {
+              "id": 741106,
+              "login": "sathieu",
+              "type": "User"
+            },
+            "created_at": "2022-08-26T14:45:52Z"
+          },
+          {
+            "id": 956202494,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2022-08-26T16:16:07Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/5401/reviews?per_page=100": {
+        "etag": "W/\"84d20eaf85657d1dfc263d6a63ea979a2bbcee3e66527d57c372f16d50fe9ff2\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1087061423,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "submitted_at": "2022-08-26T14:37:25Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 1087077490,
+            "user": {
+              "id": 741106,
+              "login": "sathieu",
+              "type": "User"
+            },
+            "submitted_at": "2022-08-26T14:45:53Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1087194550,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "submitted_at": "2022-08-26T16:16:07Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1036377774,
+    "author": {
+      "id": 741106,
+      "login": "sathieu",
+      "type": "User"
+    },
+    "created_at": "2022-08-25T07:42:56Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1087061423",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-26T14:37:25Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "1087077490",
+        "actor": {
+          "id": 741106,
+          "login": "sathieu",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-26T14:45:53Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1087194550",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-26T16:16:07Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1226896838",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-25T07:43:06Z"
+      },
+      {
+        "id": "1226902126",
+        "actor": {
+          "id": 741106,
+          "login": "sathieu",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-25T07:48:18Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1228686034",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-26T16:16:17Z"
+      },
+      {
+        "id": "1228686129",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-26T16:16:22Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "956112223",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-26T14:37:23Z"
+      },
+      {
+        "id": "956122429",
+        "actor": {
+          "id": 741106,
+          "login": "sathieu",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-26T14:45:52Z"
+      },
+      {
+        "id": "956202494",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-26T16:16:07Z"
+      }
+    ]
+  }
+}

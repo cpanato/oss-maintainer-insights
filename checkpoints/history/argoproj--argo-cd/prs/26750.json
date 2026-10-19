@@ -16,26 +16,96 @@
     "merged_at": "2026-03-09T14:46:47Z"
   },
   "state": {
+    "tracked_prs": {
+      "26750": {
+        "id": 3373824944,
+        "updated_at": "2026-06-07T15:00:53Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/26750/comments?per_page=100": {
+        "etag": "W/\"f42983e0d4b62ed244faca5479d1559c0a16eec802e577a260fc88a097fed1c5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4024573106,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-03-09T15:25:02Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/26750/comments?per_page=100": {
+        "etag": "\"05ee16562ac8d1434ef72ffeabb26ee8970ff94e2025989b296355979c8b0f65\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/26750/reviews?per_page=100": {
+        "etag": "W/\"06304ad65306100d7d64444efcc450975cc0a5db8c93d8ec353da7905f8c7891\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3915958422,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-09T14:46:41Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3373824944,
+    "author": {
+      "id": 231928284,
+      "login": "argo-cd-cherry-pick-bot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-03-09T14:44:46Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3915958422",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T14:46:41Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4024573106",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-03-09T15:25:02Z"
+      }
+    ],
+    "review_comments": []
   }
 }

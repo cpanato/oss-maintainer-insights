@@ -16,26 +16,158 @@
     "merged_at": "2022-10-21T12:48:08Z"
   },
   "state": {
+    "tracked_prs": {
+      "5529": {
+        "id": 1095247848,
+        "updated_at": "2023-01-06T14:44:40Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
-    "pages": {}
+    "pages": {
+      "/repositories/92313258/issues/5529/comments?per_page=100": {
+        "etag": "W/\"30bffe0f99bf0662e8fdcd0bdc605f9a13e14ad0bbc6292ec3e2ddaf1a97f883\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1286881876,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2022-10-21T12:14:38Z"
+          },
+          {
+            "id": 1286882971,
+            "user": {
+              "id": 1972547,
+              "login": "SgtCoDFish",
+              "type": "User"
+            },
+            "created_at": "2022-10-21T12:15:44Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 1286902785,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2022-10-21T12:34:30Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/5529/comments?per_page=100": {
+        "etag": "W/\"be911915bb3ca23caa76c6097c54ebe4965b0aaa39999914a8b0c480c73a59b1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1001720315,
+            "user": {
+              "id": 1972547,
+              "login": "SgtCoDFish",
+              "type": "User"
+            },
+            "created_at": "2022-10-21T12:18:01Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/5529/reviews?per_page=100": {
+        "etag": "W/\"b8c0237e4c42b29e47326353625980554c3d376074f44c89d9f31a17467154c8\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1150858402,
+            "user": {
+              "id": 1972547,
+              "login": "SgtCoDFish",
+              "type": "User"
+            },
+            "submitted_at": "2022-10-21T12:18:01Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1095247848,
+    "author": {
+      "id": 1972547,
+      "login": "SgtCoDFish",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-10-21T12:14:33Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1150858402",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2022-10-21T12:18:01Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1286881876",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2022-10-21T12:14:38Z"
+      },
+      {
+        "id": "1286882971",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2022-10-21T12:15:44Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1286902785",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2022-10-21T12:34:30Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1001720315",
+        "actor": {
+          "id": 1972547,
+          "login": "SgtCoDFish",
+          "type": "User"
+        },
+        "occurred_at": "2022-10-21T12:18:01Z"
+      }
+    ]
   }
 }
