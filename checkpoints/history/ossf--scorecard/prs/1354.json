@@ -16,12 +16,95 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "1354": {
+        "id": 794921610,
+        "updated_at": "2021-12-03T23:09:36Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
     "pages": {
+      "/repositories/302670797/issues/1354/comments?per_page=100": {
+        "etag": "W/\"7af939483b50a10278297b86afaf1e610bde174315c36a1692d838cb3a05db1d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 985837786,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-12-03T21:24:23Z"
+          },
+          {
+            "id": 985838198,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-12-03T21:25:10Z"
+          },
+          {
+            "id": 985838616,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-12-03T21:25:59Z"
+          },
+          {
+            "id": 985901837,
+            "user": {
+              "id": 64505099,
+              "login": "laurentsimon",
+              "type": "User"
+            },
+            "created_at": "2021-12-03T23:09:35Z"
+          }
+        ]
+      },
+      "/repositories/302670797/pulls/1354/comments?per_page=100": {
+        "etag": "W/\"a59a115cdce3db0a474b7e664489a88609684f0c20661c2ab70958cbbe924585\"",
+        "next": "",
+        "value": [
+          {
+            "id": 762306199,
+            "user": {
+              "id": 4825078,
+              "login": "azeemshaikh38",
+              "type": "User"
+            },
+            "created_at": "2021-12-03T21:48:25Z"
+          },
+          {
+            "id": 762306433,
+            "user": {
+              "id": 4825078,
+              "login": "azeemshaikh38",
+              "type": "User"
+            },
+            "created_at": "2021-12-03T21:48:56Z"
+          },
+          {
+            "id": 762307782,
+            "user": {
+              "id": 64505099,
+              "login": "laurentsimon",
+              "type": "User"
+            },
+            "created_at": "2021-12-03T21:51:43Z"
+          }
+        ]
+      },
       "/repositories/302670797/pulls/1354/reviews?per_page=100": {
         "etag": "W/\"01fa3c173d2d75bb33af1127fed1fbf5970c84d3fdbdf0e94891ded6385ef4eb\"",
         "next": "",
@@ -61,18 +144,118 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 794921610,
+    "author": {
+      "id": 64505099,
+      "login": "laurentsimon",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-12-03T21:19:51Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "823144623",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-03T21:48:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "823144957",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-03T21:48:56Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "823146690",
+        "actor": {
+          "id": 64505099,
+          "login": "laurentsimon",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-03T21:51:43Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "985837786",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-12-03T21:24:23Z"
+      },
+      {
+        "id": "985838198",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-12-03T21:25:10Z"
+      },
+      {
+        "id": "985838616",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-12-03T21:25:59Z"
+      },
+      {
+        "id": "985901837",
+        "actor": {
+          "id": 64505099,
+          "login": "laurentsimon",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-03T23:09:35Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "762306199",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-03T21:48:25Z"
+      },
+      {
+        "id": "762306433",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-03T21:48:56Z"
+      },
+      {
+        "id": "762307782",
+        "actor": {
+          "id": 64505099,
+          "login": "laurentsimon",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-03T21:51:43Z"
+      }
+    ]
   }
 }

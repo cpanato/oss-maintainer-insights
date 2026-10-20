@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "138932": {
+        "id": 3655555393,
+        "updated_at": "2026-08-01T12:42:19Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -163,6 +171,21 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/138932/comments?per_page=100": {
+        "etag": "W/\"cccc5c8a0b94a91fc14f8e15a4343a466ceb291d01efc3c1f9b1ae86f4fc8d78\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3213669862,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-05-09T18:26:00Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/138932/reviews?per_page=100": {
         "etag": "W/\"9a29aadde0626b19e9a7a1da5896f7319d374522371c479ff5d882a883fdb592\"",
         "next": "",
@@ -182,18 +205,179 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3655555393,
+    "author": {
+      "id": 18387694,
+      "login": "arthurbdiniz",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-05-09T18:06:24Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4258294174",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-09T18:26:00Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4413255335",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-09T18:06:34Z"
+      },
+      {
+        "id": "4413255388",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-09T18:06:35Z"
+      },
+      {
+        "id": "4413256100",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-09T18:06:45Z"
+      },
+      {
+        "id": "4413452522",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-09T19:10:43Z"
+      },
+      {
+        "id": "4427107740",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-12T03:34:20Z"
+      },
+      {
+        "id": "4444117730",
+        "actor": {
+          "id": 18387694,
+          "login": "arthurbdiniz",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T18:30:47Z"
+      },
+      {
+        "id": "4444126078",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T18:31:48Z"
+      },
+      {
+        "id": "4444235394",
+        "actor": {
+          "id": 18387694,
+          "login": "arthurbdiniz",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T18:46:30Z"
+      },
+      {
+        "id": "4444406039",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T19:09:22Z"
+      },
+      {
+        "id": "4444530842",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-13T19:25:38Z"
+      },
+      {
+        "id": "4480918159",
+        "actor": {
+          "id": 18387694,
+          "login": "arthurbdiniz",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-18T18:55:44Z"
+      },
+      {
+        "id": "4493342674",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-20T00:21:55Z"
+      },
+      {
+        "id": "4577068324",
+        "actor": {
+          "id": 22327577,
+          "login": "dgrisonnet",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-29T15:38:11Z"
+      },
+      {
+        "id": "5151468698",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-01T12:42:12Z"
+      },
+      {
+        "id": "5151469034",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-08-01T12:42:19Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3213669862",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-09T18:26:00Z"
+      }
+    ]
   }
 }

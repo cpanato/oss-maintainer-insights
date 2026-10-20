@@ -16,12 +16,67 @@
     "merged_at": "2025-01-15T07:45:05Z"
   },
   "state": {
+    "tracked_prs": {
+      "15719": {
+        "id": 2254572085,
+        "updated_at": "2025-01-15T07:45:10Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
     "pages": {
+      "/repositories/6838921/issues/15719/comments?per_page=100": {
+        "etag": "\"24849f438752c8c4e2339d6e6925a5231e0fdd90141ae1b3f61348eb9ece56b0\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/15719/comments?per_page=100": {
+        "etag": "W/\"cba90bcacdde1aa90604892a67b2dba33dfccbb841a314e4d4a8ab8241c7f151\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1900520058,
+            "user": {
+              "id": 5385,
+              "login": "dgl",
+              "type": "User"
+            },
+            "created_at": "2025-01-02T03:36:51Z"
+          },
+          {
+            "id": 1904119314,
+            "user": {
+              "id": 281303,
+              "login": "aknuds1",
+              "type": "User"
+            },
+            "created_at": "2025-01-06T12:55:23Z"
+          },
+          {
+            "id": 1904206854,
+            "user": {
+              "id": 281303,
+              "login": "aknuds1",
+              "type": "User"
+            },
+            "created_at": "2025-01-06T14:18:15Z"
+          },
+          {
+            "id": 1916010551,
+            "user": {
+              "id": 5385,
+              "login": "dgl",
+              "type": "User"
+            },
+            "created_at": "2025-01-15T06:35:03Z"
+          }
+        ]
+      },
       "/repositories/6838921/pulls/15719/reviews?per_page=100": {
         "etag": "W/\"653fb8699facd49bddf52df8c1ffb278d2c99b5681049792f8ceb2dc9cdab35c\"",
         "next": "",
@@ -81,18 +136,110 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2254572085,
+    "author": {
+      "id": 281303,
+      "login": "aknuds1",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-12-29T12:13:35Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2526996501",
+        "actor": {
+          "id": 5385,
+          "login": "dgl",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-02T03:47:29Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2532085600",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T12:55:23Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2532237076",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T14:18:15Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2551664639",
+        "actor": {
+          "id": 5385,
+          "login": "dgl",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-15T06:35:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2551665642",
+        "actor": {
+          "id": 5385,
+          "login": "dgl",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-15T06:35:54Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "1900520058",
+        "actor": {
+          "id": 5385,
+          "login": "dgl",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-02T03:36:51Z"
+      },
+      {
+        "id": "1904119314",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T12:55:23Z"
+      },
+      {
+        "id": "1904206854",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-06T14:18:15Z"
+      },
+      {
+        "id": "1916010551",
+        "actor": {
+          "id": 5385,
+          "login": "dgl",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-15T06:35:03Z"
+      }
+    ]
   }
 }

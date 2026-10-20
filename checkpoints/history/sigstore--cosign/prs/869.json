@@ -16,6 +16,14 @@
     "merged_at": "2021-10-11T08:54:24Z"
   },
   "state": {
+    "tracked_prs": {
+      "869": {
+        "id": 754771538,
+        "updated_at": "2021-10-11T08:54:37Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/335952417/pulls/869/comments?per_page=100": {
+        "etag": "\"24849f438752c8c4e2339d6e6925a5231e0fdd90141ae1b3f61348eb9ece56b0\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/335952417/pulls/869/reviews?per_page=100": {
         "etag": "W/\"fb59b36a99c5b9f89134665d3e6683355d4c147fc055db77cc1406def5bae38b\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 754771538,
+    "author": {
+      "id": 1714486,
+      "login": "dlorenc",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-10-10T19:58:53Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "775971984",
+        "actor": {
+          "id": 3602792,
+          "login": "hectorj2f",
+          "type": "User"
+        },
+        "occurred_at": "2021-10-11T08:53:56Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "939543322",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-10-10T19:59:55Z"
+      }
+    ],
+    "review_comments": []
   }
 }
