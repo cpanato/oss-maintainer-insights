@@ -16,26 +16,76 @@
     "merged_at": "2021-09-22T05:07:09Z"
   },
   "state": {
+    "tracked_prs": {
+      "749": {
+        "id": 739991031,
+        "updated_at": "2021-09-22T14:40:12Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
-    "pages": {}
+    "pages": {
+      "/repositories/335952417/issues/749/comments?per_page=100": {
+        "etag": "\"aae55309e7f87abb7996cfa71a8959cedfec7b42fb9487f61d3d2e346f8dbb3d\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/749/comments?per_page=100": {
+        "etag": "\"aae55309e7f87abb7996cfa71a8959cedfec7b42fb9487f61d3d2e346f8dbb3d\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/749/reviews?per_page=100": {
+        "etag": "W/\"b747c78fcc701ea0c284d25330d72e5bd3dd8ec32f7e6654c0b7797e25583fea\"",
+        "next": "",
+        "value": [
+          {
+            "id": 760455678,
+            "user": {
+              "id": 1200829,
+              "login": "dekkagaijin",
+              "type": "User"
+            },
+            "submitted_at": "2021-09-22T05:07:03Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 739991031,
+    "author": {
+      "id": 2442466,
+      "login": "mattmoor",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-09-22T03:24:00Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "760455678",
+        "actor": {
+          "id": 1200829,
+          "login": "dekkagaijin",
+          "type": "User"
+        },
+        "occurred_at": "2021-09-22T05:07:03Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

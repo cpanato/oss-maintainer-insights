@@ -1,8 +1,8 @@
 {
-  "generation": 3,
-  "observed_at": "2026-10-19T05:19:34Z",
+  "generation": 4,
+  "observed_at": "2026-10-20T06:37:04Z",
   "pr": {
-    "updated_at": "2026-09-22T19:25:06Z",
+    "updated_at": "2026-10-20T06:21:41Z",
     "id": 4247770799,
     "number": 2933,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-08-10T19:45:52Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-20T06:21:41Z"
   },
   "state": {
     "tracked_prs": {
       "2933": {
         "id": 4247770799,
-        "updated_at": "2026-09-22T19:25:06Z",
-        "checked_at": "2026-10-19T05:19:34Z",
-        "state": "open"
+        "updated_at": "2026-10-20T06:21:41Z",
+        "checked_at": "2026-10-20T06:37:04Z",
+        "state": "closed"
       }
     },
     "repository_id": 272963353,
@@ -31,7 +31,7 @@
     "repository": "sigstore/rekor",
     "pages": {
       "/repositories/272963353/issues/2933/comments?per_page=100": {
-        "etag": "W/\"7c83149ed834d2d8891e8d529926beec5bb25fa611f427c978420e472e15cb66\"",
+        "etag": "W/\"7f25e5391b9c684a10ec85277d97c6946134e74d5910cf965b5c4d3f04f4ebea\"",
         "next": "",
         "value": [
           {
@@ -55,7 +55,7 @@
         ]
       },
       "/repositories/272963353/pulls/2933/comments?per_page=100": {
-        "etag": "W/\"04ba6073cd26431c78f038efd60bf8c0f6ff9ebae0014e5c6c91768c40f3f228\"",
+        "etag": "W/\"1ce1c2acc9b202f45eea9155deb56905a5eb18ec817052eda57f87f126807597\"",
         "next": "",
         "value": [
           {
@@ -95,6 +95,69 @@
             "created_at": "2026-08-18T18:29:02Z"
           },
           {
+            "id": 3812593295,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2026-08-19T11:37:12Z"
+          },
+          {
+            "id": 3812594711,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2026-08-19T11:37:26Z"
+          },
+          {
+            "id": 3812598094,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2026-08-19T11:38:00Z"
+          },
+          {
+            "id": 3812600496,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2026-08-19T11:38:25Z"
+          },
+          {
+            "id": 3812601696,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2026-08-19T11:38:38Z"
+          },
+          {
+            "id": 3812602964,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2026-08-19T11:38:51Z"
+          },
+          {
+            "id": 3812604190,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2026-08-19T11:39:03Z"
+          },
+          {
             "id": 4073849366,
             "user": {
               "id": 8418760,
@@ -106,7 +169,7 @@
         ]
       },
       "/repositories/272963353/pulls/2933/reviews?per_page=100": {
-        "etag": "W/\"f493d2fc6db323c5ec92f542e11c15eacf626402ea3d08dc382c1e44e7656b34\"",
+        "etag": "W/\"4beaed0d408c2b2984ecfc6d8d697792790d2ffc7c470e3d6410ce7ac5813cad\"",
         "next": "",
         "value": [
           {
@@ -148,6 +211,26 @@
             },
             "submitted_at": "2026-09-22T16:16:54Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 4971655892,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-20T03:44:45Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 5581433938,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-20T06:20:52Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -162,7 +245,7 @@
     },
     "created_at": "2026-08-10T19:45:52Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -208,6 +291,26 @@
         },
         "occurred_at": "2026-09-22T16:16:54Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "4971655892",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-20T03:44:45Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "5581433938",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-20T06:20:52Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -266,6 +369,69 @@
           "type": "User"
         },
         "occurred_at": "2026-08-18T18:29:02Z"
+      },
+      {
+        "id": "3812593295",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-19T11:37:12Z"
+      },
+      {
+        "id": "3812594711",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-19T11:37:26Z"
+      },
+      {
+        "id": "3812598094",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-19T11:38:00Z"
+      },
+      {
+        "id": "3812600496",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-19T11:38:25Z"
+      },
+      {
+        "id": "3812601696",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-19T11:38:38Z"
+      },
+      {
+        "id": "3812602964",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-19T11:38:51Z"
+      },
+      {
+        "id": "3812604190",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-08-19T11:39:03Z"
       },
       {
         "id": "4073849366",

@@ -1,0 +1,323 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-05-04T09:35:41Z",
+    "id": 3607266095,
+    "number": 138705,
+    "user": {
+      "id": 13677519,
+      "login": "bart0sh",
+      "type": "User"
+    },
+    "created_at": "2026-04-30T07:55:03Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-05-04T09:35:39Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "138705": {
+        "id": 3607266095,
+        "updated_at": "2026-05-04T09:35:41Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/138705/comments?per_page=100": {
+        "etag": "W/\"5d09f7e64902cc9363ca7cc7a9ad8920e65fb731abb86066cc3bc0a13169b6ad\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4350656864,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-04-30T07:55:06Z"
+          },
+          {
+            "id": 4350657417,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-04-30T07:55:12Z"
+          },
+          {
+            "id": 4350740995,
+            "user": {
+              "id": 13677519,
+              "login": "bart0sh",
+              "type": "User"
+            },
+            "created_at": "2026-04-30T08:09:49Z"
+          },
+          {
+            "id": 4351806410,
+            "user": {
+              "id": 13677519,
+              "login": "bart0sh",
+              "type": "User"
+            },
+            "created_at": "2026-04-30T10:49:18Z"
+          },
+          {
+            "id": 4360511765,
+            "user": {
+              "id": 13677519,
+              "login": "bart0sh",
+              "type": "User"
+            },
+            "created_at": "2026-05-01T16:57:33Z"
+          },
+          {
+            "id": 4369448912,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-04T08:40:41Z"
+          },
+          {
+            "id": 4369449776,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-04T08:40:50Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/138705/comments?per_page=100": {
+        "etag": "W/\"4b26e7ce4e063d00cbb4dab3ef87dfefa15ee7825742dcef587d1906bdd32d63\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3166712612,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-04-30T08:48:45Z"
+          },
+          {
+            "id": 3167217882,
+            "user": {
+              "id": 13677519,
+              "login": "bart0sh",
+              "type": "User"
+            },
+            "created_at": "2026-04-30T10:19:26Z"
+          },
+          {
+            "id": 3180315343,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2026-05-04T08:40:22Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/138705/reviews?per_page=100": {
+        "etag": "W/\"4bdef4ec9393cae28f4c403b008a94606f79f2b9684d13c6878ebc2a0ecc6477\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4203730051,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-30T08:48:45Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4204309485,
+            "user": {
+              "id": 13677519,
+              "login": "bart0sh",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-30T10:19:26Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 4218544691,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2026-05-04T08:40:35Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3607266095,
+    "author": {
+      "id": 13677519,
+      "login": "bart0sh",
+      "type": "User"
+    },
+    "created_at": "2026-04-30T07:55:03Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4203730051",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T08:48:45Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4204309485",
+        "actor": {
+          "id": 13677519,
+          "login": "bart0sh",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T10:19:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4218544691",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T08:40:35Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4350656864",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T07:55:06Z"
+      },
+      {
+        "id": "4350657417",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T07:55:12Z"
+      },
+      {
+        "id": "4350740995",
+        "actor": {
+          "id": 13677519,
+          "login": "bart0sh",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T08:09:49Z"
+      },
+      {
+        "id": "4351806410",
+        "actor": {
+          "id": 13677519,
+          "login": "bart0sh",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T10:49:18Z"
+      },
+      {
+        "id": "4360511765",
+        "actor": {
+          "id": 13677519,
+          "login": "bart0sh",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-01T16:57:33Z"
+      },
+      {
+        "id": "4369448912",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T08:40:41Z"
+      },
+      {
+        "id": "4369449776",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T08:40:50Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "3166712612",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T08:48:45Z"
+      },
+      {
+        "id": "3167217882",
+        "actor": {
+          "id": 13677519,
+          "login": "bart0sh",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-30T10:19:26Z"
+      },
+      {
+        "id": "3180315343",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-04T08:40:22Z"
+      }
+    ]
+  }
+}

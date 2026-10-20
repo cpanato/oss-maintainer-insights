@@ -16,12 +16,40 @@
     "merged_at": "2026-01-19T11:27:42Z"
   },
   "state": {
+    "tracked_prs": {
+      "26051": {
+        "id": 3187217261,
+        "updated_at": "2026-01-19T11:30:19Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/26051/comments?per_page=100": {
+        "etag": "W/\"cdb6de5a5a4afb98bcb07d5c95598c631d6413fbb6c2d228aec72473cdafac65\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3767597691,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-01-19T10:30:23Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/26051/comments?per_page=100": {
+        "etag": "\"aae55309e7f87abb7996cfa71a8959cedfec7b42fb9487f61d3d2e346f8dbb3d\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/26051/reviews?per_page=100": {
         "etag": "W/\"ecaf5029a73e9080211852ca50ee5ff7228a38f0433a96673c69be5065c2394a\"",
         "next": "",
@@ -41,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3187217261,
+    "author": {
+      "id": 6306304,
+      "login": "josemaia",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-01-19T10:30:18Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3677623613",
+        "actor": {
+          "id": 86051118,
+          "login": "nitishfy",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-19T11:27:35Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3767597691",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-01-19T10:30:23Z"
+      }
+    ],
+    "review_comments": []
   }
 }
