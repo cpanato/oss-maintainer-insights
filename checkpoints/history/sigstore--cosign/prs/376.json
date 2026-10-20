@@ -16,26 +16,96 @@
     "merged_at": "2021-06-17T20:35:59Z"
   },
   "state": {
+    "tracked_prs": {
+      "376": {
+        "id": 672934008,
+        "updated_at": "2021-06-18T06:26:49Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "sigstore/cosign",
-    "pages": {}
+    "pages": {
+      "/repositories/335952417/issues/376/comments?per_page=100": {
+        "etag": "W/\"83d244b6b8688d69d274c5f8bba180afa65a2d388b2e2fde327052ecb64f293f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 863547178,
+            "user": {
+              "id": 1714486,
+              "login": "dlorenc",
+              "type": "User"
+            },
+            "created_at": "2021-06-17T20:36:08Z"
+          }
+        ]
+      },
+      "/repositories/335952417/pulls/376/comments?per_page=100": {
+        "etag": "\"7592e669dd1881e79b50222d6674322afa37056ac4d3dfc22ebe78726e9b9dfc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/376/reviews?per_page=100": {
+        "etag": "W/\"2d526ac55a2cc931057c45a63c7457071cdfc39e6664025cbcc7065212883f0a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 686759579,
+            "user": {
+              "id": 1304826,
+              "login": "loosebazooka",
+              "type": "User"
+            },
+            "submitted_at": "2021-06-17T20:16:38Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 672934008,
+    "author": {
+      "id": 210737,
+      "login": "imjasonh",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-06-17T19:43:59Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "686759579",
+        "actor": {
+          "id": 1304826,
+          "login": "loosebazooka",
+          "type": "User"
+        },
+        "occurred_at": "2021-06-17T20:16:38Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "863547178",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-06-17T20:36:08Z"
+      }
+    ],
+    "review_comments": []
   }
 }

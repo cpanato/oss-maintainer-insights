@@ -16,12 +16,52 @@
     "merged_at": "2021-03-04T17:40:40Z"
   },
   "state": {
+    "tracked_prs": {
+      "3737": {
+        "id": 584978148,
+        "updated_at": "2021-03-04T17:53:51Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
     "pages": {
+      "/repositories/92313258/issues/3737/comments?per_page=100": {
+        "etag": "W/\"f23500f433d569238807f822ec27b643a998448f4bb4244208d6bbddd41de8a0\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 790783972,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2021-03-04T17:18:31Z"
+          },
+          {
+            "id": 790792731,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2021-03-04T17:30:24Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/3737/comments?per_page=100": {
+        "etag": "\"7592e669dd1881e79b50222d6674322afa37056ac4d3dfc22ebe78726e9b9dfc\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/92313258/pulls/3737/reviews?per_page=100": {
         "etag": "W/\"d24d519f5ebbd44e91b2e8c3ccd79ff5ba14d94c5cbba44ab40d7e2d0bd22357\"",
         "next": "",
@@ -44,18 +84,58 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 584978148,
+    "author": {
+      "id": 2195781,
+      "login": "maelvls",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-03-04T17:16:51Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "604366233",
+        "actor": {
+          "id": 333465,
+          "login": "jakexks",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-04T17:30:19Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "790783972",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-04T17:18:31Z"
+      },
+      {
+        "id": "790792731",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-04T17:30:24Z"
+      }
+    ],
+    "review_comments": []
   }
 }

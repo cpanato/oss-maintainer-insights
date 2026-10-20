@@ -16,6 +16,14 @@
     "merged_at": "2021-07-29T19:30:26Z"
   },
   "state": {
+    "tracked_prs": {
+      "784": {
+        "id": 699776094,
+        "updated_at": "2021-07-29T19:30:26Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -26,6 +34,48 @@
         "etag": "\"cbccb3b7234ea8f7449b7162b4302672b8cbaa4bc930b441180af0effa126679\"",
         "next": "",
         "value": []
+      },
+      "/repositories/302670797/pulls/784/comments?per_page=100": {
+        "etag": "W/\"0afd86adcbdfd48b04fcfa522fd82bf2f3fe537687a2f30d784d889c260a2961\"",
+        "next": "",
+        "value": [
+          {
+            "id": 679419657,
+            "user": {
+              "id": 8731250,
+              "login": "inferno-chromium",
+              "type": "User"
+            },
+            "created_at": "2021-07-29T19:12:58Z"
+          },
+          {
+            "id": 679419792,
+            "user": {
+              "id": 8731250,
+              "login": "inferno-chromium",
+              "type": "User"
+            },
+            "created_at": "2021-07-29T19:13:12Z"
+          },
+          {
+            "id": 679421459,
+            "user": {
+              "id": 64505099,
+              "login": "laurentsimon",
+              "type": "User"
+            },
+            "created_at": "2021-07-29T19:15:51Z"
+          },
+          {
+            "id": 679423363,
+            "user": {
+              "id": 64505099,
+              "login": "laurentsimon",
+              "type": "User"
+            },
+            "created_at": "2021-07-29T19:18:46Z"
+          }
+        ]
       },
       "/repositories/302670797/pulls/784/reviews?per_page=100": {
         "etag": "W/\"72b853a2eb6da7a3623e6320e0d136b7cd5332986d1d9c07999cc8134d5ec71a\"",
@@ -96,18 +146,120 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 699776094,
+    "author": {
+      "id": 64505099,
+      "login": "laurentsimon",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-07-29T19:09:41Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "718445404",
+        "actor": {
+          "id": 8731250,
+          "login": "inferno-chromium",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:12:39Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "718446110",
+        "actor": {
+          "id": 8731250,
+          "login": "inferno-chromium",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:12:59Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "718446284",
+        "actor": {
+          "id": 8731250,
+          "login": "inferno-chromium",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:13:12Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "718448443",
+        "actor": {
+          "id": 64505099,
+          "login": "laurentsimon",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:15:51Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "718450744",
+        "actor": {
+          "id": 64505099,
+          "login": "laurentsimon",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:18:46Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "718453256",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:22:01Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "679419657",
+        "actor": {
+          "id": 8731250,
+          "login": "inferno-chromium",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:12:58Z"
+      },
+      {
+        "id": "679419792",
+        "actor": {
+          "id": 8731250,
+          "login": "inferno-chromium",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:13:12Z"
+      },
+      {
+        "id": "679421459",
+        "actor": {
+          "id": 64505099,
+          "login": "laurentsimon",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:15:51Z"
+      },
+      {
+        "id": "679423363",
+        "actor": {
+          "id": 64505099,
+          "login": "laurentsimon",
+          "type": "User"
+        },
+        "occurred_at": "2021-07-29T19:18:46Z"
+      }
+    ]
   }
 }

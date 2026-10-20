@@ -1,0 +1,241 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-04-14T06:32:37Z",
+    "id": 3524525498,
+    "number": 138358,
+    "user": {
+      "id": 23304,
+      "login": "dims",
+      "type": "User"
+    },
+    "created_at": "2026-04-13T18:32:59Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-04-14T06:32:37Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "138358": {
+        "id": 3524525498,
+        "updated_at": "2026-04-14T06:32:37Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/138358/comments?per_page=100": {
+        "etag": "W/\"56334a0a0f351c63d43c00a9a3d1f64468760bc234e8bd00a1675ea2ed6cdebf\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4238726244,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-04-13T18:33:09Z"
+          },
+          {
+            "id": 4238779213,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-04-13T18:40:59Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 4239440171,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-04-13T20:33:20Z"
+          },
+          {
+            "id": 4239441114,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-04-13T20:33:29Z"
+          },
+          {
+            "id": 4241543365,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2026-04-14T05:44:48Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/138358/comments?per_page=100": {
+        "etag": "\"7592e669dd1881e79b50222d6674322afa37056ac4d3dfc22ebe78726e9b9dfc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/138358/reviews?per_page=100": {
+        "etag": "W/\"575a22adff2600bb0ad58f8d9c107b0a9c0d3c0b13730686290d01a267438467\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4101100038,
+            "user": {
+              "id": 1804568,
+              "login": "thaJeztah",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-13T18:40:43Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4101100665,
+            "user": {
+              "id": 737750,
+              "login": "samuelkarp",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-13T18:40:50Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4103058870,
+            "user": {
+              "id": 2050904,
+              "login": "Verolop",
+              "type": "User"
+            },
+            "submitted_at": "2026-04-14T02:50:54Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3524525498,
+    "author": {
+      "id": 23304,
+      "login": "dims",
+      "type": "User"
+    },
+    "created_at": "2026-04-13T18:32:59Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "4101100038",
+        "actor": {
+          "id": 1804568,
+          "login": "thaJeztah",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-13T18:40:43Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4101100665",
+        "actor": {
+          "id": 737750,
+          "login": "samuelkarp",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-13T18:40:50Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4103058870",
+        "actor": {
+          "id": 2050904,
+          "login": "Verolop",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-14T02:50:54Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4238726244",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-13T18:33:09Z"
+      },
+      {
+        "id": "4238779213",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-13T18:40:59Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "4239440171",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-13T20:33:20Z"
+      },
+      {
+        "id": "4239441114",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-13T20:33:29Z"
+      },
+      {
+        "id": "4241543365",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-14T05:44:48Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

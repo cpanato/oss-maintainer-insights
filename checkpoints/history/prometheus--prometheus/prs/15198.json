@@ -16,6 +16,14 @@
     "merged_at": "2024-10-24T05:38:58Z"
   },
   "state": {
+    "tracked_prs": {
+      "15198": {
+        "id": 2140121989,
+        "updated_at": "2024-10-24T05:39:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -43,6 +51,30 @@
               "type": "User"
             },
             "created_at": "2024-10-23T15:21:10Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/15198/comments?per_page=100": {
+        "etag": "W/\"17caadcf51fd94a6701d28f28b6dceac98eda2f755d91600f5d21b09a923f16e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1812205064,
+            "user": {
+              "id": 13435893,
+              "login": "krajorama",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T08:38:40Z"
+          },
+          {
+            "id": 1813079876,
+            "user": {
+              "id": 14011425,
+              "login": "Maniktherana",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T15:49:42Z"
           }
         ]
       },
@@ -85,18 +117,91 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2140121989,
+    "author": {
+      "id": 13435893,
+      "login": "krajorama",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-10-23T06:54:58Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2387758966",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T08:38:40Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389104305",
+        "actor": {
+          "id": 6950331,
+          "login": "bwplotka",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T15:02:24Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2389270993",
+        "actor": {
+          "id": 14011425,
+          "login": "Maniktherana",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T15:49:45Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2432022274",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T12:39:34Z"
+      },
+      {
+        "id": "2432603940",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T15:21:10Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1812205064",
+        "actor": {
+          "id": 13435893,
+          "login": "krajorama",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T08:38:40Z"
+      },
+      {
+        "id": "1813079876",
+        "actor": {
+          "id": 14011425,
+          "login": "Maniktherana",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T15:49:42Z"
+      }
+    ]
   }
 }
