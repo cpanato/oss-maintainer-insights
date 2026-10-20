@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "138665": {
+        "id": 3599921064,
+        "updated_at": "2026-04-29T14:54:21Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -100,6 +108,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/138665/comments?per_page=100": {
+        "etag": "\"247a66673911c035b1f065231caf5e2237ad51ee311a3006d87c4814d5613f1b\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/138665/reviews?per_page=100": {
         "etag": "\"aae55309e7f87abb7996cfa71a8959cedfec7b42fb9487f61d3d2e346f8dbb3d\"",
         "next": "",
@@ -108,18 +121,95 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3599921064,
+    "author": {
+      "id": 149338457,
+      "login": "myhearwillgoon",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-04-29T04:20:35Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "4340768314",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-29T04:20:38Z"
+      },
+      {
+        "id": "4340768418",
+        "actor": {
+          "id": 43480880,
+          "login": "linux-foundation-easycla[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-04-29T04:20:41Z"
+      },
+      {
+        "id": "4340768611",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-29T04:20:45Z"
+      },
+      {
+        "id": "4340768647",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-29T04:20:46Z"
+      },
+      {
+        "id": "4340769744",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-29T04:21:07Z"
+      },
+      {
+        "id": "4344896572",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-29T14:54:13Z"
+      },
+      {
+        "id": "4344897849",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-29T14:54:20Z"
+      },
+      {
+        "id": "4344897912",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-04-29T14:54:20Z"
+      }
+    ],
+    "review_comments": []
   }
 }

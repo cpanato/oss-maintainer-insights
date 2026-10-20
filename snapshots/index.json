@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-20T06:35:20Z",
+  "attempted_at": "2026-10-20T12:09:20Z",
   "entries": [
-    {
-      "repository": "cert-manager/cert-manager",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "argoproj/argo-cd",
       "status": "fresh",
@@ -39,27 +34,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "updated",
-      "requests": 428,
-      "progress": {
-        "population": {
-          "inspected_prs": 1900,
-          "human_authored_prs": 1775,
-          "bot_authored_prs": 0,
-          "draft_prs": 81,
-          "missing_author_prs": 2,
-          "outside_window_prs": 42,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-07-21T22:42:27.000Z",
-          "end": "2026-10-19T22:42:27.000Z"
-        },
-        "enumerated_prs": 1900,
-        "eligible_prs": 1775,
-        "covered_prs": 1775,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "prometheus/prometheus",
@@ -68,6 +44,11 @@
     },
     {
       "repository": "helm/helm",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "cert-manager/cert-manager",
       "status": "fresh",
       "requests": 0
     }
