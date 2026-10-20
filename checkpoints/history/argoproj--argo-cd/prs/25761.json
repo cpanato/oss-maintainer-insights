@@ -16,26 +16,114 @@
     "merged_at": "2025-12-21T09:09:02Z"
   },
   "state": {
+    "tracked_prs": {
+      "25761": {
+        "id": 3120208651,
+        "updated_at": "2025-12-21T09:11:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/25761/comments?per_page=100": {
+        "etag": "W/\"b9cd8e7ada79eb0f51a39899e32ae6441af96103b95e1f9de7b5ec38ac918584\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3678249540,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-21T00:37:07Z"
+          },
+          {
+            "id": 3678559581,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-21T07:43:51Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/25761/comments?per_page=100": {
+        "etag": "\"cbccb3b7234ea8f7449b7162b4302672b8cbaa4bc930b441180af0effa126679\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/25761/reviews?per_page=100": {
+        "etag": "W/\"c842b7d294a4fe8593a7456cc56d421eed1fd06b1eadefd113b61d737ea47147\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3601532804,
+            "user": {
+              "id": 19544836,
+              "login": "reggie-k",
+              "type": "User"
+            },
+            "submitted_at": "2025-12-21T06:16:52Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3120208651,
+    "author": {
+      "id": 41898282,
+      "login": "github-actions[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-12-21T00:37:01Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3601532804",
+        "actor": {
+          "id": 19544836,
+          "login": "reggie-k",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-21T06:16:52Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3678249540",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-12-21T00:37:07Z"
+      },
+      {
+        "id": "3678559581",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-12-21T07:43:51Z"
+      }
+    ],
+    "review_comments": []
   }
 }

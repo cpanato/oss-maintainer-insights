@@ -16,26 +16,246 @@
     "merged_at": "2021-05-21T17:30:26Z"
   },
   "state": {
+    "tracked_prs": {
+      "4009": {
+        "id": 645307989,
+        "updated_at": "2022-06-07T16:12:43Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
-    "pages": {}
+    "pages": {
+      "/repositories/92313258/issues/4009/comments?per_page=100": {
+        "etag": "W/\"0ccbb415a47d2cd4efe25326fca28c603c2f66eebfc3cd5ed44e91c2d4c89d9a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 841809783,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2021-05-16T12:20:28Z"
+          },
+          {
+            "id": 841809895,
+            "user": {
+              "id": 671944,
+              "login": "eddiehoffman",
+              "type": "User"
+            },
+            "created_at": "2021-05-16T12:21:29Z"
+          },
+          {
+            "id": 841810074,
+            "user": {
+              "id": 671944,
+              "login": "eddiehoffman",
+              "type": "User"
+            },
+            "created_at": "2021-05-16T12:23:45Z"
+          },
+          {
+            "id": 845854738,
+            "user": {
+              "id": 24879183,
+              "login": "irbekrm",
+              "type": "User"
+            },
+            "created_at": "2021-05-21T10:32:37Z"
+          },
+          {
+            "id": 846060297,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2021-05-21T16:00:09Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 846060330,
+            "user": {
+              "id": 24879183,
+              "login": "irbekrm",
+              "type": "User"
+            },
+            "created_at": "2021-05-21T16:00:12Z"
+          },
+          {
+            "id": 846105564,
+            "user": {
+              "id": 24879183,
+              "login": "irbekrm",
+              "type": "User"
+            },
+            "created_at": "2021-05-21T17:01:04Z"
+          },
+          {
+            "id": 846128749,
+            "user": {
+              "id": 671944,
+              "login": "eddiehoffman",
+              "type": "User"
+            },
+            "created_at": "2021-05-21T17:42:11Z"
+          },
+          {
+            "id": 1148878494,
+            "user": {
+              "id": 1868147,
+              "login": "JohnGalt1717",
+              "type": "User"
+            },
+            "created_at": "2022-06-07T16:12:43Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/4009/comments?per_page=100": {
+        "etag": "\"cbccb3b7234ea8f7449b7162b4302672b8cbaa4bc930b441180af0effa126679\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/4009/reviews?per_page=100": {
+        "etag": "W/\"1dba42913835e29f09d2eb72d52df411103b11296257fab757f44792b8cc4128\"",
+        "next": "",
+        "value": [
+          {
+            "id": 665626296,
+            "user": {
+              "id": 24879183,
+              "login": "irbekrm",
+              "type": "User"
+            },
+            "submitted_at": "2021-05-21T16:00:02Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 645307989,
+    "author": {
+      "id": 671944,
+      "login": "eddiehoffman",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-05-16T12:20:13Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "665626296",
+        "actor": {
+          "id": 24879183,
+          "login": "irbekrm",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-21T16:00:02Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "841809783",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-16T12:20:28Z"
+      },
+      {
+        "id": "841809895",
+        "actor": {
+          "id": 671944,
+          "login": "eddiehoffman",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-16T12:21:29Z"
+      },
+      {
+        "id": "841810074",
+        "actor": {
+          "id": 671944,
+          "login": "eddiehoffman",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-16T12:23:45Z"
+      },
+      {
+        "id": "845854738",
+        "actor": {
+          "id": 24879183,
+          "login": "irbekrm",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-21T10:32:37Z"
+      },
+      {
+        "id": "846060297",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-21T16:00:09Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "846060330",
+        "actor": {
+          "id": 24879183,
+          "login": "irbekrm",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-21T16:00:12Z"
+      },
+      {
+        "id": "846105564",
+        "actor": {
+          "id": 24879183,
+          "login": "irbekrm",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-21T17:01:04Z"
+      },
+      {
+        "id": "846128749",
+        "actor": {
+          "id": 671944,
+          "login": "eddiehoffman",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-21T17:42:11Z"
+      },
+      {
+        "id": "1148878494",
+        "actor": {
+          "id": 1868147,
+          "login": "JohnGalt1717",
+          "type": "User"
+        },
+        "occurred_at": "2022-06-07T16:12:43Z"
+      }
+    ],
+    "review_comments": []
   }
 }

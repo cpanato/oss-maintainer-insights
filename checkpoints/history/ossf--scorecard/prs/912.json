@@ -16,12 +16,49 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "912": {
+        "id": 719968193,
+        "updated_at": "2021-08-25T20:50:47Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
     "pages": {
+      "/repositories/302670797/issues/912/comments?per_page=100": {
+        "etag": "W/\"7d56a7525d6a61ee63eb821852616a3c41977eeba555b0950389cf2b0f70be87\"",
+        "next": "",
+        "value": [
+          {
+            "id": 905836705,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-08-25T20:06:32Z"
+          },
+          {
+            "id": 905845013,
+            "user": {
+              "id": 4825078,
+              "login": "azeemshaikh38",
+              "type": "User"
+            },
+            "created_at": "2021-08-25T20:19:02Z"
+          }
+        ]
+      },
+      "/repositories/302670797/pulls/912/comments?per_page=100": {
+        "etag": "\"cbccb3b7234ea8f7449b7162b4302672b8cbaa4bc930b441180af0effa126679\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/302670797/pulls/912/reviews?per_page=100": {
         "etag": "\"247a66673911c035b1f065231caf5e2237ad51ee311a3006d87c4814d5613f1b\"",
         "next": "",
@@ -30,18 +67,41 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 719968193,
+    "author": {
+      "id": 4825078,
+      "login": "azeemshaikh38",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-08-25T20:03:31Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "905836705",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-08-25T20:06:32Z"
+      },
+      {
+        "id": "905845013",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-25T20:19:02Z"
+      }
+    ],
+    "review_comments": []
   }
 }
