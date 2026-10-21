@@ -16,6 +16,14 @@
     "merged_at": "2021-03-19T01:06:42Z"
   },
   "state": {
+    "tracked_prs": {
+      "105": {
+        "id": 596064254,
+        "updated_at": "2021-03-23T01:00:23Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 335952417,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -24,6 +32,11 @@
     "pages": {
       "/repositories/335952417/issues/105/comments?per_page=100": {
         "etag": "\"94a98e2399fc19a96543f2a48aeb0793f1e79144b927f0f7bf57c818b6cb67fc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/335952417/pulls/105/comments?per_page=100": {
+        "etag": "\"f5e47e7cc9aee95dc1415cc609808ad44417a488db6caf9a86e8678ab969f979\"",
         "next": "",
         "value": []
       },
@@ -46,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 596064254,
+    "author": {
+      "id": 3596535,
+      "login": "font",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-03-19T00:37:01Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "615988340",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-19T01:06:37Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

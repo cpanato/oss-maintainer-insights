@@ -16,12 +16,77 @@
     "merged_at": "2021-05-24T21:37:27Z"
   },
   "state": {
+    "tracked_prs": {
+      "500": {
+        "id": 651611621,
+        "updated_at": "2021-05-24T21:37:28Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
     "pages": {
+      "/repositories/302670797/issues/500/comments?per_page=100": {
+        "etag": "W/\"bbf5405c4feb277812fa0d54c3bab49436f41d3652099e8fc3281b8933cc511c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 847339163,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-05-24T21:15:32Z"
+          },
+          {
+            "id": 847339404,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-05-24T21:15:55Z"
+          },
+          {
+            "id": 847341543,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-05-24T21:18:23Z"
+          }
+        ]
+      },
+      "/repositories/302670797/pulls/500/comments?per_page=100": {
+        "etag": "W/\"1082ac67174ad1bb41923872a24ce190a05eaf14a17ba073f04104dcf01fecb4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 638259635,
+            "user": {
+              "id": 8731250,
+              "login": "inferno-chromium",
+              "type": "User"
+            },
+            "created_at": "2021-05-24T20:44:39Z"
+          },
+          {
+            "id": 638266093,
+            "user": {
+              "id": 4825078,
+              "login": "azeemshaikh38",
+              "type": "User"
+            },
+            "created_at": "2021-05-24T20:57:26Z"
+          }
+        ]
+      },
       "/repositories/302670797/pulls/500/reviews?per_page=100": {
         "etag": "W/\"4bc629c5d44f26c2da438743fab3c4dfea527337c36dec3fa61213ad12aafcb1\"",
         "next": "",
@@ -51,18 +116,90 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 651611621,
+    "author": {
+      "id": 4825078,
+      "login": "azeemshaikh38",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-05-24T20:42:30Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "667153877",
+        "actor": {
+          "id": 8731250,
+          "login": "inferno-chromium",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-24T20:44:46Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "667162081",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-24T20:57:26Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "847339163",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-05-24T21:15:32Z"
+      },
+      {
+        "id": "847339404",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-05-24T21:15:55Z"
+      },
+      {
+        "id": "847341543",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-05-24T21:18:23Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "638259635",
+        "actor": {
+          "id": 8731250,
+          "login": "inferno-chromium",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-24T20:44:39Z"
+      },
+      {
+        "id": "638266093",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-05-24T20:57:26Z"
+      }
+    ]
   }
 }

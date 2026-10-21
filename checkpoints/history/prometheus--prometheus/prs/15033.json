@@ -16,6 +16,14 @@
     "merged_at": "2024-10-12T08:38:58Z"
   },
   "state": {
+    "tracked_prs": {
+      "15033": {
+        "id": 2102441053,
+        "updated_at": "2024-10-12T08:38:59Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -24,6 +32,11 @@
     "pages": {
       "/repositories/6838921/issues/15033/comments?per_page=100": {
         "etag": "\"7592e669dd1881e79b50222d6674322afa37056ac4d3dfc22ebe78726e9b9dfc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/15033/comments?per_page=100": {
+        "etag": "\"f5e47e7cc9aee95dc1415cc609808ad44417a488db6caf9a86e8678ab969f979\"",
         "next": "",
         "value": []
       },
@@ -46,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2102441053,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-10-01T23:17:17Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2363832714",
+        "actor": {
+          "id": 281303,
+          "login": "aknuds1",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-12T08:38:52Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

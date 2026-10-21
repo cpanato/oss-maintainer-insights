@@ -16,12 +16,62 @@
     "merged_at": "2020-10-28T14:39:12Z"
   },
   "state": {
+    "tracked_prs": {
+      "3418": {
+        "id": 511582056,
+        "updated_at": "2020-10-28T14:39:13Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
     "pages": {
+      "/repositories/92313258/issues/3418/comments?per_page=100": {
+        "etag": "W/\"f2e844f99ac177c644b52bbea22e04ef206963ae3eef2280aa8fbe3914080b28\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 717968218,
+            "user": {
+              "id": 1625272,
+              "login": "meyskens",
+              "type": "User"
+            },
+            "created_at": "2020-10-28T14:24:43Z"
+          },
+          {
+            "id": 717968285,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2020-10-28T14:24:50Z"
+          },
+          {
+            "id": 717968860,
+            "user": {
+              "id": 1625272,
+              "login": "meyskens",
+              "type": "User"
+            },
+            "created_at": "2020-10-28T14:25:40Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/3418/comments?per_page=100": {
+        "etag": "\"f5e47e7cc9aee95dc1415cc609808ad44417a488db6caf9a86e8678ab969f979\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/92313258/pulls/3418/reviews?per_page=100": {
         "etag": "\"7592e669dd1881e79b50222d6674322afa37056ac4d3dfc22ebe78726e9b9dfc\"",
         "next": "",
@@ -30,18 +80,54 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 511582056,
+    "author": {
+      "id": 32282838,
+      "login": "jetstack-bot",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-10-28T14:16:36Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "717968218",
+        "actor": {
+          "id": 1625272,
+          "login": "meyskens",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-28T14:24:43Z"
+      },
+      {
+        "id": "717968285",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-28T14:24:50Z"
+      },
+      {
+        "id": "717968860",
+        "actor": {
+          "id": 1625272,
+          "login": "meyskens",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-28T14:25:40Z"
+      }
+    ],
+    "review_comments": []
   }
 }
