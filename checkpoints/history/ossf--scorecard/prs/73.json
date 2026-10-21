@@ -16,12 +16,30 @@
     "merged_at": "2020-11-16T17:30:31Z"
   },
   "state": {
+    "tracked_prs": {
+      "73": {
+        "id": 521817340,
+        "updated_at": "2022-01-14T22:51:44Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
     "pages": {
+      "/repositories/302670797/issues/73/comments?per_page=100": {
+        "etag": "\"c8853bffb3a14663f1178cf5e78f02ded4d9e8750c1664209294375d69218898\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/302670797/pulls/73/comments?per_page=100": {
+        "etag": "\"c8853bffb3a14663f1178cf5e78f02ded4d9e8750c1664209294375d69218898\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/302670797/pulls/73/reviews?per_page=100": {
         "etag": "W/\"d329bf8b3819ac5b01ee1777fca4bd3d9f037ecd10c50f46b6102df8b941bdef\"",
         "next": "",
@@ -41,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 521817340,
+    "author": {
+      "id": 8731250,
+      "login": "inferno-chromium",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-11-16T17:29:04Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "531547440",
+        "actor": {
+          "id": 1714486,
+          "login": "dlorenc",
+          "type": "User"
+        },
+        "occurred_at": "2020-11-16T17:29:56Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

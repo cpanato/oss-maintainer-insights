@@ -16,6 +16,14 @@
     "merged_at": "2026-03-16T18:07:56Z"
   },
   "state": {
+    "tracked_prs": {
+      "137775": {
+        "id": 3404748028,
+        "updated_at": "2026-03-16T18:07:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -85,6 +93,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/137775/comments?per_page=100": {
+        "etag": "\"c8853bffb3a14663f1178cf5e78f02ded4d9e8750c1664209294375d69218898\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/137775/reviews?per_page=100": {
         "etag": "\"78f3589675335c9db031dabb77e469d6a6382b07d3330024329eb12c71e0912f\"",
         "next": "",
@@ -93,18 +106,80 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3404748028,
+    "author": {
+      "id": 87243939,
+      "login": "macsko",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-03-16T14:23:29Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "4068037672",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-16T14:23:40Z"
+      },
+      {
+        "id": "4068039433",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-16T14:23:52Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4068061388",
+        "actor": {
+          "id": 22770898,
+          "login": "tosi3k",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-16T14:26:59Z"
+      },
+      {
+        "id": "4068062525",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-16T14:27:09Z"
+      },
+      {
+        "id": "4068621415",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-16T15:42:38Z"
+      },
+      {
+        "id": "4068728382",
+        "actor": {
+          "id": 12624707,
+          "login": "pravk03",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-16T15:56:47Z"
+      }
+    ],
+    "review_comments": []
   }
 }
