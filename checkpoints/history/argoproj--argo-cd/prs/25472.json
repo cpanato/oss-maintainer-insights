@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "25472": {
+        "id": 3063145559,
+        "updated_at": "2025-12-02T16:01:32Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/25472/comments?per_page=100": {
+        "etag": "\"94a98e2399fc19a96543f2a48aeb0793f1e79144b927f0f7bf57c818b6cb67fc\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/25472/reviews?per_page=100": {
         "etag": "\"7592e669dd1881e79b50222d6674322afa37056ac4d3dfc22ebe78726e9b9dfc\"",
         "next": "",
@@ -45,18 +58,32 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3063145559,
+    "author": {
+      "id": 12843753,
+      "login": "ylmrx",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-12-02T11:24:07Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "3601545280",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-12-02T11:24:12Z"
+      }
+    ],
+    "review_comments": []
   }
 }
