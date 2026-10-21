@@ -1,8 +1,8 @@
 {
-  "generation": 2,
-  "observed_at": "2026-10-14T15:12:29Z",
+  "generation": 3,
+  "observed_at": "2026-10-21T22:43:44Z",
   "pr": {
-    "updated_at": "2026-10-13T23:10:53Z",
+    "updated_at": "2026-10-18T23:08:35Z",
     "id": 4850641722,
     "number": 5324,
     "user": {
@@ -19,8 +19,8 @@
     "tracked_prs": {
       "5324": {
         "id": 4850641722,
-        "updated_at": "2026-10-13T23:10:53Z",
-        "checked_at": "2026-10-14T15:12:29Z",
+        "updated_at": "2026-10-18T23:08:35Z",
+        "checked_at": "2026-10-21T22:43:44Z",
         "state": "open"
       }
     },
@@ -31,19 +31,40 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/5324/comments?per_page=100": {
-        "etag": "\"7ca5b01e2cd0f50f296e5a93227a71b942c1916554ce60d6ba2c3406de7949f8\"",
+        "etag": "W/\"f0b992d437d269bfcf913247eca05cd190c77f6dd5e49ae4548ad6505e0fe7dc\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6246175583,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-18T05:38:24Z"
+          }
+        ]
       },
       "/repositories/302670797/pulls/5324/comments?per_page=100": {
-        "etag": "\"7ca5b01e2cd0f50f296e5a93227a71b942c1916554ce60d6ba2c3406de7949f8\"",
+        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
         "next": "",
         "value": []
       },
       "/repositories/302670797/pulls/5324/reviews?per_page=100": {
-        "etag": "\"7ca5b01e2cd0f50f296e5a93227a71b942c1916554ce60d6ba2c3406de7949f8\"",
+        "etag": "W/\"32e2d1d2ad4c1726464d1b6ee6d8049847937c90739569e4bf3a8f271f39d4c8\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5561600821,
+            "user": {
+              "id": 1358764,
+              "login": "JamieMagee",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-18T05:33:11Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -62,8 +83,29 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
-    "issue_comments": [],
+    "reviews": [
+      {
+        "id": "5561600821",
+        "actor": {
+          "id": 1358764,
+          "login": "JamieMagee",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-18T05:33:11Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6246175583",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-18T05:38:24Z"
+      }
+    ],
     "review_comments": []
   }
 }

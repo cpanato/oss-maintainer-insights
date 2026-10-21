@@ -1,8 +1,8 @@
 {
-  "generation": 8,
-  "observed_at": "2026-10-20T20:52:39Z",
+  "generation": 9,
+  "observed_at": "2026-10-21T22:43:44Z",
   "pr": {
-    "updated_at": "2026-09-30T01:54:45Z",
+    "updated_at": "2026-10-21T01:47:47Z",
     "id": 4579823729,
     "number": 895,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-09-19T18:37:26Z",
     "draft": false,
-    "state": "open",
+    "state": "closed",
     "merged_at": null
   },
   "state": {
     "tracked_prs": {
       "895": {
         "id": 4579823729,
-        "updated_at": "2026-09-30T01:54:45Z",
-        "checked_at": "2026-10-20T20:52:39Z",
-        "state": "open"
+        "updated_at": "2026-10-21T01:47:47Z",
+        "checked_at": "2026-10-21T22:43:44Z",
+        "state": "closed"
       }
     },
     "repository_id": 370773729,
@@ -31,7 +31,7 @@
     "repository": "ossf/allstar",
     "pages": {
       "/repositories/370773729/issues/895/comments?per_page=100": {
-        "etag": "W/\"64f24769d7c8987e6df94a8e5d53f155f32b3eda7e58d20ba24399b5ba680ee0\"",
+        "etag": "W/\"0968723de7af9171c3762ecbeee946485491b97cc8e4996cbc667c1d5f0750b8\"",
         "next": "",
         "value": [
           {
@@ -42,16 +42,25 @@
               "type": "Bot"
             },
             "created_at": "2026-09-30T01:54:44Z"
+          },
+          {
+            "id": 6305984948,
+            "user": {
+              "id": 49699333,
+              "login": "dependabot[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-21T01:47:38Z"
           }
         ]
       },
       "/repositories/370773729/pulls/895/comments?per_page=100": {
-        "etag": "\"7592e669dd1881e79b50222d6674322afa37056ac4d3dfc22ebe78726e9b9dfc\"",
+        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
         "next": "",
         "value": []
       },
       "/repositories/370773729/pulls/895/reviews?per_page=100": {
-        "etag": "\"7592e669dd1881e79b50222d6674322afa37056ac4d3dfc22ebe78726e9b9dfc\"",
+        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
         "next": "",
         "value": []
       }
@@ -66,7 +75,7 @@
     },
     "created_at": "2026-09-19T18:37:26Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "closed_unmerged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -82,6 +91,15 @@
           "type": "Bot"
         },
         "occurred_at": "2026-09-30T01:54:44Z"
+      },
+      {
+        "id": "6305984948",
+        "actor": {
+          "id": 49699333,
+          "login": "dependabot[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-21T01:47:38Z"
       }
     ],
     "review_comments": []
