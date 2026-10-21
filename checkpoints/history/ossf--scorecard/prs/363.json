@@ -16,6 +16,14 @@
     "merged_at": "2021-04-26T15:06:14Z"
   },
   "state": {
+    "tracked_prs": {
+      "363": {
+        "id": 623371923,
+        "updated_at": "2021-04-26T15:12:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -55,6 +63,11 @@
           }
         ]
       },
+      "/repositories/302670797/pulls/363/comments?per_page=100": {
+        "etag": "\"d5c9d65a976178c53d234ec661681c56a5017b3448c7775fb79eacaec608f836\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/302670797/pulls/363/reviews?per_page=100": {
         "etag": "W/\"fdefde9c1128ec9e58d2a4074a3c88fc0647eb5d1324618313a1754c0e780b11\"",
         "next": "",
@@ -74,18 +87,61 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 623371923,
+    "author": {
+      "id": 172697,
+      "login": "naveensrinivasan",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-04-26T14:13:02Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "644780249",
+        "actor": {
+          "id": 4825078,
+          "login": "azeemshaikh38",
+          "type": "User"
+        },
+        "occurred_at": "2021-04-26T14:59:31Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "826873408",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-04-26T14:19:00Z"
+      },
+      {
+        "id": "826878209",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-04-26T14:25:24Z"
+      },
+      {
+        "id": "826919152",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-04-26T15:12:32Z"
+      }
+    ],
+    "review_comments": []
   }
 }

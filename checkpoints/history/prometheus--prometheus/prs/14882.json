@@ -16,26 +16,76 @@
     "merged_at": "2024-09-10T10:54:00Z"
   },
   "state": {
+    "tracked_prs": {
+      "14882": {
+        "id": 2061559462,
+        "updated_at": "2024-09-10T10:54:02Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
-    "pages": {}
+    "pages": {
+      "/repositories/6838921/issues/14882/comments?per_page=100": {
+        "etag": "\"d5c9d65a976178c53d234ec661681c56a5017b3448c7775fb79eacaec608f836\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/14882/comments?per_page=100": {
+        "etag": "\"d5c9d65a976178c53d234ec661681c56a5017b3448c7775fb79eacaec608f836\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/14882/reviews?per_page=100": {
+        "etag": "W/\"495d126ae4f80735c761c4f4187c954e23b2a003b8b082fb24b84c47cd87d681\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2291833129,
+            "user": {
+              "id": 291750,
+              "login": "roidelapluie",
+              "type": "User"
+            },
+            "submitted_at": "2024-09-10T09:03:07Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2061559462,
+    "author": {
+      "id": 538008,
+      "login": "juliusv",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-09-09T16:56:53Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2291833129",
+        "actor": {
+          "id": 291750,
+          "login": "roidelapluie",
+          "type": "User"
+        },
+        "occurred_at": "2024-09-10T09:03:07Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

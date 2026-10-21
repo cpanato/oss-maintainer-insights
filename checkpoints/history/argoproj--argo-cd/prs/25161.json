@@ -16,12 +16,30 @@
     "merged_at": "2025-11-04T14:56:45Z"
   },
   "state": {
+    "tracked_prs": {
+      "25161": {
+        "id": 2976934948,
+        "updated_at": "2025-11-04T14:56:47Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/25161/comments?per_page=100": {
+        "etag": "\"d5c9d65a976178c53d234ec661681c56a5017b3448c7775fb79eacaec608f836\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/25161/comments?per_page=100": {
+        "etag": "\"d5c9d65a976178c53d234ec661681c56a5017b3448c7775fb79eacaec608f836\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/25161/reviews?per_page=100": {
         "etag": "W/\"d52dbe3d1e65e3b077cbbd2f18819f083da42f6a74a4f384e553fb527874af61\"",
         "next": "",
@@ -41,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2976934948,
+    "author": {
+      "id": 41898282,
+      "login": "github-actions[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-11-04T14:53:15Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3416910993",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-04T14:56:40Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }
