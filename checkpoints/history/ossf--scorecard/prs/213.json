@@ -16,26 +16,96 @@
     "merged_at": "2021-02-23T15:34:12Z"
   },
   "state": {
+    "tracked_prs": {
+      "213": {
+        "id": 578498524,
+        "updated_at": "2021-02-23T15:36:16Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 302670797,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "ossf/scorecard",
-    "pages": {}
+    "pages": {
+      "/repositories/302670797/issues/213/comments?per_page=100": {
+        "etag": "W/\"eec870bc10ee5b4dcf8a2e2acb0c3c9d3e2661de87cc69d7a0b76281016fe426\"",
+        "next": "",
+        "value": [
+          {
+            "id": 784248253,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-02-23T14:38:59Z"
+          }
+        ]
+      },
+      "/repositories/302670797/pulls/213/comments?per_page=100": {
+        "etag": "\"78f3589675335c9db031dabb77e469d6a6382b07d3330024329eb12c71e0912f\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/302670797/pulls/213/reviews?per_page=100": {
+        "etag": "W/\"743b45403285b7bad7b5927611bf9480701d112b23a626c8a9e29642c2303cd6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 596471032,
+            "user": {
+              "id": 8731250,
+              "login": "inferno-chromium",
+              "type": "User"
+            },
+            "submitted_at": "2021-02-23T15:34:07Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 578498524,
+    "author": {
+      "id": 172697,
+      "login": "naveensrinivasan",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-02-23T14:35:10Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "596471032",
+        "actor": {
+          "id": 8731250,
+          "login": "inferno-chromium",
+          "type": "User"
+        },
+        "occurred_at": "2021-02-23T15:34:07Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "784248253",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-02-23T14:38:59Z"
+      }
+    ],
+    "review_comments": []
   }
 }
