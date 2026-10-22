@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-22T18:47:36Z",
+  "attempted_at": "2026-10-22T22:45:11Z",
   "entries": [
-    {
-      "repository": "sigstore/rekor",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "ossf/scorecard",
       "status": "fresh",
@@ -43,33 +38,14 @@
         },
         "enumerated_prs": 1900,
         "eligible_prs": 1792,
-        "covered_prs": 1030,
+        "covered_prs": 1330,
         "enumeration_complete": true
       }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "updated",
-      "requests": 263,
-      "progress": {
-        "population": {
-          "inspected_prs": 800,
-          "human_authored_prs": 543,
-          "bot_authored_prs": 188,
-          "draft_prs": 55,
-          "missing_author_prs": 0,
-          "outside_window_prs": 14,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-07-24T08:13:34.000Z",
-          "end": "2026-10-22T08:13:34.000Z"
-        },
-        "enumerated_prs": 800,
-        "eligible_prs": 731,
-        "covered_prs": 731,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "helm/helm",
@@ -78,33 +54,13 @@
     },
     {
       "repository": "cert-manager/cert-manager",
-      "status": "updated",
-      "requests": 156,
-      "progress": {
-        "population": {
-          "inspected_prs": 400,
-          "human_authored_prs": 187,
-          "bot_authored_prs": 163,
-          "draft_prs": 11,
-          "missing_author_prs": 0,
-          "outside_window_prs": 36,
-          "after_observation_prs": 3
-        },
-        "window": {
-          "start": "2026-07-24T08:20:29.000Z",
-          "end": "2026-10-22T08:20:29.000Z"
-        },
-        "enumerated_prs": 400,
-        "eligible_prs": 350,
-        "covered_prs": 350,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "argoproj/argo-cd",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 355,
       "progress": {
         "population": {
           "inspected_prs": 1200,
@@ -121,12 +77,17 @@
         },
         "enumerated_prs": 1200,
         "eligible_prs": 1081,
-        "covered_prs": 963,
+        "covered_prs": 1081,
         "enumeration_complete": true
       }
     },
     {
       "repository": "argoproj/argo-helm",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "sigstore/rekor",
       "status": "fresh",
       "requests": 0
     }

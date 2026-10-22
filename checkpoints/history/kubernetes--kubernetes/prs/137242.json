@@ -16,26 +16,296 @@
     "merged_at": "2026-03-02T21:19:03Z"
   },
   "state": {
+    "tracked_prs": {
+      "137242": {
+        "id": 3325749638,
+        "updated_at": "2026-03-03T07:35:25Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
-    "pages": {}
+    "pages": {
+      "/repositories/20580498/issues/137242/comments?per_page=100": {
+        "etag": "W/\"3b5906918ac0fa6c0e0c9713e54bf699932ef10fa6765855fd87b0c36d61f929\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3960277701,
+            "user": {
+              "id": 17496418,
+              "login": "tico88612",
+              "type": "User"
+            },
+            "created_at": "2026-02-25T15:56:38Z"
+          },
+          {
+            "id": 3963107271,
+            "user": {
+              "id": 17496418,
+              "login": "tico88612",
+              "type": "User"
+            },
+            "created_at": "2026-02-26T00:30:40Z"
+          },
+          {
+            "id": 3973630146,
+            "user": {
+              "id": 26771552,
+              "login": "richabanker",
+              "type": "User"
+            },
+            "created_at": "2026-02-27T15:41:19Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3986447231,
+            "user": {
+              "id": 22327577,
+              "login": "dgrisonnet",
+              "type": "User"
+            },
+            "created_at": "2026-03-02T19:34:37Z"
+          },
+          {
+            "id": 3986447774,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-03-02T19:34:44Z"
+          },
+          {
+            "id": 3986455761,
+            "user": {
+              "id": 22327577,
+              "login": "dgrisonnet",
+              "type": "User"
+            },
+            "created_at": "2026-03-02T19:36:24Z"
+          },
+          {
+            "id": 3986751436,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-03-02T20:29:55Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/137242/comments?per_page=100": {
+        "etag": "W/\"55e0b2a24e1438d1767048c3e81e2cdb37410fb11618967ed689020197c2084c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2864984019,
+            "user": {
+              "id": 22327577,
+              "login": "dgrisonnet",
+              "type": "User"
+            },
+            "created_at": "2026-02-27T15:48:34Z"
+          },
+          {
+            "id": 2865045269,
+            "user": {
+              "id": 17496418,
+              "login": "tico88612",
+              "type": "User"
+            },
+            "created_at": "2026-02-27T16:02:36Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/137242/reviews?per_page=100": {
+        "etag": "W/\"4c0b6b582be7f18f229c95b62ad13a373379c5a81fbe116c87bea3331cb5eab0\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3867668178,
+            "user": {
+              "id": 22327577,
+              "login": "dgrisonnet",
+              "type": "User"
+            },
+            "submitted_at": "2026-02-27T15:48:34Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3867740642,
+            "user": {
+              "id": 17496418,
+              "login": "tico88612",
+              "type": "User"
+            },
+            "submitted_at": "2026-02-27T16:02:36Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 3878536890,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-02T20:29:42Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3325749638,
+    "author": {
+      "id": 17496418,
+      "login": "tico88612",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-02-25T13:24:38Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3867668178",
+        "actor": {
+          "id": 22327577,
+          "login": "dgrisonnet",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T15:48:34Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3867740642",
+        "actor": {
+          "id": 17496418,
+          "login": "tico88612",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T16:02:36Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "3878536890",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-02T20:29:42Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3960277701",
+        "actor": {
+          "id": 17496418,
+          "login": "tico88612",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-25T15:56:38Z"
+      },
+      {
+        "id": "3963107271",
+        "actor": {
+          "id": 17496418,
+          "login": "tico88612",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-26T00:30:40Z"
+      },
+      {
+        "id": "3973630146",
+        "actor": {
+          "id": 26771552,
+          "login": "richabanker",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T15:41:19Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3986447231",
+        "actor": {
+          "id": 22327577,
+          "login": "dgrisonnet",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-02T19:34:37Z"
+      },
+      {
+        "id": "3986447774",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-02T19:34:44Z"
+      },
+      {
+        "id": "3986455761",
+        "actor": {
+          "id": 22327577,
+          "login": "dgrisonnet",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-02T19:36:24Z"
+      },
+      {
+        "id": "3986751436",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-02T20:29:55Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2864984019",
+        "actor": {
+          "id": 22327577,
+          "login": "dgrisonnet",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T15:48:34Z"
+      },
+      {
+        "id": "2865045269",
+        "actor": {
+          "id": 17496418,
+          "login": "tico88612",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-27T16:02:36Z"
+      }
+    ]
   }
 }

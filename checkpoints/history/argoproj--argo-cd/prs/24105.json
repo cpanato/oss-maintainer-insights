@@ -16,12 +16,76 @@
     "merged_at": "2025-10-21T02:52:33Z"
   },
   "state": {
+    "tracked_prs": {
+      "24105": {
+        "id": 2735779514,
+        "updated_at": "2025-10-21T02:53:06Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/24105/comments?per_page=100": {
+        "etag": "W/\"3e5694c697fcb8c73c0ede4d03dba3ce7e2f950019072d915de6d28f8ed01205\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3175160281,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-08-11T14:37:35Z"
+          },
+          {
+            "id": 3286112623,
+            "user": {
+              "id": 47184027,
+              "login": "agaudreault",
+              "type": "User"
+            },
+            "created_at": "2025-09-12T17:03:19Z"
+          },
+          {
+            "id": 3359520199,
+            "user": {
+              "id": 3214988,
+              "login": "kwentine",
+              "type": "User"
+            },
+            "created_at": "2025-10-02T07:13:35Z"
+          },
+          {
+            "id": 3371935047,
+            "user": {
+              "id": 47184027,
+              "login": "agaudreault",
+              "type": "User"
+            },
+            "created_at": "2025-10-06T14:20:31Z"
+          },
+          {
+            "id": 3393109901,
+            "user": {
+              "id": 3214988,
+              "login": "kwentine",
+              "type": "User"
+            },
+            "created_at": "2025-10-11T09:28:49Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/24105/comments?per_page=100": {
+        "etag": "\"9b578cbc897b1fe334506a58395aca8f6253265fa2bd438be179102fc4c39bf7\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/24105/reviews?per_page=100": {
         "etag": "W/\"8fc09ce9b7877c2cd2af741cc4778759b7dd2551ba7b09345b752488bd4a148a\"",
         "next": "",
@@ -51,18 +115,89 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2735779514,
+    "author": {
+      "id": 3214988,
+      "login": "kwentine",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-08-11T14:37:30Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3217891956",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-12T17:02:00Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "3358586204",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-21T02:52:23Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3175160281",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-08-11T14:37:35Z"
+      },
+      {
+        "id": "3286112623",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-12T17:03:19Z"
+      },
+      {
+        "id": "3359520199",
+        "actor": {
+          "id": 3214988,
+          "login": "kwentine",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-02T07:13:35Z"
+      },
+      {
+        "id": "3371935047",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-06T14:20:31Z"
+      },
+      {
+        "id": "3393109901",
+        "actor": {
+          "id": 3214988,
+          "login": "kwentine",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-11T09:28:49Z"
+      }
+    ],
+    "review_comments": []
   }
 }

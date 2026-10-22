@@ -1,8 +1,8 @@
 {
-  "generation": 2,
-  "observed_at": "2026-10-14T15:12:29Z",
+  "generation": 4,
+  "observed_at": "2026-10-22T14:24:37Z",
   "pr": {
-    "updated_at": "2026-08-27T13:49:43Z",
+    "updated_at": "2026-10-21T18:37:46Z",
     "id": 3294567375,
     "number": 4705,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-02-17T14:19:54Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-21T18:37:46Z"
   },
   "state": {
     "tracked_prs": {
       "4705": {
         "id": 3294567375,
-        "updated_at": "2026-08-27T13:49:43Z",
-        "checked_at": "2026-10-14T15:12:29Z",
-        "state": "open"
+        "updated_at": "2026-10-21T18:37:46Z",
+        "checked_at": "2026-10-22T14:24:37Z",
+        "state": "closed"
       }
     },
     "repository_id": 335952417,
@@ -31,7 +31,7 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/4705/comments?per_page=100": {
-        "etag": "W/\"73a2da47fa7a9def65baa19befa0f92d123d18ea2ff5b25e2d8447340a77aac0\"",
+        "etag": "W/\"bb8d60d6c55ef52e6eef06b14a5774477d4b0bd242a54b5139012d16b57ba2be\"",
         "next": "",
         "value": [
           {
@@ -46,7 +46,7 @@
         ]
       },
       "/repositories/335952417/pulls/4705/comments?per_page=100": {
-        "etag": "W/\"bbca7ad24d8510c42525bd8d93f63e7d4b2868bf4ed3362419339307c45fbef5\"",
+        "etag": "W/\"ea4255f3876acaa7b0150bb0213bc2507f9f167f454a1c07eaccdab2af02cc0b\"",
         "next": "",
         "value": [
           {
@@ -57,11 +57,20 @@
               "type": "User"
             },
             "created_at": "2026-02-17T19:59:15Z"
+          },
+          {
+            "id": 4337607709,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2026-10-21T13:46:15Z"
           }
         ]
       },
       "/repositories/335952417/pulls/4705/reviews?per_page=100": {
-        "etag": "W/\"3e3bf8fe72d1de1dd3d5dcfb3b3b21dd6b010650277bb1fde7497ae014032ef2\"",
+        "etag": "W/\"01715698e760d6cf88b63ba9447b42b6036f49d669ec1a511fc81a2234eaf792\"",
         "next": "",
         "value": [
           {
@@ -73,6 +82,26 @@
             },
             "submitted_at": "2026-02-17T19:59:15Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5600725101,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-21T13:46:15Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5604471651,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-21T18:36:56Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -87,7 +116,7 @@
     },
     "created_at": "2026-02-17T14:19:54Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -103,6 +132,26 @@
         },
         "occurred_at": "2026-02-17T19:59:15Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5600725101",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-21T13:46:15Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5604471651",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-21T18:36:56Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -125,6 +174,15 @@
           "type": "User"
         },
         "occurred_at": "2026-02-17T19:59:15Z"
+      },
+      {
+        "id": "4337607709",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-21T13:46:15Z"
       }
     ]
   }
