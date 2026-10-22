@@ -16,12 +16,108 @@
     "merged_at": "2019-08-15T16:13:57Z"
   },
   "state": {
+    "tracked_prs": {
+      "1995": {
+        "id": 307522090,
+        "updated_at": "2019-08-15T16:13:57Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
     "pages": {
+      "/repositories/92313258/issues/1995/comments?per_page=100": {
+        "etag": "W/\"33ecc52218e9114521a3695e673db1f8131f24a3c7ce567d20e8533c4a6fee9c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 521449506,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2019-08-14T22:53:55Z"
+          },
+          {
+            "id": 521454969,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2019-08-14T23:20:09Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 521699382,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2019-08-15T16:12:56Z"
+          },
+          {
+            "id": 521699409,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2019-08-15T16:13:01Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/1995/comments?per_page=100": {
+        "etag": "W/\"0322598daf269d1b051c70b3e67c13edc811e88bbc93202d475eacb8a5f27623\"",
+        "next": "",
+        "value": [
+          {
+            "id": 314346490,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2019-08-15T14:53:59Z"
+          },
+          {
+            "id": 314347373,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2019-08-15T14:55:33Z"
+          },
+          {
+            "id": 314362435,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2019-08-15T15:24:03Z"
+          },
+          {
+            "id": 314385103,
+            "user": {
+              "id": 15893072,
+              "login": "JoshVanL",
+              "type": "User"
+            },
+            "created_at": "2019-08-15T16:10:30Z"
+          }
+        ]
+      },
       "/repositories/92313258/pulls/1995/reviews?per_page=100": {
         "etag": "W/\"4916689a4c91dff7ac0ed1253c94d6ac70a7e729f1a722daa5b310df56b191ac\"",
         "next": "",
@@ -61,18 +157,131 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 307522090,
+    "author": {
+      "id": 15893072,
+      "login": "JoshVanL",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2019-08-14T22:33:52Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "275477570",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T14:58:48Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "275497297",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T15:24:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "275525123",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T16:10:30Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "521449506",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-14T22:53:55Z"
+      },
+      {
+        "id": "521454969",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-14T23:20:09Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "521699382",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T16:12:56Z"
+      },
+      {
+        "id": "521699409",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T16:13:01Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "314346490",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T14:53:59Z"
+      },
+      {
+        "id": "314347373",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T14:55:33Z"
+      },
+      {
+        "id": "314362435",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T15:24:03Z"
+      },
+      {
+        "id": "314385103",
+        "actor": {
+          "id": 15893072,
+          "login": "JoshVanL",
+          "type": "User"
+        },
+        "occurred_at": "2019-08-15T16:10:30Z"
+      }
+    ]
   }
 }

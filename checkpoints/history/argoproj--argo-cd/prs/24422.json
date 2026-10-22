@@ -16,6 +16,14 @@
     "merged_at": "2025-09-05T19:28:15Z"
   },
   "state": {
+    "tracked_prs": {
+      "24422": {
+        "id": 2803299520,
+        "updated_at": "2025-12-04T19:31:16Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -34,6 +42,30 @@
               "type": "Bot"
             },
             "created_at": "2025-09-05T18:42:51Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/24422/comments?per_page=100": {
+        "etag": "W/\"d5a35e753526d97a23e15e6c0fc01fc29e0d86eac5ae30b04a3c481b79702e0a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2325836451,
+            "user": {
+              "id": 44989,
+              "login": "leoluz",
+              "type": "User"
+            },
+            "created_at": "2025-09-05T19:04:00Z"
+          },
+          {
+            "id": 2325839063,
+            "user": {
+              "id": 47184027,
+              "login": "agaudreault",
+              "type": "User"
+            },
+            "created_at": "2025-09-05T19:05:39Z"
           }
         ]
       },
@@ -76,18 +108,82 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2803299520,
+    "author": {
+      "id": 47184027,
+      "login": "agaudreault",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-09-05T18:01:08Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3190485337",
+        "actor": {
+          "id": 44989,
+          "login": "leoluz",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-05T19:04:13Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3190488828",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-05T19:05:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3190541368",
+        "actor": {
+          "id": 44989,
+          "login": "leoluz",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-05T19:28:14Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3259397191",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-05T18:42:51Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2325836451",
+        "actor": {
+          "id": 44989,
+          "login": "leoluz",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-05T19:04:00Z"
+      },
+      {
+        "id": "2325839063",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-05T19:05:39Z"
+      }
+    ]
   }
 }
