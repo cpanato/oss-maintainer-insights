@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "1833": {
+        "id": 292670971,
+        "updated_at": "2020-04-23T09:39:05Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -109,6 +117,11 @@
           }
         ]
       },
+      "/repositories/92313258/pulls/1833/comments?per_page=100": {
+        "etag": "\"935f132bd1605011c4b1b7f527ecd7a6fbf36f191f171ae45d0297da5e5d0d62\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/92313258/pulls/1833/reviews?per_page=100": {
         "etag": "\"559459ef28902b04f3b9748448db20821d6818510f6c9c4db12889526b83ccbf\"",
         "next": "",
@@ -117,18 +130,100 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 292670971,
+    "author": {
+      "id": 314155,
+      "login": "badie",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2019-06-28T03:08:59Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "506583317",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2019-06-28T03:09:13Z"
+      },
+      {
+        "id": "506583321",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2019-06-28T03:09:13Z"
+      },
+      {
+        "id": "509587334",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2019-07-09T10:28:58Z"
+      },
+      {
+        "id": "509603201",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-07-09T11:24:28Z"
+      },
+      {
+        "id": "530057994",
+        "actor": {
+          "id": 314155,
+          "login": "badie",
+          "type": "User"
+        },
+        "occurred_at": "2019-09-10T18:15:45Z"
+      },
+      {
+        "id": "530268155",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-09-11T07:59:23Z"
+      },
+      {
+        "id": "530268812",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-09-11T08:01:19Z"
+      },
+      {
+        "id": "539498524",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-10-08T12:53:08Z"
+      },
+      {
+        "id": "618296782",
+        "actor": null,
+        "occurred_at": "2020-04-23T09:39:04Z"
+      }
+    ],
+    "review_comments": []
   }
 }
