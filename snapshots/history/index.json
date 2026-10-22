@@ -1,37 +1,12 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-22T01:50:18Z",
+  "attempted_at": "2026-10-22T08:20:30Z",
   "entries": [
-    {
-      "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "budget",
-      "requests": 300,
-      "progress": {
-        "population": {
-          "inspected_prs": 4321,
-          "human_authored_prs": 4120,
-          "bot_authored_prs": 0,
-          "draft_prs": 188,
-          "missing_author_prs": 3,
-          "outside_window_prs": 0,
-          "after_observation_prs": 10
-        },
-        "window": {
-          "start": "2026-07-16T15:12:29Z",
-          "end": "2026-10-14T15:12:29Z"
-        },
-        "enumerated_prs": 4321,
-        "eligible_prs": 4120,
-        "covered_prs": 4120,
-        "enumeration_complete": false
-      }
-    },
     {
       "repository": "prometheus/prometheus",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 4567,
@@ -55,8 +30,8 @@
     {
       "repository": "helm/helm",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 4253,
@@ -80,8 +55,8 @@
     {
       "repository": "cert-manager/cert-manager",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 4224,
@@ -105,8 +80,8 @@
     {
       "repository": "argoproj/argo-cd",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 4299,
@@ -130,8 +105,8 @@
     {
       "repository": "argoproj/argo-helm",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 370,
@@ -160,8 +135,8 @@
     {
       "repository": "ossf/scorecard",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 206,
@@ -185,8 +160,8 @@
     {
       "repository": "ossf/allstar",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 240,
@@ -211,6 +186,31 @@
       "repository": "sigstore/cosign",
       "status": "fresh",
       "requests": 0
+    },
+    {
+      "repository": "kubernetes/kubernetes",
+      "status": "pending",
+      "reason": "rate_limit",
+      "requests": 1,
+      "progress": {
+        "population": {
+          "inspected_prs": 4321,
+          "human_authored_prs": 4120,
+          "bot_authored_prs": 0,
+          "draft_prs": 188,
+          "missing_author_prs": 3,
+          "outside_window_prs": 0,
+          "after_observation_prs": 10
+        },
+        "window": {
+          "start": "2026-07-16T15:12:29Z",
+          "end": "2026-10-14T15:12:29Z"
+        },
+        "enumerated_prs": 4321,
+        "eligible_prs": 4120,
+        "covered_prs": 4120,
+        "enumeration_complete": false
+      }
     }
   ]
 }
