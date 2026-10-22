@@ -16,12 +16,113 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "24571": {
+        "id": 2829532631,
+        "updated_at": "2026-10-15T17:56:27Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "open"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/24571/comments?per_page=100": {
+        "etag": "W/\"239a1d55ba82b0b1a13292deafb2ee0af60a35fdc7c5541f9cc37c660475a00a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3292505730,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-15T14:35:23Z"
+          },
+          {
+            "id": 3292735273,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-09-15T15:21:09Z"
+          },
+          {
+            "id": 3887908221,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-02-12T00:07:31Z"
+          },
+          {
+            "id": 6195420889,
+            "user": {
+              "id": 136622811,
+              "login": "coderabbitai[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-15T15:11:47Z"
+          },
+          {
+            "id": 6195477323,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-15T15:14:07Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/24571/comments?per_page=100": {
+        "etag": "W/\"89eec6b5c300779bdfd56827cd4f8f0a5eefa57124f7cd1def270d00e9bce612\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4284778761,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2026-10-15T15:12:38Z"
+          },
+          {
+            "id": 4284810169,
+            "user": {
+              "id": 136622811,
+              "login": "coderabbitai[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-15T15:15:02Z"
+          },
+          {
+            "id": 4285262410,
+            "user": {
+              "id": 44989,
+              "login": "leoluz",
+              "type": "User"
+            },
+            "created_at": "2026-10-15T15:55:57Z"
+          },
+          {
+            "id": 4286459850,
+            "user": {
+              "id": 44989,
+              "login": "leoluz",
+              "type": "User"
+            },
+            "created_at": "2026-10-15T17:56:05Z"
+          }
+        ]
+      },
       "/repositories/120896210/pulls/24571/reviews?per_page=100": {
         "etag": "W/\"0baad051f233ebe98d55b8d18e9c902df7e048b92a94869d1cafff24ceb0b504\"",
         "next": "",
@@ -81,18 +182,156 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2829532631,
+    "author": {
+      "id": 350466,
+      "login": "crenshaw-dev",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-09-15T14:35:17Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3228485691",
+        "actor": {
+          "id": 206841,
+          "login": "olivergondza",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-16T08:50:27Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5535418005",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-15T15:12:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5535457512",
+        "actor": {
+          "id": 136622811,
+          "login": "coderabbitai[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-15T15:15:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5536020393",
+        "actor": {
+          "id": 44989,
+          "login": "leoluz",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-15T15:56:14Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "5537633986",
+        "actor": {
+          "id": 44989,
+          "login": "leoluz",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-15T17:56:27Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3292505730",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-15T14:35:23Z"
+      },
+      {
+        "id": "3292735273",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-09-15T15:21:09Z"
+      },
+      {
+        "id": "3887908221",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-02-12T00:07:31Z"
+      },
+      {
+        "id": "6195420889",
+        "actor": {
+          "id": 136622811,
+          "login": "coderabbitai[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-15T15:11:47Z"
+      },
+      {
+        "id": "6195477323",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-15T15:14:07Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "4284778761",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-15T15:12:38Z"
+      },
+      {
+        "id": "4284810169",
+        "actor": {
+          "id": 136622811,
+          "login": "coderabbitai[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-15T15:15:02Z"
+      },
+      {
+        "id": "4285262410",
+        "actor": {
+          "id": 44989,
+          "login": "leoluz",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-15T15:55:57Z"
+      },
+      {
+        "id": "4286459850",
+        "actor": {
+          "id": 44989,
+          "login": "leoluz",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-15T17:56:05Z"
+      }
+    ]
   }
 }

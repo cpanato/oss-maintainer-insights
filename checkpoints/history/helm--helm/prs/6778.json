@@ -16,12 +16,67 @@
     "merged_at": "2019-10-24T18:32:11Z"
   },
   "state": {
+    "tracked_prs": {
+      "6778": {
+        "id": 332099999,
+        "updated_at": "2019-10-24T21:40:29Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 43723161,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "helm/helm",
     "pages": {
+      "/repositories/43723161/issues/6778/comments?per_page=100": {
+        "etag": "W/\"a5b233adc7260cccb5b171e5109858609769711d191746a1975cb44f09776af1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 546046202,
+            "user": {
+              "id": 1360539,
+              "login": "bacongobbler",
+              "type": "User"
+            },
+            "created_at": "2019-10-24T18:31:55Z"
+          },
+          {
+            "id": 546109981,
+            "user": {
+              "id": 414402,
+              "login": "marckhouzam",
+              "type": "User"
+            },
+            "created_at": "2019-10-24T21:25:12Z"
+          },
+          {
+            "id": 546111920,
+            "user": {
+              "id": 1360539,
+              "login": "bacongobbler",
+              "type": "User"
+            },
+            "created_at": "2019-10-24T21:31:04Z"
+          },
+          {
+            "id": 546113985,
+            "user": {
+              "id": 17568639,
+              "login": "mszostok",
+              "type": "User"
+            },
+            "created_at": "2019-10-24T21:37:38Z"
+          }
+        ]
+      },
+      "/repositories/43723161/pulls/6778/comments?per_page=100": {
+        "etag": "\"ca97a5e6255860bfd614aa430e1d9234371c302dff8bb1d857ef5da4a9bfc225\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/43723161/pulls/6778/reviews?per_page=100": {
         "etag": "W/\"700b1aa8c991d520e0c6eb16f133792fa096085c842306237af7433cd1ef8696\"",
         "next": "",
@@ -41,18 +96,70 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 332099999,
+    "author": {
+      "id": 17568639,
+      "login": "mszostok",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2019-10-24T15:06:58Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "306780257",
+        "actor": {
+          "id": 1360539,
+          "login": "bacongobbler",
+          "type": "User"
+        },
+        "occurred_at": "2019-10-24T18:31:47Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "546046202",
+        "actor": {
+          "id": 1360539,
+          "login": "bacongobbler",
+          "type": "User"
+        },
+        "occurred_at": "2019-10-24T18:31:55Z"
+      },
+      {
+        "id": "546109981",
+        "actor": {
+          "id": 414402,
+          "login": "marckhouzam",
+          "type": "User"
+        },
+        "occurred_at": "2019-10-24T21:25:12Z"
+      },
+      {
+        "id": "546111920",
+        "actor": {
+          "id": 1360539,
+          "login": "bacongobbler",
+          "type": "User"
+        },
+        "occurred_at": "2019-10-24T21:31:04Z"
+      },
+      {
+        "id": "546113985",
+        "actor": {
+          "id": 17568639,
+          "login": "mszostok",
+          "type": "User"
+        },
+        "occurred_at": "2019-10-24T21:37:38Z"
+      }
+    ],
+    "review_comments": []
   }
 }

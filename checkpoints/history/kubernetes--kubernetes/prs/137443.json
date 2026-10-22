@@ -1,0 +1,975 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-03-11T11:29:41Z",
+    "id": 3358877206,
+    "number": 137443,
+    "user": {
+      "id": 87243939,
+      "login": "macsko",
+      "type": "User"
+    },
+    "created_at": "2026-03-05T13:43:31Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-03-11T11:29:39Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "137443": {
+        "id": 3358877206,
+        "updated_at": "2026-03-11T11:29:41Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/137443/comments?per_page=100": {
+        "etag": "W/\"cb2bccd363ff44e1ef3404c87dda74a5234d3512c043dc0c911b64c87b98e5c6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 4005153857,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-03-05T13:43:41Z"
+          },
+          {
+            "id": 4005154822,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-05T13:43:51Z"
+          },
+          {
+            "id": 4009998846,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-06T07:07:50Z"
+          },
+          {
+            "id": 4023425641,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T12:31:30Z"
+          },
+          {
+            "id": 4030933877,
+            "user": {
+              "id": 9309441,
+              "login": "brejman",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T12:11:08Z"
+          },
+          {
+            "id": 4037140679,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-03-11T07:41:23Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4037794253,
+            "user": {
+              "id": 9309441,
+              "login": "brejman",
+              "type": "User"
+            },
+            "created_at": "2026-03-11T09:34:26Z"
+          },
+          {
+            "id": 4037795161,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-03-11T09:34:35Z"
+          },
+          {
+            "id": 4037832922,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-11T09:40:40Z"
+          },
+          {
+            "id": 4037833940,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-11T09:40:49Z"
+          },
+          {
+            "id": 4037996506,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-11T10:06:03Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/137443/comments?per_page=100": {
+        "etag": "W/\"64035d482cea9ea50e2fdff6d5b46e746bfbe18089f3c423ed7177c26697b908\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2899046309,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-07T05:38:07Z"
+          },
+          {
+            "id": 2899048548,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-07T05:41:18Z"
+          },
+          {
+            "id": 2899054011,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-07T05:47:24Z"
+          },
+          {
+            "id": 2899056147,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-07T05:48:54Z"
+          },
+          {
+            "id": 2899067860,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-07T05:59:34Z"
+          },
+          {
+            "id": 2899069435,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-07T06:00:55Z"
+          },
+          {
+            "id": 2899070357,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-07T06:01:51Z"
+          },
+          {
+            "id": 2899071947,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-07T06:03:06Z"
+          },
+          {
+            "id": 2904421436,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T10:04:26Z"
+          },
+          {
+            "id": 2904484016,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T10:16:18Z"
+          },
+          {
+            "id": 2904515847,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T10:22:35Z"
+          },
+          {
+            "id": 2904522572,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T10:23:56Z"
+          },
+          {
+            "id": 2904564909,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T10:32:39Z"
+          },
+          {
+            "id": 2904571467,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T10:33:59Z"
+          },
+          {
+            "id": 2904647344,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T10:49:31Z"
+          },
+          {
+            "id": 2905270578,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-09T12:58:06Z"
+          },
+          {
+            "id": 2910227070,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T08:45:40Z"
+          },
+          {
+            "id": 2910899316,
+            "user": {
+              "id": 9309441,
+              "login": "brejman",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T10:50:11Z"
+          },
+          {
+            "id": 2910976823,
+            "user": {
+              "id": 9309441,
+              "login": "brejman",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T11:05:20Z"
+          },
+          {
+            "id": 2911094641,
+            "user": {
+              "id": 9309441,
+              "login": "brejman",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T11:30:00Z"
+          },
+          {
+            "id": 2911118255,
+            "user": {
+              "id": 9309441,
+              "login": "brejman",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T11:34:42Z"
+          },
+          {
+            "id": 2912073951,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T14:16:57Z"
+          },
+          {
+            "id": 2912080624,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T14:17:53Z"
+          },
+          {
+            "id": 2912081644,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "created_at": "2026-03-10T14:18:02Z"
+          },
+          {
+            "id": 2916143421,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "created_at": "2026-03-11T06:13:11Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/137443/reviews?per_page=100": {
+        "etag": "W/\"18b2313436fe93fee1b03cc3c9db6dbacdfc296a17b6ac645860c29d85e0e744\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3907588217,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-07T06:05:40Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3914277593,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-09T10:04:26Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3914347287,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-09T10:16:18Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3914368119,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-09T10:50:25Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3915229246,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-09T12:58:06Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3920731277,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-10T08:45:41Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3921483062,
+            "user": {
+              "id": 9309441,
+              "login": "brejman",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-10T12:01:53Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3922772151,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-10T14:16:57Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3922780697,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-10T14:17:54Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3922782018,
+            "user": {
+              "id": 87243939,
+              "login": "macsko",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-10T14:18:02Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3927195893,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-11T06:13:12Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 3927536891,
+            "user": {
+              "id": 44139130,
+              "login": "sanposhiho",
+              "type": "User"
+            },
+            "submitted_at": "2026-03-11T07:41:16Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3358877206,
+    "author": {
+      "id": 87243939,
+      "login": "macsko",
+      "type": "User"
+    },
+    "created_at": "2026-03-05T13:43:31Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3907588217",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T06:05:40Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3914277593",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:04:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3914347287",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:16:18Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3914368119",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:50:25Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3915229246",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T12:58:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3920731277",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T08:45:41Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3921483062",
+        "actor": {
+          "id": 9309441,
+          "login": "brejman",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T12:01:53Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3922772151",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T14:16:57Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3922780697",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T14:17:54Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3922782018",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T14:18:02Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3927195893",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T06:13:12Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "3927536891",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T07:41:16Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "4005153857",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-05T13:43:41Z"
+      },
+      {
+        "id": "4005154822",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-05T13:43:51Z"
+      },
+      {
+        "id": "4009998846",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-06T07:07:50Z"
+      },
+      {
+        "id": "4023425641",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T12:31:30Z"
+      },
+      {
+        "id": "4030933877",
+        "actor": {
+          "id": 9309441,
+          "login": "brejman",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T12:11:08Z"
+      },
+      {
+        "id": "4037140679",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T07:41:23Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4037794253",
+        "actor": {
+          "id": 9309441,
+          "login": "brejman",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T09:34:26Z"
+      },
+      {
+        "id": "4037795161",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T09:34:35Z"
+      },
+      {
+        "id": "4037832922",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T09:40:40Z"
+      },
+      {
+        "id": "4037833940",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T09:40:49Z"
+      },
+      {
+        "id": "4037996506",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T10:06:03Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2899046309",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T05:38:07Z"
+      },
+      {
+        "id": "2899048548",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T05:41:18Z"
+      },
+      {
+        "id": "2899054011",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T05:47:24Z"
+      },
+      {
+        "id": "2899056147",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T05:48:54Z"
+      },
+      {
+        "id": "2899067860",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T05:59:34Z"
+      },
+      {
+        "id": "2899069435",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T06:00:55Z"
+      },
+      {
+        "id": "2899070357",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T06:01:51Z"
+      },
+      {
+        "id": "2899071947",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-07T06:03:06Z"
+      },
+      {
+        "id": "2904421436",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:04:26Z"
+      },
+      {
+        "id": "2904484016",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:16:18Z"
+      },
+      {
+        "id": "2904515847",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:22:35Z"
+      },
+      {
+        "id": "2904522572",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:23:56Z"
+      },
+      {
+        "id": "2904564909",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:32:39Z"
+      },
+      {
+        "id": "2904571467",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:33:59Z"
+      },
+      {
+        "id": "2904647344",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T10:49:31Z"
+      },
+      {
+        "id": "2905270578",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-09T12:58:06Z"
+      },
+      {
+        "id": "2910227070",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T08:45:40Z"
+      },
+      {
+        "id": "2910899316",
+        "actor": {
+          "id": 9309441,
+          "login": "brejman",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T10:50:11Z"
+      },
+      {
+        "id": "2910976823",
+        "actor": {
+          "id": 9309441,
+          "login": "brejman",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T11:05:20Z"
+      },
+      {
+        "id": "2911094641",
+        "actor": {
+          "id": 9309441,
+          "login": "brejman",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T11:30:00Z"
+      },
+      {
+        "id": "2911118255",
+        "actor": {
+          "id": 9309441,
+          "login": "brejman",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T11:34:42Z"
+      },
+      {
+        "id": "2912073951",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T14:16:57Z"
+      },
+      {
+        "id": "2912080624",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T14:17:53Z"
+      },
+      {
+        "id": "2912081644",
+        "actor": {
+          "id": 87243939,
+          "login": "macsko",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-10T14:18:02Z"
+      },
+      {
+        "id": "2916143421",
+        "actor": {
+          "id": 44139130,
+          "login": "sanposhiho",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-11T06:13:11Z"
+      }
+    ]
+  }
+}
