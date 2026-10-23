@@ -1,0 +1,931 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-01-29T01:23:50Z",
+    "id": 3216562737,
+    "number": 136583,
+    "user": {
+      "id": 29807814,
+      "login": "michaelasp",
+      "type": "User"
+    },
+    "created_at": "2026-01-27T23:17:11Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-01-29T01:23:48Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "136583": {
+        "id": 3216562737,
+        "updated_at": "2026-01-29T01:23:50Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/136583/comments?per_page=100": {
+        "etag": "W/\"2837d557133b3bdeba23613134df2cf90461a3b7b8929a7cc01bba796dcc74d9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3808056333,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-01-27T23:17:19Z"
+          },
+          {
+            "id": 3808079238,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-27T23:21:46Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3814144160,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T21:58:34Z"
+          },
+          {
+            "id": 3814144615,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T21:58:42Z"
+          },
+          {
+            "id": 3814145002,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T21:58:49Z"
+          },
+          {
+            "id": 3814311956,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T22:45:39Z"
+          },
+          {
+            "id": 3814672795,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-29T00:35:39Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/136583/comments?per_page=100": {
+        "etag": "W/\"80d8f1c9f84277e63868471458dd1cc9a3ae251553b1bb95366ec40869997dd9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2734419533,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T01:00:11Z"
+          },
+          {
+            "id": 2737937667,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T18:24:16Z"
+          },
+          {
+            "id": 2738163588,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:12:08Z"
+          },
+          {
+            "id": 2738299574,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:40:36Z"
+          },
+          {
+            "id": 2738319957,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:44:35Z"
+          },
+          {
+            "id": 2738323902,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:45:24Z"
+          },
+          {
+            "id": 2738330354,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:46:47Z"
+          },
+          {
+            "id": 2738333964,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:47:35Z"
+          },
+          {
+            "id": 2738370572,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:55:44Z"
+          },
+          {
+            "id": 2738372774,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:56:11Z"
+          },
+          {
+            "id": 2738383582,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:58:46Z"
+          },
+          {
+            "id": 2738404562,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T20:04:34Z"
+          },
+          {
+            "id": 2738452828,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T20:18:33Z"
+          },
+          {
+            "id": 2738458575,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T20:20:20Z"
+          },
+          {
+            "id": 2738465922,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T20:22:34Z"
+          },
+          {
+            "id": 2738637770,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T21:14:39Z"
+          },
+          {
+            "id": 2738739030,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T21:42:58Z"
+          },
+          {
+            "id": 2738764771,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T21:51:34Z"
+          },
+          {
+            "id": 2738777292,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T21:54:52Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/136583/reviews?per_page=100": {
+        "etag": "W/\"9f9a2987c40fff9f2c5720ad575e81ef3bccbeb053ebd9b35c2125cc1575d92b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3714130976,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T01:00:11Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718302899,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T18:24:16Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718596162,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:12:09Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718764506,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:40:36Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718792569,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:44:35Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718798100,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:45:24Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718807715,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:46:47Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718813127,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:47:41Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718862251,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:55:44Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718864853,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:56:11Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718879512,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T19:58:46Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718909648,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T20:04:34Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718977663,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T20:18:33Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718985697,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T20:20:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3718994688,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T20:22:35Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3719188021,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T21:15:39Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3719308906,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T21:42:58Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3719341009,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T21:51:34Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3719357947,
+            "user": {
+              "id": 29807814,
+              "login": "michaelasp",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-28T21:54:53Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3216562737,
+    "author": {
+      "id": 29807814,
+      "login": "michaelasp",
+      "type": "User"
+    },
+    "created_at": "2026-01-27T23:17:11Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3714130976",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T01:00:11Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718302899",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T18:24:16Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718596162",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:12:09Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718764506",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:40:36Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718792569",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:44:35Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718798100",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:45:24Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718807715",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:46:47Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718813127",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:47:41Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718862251",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:55:44Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718864853",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:56:11Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718879512",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:58:46Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718909648",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T20:04:34Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718977663",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T20:18:33Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718985697",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T20:20:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718994688",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T20:22:35Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3719188021",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:15:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3719308906",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:42:58Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3719341009",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:51:34Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3719357947",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:54:53Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3808056333",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-27T23:17:19Z"
+      },
+      {
+        "id": "3808079238",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-27T23:21:46Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3814144160",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:58:34Z"
+      },
+      {
+        "id": "3814144615",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:58:42Z"
+      },
+      {
+        "id": "3814145002",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:58:49Z"
+      },
+      {
+        "id": "3814311956",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T22:45:39Z"
+      },
+      {
+        "id": "3814672795",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-29T00:35:39Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2734419533",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T01:00:11Z"
+      },
+      {
+        "id": "2737937667",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T18:24:16Z"
+      },
+      {
+        "id": "2738163588",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:12:08Z"
+      },
+      {
+        "id": "2738299574",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:40:36Z"
+      },
+      {
+        "id": "2738319957",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:44:35Z"
+      },
+      {
+        "id": "2738323902",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:45:24Z"
+      },
+      {
+        "id": "2738330354",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:46:47Z"
+      },
+      {
+        "id": "2738333964",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:47:35Z"
+      },
+      {
+        "id": "2738370572",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:55:44Z"
+      },
+      {
+        "id": "2738372774",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:56:11Z"
+      },
+      {
+        "id": "2738383582",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:58:46Z"
+      },
+      {
+        "id": "2738404562",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T20:04:34Z"
+      },
+      {
+        "id": "2738452828",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T20:18:33Z"
+      },
+      {
+        "id": "2738458575",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T20:20:20Z"
+      },
+      {
+        "id": "2738465922",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T20:22:34Z"
+      },
+      {
+        "id": "2738637770",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:14:39Z"
+      },
+      {
+        "id": "2738739030",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:42:58Z"
+      },
+      {
+        "id": "2738764771",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:51:34Z"
+      },
+      {
+        "id": "2738777292",
+        "actor": {
+          "id": 29807814,
+          "login": "michaelasp",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T21:54:52Z"
+      }
+    ]
+  }
+}
