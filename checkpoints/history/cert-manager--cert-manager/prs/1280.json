@@ -16,12 +16,71 @@
     "merged_at": "2019-02-06T16:22:55Z"
   },
   "state": {
+    "tracked_prs": {
+      "1280": {
+        "id": 248704304,
+        "updated_at": "2019-02-06T16:41:23Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
     "pages": {
+      "/repositories/92313258/issues/1280/comments?per_page=100": {
+        "etag": "W/\"462984c2131116f1d064e6b462bd5f4fd648060af8a6cb76e1b5829a33c00d0f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 458761596,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2019-01-30T00:21:27Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 461082648,
+            "user": {
+              "id": 545573,
+              "login": "DanielMorsing",
+              "type": "User"
+            },
+            "created_at": "2019-02-06T16:13:39Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/1280/comments?per_page=100": {
+        "etag": "W/\"fc93de551947f0c638264118e5efbd7bc42bed448a48fc5f732c7fcaa001cf72\"",
+        "next": "",
+        "value": [
+          {
+            "id": 253452054,
+            "user": {
+              "id": 545573,
+              "login": "DanielMorsing",
+              "type": "User"
+            },
+            "created_at": "2019-02-04T12:35:01Z"
+          },
+          {
+            "id": 254327996,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2019-02-06T15:50:13Z"
+          }
+        ]
+      },
       "/repositories/92313258/pulls/1280/reviews?per_page=100": {
         "etag": "W/\"e8814085cab20c0204951d2b7d14b89b18e930728e47455abec0f30a9dcb241e\"",
         "next": "",
@@ -51,18 +110,84 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 248704304,
+    "author": {
+      "id": 203583,
+      "login": "munnerz",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2019-01-30T00:21:20Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "199563941",
+        "actor": {
+          "id": 545573,
+          "login": "DanielMorsing",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-04T12:35:21Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "200649750",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-06T15:50:13Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "458761596",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2019-01-30T00:21:27Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "461082648",
+        "actor": {
+          "id": 545573,
+          "login": "DanielMorsing",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-06T16:13:39Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "253452054",
+        "actor": {
+          "id": 545573,
+          "login": "DanielMorsing",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-04T12:35:01Z"
+      },
+      {
+        "id": "254327996",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-06T15:50:13Z"
+      }
+    ]
   }
 }
