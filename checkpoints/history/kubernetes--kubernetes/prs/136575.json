@@ -16,12 +16,90 @@
     "merged_at": "2026-01-28T20:43:53Z"
   },
   "state": {
+    "tracked_prs": {
+      "136575": {
+        "id": 3215422765,
+        "updated_at": "2026-01-28T20:43:55Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/136575/comments?per_page=100": {
+        "etag": "W/\"37ca4627bdf48cbc123cf07fe7dec9c38901df56641f09554afe2c86de8af3d7\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3807602660,
+            "user": {
+              "id": 10984162,
+              "login": "siyuanfoundation",
+              "type": "User"
+            },
+            "created_at": "2026-01-27T21:22:28Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3813338871,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:09:19Z"
+          },
+          {
+            "id": 3813339542,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:09:27Z"
+          },
+          {
+            "id": 3813340209,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T19:09:35Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/136575/comments?per_page=100": {
+        "etag": "W/\"bd29fb36f749d663f21ffa16be836097497d053b7397b1a4f00031981395596d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2737551945,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T16:46:32Z"
+          },
+          {
+            "id": 2738072368,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2026-01-28T18:56:32Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/136575/reviews?per_page=100": {
         "etag": "W/\"d7c22bb0746e3a0eb8ee742e0d3705ffce75fe763f453f8e5dc1d2237b4be67f\"",
         "next": "",
@@ -51,18 +129,103 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3215422765,
+    "author": {
+      "id": 7001223,
+      "login": "enj",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-01-27T16:58:27Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3717814172",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T16:46:32Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3718482695",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T18:56:33Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3807602660",
+        "actor": {
+          "id": 10984162,
+          "login": "siyuanfoundation",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-27T21:22:28Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3813338871",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:09:19Z"
+      },
+      {
+        "id": "3813339542",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:09:27Z"
+      },
+      {
+        "id": "3813340209",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T19:09:35Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2737551945",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T16:46:32Z"
+      },
+      {
+        "id": "2738072368",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-28T18:56:32Z"
+      }
+    ]
   }
 }

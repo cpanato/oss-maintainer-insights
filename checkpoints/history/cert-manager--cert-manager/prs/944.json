@@ -16,12 +16,130 @@
     "merged_at": "2019-02-20T14:10:41Z"
   },
   "state": {
+    "tracked_prs": {
+      "944": {
+        "id": 221533029,
+        "updated_at": "2019-02-20T14:10:41Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
     "pages": {
+      "/repositories/92313258/issues/944/comments?per_page=100": {
+        "etag": "W/\"873c4f2f0e766c6ca04f1f16236af54b051deca68b85f21d8484bad957844887\"",
+        "next": "",
+        "value": [
+          {
+            "id": 428567169,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2018-10-10T13:16:35Z"
+          },
+          {
+            "id": 428608199,
+            "user": {
+              "id": 158115,
+              "login": "briantopping",
+              "type": "User"
+            },
+            "created_at": "2018-10-10T15:04:13Z"
+          },
+          {
+            "id": 428609121,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2018-10-10T15:06:32Z"
+          },
+          {
+            "id": 428609912,
+            "user": {
+              "id": 158115,
+              "login": "briantopping",
+              "type": "User"
+            },
+            "created_at": "2018-10-10T15:08:29Z"
+          },
+          {
+            "id": 429324014,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2018-10-12T13:23:06Z"
+          },
+          {
+            "id": 460508350,
+            "user": {
+              "id": 37412836,
+              "login": "retest-bot",
+              "type": "User"
+            },
+            "created_at": "2019-02-05T04:24:33Z"
+          },
+          {
+            "id": 460508697,
+            "user": {
+              "id": 158115,
+              "login": "briantopping",
+              "type": "User"
+            },
+            "created_at": "2019-02-05T04:26:50Z"
+          },
+          {
+            "id": 461571896,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2019-02-07T19:51:31Z"
+          },
+          {
+            "id": 461573228,
+            "user": {
+              "id": 158115,
+              "login": "briantopping",
+              "type": "User"
+            },
+            "created_at": "2019-02-07T19:55:30Z"
+          },
+          {
+            "id": 465582546,
+            "user": {
+              "id": 203583,
+              "login": "munnerz",
+              "type": "User"
+            },
+            "created_at": "2019-02-20T13:52:41Z"
+          },
+          {
+            "id": 465583147,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2019-02-20T13:54:03Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/944/comments?per_page=100": {
+        "etag": "\"3b3919555400e7db44b5da0fdd09d354c48515070a58cdaf35718a01efb6ca3b\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/92313258/pulls/944/reviews?per_page=100": {
         "etag": "W/\"472599ee524cf206978936449dec5dd75e53d47bbef011926a96ebef15ccffff\"",
         "next": "",
@@ -41,18 +159,133 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 221533029,
+    "author": {
+      "id": 158115,
+      "login": "briantopping",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2018-10-09T18:04:14Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "205768034",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-20T13:53:54Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "428567169",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2018-10-10T13:16:35Z"
+      },
+      {
+        "id": "428608199",
+        "actor": {
+          "id": 158115,
+          "login": "briantopping",
+          "type": "User"
+        },
+        "occurred_at": "2018-10-10T15:04:13Z"
+      },
+      {
+        "id": "428609121",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2018-10-10T15:06:32Z"
+      },
+      {
+        "id": "428609912",
+        "actor": {
+          "id": 158115,
+          "login": "briantopping",
+          "type": "User"
+        },
+        "occurred_at": "2018-10-10T15:08:29Z"
+      },
+      {
+        "id": "429324014",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2018-10-12T13:23:06Z"
+      },
+      {
+        "id": "460508350",
+        "actor": {
+          "id": 37412836,
+          "login": "retest-bot",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-05T04:24:33Z"
+      },
+      {
+        "id": "460508697",
+        "actor": {
+          "id": 158115,
+          "login": "briantopping",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-05T04:26:50Z"
+      },
+      {
+        "id": "461571896",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-07T19:51:31Z"
+      },
+      {
+        "id": "461573228",
+        "actor": {
+          "id": 158115,
+          "login": "briantopping",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-07T19:55:30Z"
+      },
+      {
+        "id": "465582546",
+        "actor": {
+          "id": 203583,
+          "login": "munnerz",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-20T13:52:41Z"
+      },
+      {
+        "id": "465583147",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2019-02-20T13:54:03Z"
+      }
+    ],
+    "review_comments": []
   }
 }
