@@ -16,12 +16,49 @@
     "merged_at": "2024-04-13T10:59:55Z"
   },
   "state": {
+    "tracked_prs": {
+      "13923": {
+        "id": 1818208899,
+        "updated_at": "2024-04-13T10:59:55Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
     "pages": {
+      "/repositories/6838921/issues/13923/comments?per_page=100": {
+        "etag": "W/\"e9effaf1f5fb4906dd72d0f51b27d1f817e6096416ffb9bd56f92a44617ccd59\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2049957281,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2024-04-11T15:25:05Z"
+          },
+          {
+            "id": 2049967044,
+            "user": {
+              "id": 888940,
+              "login": "ywwg",
+              "type": "User"
+            },
+            "created_at": "2024-04-11T15:29:53Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/13923/comments?per_page=100": {
+        "etag": "\"d72cf7e05084cd54b8b19fdc1838b6f900119f51b4ec89e525abc5320a04f7a0\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/6838921/pulls/13923/reviews?per_page=100": {
         "etag": "W/\"7bef403a17a6f5dd0e6a3c3495e04e3fca56aa21cef178052b36c524b1f59b1f\"",
         "next": "",
@@ -41,18 +78,52 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1818208899,
+    "author": {
+      "id": 888940,
+      "login": "ywwg",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-04-11T15:08:27Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1999230629",
+        "actor": {
+          "id": 2439858,
+          "login": "jesusvazquez",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-13T10:59:46Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2049957281",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-11T15:25:05Z"
+      },
+      {
+        "id": "2049967044",
+        "actor": {
+          "id": 888940,
+          "login": "ywwg",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-11T15:29:53Z"
+      }
+    ],
+    "review_comments": []
   }
 }

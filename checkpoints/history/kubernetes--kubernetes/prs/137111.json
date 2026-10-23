@@ -16,26 +16,200 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "137111": {
+        "id": 3298913486,
+        "updated_at": "2026-02-18T15:13:25Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
-    "pages": {}
+    "pages": {
+      "/repositories/20580498/issues/137111/comments?per_page=100": {
+        "etag": "W/\"cbab7fa3f397666e180e3dcb844df07c1b0334bfc0a15129ec1357ec2fdd1567\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3921049552,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-02-18T14:10:34Z"
+          },
+          {
+            "id": 3921049869,
+            "user": {
+              "id": 25349329,
+              "login": "ffromani",
+              "type": "User"
+            },
+            "created_at": "2026-02-18T14:10:38Z"
+          },
+          {
+            "id": 3921050110,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-02-18T14:10:40Z"
+          },
+          {
+            "id": 3921052392,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-02-18T14:11:03Z"
+          },
+          {
+            "id": 3921109698,
+            "user": {
+              "id": 25349329,
+              "login": "ffromani",
+              "type": "User"
+            },
+            "created_at": "2026-02-18T14:20:50Z"
+          },
+          {
+            "id": 3921164269,
+            "user": {
+              "id": 25349329,
+              "login": "ffromani",
+              "type": "User"
+            },
+            "created_at": "2026-02-18T14:31:00Z"
+          },
+          {
+            "id": 3921209383,
+            "user": {
+              "id": 25349329,
+              "login": "ffromani",
+              "type": "User"
+            },
+            "created_at": "2026-02-18T14:39:52Z"
+          },
+          {
+            "id": 3921387291,
+            "user": {
+              "id": 25349329,
+              "login": "ffromani",
+              "type": "User"
+            },
+            "created_at": "2026-02-18T15:13:15Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/137111/comments?per_page=100": {
+        "etag": "\"d72cf7e05084cd54b8b19fdc1838b6f900119f51b4ec89e525abc5320a04f7a0\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/137111/reviews?per_page=100": {
+        "etag": "\"d72cf7e05084cd54b8b19fdc1838b6f900119f51b4ec89e525abc5320a04f7a0\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3298913486,
+    "author": {
+      "id": 25349329,
+      "login": "ffromani",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-02-18T14:10:24Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "3921049552",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-18T14:10:34Z"
+      },
+      {
+        "id": "3921049869",
+        "actor": {
+          "id": 25349329,
+          "login": "ffromani",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-18T14:10:38Z"
+      },
+      {
+        "id": "3921050110",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-18T14:10:40Z"
+      },
+      {
+        "id": "3921052392",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-18T14:11:03Z"
+      },
+      {
+        "id": "3921109698",
+        "actor": {
+          "id": 25349329,
+          "login": "ffromani",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-18T14:20:50Z"
+      },
+      {
+        "id": "3921164269",
+        "actor": {
+          "id": 25349329,
+          "login": "ffromani",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-18T14:31:00Z"
+      },
+      {
+        "id": "3921209383",
+        "actor": {
+          "id": 25349329,
+          "login": "ffromani",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-18T14:39:52Z"
+      },
+      {
+        "id": "3921387291",
+        "actor": {
+          "id": 25349329,
+          "login": "ffromani",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-18T15:13:15Z"
+      }
+    ],
+    "review_comments": []
   }
 }
