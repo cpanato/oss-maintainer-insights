@@ -16,26 +16,76 @@
     "merged_at": "2024-02-23T12:39:17Z"
   },
   "state": {
+    "tracked_prs": {
+      "13628": {
+        "id": 1738519949,
+        "updated_at": "2024-02-23T12:39:17Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
-    "pages": {}
+    "pages": {
+      "/repositories/6838921/issues/13628/comments?per_page=100": {
+        "etag": "\"1d9c0fba36dd8fa6635b1d72ca19b48b5ce5bd0b3f4d271ac6d21a843c47399d\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/13628/comments?per_page=100": {
+        "etag": "\"1d9c0fba36dd8fa6635b1d72ca19b48b5ce5bd0b3f4d271ac6d21a843c47399d\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/13628/reviews?per_page=100": {
+        "etag": "W/\"5fc6961ce6480a658a55cc3deeb96a3abd1210cc78cca89d1a27aca136518649\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1896132837,
+            "user": {
+              "id": 3246492,
+              "login": "cstyan",
+              "type": "User"
+            },
+            "submitted_at": "2024-02-22T15:19:48Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1738519949,
+    "author": {
+      "id": 8125524,
+      "login": "bboreham",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-02-22T09:39:48Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1896132837",
+        "actor": {
+          "id": 3246492,
+          "login": "cstyan",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-22T15:19:48Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }

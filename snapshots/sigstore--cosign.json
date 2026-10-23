@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 200,
-    "human_authored_prs": 68,
-    "bot_authored_prs": 44,
+    "human_authored_prs": 69,
+    "bot_authored_prs": 42,
     "draft_prs": 9,
     "missing_author_prs": 0,
-    "outside_window_prs": 79,
+    "outside_window_prs": 80,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 101,
-    "reused_prs": 11,
+    "refreshed_prs": 19,
+    "reused_prs": 92,
     "events_checked_since": "2026-10-16T20:16:05Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-07-24T18:34:08Z",
-    "newest_created_at": "2026-10-21T22:02:12Z"
+    "oldest_created_at": "2026-07-27T16:23:21Z",
+    "newest_created_at": "2026-10-22T22:23:49Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,38 +28,38 @@
       "full_name": "sigstore/cosign"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-22T08:07:45.000Z",
+    "collected_at": "2026-10-23T14:05:45.000Z",
     "window": {
-      "start": "2026-07-24T08:07:45.000Z",
-      "end": "2026-10-22T08:07:45.000Z"
+      "start": "2026-07-25T14:05:45.000Z",
+      "end": "2026-10-23T14:05:45.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 86,
+      "bot_events": 84,
       "missing_event_actors": 0,
-      "self_events": 68
+      "self_events": 74
     },
     "creation_cohort": {
-      "eligible_prs": 112,
+      "eligible_prs": 111,
       "coverage": "complete_for_sample",
       "authors": 30,
       "outcomes": {
-        "open": 18,
-        "closed_unmerged": 30,
-        "merged": 64
+        "open": 17,
+        "closed_unmerged": 28,
+        "merged": 66
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 86,
+        "github_review_units": 88,
         "prow_command_units": 0
       },
-      "eligible_prs": 112,
-      "covered_prs": 112,
+      "eligible_prs": 111,
+      "covered_prs": 111,
       "coverage": "complete_for_sample",
-      "review_units": 86,
+      "review_units": 88,
       "participants": 8,
       "distribution": [
         {
@@ -76,7 +76,7 @@
         },
         {
           "sources": {
-            "github_review_units": 22,
+            "github_review_units": 23,
             "prow_command_units": 0
           },
           "actor": {
@@ -84,11 +84,11 @@
             "login": "bobcallaway",
             "type": "User"
           },
-          "review_units": 22
+          "review_units": 23
         },
         {
           "sources": {
-            "github_review_units": 18,
+            "github_review_units": 19,
             "prow_command_units": 0
           },
           "actor": {
@@ -96,7 +96,7 @@
             "login": "Hayden-IO",
             "type": "User"
           },
-          "review_units": 18
+          "review_units": 19
         },
         {
           "sources": {
@@ -164,34 +164,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.27906976744186046,
+        "value": 0.2727272727272727,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 112,
-      "covered_prs": 112,
+      "eligible_prs": 111,
+      "covered_prs": 111,
       "coverage": "complete_for_sample",
-      "responded_prs": 80,
-      "unanswered_prs": 32,
+      "responded_prs": 81,
+      "unanswered_prs": 30,
       "median_ms": {
-        "value": 89879000,
+        "value": 89489000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 200,
-    "selected": 112,
-    "eligible_on_page": 112,
+    "selected": 111,
+    "eligible_on_page": 111,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 306,
+  "requests": 60,
   "rate": {
-    "remaining": 2491,
+    "remaining": 1467,
     "limit": 5000,
-    "resetAt": 1792659389000
+    "resetAt": 1792766871000
   },
   "failures": [],
   "complete": true

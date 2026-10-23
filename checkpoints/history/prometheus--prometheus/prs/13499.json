@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-01-31T12:02:12Z",
+    "id": 1702491156,
+    "number": 13499,
+    "user": {
+      "id": 8125524,
+      "login": "bboreham",
+      "type": "User"
+    },
+    "created_at": "2024-01-30T16:48:54Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-01-31T12:02:12Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "13499": {
+        "id": 1702491156,
+        "updated_at": "2024-01-31T12:02:12Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 6838921,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "prometheus/prometheus",
+    "pages": {
+      "/repositories/6838921/issues/13499/comments?per_page=100": {
+        "etag": "\"1d9c0fba36dd8fa6635b1d72ca19b48b5ce5bd0b3f4d271ac6d21a843c47399d\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/13499/comments?per_page=100": {
+        "etag": "W/\"a76a5adc16dabecd817ed9295d1da5ad3bab90cc780bf9f0bbff6ff389ddd2f8\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1471742521,
+            "user": {
+              "id": 3246492,
+              "login": "cstyan",
+              "type": "User"
+            },
+            "created_at": "2024-01-30T18:20:14Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/13499/reviews?per_page=100": {
+        "etag": "W/\"53a74acac5f3d47176360a943d5d98de5c609076ac27c0769a92b5c50e5501bc\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1852046253,
+            "user": {
+              "id": 3246492,
+              "login": "cstyan",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-30T18:20:14Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1852046450,
+            "user": {
+              "id": 3246492,
+              "login": "cstyan",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-30T18:20:21Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1702491156,
+    "author": {
+      "id": 8125524,
+      "login": "bboreham",
+      "type": "User"
+    },
+    "created_at": "2024-01-30T16:48:54Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1852046253",
+        "actor": {
+          "id": 3246492,
+          "login": "cstyan",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-30T18:20:14Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1852046450",
+        "actor": {
+          "id": 3246492,
+          "login": "cstyan",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-30T18:20:21Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "1471742521",
+        "actor": {
+          "id": 3246492,
+          "login": "cstyan",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-30T18:20:14Z"
+      }
+    ]
+  }
+}

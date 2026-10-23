@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 300,
-    "human_authored_prs": 173,
+    "human_authored_prs": 166,
     "bot_authored_prs": 89,
     "draft_prs": 6,
     "missing_author_prs": 3,
-    "outside_window_prs": 29,
+    "outside_window_prs": 36,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 220,
-    "reused_prs": 42,
-    "events_checked_since": "2026-10-15T17:34:01Z",
+    "refreshed_prs": 161,
+    "reused_prs": 94,
+    "events_checked_since": "2026-10-16T20:07:37Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-07-24T11:26:02Z",
-    "newest_created_at": "2026-10-21T20:00:49Z"
+    "oldest_created_at": "2026-07-26T12:13:54Z",
+    "newest_created_at": "2026-10-23T05:54:47Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,51 +28,51 @@
       "full_name": "helm/helm"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-22T08:18:04.000Z",
+    "collected_at": "2026-10-23T13:56:18.000Z",
     "window": {
-      "start": "2026-07-24T08:18:04.000Z",
-      "end": "2026-10-22T08:18:04.000Z"
+      "start": "2026-07-25T13:56:18.000Z",
+      "end": "2026-10-23T13:56:18.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 197,
+      "bot_events": 186,
       "missing_event_actors": 0,
-      "self_events": 236
+      "self_events": 224
     },
     "creation_cohort": {
-      "eligible_prs": 262,
+      "eligible_prs": 255,
       "coverage": "complete_for_sample",
-      "authors": 112,
+      "authors": 110,
       "outcomes": {
-        "open": 128,
-        "closed_unmerged": 23,
-        "merged": 111
+        "open": 126,
+        "closed_unmerged": 22,
+        "merged": 107
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 183,
-        "prow_command_units": 95
+        "github_review_units": 173,
+        "prow_command_units": 93
       },
-      "eligible_prs": 262,
-      "covered_prs": 262,
+      "eligible_prs": 255,
+      "covered_prs": 255,
       "coverage": "complete_for_sample",
-      "review_units": 183,
+      "review_units": 173,
       "participants": 25,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 108,
-            "prow_command_units": 94
+            "github_review_units": 103,
+            "prow_command_units": 92
           },
           "actor": {
             "id": 104113,
             "login": "TerryHowe",
             "type": "User"
           },
-          "review_units": 108
+          "review_units": 103
         },
         {
           "sources": {
@@ -88,30 +88,6 @@
         },
         {
           "sources": {
-            "github_review_units": 11,
-            "prow_command_units": 0
-          },
-          "actor": {
-            "id": 13884882,
-            "login": "robertsirc",
-            "type": "User"
-          },
-          "review_units": 11
-        },
-        {
-          "sources": {
-            "github_review_units": 8,
-            "prow_command_units": 0
-          },
-          "actor": {
-            "id": 407675,
-            "login": "scottrigby",
-            "type": "User"
-          },
-          "review_units": 8
-        },
-        {
-          "sources": {
             "github_review_units": 8,
             "prow_command_units": 0
           },
@@ -121,6 +97,30 @@
             "type": "User"
           },
           "review_units": 8
+        },
+        {
+          "sources": {
+            "github_review_units": 8,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 13884882,
+            "login": "robertsirc",
+            "type": "User"
+          },
+          "review_units": 8
+        },
+        {
+          "sources": {
+            "github_review_units": 7,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 407675,
+            "login": "scottrigby",
+            "type": "User"
+          },
+          "review_units": 7
         },
         {
           "sources": {
@@ -184,18 +184,6 @@
         },
         {
           "sources": {
-            "github_review_units": 2,
-            "prow_command_units": 1
-          },
-          "actor": {
-            "id": 11087727,
-            "login": "yxxhero",
-            "type": "User"
-          },
-          "review_units": 2
-        },
-        {
-          "sources": {
             "github_review_units": 1,
             "prow_command_units": 0
           },
@@ -238,6 +226,18 @@
           "actor": {
             "id": 8417720,
             "login": "benoittgt",
+            "type": "User"
+          },
+          "review_units": 1
+        },
+        {
+          "sources": {
+            "github_review_units": 1,
+            "prow_command_units": 1
+          },
+          "actor": {
+            "id": 11087727,
+            "login": "yxxhero",
             "type": "User"
           },
           "review_units": 1
@@ -368,34 +368,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5901639344262295,
+        "value": 0.5953757225433526,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 262,
-      "covered_prs": 262,
+      "eligible_prs": 255,
+      "covered_prs": 255,
       "coverage": "complete_for_sample",
-      "responded_prs": 161,
-      "unanswered_prs": 101,
+      "responded_prs": 155,
+      "unanswered_prs": 100,
       "median_ms": {
-        "value": 47357000,
+        "value": 49888000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 300,
-    "selected": 262,
-    "eligible_on_page": 262,
+    "selected": 255,
+    "eligible_on_page": 255,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 224,
+  "requests": 487,
   "rate": {
-    "remaining": 2976,
+    "remaining": 2834,
     "limit": 5000,
-    "resetAt": 1792681525000
+    "resetAt": 1792766871000
   },
   "failures": [],
   "complete": true
