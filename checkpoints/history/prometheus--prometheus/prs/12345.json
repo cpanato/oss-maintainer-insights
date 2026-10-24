@@ -1,0 +1,91 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2023-05-09T14:51:29Z",
+    "id": 1343817433,
+    "number": 12345,
+    "user": {
+      "id": 15064823,
+      "login": "codesome",
+      "type": "User"
+    },
+    "created_at": "2023-05-09T14:01:26Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2023-05-09T14:51:29Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "12345": {
+        "id": 1343817433,
+        "updated_at": "2023-05-09T14:51:29Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 6838921,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "prometheus/prometheus",
+    "pages": {
+      "/repositories/6838921/issues/12345/comments?per_page=100": {
+        "etag": "\"74a82485eeffa6e64ede9c2c9979811930c7b9b0a01e0e0636a5b4f5c07e2dcf\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/12345/comments?per_page=100": {
+        "etag": "\"74a82485eeffa6e64ede9c2c9979811930c7b9b0a01e0e0636a5b4f5c07e2dcf\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/12345/reviews?per_page=100": {
+        "etag": "W/\"37271b3c800438d706d31582c2409b256aec2e1ba2a6922f4c1d5ea0c86f5857\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1418738563,
+            "user": {
+              "id": 2439858,
+              "login": "jesusvazquez",
+              "type": "User"
+            },
+            "submitted_at": "2023-05-09T14:10:42Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1343817433,
+    "author": {
+      "id": 15064823,
+      "login": "codesome",
+      "type": "User"
+    },
+    "created_at": "2023-05-09T14:01:26Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1418738563",
+        "actor": {
+          "id": 2439858,
+          "login": "jesusvazquez",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-09T14:10:42Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
+  }
+}
