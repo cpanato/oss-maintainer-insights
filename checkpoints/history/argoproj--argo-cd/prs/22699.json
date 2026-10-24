@@ -16,26 +16,224 @@
     "merged_at": "2025-04-17T15:16:15Z"
   },
   "state": {
+    "tracked_prs": {
+      "22699": {
+        "id": 2464486706,
+        "updated_at": "2025-07-16T15:38:21Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/22699/comments?per_page=100": {
+        "etag": "W/\"546895747d35d94bca8a40ec2223b1b7e0b2c8f3568fa44a173fa71f9fa7ab80\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2810699289,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-04-16T20:32:01Z"
+          },
+          {
+            "id": 2810807443,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-04-16T21:12:25Z"
+          },
+          {
+            "id": 2811024420,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2025-04-16T22:50:03Z"
+          },
+          {
+            "id": 2811063563,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2025-04-16T23:08:02Z"
+          },
+          {
+            "id": 2811070772,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2025-04-16T23:12:54Z"
+          },
+          {
+            "id": 2811690371,
+            "user": {
+              "id": 76892343,
+              "login": "34fathombelow",
+              "type": "User"
+            },
+            "created_at": "2025-04-17T04:16:07Z"
+          },
+          {
+            "id": 2811762854,
+            "user": {
+              "id": 23362539,
+              "login": "GrantBirki",
+              "type": "User"
+            },
+            "created_at": "2025-04-17T05:13:01Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/22699/comments?per_page=100": {
+        "etag": "\"29108e539a2ce923e3b062fbca2d56abad1d94eb1f8cef410aa73874901db192\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/22699/reviews?per_page=100": {
+        "etag": "W/\"1040f7a36cecc1205b163cec00fccefb84986373c7279ae6d31ba67e98dd9a63\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2774599770,
+            "user": {
+              "id": 76892343,
+              "login": "34fathombelow",
+              "type": "User"
+            },
+            "submitted_at": "2025-04-17T05:18:44Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 2774850051,
+            "user": {
+              "id": 86051118,
+              "login": "nitishfy",
+              "type": "User"
+            },
+            "submitted_at": "2025-04-17T07:29:23Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2464486706,
+    "author": {
+      "id": 23362539,
+      "login": "GrantBirki",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-04-16T20:31:54Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2774599770",
+        "actor": {
+          "id": 76892343,
+          "login": "34fathombelow",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-17T05:18:44Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2774850051",
+        "actor": {
+          "id": 86051118,
+          "login": "nitishfy",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-17T07:29:23Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2810699289",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-04-16T20:32:01Z"
+      },
+      {
+        "id": "2810807443",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-04-16T21:12:25Z"
+      },
+      {
+        "id": "2811024420",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-16T22:50:03Z"
+      },
+      {
+        "id": "2811063563",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-16T23:08:02Z"
+      },
+      {
+        "id": "2811070772",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-16T23:12:54Z"
+      },
+      {
+        "id": "2811690371",
+        "actor": {
+          "id": 76892343,
+          "login": "34fathombelow",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-17T04:16:07Z"
+      },
+      {
+        "id": "2811762854",
+        "actor": {
+          "id": 23362539,
+          "login": "GrantBirki",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-17T05:13:01Z"
+      }
+    ],
+    "review_comments": []
   }
 }

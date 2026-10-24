@@ -1,8 +1,8 @@
 {
-  "generation": 2,
-  "observed_at": "2026-10-14T15:12:29Z",
+  "generation": 3,
+  "observed_at": "2026-10-24T17:39:53Z",
   "pr": {
-    "updated_at": "2026-10-14T14:52:18Z",
+    "updated_at": "2026-10-22T18:40:32Z",
     "id": 4788292753,
     "number": 9441,
     "user": {
@@ -19,8 +19,8 @@
     "tracked_prs": {
       "9441": {
         "id": 4788292753,
-        "updated_at": "2026-10-14T14:52:18Z",
-        "checked_at": "2026-10-14T15:12:29Z",
+        "updated_at": "2026-10-22T18:40:32Z",
+        "checked_at": "2026-10-24T17:39:53Z",
         "state": "open"
       }
     },
@@ -31,18 +31,9 @@
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/9441/comments?per_page=100": {
-        "etag": "W/\"4d146566ce2be918c63cad17fada61775f49929a44d014c7a846d7781148e260\"",
+        "etag": "W/\"c5061b00b50ec8f4d3dc15b1d8d63de93e9af27c7cb017488a27c3a8d3b3fda5\"",
         "next": "",
         "value": [
-          {
-            "id": 6062045212,
-            "user": {
-              "id": 167124277,
-              "login": "cert-manager-prow[bot]",
-              "type": "Bot"
-            },
-            "created_at": "2026-10-08T14:26:20Z"
-          },
           {
             "id": 6062095327,
             "user": {
@@ -51,11 +42,32 @@
               "type": "User"
             },
             "created_at": "2026-10-08T14:28:44Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 6348456946,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-10-22T18:40:19Z"
+          },
+          {
+            "id": 6348461525,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-22T18:40:31Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9441/comments?per_page=100": {
-        "etag": "W/\"59cca98e57750a45b955d20ca7e45713b3bfc6fe76ef295e12829871d11e3c55\"",
+        "etag": "W/\"e39701213f670f9df491c3da48a2153886ff98739a1576541b4873c3fd448792\"",
         "next": "",
         "value": [
           {
@@ -205,7 +217,7 @@
         ]
       },
       "/repositories/92313258/pulls/9441/reviews?per_page=100": {
-        "etag": "W/\"3bf5b1f5e6d4823cf39571bd81aab27e564b0fcd2012afea16861095cffec839\"",
+        "etag": "W/\"19758c103139732fc84f213b6bf753ff26858bd34ec7a14302caa2ba412d97d6\"",
         "next": "",
         "value": [
           {
@@ -411,15 +423,6 @@
     ],
     "issue_comments": [
       {
-        "id": "6062045212",
-        "actor": {
-          "id": 167124277,
-          "login": "cert-manager-prow[bot]",
-          "type": "Bot"
-        },
-        "occurred_at": "2026-10-08T14:26:20Z"
-      },
-      {
         "id": "6062095327",
         "actor": {
           "id": 78652401,
@@ -427,6 +430,27 @@
           "type": "User"
         },
         "occurred_at": "2026-10-08T14:28:44Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "6348456946",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-22T18:40:19Z"
+      },
+      {
+        "id": "6348461525",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-22T18:40:31Z"
       }
     ],
     "review_comments": [
