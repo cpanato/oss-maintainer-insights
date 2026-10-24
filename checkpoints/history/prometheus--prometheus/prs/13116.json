@@ -16,26 +16,174 @@
     "merged_at": "2023-11-10T13:33:34Z"
   },
   "state": {
+    "tracked_prs": {
+      "13116": {
+        "id": 1594122103,
+        "updated_at": "2023-11-10T13:33:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
-    "pages": {}
+    "pages": {
+      "/repositories/6838921/issues/13116/comments?per_page=100": {
+        "etag": "W/\"687a6c1cc210a0628ddc22a298675dbeddd845f10a9ec92af97351f20362ae2a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1804814377,
+            "user": {
+              "id": 11855957,
+              "login": "fatsheep9146",
+              "type": "User"
+            },
+            "created_at": "2023-11-09T22:58:16Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/13116/comments?per_page=100": {
+        "etag": "W/\"7f881e0d98bd408e8af19d97de23bf0fb7d22c7c31041ef102a477ae532c878b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1387799090,
+            "user": {
+              "id": 5231884,
+              "login": "linasm",
+              "type": "User"
+            },
+            "created_at": "2023-11-09T10:25:42Z"
+          },
+          {
+            "id": 1387799555,
+            "user": {
+              "id": 5231884,
+              "login": "linasm",
+              "type": "User"
+            },
+            "created_at": "2023-11-09T10:26:02Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/13116/reviews?per_page=100": {
+        "etag": "W/\"68dda22557e7146f4172b1ac696ab9cd592c1ca0bce7a7b115975675912102b1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1722211896,
+            "user": {
+              "id": 5231884,
+              "login": "linasm",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-09T10:26:05Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1723206970,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-09T18:05:27Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1724786115,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-10T13:33:14Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1594122103,
+    "author": {
+      "id": 11855957,
+      "login": "fatsheep9146",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-11-09T10:14:14Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1722211896",
+        "actor": {
+          "id": 5231884,
+          "login": "linasm",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-09T10:26:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1723206970",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-09T18:05:27Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1724786115",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-10T13:33:14Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1804814377",
+        "actor": {
+          "id": 11855957,
+          "login": "fatsheep9146",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-09T22:58:16Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1387799090",
+        "actor": {
+          "id": 5231884,
+          "login": "linasm",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-09T10:25:42Z"
+      },
+      {
+        "id": "1387799555",
+        "actor": {
+          "id": 5231884,
+          "login": "linasm",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-09T10:26:02Z"
+      }
+    ]
   }
 }

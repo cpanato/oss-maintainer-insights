@@ -16,6 +16,14 @@
     "merged_at": "2026-04-22T21:49:53Z"
   },
   "state": {
+    "tracked_prs": {
+      "136436": {
+        "id": 3200444698,
+        "updated_at": "2026-04-22T21:52:26Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -82,6 +90,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/136436/comments?per_page=100": {
+        "etag": "\"eb272c6578522aebfaf0ba3125e3493ed778293cf99e6da76e4ff003d9a5f558\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/136436/reviews?per_page=100": {
         "etag": "W/\"1e6b054aafdf564fb7497eff9e82cde3f06d2106869ba0eebc19586446cd1c40\"",
         "next": "",
@@ -105,18 +118,92 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3200444698,
+    "author": {
+      "id": 86868255,
+      "login": "Okabe-Junya",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-01-22T18:20:54Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "4027548345",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-30T00:48:12Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3785983337",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-22T18:21:05Z"
+      },
+      {
+        "id": "4148376244",
+        "actor": {
+          "id": 86868255,
+          "login": "Okabe-Junya",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-28T16:27:53Z"
+      },
+      {
+        "id": "4148380468",
+        "actor": {
+          "id": 86868255,
+          "login": "Okabe-Junya",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-28T16:30:42Z"
+      },
+      {
+        "id": "4151492484",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-30T00:48:20Z"
+      },
+      {
+        "id": "4151492689",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-30T00:48:25Z"
+      },
+      {
+        "id": "4153480935",
+        "actor": {
+          "id": 86868255,
+          "login": "Okabe-Junya",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-30T09:14:14Z"
+      }
+    ],
+    "review_comments": []
   }
 }

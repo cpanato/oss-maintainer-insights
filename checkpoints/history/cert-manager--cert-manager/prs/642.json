@@ -1,0 +1,141 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2019-01-29T23:45:48Z",
+    "id": 193629185,
+    "number": 642,
+    "user": {
+      "id": 203583,
+      "login": "munnerz",
+      "type": "User"
+    },
+    "created_at": "2018-06-08T14:21:39Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2018-06-08T14:45:45Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "642": {
+        "id": 193629185,
+        "updated_at": "2019-01-29T23:45:48Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 92313258,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "cert-manager/cert-manager",
+    "pages": {
+      "/repositories/92313258/issues/642/comments?per_page=100": {
+        "etag": "W/\"d60e7627353464ec82c34ee413daf92f22c6591f168296bdfed7625cb8872416\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 395779410,
+            "user": {
+              "id": 735008,
+              "login": "kragniz",
+              "type": "User"
+            },
+            "created_at": "2018-06-08T14:32:04Z"
+          },
+          {
+            "id": 395779481,
+            "user": {
+              "id": 32282838,
+              "login": "jetstack-bot",
+              "type": "User"
+            },
+            "created_at": "2018-06-08T14:32:18Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/642/comments?per_page=100": {
+        "etag": "\"eb272c6578522aebfaf0ba3125e3493ed778293cf99e6da76e4ff003d9a5f558\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/642/reviews?per_page=100": {
+        "etag": "W/\"b74c9176348a173d1f235a946c2aa330150518598bc43b3ae4bc8551d289cfc6\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 127184386,
+            "user": {
+              "id": 735008,
+              "login": "kragniz",
+              "type": "User"
+            },
+            "submitted_at": "2018-06-08T14:28:48Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 193629185,
+    "author": {
+      "id": 203583,
+      "login": "munnerz",
+      "type": "User"
+    },
+    "created_at": "2018-06-08T14:21:39Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "127184386",
+        "actor": {
+          "id": 735008,
+          "login": "kragniz",
+          "type": "User"
+        },
+        "occurred_at": "2018-06-08T14:28:48Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "395779410",
+        "actor": {
+          "id": 735008,
+          "login": "kragniz",
+          "type": "User"
+        },
+        "occurred_at": "2018-06-08T14:32:04Z"
+      },
+      {
+        "id": "395779481",
+        "actor": {
+          "id": 32282838,
+          "login": "jetstack-bot",
+          "type": "User"
+        },
+        "occurred_at": "2018-06-08T14:32:18Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
