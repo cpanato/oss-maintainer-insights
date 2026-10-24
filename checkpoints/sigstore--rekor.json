@@ -488,9 +488,9 @@
     },
     "2981": {
       "id": 4507375262,
-      "updated_at": "2026-10-21T04:26:24Z",
-      "checked_at": "2026-10-23T14:04:45Z",
-      "state": "open"
+      "updated_at": "2026-10-23T23:10:50Z",
+      "checked_at": "2026-10-24T14:07:06Z",
+      "state": "closed"
     },
     "2982": {
       "id": 4525867063,
@@ -759,7 +759,7 @@
     "3031": {
       "id": 4966329294,
       "updated_at": "2026-10-22T11:05:34Z",
-      "checked_at": "2026-10-23T14:04:45Z",
+      "checked_at": "2026-10-24T14:07:06Z",
       "state": "open"
     },
     "3032": {
@@ -767,37 +767,43 @@
       "updated_at": "2026-10-22T22:21:18Z",
       "checked_at": "2026-10-23T14:04:45Z",
       "state": "closed"
+    },
+    "3033": {
+      "id": 4988215149,
+      "updated_at": "2026-10-23T22:47:52Z",
+      "checked_at": "2026-10-24T14:07:06Z",
+      "state": "open"
     }
   },
   "incremental": true,
   "progress": {
     "population": {
       "inspected_prs": 200,
-      "human_authored_prs": 38,
+      "human_authored_prs": 39,
       "bot_authored_prs": 90,
       "draft_prs": 0,
       "missing_author_prs": 0,
-      "outside_window_prs": 72,
+      "outside_window_prs": 71,
       "after_observation_prs": 0
     },
     "window": {
-      "start": "2026-07-25T14:04:45.000Z",
-      "end": "2026-10-23T14:04:45.000Z"
+      "start": "2026-07-26T14:07:06.000Z",
+      "end": "2026-10-24T14:07:06.000Z"
     },
     "enumerated_prs": 200,
-    "eligible_prs": 128,
-    "covered_prs": 128,
+    "eligible_prs": 129,
+    "covered_prs": 129,
     "enumeration_complete": true
   },
   "repository_id": 272963353,
-  "observed_at": "2026-10-23T14:04:45Z",
+  "observed_at": "2026-10-24T14:07:06Z",
   "methodology_version": "1.2.0",
   "version": 3,
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "repository": "sigstore/rekor",
   "pages": {
     "/repos/sigstore/rekor": {
-      "etag": "W/\"1fdb36ceb03cc9fab02741164cc8deb1a5c21bb5f9c4f3673dab2561202d181f\"",
+      "etag": "W/\"ac6d4934d36bce35388599e58499e611b22a519ebc86f0e9fca5fd198f37326a\"",
       "next": "",
       "value": {
         "id": 272963353,
@@ -1623,7 +1629,7 @@
       "value": []
     },
     "/repositories/272963353/issues/2981/comments?per_page=100": {
-      "etag": "W/\"0ab0b8c0e2c80d2488028565af6f1c1fd522e4bf3c70863f0c370206d3f86739\"",
+      "etag": "W/\"aeec9623ee9334b9a24695e09e9045577da14cea15f43a76dcfcde8ed97e0529\"",
       "next": "",
       "value": [
         {
@@ -2014,7 +2020,7 @@
       ]
     },
     "/repositories/272963353/issues/3031/comments?per_page=100": {
-      "etag": "\"1d9c0fba36dd8fa6635b1d72ca19b48b5ce5bd0b3f4d271ac6d21a843c47399d\"",
+      "etag": "\"10b8bc9f5677fd8808667b9a7ff310fa116d73f78720b7a52a95d1b9d1559bf5\"",
       "next": "",
       "value": []
     },
@@ -2030,6 +2036,30 @@
             "type": "Bot"
           },
           "created_at": "2026-10-22T20:02:27Z"
+        }
+      ]
+    },
+    "/repositories/272963353/issues/3033/comments?per_page=100": {
+      "etag": "W/\"b40efc1dfa201a23c28d6354ded17f2a0cb59ad4dcefcc4dfb3159a487da0ade\"",
+      "next": "",
+      "value": [
+        {
+          "id": 6373178104,
+          "user": {
+            "id": 22429695,
+            "login": "codecov[bot]",
+            "type": "Bot"
+          },
+          "created_at": "2026-10-23T19:36:01Z"
+        },
+        {
+          "id": 6373386268,
+          "user": {
+            "id": 1304826,
+            "login": "loosebazooka",
+            "type": "User"
+          },
+          "created_at": "2026-10-23T19:47:49Z"
         }
       ]
     },
@@ -4865,14 +4895,25 @@
       ]
     },
     "/repositories/272963353/pulls/2981/comments?per_page=100": {
-      "etag": "\"1d9c0fba36dd8fa6635b1d72ca19b48b5ce5bd0b3f4d271ac6d21a843c47399d\"",
+      "etag": "\"10b8bc9f5677fd8808667b9a7ff310fa116d73f78720b7a52a95d1b9d1559bf5\"",
       "next": "",
       "value": []
     },
     "/repositories/272963353/pulls/2981/reviews?per_page=100": {
-      "etag": "\"1d9c0fba36dd8fa6635b1d72ca19b48b5ce5bd0b3f4d271ac6d21a843c47399d\"",
+      "etag": "W/\"74594ed8abd9fdbeb4ec385412acdd5dd2b9484254fab62a7dc8bda3d4c01f7c\"",
       "next": "",
-      "value": []
+      "value": [
+        {
+          "id": 5635383299,
+          "user": {
+            "id": 2845093,
+            "login": "bobcallaway",
+            "type": "User"
+          },
+          "submitted_at": "2026-10-23T23:10:38Z",
+          "state": "APPROVED"
+        }
+      ]
     },
     "/repositories/272963353/pulls/2982/comments?per_page=100": {
       "etag": "\"dd31b18aa8ca4de2b7b404d119456617cb9cb56c22d1039bb6dfc78d2fa4cc72\"",
@@ -5825,12 +5866,12 @@
       ]
     },
     "/repositories/272963353/pulls/3031/comments?per_page=100": {
-      "etag": "\"1d9c0fba36dd8fa6635b1d72ca19b48b5ce5bd0b3f4d271ac6d21a843c47399d\"",
+      "etag": "\"10b8bc9f5677fd8808667b9a7ff310fa116d73f78720b7a52a95d1b9d1559bf5\"",
       "next": "",
       "value": []
     },
     "/repositories/272963353/pulls/3031/reviews?per_page=100": {
-      "etag": "\"1d9c0fba36dd8fa6635b1d72ca19b48b5ce5bd0b3f4d271ac6d21a843c47399d\"",
+      "etag": "\"10b8bc9f5677fd8808667b9a7ff310fa116d73f78720b7a52a95d1b9d1559bf5\"",
       "next": "",
       "value": []
     },
@@ -5865,10 +5906,45 @@
         }
       ]
     },
+    "/repositories/272963353/pulls/3033/comments?per_page=100": {
+      "etag": "\"10b8bc9f5677fd8808667b9a7ff310fa116d73f78720b7a52a95d1b9d1559bf5\"",
+      "next": "",
+      "value": []
+    },
+    "/repositories/272963353/pulls/3033/reviews?per_page=100": {
+      "etag": "W/\"e4ada8f8fb3a5c9b4c960eaaed0fcd38b0452315aa3192bf9d5b7527cd7720a9\"",
+      "next": "",
+      "value": [
+        {
+          "id": 5635224402,
+          "user": {
+            "id": 8418760,
+            "login": "Hayden-IO",
+            "type": "User"
+          },
+          "submitted_at": "2026-10-23T22:47:52Z",
+          "state": "APPROVED"
+        }
+      ]
+    },
     "/repositories/272963353/pulls?state=all\u0026sort=created\u0026direction=desc\u0026per_page=100": {
-      "etag": "W/\"7ca84fc851484f9a1305cca815214b85ace2fafef8b00a3fe326bb6fe69128b5\"",
+      "etag": "W/\"1d24c5426ef26bd4711818595541d9c79fe7fc03e865be1b5570d5a71c44d593\"",
       "next": "https://api.github.com/repositories/272963353/pulls?state=all\u0026sort=created\u0026direction=desc\u0026per_page=100\u0026page=2",
       "value": [
+        {
+          "updated_at": "2026-10-23T22:47:52Z",
+          "id": 4988215149,
+          "number": 3033,
+          "user": {
+            "id": 1304826,
+            "login": "loosebazooka",
+            "type": "User"
+          },
+          "created_at": "2026-10-23T19:31:33Z",
+          "draft": false,
+          "state": "open",
+          "merged_at": null
+        },
         {
           "updated_at": "2026-10-22T22:21:18Z",
           "id": 4973277150,
@@ -6514,7 +6590,7 @@
           "merged_at": "2026-09-24T14:56:34Z"
         },
         {
-          "updated_at": "2026-10-21T04:26:24Z",
+          "updated_at": "2026-10-23T23:10:50Z",
           "id": 4507375262,
           "number": 2981,
           "user": {
@@ -6524,8 +6600,8 @@
           },
           "created_at": "2026-09-11T15:35:16Z",
           "draft": false,
-          "state": "open",
-          "merged_at": null
+          "state": "closed",
+          "merged_at": "2026-10-23T23:10:50Z"
         },
         {
           "updated_at": "2026-09-07T13:34:21Z",
@@ -7254,7 +7330,13 @@
           "draft": false,
           "state": "closed",
           "merged_at": "2026-08-10T12:34:40Z"
-        },
+        }
+      ]
+    },
+    "https://api.github.com/repositories/272963353/pulls?state=all\u0026sort=created\u0026direction=desc\u0026per_page=100\u0026page=2": {
+      "etag": "W/\"03123182e6947a52cdeb2241625a2fad33c554004423b336c673ac21566790a6\"",
+      "next": "https://api.github.com/repositories/272963353/pulls?state=all\u0026sort=created\u0026direction=desc\u0026per_page=100\u0026page=3",
+      "value": [
         {
           "updated_at": "2026-08-10T11:54:02Z",
           "id": 4244253995,
@@ -7268,13 +7350,7 @@
           "draft": false,
           "state": "closed",
           "merged_at": "2026-08-10T11:54:01Z"
-        }
-      ]
-    },
-    "https://api.github.com/repositories/272963353/pulls?state=all\u0026sort=created\u0026direction=desc\u0026per_page=100\u0026page=2": {
-      "etag": "W/\"c49172deac17be7c8c6d79da5f4f7a24414a73661b464bda194846eb713c6cce\"",
-      "next": "https://api.github.com/repositories/272963353/pulls?state=all\u0026sort=created\u0026direction=desc\u0026per_page=100\u0026page=3",
-      "value": [
+        },
         {
           "updated_at": "2026-08-10T11:54:29Z",
           "id": 4244253033,
@@ -8660,20 +8736,6 @@
           "draft": false,
           "state": "closed",
           "merged_at": "2026-08-04T20:20:26Z"
-        },
-        {
-          "updated_at": "2026-05-05T14:18:57Z",
-          "id": 3629586992,
-          "number": 2822,
-          "user": {
-            "id": 2845093,
-            "login": "bobcallaway",
-            "type": "User"
-          },
-          "created_at": "2026-05-05T09:41:31Z",
-          "draft": false,
-          "state": "closed",
-          "merged_at": "2026-05-05T14:18:57Z"
         }
       ]
     }
