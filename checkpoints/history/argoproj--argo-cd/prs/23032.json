@@ -16,6 +16,14 @@
     "merged_at": "2025-05-19T10:24:42Z"
   },
   "state": {
+    "tracked_prs": {
+      "23032": {
+        "id": 2527429427,
+        "updated_at": "2025-08-17T10:31:53Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/23032/comments?per_page=100": {
+        "etag": "\"b147fa6fb4643f241c945b2b44726eedc905e624544d663fa4d803258592e9b5\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/23032/reviews?per_page=100": {
         "etag": "W/\"d91690c3570dd685c4e1c8b9514d49e5cd8d72e12bf3c7f16646d77278ff15c9\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2527429427,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-05-19T03:20:06Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2850251855",
+        "actor": {
+          "id": 37445536,
+          "login": "rumstead",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-19T10:24:33Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2889542071",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-05-19T04:01:59Z"
+      }
+    ],
+    "review_comments": []
   }
 }
