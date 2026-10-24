@@ -16,12 +16,40 @@
     "merged_at": "2025-05-27T04:56:55Z"
   },
   "state": {
+    "tracked_prs": {
+      "23163": {
+        "id": 2545211428,
+        "updated_at": "2025-08-25T05:00:18Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/23163/comments?per_page=100": {
+        "etag": "W/\"68ae460308d61a949cb05dd471b81cccbf35d7fba13900ba5264b4c7272f9606\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2911080318,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-05-27T04:45:15Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/23163/comments?per_page=100": {
+        "etag": "\"749edf3da35817f49668dc73482f03f1d610908e78e5330e28e29f2943a74519\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/23163/reviews?per_page=100": {
         "etag": "W/\"3fac1aa92d3ef6ecea87b933b0e71cb3a77b647fca7e44ad811b3bce06cd377b\"",
         "next": "",
@@ -41,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2545211428,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-05-27T04:02:16Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2869570593",
+        "actor": {
+          "id": 46771830,
+          "login": "ishitasequeira",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-27T04:56:46Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2911080318",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-05-27T04:45:15Z"
+      }
+    ],
+    "review_comments": []
   }
 }

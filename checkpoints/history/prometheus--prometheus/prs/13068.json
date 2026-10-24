@@ -16,6 +16,14 @@
     "merged_at": "2023-11-29T17:23:34Z"
   },
   "state": {
+    "tracked_prs": {
+      "13068": {
+        "id": 1583117201,
+        "updated_at": "2023-11-29T17:32:18Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -43,6 +51,75 @@
               "type": "User"
             },
             "created_at": "2023-11-27T18:08:59Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/13068/comments?per_page=100": {
+        "etag": "W/\"a95ca1479af75c7e96dbea77fc28c9d7b9757ddb4bd3963ba42c048e6273282d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1379205080,
+            "user": {
+              "id": 24193764,
+              "login": "ArthurSens",
+              "type": "User"
+            },
+            "created_at": "2023-11-01T19:13:32Z"
+          },
+          {
+            "id": 1379209455,
+            "user": {
+              "id": 3228886,
+              "login": "alexandear",
+              "type": "User"
+            },
+            "created_at": "2023-11-01T19:18:22Z"
+          },
+          {
+            "id": 1403260133,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-11-23T11:36:50Z"
+          },
+          {
+            "id": 1403262438,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-11-23T11:39:22Z"
+          },
+          {
+            "id": 1403268336,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-11-23T11:45:38Z"
+          },
+          {
+            "id": 1403270324,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-11-23T11:47:35Z"
+          },
+          {
+            "id": 1406559027,
+            "user": {
+              "id": 3228886,
+              "login": "alexandear",
+              "type": "User"
+            },
+            "created_at": "2023-11-27T18:09:17Z"
           }
         ]
       },
@@ -105,18 +182,156 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1583117201,
+    "author": {
+      "id": 3228886,
+      "login": "alexandear",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-11-01T18:27:36Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1708864698",
+        "actor": {
+          "id": 24193764,
+          "login": "ArthurSens",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-01T19:13:32Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1708871734",
+        "actor": {
+          "id": 3228886,
+          "login": "alexandear",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-01T19:18:22Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1746260090",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-23T11:48:09Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1751064802",
+        "actor": {
+          "id": 3228886,
+          "login": "alexandear",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-27T18:09:18Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1755832621",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-29T17:20:56Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1827706648",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-27T12:06:17Z"
+      },
+      {
+        "id": "1828362482",
+        "actor": {
+          "id": 3228886,
+          "login": "alexandear",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-27T18:08:59Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1379205080",
+        "actor": {
+          "id": 24193764,
+          "login": "ArthurSens",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-01T19:13:32Z"
+      },
+      {
+        "id": "1379209455",
+        "actor": {
+          "id": 3228886,
+          "login": "alexandear",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-01T19:18:22Z"
+      },
+      {
+        "id": "1403260133",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-23T11:36:50Z"
+      },
+      {
+        "id": "1403262438",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-23T11:39:22Z"
+      },
+      {
+        "id": "1403268336",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-23T11:45:38Z"
+      },
+      {
+        "id": "1403270324",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-23T11:47:35Z"
+      },
+      {
+        "id": "1406559027",
+        "actor": {
+          "id": 3228886,
+          "login": "alexandear",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-27T18:09:17Z"
+      }
+    ]
   }
 }

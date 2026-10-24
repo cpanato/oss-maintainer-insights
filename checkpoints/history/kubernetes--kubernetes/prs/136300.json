@@ -16,6 +16,14 @@
     "merged_at": "2026-01-19T02:17:11Z"
   },
   "state": {
+    "tracked_prs": {
+      "136300": {
+        "id": 3185284784,
+        "updated_at": "2026-01-19T13:01:57Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -122,6 +130,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/136300/comments?per_page=100": {
+        "etag": "\"749edf3da35817f49668dc73482f03f1d610908e78e5330e28e29f2943a74519\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/136300/reviews?per_page=100": {
         "etag": "\"eb272c6578522aebfaf0ba3125e3493ed778293cf99e6da76e4ff003d9a5f558\"",
         "next": "",
@@ -130,18 +143,117 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3185284784,
+    "author": {
+      "id": 146979751,
+      "login": "ShaanveerS",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2026-01-18T12:22:21Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "3765235196",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-18T12:22:30Z"
+      },
+      {
+        "id": "3765235213",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-18T12:22:31Z"
+      },
+      {
+        "id": "3765235783",
+        "actor": {
+          "id": 146979751,
+          "login": "ShaanveerS",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-18T12:23:15Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3766018499",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-19T01:22:19Z"
+      },
+      {
+        "id": "3766018694",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-19T01:22:26Z"
+      },
+      {
+        "id": "3766018896",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-19T01:22:33Z"
+      },
+      {
+        "id": "3766048974",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-19T01:42:14Z"
+      },
+      {
+        "id": "3766857011",
+        "actor": {
+          "id": 146979751,
+          "login": "ShaanveerS",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-19T07:26:10Z"
+      },
+      {
+        "id": "3768177173",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-19T12:48:35Z"
+      },
+      {
+        "id": "3768235538",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-19T13:01:57Z"
+      }
+    ],
+    "review_comments": []
   }
 }
