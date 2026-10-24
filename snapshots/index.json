@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-24T17:35:20Z",
+  "attempted_at": "2026-10-24T19:46:23Z",
   "entries": [
-    {
-      "repository": "ossf/scorecard",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "ossf/allstar",
       "status": "fresh",
@@ -19,9 +14,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 495,
       "progress": {
         "population": {
           "inspected_prs": 2000,
@@ -38,7 +32,7 @@
         },
         "enumerated_prs": 2000,
         "eligible_prs": 1832,
-        "covered_prs": 1667,
+        "covered_prs": 1832,
         "enumeration_complete": true
       }
     },
@@ -59,27 +53,8 @@
     },
     {
       "repository": "argoproj/argo-cd",
-      "status": "updated",
-      "requests": 23,
-      "progress": {
-        "population": {
-          "inspected_prs": 1200,
-          "human_authored_prs": 686,
-          "bot_authored_prs": 454,
-          "draft_prs": 30,
-          "missing_author_prs": 0,
-          "outside_window_prs": 30,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-07-26T14:18:13.000Z",
-          "end": "2026-10-24T14:18:13.000Z"
-        },
-        "enumerated_prs": 1200,
-        "eligible_prs": 1140,
-        "covered_prs": 1140,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "argoproj/argo-helm",
@@ -88,6 +63,11 @@
     },
     {
       "repository": "sigstore/rekor",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "ossf/scorecard",
       "status": "fresh",
       "requests": 0
     }

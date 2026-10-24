@@ -16,6 +16,14 @@
     "merged_at": "2023-08-05T09:51:38Z"
   },
   "state": {
+    "tracked_prs": {
+      "12579": {
+        "id": 1441966334,
+        "updated_at": "2023-08-06T23:47:04Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -26,6 +34,102 @@
         "etag": "\"29108e539a2ce923e3b062fbca2d56abad1d94eb1f8cef410aa73874901db192\"",
         "next": "",
         "value": []
+      },
+      "/repositories/6838921/pulls/12579/comments?per_page=100": {
+        "etag": "W/\"6c2b2cce72fb836d2cba434c38a3fd7147c52341a90821e3438281d51962b40a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1271297126,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-07-22T13:34:57Z"
+          },
+          {
+            "id": 1271297191,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-07-22T13:35:40Z"
+          },
+          {
+            "id": 1271297937,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-07-22T13:42:53Z"
+          },
+          {
+            "id": 1271298036,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-07-22T13:44:33Z"
+          },
+          {
+            "id": 1280064932,
+            "user": {
+              "id": 4017646,
+              "login": "charleskorn",
+              "type": "User"
+            },
+            "created_at": "2023-08-01T03:06:47Z"
+          },
+          {
+            "id": 1280065833,
+            "user": {
+              "id": 4017646,
+              "login": "charleskorn",
+              "type": "User"
+            },
+            "created_at": "2023-08-01T03:09:23Z"
+          },
+          {
+            "id": 1280068987,
+            "user": {
+              "id": 4017646,
+              "login": "charleskorn",
+              "type": "User"
+            },
+            "created_at": "2023-08-01T03:18:00Z"
+          },
+          {
+            "id": 1280073655,
+            "user": {
+              "id": 4017646,
+              "login": "charleskorn",
+              "type": "User"
+            },
+            "created_at": "2023-08-01T03:29:34Z"
+          },
+          {
+            "id": 1280392213,
+            "user": {
+              "id": 8125524,
+              "login": "bboreham",
+              "type": "User"
+            },
+            "created_at": "2023-08-01T09:57:56Z"
+          },
+          {
+            "id": 1281298825,
+            "user": {
+              "id": 4017646,
+              "login": "charleskorn",
+              "type": "User"
+            },
+            "created_at": "2023-08-02T01:49:04Z"
+          }
+        ]
       },
       "/repositories/6838921/pulls/12579/reviews?per_page=100": {
         "etag": "W/\"0bfab513f7eff74914abd38eaf79b2a05f903e4e9309dfe694a43d723f7115b1\"",
@@ -126,18 +230,204 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1441966334,
+    "author": {
+      "id": 4017646,
+      "login": "charleskorn",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-07-20T01:28:17Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1538829041",
+        "actor": {
+          "id": 1701904,
+          "login": "pracucci",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-20T09:18:30Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1542096624",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-22T13:58:07Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1556095867",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T03:06:47Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1556097342",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T03:09:23Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1556102188",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T03:18:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1556110244",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T03:29:34Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1556615081",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T09:57:56Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1556628877",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T10:05:50Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1558059983",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-02T01:49:04Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "1271297126",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-22T13:34:57Z"
+      },
+      {
+        "id": "1271297191",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-22T13:35:40Z"
+      },
+      {
+        "id": "1271297937",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-22T13:42:53Z"
+      },
+      {
+        "id": "1271298036",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-22T13:44:33Z"
+      },
+      {
+        "id": "1280064932",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T03:06:47Z"
+      },
+      {
+        "id": "1280065833",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T03:09:23Z"
+      },
+      {
+        "id": "1280068987",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T03:18:00Z"
+      },
+      {
+        "id": "1280073655",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T03:29:34Z"
+      },
+      {
+        "id": "1280392213",
+        "actor": {
+          "id": 8125524,
+          "login": "bboreham",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-01T09:57:56Z"
+      },
+      {
+        "id": "1281298825",
+        "actor": {
+          "id": 4017646,
+          "login": "charleskorn",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-02T01:49:04Z"
+      }
+    ]
   }
 }
