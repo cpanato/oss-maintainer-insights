@@ -1,0 +1,269 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-12-18T04:00:34Z",
+    "id": 3003978338,
+    "number": 135283,
+    "user": {
+      "id": 37139544,
+      "login": "laervn",
+      "type": "User"
+    },
+    "created_at": "2025-11-12T19:13:19Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-12-18T04:00:32Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "135283": {
+        "id": 3003978338,
+        "updated_at": "2025-12-18T04:00:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/135283/comments?per_page=100": {
+        "etag": "W/\"3da9a177897629c823014ba8e07afea6490b816201303a6440bd2c81b6451528\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3523510912,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-12T19:13:29Z"
+          },
+          {
+            "id": 3576357636,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "created_at": "2025-11-25T15:55:35Z"
+          },
+          {
+            "id": 3576454919,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-25T16:16:08Z"
+          },
+          {
+            "id": 3576455396,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-25T16:16:14Z"
+          },
+          {
+            "id": 3576455595,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "created_at": "2025-11-25T16:16:16Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/135283/comments?per_page=100": {
+        "etag": "W/\"046cf5ab31810e85ac4d319b58d810464e6a7207db7f66b99eb33528d8bac084\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2556184926,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "created_at": "2025-11-24T12:53:36Z"
+          },
+          {
+            "id": 2557589829,
+            "user": {
+              "id": 37139544,
+              "login": "laervn",
+              "type": "User"
+            },
+            "created_at": "2025-11-24T20:09:21Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/135283/reviews?per_page=100": {
+        "etag": "W/\"e842e9feae3b0ded7c9a2bc39d9eb36ddc32ac86e2ce189491f22f5c87c83364\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3500243673,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "submitted_at": "2025-11-24T12:53:52Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3502071701,
+            "user": {
+              "id": 37139544,
+              "login": "laervn",
+              "type": "User"
+            },
+            "submitted_at": "2025-11-24T20:09:21Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3505854180,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "submitted_at": "2025-11-25T16:16:00Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3003978338,
+    "author": {
+      "id": 37139544,
+      "login": "laervn",
+      "type": "User"
+    },
+    "created_at": "2025-11-12T19:13:19Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3500243673",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T12:53:52Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3502071701",
+        "actor": {
+          "id": 37139544,
+          "login": "laervn",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T20:09:21Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3505854180",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-25T16:16:00Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3523510912",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-12T19:13:29Z"
+      },
+      {
+        "id": "3576357636",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-25T15:55:35Z"
+      },
+      {
+        "id": "3576454919",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-25T16:16:08Z"
+      },
+      {
+        "id": "3576455396",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-25T16:16:14Z"
+      },
+      {
+        "id": "3576455595",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-25T16:16:16Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2556184926",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T12:53:36Z"
+      },
+      {
+        "id": "2557589829",
+        "actor": {
+          "id": 37139544,
+          "login": "laervn",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T20:09:21Z"
+      }
+    ]
+  }
+}
