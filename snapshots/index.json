@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-25T21:13:37Z",
+  "attempted_at": "2026-10-25T23:32:14Z",
   "entries": [
-    {
-      "repository": "argoproj/argo-helm",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "sigstore/rekor",
       "status": "fresh",
@@ -29,27 +24,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "updated",
-      "requests": 408,
-      "progress": {
-        "population": {
-          "inspected_prs": 2000,
-          "human_authored_prs": 1832,
-          "bot_authored_prs": 0,
-          "draft_prs": 79,
-          "missing_author_prs": 2,
-          "outside_window_prs": 87,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-07-27T14:40:18.000Z",
-          "end": "2026-10-25T14:40:18.000Z"
-        },
-        "enumerated_prs": 2000,
-        "eligible_prs": 1832,
-        "covered_prs": 1832,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "prometheus/prometheus",
@@ -68,6 +44,11 @@
     },
     {
       "repository": "argoproj/argo-cd",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "argoproj/argo-helm",
       "status": "fresh",
       "requests": 0
     }
