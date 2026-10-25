@@ -1,8 +1,8 @@
 {
-  "generation": 2,
-  "observed_at": "2026-10-14T15:12:29Z",
+  "generation": 3,
+  "observed_at": "2026-10-24T17:39:53Z",
   "pr": {
-    "updated_at": "2026-10-02T21:22:05Z",
+    "updated_at": "2026-10-20T10:28:38Z",
     "id": 4031288035,
     "number": 9013,
     "user": {
@@ -19,8 +19,8 @@
     "tracked_prs": {
       "9013": {
         "id": 4031288035,
-        "updated_at": "2026-10-02T21:22:05Z",
-        "checked_at": "2026-10-14T15:12:29Z",
+        "updated_at": "2026-10-20T10:28:38Z",
+        "checked_at": "2026-10-24T17:39:53Z",
         "state": "open"
       }
     },
@@ -31,7 +31,7 @@
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/9013/comments?per_page=100": {
-        "etag": "W/\"ec696137f769502053cad5a862fbf95e5f5d5a9b1bbb71ce1c7991294be1c047\"",
+        "etag": "W/\"fe87a94467fd1dc8feb3e04a05c7eff2f5f946574c8f48ae92485dfd504374bc\"",
         "next": "",
         "value": [
           {
@@ -105,18 +105,94 @@
               "type": "User"
             },
             "created_at": "2026-10-02T21:22:05Z"
+          },
+          {
+            "id": 6288858434,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2026-10-20T10:28:38Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9013/comments?per_page=100": {
-        "etag": "\"1236038aefc2a8e9e34d3de14ad0411a7f9dafa0215807be403d02671cfeb1bf\"",
+        "etag": "W/\"c117a64a3176eaa746bc8759aab26737401ae6c8395ebc30e81157889fc4dc39\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 4320001344,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-19T23:43:45Z"
+          },
+          {
+            "id": 4320001394,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-19T23:43:46Z"
+          },
+          {
+            "id": 4320001421,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-19T23:43:46Z"
+          },
+          {
+            "id": 4320001455,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-19T23:43:46Z"
+          },
+          {
+            "id": 4323957867,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "created_at": "2026-10-20T10:27:58Z"
+          }
+        ]
       },
       "/repositories/92313258/pulls/9013/reviews?per_page=100": {
-        "etag": "\"1236038aefc2a8e9e34d3de14ad0411a7f9dafa0215807be403d02671cfeb1bf\"",
+        "etag": "W/\"ead80829a5879c7363623b769568737094e2b616aa652e968aa0f6e857fec871\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5579077137,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-10-19T23:43:47Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5583816256,
+            "user": {
+              "id": 15379715,
+              "login": "ThatsMrTalbot",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-20T10:27:58Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -135,7 +211,28 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5579077137",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-19T23:43:47Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5583816256",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-20T10:27:58Z",
+        "state": "COMMENTED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "4937962324",
@@ -208,8 +305,63 @@
           "type": "User"
         },
         "occurred_at": "2026-10-02T21:22:05Z"
+      },
+      {
+        "id": "6288858434",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-20T10:28:38Z"
       }
     ],
-    "review_comments": []
+    "review_comments": [
+      {
+        "id": "4320001344",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-19T23:43:45Z"
+      },
+      {
+        "id": "4320001394",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-19T23:43:46Z"
+      },
+      {
+        "id": "4320001421",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-19T23:43:46Z"
+      },
+      {
+        "id": "4320001455",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-19T23:43:46Z"
+      },
+      {
+        "id": "4323957867",
+        "actor": {
+          "id": 15379715,
+          "login": "ThatsMrTalbot",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-20T10:27:58Z"
+      }
+    ]
   }
 }

@@ -16,12 +16,157 @@
     "merged_at": "2025-11-26T19:50:25Z"
   },
   "state": {
+    "tracked_prs": {
+      "135461": {
+        "id": 3047953716,
+        "updated_at": "2026-03-11T15:15:05Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/135461/comments?per_page=100": {
+        "etag": "W/\"6d7c552264b2cb12f6ef93a89e3cf1d94770a8ee12248f503a19a7298afecf75\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3581758431,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T15:10:10Z"
+          },
+          {
+            "id": 3581758847,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T15:10:15Z"
+          },
+          {
+            "id": 3581759978,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T15:10:26Z"
+          },
+          {
+            "id": 3581762074,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T15:10:49Z"
+          },
+          {
+            "id": 3581763037,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T15:11:02Z"
+          },
+          {
+            "id": 3582014618,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T15:55:31Z"
+          },
+          {
+            "id": 3582187196,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T16:39:38Z"
+          },
+          {
+            "id": 3582355693,
+            "user": {
+              "id": 12025863,
+              "login": "yt2985",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T17:10:22Z"
+          },
+          {
+            "id": 3582366826,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T17:13:00Z"
+          },
+          {
+            "id": 3582513085,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T17:40:47Z"
+          },
+          {
+            "id": 3582598050,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T18:06:13Z"
+          },
+          {
+            "id": 3582972525,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T19:44:38Z"
+          },
+          {
+            "id": 3582978376,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T19:46:35Z"
+          },
+          {
+            "id": 3582987124,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-26T19:49:30Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/135461/comments?per_page=100": {
+        "etag": "\"4d206ddb5844a2f34d3bdf25d78ae307a846c1f4f79f58cc1cfd8230880f4826\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/135461/reviews?per_page=100": {
         "etag": "W/\"ccba9745a024ef7bba4e504984deb33b646ddc20c2310cec756074f2a1076325\"",
         "next": "",
@@ -44,18 +189,163 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 3047953716,
+    "author": {
+      "id": 980082,
+      "login": "liggitt",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-11-26T15:10:06Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3512547302",
+        "actor": {
+          "id": 10608509,
+          "login": "aramase",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T19:49:20Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3581758431",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T15:10:10Z"
+      },
+      {
+        "id": "3581758847",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T15:10:15Z"
+      },
+      {
+        "id": "3581759978",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T15:10:26Z"
+      },
+      {
+        "id": "3581762074",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T15:10:49Z"
+      },
+      {
+        "id": "3581763037",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T15:11:02Z"
+      },
+      {
+        "id": "3582014618",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T15:55:31Z"
+      },
+      {
+        "id": "3582187196",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T16:39:38Z"
+      },
+      {
+        "id": "3582355693",
+        "actor": {
+          "id": 12025863,
+          "login": "yt2985",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T17:10:22Z"
+      },
+      {
+        "id": "3582366826",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T17:13:00Z"
+      },
+      {
+        "id": "3582513085",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T17:40:47Z"
+      },
+      {
+        "id": "3582598050",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T18:06:13Z"
+      },
+      {
+        "id": "3582972525",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T19:44:38Z"
+      },
+      {
+        "id": "3582978376",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T19:46:35Z"
+      },
+      {
+        "id": "3582987124",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-26T19:49:30Z"
+      }
+    ],
+    "review_comments": []
   }
 }

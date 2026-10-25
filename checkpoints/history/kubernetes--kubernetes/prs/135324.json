@@ -1,0 +1,287 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-12-18T04:00:56Z",
+    "id": 3016562451,
+    "number": 135324,
+    "user": {
+      "id": 21304151,
+      "login": "p0lyn0mial",
+      "type": "User"
+    },
+    "created_at": "2025-11-17T08:28:37Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-12-18T04:00:54Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "135324": {
+        "id": 3016562451,
+        "updated_at": "2025-12-18T04:00:56Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/135324/comments?per_page=100": {
+        "etag": "W/\"9bca305f21c7afcf9e6ea57c4de5650430029041c42f462068fe0c57060c85dc\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3540529651,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-17T08:28:52Z"
+          },
+          {
+            "id": 3540529687,
+            "user": {
+              "id": 21304151,
+              "login": "p0lyn0mial",
+              "type": "User"
+            },
+            "created_at": "2025-11-17T08:28:53Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3569609819,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "created_at": "2025-11-24T08:57:33Z"
+          },
+          {
+            "id": 3569610362,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-24T08:57:41Z"
+          },
+          {
+            "id": 3569610645,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-11-24T08:57:45Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/135324/comments?per_page=100": {
+        "etag": "W/\"c0bbd292d03a51b6dafdcb8c90cdf5ef02bfe10e37afbad355f854d768763d6d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2533398138,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2025-11-17T09:44:37Z"
+          },
+          {
+            "id": 2555241057,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "created_at": "2025-11-24T08:57:20Z"
+          },
+          {
+            "id": 2555717434,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2025-11-24T10:42:46Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/135324/reviews?per_page=100": {
+        "etag": "W/\"5f4478c4d09ab3aa406d5a7d198719d2b622fdd66d2852ee386e08f18ffc8c90\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3471875748,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2025-11-17T09:44:37Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3499071253,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "submitted_at": "2025-11-24T08:57:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3499663197,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2025-11-24T10:42:46Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 3016562451,
+    "author": {
+      "id": 21304151,
+      "login": "p0lyn0mial",
+      "type": "User"
+    },
+    "created_at": "2025-11-17T08:28:37Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3471875748",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-17T09:44:37Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3499071253",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T08:57:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3499663197",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T10:42:46Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3540529651",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-17T08:28:52Z"
+      },
+      {
+        "id": "3540529687",
+        "actor": {
+          "id": 21304151,
+          "login": "p0lyn0mial",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-17T08:28:53Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3569609819",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T08:57:33Z"
+      },
+      {
+        "id": "3569610362",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T08:57:41Z"
+      },
+      {
+        "id": "3569610645",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T08:57:45Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2533398138",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-17T09:44:37Z"
+      },
+      {
+        "id": "2555241057",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T08:57:20Z"
+      },
+      {
+        "id": "2555717434",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2025-11-24T10:42:46Z"
+      }
+    ]
+  }
+}
