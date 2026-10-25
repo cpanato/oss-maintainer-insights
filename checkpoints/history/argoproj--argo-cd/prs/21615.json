@@ -16,26 +16,248 @@
     "merged_at": "2025-01-22T16:39:56Z"
   },
   "state": {
+    "tracked_prs": {
+      "21615": {
+        "id": 2290937415,
+        "updated_at": "2025-04-22T17:01:01Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/21615/comments?per_page=100": {
+        "etag": "W/\"21502e7f4adfe2817bcf1979d783ec9f65a7d6141965e082d3290108172e5747\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2605838658,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-01-21T22:07:58Z"
+          },
+          {
+            "id": 2605892841,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-01-21T22:44:53Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/21615/comments?per_page=100": {
+        "etag": "W/\"45989bc176d4fcaf20fada3805d87a89dd127674711f853fcf44ee8b62fc705d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1925540367,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2025-01-22T15:38:54Z"
+          },
+          {
+            "id": 1925541290,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2025-01-22T15:39:32Z"
+          },
+          {
+            "id": 1925558592,
+            "user": {
+              "id": 47184027,
+              "login": "agaudreault",
+              "type": "User"
+            },
+            "created_at": "2025-01-22T15:50:04Z"
+          },
+          {
+            "id": 1925565209,
+            "user": {
+              "id": 47184027,
+              "login": "agaudreault",
+              "type": "User"
+            },
+            "created_at": "2025-01-22T15:54:09Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/21615/reviews?per_page=100": {
+        "etag": "W/\"daf01732ca2c8e5bce0bdb6fcfabdeb915273bc5274d3b70cbb5db028635b4bb\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2567576903,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-22T15:39:47Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 2567607389,
+            "user": {
+              "id": 47184027,
+              "login": "agaudreault",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-22T15:50:04Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2567618347,
+            "user": {
+              "id": 47184027,
+              "login": "agaudreault",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-22T15:54:09Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2567739821,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-22T16:39:54Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2290937415,
+    "author": {
+      "id": 47184027,
+      "login": "agaudreault",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-01-21T22:07:50Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2567576903",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T15:39:47Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2567607389",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T15:50:04Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2567618347",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T15:54:09Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2567739821",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T16:39:54Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2605838658",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-01-21T22:07:58Z"
+      },
+      {
+        "id": "2605892841",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-01-21T22:44:53Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1925540367",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T15:38:54Z"
+      },
+      {
+        "id": "1925541290",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T15:39:32Z"
+      },
+      {
+        "id": "1925558592",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T15:50:04Z"
+      },
+      {
+        "id": "1925565209",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-22T15:54:09Z"
+      }
+    ]
   }
 }
