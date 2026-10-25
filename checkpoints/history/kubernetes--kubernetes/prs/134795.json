@@ -1,0 +1,241 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-10-29T14:14:06Z",
+    "id": 2938542049,
+    "number": 134795,
+    "user": {
+      "id": 11724300,
+      "login": "aditigupta96",
+      "type": "User"
+    },
+    "created_at": "2025-10-22T21:19:45Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-10-29T14:14:04Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "134795": {
+        "id": 2938542049,
+        "updated_at": "2025-10-29T14:14:06Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/134795/comments?per_page=100": {
+        "etag": "W/\"57b13df14fa9e83a851388d614388160a67656439edd0d8781f7a13fba9be466\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3434243518,
+            "user": {
+              "id": 11724300,
+              "login": "aditigupta96",
+              "type": "User"
+            },
+            "created_at": "2025-10-22T21:20:31Z"
+          },
+          {
+            "id": 3460349634,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-10-29T08:29:19Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 3460980341,
+            "user": {
+              "id": 730123,
+              "login": "sttts",
+              "type": "User"
+            },
+            "created_at": "2025-10-29T11:13:26Z"
+          },
+          {
+            "id": 3461506292,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "created_at": "2025-10-29T13:25:09Z"
+          },
+          {
+            "id": 3461506648,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-10-29T13:25:13Z"
+          },
+          {
+            "id": 3461507192,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "created_at": "2025-10-29T13:25:18Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/134795/comments?per_page=100": {
+        "etag": "\"f6ca34b5158d9b7a4dbda9b506e0410fef4ebbfa3bd1edf8cb906291b5cb997c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/134795/reviews?per_page=100": {
+        "etag": "W/\"61b1eb8566badd90ad41a3125fed454e6a8acc0755f61cb825aa44a12de17650\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3392173594,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2025-10-29T08:29:08Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3393366818,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "submitted_at": "2025-10-29T13:24:56Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2938542049,
+    "author": {
+      "id": 11724300,
+      "login": "aditigupta96",
+      "type": "User"
+    },
+    "created_at": "2025-10-22T21:19:45Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3392173594",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-29T08:29:08Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3393366818",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-29T13:24:56Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3434243518",
+        "actor": {
+          "id": 11724300,
+          "login": "aditigupta96",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-22T21:20:31Z"
+      },
+      {
+        "id": "3460349634",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-29T08:29:19Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "3460980341",
+        "actor": {
+          "id": 730123,
+          "login": "sttts",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-29T11:13:26Z"
+      },
+      {
+        "id": "3461506292",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-29T13:25:09Z"
+      },
+      {
+        "id": "3461506648",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-29T13:25:13Z"
+      },
+      {
+        "id": "3461507192",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-29T13:25:18Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
