@@ -16,12 +16,95 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "21448": {
+        "id": 2269930998,
+        "updated_at": "2026-01-26T13:24:56Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/21448/comments?per_page=100": {
+        "etag": "W/\"31045f121f39302ba0bb092938b602dfe4f5b968bf6f7f9df00964c017829786\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2582011880,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-01-10T08:08:00Z"
+          },
+          {
+            "id": 2582611669,
+            "user": {
+              "id": 2119212,
+              "login": "jsoref",
+              "type": "User"
+            },
+            "created_at": "2025-01-10T12:35:06Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/21448/comments?per_page=100": {
+        "etag": "W/\"15bc16b4185e321c0808b76666fcad4bc45e7472cee188544b5e5b1ff0990a8d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1911333644,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2025-01-10T20:49:18Z"
+          },
+          {
+            "id": 1911334359,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2025-01-10T20:49:37Z"
+          },
+          {
+            "id": 1911451161,
+            "user": {
+              "id": 2119212,
+              "login": "jsoref",
+              "type": "User"
+            },
+            "created_at": "2025-01-10T21:36:29Z"
+          },
+          {
+            "id": 1912069901,
+            "user": {
+              "id": 91555602,
+              "login": "surajyadav1108",
+              "type": "User"
+            },
+            "created_at": "2025-01-11T15:47:04Z"
+          },
+          {
+            "id": 1912072222,
+            "user": {
+              "id": 91555602,
+              "login": "surajyadav1108",
+              "type": "User"
+            },
+            "created_at": "2025-01-11T15:59:12Z"
+          }
+        ]
+      },
       "/repositories/120896210/pulls/21448/reviews?per_page=100": {
         "etag": "W/\"e57619fafe4a96e55a56cfad7442bb83b1db70cc8a97754f8412d6ef21caa255\"",
         "next": "",
@@ -81,18 +164,138 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2269930998,
+    "author": {
+      "id": 91555602,
+      "login": "surajyadav1108",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-01-10T08:07:52Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2543807564",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-10T20:49:53Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2543968776",
+        "actor": {
+          "id": 2119212,
+          "login": "jsoref",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-10T21:36:29Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2544905194",
+        "actor": {
+          "id": 91555602,
+          "login": "surajyadav1108",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-11T15:47:04Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2544931297",
+        "actor": {
+          "id": 91555602,
+          "login": "surajyadav1108",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-11T15:59:13Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2551130324",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-14T22:15:06Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2582011880",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-01-10T08:08:00Z"
+      },
+      {
+        "id": "2582611669",
+        "actor": {
+          "id": 2119212,
+          "login": "jsoref",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-10T12:35:06Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1911333644",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-10T20:49:18Z"
+      },
+      {
+        "id": "1911334359",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-10T20:49:37Z"
+      },
+      {
+        "id": "1911451161",
+        "actor": {
+          "id": 2119212,
+          "login": "jsoref",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-10T21:36:29Z"
+      },
+      {
+        "id": "1912069901",
+        "actor": {
+          "id": 91555602,
+          "login": "surajyadav1108",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-11T15:47:04Z"
+      },
+      {
+        "id": "1912072222",
+        "actor": {
+          "id": 91555602,
+          "login": "surajyadav1108",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-11T15:59:12Z"
+      }
+    ]
   }
 }

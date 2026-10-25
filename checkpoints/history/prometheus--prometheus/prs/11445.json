@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "11445": {
+        "id": 1083415647,
+        "updated_at": "2023-07-11T11:45:21Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -46,6 +54,11 @@
           }
         ]
       },
+      "/repositories/6838921/pulls/11445/comments?per_page=100": {
+        "etag": "\"a105117c557c1e2fd04ac0a3626ae5d86ecb8049cf3fa7f6db89eeef0dacb640\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/6838921/pulls/11445/reviews?per_page=100": {
         "etag": "\"a3e7bf140b0102ed0cc83925b725b4f2b5211d72c9905438fc73465cccfebe8b\"",
         "next": "",
@@ -54,18 +67,41 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1083415647,
+    "author": {
+      "id": 89515852,
+      "login": "derekcheong",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-10-11T14:30:10Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "1275371637",
+        "actor": {
+          "id": 291750,
+          "login": "roidelapluie",
+          "type": "User"
+        },
+        "occurred_at": "2022-10-11T22:52:37Z"
+      },
+      {
+        "id": "1630674219",
+        "actor": {
+          "id": 291750,
+          "login": "roidelapluie",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-11T11:45:20Z"
+      }
+    ],
+    "review_comments": []
   }
 }
