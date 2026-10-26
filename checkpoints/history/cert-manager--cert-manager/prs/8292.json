@@ -16,12 +16,79 @@
     "merged_at": "2025-12-03T12:13:47Z"
   },
   "state": {
+    "tracked_prs": {
+      "8292": {
+        "id": 3065684165,
+        "updated_at": "2025-12-04T02:35:25Z",
+        "checked_at": "2026-10-24T17:39:53Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
-    "pages": {}
+    "pages": {
+      "/repositories/92313258/issues/8292/comments?per_page=100": {
+        "etag": "W/\"47514e8e7345b12216c9e998451e6fdd692ecfcdef40bb00b5b1a3809df761b6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3604788166,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-03T02:34:54Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3606514408,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2025-12-03T11:57:58Z"
+          },
+          {
+            "id": 3606514880,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-03T11:58:06Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8292/comments?per_page=100": {
+        "etag": "\"857940b99f6e0d59e181a0fcbb3dc0e0b2b134c30cd2022cfbee8cde2c36d719\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8292/reviews?per_page=100": {
+        "etag": "W/\"6e6828cdff65fcccb60f83042b7e05e4386e6f27e8ce4f97260b68a358ff1e00\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3534708734,
+            "user": {
+              "id": 188351318,
+              "login": "wallrj-cyberark",
+              "type": "User"
+            },
+            "submitted_at": "2025-12-03T11:57:29Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
     "id": 3065684165,

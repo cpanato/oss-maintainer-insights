@@ -16,12 +16,86 @@
     "merged_at": "2022-07-13T16:06:56Z"
   },
   "state": {
+    "tracked_prs": {
+      "10908": {
+        "id": 977133717,
+        "updated_at": "2022-12-07T17:28:50Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
     "pages": {
+      "/repositories/6838921/issues/10908/comments?per_page=100": {
+        "etag": "W/\"db71c203164dd63f1291949692141250385dc3678e93f188cc76c41271e985b0\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1179149358,
+            "user": {
+              "id": 6040960,
+              "login": "raptorsun",
+              "type": "User"
+            },
+            "created_at": "2022-07-08T16:03:06Z"
+          },
+          {
+            "id": 1183390526,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "created_at": "2022-07-13T15:48:08Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/10908/comments?per_page=100": {
+        "etag": "W/\"2f90d526399fc186fece1d772377d2bbe461fd9546db89cc2c77ae87deb56ef1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 908412380,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "created_at": "2022-06-28T12:21:57Z"
+          },
+          {
+            "id": 908418146,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "created_at": "2022-06-28T12:28:06Z"
+          },
+          {
+            "id": 919986875,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "created_at": "2022-07-13T11:52:31Z"
+          },
+          {
+            "id": 919992648,
+            "user": {
+              "id": 6040960,
+              "login": "raptorsun",
+              "type": "User"
+            },
+            "created_at": "2022-07-13T11:59:34Z"
+          }
+        ]
+      },
       "/repositories/6838921/pulls/10908/reviews?per_page=100": {
         "etag": "W/\"0a287cbf2000021e48fdc93da5da598bca089adee76af7351ece0da3cc84c494\"",
         "next": "",
@@ -71,18 +145,119 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 977133717,
+    "author": {
+      "id": 6040960,
+      "login": "raptorsun",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-06-23T13:06:22Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1021637702",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-06-28T12:33:00Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "1037230961",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-13T11:54:06Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "1037239045",
+        "actor": {
+          "id": 6040960,
+          "login": "raptorsun",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-13T11:59:34Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1037251976",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-13T12:10:06Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1179149358",
+        "actor": {
+          "id": 6040960,
+          "login": "raptorsun",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-08T16:03:06Z"
+      },
+      {
+        "id": "1183390526",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-13T15:48:08Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "908412380",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-06-28T12:21:57Z"
+      },
+      {
+        "id": "908418146",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-06-28T12:28:06Z"
+      },
+      {
+        "id": "919986875",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-13T11:52:31Z"
+      },
+      {
+        "id": "919992648",
+        "actor": {
+          "id": 6040960,
+          "login": "raptorsun",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-13T11:59:34Z"
+      }
+    ]
   }
 }
