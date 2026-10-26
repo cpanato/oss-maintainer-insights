@@ -16,12 +16,86 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "20422": {
+        "id": 2130082866,
+        "updated_at": "2026-04-06T05:25:29Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "open"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/20422/comments?per_page=100": {
+        "etag": "W/\"a95acd4b7d549870d5c57342fdaf93dff629f3a25562ef660f9839b80eeba4cf\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2419421071,
+            "user": {
+              "id": 134501772,
+              "login": "bunnyshell[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2024-10-17T12:34:06Z"
+          },
+          {
+            "id": 2419564627,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2024-10-17T13:33:39Z"
+          },
+          {
+            "id": 2420153271,
+            "user": {
+              "id": 9774989,
+              "login": "4ch3los",
+              "type": "User"
+            },
+            "created_at": "2024-10-17T17:54:46Z"
+          },
+          {
+            "id": 2420172539,
+            "user": {
+              "id": 3942683,
+              "login": "jannfis",
+              "type": "User"
+            },
+            "created_at": "2024-10-17T18:01:28Z"
+          },
+          {
+            "id": 2420250301,
+            "user": {
+              "id": 9774989,
+              "login": "4ch3los",
+              "type": "User"
+            },
+            "created_at": "2024-10-17T18:29:09Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/20422/comments?per_page=100": {
+        "etag": "W/\"8d17de428487dbfe041900a694ea79c64c5d6051aa019e94df66d364303412cc\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1835268633,
+            "user": {
+              "id": 137232734,
+              "login": "andrii-korotkov-verkada",
+              "type": "User"
+            },
+            "created_at": "2024-11-09T03:55:38Z"
+          }
+        ]
+      },
       "/repositories/120896210/pulls/20422/reviews?per_page=100": {
         "etag": "W/\"421ce30220b8c0fc2bcef203eeeabb95667fbe6fa9e4c1a3e2c4fc89e1d18d50\"",
         "next": "",
@@ -61,18 +135,109 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2130082866,
+    "author": {
+      "id": 9774989,
+      "login": "4ch3los",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-10-17T12:34:00Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2375843407",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-17T17:25:08Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2375968123",
+        "actor": {
+          "id": 47184027,
+          "login": "agaudreault",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-17T18:21:30Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2425206830",
+        "actor": {
+          "id": 137232734,
+          "login": "andrii-korotkov-verkada",
+          "type": "User"
+        },
+        "occurred_at": "2024-11-09T03:56:22Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2419421071",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-10-17T12:34:06Z"
+      },
+      {
+        "id": "2419564627",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-10-17T13:33:39Z"
+      },
+      {
+        "id": "2420153271",
+        "actor": {
+          "id": 9774989,
+          "login": "4ch3los",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-17T17:54:46Z"
+      },
+      {
+        "id": "2420172539",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-17T18:01:28Z"
+      },
+      {
+        "id": "2420250301",
+        "actor": {
+          "id": 9774989,
+          "login": "4ch3los",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-17T18:29:09Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1835268633",
+        "actor": {
+          "id": 137232734,
+          "login": "andrii-korotkov-verkada",
+          "type": "User"
+        },
+        "occurred_at": "2024-11-09T03:55:38Z"
+      }
+    ]
   }
 }

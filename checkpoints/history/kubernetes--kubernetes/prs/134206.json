@@ -16,12 +16,113 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "134206": {
+        "id": 2850226084,
+        "updated_at": "2026-02-21T00:00:21Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/134206/comments?per_page=100": {
+        "etag": "W/\"0b5defce86971476c66bfd39a6b0c4a85f735991640303a46dbda316e6d31ef9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3320051932,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-09-22T16:30:05Z"
+          },
+          {
+            "id": 3320052320,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-09-22T16:30:12Z"
+          },
+          {
+            "id": 3320052383,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-09-22T16:30:13Z"
+          },
+          {
+            "id": 3320054499,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-09-22T16:30:37Z"
+          },
+          {
+            "id": 3684466623,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2025-12-22T22:59:07Z"
+          },
+          {
+            "id": 3781686584,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2026-01-21T23:49:34Z"
+          },
+          {
+            "id": 3937700919,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2026-02-21T00:00:15Z"
+          },
+          {
+            "id": 3937701139,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-02-21T00:00:21Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/134206/comments?per_page=100": {
+        "etag": "W/\"9e71a651e14fd73aaa2571659f29e34b4f305d481f25cf2b1cae796c4320b9a5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2373576234,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2025-09-23T22:19:05Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/134206/reviews?per_page=100": {
         "etag": "W/\"d73adac862de5e98ecb16a189c1ba79c8d3a6a79b2b73ae4eb3c6f445119adfe\"",
         "next": "",
@@ -41,18 +142,116 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2850226084,
+    "author": {
+      "id": 8581805,
+      "login": "tarikly",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-09-22T16:30:02Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3259750269",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-23T22:19:06Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3320051932",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-22T16:30:05Z"
+      },
+      {
+        "id": "3320052320",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-22T16:30:12Z"
+      },
+      {
+        "id": "3320052383",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-22T16:30:13Z"
+      },
+      {
+        "id": "3320054499",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-22T16:30:37Z"
+      },
+      {
+        "id": "3684466623",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-12-22T22:59:07Z"
+      },
+      {
+        "id": "3781686584",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-21T23:49:34Z"
+      },
+      {
+        "id": "3937700919",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-21T00:00:15Z"
+      },
+      {
+        "id": "3937701139",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-21T00:00:21Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2373576234",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-23T22:19:05Z"
+      }
+    ]
   }
 }

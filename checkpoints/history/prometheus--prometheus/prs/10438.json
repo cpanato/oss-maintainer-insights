@@ -16,12 +16,58 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "10438": {
+        "id": 877332954,
+        "updated_at": "2022-03-21T18:17:29Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
     "pages": {
+      "/repositories/6838921/issues/10438/comments?per_page=100": {
+        "etag": "W/\"86e0554a2c02d5b89d97a2f2283427a1687b967ca3306d412db0d834c26219cc\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1065033532,
+            "user": {
+              "id": 458501,
+              "login": "jan--f",
+              "type": "User"
+            },
+            "created_at": "2022-03-11T11:37:24Z"
+          },
+          {
+            "id": 1065090975,
+            "user": {
+              "id": 4548045,
+              "login": "Nexucis",
+              "type": "User"
+            },
+            "created_at": "2022-03-11T12:59:04Z"
+          },
+          {
+            "id": 1074252747,
+            "user": {
+              "id": 4548045,
+              "login": "Nexucis",
+              "type": "User"
+            },
+            "created_at": "2022-03-21T18:17:28Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/10438/comments?per_page=100": {
+        "etag": "\"c0c58a3996177de119288f6fa5d8a1c4566d04b2910d3d5e672589ccc2368fef\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/6838921/pulls/10438/reviews?per_page=100": {
         "etag": "\"eea8606ba758ea8a9a00262d3890c55469d80f357907245c59cf9286f5e5d78c\"",
         "next": "",
@@ -30,18 +76,50 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 877332954,
+    "author": {
+      "id": 5461414,
+      "login": "jgbernalp",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-03-11T11:18:13Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "1065033532",
+        "actor": {
+          "id": 458501,
+          "login": "jan--f",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-11T11:37:24Z"
+      },
+      {
+        "id": "1065090975",
+        "actor": {
+          "id": 4548045,
+          "login": "Nexucis",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-11T12:59:04Z"
+      },
+      {
+        "id": "1074252747",
+        "actor": {
+          "id": 4548045,
+          "login": "Nexucis",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-21T18:17:28Z"
+      }
+    ],
+    "review_comments": []
   }
 }
