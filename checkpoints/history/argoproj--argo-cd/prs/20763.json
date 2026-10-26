@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "20763": {
+        "id": 2174218491,
+        "updated_at": "2025-03-13T19:30:51Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -55,6 +63,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/20763/comments?per_page=100": {
+        "etag": "\"e8698052c66f8f13d1670863f9e30f53b1c13f7694ea36198ccce1322072df1e\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/20763/reviews?per_page=100": {
         "etag": "W/\"565817b83e7c2a8cc4204dc69d76bd8b27a4b1dc6d25091e2f583b704cd85fec\"",
         "next": "",
@@ -74,18 +87,61 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2174218491,
+    "author": {
+      "id": 29139614,
+      "login": "renovate[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-11-12T07:28:42Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2502981968",
+        "actor": {
+          "id": 3849900,
+          "login": "todaywasawesome",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-13T19:26:39Z",
+        "state": "CHANGES_REQUESTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2469785608",
+        "actor": {
+          "id": 134501772,
+          "login": "bunnyshell[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-11-12T07:28:50Z"
+      },
+      {
+        "id": "2469891238",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-11-12T08:31:08Z"
+      },
+      {
+        "id": "2542108936",
+        "actor": {
+          "id": 29139614,
+          "login": "renovate[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-12-13T19:27:36Z"
+      }
+    ],
+    "review_comments": []
   }
 }

@@ -16,12 +16,162 @@
     "merged_at": "2025-10-14T03:37:33Z"
   },
   "state": {
+    "tracked_prs": {
+      "134496": {
+        "id": 2899748223,
+        "updated_at": "2025-10-14T03:37:35Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/134496/comments?per_page=100": {
+        "etag": "W/\"2cdb8a043fd51c127d28b5d0afcf75f0c1d69e375a29b12ccc2e343f74b39cdd\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3384641734,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2025-10-09T08:02:59Z"
+          },
+          {
+            "id": 3384899202,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2025-10-09T09:06:25Z"
+          },
+          {
+            "id": 3387145548,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2025-10-09T18:58:55Z"
+          },
+          {
+            "id": 3387166272,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2025-10-09T19:06:29Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3398998654,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T20:39:12Z"
+          },
+          {
+            "id": 3398998903,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T20:39:20Z"
+          },
+          {
+            "id": 3399308100,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T22:48:15Z"
+          },
+          {
+            "id": 3399308571,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T22:48:24Z"
+          },
+          {
+            "id": 3399387917,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T23:26:17Z"
+          },
+          {
+            "id": 3399914533,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2025-10-14T02:49:07Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/134496/comments?per_page=100": {
+        "etag": "W/\"4245dce0de1ef0e6f5099d1945c97b3861329b2e14c44893d23c6223e6850f07\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2427332920,
+            "user": {
+              "id": 5595220,
+              "login": "thockin",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T21:07:07Z"
+          },
+          {
+            "id": 2427335421,
+            "user": {
+              "id": 5595220,
+              "login": "thockin",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T21:09:02Z"
+          },
+          {
+            "id": 2427413131,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T22:11:12Z"
+          },
+          {
+            "id": 2427413755,
+            "user": {
+              "id": 22185274,
+              "login": "yongruilin",
+              "type": "User"
+            },
+            "created_at": "2025-10-13T22:11:46Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/134496/reviews?per_page=100": {
         "etag": "W/\"fe85b69e14a73407f5650bc204b5dca403f60500fa97014cb193b6bc7acfdb25\"",
         "next": "",
@@ -79,18 +229,203 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2899748223,
+    "author": {
+      "id": 22185274,
+      "login": "yongruilin",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-10-09T07:58:01Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3333043620",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T21:12:33Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3333153144",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T22:11:13Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3333154594",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T22:11:46Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3333295763",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T22:48:10Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3384641734",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-09T08:02:59Z"
+      },
+      {
+        "id": "3384899202",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-09T09:06:25Z"
+      },
+      {
+        "id": "3387145548",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-09T18:58:55Z"
+      },
+      {
+        "id": "3387166272",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-09T19:06:29Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3398998654",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T20:39:12Z"
+      },
+      {
+        "id": "3398998903",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T20:39:20Z"
+      },
+      {
+        "id": "3399308100",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T22:48:15Z"
+      },
+      {
+        "id": "3399308571",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T22:48:24Z"
+      },
+      {
+        "id": "3399387917",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T23:26:17Z"
+      },
+      {
+        "id": "3399914533",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-14T02:49:07Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2427332920",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T21:07:07Z"
+      },
+      {
+        "id": "2427335421",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T21:09:02Z"
+      },
+      {
+        "id": "2427413131",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T22:11:12Z"
+      },
+      {
+        "id": "2427413755",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-13T22:11:46Z"
+      }
+    ]
   }
 }
