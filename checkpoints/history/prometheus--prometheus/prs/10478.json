@@ -1,0 +1,169 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2022-03-30T17:20:59Z",
+    "id": 887238600,
+    "number": 10478,
+    "user": {
+      "id": 1286231,
+      "login": "fpetkovski",
+      "type": "User"
+    },
+    "created_at": "2022-03-23T13:46:43Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2022-03-30T17:20:59Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "10478": {
+        "id": 887238600,
+        "updated_at": "2022-03-30T17:20:59Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 6838921,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "prometheus/prometheus",
+    "pages": {
+      "/repositories/6838921/issues/10478/comments?per_page=100": {
+        "etag": "\"eea8606ba758ea8a9a00262d3890c55469d80f357907245c59cf9286f5e5d78c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/6838921/pulls/10478/comments?per_page=100": {
+        "etag": "W/\"93b6d0d9485321b2c83982626c0bdbda497a56e6d430f9dd45971ded248e220e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 837816983,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "created_at": "2022-03-29T19:08:41Z"
+          },
+          {
+            "id": 838211963,
+            "user": {
+              "id": 1286231,
+              "login": "fpetkovski",
+              "type": "User"
+            },
+            "created_at": "2022-03-30T07:36:17Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/10478/reviews?per_page=100": {
+        "etag": "W/\"a345b3338b9037d36deaacf0cf3bb61ab0143c5aea872fc79b901410118119e1\"",
+        "next": "",
+        "value": [
+          {
+            "id": 925104467,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "submitted_at": "2022-03-29T19:09:16Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 925653031,
+            "user": {
+              "id": 1286231,
+              "login": "fpetkovski",
+              "type": "User"
+            },
+            "submitted_at": "2022-03-30T07:36:17Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 926472473,
+            "user": {
+              "id": 5609886,
+              "login": "beorn7",
+              "type": "User"
+            },
+            "submitted_at": "2022-03-30T17:20:53Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 887238600,
+    "author": {
+      "id": 1286231,
+      "login": "fpetkovski",
+      "type": "User"
+    },
+    "created_at": "2022-03-23T13:46:43Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "925104467",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-29T19:09:16Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "925653031",
+        "actor": {
+          "id": 1286231,
+          "login": "fpetkovski",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-30T07:36:17Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "926472473",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-30T17:20:53Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "837816983",
+        "actor": {
+          "id": 5609886,
+          "login": "beorn7",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-29T19:08:41Z"
+      },
+      {
+        "id": "838211963",
+        "actor": {
+          "id": 1286231,
+          "login": "fpetkovski",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-30T07:36:17Z"
+      }
+    ]
+  }
+}

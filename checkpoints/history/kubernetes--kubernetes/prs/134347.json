@@ -16,6 +16,14 @@
     "merged_at": "2025-10-01T23:40:57Z"
   },
   "state": {
+    "tracked_prs": {
+      "134347": {
+        "id": 2877076631,
+        "updated_at": "2025-10-01T23:41:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -121,6 +129,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/134347/comments?per_page=100": {
+        "etag": "\"eea8606ba758ea8a9a00262d3890c55469d80f357907245c59cf9286f5e5d78c\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/134347/reviews?per_page=100": {
         "etag": "W/\"a995ad647ebb24a4a95dde2c55f73237a223740042de8c4fa8b239c9d8336864\"",
         "next": "",
@@ -144,18 +157,131 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2877076631,
+    "author": {
+      "id": 22185274,
+      "login": "yongruilin",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-10-01T06:48:43Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3291264118",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T21:50:36Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3354997135",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T06:57:49Z"
+      },
+      {
+        "id": "3354997808",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T06:58:08Z"
+      },
+      {
+        "id": "3355197543",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T08:01:58Z"
+      },
+      {
+        "id": "3358187979",
+        "actor": {
+          "id": 5595220,
+          "login": "thockin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T21:25:01Z"
+      },
+      {
+        "id": "3358207832",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T21:31:35Z"
+      },
+      {
+        "id": "3358243908",
+        "actor": {
+          "id": 22185274,
+          "login": "yongruilin",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T21:40:35Z"
+      },
+      {
+        "id": "3358286677",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T21:50:43Z"
+      },
+      {
+        "id": "3358287302",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T21:50:53Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3358327257",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T22:06:44Z"
+      },
+      {
+        "id": "3358327728",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-01T22:06:53Z"
+      }
+    ],
+    "review_comments": []
   }
 }
