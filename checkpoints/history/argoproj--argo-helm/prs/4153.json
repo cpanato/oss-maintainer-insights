@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-10-21T22:43:44Z",
+  "generation": 6,
+  "observed_at": "2026-10-27T10:57:46Z",
   "pr": {
-    "updated_at": "2026-10-19T15:45:50Z",
+    "updated_at": "2026-10-26T10:10:26Z",
     "id": 4922110439,
     "number": 4153,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-19T13:58:17Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-26T10:10:25Z"
   },
   "state": {
     "tracked_prs": {
       "4153": {
         "id": 4922110439,
-        "updated_at": "2026-10-19T15:45:50Z",
-        "checked_at": "2026-10-21T22:43:44Z",
-        "state": "open"
+        "updated_at": "2026-10-26T10:10:26Z",
+        "checked_at": "2026-10-27T10:57:46Z",
+        "state": "closed"
       }
     },
     "repository_id": 106481151,
@@ -31,7 +31,7 @@
     "repository": "argoproj/argo-helm",
     "pages": {
       "/repositories/106481151/issues/4153/comments?per_page=100": {
-        "etag": "W/\"136c04fe88fb22e5ee1f62fe60d553e680f9708cf486d0a152a7105025c2c5a4\"",
+        "etag": "W/\"18578c52dc08eb98f83b067a5b55cfc934627de301475865b554a1cd8b394c0a\"",
         "next": "",
         "value": [
           {
@@ -51,18 +51,48 @@
               "type": "User"
             },
             "created_at": "2026-10-19T15:15:25Z"
+          },
+          {
+            "id": 6367157595,
+            "user": {
+              "id": 7290987,
+              "login": "mkilchhofer",
+              "type": "User"
+            },
+            "created_at": "2026-10-23T14:24:37Z"
           }
         ]
       },
       "/repositories/106481151/pulls/4153/comments?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "\"78a38acda90ab7c3aad7959aa5f7b4602b2838fd8f208aea5aaa76187d2bc94d\"",
         "next": "",
         "value": []
       },
       "/repositories/106481151/pulls/4153/reviews?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "W/\"d4d305bada37162d7244781c0df84039fd36f97afcb29930cd2b9fa7095eb8c8\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5649666741,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-26T09:10:13Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5650342757,
+            "user": {
+              "id": 21042968,
+              "login": "mbevc1",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-26T10:09:01Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -75,13 +105,34 @@
     },
     "created_at": "2026-10-19T13:58:17Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5649666741",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-26T09:10:13Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5650342757",
+        "actor": {
+          "id": 21042968,
+          "login": "mbevc1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-26T10:09:01Z",
+        "state": "APPROVED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6269178966",
@@ -100,6 +151,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-19T15:15:25Z"
+      },
+      {
+        "id": "6367157595",
+        "actor": {
+          "id": 7290987,
+          "login": "mkilchhofer",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-23T14:24:37Z"
       }
     ],
     "review_comments": []

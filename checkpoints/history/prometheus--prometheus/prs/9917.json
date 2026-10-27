@@ -16,12 +16,40 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "9917": {
+        "id": 792793871,
+        "updated_at": "2021-12-01T15:40:57Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 6838921,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "prometheus/prometheus",
     "pages": {
+      "/repositories/6838921/issues/9917/comments?per_page=100": {
+        "etag": "W/\"12d726ebd262325108946dcc19c032f9794ccb92d08b7c4abf1a312644233ef4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 983760344,
+            "user": {
+              "id": 49699333,
+              "login": "dependabot[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-12-01T15:35:16Z"
+          }
+        ]
+      },
+      "/repositories/6838921/pulls/9917/comments?per_page=100": {
+        "etag": "\"78a38acda90ab7c3aad7959aa5f7b4602b2838fd8f208aea5aaa76187d2bc94d\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/6838921/pulls/9917/reviews?per_page=100": {
         "etag": "\"39d5822ad0a6539c7857486ee62fd317c56273161840d2cf05897cb0f5c11b99\"",
         "next": "",
@@ -30,18 +58,32 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 792793871,
+    "author": {
+      "id": 49699333,
+      "login": "dependabot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-12-01T14:58:45Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "983760344",
+        "actor": {
+          "id": 49699333,
+          "login": "dependabot[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-12-01T15:35:16Z"
+      }
+    ],
+    "review_comments": []
   }
 }

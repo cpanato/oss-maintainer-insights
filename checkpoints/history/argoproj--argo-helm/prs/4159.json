@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-10-21T22:43:44Z",
+  "generation": 6,
+  "observed_at": "2026-10-27T10:57:46Z",
   "pr": {
-    "updated_at": "2026-10-21T15:12:23Z",
+    "updated_at": "2026-10-26T10:27:08Z",
     "id": 4953860951,
     "number": 4159,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-21T15:12:06Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-26T10:27:06Z"
   },
   "state": {
     "tracked_prs": {
       "4159": {
         "id": 4953860951,
-        "updated_at": "2026-10-21T15:12:23Z",
-        "checked_at": "2026-10-21T22:43:44Z",
-        "state": "open"
+        "updated_at": "2026-10-26T10:27:08Z",
+        "checked_at": "2026-10-27T10:57:46Z",
+        "state": "closed"
       }
     },
     "repository_id": 106481151,
@@ -31,19 +31,80 @@
     "repository": "argoproj/argo-helm",
     "pages": {
       "/repositories/106481151/issues/4159/comments?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "\"78a38acda90ab7c3aad7959aa5f7b4602b2838fd8f208aea5aaa76187d2bc94d\"",
         "next": "",
         "value": []
       },
       "/repositories/106481151/pulls/4159/comments?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "\"78a38acda90ab7c3aad7959aa5f7b4602b2838fd8f208aea5aaa76187d2bc94d\"",
         "next": "",
         "value": []
       },
       "/repositories/106481151/pulls/4159/reviews?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "W/\"69f5b3037e6a95dc9a680bd02a50f9aa157129e93a7c741a2a34e636c2075846\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5644952927,
+            "user": {
+              "id": 21042968,
+              "login": "mbevc1",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-25T19:51:48Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 5648724336,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-26T07:34:17Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 5649654509,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-26T09:09:11Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 5650350590,
+            "user": {
+              "id": 21042968,
+              "login": "mbevc1",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-26T10:09:38Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 5650514921,
+            "user": {
+              "id": 21042968,
+              "login": "mbevc1",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-26T10:21:45Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5650545490,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-26T10:24:00Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -56,13 +117,74 @@
     },
     "created_at": "2026-10-21T15:12:06Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5644952927",
+        "actor": {
+          "id": 21042968,
+          "login": "mbevc1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-25T19:51:48Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "5648724336",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-26T07:34:17Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "5649654509",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-26T09:09:11Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "5650350590",
+        "actor": {
+          "id": 21042968,
+          "login": "mbevc1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-26T10:09:38Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "5650514921",
+        "actor": {
+          "id": 21042968,
+          "login": "mbevc1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-26T10:21:45Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5650545490",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-26T10:24:00Z",
+        "state": "APPROVED"
+      }
+    ],
     "issue_comments": [],
     "review_comments": []
   }

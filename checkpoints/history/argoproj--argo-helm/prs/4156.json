@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-10-21T22:43:44Z",
+  "generation": 6,
+  "observed_at": "2026-10-27T10:57:46Z",
   "pr": {
-    "updated_at": "2026-10-20T20:12:17Z",
+    "updated_at": "2026-10-23T14:27:11Z",
     "id": 4941833367,
     "number": 4156,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-20T20:11:54Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-23T14:27:09Z"
   },
   "state": {
     "tracked_prs": {
       "4156": {
         "id": 4941833367,
-        "updated_at": "2026-10-20T20:12:17Z",
-        "checked_at": "2026-10-21T22:43:44Z",
-        "state": "open"
+        "updated_at": "2026-10-23T14:27:11Z",
+        "checked_at": "2026-10-27T10:57:46Z",
+        "state": "closed"
       }
     },
     "repository_id": 106481151,
@@ -31,19 +31,89 @@
     "repository": "argoproj/argo-helm",
     "pages": {
       "/repositories/106481151/issues/4156/comments?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "W/\"c62edd8487eff145b09bb202a7e634657988ef792852480a388d7f77c308904e\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6352090366,
+            "user": {
+              "id": 5231318,
+              "login": "davidmontoyago",
+              "type": "User"
+            },
+            "created_at": "2026-10-22T21:50:28Z"
+          },
+          {
+            "id": 6364653187,
+            "user": {
+              "id": 157150467,
+              "login": "octo-sts[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-23T12:16:01Z"
+          }
+        ]
       },
       "/repositories/106481151/pulls/4156/comments?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "\"78a38acda90ab7c3aad7959aa5f7b4602b2838fd8f208aea5aaa76187d2bc94d\"",
         "next": "",
         "value": []
       },
       "/repositories/106481151/pulls/4156/reviews?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "W/\"2b2706a6acaa8a9fb1422f9b13fbd917e391b8e4432e7d0d853fbddca5eb7e95\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5626777215,
+            "user": {
+              "id": 2145550,
+              "login": "zamf",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-23T10:05:54Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5627508143,
+            "user": {
+              "id": 30188755,
+              "login": "yu-croco",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-23T11:19:50Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 5627524414,
+            "user": {
+              "id": 21042968,
+              "login": "mbevc1",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-23T11:21:34Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 5629440003,
+            "user": {
+              "id": 7290987,
+              "login": "mkilchhofer",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-23T14:10:58Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5629664007,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-23T14:26:35Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -56,14 +126,84 @@
     },
     "created_at": "2026-10-20T20:11:54Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
-    "issue_comments": [],
+    "reviews": [
+      {
+        "id": "5626777215",
+        "actor": {
+          "id": 2145550,
+          "login": "zamf",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-23T10:05:54Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5627508143",
+        "actor": {
+          "id": 30188755,
+          "login": "yu-croco",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-23T11:19:50Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "5627524414",
+        "actor": {
+          "id": 21042968,
+          "login": "mbevc1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-23T11:21:34Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "5629440003",
+        "actor": {
+          "id": 7290987,
+          "login": "mkilchhofer",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-23T14:10:58Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5629664007",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-23T14:26:35Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6352090366",
+        "actor": {
+          "id": 5231318,
+          "login": "davidmontoyago",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-22T21:50:28Z"
+      },
+      {
+        "id": "6364653187",
+        "actor": {
+          "id": 157150467,
+          "login": "octo-sts[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-23T12:16:01Z"
+      }
+    ],
     "review_comments": []
   }
 }
