@@ -1,0 +1,951 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-07-20T17:40:17Z",
+    "id": 2821657274,
+    "number": 134037,
+    "user": {
+      "id": 9386770,
+      "login": "ibihim",
+      "type": "User"
+    },
+    "created_at": "2025-09-12T07:50:19Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2026-07-20T17:40:15Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "134037": {
+        "id": 2821657274,
+        "updated_at": "2026-07-20T17:40:17Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/134037/comments?per_page=100": {
+        "etag": "W/\"09b44202ce66e32d2ea6dd1cf3ea67700d1209de58caa2cb4616097b8638323c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3284171652,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-09-12T07:50:45Z"
+          },
+          {
+            "id": 3284210203,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2025-09-12T08:04:36Z"
+          },
+          {
+            "id": 3300218003,
+            "user": {
+              "id": 7387162,
+              "login": "seans3",
+              "type": "User"
+            },
+            "created_at": "2025-09-16T20:17:00Z"
+          },
+          {
+            "id": 3409225347,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "created_at": "2025-10-16T05:24:43Z"
+          },
+          {
+            "id": 4000186038,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2026-03-04T20:46:55Z"
+          },
+          {
+            "id": 4466654294,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2026-05-16T11:04:30Z"
+          },
+          {
+            "id": 4928092695,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2026-07-09T18:02:06Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 4984149502,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2026-07-15T18:45:20Z"
+          },
+          {
+            "id": 4984150703,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-15T18:45:29Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 5022838875,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2026-07-20T13:33:50Z"
+          },
+          {
+            "id": 5022839968,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-20T13:33:57Z"
+          },
+          {
+            "id": 5022842844,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2026-07-20T13:34:15Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 5024390693,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2026-07-20T16:08:06Z"
+          },
+          {
+            "id": 5024391954,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-20T16:08:14Z"
+          },
+          {
+            "id": 5024393703,
+            "user": {
+              "id": 181008794,
+              "login": "kubernetes-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-07-20T16:08:25Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/134037/comments?per_page=100": {
+        "etag": "W/\"b01ec2113b0c107f8336330228c42bf720df894de0e92b56a07fba0f7ab77431\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2347178198,
+            "user": {
+              "id": 73980067,
+              "login": "AvineshTripathi",
+              "type": "User"
+            },
+            "created_at": "2025-09-14T07:58:22Z"
+          },
+          {
+            "id": 2349058639,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "created_at": "2025-09-15T13:44:41Z"
+          },
+          {
+            "id": 2353618808,
+            "user": {
+              "id": 73980067,
+              "login": "AvineshTripathi",
+              "type": "User"
+            },
+            "created_at": "2025-09-16T20:46:55Z"
+          },
+          {
+            "id": 2436524642,
+            "user": {
+              "id": 7385775,
+              "login": "tkashem",
+              "type": "User"
+            },
+            "created_at": "2025-10-16T15:45:19Z"
+          },
+          {
+            "id": 2436638226,
+            "user": {
+              "id": 7385775,
+              "login": "tkashem",
+              "type": "User"
+            },
+            "created_at": "2025-10-16T16:21:43Z"
+          },
+          {
+            "id": 2436663698,
+            "user": {
+              "id": 7385775,
+              "login": "tkashem",
+              "type": "User"
+            },
+            "created_at": "2025-10-16T16:31:29Z"
+          },
+          {
+            "id": 2436682011,
+            "user": {
+              "id": 7385775,
+              "login": "tkashem",
+              "type": "User"
+            },
+            "created_at": "2025-10-16T16:37:51Z"
+          },
+          {
+            "id": 2691731615,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2026-01-14T19:20:41Z"
+          },
+          {
+            "id": 2693769841,
+            "user": {
+              "id": 11172207,
+              "login": "ardaguclu",
+              "type": "User"
+            },
+            "created_at": "2026-01-15T10:11:20Z"
+          },
+          {
+            "id": 2693784488,
+            "user": {
+              "id": 11172207,
+              "login": "ardaguclu",
+              "type": "User"
+            },
+            "created_at": "2026-01-15T10:15:48Z"
+          },
+          {
+            "id": 2828978436,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "created_at": "2026-02-19T16:55:23Z"
+          },
+          {
+            "id": 2828984339,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "created_at": "2026-02-19T16:56:32Z"
+          },
+          {
+            "id": 2845834997,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "created_at": "2026-02-24T10:12:15Z"
+          },
+          {
+            "id": 3589849118,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2026-07-15T18:33:01Z"
+          },
+          {
+            "id": 3593596006,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "created_at": "2026-07-16T07:56:00Z"
+          },
+          {
+            "id": 3598913420,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2026-07-16T21:04:51Z"
+          },
+          {
+            "id": 3602952541,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "created_at": "2026-07-17T12:00:19Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/134037/reviews?per_page=100": {
+        "etag": "W/\"583503127286ef5c4d576742bf18af78d8a75d5d07c55eff89bb5659a234892b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3221888785,
+            "user": {
+              "id": 73980067,
+              "login": "AvineshTripathi",
+              "type": "User"
+            },
+            "submitted_at": "2025-09-14T07:58:22Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3224710925,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "submitted_at": "2025-09-15T13:44:42Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3231648390,
+            "user": {
+              "id": 73980067,
+              "login": "AvineshTripathi",
+              "type": "User"
+            },
+            "submitted_at": "2025-09-16T20:46:55Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3345630079,
+            "user": {
+              "id": 7385775,
+              "login": "tkashem",
+              "type": "User"
+            },
+            "submitted_at": "2025-10-16T16:41:18Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3662379826,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-14T19:46:26Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3664856484,
+            "user": {
+              "id": 11172207,
+              "login": "ardaguclu",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-15T10:11:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3664876859,
+            "user": {
+              "id": 11172207,
+              "login": "ardaguclu",
+              "type": "User"
+            },
+            "submitted_at": "2026-01-15T10:15:48Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3827137095,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "submitted_at": "2026-02-19T16:55:23Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3827143121,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "submitted_at": "2026-02-19T16:56:32Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3846543666,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "submitted_at": "2026-02-24T10:12:15Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4707100680,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-15T18:33:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4711592182,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-16T07:56:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4717674177,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-16T21:04:51Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 4722437986,
+            "user": {
+              "id": 9386770,
+              "login": "ibihim",
+              "type": "User"
+            },
+            "submitted_at": "2026-07-17T12:00:19Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2821657274,
+    "author": {
+      "id": 9386770,
+      "login": "ibihim",
+      "type": "User"
+    },
+    "created_at": "2025-09-12T07:50:19Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3221888785",
+        "actor": {
+          "id": 73980067,
+          "login": "AvineshTripathi",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-14T07:58:22Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3224710925",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-15T13:44:42Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3231648390",
+        "actor": {
+          "id": 73980067,
+          "login": "AvineshTripathi",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-16T20:46:55Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3345630079",
+        "actor": {
+          "id": 7385775,
+          "login": "tkashem",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-16T16:41:18Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3662379826",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-14T19:46:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3664856484",
+        "actor": {
+          "id": 11172207,
+          "login": "ardaguclu",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-15T10:11:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3664876859",
+        "actor": {
+          "id": 11172207,
+          "login": "ardaguclu",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-15T10:15:48Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3827137095",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-19T16:55:23Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3827143121",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-19T16:56:32Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3846543666",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-24T10:12:15Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4707100680",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-15T18:33:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4711592182",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-16T07:56:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4717674177",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-16T21:04:51Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "4722437986",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-17T12:00:19Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3284171652",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-12T07:50:45Z"
+      },
+      {
+        "id": "3284210203",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-12T08:04:36Z"
+      },
+      {
+        "id": "3300218003",
+        "actor": {
+          "id": 7387162,
+          "login": "seans3",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-16T20:17:00Z"
+      },
+      {
+        "id": "3409225347",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-16T05:24:43Z"
+      },
+      {
+        "id": "4000186038",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-03-04T20:46:55Z"
+      },
+      {
+        "id": "4466654294",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-16T11:04:30Z"
+      },
+      {
+        "id": "4928092695",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-09T18:02:06Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "4984149502",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-15T18:45:20Z"
+      },
+      {
+        "id": "4984150703",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-15T18:45:29Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "5022838875",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-20T13:33:50Z"
+      },
+      {
+        "id": "5022839968",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-20T13:33:57Z"
+      },
+      {
+        "id": "5022842844",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-20T13:34:15Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "5024390693",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-20T16:08:06Z"
+      },
+      {
+        "id": "5024391954",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-20T16:08:14Z"
+      },
+      {
+        "id": "5024393703",
+        "actor": {
+          "id": 181008794,
+          "login": "kubernetes-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-07-20T16:08:25Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2347178198",
+        "actor": {
+          "id": 73980067,
+          "login": "AvineshTripathi",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-14T07:58:22Z"
+      },
+      {
+        "id": "2349058639",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-15T13:44:41Z"
+      },
+      {
+        "id": "2353618808",
+        "actor": {
+          "id": 73980067,
+          "login": "AvineshTripathi",
+          "type": "User"
+        },
+        "occurred_at": "2025-09-16T20:46:55Z"
+      },
+      {
+        "id": "2436524642",
+        "actor": {
+          "id": 7385775,
+          "login": "tkashem",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-16T15:45:19Z"
+      },
+      {
+        "id": "2436638226",
+        "actor": {
+          "id": 7385775,
+          "login": "tkashem",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-16T16:21:43Z"
+      },
+      {
+        "id": "2436663698",
+        "actor": {
+          "id": 7385775,
+          "login": "tkashem",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-16T16:31:29Z"
+      },
+      {
+        "id": "2436682011",
+        "actor": {
+          "id": 7385775,
+          "login": "tkashem",
+          "type": "User"
+        },
+        "occurred_at": "2025-10-16T16:37:51Z"
+      },
+      {
+        "id": "2691731615",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-14T19:20:41Z"
+      },
+      {
+        "id": "2693769841",
+        "actor": {
+          "id": 11172207,
+          "login": "ardaguclu",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-15T10:11:20Z"
+      },
+      {
+        "id": "2693784488",
+        "actor": {
+          "id": 11172207,
+          "login": "ardaguclu",
+          "type": "User"
+        },
+        "occurred_at": "2026-01-15T10:15:48Z"
+      },
+      {
+        "id": "2828978436",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-19T16:55:23Z"
+      },
+      {
+        "id": "2828984339",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-19T16:56:32Z"
+      },
+      {
+        "id": "2845834997",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-02-24T10:12:15Z"
+      },
+      {
+        "id": "3589849118",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-15T18:33:01Z"
+      },
+      {
+        "id": "3593596006",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-16T07:56:00Z"
+      },
+      {
+        "id": "3598913420",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-16T21:04:51Z"
+      },
+      {
+        "id": "3602952541",
+        "actor": {
+          "id": 9386770,
+          "login": "ibihim",
+          "type": "User"
+        },
+        "occurred_at": "2026-07-17T12:00:19Z"
+      }
+    ]
+  }
+}
