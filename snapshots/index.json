@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-27T00:04:41Z",
+  "attempted_at": "2026-10-27T05:35:01Z",
   "entries": [
-    {
-      "repository": "prometheus/prometheus",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "helm/helm",
       "status": "fresh",
@@ -49,9 +44,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 507,
       "progress": {
         "population": {
           "inspected_prs": 2000,
@@ -68,9 +62,14 @@
         },
         "enumerated_prs": 2000,
         "eligible_prs": 1842,
-        "covered_prs": 1673,
+        "covered_prs": 1842,
         "enumeration_complete": true
       }
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "status": "fresh",
+      "requests": 0
     }
   ]
 }
