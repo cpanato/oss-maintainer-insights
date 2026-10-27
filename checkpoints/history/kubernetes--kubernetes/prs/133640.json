@@ -16,12 +16,94 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "133640": {
+        "id": 2762769878,
+        "updated_at": "2025-08-22T21:06:36Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/133640/comments?per_page=100": {
+        "etag": "W/\"6d7508c294c9960569b4712d378582fff2c7eb6c442ecabdda752fe2c5002237\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3210334813,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-08-21T12:08:18Z"
+          },
+          {
+            "id": 3210334869,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-08-21T12:08:19Z"
+          },
+          {
+            "id": 3210335026,
+            "user": {
+              "id": 43480880,
+              "login": "linux-foundation-easycla[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-08-21T12:08:22Z"
+          },
+          {
+            "id": 3210335130,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-08-21T12:08:24Z"
+          },
+          {
+            "id": 3210335163,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-08-21T12:08:25Z"
+          },
+          {
+            "id": 3210335182,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-08-21T12:08:25Z"
+          },
+          {
+            "id": 3210336543,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-08-21T12:08:55Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/133640/comments?per_page=100": {
+        "etag": "\"39adf56e97336d938b7ea7c4db8b180b4d48e42fc593e5988981d340501b8f5d\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/133640/reviews?per_page=100": {
         "etag": "\"78a38acda90ab7c3aad7959aa5f7b4602b2838fd8f208aea5aaa76187d2bc94d\"",
         "next": "",
@@ -30,18 +112,86 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2762769878,
+    "author": {
+      "id": 219557626,
+      "login": "mohitsharmamanpur",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-08-21T12:08:15Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "3210334813",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-21T12:08:18Z"
+      },
+      {
+        "id": "3210334869",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-21T12:08:19Z"
+      },
+      {
+        "id": "3210335026",
+        "actor": {
+          "id": 43480880,
+          "login": "linux-foundation-easycla[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-08-21T12:08:22Z"
+      },
+      {
+        "id": "3210335130",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-21T12:08:24Z"
+      },
+      {
+        "id": "3210335163",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-21T12:08:25Z"
+      },
+      {
+        "id": "3210335182",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-21T12:08:25Z"
+      },
+      {
+        "id": "3210336543",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-08-21T12:08:55Z"
+      }
+    ],
+    "review_comments": []
   }
 }
