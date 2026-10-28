@@ -16,12 +16,67 @@
     "merged_at": "2025-07-29T17:34:27Z"
   },
   "state": {
+    "tracked_prs": {
+      "133265": {
+        "id": 2702247564,
+        "updated_at": "2025-07-29T17:44:13Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/133265/comments?per_page=100": {
+        "etag": "W/\"3b036a45f4a1ea6ac14429556a14bc1570674d66c9239c080571ac8fd218d0a5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3130131213,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-28T23:37:36Z"
+          },
+          {
+            "id": 3130153589,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-28T23:55:19Z"
+          },
+          {
+            "id": 3131722945,
+            "user": {
+              "id": 18719127,
+              "login": "xmudrii",
+              "type": "User"
+            },
+            "created_at": "2025-07-29T10:10:03Z"
+          },
+          {
+            "id": 3133436825,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-29T17:34:27Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/133265/comments?per_page=100": {
+        "etag": "\"8101d32745b9b166476b3563e2e9a9b782aa9caa55eeadf23fd840bc7fbe1684\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/133265/reviews?per_page=100": {
         "etag": "W/\"d9fbd38f14a29878ee922664e79280e09d3b2323a8fd5342f22ce58d6691e857\"",
         "next": "",
@@ -59,18 +114,88 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2702247564,
+    "author": {
+      "id": 917931,
+      "login": "BenTheElder",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-07-28T23:37:28Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3064841152",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-28T23:55:13Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3068542312",
+        "actor": {
+          "id": 18719127,
+          "login": "xmudrii",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-29T17:34:11Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3130131213",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-28T23:37:36Z"
+      },
+      {
+        "id": "3130153589",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-28T23:55:19Z"
+      },
+      {
+        "id": "3131722945",
+        "actor": {
+          "id": 18719127,
+          "login": "xmudrii",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-29T10:10:03Z"
+      },
+      {
+        "id": "3133436825",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-29T17:34:27Z"
+      }
+    ],
+    "review_comments": []
   }
 }
