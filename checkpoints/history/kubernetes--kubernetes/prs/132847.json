@@ -1,0 +1,253 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-07-17T01:56:40Z",
+    "id": 2653129226,
+    "number": 132847,
+    "user": {
+      "id": 38040668,
+      "login": "ylink-lfs",
+      "type": "User"
+    },
+    "created_at": "2025-07-09T14:40:03Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-07-17T01:56:38Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "132847": {
+        "id": 2653129226,
+        "updated_at": "2025-07-17T01:56:40Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/132847/comments?per_page=100": {
+        "etag": "W/\"524540c2e605963ec7dd59aeaa8e7a8344ebd3cff967332e022f88a3ea16acfb\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3052925893,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-09T14:40:14Z"
+          },
+          {
+            "id": 3052930199,
+            "user": {
+              "id": 38040668,
+              "login": "ylink-lfs",
+              "type": "User"
+            },
+            "created_at": "2025-07-09T14:41:32Z"
+          },
+          {
+            "id": 3056463709,
+            "user": {
+              "id": 25349329,
+              "login": "ffromani",
+              "type": "User"
+            },
+            "created_at": "2025-07-10T09:08:49Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3081111975,
+            "user": {
+              "id": 16629434,
+              "login": "natasha41575",
+              "type": "User"
+            },
+            "created_at": "2025-07-16T21:41:56Z"
+          },
+          {
+            "id": 3081113044,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-16T21:42:04Z"
+          },
+          {
+            "id": 3081184192,
+            "user": {
+              "id": 16629434,
+              "login": "natasha41575",
+              "type": "User"
+            },
+            "created_at": "2025-07-16T21:50:22Z"
+          },
+          {
+            "id": 3081350893,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-16T22:10:22Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132847/comments?per_page=100": {
+        "etag": "\"c04976f3bb8ebb30fa76cdc3b959f85730a3981d8a09bcdfbf1a23852a924650\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/132847/reviews?per_page=100": {
+        "etag": "W/\"c84deb91f1e2329c57f34bf401acd67beabbec33aed6803e6b798a23a4f44820\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3001846957,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2025-07-09T14:40:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3027050150,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "submitted_at": "2025-07-16T22:10:09Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2653129226,
+    "author": {
+      "id": 38040668,
+      "login": "ylink-lfs",
+      "type": "User"
+    },
+    "created_at": "2025-07-09T14:40:03Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3001846957",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2025-07-09T14:40:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3027050150",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-16T22:10:09Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3052925893",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-09T14:40:14Z"
+      },
+      {
+        "id": "3052930199",
+        "actor": {
+          "id": 38040668,
+          "login": "ylink-lfs",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-09T14:41:32Z"
+      },
+      {
+        "id": "3056463709",
+        "actor": {
+          "id": 25349329,
+          "login": "ffromani",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-10T09:08:49Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3081111975",
+        "actor": {
+          "id": 16629434,
+          "login": "natasha41575",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-16T21:41:56Z"
+      },
+      {
+        "id": "3081113044",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-16T21:42:04Z"
+      },
+      {
+        "id": "3081184192",
+        "actor": {
+          "id": 16629434,
+          "login": "natasha41575",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-16T21:50:22Z"
+      },
+      {
+        "id": "3081350893",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-16T22:10:22Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

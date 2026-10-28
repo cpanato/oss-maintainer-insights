@@ -1,0 +1,249 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-07-16T19:12:33Z",
+    "id": 2666675777,
+    "number": 132950,
+    "user": {
+      "id": 5873433,
+      "login": "serathius",
+      "type": "User"
+    },
+    "created_at": "2025-07-15T09:10:56Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-07-16T19:12:31Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "132950": {
+        "id": 2666675777,
+        "updated_at": "2025-07-16T19:12:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/132950/comments?per_page=100": {
+        "etag": "W/\"c59d08f2546de587cbb870b6cd335811c53400932b3c03088fc3ba6886998007\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3072822705,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-15T09:11:06Z"
+          },
+          {
+            "id": 3072982326,
+            "user": {
+              "id": 5873433,
+              "login": "serathius",
+              "type": "User"
+            },
+            "created_at": "2025-07-15T10:00:10Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3079092458,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2025-07-16T15:14:37Z"
+          },
+          {
+            "id": 3079093214,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-16T15:14:45Z"
+          },
+          {
+            "id": 3079093652,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-07-16T15:14:52Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132950/comments?per_page=100": {
+        "etag": "W/\"cc4652749e8100cf75b312af443fe42cdd396de4d1d437aed64d876c26117bb2\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2207390343,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2025-07-15T12:50:05Z"
+          },
+          {
+            "id": 2207432069,
+            "user": {
+              "id": 5873433,
+              "login": "serathius",
+              "type": "User"
+            },
+            "created_at": "2025-07-15T13:08:03Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132950/reviews?per_page=100": {
+        "etag": "W/\"122dc3e0b8ffe0416c38ad2a210b80200c1a221db1ea80abbe995ec66f0de13c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3020145329,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2025-07-15T12:50:06Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 3020219011,
+            "user": {
+              "id": 5873433,
+              "login": "serathius",
+              "type": "User"
+            },
+            "submitted_at": "2025-07-15T13:08:03Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2666675777,
+    "author": {
+      "id": 5873433,
+      "login": "serathius",
+      "type": "User"
+    },
+    "created_at": "2025-07-15T09:10:56Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "3020145329",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-15T12:50:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "3020219011",
+        "actor": {
+          "id": 5873433,
+          "login": "serathius",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-15T13:08:03Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3072822705",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-15T09:11:06Z"
+      },
+      {
+        "id": "3072982326",
+        "actor": {
+          "id": 5873433,
+          "login": "serathius",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-15T10:00:10Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "3079092458",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-16T15:14:37Z"
+      },
+      {
+        "id": "3079093214",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-16T15:14:45Z"
+      },
+      {
+        "id": "3079093652",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-16T15:14:52Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2207390343",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-15T12:50:05Z"
+      },
+      {
+        "id": "2207432069",
+        "actor": {
+          "id": 5873433,
+          "login": "serathius",
+          "type": "User"
+        },
+        "occurred_at": "2025-07-15T13:08:03Z"
+      }
+    ]
+  }
+}

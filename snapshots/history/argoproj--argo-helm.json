@@ -1,9 +1,9 @@
 {
   "population": {
-    "inspected_prs": 2829,
-    "human_authored_prs": 2093,
-    "bot_authored_prs": 650,
-    "draft_prs": 82,
+    "inspected_prs": 2833,
+    "human_authored_prs": 2094,
+    "bot_authored_prs": 651,
+    "draft_prs": 84,
     "missing_author_prs": 4,
     "outside_window_prs": 0,
     "after_observation_prs": 0
@@ -14,35 +14,35 @@
     "id": 106481151,
     "full_name": "argoproj/argo-helm"
   },
-  "collected_at": "2026-10-27T10:57:46Z",
+  "collected_at": "2026-10-28T14:30:04Z",
   "window": {
-    "start": "2026-07-29T10:57:46Z",
-    "end": "2026-10-27T10:57:46Z"
+    "start": "2026-07-30T14:30:04Z",
+    "end": "2026-10-28T14:30:04Z"
   },
   "progress": {
     "population": {
-      "inspected_prs": 2829,
-      "human_authored_prs": 2093,
-      "bot_authored_prs": 650,
-      "draft_prs": 82,
+      "inspected_prs": 2833,
+      "human_authored_prs": 2094,
+      "bot_authored_prs": 651,
+      "draft_prs": 84,
       "missing_author_prs": 4,
       "outside_window_prs": 0,
       "after_observation_prs": 0
     },
     "window": {
-      "start": "2026-07-29T10:57:46Z",
-      "end": "2026-10-27T10:57:46Z"
+      "start": "2026-07-30T14:30:04Z",
+      "end": "2026-10-28T14:30:04Z"
     },
-    "enumerated_prs": 2829,
-    "eligible_prs": 2743,
-    "covered_prs": 2743,
+    "enumerated_prs": 2833,
+    "eligible_prs": 2745,
+    "covered_prs": 2745,
     "enumeration_complete": true
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 32,
-    "reused_prs": 2711,
-    "events_checked_since": "2026-10-20T20:52:39Z",
+    "refreshed_prs": 166,
+    "reused_prs": 2579,
+    "events_checked_since": "2026-10-21T22:43:44Z",
     "reconciliation_interval_days": 7
   },
   "months": [
@@ -54,9 +54,9 @@
         "full_name": "argoproj/argo-helm"
       },
       "mode": "historical",
-      "collected_at": "2026-10-27T10:57:46Z",
+      "collected_at": "2026-10-28T14:30:04Z",
       "window": {
-        "start": "2026-07-29T10:57:46Z",
+        "start": "2026-07-30T14:30:04Z",
         "end": "2026-08-01T00:00:00Z"
       },
       "exclusions": {
@@ -68,29 +68,29 @@
         "self_events": 3505
       },
       "creation_cohort": {
-        "eligible_prs": 4,
+        "eligible_prs": 2,
         "coverage": "complete_for_window",
-        "authors": 2,
+        "authors": 1,
         "outcomes": {
           "open": 0,
           "closed_unmerged": 0,
-          "merged": 4
+          "merged": 2
         }
       },
       "review_activity": {
         "sources": {
-          "github_review_units": 6,
+          "github_review_units": 4,
           "prow_command_units": 0
         },
-        "eligible_prs": 2743,
-        "covered_prs": 2743,
+        "eligible_prs": 2745,
+        "covered_prs": 2745,
         "coverage": "complete_for_window",
-        "review_units": 6,
+        "review_units": 4,
         "participants": 4,
         "distribution": [
           {
             "sources": {
-              "github_review_units": 2,
+              "github_review_units": 1,
               "prow_command_units": 0
             },
             "actor": {
@@ -98,19 +98,7 @@
               "login": "jmeridth",
               "type": "User"
             },
-            "review_units": 2
-          },
-          {
-            "sources": {
-              "github_review_units": 2,
-              "prow_command_units": 0
-            },
-            "actor": {
-              "id": 30188755,
-              "login": "yu-croco",
-              "type": "User"
-            },
-            "review_units": 2
+            "review_units": 1
           },
           {
             "sources": {
@@ -130,6 +118,18 @@
               "prow_command_units": 0
             },
             "actor": {
+              "id": 30188755,
+              "login": "yu-croco",
+              "type": "User"
+            },
+            "review_units": 1
+          },
+          {
+            "sources": {
+              "github_review_units": 1,
+              "prow_command_units": 0
+            },
+            "actor": {
               "id": 45351296,
               "login": "tico24",
               "type": "User"
@@ -138,19 +138,19 @@
           }
         ],
         "concentration_80": {
-          "value": 3,
+          "value": 4,
           "status": "available"
         },
         "largest_reviewer_share": {
-          "value": 0.3333333333333333,
+          "value": 0.25,
           "status": "available"
         }
       },
       "first_response": {
-        "eligible_prs": 4,
-        "covered_prs": 4,
+        "eligible_prs": 2,
+        "covered_prs": 2,
         "coverage": "complete_for_window",
-        "responded_prs": 4,
+        "responded_prs": 2,
         "unanswered_prs": 0,
         "median_ms": {
           "value": null,
@@ -166,7 +166,7 @@
         "full_name": "argoproj/argo-helm"
       },
       "mode": "historical",
-      "collected_at": "2026-10-27T10:57:46Z",
+      "collected_at": "2026-10-28T14:30:04Z",
       "window": {
         "start": "2026-08-01T00:00:00Z",
         "end": "2026-09-01T00:00:00Z"
@@ -194,8 +194,8 @@
           "github_review_units": 68,
           "prow_command_units": 0
         },
-        "eligible_prs": 2743,
-        "covered_prs": 2743,
+        "eligible_prs": 2745,
+        "covered_prs": 2745,
         "coverage": "complete_for_window",
         "review_units": 68,
         "participants": 7,
@@ -314,7 +314,7 @@
         "full_name": "argoproj/argo-helm"
       },
       "mode": "historical",
-      "collected_at": "2026-10-27T10:57:46Z",
+      "collected_at": "2026-10-28T14:30:04Z",
       "window": {
         "start": "2026-09-01T00:00:00Z",
         "end": "2026-10-01T00:00:00Z"
@@ -332,8 +332,8 @@
         "coverage": "complete_for_window",
         "authors": 14,
         "outcomes": {
-          "open": 5,
-          "closed_unmerged": 1,
+          "open": 4,
+          "closed_unmerged": 2,
           "merged": 42
         }
       },
@@ -342,8 +342,8 @@
           "github_review_units": 111,
           "prow_command_units": 0
         },
-        "eligible_prs": 2743,
-        "covered_prs": 2743,
+        "eligible_prs": 2745,
+        "covered_prs": 2745,
         "coverage": "complete_for_window",
         "review_units": 111,
         "participants": 6,
@@ -450,10 +450,10 @@
         "full_name": "argoproj/argo-helm"
       },
       "mode": "historical",
-      "collected_at": "2026-10-27T10:57:46Z",
+      "collected_at": "2026-10-28T14:30:04Z",
       "window": {
         "start": "2026-10-01T00:00:00Z",
-        "end": "2026-10-27T10:57:46Z"
+        "end": "2026-10-28T14:30:04Z"
       },
       "exclusions": {
         "draft_prs": 0,
@@ -464,29 +464,29 @@
         "self_events": 3505
       },
       "creation_cohort": {
-        "eligible_prs": 48,
+        "eligible_prs": 50,
         "coverage": "complete_for_window",
-        "authors": 13,
+        "authors": 14,
         "outcomes": {
-          "open": 8,
+          "open": 10,
           "closed_unmerged": 1,
           "merged": 39
         }
       },
       "review_activity": {
         "sources": {
-          "github_review_units": 99,
+          "github_review_units": 102,
           "prow_command_units": 0
         },
-        "eligible_prs": 2743,
-        "covered_prs": 2743,
+        "eligible_prs": 2745,
+        "covered_prs": 2745,
         "coverage": "complete_for_window",
-        "review_units": 99,
+        "review_units": 102,
         "participants": 7,
         "distribution": [
           {
             "sources": {
-              "github_review_units": 41,
+              "github_review_units": 42,
               "prow_command_units": 0
             },
             "actor": {
@@ -494,7 +494,19 @@
               "login": "tico24",
               "type": "User"
             },
-            "review_units": 41
+            "review_units": 42
+          },
+          {
+            "sources": {
+              "github_review_units": 17,
+              "prow_command_units": 0
+            },
+            "actor": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "review_units": 17
           },
           {
             "sources": {
@@ -507,18 +519,6 @@
               "type": "User"
             },
             "review_units": 16
-          },
-          {
-            "sources": {
-              "github_review_units": 15,
-              "prow_command_units": 0
-            },
-            "actor": {
-              "id": 35014,
-              "login": "jmeridth",
-              "type": "User"
-            },
-            "review_units": 15
           },
           {
             "sources": {
@@ -574,18 +574,18 @@
           "status": "available"
         },
         "largest_reviewer_share": {
-          "value": 0.41414141414141414,
+          "value": 0.4117647058823529,
           "status": "available"
         }
       },
       "first_response": {
-        "eligible_prs": 48,
-        "covered_prs": 48,
+        "eligible_prs": 50,
+        "covered_prs": 50,
         "coverage": "complete_for_window",
-        "responded_prs": 47,
+        "responded_prs": 49,
         "unanswered_prs": 1,
         "median_ms": {
-          "value": 22899000,
+          "value": 19510000,
           "status": "available"
         }
       }
