@@ -16,26 +16,76 @@
     "merged_at": "2024-07-22T14:15:09Z"
   },
   "state": {
+    "tracked_prs": {
+      "19142": {
+        "id": 1981343380,
+        "updated_at": "2024-07-22T14:15:12Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/19142/comments?per_page=100": {
+        "etag": "\"2bc8efcfbf55cb9a49c8a9b3279b8829c22d4ce440b2f8eb3be5e5f3f932ddb2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/19142/comments?per_page=100": {
+        "etag": "\"2bc8efcfbf55cb9a49c8a9b3279b8829c22d4ce440b2f8eb3be5e5f3f932ddb2\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/19142/reviews?per_page=100": {
+        "etag": "W/\"be7dda44f165cece1a4c4886a35b95b5324e39ef9c4e30b290e4143010129e97\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2191703838,
+            "user": {
+              "id": 39732895,
+              "login": "pasha-codefresh",
+              "type": "User"
+            },
+            "submitted_at": "2024-07-22T14:15:05Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1981343380,
+    "author": {
+      "id": 41898282,
+      "login": "github-actions[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-07-22T14:10:51Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2191703838",
+        "actor": {
+          "id": 39732895,
+          "login": "pasha-codefresh",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-22T14:15:05Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }
