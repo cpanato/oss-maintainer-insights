@@ -16,12 +16,58 @@
     "merged_at": "2024-05-29T06:44:55Z"
   },
   "state": {
+    "tracked_prs": {
+      "18437": {
+        "id": 1892268145,
+        "updated_at": "2024-05-29T06:57:15Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/18437/comments?per_page=100": {
+        "etag": "W/\"3bbc788cad76275e4d4d09dcc7788150b1bf35889882e31854a78434a29afad7\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2135840397,
+            "user": {
+              "id": 39732895,
+              "login": "pasha-codefresh",
+              "type": "User"
+            },
+            "created_at": "2024-05-28T18:08:21Z"
+          },
+          {
+            "id": 2136643171,
+            "user": {
+              "id": 143569,
+              "login": "erpel",
+              "type": "User"
+            },
+            "created_at": "2024-05-29T06:35:14Z"
+          },
+          {
+            "id": 2136655806,
+            "user": {
+              "id": 39732895,
+              "login": "pasha-codefresh",
+              "type": "User"
+            },
+            "created_at": "2024-05-29T06:44:40Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/18437/comments?per_page=100": {
+        "etag": "\"613d122220e6311ccb47e8abfcc36ede42d4613583d30cb911d8895dd7af5575\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/18437/reviews?per_page=100": {
         "etag": "W/\"ececac4b6d6e41b9dc6f9e1cdfb5105c5ec3bfddea2190bee92c1b8e014532d6\"",
         "next": "",
@@ -41,18 +87,61 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1892268145,
+    "author": {
+      "id": 143569,
+      "login": "erpel",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-05-28T16:31:35Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2084440977",
+        "actor": {
+          "id": 39732895,
+          "login": "pasha-codefresh",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T06:44:49Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2135840397",
+        "actor": {
+          "id": 39732895,
+          "login": "pasha-codefresh",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-28T18:08:21Z"
+      },
+      {
+        "id": "2136643171",
+        "actor": {
+          "id": 143569,
+          "login": "erpel",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T06:35:14Z"
+      },
+      {
+        "id": "2136655806",
+        "actor": {
+          "id": 39732895,
+          "login": "pasha-codefresh",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T06:44:40Z"
+      }
+    ],
+    "review_comments": []
   }
 }
