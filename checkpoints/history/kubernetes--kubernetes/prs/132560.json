@@ -1,0 +1,819 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-07-01T18:50:58Z",
+    "id": 2621941561,
+    "number": 132560,
+    "user": {
+      "id": 11185878,
+      "login": "hdp617",
+      "type": "User"
+    },
+    "created_at": "2025-06-26T18:24:47Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-06-27T23:32:29Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "132560": {
+        "id": 2621941561,
+        "updated_at": "2025-07-01T18:50:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/132560/comments?per_page=100": {
+        "etag": "W/\"d66969216693361fc060ecee91b255c241e4c4292bfb6559a34cb7ac8a7c1d2b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3009437500,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T18:24:57Z"
+          },
+          {
+            "id": 3009472744,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T18:34:38Z"
+          },
+          {
+            "id": 3009652193,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T19:14:41Z"
+          },
+          {
+            "id": 3009707800,
+            "user": {
+              "id": 1951658,
+              "login": "aaron-prindle",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T19:34:40Z"
+          },
+          {
+            "id": 3014119229,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T19:12:03Z"
+          },
+          {
+            "id": 3014435872,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T22:00:15Z"
+          },
+          {
+            "id": 3014436025,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T22:00:21Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 3014512956,
+            "user": {
+              "id": 1951658,
+              "login": "aaron-prindle",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T22:41:17Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132560/comments?per_page=100": {
+        "etag": "W/\"1ce7ecf3762e201d5994a482211280ad9b4fa4ed748d7f907a38f41791ebd8df\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2169735947,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T18:50:49Z"
+          },
+          {
+            "id": 2169746984,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T18:53:49Z"
+          },
+          {
+            "id": 2169772590,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T19:05:13Z"
+          },
+          {
+            "id": 2169945442,
+            "user": {
+              "id": 1951658,
+              "login": "aaron-prindle",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T20:29:02Z"
+          },
+          {
+            "id": 2169945824,
+            "user": {
+              "id": 1951658,
+              "login": "aaron-prindle",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T20:29:19Z"
+          },
+          {
+            "id": 2169970240,
+            "user": {
+              "id": 1951658,
+              "login": "aaron-prindle",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T20:43:46Z"
+          },
+          {
+            "id": 2170031571,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T21:18:45Z"
+          },
+          {
+            "id": 2170032601,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T21:19:14Z"
+          },
+          {
+            "id": 2170032933,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T21:19:25Z"
+          },
+          {
+            "id": 2170034079,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T21:20:03Z"
+          },
+          {
+            "id": 2170034696,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "created_at": "2025-06-26T21:20:29Z"
+          },
+          {
+            "id": 2170340234,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T00:17:11Z"
+          },
+          {
+            "id": 2172526006,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T17:29:58Z"
+          },
+          {
+            "id": 2172704532,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T19:13:47Z"
+          },
+          {
+            "id": 2172716016,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T19:22:35Z"
+          },
+          {
+            "id": 2172754266,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "created_at": "2025-06-27T19:42:00Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132560/reviews?per_page=100": {
+        "etag": "W/\"2b15c64f635f3f805d72062481c39910e1555ab5ea9b542dfb7076b587412db8\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2963189672,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T18:55:50Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963246257,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T19:13:27Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963541057,
+            "user": {
+              "id": 1951658,
+              "login": "aaron-prindle",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T20:29:02Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963541707,
+            "user": {
+              "id": 1951658,
+              "login": "aaron-prindle",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T20:29:19Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963587563,
+            "user": {
+              "id": 1951658,
+              "login": "aaron-prindle",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T20:43:46Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963687294,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T21:18:45Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963689143,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T21:19:14Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963689681,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T21:19:25Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963692133,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T21:20:03Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2963693599,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-26T21:20:29Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2964178956,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-27T00:17:35Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2967368033,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-27T17:29:58Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2967674067,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-27T19:22:39Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2967762685,
+            "user": {
+              "id": 11185878,
+              "login": "hdp617",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-27T19:42:00Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2968053217,
+            "user": {
+              "id": 4876867,
+              "login": "janetkuo",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-27T22:00:08Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2621941561,
+    "author": {
+      "id": 11185878,
+      "login": "hdp617",
+      "type": "User"
+    },
+    "created_at": "2025-06-26T18:24:47Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2963189672",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T18:55:50Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963246257",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T19:13:27Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963541057",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T20:29:02Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963541707",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T20:29:19Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963587563",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T20:43:46Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963687294",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:18:45Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963689143",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:19:14Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963689681",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:19:25Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963692133",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:20:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2963693599",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:20:29Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2964178956",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T00:17:35Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2967368033",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T17:29:58Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2967674067",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T19:22:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2967762685",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T19:42:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2968053217",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T22:00:08Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "3009437500",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T18:24:57Z"
+      },
+      {
+        "id": "3009472744",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T18:34:38Z"
+      },
+      {
+        "id": "3009652193",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T19:14:41Z"
+      },
+      {
+        "id": "3009707800",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T19:34:40Z"
+      },
+      {
+        "id": "3014119229",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T19:12:03Z"
+      },
+      {
+        "id": "3014435872",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T22:00:15Z"
+      },
+      {
+        "id": "3014436025",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T22:00:21Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "3014512956",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T22:41:17Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2169735947",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T18:50:49Z"
+      },
+      {
+        "id": "2169746984",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T18:53:49Z"
+      },
+      {
+        "id": "2169772590",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T19:05:13Z"
+      },
+      {
+        "id": "2169945442",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T20:29:02Z"
+      },
+      {
+        "id": "2169945824",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T20:29:19Z"
+      },
+      {
+        "id": "2169970240",
+        "actor": {
+          "id": 1951658,
+          "login": "aaron-prindle",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T20:43:46Z"
+      },
+      {
+        "id": "2170031571",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:18:45Z"
+      },
+      {
+        "id": "2170032601",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:19:14Z"
+      },
+      {
+        "id": "2170032933",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:19:25Z"
+      },
+      {
+        "id": "2170034079",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:20:03Z"
+      },
+      {
+        "id": "2170034696",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-26T21:20:29Z"
+      },
+      {
+        "id": "2170340234",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T00:17:11Z"
+      },
+      {
+        "id": "2172526006",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T17:29:58Z"
+      },
+      {
+        "id": "2172704532",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T19:13:47Z"
+      },
+      {
+        "id": "2172716016",
+        "actor": {
+          "id": 4876867,
+          "login": "janetkuo",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T19:22:35Z"
+      },
+      {
+        "id": "2172754266",
+        "actor": {
+          "id": 11185878,
+          "login": "hdp617",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-27T19:42:00Z"
+      }
+    ]
+  }
+}
