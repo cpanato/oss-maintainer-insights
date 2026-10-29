@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 200,
-    "human_authored_prs": 99,
-    "bot_authored_prs": 63,
-    "draft_prs": 8,
+    "human_authored_prs": 105,
+    "bot_authored_prs": 68,
+    "draft_prs": 6,
     "missing_author_prs": 0,
-    "outside_window_prs": 30,
+    "outside_window_prs": 21,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 59,
-    "reused_prs": 103,
+    "refreshed_prs": 65,
+    "reused_prs": 108,
     "events_checked_since": "2026-10-22T08:05:21Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-07-30T23:21:02Z",
-    "newest_created_at": "2026-10-27T18:52:46Z"
+    "oldest_created_at": "2026-08-01T00:39:33Z",
+    "newest_created_at": "2026-10-28T15:26:28Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,43 +28,43 @@
       "full_name": "ossf/scorecard"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-27T21:29:43.000Z",
+    "collected_at": "2026-10-29T00:37:30.000Z",
     "window": {
-      "start": "2026-07-29T21:29:43.000Z",
-      "end": "2026-10-27T21:29:43.000Z"
+      "start": "2026-07-31T00:37:30.000Z",
+      "end": "2026-10-29T00:37:30.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 210,
+      "bot_events": 216,
       "missing_event_actors": 0,
-      "self_events": 97
+      "self_events": 99
     },
     "creation_cohort": {
-      "eligible_prs": 162,
+      "eligible_prs": 173,
       "coverage": "complete_for_sample",
-      "authors": 57,
+      "authors": 58,
       "outcomes": {
         "open": 54,
-        "closed_unmerged": 54,
-        "merged": 54
+        "closed_unmerged": 57,
+        "merged": 62
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 52,
+        "github_review_units": 59,
         "prow_command_units": 0
       },
-      "eligible_prs": 162,
-      "covered_prs": 162,
+      "eligible_prs": 173,
+      "covered_prs": 173,
       "coverage": "complete_for_sample",
-      "review_units": 52,
-      "participants": 10,
+      "review_units": 59,
+      "participants": 11,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 30,
+            "github_review_units": 35,
             "prow_command_units": 0
           },
           "actor": {
@@ -72,7 +72,7 @@
             "login": "justaugustus",
             "type": "User"
           },
-          "review_units": 30
+          "review_units": 35
         },
         {
           "sources": {
@@ -97,6 +97,18 @@
             "type": "User"
           },
           "review_units": 5
+        },
+        {
+          "sources": {
+            "github_review_units": 2,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 4115580,
+            "login": "cpanato",
+            "type": "User"
+          },
+          "review_units": 2
         },
         {
           "sources": {
@@ -188,34 +200,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5769230769230769,
+        "value": 0.5932203389830508,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 162,
-      "covered_prs": 162,
+      "eligible_prs": 173,
+      "covered_prs": 173,
       "coverage": "complete_for_sample",
-      "responded_prs": 64,
-      "unanswered_prs": 98,
+      "responded_prs": 72,
+      "unanswered_prs": 101,
       "median_ms": {
-        "value": 181223500,
+        "value": 126422000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 200,
-    "selected": 162,
-    "eligible_on_page": 162,
+    "selected": 173,
+    "eligible_on_page": 173,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 180,
+  "requests": 198,
   "rate": {
-    "remaining": 4731,
+    "remaining": 1619,
     "limit": 5000,
-    "resetAt": 1793140130000
+    "resetAt": 1793236984000
   },
   "failures": [],
   "complete": true
