@@ -16,6 +16,14 @@
     "merged_at": "2024-07-18T16:59:52Z"
   },
   "state": {
+    "tracked_prs": {
+      "18291": {
+        "id": 1878107926,
+        "updated_at": "2024-10-16T17:02:27Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -45,6 +53,11 @@
             "created_at": "2024-05-27T01:54:44Z"
           }
         ]
+      },
+      "/repositories/120896210/pulls/18291/comments?per_page=100": {
+        "etag": "\"122928d02c8472e2871e49b68fa0e11529eba77e55f58845ec0bc2be8fed7d2f\"",
+        "next": "",
+        "value": []
       },
       "/repositories/120896210/pulls/18291/reviews?per_page=100": {
         "etag": "W/\"74f0fe2357f1bd53f6631e8cb428b77e3f24b25d348267340b7c73234fe31c6c\"",
@@ -95,18 +108,82 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1878107926,
+    "author": {
+      "id": 34639446,
+      "login": "yyzxw",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-05-20T10:48:45Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2183530499",
+        "actor": {
+          "id": 3849900,
+          "login": "todaywasawesome",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-17T17:15:49Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2183601533",
+        "actor": {
+          "id": 3849900,
+          "login": "todaywasawesome",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-17T17:47:05Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2186211939",
+        "actor": {
+          "id": 3849900,
+          "login": "todaywasawesome",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-18T15:36:06Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2186422112",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-18T16:59:48Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2121577646",
+        "actor": {
+          "id": 34639446,
+          "login": "yyzxw",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-21T02:11:00Z"
+      },
+      {
+        "id": "2132510642",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-05-27T01:54:44Z"
+      }
+    ],
+    "review_comments": []
   }
 }

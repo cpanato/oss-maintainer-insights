@@ -1,0 +1,239 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-06-08T15:17:32Z",
+    "id": 2575566045,
+    "number": 132170,
+    "user": {
+      "id": 96040,
+      "login": "danwinship",
+      "type": "User"
+    },
+    "created_at": "2025-06-07T14:43:41Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-06-08T09:56:22Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "132170": {
+        "id": 2575566045,
+        "updated_at": "2025-06-08T15:17:32Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/132170/comments?per_page=100": {
+        "etag": "W/\"7ee6922d9a679bdf993d9622eccb0490b1bd93757092fc2f03ad2ab0969a76ea\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2952592274,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-07T14:43:49Z"
+          },
+          {
+            "id": 2952781132,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-07T17:23:08Z"
+          },
+          {
+            "id": 2952781174,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-07T17:23:15Z"
+          },
+          {
+            "id": 2953841417,
+            "user": {
+              "id": 6954627,
+              "login": "aroradaman",
+              "type": "User"
+            },
+            "created_at": "2025-06-08T09:54:43Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132170/comments?per_page=100": {
+        "etag": "W/\"e5dafacd9838917a1b279f67a0a7b216818b57986ca8b92e3ea5e5c6ec6b3760\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2134030114,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "created_at": "2025-06-07T17:22:38Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132170/reviews?per_page=100": {
+        "etag": "W/\"1cd63352888b7a7c6c6b5c080a1077bfde66c598911daf7610e20b2f25e9b8ac\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2907618433,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-07T17:22:38Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2907618641,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-07T17:23:03Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2908321797,
+            "user": {
+              "id": 6954627,
+              "login": "aroradaman",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-08T09:52:07Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2575566045,
+    "author": {
+      "id": 96040,
+      "login": "danwinship",
+      "type": "User"
+    },
+    "created_at": "2025-06-07T14:43:41Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2907618433",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-07T17:22:38Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2907618641",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-07T17:23:03Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2908321797",
+        "actor": {
+          "id": 6954627,
+          "login": "aroradaman",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-08T09:52:07Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2952592274",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-07T14:43:49Z"
+      },
+      {
+        "id": "2952781132",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-07T17:23:08Z"
+      },
+      {
+        "id": "2952781174",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-07T17:23:15Z"
+      },
+      {
+        "id": "2953841417",
+        "actor": {
+          "id": 6954627,
+          "login": "aroradaman",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-08T09:54:43Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2134030114",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-07T17:22:38Z"
+      }
+    ]
+  }
+}
