@@ -1,8 +1,8 @@
 {
-  "generation": 3,
-  "observed_at": "2026-10-21T22:43:44Z",
+  "generation": 4,
+  "observed_at": "2026-10-30T17:03:04Z",
   "pr": {
-    "updated_at": "2026-10-17T06:41:53Z",
+    "updated_at": "2026-10-25T06:15:50Z",
     "id": 4897999145,
     "number": 5339,
     "user": {
@@ -19,8 +19,8 @@
     "tracked_prs": {
       "5339": {
         "id": 4897999145,
-        "updated_at": "2026-10-17T06:41:53Z",
-        "checked_at": "2026-10-21T22:43:44Z",
+        "updated_at": "2026-10-25T06:15:50Z",
+        "checked_at": "2026-10-30T17:03:04Z",
         "state": "open"
       }
     },
@@ -31,19 +31,87 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/5339/comments?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "W/\"8d46f3fa8b9a90ac44782dea41f64571043c9181aaadfe15ed32ab87a7001eb1\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6360176943,
+            "user": {
+              "id": 231763295,
+              "login": "XY-code1",
+              "type": "User"
+            },
+            "created_at": "2026-10-23T07:51:10Z"
+          },
+          {
+            "id": 6377413907,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-24T00:18:39Z"
+          },
+          {
+            "id": 6394291247,
+            "user": {
+              "id": 231763295,
+              "login": "XY-code1",
+              "type": "User"
+            },
+            "created_at": "2026-10-25T06:15:50Z"
+          }
+        ]
       },
       "/repositories/302670797/pulls/5339/comments?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "W/\"25d4bc1cb48b48520de50f08323286c43a7ef0cbead3c3b985bd129f725f1a28\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 4365500121,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-24T01:23:27Z"
+          },
+          {
+            "id": 4366227126,
+            "user": {
+              "id": 231763295,
+              "login": "XY-code1",
+              "type": "User"
+            },
+            "created_at": "2026-10-24T06:16:43Z"
+          }
+        ]
       },
       "/repositories/302670797/pulls/5339/reviews?per_page=100": {
-        "etag": "\"b1eae3e7105038b4fe4ba671a73aba26f3ba3c1aa96d7b802a9330aee62120be\"",
+        "etag": "W/\"10858f886343e9c524ff86f5681a49ef10f43f0ebd663c2d2b138aa7b06d0d82\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5636128698,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-10-24T01:23:27Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5637127872,
+            "user": {
+              "id": 231763295,
+              "login": "XY-code1",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-24T06:16:43Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -62,8 +130,76 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
-    "issue_comments": [],
-    "review_comments": []
+    "reviews": [
+      {
+        "id": "5636128698",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-24T01:23:27Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5637127872",
+        "actor": {
+          "id": 231763295,
+          "login": "XY-code1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-24T06:16:43Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6360176943",
+        "actor": {
+          "id": 231763295,
+          "login": "XY-code1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-23T07:51:10Z"
+      },
+      {
+        "id": "6377413907",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-24T00:18:39Z"
+      },
+      {
+        "id": "6394291247",
+        "actor": {
+          "id": 231763295,
+          "login": "XY-code1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-25T06:15:50Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "4365500121",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-24T01:23:27Z"
+      },
+      {
+        "id": "4366227126",
+        "actor": {
+          "id": 231763295,
+          "login": "XY-code1",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-24T06:16:43Z"
+      }
+    ]
   }
 }

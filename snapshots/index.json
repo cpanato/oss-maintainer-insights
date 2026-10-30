@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-30T10:27:17Z",
+  "attempted_at": "2026-10-30T16:52:14Z",
   "entries": [
-    {
-      "repository": "sigstore/rekor",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "ossf/scorecard",
       "status": "fresh",
@@ -43,15 +38,14 @@
         },
         "enumerated_prs": 2000,
         "eligible_prs": 1898,
-        "covered_prs": 886,
+        "covered_prs": 1186,
         "enumeration_complete": true
       }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 159,
       "progress": {
         "population": {
           "inspected_prs": 900,
@@ -68,7 +62,7 @@
         },
         "enumerated_prs": 900,
         "eligible_prs": 765,
-        "covered_prs": 712,
+        "covered_prs": 765,
         "enumeration_complete": true
       }
     },
@@ -79,27 +73,8 @@
     },
     {
       "repository": "cert-manager/cert-manager",
-      "status": "updated",
-      "requests": 180,
-      "progress": {
-        "population": {
-          "inspected_prs": 400,
-          "human_authored_prs": 187,
-          "bot_authored_prs": 170,
-          "draft_prs": 11,
-          "missing_author_prs": 0,
-          "outside_window_prs": 32,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-01T03:13:14.000Z",
-          "end": "2026-10-30T03:13:14.000Z"
-        },
-        "enumerated_prs": 400,
-        "eligible_prs": 357,
-        "covered_prs": 357,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "argoproj/argo-cd",
@@ -122,12 +97,17 @@
         },
         "enumerated_prs": 1300,
         "eligible_prs": 1239,
-        "covered_prs": 295,
+        "covered_prs": 595,
         "enumeration_complete": true
       }
     },
     {
       "repository": "argoproj/argo-helm",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "sigstore/rekor",
       "status": "fresh",
       "requests": 0
     }

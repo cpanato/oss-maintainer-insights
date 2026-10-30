@@ -16,26 +16,298 @@
     "merged_at": "2025-06-05T16:54:39Z"
   },
   "state": {
+    "tracked_prs": {
+      "132117": {
+        "id": 2569657420,
+        "updated_at": "2025-06-05T16:54:40Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
-    "pages": {}
+    "pages": {
+      "/repositories/20580498/issues/132117/comments?per_page=100": {
+        "etag": "W/\"f8c8d8c36bc5e65fc3dd6c42d97efb56f016e2ecdb0c4aa177cabccee377f4d0\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2943419702,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-05T09:23:16Z"
+          },
+          {
+            "id": 2943427898,
+            "user": {
+              "id": 6954627,
+              "login": "aroradaman",
+              "type": "User"
+            },
+            "created_at": "2025-06-05T09:25:43Z"
+          },
+          {
+            "id": 2943989192,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-05T12:16:20Z"
+          },
+          {
+            "id": 2944993613,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2025-06-05T15:29:04Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132117/comments?per_page=100": {
+        "etag": "W/\"1881759f65dff3f2c90045339262fbfb628c1eaf4d647363d383a18ab9503a2c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2129250138,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "created_at": "2025-06-05T16:34:59Z"
+          },
+          {
+            "id": 2129251281,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "created_at": "2025-06-05T16:35:43Z"
+          },
+          {
+            "id": 2129251901,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "created_at": "2025-06-05T16:36:08Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/132117/reviews?per_page=100": {
+        "etag": "W/\"d28fc3eb0837c040f1e751632b87171acf313fb296c6e4631c934189d9ffe00a\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2899542698,
+            "user": {
+              "id": 6954627,
+              "login": "aroradaman",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-05T09:23:09Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2900085331,
+            "user": {
+              "id": 12646029,
+              "login": "mkumatag",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-05T12:16:08Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 2901007450,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-05T16:34:59Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2901009270,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-05T16:35:44Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2901010257,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "submitted_at": "2025-06-05T16:36:08Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2569657420,
+    "author": {
+      "id": 99066083,
+      "login": "yashsingh74",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-06-05T09:17:51Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2899542698",
+        "actor": {
+          "id": 6954627,
+          "login": "aroradaman",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T09:23:09Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2900085331",
+        "actor": {
+          "id": 12646029,
+          "login": "mkumatag",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T12:16:08Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2901007450",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T16:34:59Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2901009270",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T16:35:44Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2901010257",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T16:36:08Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2943419702",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T09:23:16Z"
+      },
+      {
+        "id": "2943427898",
+        "actor": {
+          "id": 6954627,
+          "login": "aroradaman",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T09:25:43Z"
+      },
+      {
+        "id": "2943989192",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T12:16:20Z"
+      },
+      {
+        "id": "2944993613",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T15:29:04Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2129250138",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T16:34:59Z"
+      },
+      {
+        "id": "2129251281",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T16:35:43Z"
+      },
+      {
+        "id": "2129251901",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2025-06-05T16:36:08Z"
+      }
+    ]
   }
 }
