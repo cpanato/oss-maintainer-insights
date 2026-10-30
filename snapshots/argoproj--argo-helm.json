@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 200,
-    "human_authored_prs": 76,
-    "bot_authored_prs": 65,
-    "draft_prs": 15,
+    "human_authored_prs": 79,
+    "bot_authored_prs": 62,
+    "draft_prs": 16,
     "missing_author_prs": 0,
-    "outside_window_prs": 44,
+    "outside_window_prs": 43,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 17,
-    "reused_prs": 124,
-    "events_checked_since": "2026-10-22T08:01:43Z",
+    "refreshed_prs": 122,
+    "reused_prs": 19,
+    "events_checked_since": "2026-10-23T14:04:22Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-07-31T09:04:55Z",
-    "newest_created_at": "2026-10-28T07:26:11Z"
+    "oldest_created_at": "2026-08-01T09:06:01Z",
+    "newest_created_at": "2026-10-29T09:15:42Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,10 +28,10 @@
       "full_name": "argoproj/argo-helm"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-29T00:37:09.000Z",
+    "collected_at": "2026-10-30T02:56:50.000Z",
     "window": {
-      "start": "2026-07-31T00:37:09.000Z",
-      "end": "2026-10-29T00:37:09.000Z"
+      "start": "2026-08-01T02:56:50.000Z",
+      "end": "2026-10-30T02:56:50.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
@@ -39,16 +39,16 @@
       "missing_authors": 0,
       "bot_events": 8,
       "missing_event_actors": 0,
-      "self_events": 110
+      "self_events": 113
     },
     "creation_cohort": {
       "eligible_prs": 141,
       "coverage": "complete_for_sample",
       "authors": 38,
       "outcomes": {
-        "open": 15,
-        "closed_unmerged": 6,
-        "merged": 120
+        "open": 14,
+        "closed_unmerged": 5,
+        "merged": 122
       }
     },
     "review_activity": {
@@ -64,7 +64,7 @@
       "distribution": [
         {
           "sources": {
-            "github_review_units": 96,
+            "github_review_units": 94,
             "prow_command_units": 0
           },
           "actor": {
@@ -72,11 +72,11 @@
             "login": "tico24",
             "type": "User"
           },
-          "review_units": 96
+          "review_units": 94
         },
         {
           "sources": {
-            "github_review_units": 65,
+            "github_review_units": 67,
             "prow_command_units": 0
           },
           "actor": {
@@ -84,11 +84,11 @@
             "login": "jmeridth",
             "type": "User"
           },
-          "review_units": 65
+          "review_units": 67
         },
         {
           "sources": {
-            "github_review_units": 35,
+            "github_review_units": 34,
             "prow_command_units": 0
           },
           "actor": {
@@ -96,7 +96,7 @@
             "login": "yu-croco",
             "type": "User"
           },
-          "review_units": 35
+          "review_units": 34
         },
         {
           "sources": {
@@ -124,7 +124,7 @@
         },
         {
           "sources": {
-            "github_review_units": 6,
+            "github_review_units": 7,
             "prow_command_units": 0
           },
           "actor": {
@@ -132,7 +132,7 @@
             "login": "vladlosev",
             "type": "User"
           },
-          "review_units": 6
+          "review_units": 7
         },
         {
           "sources": {
@@ -176,7 +176,7 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.35687732342007433,
+        "value": 0.34944237918215615,
         "status": "available"
       }
     },
@@ -184,10 +184,10 @@
       "eligible_prs": 141,
       "covered_prs": 141,
       "coverage": "complete_for_sample",
-      "responded_prs": 139,
-      "unanswered_prs": 2,
+      "responded_prs": 138,
+      "unanswered_prs": 3,
       "median_ms": {
-        "value": 34452000,
+        "value": 33583000,
         "status": "available"
       }
     }
@@ -199,11 +199,11 @@
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 54,
+  "requests": 369,
   "rate": {
-    "remaining": 1835,
+    "remaining": 4630,
     "limit": 5000,
-    "resetAt": 1793236984000
+    "resetAt": 1793332574000
   },
   "failures": [],
   "complete": true
