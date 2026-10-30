@@ -1,8 +1,8 @@
 {
-  "generation": 3,
-  "observed_at": "2026-10-21T22:43:44Z",
+  "generation": 4,
+  "observed_at": "2026-10-30T17:03:04Z",
   "pr": {
-    "updated_at": "2026-10-20T12:22:29Z",
+    "updated_at": "2026-10-28T18:27:06Z",
     "id": 4605977261,
     "number": 5248,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-09-22T19:24:20Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-28T18:27:06Z"
   },
   "state": {
     "tracked_prs": {
       "5248": {
         "id": 4605977261,
-        "updated_at": "2026-10-20T12:22:29Z",
-        "checked_at": "2026-10-21T22:43:44Z",
-        "state": "open"
+        "updated_at": "2026-10-28T18:27:06Z",
+        "checked_at": "2026-10-30T17:03:04Z",
+        "state": "closed"
       }
     },
     "repository_id": 302670797,
@@ -31,7 +31,7 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/5248/comments?per_page=100": {
-        "etag": "W/\"ef05c8a0a19cc41c80b0e37f73df732846d57b8d3c3442226d783790a94b6953\"",
+        "etag": "W/\"c81da6a6339302703a6bb4900a55c6cfaaf874138bf780be99ddef065f46c328\"",
         "next": "",
         "value": [
           {
@@ -60,11 +60,20 @@
               "type": "User"
             },
             "created_at": "2026-10-18T10:15:33Z"
+          },
+          {
+            "id": 6451021088,
+            "user": {
+              "id": 4173387,
+              "login": "jessehouwing",
+              "type": "User"
+            },
+            "created_at": "2026-10-27T19:02:34Z"
           }
         ]
       },
       "/repositories/302670797/pulls/5248/comments?per_page=100": {
-        "etag": "W/\"86be12b335403be642500aa8d67a9fdfda6eceec38a89f560eb327a07f2124e7\"",
+        "etag": "W/\"ff771df022b3d339dc2ce108e65f5a03dd49556741bb8de73c9e1b3b1b47a003\"",
         "next": "",
         "value": [
           {
@@ -187,7 +196,7 @@
         ]
       },
       "/repositories/302670797/pulls/5248/reviews?per_page=100": {
-        "etag": "W/\"e9711dae5cfcf4dce16c9a08ef9889f6d969c73cb85186f1cd1a9537bcca7875\"",
+        "etag": "W/\"7b7f0b882c5c6a847e7e1b780930c9913550372186843b753a48c50ec422ad08\"",
         "next": "",
         "value": [
           {
@@ -299,6 +308,16 @@
             },
             "submitted_at": "2026-10-18T09:08:11Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5640811009,
+            "user": {
+              "id": 1358764,
+              "login": "JamieMagee",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-25T00:45:03Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -313,7 +332,7 @@
     },
     "created_at": "2026-09-22T19:24:20Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -429,6 +448,16 @@
         },
         "occurred_at": "2026-10-18T09:08:11Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5640811009",
+        "actor": {
+          "id": 1358764,
+          "login": "JamieMagee",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-25T00:45:03Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -458,6 +487,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-18T10:15:33Z"
+      },
+      {
+        "id": "6451021088",
+        "actor": {
+          "id": 4173387,
+          "login": "jessehouwing",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-27T19:02:34Z"
       }
     ],
     "review_comments": [

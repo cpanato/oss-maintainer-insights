@@ -1,8 +1,8 @@
 {
-  "generation": 3,
-  "observed_at": "2026-10-21T22:43:44Z",
+  "generation": 4,
+  "observed_at": "2026-10-30T17:03:04Z",
   "pr": {
-    "updated_at": "2026-10-11T17:43:56Z",
+    "updated_at": "2026-10-27T07:00:24Z",
     "id": 4311264928,
     "number": 5189,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-08-19T06:39:09Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-27T04:11:31Z"
   },
   "state": {
     "tracked_prs": {
       "5189": {
         "id": 4311264928,
-        "updated_at": "2026-10-11T17:43:56Z",
-        "checked_at": "2026-10-21T22:43:44Z",
-        "state": "open"
+        "updated_at": "2026-10-27T07:00:24Z",
+        "checked_at": "2026-10-30T17:03:04Z",
+        "state": "closed"
       }
     },
     "repository_id": 302670797,
@@ -31,7 +31,7 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/5189/comments?per_page=100": {
-        "etag": "W/\"df573483f8033cb3043d6104fad40a4b108fc67331462b1ea171f3e1cbd4d9ef\"",
+        "etag": "W/\"7510b0bad28864a4b01cde241ffa0c881e2f06ff9f306f95f24844a6b0056d27\"",
         "next": "",
         "value": [
           {
@@ -69,16 +69,25 @@
               "type": "Bot"
             },
             "created_at": "2026-09-20T01:44:53Z"
+          },
+          {
+            "id": 6435817287,
+            "user": {
+              "id": 300028621,
+              "login": "Sahana2524",
+              "type": "User"
+            },
+            "created_at": "2026-10-27T07:00:24Z"
           }
         ]
       },
       "/repositories/302670797/pulls/5189/comments?per_page=100": {
-        "etag": "\"ca97a5e6255860bfd614aa430e1d9234371c302dff8bb1d857ef5da4a9bfc225\"",
+        "etag": "\"cba4ab9f0032d3a2daaed1faf86cf734e86256313e7cbd89469ad1b577a930e8\"",
         "next": "",
         "value": []
       },
       "/repositories/302670797/pulls/5189/reviews?per_page=100": {
-        "etag": "W/\"dec0b31b95b3352a45fbcdf617ddf45723834e357842ea130b2b18046961f1b0\"",
+        "etag": "W/\"4c8eb23669807d49403a3aa183768904cf56d668b522cc5c7cb5d75189c61db9\"",
         "next": "",
         "value": [
           {
@@ -100,6 +109,16 @@
             },
             "submitted_at": "2026-10-11T01:26:04Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5662081156,
+            "user": {
+              "id": 567897,
+              "login": "justaugustus",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-27T04:04:31Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -114,7 +133,7 @@
     },
     "created_at": "2026-08-19T06:39:09Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -140,6 +159,16 @@
         },
         "occurred_at": "2026-10-11T01:26:04Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5662081156",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-27T04:04:31Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -178,6 +207,15 @@
           "type": "Bot"
         },
         "occurred_at": "2026-09-20T01:44:53Z"
+      },
+      {
+        "id": "6435817287",
+        "actor": {
+          "id": 300028621,
+          "login": "Sahana2524",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-27T07:00:24Z"
       }
     ],
     "review_comments": []

@@ -1,0 +1,289 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-05-20T20:38:07Z",
+    "id": 2529159955,
+    "number": 131849,
+    "user": {
+      "id": 8463,
+      "login": "mortent",
+      "type": "User"
+    },
+    "created_at": "2025-05-19T15:53:00Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-05-20T20:38:05Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "131849": {
+        "id": 2529159955,
+        "updated_at": "2025-05-20T20:38:07Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/131849/comments?per_page=100": {
+        "etag": "W/\"620ac1443acebdd362ee95b20fcf29f44ea5bee61098f15574ff7b45728e00f4\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2891520983,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-19T15:53:09Z"
+          },
+          {
+            "id": 2892667968,
+            "user": {
+              "id": 8463,
+              "login": "mortent",
+              "type": "User"
+            },
+            "created_at": "2025-05-20T01:47:53Z"
+          },
+          {
+            "id": 2894147956,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-20T12:00:48Z"
+          },
+          {
+            "id": 2894148247,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-20T12:00:56Z"
+          },
+          {
+            "id": 2894884155,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-20T15:30:39Z"
+          },
+          {
+            "id": 2895065562,
+            "user": {
+              "id": 8463,
+              "login": "mortent",
+              "type": "User"
+            },
+            "created_at": "2025-05-20T16:11:06Z"
+          },
+          {
+            "id": 2895069365,
+            "user": {
+              "id": 8463,
+              "login": "mortent",
+              "type": "User"
+            },
+            "created_at": "2025-05-20T16:12:26Z"
+          },
+          {
+            "id": 2895411495,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-20T18:22:24Z"
+          },
+          {
+            "id": 2895632629,
+            "user": {
+              "id": 8463,
+              "login": "mortent",
+              "type": "User"
+            },
+            "created_at": "2025-05-20T19:33:37Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/131849/comments?per_page=100": {
+        "etag": "\"cba4ab9f0032d3a2daaed1faf86cf734e86256313e7cbd89469ad1b577a930e8\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/131849/reviews?per_page=100": {
+        "etag": "W/\"c58e800e78dadde5e5875ad2865262c5159388d9161b336fc50adeb1c10835b8\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2853884755,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2025-05-20T12:00:42Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2855185010,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "submitted_at": "2025-05-20T18:22:18Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2529159955,
+    "author": {
+      "id": 8463,
+      "login": "mortent",
+      "type": "User"
+    },
+    "created_at": "2025-05-19T15:53:00Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2853884755",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T12:00:42Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2855185010",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T18:22:18Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2891520983",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-19T15:53:09Z"
+      },
+      {
+        "id": "2892667968",
+        "actor": {
+          "id": 8463,
+          "login": "mortent",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T01:47:53Z"
+      },
+      {
+        "id": "2894147956",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T12:00:48Z"
+      },
+      {
+        "id": "2894148247",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T12:00:56Z"
+      },
+      {
+        "id": "2894884155",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T15:30:39Z"
+      },
+      {
+        "id": "2895065562",
+        "actor": {
+          "id": 8463,
+          "login": "mortent",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T16:11:06Z"
+      },
+      {
+        "id": "2895069365",
+        "actor": {
+          "id": 8463,
+          "login": "mortent",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T16:12:26Z"
+      },
+      {
+        "id": "2895411495",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T18:22:24Z"
+      },
+      {
+        "id": "2895632629",
+        "actor": {
+          "id": 8463,
+          "login": "mortent",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-20T19:33:37Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
