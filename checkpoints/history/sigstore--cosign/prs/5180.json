@@ -1,8 +1,8 @@
 {
-  "generation": 4,
-  "observed_at": "2026-10-22T14:24:37Z",
+  "generation": 5,
+  "observed_at": "2026-10-30T03:16:27Z",
   "pr": {
-    "updated_at": "2026-10-21T23:07:16Z",
+    "updated_at": "2026-10-22T20:15:47Z",
     "id": 4958963100,
     "number": 5180,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-21T22:02:12Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-22T20:15:47Z"
   },
   "state": {
     "tracked_prs": {
       "5180": {
         "id": 4958963100,
-        "updated_at": "2026-10-21T23:07:16Z",
-        "checked_at": "2026-10-22T14:24:37Z",
-        "state": "open"
+        "updated_at": "2026-10-22T20:15:47Z",
+        "checked_at": "2026-10-30T03:16:27Z",
+        "state": "closed"
       }
     },
     "repository_id": 335952417,
@@ -31,7 +31,7 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/5180/comments?per_page=100": {
-        "etag": "W/\"6c99bb6080e22b41421b4c3eedb2eb38ae43eadf886d27c6dcd52494ec5f8432\"",
+        "etag": "W/\"0a29d996a280863bdae6cbd84f087659354ed10784cdd759cf2161300960096b\"",
         "next": "",
         "value": [
           {
@@ -55,14 +55,25 @@
         ]
       },
       "/repositories/335952417/pulls/5180/comments?per_page=100": {
-        "etag": "\"935f132bd1605011c4b1b7f527ecd7a6fbf36f191f171ae45d0297da5e5d0d62\"",
+        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
         "next": "",
         "value": []
       },
       "/repositories/335952417/pulls/5180/reviews?per_page=100": {
-        "etag": "\"935f132bd1605011c4b1b7f527ecd7a6fbf36f191f171ae45d0297da5e5d0d62\"",
+        "etag": "W/\"e087657600b7da0000e26a950fe4d9b41e0c98b1ac75b60d0d19c223c2ababc9\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5620281476,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-22T20:15:36Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -75,13 +86,24 @@
     },
     "created_at": "2026-10-21T22:02:12Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5620281476",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-22T20:15:36Z",
+        "state": "APPROVED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6328510228",

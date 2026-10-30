@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "18092": {
+        "id": 1856730901,
+        "updated_at": "2026-09-17T14:58:48Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/18092/comments?per_page=100": {
+        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/18092/reviews?per_page=100": {
         "etag": "W/\"65f8656e6048cbd5090b572c28bedd369864f4ecb85d810a9ccb0a3e1fc886c6\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1856730901,
+    "author": {
+      "id": 6956487,
+      "login": "zhammer",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-05-06T18:39:31Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2425434996",
+        "actor": {
+          "id": 137232734,
+          "login": "andrii-korotkov-verkada",
+          "type": "User"
+        },
+        "occurred_at": "2024-11-09T14:54:13Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "5716513264",
+        "actor": {
+          "id": 3849900,
+          "login": "todaywasawesome",
+          "type": "User"
+        },
+        "occurred_at": "2026-09-17T14:58:47Z"
+      }
+    ],
+    "review_comments": []
   }
 }
