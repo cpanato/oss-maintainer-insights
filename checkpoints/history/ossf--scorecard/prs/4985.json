@@ -1,8 +1,8 @@
 {
-  "generation": 3,
-  "observed_at": "2026-10-21T22:43:44Z",
+  "generation": 4,
+  "observed_at": "2026-10-30T17:03:04Z",
   "pr": {
-    "updated_at": "2026-10-02T01:51:08Z",
+    "updated_at": "2026-10-28T06:11:18Z",
     "id": 3456731867,
     "number": 4985,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-03-27T12:39:22Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-10-28T05:57:19Z"
   },
   "state": {
     "tracked_prs": {
       "4985": {
         "id": 3456731867,
-        "updated_at": "2026-10-02T01:51:08Z",
-        "checked_at": "2026-10-21T22:43:44Z",
-        "state": "open"
+        "updated_at": "2026-10-28T06:11:18Z",
+        "checked_at": "2026-10-30T17:03:04Z",
+        "state": "closed"
       }
     },
     "repository_id": 302670797,
@@ -31,7 +31,7 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/4985/comments?per_page=100": {
-        "etag": "W/\"43a3a127b28d78c13664a56f9c65b587487621dfb76dd74876b64652d3d9dbb8\"",
+        "etag": "W/\"a45b545b7e7baf847c4f730bf357002312449b7bd82c04813e2a167c8cf55fb8\"",
         "next": "",
         "value": [
           {
@@ -87,16 +87,34 @@
               "type": "Bot"
             },
             "created_at": "2026-09-30T01:53:21Z"
+          },
+          {
+            "id": 6458282491,
+            "user": {
+              "id": 41898282,
+              "login": "github-actions[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-10-28T01:34:23Z"
+          },
+          {
+            "id": 6461545029,
+            "user": {
+              "id": 5972917,
+              "login": "Kielek",
+              "type": "User"
+            },
+            "created_at": "2026-10-28T05:36:04Z"
           }
         ]
       },
       "/repositories/302670797/pulls/4985/comments?per_page=100": {
-        "etag": "\"935f132bd1605011c4b1b7f527ecd7a6fbf36f191f171ae45d0297da5e5d0d62\"",
+        "etag": "\"93c63968f51e28e9360a04be61aeeba45c3575344c003ed77d9ca3a5febed16e\"",
         "next": "",
         "value": []
       },
       "/repositories/302670797/pulls/4985/reviews?per_page=100": {
-        "etag": "W/\"d7d3414bd6d09f87c9d51388c4e80e3b16a073638ae4596baa5137b2f42148bc\"",
+        "etag": "W/\"126dcb7aa5f4d835604ec500aa9b058074e6f3c3bb525e111d436afed297e1b9\"",
         "next": "",
         "value": [
           {
@@ -108,6 +126,16 @@
             },
             "submitted_at": "2026-08-10T09:40:20Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5678428972,
+            "user": {
+              "id": 567897,
+              "login": "justaugustus",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-28T05:56:59Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -122,7 +150,7 @@
     },
     "created_at": "2026-03-27T12:39:22Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -138,6 +166,16 @@
         },
         "occurred_at": "2026-08-10T09:40:20Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5678428972",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-28T05:56:59Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -194,6 +232,24 @@
           "type": "Bot"
         },
         "occurred_at": "2026-09-30T01:53:21Z"
+      },
+      {
+        "id": "6458282491",
+        "actor": {
+          "id": 41898282,
+          "login": "github-actions[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-10-28T01:34:23Z"
+      },
+      {
+        "id": "6461545029",
+        "actor": {
+          "id": 5972917,
+          "login": "Kielek",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-28T05:36:04Z"
       }
     ],
     "review_comments": []

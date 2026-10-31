@@ -2,22 +2,22 @@
   "population": {
     "inspected_prs": 200,
     "human_authored_prs": 107,
-    "bot_authored_prs": 67,
-    "draft_prs": 7,
+    "bot_authored_prs": 69,
+    "draft_prs": 10,
     "missing_author_prs": 0,
-    "outside_window_prs": 19,
+    "outside_window_prs": 14,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 144,
-    "reused_prs": 30,
-    "events_checked_since": "2026-10-23T14:04:50Z",
+    "refreshed_prs": 63,
+    "reused_prs": 113,
+    "events_checked_since": "2026-10-24T14:07:10Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-01T09:13:20Z",
-    "newest_created_at": "2026-10-29T18:14:49Z"
+    "oldest_created_at": "2026-08-02T16:40:58Z",
+    "newest_created_at": "2026-10-30T08:23:54Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,38 +28,38 @@
       "full_name": "ossf/scorecard"
     },
     "mode": "live_sample",
-    "collected_at": "2026-10-30T02:59:55.000Z",
+    "collected_at": "2026-10-31T07:39:28.000Z",
     "window": {
-      "start": "2026-08-01T02:59:55.000Z",
-      "end": "2026-10-30T02:59:55.000Z"
+      "start": "2026-08-02T07:39:28.000Z",
+      "end": "2026-10-31T07:39:28.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 216,
+      "bot_events": 214,
       "missing_event_actors": 0,
       "self_events": 100
     },
     "creation_cohort": {
-      "eligible_prs": 174,
+      "eligible_prs": 176,
       "coverage": "complete_for_sample",
       "authors": 59,
       "outcomes": {
-        "open": 56,
+        "open": 59,
         "closed_unmerged": 56,
-        "merged": 62
+        "merged": 61
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 59,
+        "github_review_units": 58,
         "prow_command_units": 0
       },
-      "eligible_prs": 174,
-      "covered_prs": 174,
+      "eligible_prs": 176,
+      "covered_prs": 176,
       "coverage": "complete_for_sample",
-      "review_units": 59,
+      "review_units": 58,
       "participants": 11,
       "distribution": [
         {
@@ -88,7 +88,7 @@
         },
         {
           "sources": {
-            "github_review_units": 5,
+            "github_review_units": 4,
             "prow_command_units": 0
           },
           "actor": {
@@ -96,7 +96,7 @@
             "login": "JamieMagee",
             "type": "User"
           },
-          "review_units": 5
+          "review_units": 4
         },
         {
           "sources": {
@@ -200,34 +200,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5932203389830508,
+        "value": 0.603448275862069,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 174,
-      "covered_prs": 174,
+      "eligible_prs": 176,
+      "covered_prs": 176,
       "coverage": "complete_for_sample",
-      "responded_prs": 71,
-      "unanswered_prs": 103,
+      "responded_prs": 70,
+      "unanswered_prs": 106,
       "median_ms": {
-        "value": 126109000,
+        "value": 124186000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 200,
-    "selected": 174,
-    "eligible_on_page": 174,
+    "selected": 176,
+    "eligible_on_page": 176,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 435,
+  "requests": 192,
   "rate": {
-    "remaining": 3880,
+    "remaining": 2782,
     "limit": 5000,
-    "resetAt": 1793332574000
+    "resetAt": 1793435373000
   },
   "failures": [],
   "complete": true
