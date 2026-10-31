@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-10-31T13:52:38Z",
+  "attempted_at": "2026-10-31T18:44:50Z",
   "entries": [
-    {
-      "repository": "prometheus/prometheus",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "helm/helm",
       "status": "fresh",
@@ -19,27 +14,8 @@
     },
     {
       "repository": "argoproj/argo-cd",
-      "status": "updated",
-      "requests": 788,
-      "progress": {
-        "population": {
-          "inspected_prs": 1300,
-          "human_authored_prs": 721,
-          "bot_authored_prs": 535,
-          "draft_prs": 28,
-          "missing_author_prs": 0,
-          "outside_window_prs": 16,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-02T13:52:38.000Z",
-          "end": "2026-10-31T13:52:38.000Z"
-        },
-        "enumerated_prs": 1300,
-        "eligible_prs": 1256,
-        "covered_prs": 1256,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "argoproj/argo-helm",
@@ -87,9 +63,14 @@
         },
         "enumerated_prs": 2100,
         "eligible_prs": 1928,
-        "covered_prs": 1398,
+        "covered_prs": 1698,
         "enumeration_complete": true
       }
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "status": "fresh",
+      "requests": 0
     }
   ]
 }
