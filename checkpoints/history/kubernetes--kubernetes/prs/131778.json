@@ -1,0 +1,267 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2025-06-12T23:10:00Z",
+    "id": 2520876842,
+    "number": 131778,
+    "user": {
+      "id": 7066141,
+      "login": "gavinkflam",
+      "type": "User"
+    },
+    "created_at": "2025-05-15T04:44:17Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-05-16T05:01:13Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "131778": {
+        "id": 2520876842,
+        "updated_at": "2025-06-12T23:10:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/131778/comments?per_page=100": {
+        "etag": "W/\"1d46360b4988db354ac89436f777662b77a4757753cc8b7b5df6326915f9f41d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2882269663,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-15T04:44:26Z"
+          },
+          {
+            "id": 2882269686,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-15T04:44:27Z"
+          },
+          {
+            "id": 2885437474,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-16T01:59:48Z"
+          },
+          {
+            "id": 2885437583,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-05-16T01:59:52Z"
+          },
+          {
+            "id": 2885566489,
+            "user": {
+              "id": 2010320,
+              "login": "pacoxu",
+              "type": "User"
+            },
+            "created_at": "2025-05-16T03:55:26Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/131778/comments?per_page=100": {
+        "etag": "W/\"0dd2b87ff2a1d68c2cd0c6c8479c48520c156aa08951baf7ac2626d9bbeedced\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2090452384,
+            "user": {
+              "id": 12646029,
+              "login": "mkumatag",
+              "type": "User"
+            },
+            "created_at": "2025-05-15T07:13:11Z"
+          },
+          {
+            "id": 2091719340,
+            "user": {
+              "id": 7066141,
+              "login": "gavinkflam",
+              "type": "User"
+            },
+            "created_at": "2025-05-15T18:03:57Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/131778/reviews?per_page=100": {
+        "etag": "W/\"93d7438f9837a507eb4275a5d083237f37de500e13b5321a427a442438300b27\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2842526917,
+            "user": {
+              "id": 12646029,
+              "login": "mkumatag",
+              "type": "User"
+            },
+            "submitted_at": "2025-05-15T07:13:23Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 2844592746,
+            "user": {
+              "id": 7066141,
+              "login": "gavinkflam",
+              "type": "User"
+            },
+            "submitted_at": "2025-05-15T18:03:57Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2845326111,
+            "user": {
+              "id": 12646029,
+              "login": "mkumatag",
+              "type": "User"
+            },
+            "submitted_at": "2025-05-16T01:59:41Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2520876842,
+    "author": {
+      "id": 7066141,
+      "login": "gavinkflam",
+      "type": "User"
+    },
+    "created_at": "2025-05-15T04:44:17Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2842526917",
+        "actor": {
+          "id": 12646029,
+          "login": "mkumatag",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-15T07:13:23Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "2844592746",
+        "actor": {
+          "id": 7066141,
+          "login": "gavinkflam",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-15T18:03:57Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2845326111",
+        "actor": {
+          "id": 12646029,
+          "login": "mkumatag",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-16T01:59:41Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2882269663",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-15T04:44:26Z"
+      },
+      {
+        "id": "2882269686",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-15T04:44:27Z"
+      },
+      {
+        "id": "2885437474",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-16T01:59:48Z"
+      },
+      {
+        "id": "2885437583",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-16T01:59:52Z"
+      },
+      {
+        "id": "2885566489",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-16T03:55:26Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "2090452384",
+        "actor": {
+          "id": 12646029,
+          "login": "mkumatag",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-15T07:13:11Z"
+      },
+      {
+        "id": "2091719340",
+        "actor": {
+          "id": 7066141,
+          "login": "gavinkflam",
+          "type": "User"
+        },
+        "occurred_at": "2025-05-15T18:03:57Z"
+      }
+    ]
+  }
+}
