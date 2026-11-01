@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "130729": {
+        "id": 2385994213,
+        "updated_at": "2025-03-19T12:57:43Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -112,6 +120,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/130729/comments?per_page=100": {
+        "etag": "\"779166aa894f23b118e1de939223c33099ee9600e9fceb003498d8f45409b420\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/130729/reviews?per_page=100": {
         "etag": "\"b45d24318f9e1a260ae894a8791a0b949e24c38e18ed99a17ad3f1dd317a1c49\"",
         "next": "",
@@ -120,18 +133,107 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2385994213,
+    "author": {
+      "id": 61663422,
+      "login": "omerap12",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-03-11T18:37:29Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "2715368014",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-11T18:37:38Z"
+      },
+      {
+        "id": "2715368676",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-11T18:37:53Z"
+      },
+      {
+        "id": "2720751611",
+        "actor": {
+          "id": 61663422,
+          "login": "omerap12",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-13T10:29:40Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2722047737",
+        "actor": {
+          "id": 736329,
+          "login": "adrianmoisey",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-13T17:12:41Z"
+      },
+      {
+        "id": "2722048227",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-13T17:12:53Z"
+      },
+      {
+        "id": "2727290939",
+        "actor": {
+          "id": 61663422,
+          "login": "omerap12",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-16T09:26:26Z"
+      },
+      {
+        "id": "2727309966",
+        "actor": {
+          "id": 736329,
+          "login": "adrianmoisey",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-16T10:04:56Z"
+      },
+      {
+        "id": "2736544326",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-19T12:57:36Z"
+      },
+      {
+        "id": "2736544607",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-03-19T12:57:42Z"
+      }
+    ],
+    "review_comments": []
   }
 }
