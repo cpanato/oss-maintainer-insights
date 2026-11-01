@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "15859": {
+        "id": 1546166241,
+        "updated_at": "2024-11-13T14:30:40Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -64,6 +72,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/15859/comments?per_page=100": {
+        "etag": "\"5bd6d22c59375a5689871b4e51e27b0b3c71e5ff798242a5a0129520ee964ee1\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/15859/reviews?per_page=100": {
         "etag": "\"779166aa894f23b118e1de939223c33099ee9600e9fceb003498d8f45409b420\"",
         "next": "",
@@ -72,18 +85,59 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1546166241,
+    "author": {
+      "id": 102309095,
+      "login": "PranitRout07",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-10-07T01:33:03Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "1751553018",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-10-07T01:46:37Z"
+      },
+      {
+        "id": "1781882309",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T20:55:36Z"
+      },
+      {
+        "id": "1782076414",
+        "actor": {
+          "id": 102309095,
+          "login": "PranitRout07",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T23:39:38Z"
+      },
+      {
+        "id": "2291393922",
+        "actor": {
+          "id": 2680725,
+          "login": "wanghong230",
+          "type": "User"
+        },
+        "occurred_at": "2024-08-15T14:29:39Z"
+      }
+    ],
+    "review_comments": []
   }
 }
