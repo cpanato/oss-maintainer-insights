@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 400,
-    "human_authored_prs": 185,
-    "bot_authored_prs": 176,
+    "human_authored_prs": 184,
+    "bot_authored_prs": 178,
     "draft_prs": 11,
     "missing_author_prs": 0,
-    "outside_window_prs": 28,
+    "outside_window_prs": 27,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 66,
-    "reused_prs": 295,
-    "events_checked_since": "2026-10-25T14:33:46Z",
+    "refreshed_prs": 63,
+    "reused_prs": 299,
+    "events_checked_since": "2026-10-26T20:19:04Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-04T03:30:14Z",
-    "newest_created_at": "2026-10-31T23:17:20Z"
+    "oldest_created_at": "2026-08-05T21:04:39Z",
+    "newest_created_at": "2026-11-02T13:19:24Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,63 +28,63 @@
       "full_name": "cert-manager/cert-manager"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-01T09:47:44.000Z",
+    "collected_at": "2026-11-02T19:00:12.000Z",
     "window": {
-      "start": "2026-08-03T09:47:44.000Z",
-      "end": "2026-11-01T09:47:44.000Z"
+      "start": "2026-08-04T19:00:12.000Z",
+      "end": "2026-11-02T19:00:12.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 938,
+      "bot_events": 942,
       "missing_event_actors": 0,
       "self_events": 605
     },
     "creation_cohort": {
-      "eligible_prs": 361,
+      "eligible_prs": 362,
       "coverage": "complete_for_sample",
       "authors": 60,
       "outcomes": {
-        "open": 56,
-        "closed_unmerged": 25,
-        "merged": 280
+        "open": 52,
+        "closed_unmerged": 26,
+        "merged": 284
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 198,
-        "prow_command_units": 220
+        "github_review_units": 201,
+        "prow_command_units": 223
       },
-      "eligible_prs": 361,
-      "covered_prs": 361,
+      "eligible_prs": 362,
+      "covered_prs": 362,
       "coverage": "complete_for_sample",
-      "review_units": 258,
+      "review_units": 261,
       "participants": 13,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 90,
-            "prow_command_units": 113
+            "github_review_units": 89,
+            "prow_command_units": 112
           },
           "actor": {
             "id": 978965,
             "login": "wallrj",
             "type": "User"
           },
-          "review_units": 121
+          "review_units": 120
         },
         {
           "sources": {
-            "github_review_units": 62,
-            "prow_command_units": 63
+            "github_review_units": 66,
+            "prow_command_units": 67
           },
           "actor": {
             "id": 1142578,
             "login": "erikgb",
             "type": "User"
           },
-          "review_units": 66
+          "review_units": 70
         },
         {
           "sources": {
@@ -224,16 +224,16 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.4689922480620155,
+        "value": 0.45977011494252873,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 361,
-      "covered_prs": 361,
+      "eligible_prs": 362,
+      "covered_prs": 362,
       "coverage": "complete_for_sample",
-      "responded_prs": 262,
-      "unanswered_prs": 99,
+      "responded_prs": 266,
+      "unanswered_prs": 96,
       "median_ms": {
         "value": 41594000,
         "status": "available"
@@ -242,16 +242,16 @@
   },
   "selection": {
     "listed": 400,
-    "selected": 361,
-    "eligible_on_page": 361,
+    "selected": 362,
+    "eligible_on_page": 362,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 203,
+  "requests": 194,
   "rate": {
-    "remaining": 3315,
+    "remaining": 2780,
     "limit": 5000,
-    "resetAt": 1793529704000
+    "resetAt": 1793648957000
   },
   "failures": [],
   "complete": true

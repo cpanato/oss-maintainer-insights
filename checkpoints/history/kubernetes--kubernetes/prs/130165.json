@@ -16,6 +16,14 @@
     "merged_at": "2025-02-25T20:08:37Z"
   },
   "state": {
+    "tracked_prs": {
+      "130165": {
+        "id": 2336151856,
+        "updated_at": "2025-07-12T11:24:57Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -82,6 +90,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/130165/comments?per_page=100": {
+        "etag": "\"dc6f8f31377018dff36b650b1fd9b9fdaaf7ce5407a2b1691b09d044e3e69580\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/130165/reviews?per_page=100": {
         "etag": "W/\"892066c49acfee2d17781453a4218d2ebe5b925d1792e8a5193696f7d0f74a44\"",
         "next": "",
@@ -117,18 +130,104 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2336151856,
+    "author": {
+      "id": 10359181,
+      "login": "mimowo",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-02-14T13:14:28Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2618149442",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-14T15:42:38Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2642110636",
+        "actor": {
+          "id": 2050904,
+          "login": "Verolop",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-25T18:48:21Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2659313647",
+        "actor": {
+          "id": 10359181,
+          "login": "mimowo",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-14T13:15:16Z"
+      },
+      {
+        "id": "2659661589",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-14T15:42:43Z"
+      },
+      {
+        "id": "2659661593",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-14T15:42:43Z"
+      },
+      {
+        "id": "2659662027",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-14T15:42:55Z"
+      },
+      {
+        "id": "2659662458",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-14T15:43:07Z"
+      },
+      {
+        "id": "2659663246",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-14T15:43:28Z"
+      }
+    ],
+    "review_comments": []
   }
 }

@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 200,
-    "human_authored_prs": 77,
+    "human_authored_prs": 78,
     "bot_authored_prs": 62,
     "draft_prs": 20,
     "missing_author_prs": 0,
-    "outside_window_prs": 41,
+    "outside_window_prs": 40,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 19,
-    "reused_prs": 120,
-    "events_checked_since": "2026-10-25T14:38:47Z",
+    "refreshed_prs": 18,
+    "reused_prs": 122,
+    "events_checked_since": "2026-10-26T20:25:00Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-04T08:59:54Z",
-    "newest_created_at": "2026-11-01T00:30:50Z"
+    "oldest_created_at": "2026-08-07T03:16:18Z",
+    "newest_created_at": "2026-11-02T12:34:59Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,10 +28,10 @@
       "full_name": "argoproj/argo-helm"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-01T09:42:19.000Z",
+    "collected_at": "2026-11-02T19:05:59.000Z",
     "window": {
-      "start": "2026-08-03T09:42:19.000Z",
-      "end": "2026-11-01T09:42:19.000Z"
+      "start": "2026-08-04T19:05:59.000Z",
+      "end": "2026-11-02T19:05:59.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
@@ -39,32 +39,32 @@
       "missing_authors": 0,
       "bot_events": 8,
       "missing_event_actors": 0,
-      "self_events": 107
+      "self_events": 111
     },
     "creation_cohort": {
-      "eligible_prs": 139,
+      "eligible_prs": 140,
       "coverage": "complete_for_sample",
       "authors": 37,
       "outcomes": {
-        "open": 15,
+        "open": 13,
         "closed_unmerged": 5,
-        "merged": 119
+        "merged": 122
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 265,
+        "github_review_units": 269,
         "prow_command_units": 0
       },
-      "eligible_prs": 139,
-      "covered_prs": 139,
+      "eligible_prs": 140,
+      "covered_prs": 140,
       "coverage": "complete_for_sample",
-      "review_units": 265,
+      "review_units": 269,
       "participants": 9,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 92,
+            "github_review_units": 93,
             "prow_command_units": 0
           },
           "actor": {
@@ -72,7 +72,7 @@
             "login": "tico24",
             "type": "User"
           },
-          "review_units": 92
+          "review_units": 93
         },
         {
           "sources": {
@@ -88,7 +88,7 @@
         },
         {
           "sources": {
-            "github_review_units": 34,
+            "github_review_units": 36,
             "prow_command_units": 0
           },
           "actor": {
@@ -96,7 +96,7 @@
             "login": "yu-croco",
             "type": "User"
           },
-          "review_units": 34
+          "review_units": 36
         },
         {
           "sources": {
@@ -124,7 +124,7 @@
         },
         {
           "sources": {
-            "github_review_units": 7,
+            "github_review_units": 8,
             "prow_command_units": 0
           },
           "actor": {
@@ -132,7 +132,7 @@
             "login": "vladlosev",
             "type": "User"
           },
-          "review_units": 7
+          "review_units": 8
         },
         {
           "sources": {
@@ -176,34 +176,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.3471698113207547,
+        "value": 0.34572490706319703,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 139,
-      "covered_prs": 139,
+      "eligible_prs": 140,
+      "covered_prs": 140,
       "coverage": "complete_for_sample",
       "responded_prs": 137,
-      "unanswered_prs": 2,
+      "unanswered_prs": 3,
       "median_ms": {
-        "value": 32714000,
+        "value": 34452000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 200,
-    "selected": 139,
-    "eligible_on_page": 139,
+    "selected": 140,
+    "eligible_on_page": 140,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 60,
+  "requests": 57,
   "rate": {
-    "remaining": 4938,
+    "remaining": 1932,
     "limit": 5000,
-    "resetAt": 1793529704000
+    "resetAt": 1793648957000
   },
   "failures": [],
   "complete": true
