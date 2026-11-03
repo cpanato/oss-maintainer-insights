@@ -1,7 +1,52 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-02T18:49:59Z",
+  "attempted_at": "2026-11-03T01:46:56Z",
   "entries": [
+    {
+      "repository": "prometheus/prometheus",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "helm/helm",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "cert-manager/cert-manager",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "argoproj/argo-cd",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "argoproj/argo-helm",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "sigstore/rekor",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "ossf/scorecard",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "ossf/allstar",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "sigstore/cosign",
+      "status": "fresh",
+      "requests": 0
+    },
     {
       "repository": "kubernetes/kubernetes",
       "status": "pending",
@@ -23,223 +68,7 @@
         },
         "enumerated_prs": 2100,
         "eligible_prs": 1940,
-        "covered_prs": 1508,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "prometheus/prometheus",
-      "status": "updated",
-      "requests": 727,
-      "progress": {
-        "population": {
-          "inspected_prs": 900,
-          "human_authored_prs": 574,
-          "bot_authored_prs": 203,
-          "draft_prs": 58,
-          "missing_author_prs": 0,
-          "outside_window_prs": 65,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T18:54:53.000Z",
-          "end": "2026-11-02T18:54:53.000Z"
-        },
-        "enumerated_prs": 900,
-        "eligible_prs": 777,
-        "covered_prs": 777,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "helm/helm",
-      "status": "updated",
-      "requests": 397,
-      "progress": {
-        "population": {
-          "inspected_prs": 300,
-          "human_authored_prs": 175,
-          "bot_authored_prs": 91,
-          "draft_prs": 6,
-          "missing_author_prs": 3,
-          "outside_window_prs": 25,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T18:58:19.000Z",
-          "end": "2026-11-02T18:58:19.000Z"
-        },
-        "enumerated_prs": 300,
-        "eligible_prs": 266,
-        "covered_prs": 266,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "cert-manager/cert-manager",
-      "status": "updated",
-      "requests": 194,
-      "progress": {
-        "population": {
-          "inspected_prs": 400,
-          "human_authored_prs": 184,
-          "bot_authored_prs": 178,
-          "draft_prs": 11,
-          "missing_author_prs": 0,
-          "outside_window_prs": 27,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T19:00:12.000Z",
-          "end": "2026-11-02T19:00:12.000Z"
-        },
-        "enumerated_prs": 400,
-        "eligible_prs": 362,
-        "covered_prs": 362,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "argoproj/argo-cd",
-      "status": "updated",
-      "requests": 791,
-      "progress": {
-        "population": {
-          "inspected_prs": 1300,
-          "human_authored_prs": 723,
-          "bot_authored_prs": 548,
-          "draft_prs": 28,
-          "missing_author_prs": 0,
-          "outside_window_prs": 1,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T19:01:14.000Z",
-          "end": "2026-11-02T19:01:14.000Z"
-        },
-        "enumerated_prs": 1300,
-        "eligible_prs": 1271,
-        "covered_prs": 1271,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "argoproj/argo-helm",
-      "status": "updated",
-      "requests": 57,
-      "progress": {
-        "population": {
-          "inspected_prs": 200,
-          "human_authored_prs": 78,
-          "bot_authored_prs": 62,
-          "draft_prs": 20,
-          "missing_author_prs": 0,
-          "outside_window_prs": 40,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T19:05:59.000Z",
-          "end": "2026-11-02T19:05:59.000Z"
-        },
-        "enumerated_prs": 200,
-        "eligible_prs": 140,
-        "covered_prs": 140,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "sigstore/rekor",
-      "status": "updated",
-      "requests": 42,
-      "progress": {
-        "population": {
-          "inspected_prs": 200,
-          "human_authored_prs": 33,
-          "bot_authored_prs": 98,
-          "draft_prs": 0,
-          "missing_author_prs": 0,
-          "outside_window_prs": 69,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T19:06:18.000Z",
-          "end": "2026-11-02T19:06:18.000Z"
-        },
-        "enumerated_prs": 200,
-        "eligible_prs": 131,
-        "covered_prs": 131,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "ossf/scorecard",
-      "status": "updated",
-      "requests": 195,
-      "progress": {
-        "population": {
-          "inspected_prs": 200,
-          "human_authored_prs": 105,
-          "bot_authored_prs": 68,
-          "draft_prs": 13,
-          "missing_author_prs": 0,
-          "outside_window_prs": 14,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T19:06:29.000Z",
-          "end": "2026-11-02T19:06:29.000Z"
-        },
-        "enumerated_prs": 200,
-        "eligible_prs": 173,
-        "covered_prs": 173,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "ossf/allstar",
-      "status": "updated",
-      "requests": 35,
-      "progress": {
-        "population": {
-          "inspected_prs": 100,
-          "human_authored_prs": 13,
-          "bot_authored_prs": 23,
-          "draft_prs": 1,
-          "missing_author_prs": 0,
-          "outside_window_prs": 63,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T19:07:23.000Z",
-          "end": "2026-11-02T19:07:23.000Z"
-        },
-        "enumerated_prs": 100,
-        "eligible_prs": 36,
-        "covered_prs": 36,
-        "enumeration_complete": true
-      }
-    },
-    {
-      "repository": "sigstore/cosign",
-      "status": "updated",
-      "requests": 78,
-      "progress": {
-        "population": {
-          "inspected_prs": 200,
-          "human_authored_prs": 66,
-          "bot_authored_prs": 49,
-          "draft_prs": 9,
-          "missing_author_prs": 0,
-          "outside_window_prs": 76,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-04T19:07:32.000Z",
-          "end": "2026-11-02T19:07:32.000Z"
-        },
-        "enumerated_prs": 200,
-        "eligible_prs": 115,
-        "covered_prs": 115,
+        "covered_prs": 1808,
         "enumeration_complete": true
       }
     }

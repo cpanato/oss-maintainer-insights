@@ -16,6 +16,14 @@
     "merged_at": "2025-02-08T00:15:56Z"
   },
   "state": {
+    "tracked_prs": {
+      "130041": {
+        "id": 2323067141,
+        "updated_at": "2025-02-08T00:42:11Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -68,6 +76,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/130041/comments?per_page=100": {
+        "etag": "\"7fc2fe9a2de609d4eca0d5179c7f1b21f7769c45f3f97d6ea352a2392e11ee70\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/130041/reviews?per_page=100": {
         "etag": "\"dc6f8f31377018dff36b650b1fd9b9fdaaf7ce5407a2b1691b09d044e3e69580\"",
         "next": "",
@@ -76,18 +89,63 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2323067141,
+    "author": {
+      "id": 4115580,
+      "login": "cpanato",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2025-02-07T20:27:01Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "2644061270",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-07T20:27:11Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2644359255",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-08T00:13:53Z"
+      },
+      {
+        "id": "2644359357",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-08T00:14:00Z"
+      },
+      {
+        "id": "2644359426",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-02-08T00:14:06Z"
+      }
+    ],
+    "review_comments": []
   }
 }
