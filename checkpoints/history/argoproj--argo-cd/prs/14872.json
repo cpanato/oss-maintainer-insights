@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "14872": {
+        "id": 1460507628,
+        "updated_at": "2023-08-02T23:06:12Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/14872/comments?per_page=100": {
+        "etag": "\"79c0dbb7cee8a07f4252604e28112c232172e499adfb5c1d97a15cc319c19879\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/14872/reviews?per_page=100": {
         "etag": "\"6e64f1fdb3f091697b67c2f002f3bb5b70eac30afdf0bfe629f52c59e1ce43a7\"",
         "next": "",
@@ -45,18 +58,32 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1460507628,
+    "author": {
+      "id": 98988430,
+      "login": "gcp-cherry-pick-bot[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-08-02T22:33:59Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "1663058034",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-08-02T22:34:14Z"
+      }
+    ],
+    "review_comments": []
   }
 }
