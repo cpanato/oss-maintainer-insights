@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 900,
-    "human_authored_prs": 574,
-    "bot_authored_prs": 203,
+    "human_authored_prs": 581,
+    "bot_authored_prs": 211,
     "draft_prs": 58,
     "missing_author_prs": 0,
-    "outside_window_prs": 65,
+    "outside_window_prs": 50,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 239,
-    "reused_prs": 538,
-    "events_checked_since": "2026-10-26T20:13:52Z",
+    "refreshed_prs": 285,
+    "reused_prs": 507,
+    "events_checked_since": "2026-10-29T00:27:27Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-04T20:33:50Z",
-    "newest_created_at": "2026-11-02T14:03:35Z"
+    "oldest_created_at": "2026-08-06T07:58:55Z",
+    "newest_created_at": "2026-11-03T23:48:11Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,43 +28,43 @@
       "full_name": "prometheus/prometheus"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-02T18:54:53.000Z",
+    "collected_at": "2026-11-03T23:51:09.000Z",
     "window": {
-      "start": "2026-08-04T18:54:53.000Z",
-      "end": "2026-11-02T18:54:53.000Z"
+      "start": "2026-08-05T23:51:09.000Z",
+      "end": "2026-11-03T23:51:09.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 214,
+      "bot_events": 253,
       "missing_event_actors": 0,
-      "self_events": 900
+      "self_events": 929
     },
     "creation_cohort": {
-      "eligible_prs": 777,
+      "eligible_prs": 792,
       "coverage": "complete_for_sample",
-      "authors": 199,
+      "authors": 201,
       "outcomes": {
-        "open": 232,
-        "closed_unmerged": 103,
-        "merged": 442
+        "open": 233,
+        "closed_unmerged": 107,
+        "merged": 452
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 660,
+        "github_review_units": 680,
         "prow_command_units": 0
       },
-      "eligible_prs": 777,
-      "covered_prs": 777,
+      "eligible_prs": 792,
+      "covered_prs": 792,
       "coverage": "complete_for_sample",
-      "review_units": 660,
-      "participants": 49,
+      "review_units": 680,
+      "participants": 50,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 164,
+            "github_review_units": 166,
             "prow_command_units": 0
           },
           "actor": {
@@ -72,11 +72,11 @@
             "login": "aknuds1",
             "type": "User"
           },
-          "review_units": 164
+          "review_units": 166
         },
         {
           "sources": {
-            "github_review_units": 112,
+            "github_review_units": 116,
             "prow_command_units": 0
           },
           "actor": {
@@ -84,11 +84,11 @@
             "login": "krajorama",
             "type": "User"
           },
-          "review_units": 112
+          "review_units": 116
         },
         {
           "sources": {
-            "github_review_units": 80,
+            "github_review_units": 81,
             "prow_command_units": 0
           },
           "actor": {
@@ -96,11 +96,11 @@
             "login": "bwplotka",
             "type": "User"
           },
-          "review_units": 80
+          "review_units": 81
         },
         {
           "sources": {
-            "github_review_units": 56,
+            "github_review_units": 57,
             "prow_command_units": 0
           },
           "actor": {
@@ -108,11 +108,11 @@
             "login": "roidelapluie",
             "type": "User"
           },
-          "review_units": 56
+          "review_units": 57
         },
         {
           "sources": {
-            "github_review_units": 29,
+            "github_review_units": 32,
             "prow_command_units": 0
           },
           "actor": {
@@ -120,7 +120,7 @@
             "login": "bboreham",
             "type": "User"
           },
-          "review_units": 29
+          "review_units": 32
         },
         {
           "sources": {
@@ -148,6 +148,18 @@
         },
         {
           "sources": {
+            "github_review_units": 18,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 3262098,
+            "login": "dashpole",
+            "type": "User"
+          },
+          "review_units": 18
+        },
+        {
+          "sources": {
             "github_review_units": 16,
             "prow_command_units": 0
           },
@@ -160,15 +172,15 @@
         },
         {
           "sources": {
-            "github_review_units": 16,
+            "github_review_units": 13,
             "prow_command_units": 0
           },
           "actor": {
-            "id": 3262098,
-            "login": "dashpole",
+            "id": 2531691,
+            "login": "sysadmind",
             "type": "User"
           },
-          "review_units": 16
+          "review_units": 13
         },
         {
           "sources": {
@@ -200,27 +212,15 @@
             "prow_command_units": 0
           },
           "actor": {
-            "id": 2531691,
-            "login": "sysadmind",
+            "id": 1320667,
+            "login": "SuperQ",
             "type": "User"
           },
           "review_units": 12
         },
         {
           "sources": {
-            "github_review_units": 11,
-            "prow_command_units": 0
-          },
-          "actor": {
-            "id": 1320667,
-            "login": "SuperQ",
-            "type": "User"
-          },
-          "review_units": 11
-        },
-        {
-          "sources": {
-            "github_review_units": 11,
+            "github_review_units": 12,
             "prow_command_units": 0
           },
           "actor": {
@@ -228,7 +228,7 @@
             "login": "kgeckhart",
             "type": "User"
           },
-          "review_units": 11
+          "review_units": 12
         },
         {
           "sources": {
@@ -238,6 +238,18 @@
           "actor": {
             "id": 538008,
             "login": "juliusv",
+            "type": "User"
+          },
+          "review_units": 7
+        },
+        {
+          "sources": {
+            "github_review_units": 7,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 51132453,
+            "login": "saswatamcode",
             "type": "User"
           },
           "review_units": 7
@@ -256,15 +268,15 @@
         },
         {
           "sources": {
-            "github_review_units": 6,
+            "github_review_units": 4,
             "prow_command_units": 0
           },
           "actor": {
-            "id": 51132453,
-            "login": "saswatamcode",
+            "id": 4548045,
+            "login": "Nexucis",
             "type": "User"
           },
-          "review_units": 6
+          "review_units": 4
         },
         {
           "sources": {
@@ -322,18 +334,6 @@
           "actor": {
             "id": 2377233,
             "login": "GiedriusS",
-            "type": "User"
-          },
-          "review_units": 3
-        },
-        {
-          "sources": {
-            "github_review_units": 3,
-            "prow_command_units": 0
-          },
-          "actor": {
-            "id": 4548045,
-            "login": "Nexucis",
             "type": "User"
           },
           "review_units": 3
@@ -430,6 +430,18 @@
           "actor": {
             "id": 16706816,
             "login": "upramod",
+            "type": "User"
+          },
+          "review_units": 2
+        },
+        {
+          "sources": {
+            "github_review_units": 2,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 62898027,
+            "login": "shilohlee98",
             "type": "User"
           },
           "review_units": 2
@@ -620,8 +632,8 @@
             "prow_command_units": 0
           },
           "actor": {
-            "id": 62898027,
-            "login": "shilohlee98",
+            "id": 58781501,
+            "login": "rbizos",
             "type": "User"
           },
           "review_units": 1
@@ -656,34 +668,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.24848484848484848,
+        "value": 0.24411764705882352,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 777,
-      "covered_prs": 777,
+      "eligible_prs": 792,
+      "covered_prs": 792,
       "coverage": "complete_for_sample",
-      "responded_prs": 601,
-      "unanswered_prs": 176,
+      "responded_prs": 622,
+      "unanswered_prs": 170,
       "median_ms": {
-        "value": 71768000,
+        "value": 75100500,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 900,
-    "selected": 777,
-    "eligible_on_page": 777,
+    "selected": 792,
+    "eligible_on_page": 792,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 727,
+  "requests": 865,
   "rate": {
-    "remaining": 3371,
+    "remaining": 1890,
     "limit": 5000,
-    "resetAt": 1793648957000
+    "resetAt": 1793752760000
   },
   "failures": [],
   "complete": true
