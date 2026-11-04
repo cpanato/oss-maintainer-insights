@@ -16,26 +16,136 @@
     "merged_at": "2023-06-28T15:14:12Z"
   },
   "state": {
+    "tracked_prs": {
+      "14247": {
+        "id": 1411163371,
+        "updated_at": "2023-06-28T15:14:14Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/14247/comments?per_page=100": {
+        "etag": "W/\"bb5facf7d47b152df95d5e6650206126b5dfffe24f5742c550817684601b73fc\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1610937767,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2023-06-28T07:51:29Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/14247/comments?per_page=100": {
+        "etag": "W/\"84223f663b5a865a1d34aa493716ae11f4c7c51abc4a038b4110d1086fa7969b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1245266494,
+            "user": {
+              "id": 1227954,
+              "login": "blakepettersson",
+              "type": "User"
+            },
+            "created_at": "2023-06-28T14:03:00Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/14247/reviews?per_page=100": {
+        "etag": "W/\"c28473e60a599361f9684a1a8e409c0dd5dd49a94f97dc0d695b5df8d5bd41e6\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1503184229,
+            "user": {
+              "id": 1227954,
+              "login": "blakepettersson",
+              "type": "User"
+            },
+            "submitted_at": "2023-06-28T14:03:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1503217978,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2023-06-28T14:16:54Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1411163371,
+    "author": {
+      "id": 37528808,
+      "login": "hoquocdat",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-06-28T07:38:37Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1503184229",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2023-06-28T14:03:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1503217978",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2023-06-28T14:16:54Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1610937767",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-06-28T07:51:29Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1245266494",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2023-06-28T14:03:00Z"
+      }
+    ]
   }
 }
