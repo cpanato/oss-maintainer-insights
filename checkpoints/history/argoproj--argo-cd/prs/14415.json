@@ -16,6 +16,14 @@
     "merged_at": "2023-07-09T01:48:59Z"
   },
   "state": {
+    "tracked_prs": {
+      "14415": {
+        "id": 1426133206,
+        "updated_at": "2023-07-09T01:49:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/14415/comments?per_page=100": {
+        "etag": "\"d49b07ab02cd6b8fd6218a36f2d96d1b878d0b93eed085ecd2181e68cf65290e\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/14415/reviews?per_page=100": {
         "etag": "W/\"d2a41cc57dd407db8a064d0d7012ce1de47d5c491ec16c9a802a9a86de324283\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1426133206,
+    "author": {
+      "id": 41898282,
+      "login": "github-actions[bot]",
+      "type": "Bot"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-07-09T00:34:38Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1520828914",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-09T00:53:21Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1627561465",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-07-09T01:04:39Z"
+      }
+    ],
+    "review_comments": []
   }
 }
