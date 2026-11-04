@@ -16,12 +16,100 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "14570": {
+        "id": 1439201295,
+        "updated_at": "2026-05-20T08:23:58Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "open"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/14570/comments?per_page=100": {
+        "etag": "W/\"9594f32c799ab35d4bf1823ff2fdae39b493a7afd0b752fd092a002227219658\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1640271894,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2023-07-18T13:51:35Z"
+          },
+          {
+            "id": 1994450898,
+            "user": {
+              "id": 54020707,
+              "login": "fpfuetsch",
+              "type": "User"
+            },
+            "created_at": "2024-03-13T13:48:57Z"
+          },
+          {
+            "id": 2040737749,
+            "user": {
+              "id": 121172376,
+              "login": "dijarvrella",
+              "type": "User"
+            },
+            "created_at": "2024-04-05T22:58:12Z"
+          },
+          {
+            "id": 2418887330,
+            "user": {
+              "id": 54020707,
+              "login": "fpfuetsch",
+              "type": "User"
+            },
+            "created_at": "2024-10-17T08:23:47Z"
+          },
+          {
+            "id": 2450762372,
+            "user": {
+              "id": 36126914,
+              "login": "elapse-d",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T20:30:42Z"
+          },
+          {
+            "id": 4496188112,
+            "user": {
+              "id": 35989114,
+              "login": "sybernatus",
+              "type": "User"
+            },
+            "created_at": "2026-05-20T08:23:58Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/14570/comments?per_page=100": {
+        "etag": "W/\"093f150a6360172ed5c11256dea24ed9f54a34abb51a3d591d3bc93b00a935a3\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1266806160,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "created_at": "2023-07-18T13:49:19Z"
+          },
+          {
+            "id": 1503049876,
+            "user": null,
+            "created_at": "2024-02-26T17:39:27Z"
+          }
+        ]
+      },
       "/repositories/120896210/pulls/14570/reviews?per_page=100": {
         "etag": "W/\"48c8feb22ed7bcbd028291a5d46a8d6a439aa76152ecbe0c4f7e25cfd974a780\"",
         "next": "",
@@ -47,18 +135,109 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1439201295,
+    "author": {
+      "id": 40921111,
+      "login": "Jneville0815",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-07-18T12:56:13Z",
+    "draft": false,
+    "outcome": "open",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1535089201",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-18T13:49:21Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "1901599860",
+        "actor": null,
+        "occurred_at": "2024-02-26T17:39:27Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1640271894",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-07-18T13:51:35Z"
+      },
+      {
+        "id": "1994450898",
+        "actor": {
+          "id": 54020707,
+          "login": "fpfuetsch",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-13T13:48:57Z"
+      },
+      {
+        "id": "2040737749",
+        "actor": {
+          "id": 121172376,
+          "login": "dijarvrella",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-05T22:58:12Z"
+      },
+      {
+        "id": "2418887330",
+        "actor": {
+          "id": 54020707,
+          "login": "fpfuetsch",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-17T08:23:47Z"
+      },
+      {
+        "id": "2450762372",
+        "actor": {
+          "id": 36126914,
+          "login": "elapse-d",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T20:30:42Z"
+      },
+      {
+        "id": "4496188112",
+        "actor": {
+          "id": 35989114,
+          "login": "sybernatus",
+          "type": "User"
+        },
+        "occurred_at": "2026-05-20T08:23:58Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1266806160",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-18T13:49:19Z"
+      },
+      {
+        "id": "1503049876",
+        "actor": null,
+        "occurred_at": "2024-02-26T17:39:27Z"
+      }
+    ]
   }
 }

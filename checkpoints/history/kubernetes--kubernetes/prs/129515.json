@@ -1,0 +1,199 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-03-23T23:39:34Z",
+    "id": 2265077116,
+    "number": 129515,
+    "user": {
+      "id": 16093815,
+      "login": "nojnhuh",
+      "type": "User"
+    },
+    "created_at": "2025-01-08T03:20:20Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2025-04-24T04:10:30Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "129515": {
+        "id": 2265077116,
+        "updated_at": "2026-03-23T23:39:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/129515/comments?per_page=100": {
+        "etag": "W/\"18b5b1087a79a19e4534eaf4d88af5a4ba4a0e73b6df0b3a61e0b252578ade1a\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2581242832,
+            "user": {
+              "id": 8658046,
+              "login": "cici37",
+              "type": "User"
+            },
+            "created_at": "2025-01-09T21:03:45Z"
+          },
+          {
+            "id": 2581243038,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-01-09T21:03:53Z"
+          },
+          {
+            "id": 2813216460,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2025-04-17T14:56:41Z"
+          },
+          {
+            "id": 2826128535,
+            "user": {
+              "id": 2010320,
+              "login": "pacoxu",
+              "type": "User"
+            },
+            "created_at": "2025-04-24T02:39:32Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/129515/comments?per_page=100": {
+        "etag": "\"43ca2f2e100b34d46646637e4f40ec7461eb355a743d8017e48a27ce12eb4c33\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/129515/reviews?per_page=100": {
+        "etag": "W/\"1da9973e9809dabbc49fe8d46403631694c7699e4a9c14ed5c994ffdf9131dcd\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2575168689,
+            "user": {
+              "id": 5357541,
+              "login": "r0b2g1t",
+              "type": "User"
+            },
+            "submitted_at": "2025-01-27T11:22:05Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2776069517,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2025-04-17T14:56:28Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2265077116,
+    "author": {
+      "id": 16093815,
+      "login": "nojnhuh",
+      "type": "User"
+    },
+    "created_at": "2025-01-08T03:20:20Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2575168689",
+        "actor": {
+          "id": 5357541,
+          "login": "r0b2g1t",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-27T11:22:05Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2776069517",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-17T14:56:28Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2581242832",
+        "actor": {
+          "id": 8658046,
+          "login": "cici37",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-09T21:03:45Z"
+      },
+      {
+        "id": "2581243038",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-01-09T21:03:53Z"
+      },
+      {
+        "id": "2813216460",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-17T14:56:41Z"
+      },
+      {
+        "id": "2826128535",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2025-04-24T02:39:32Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
