@@ -1,17 +1,11 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-05T07:23:24Z",
+  "attempted_at": "2026-11-05T15:48:29Z",
   "entries": [
     {
-      "repository": "sigstore/cosign",
-      "status": "fresh",
-      "requests": 0
-    },
-    {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 577,
       "progress": {
         "population": {
           "inspected_prs": 2100,
@@ -28,7 +22,7 @@
         },
         "enumerated_prs": 2100,
         "eligible_prs": 1982,
-        "covered_prs": 1790,
+        "covered_prs": 1982,
         "enumeration_complete": true
       }
     },
@@ -69,6 +63,11 @@
     },
     {
       "repository": "ossf/allstar",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "sigstore/cosign",
       "status": "fresh",
       "requests": 0
     }
