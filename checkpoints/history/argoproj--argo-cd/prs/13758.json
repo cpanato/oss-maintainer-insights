@@ -16,6 +16,14 @@
     "merged_at": "2023-05-27T19:55:23Z"
   },
   "state": {
+    "tracked_prs": {
+      "13758": {
+        "id": 1367351483,
+        "updated_at": "2023-09-14T10:28:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -91,6 +99,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/13758/comments?per_page=100": {
+        "etag": "\"63bcb741df58bed69a5f1910210e0880c28d7347d3f4d9f9b0d9bf3db2aa5aba\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/13758/reviews?per_page=100": {
         "etag": "W/\"0a3d992570db9b156c5474577cd03a67555114c266f6ce48175e2f16deb6ce71\"",
         "next": "",
@@ -110,18 +123,97 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1367351483,
+    "author": {
+      "id": 1227954,
+      "login": "blakepettersson",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-05-27T14:28:49Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1447431298",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-27T15:21:44Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1565458150",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-05-27T14:46:14Z"
+      },
+      {
+        "id": "1565482087",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-27T15:10:18Z"
+      },
+      {
+        "id": "1565556460",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-27T16:06:15Z"
+      },
+      {
+        "id": "1565557512",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-27T16:07:19Z"
+      },
+      {
+        "id": "1565636296",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-27T18:28:32Z"
+      },
+      {
+        "id": "1565636576",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-27T18:30:16Z"
+      },
+      {
+        "id": "1565652344",
+        "actor": {
+          "id": 1227954,
+          "login": "blakepettersson",
+          "type": "User"
+        },
+        "occurred_at": "2023-05-27T18:58:00Z"
+      }
+    ],
+    "review_comments": []
   }
 }

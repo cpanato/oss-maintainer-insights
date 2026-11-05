@@ -1,0 +1,213 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2026-01-30T21:15:12Z",
+    "id": 2170014885,
+    "number": 128703,
+    "user": {
+      "id": 7691399,
+      "login": "Jefftree",
+      "type": "User"
+    },
+    "created_at": "2024-11-08T16:27:38Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-12-13T23:38:26Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "128703": {
+        "id": 2170014885,
+        "updated_at": "2026-01-30T21:15:12Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/128703/comments?per_page=100": {
+        "etag": "W/\"8e69c80a725308d9a851788aa81c1ce52c344b6f44119eebbef98b6c9ce93361\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2542409324,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-12-13T21:27:04Z"
+          },
+          {
+            "id": 2542409448,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-12-13T21:27:09Z"
+          },
+          {
+            "id": 2542409609,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-12-13T21:27:17Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/128703/comments?per_page=100": {
+        "etag": "W/\"7e400bba3b2ee40ee0e9ab71e6af82e20f5b2756418498af4502f410be2e9576\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1884532063,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-12-13T20:54:28Z"
+          },
+          {
+            "id": 1884550671,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2024-12-13T21:15:32Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/128703/reviews?per_page=100": {
+        "etag": "W/\"ce69d1c6c4939202dab4898e45234b471470e97616a243c89aebd17e511677b5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2503231998,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2024-12-13T20:54:28Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2503258168,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "submitted_at": "2024-12-13T21:15:32Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2170014885,
+    "author": {
+      "id": 7691399,
+      "login": "Jefftree",
+      "type": "User"
+    },
+    "created_at": "2024-11-08T16:27:38Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2503231998",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-13T20:54:28Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2503258168",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-13T21:15:32Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2542409324",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-13T21:27:04Z"
+      },
+      {
+        "id": "2542409448",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-13T21:27:09Z"
+      },
+      {
+        "id": "2542409609",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-13T21:27:17Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1884532063",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-13T20:54:28Z"
+      },
+      {
+        "id": "1884550671",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2024-12-13T21:15:32Z"
+      }
+    ]
+  }
+}
