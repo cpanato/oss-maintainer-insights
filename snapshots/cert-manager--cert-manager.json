@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 400,
-    "human_authored_prs": 183,
+    "human_authored_prs": 185,
     "bot_authored_prs": 181,
-    "draft_prs": 11,
+    "draft_prs": 12,
     "missing_author_prs": 0,
-    "outside_window_prs": 25,
+    "outside_window_prs": 22,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 63,
-    "reused_prs": 301,
-    "events_checked_since": "2026-10-29T00:31:51Z",
+    "refreshed_prs": 59,
+    "reused_prs": 307,
+    "events_checked_since": "2026-10-30T03:13:14Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
     "oldest_created_at": "2026-08-07T16:50:48Z",
-    "newest_created_at": "2026-11-03T03:50:06Z"
+    "newest_created_at": "2026-11-04T19:24:01Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,51 +28,51 @@
       "full_name": "cert-manager/cert-manager"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-03T23:56:49.000Z",
+    "collected_at": "2026-11-05T00:41:35.000Z",
     "window": {
-      "start": "2026-08-05T23:56:49.000Z",
-      "end": "2026-11-03T23:56:49.000Z"
+      "start": "2026-08-07T00:41:35.000Z",
+      "end": "2026-11-05T00:41:35.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 945,
+      "bot_events": 949,
       "missing_event_actors": 0,
-      "self_events": 594
+      "self_events": 623
     },
     "creation_cohort": {
-      "eligible_prs": 364,
+      "eligible_prs": 366,
       "coverage": "complete_for_sample",
       "authors": 59,
       "outcomes": {
         "open": 49,
-        "closed_unmerged": 26,
-        "merged": 289
+        "closed_unmerged": 27,
+        "merged": 290
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 206,
-        "prow_command_units": 228
+        "github_review_units": 210,
+        "prow_command_units": 230
       },
-      "eligible_prs": 364,
-      "covered_prs": 364,
+      "eligible_prs": 366,
+      "covered_prs": 366,
       "coverage": "complete_for_sample",
-      "review_units": 266,
+      "review_units": 270,
       "participants": 13,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 94,
-            "prow_command_units": 117
+            "github_review_units": 98,
+            "prow_command_units": 119
           },
           "actor": {
             "id": 978965,
             "login": "wallrj",
             "type": "User"
           },
-          "review_units": 125
+          "review_units": 129
         },
         {
           "sources": {
@@ -224,34 +224,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.4699248120300752,
+        "value": 0.4777777777777778,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 364,
-      "covered_prs": 364,
+      "eligible_prs": 366,
+      "covered_prs": 366,
       "coverage": "complete_for_sample",
-      "responded_prs": 271,
-      "unanswered_prs": 93,
+      "responded_prs": 274,
+      "unanswered_prs": 92,
       "median_ms": {
-        "value": 44288000,
+        "value": 45057000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 400,
-    "selected": 364,
-    "eligible_on_page": 364,
+    "selected": 366,
+    "eligible_on_page": 366,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 194,
+  "requests": 182,
   "rate": {
-    "remaining": 1278,
+    "remaining": 2546,
     "limit": 5000,
-    "resetAt": 1793752760000
+    "resetAt": 1793842321000
   },
   "failures": [],
   "complete": true
