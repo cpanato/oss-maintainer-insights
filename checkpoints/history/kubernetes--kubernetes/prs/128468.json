@@ -16,12 +16,135 @@
     "merged_at": "2024-10-31T20:25:41Z"
   },
   "state": {
+    "tracked_prs": {
+      "128468": {
+        "id": 2156070207,
+        "updated_at": "2026-03-27T09:50:13Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/128468/comments?per_page=100": {
+        "etag": "W/\"f91d598bfae2a1d8892870ae6f99b7e8b50f5d1b000542c6ed6afc556a7857b8\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2450073946,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T14:47:15Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2450621475,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T19:02:30Z"
+          },
+          {
+            "id": 2450621670,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T19:02:37Z"
+          },
+          {
+            "id": 2450621841,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T19:02:42Z"
+          },
+          {
+            "id": 2450728226,
+            "user": {
+              "id": 8658046,
+              "login": "cici37",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T20:10:15Z"
+          },
+          {
+            "id": 2454080805,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "created_at": "2024-11-04T08:27:21Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/128468/comments?per_page=100": {
+        "etag": "W/\"17045ac7ee7ed60a9265915f52bbbd8f8d35a1da0727cc6376f22e093351ddac\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1824667894,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T15:22:27Z"
+          },
+          {
+            "id": 1824679864,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T15:29:54Z"
+          },
+          {
+            "id": 1824733299,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T16:00:19Z"
+          },
+          {
+            "id": 1824748609,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T16:05:03Z"
+          },
+          {
+            "id": 1824755278,
+            "user": {
+              "id": 10743879,
+              "login": "wojtek-t",
+              "type": "User"
+            },
+            "created_at": "2024-10-31T16:09:21Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/128468/reviews?per_page=100": {
         "etag": "W/\"2c992534d096c611dad9645eec70f61068e624acd02376ba7ae04a92c2538d68\"",
         "next": "",
@@ -81,18 +204,178 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 2156070207,
+    "author": {
+      "id": 10743879,
+      "login": "wojtek-t",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-10-31T11:34:08Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2408285068",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T15:22:27Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2408303881",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T15:30:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2408396125",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T16:00:29Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2408420389",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T16:05:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2408432495",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T16:09:21Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2450073946",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T14:47:15Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2450621475",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T19:02:30Z"
+      },
+      {
+        "id": "2450621670",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T19:02:37Z"
+      },
+      {
+        "id": "2450621841",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T19:02:42Z"
+      },
+      {
+        "id": "2450728226",
+        "actor": {
+          "id": 8658046,
+          "login": "cici37",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T20:10:15Z"
+      },
+      {
+        "id": "2454080805",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2024-11-04T08:27:21Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1824667894",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T15:22:27Z"
+      },
+      {
+        "id": "1824679864",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T15:29:54Z"
+      },
+      {
+        "id": "1824733299",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T16:00:19Z"
+      },
+      {
+        "id": "1824748609",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T16:05:03Z"
+      },
+      {
+        "id": "1824755278",
+        "actor": {
+          "id": 10743879,
+          "login": "wojtek-t",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-31T16:09:21Z"
+      }
+    ]
   }
 }

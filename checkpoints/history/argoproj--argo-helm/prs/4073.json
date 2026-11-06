@@ -1,8 +1,8 @@
 {
-  "generation": 8,
-  "observed_at": "2026-10-29T19:13:52Z",
+  "generation": 9,
+  "observed_at": "2026-11-06T03:06:52Z",
   "pr": {
-    "updated_at": "2026-10-29T09:11:14Z",
+    "updated_at": "2026-11-03T00:40:38Z",
     "id": 4475476211,
     "number": 4073,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-09-08T14:47:59Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-03T00:40:38Z"
   },
   "state": {
     "tracked_prs": {
       "4073": {
         "id": 4475476211,
-        "updated_at": "2026-10-29T09:11:14Z",
-        "checked_at": "2026-10-29T19:13:52Z",
-        "state": "open"
+        "updated_at": "2026-11-03T00:40:38Z",
+        "checked_at": "2026-11-06T03:06:52Z",
+        "state": "closed"
       }
     },
     "repository_id": 106481151,
@@ -31,7 +31,7 @@
     "repository": "argoproj/argo-helm",
     "pages": {
       "/repositories/106481151/issues/4073/comments?per_page=100": {
-        "etag": "W/\"95c030e33e4d05e517708b9382182588644357893acee9c2c174619090141d6d\"",
+        "etag": "W/\"c078dc45d1ad4346ce62438c2624e0ed84886cec3b404cec06d1980da2918385\"",
         "next": "",
         "value": [
           {
@@ -73,7 +73,7 @@
         ]
       },
       "/repositories/106481151/pulls/4073/comments?per_page=100": {
-        "etag": "W/\"aafa636f0c1fa4e42a8d1db31851e0795e25e47969d3e91a34cdb985ff7ed432\"",
+        "etag": "W/\"1bb90a60875198112376558ce72d3ea7bae920b782117f69d997c77513060b43\"",
         "next": "",
         "value": [
           {
@@ -97,7 +97,7 @@
         ]
       },
       "/repositories/106481151/pulls/4073/reviews?per_page=100": {
-        "etag": "W/\"6128e38d0cca833a1f1460e8f6ab331d555c3c55289e10f9b224ea227f20ee00\"",
+        "etag": "W/\"80cd9bd64c3613362bba705e5af40088b17458c04a463be46e015629ff8b0082\"",
         "next": "",
         "value": [
           {
@@ -109,6 +109,26 @@
             },
             "submitted_at": "2026-09-13T14:37:05Z",
             "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 5726038078,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-01T02:27:08Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5740633653,
+            "user": {
+              "id": 6958642,
+              "login": "vladlosev",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-02T17:31:27Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -123,7 +143,7 @@
     },
     "created_at": "2026-09-08T14:47:59Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -139,6 +159,26 @@
         },
         "occurred_at": "2026-09-13T14:37:05Z",
         "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "5726038078",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-01T02:27:08Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5740633653",
+        "actor": {
+          "id": 6958642,
+          "login": "vladlosev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-02T17:31:27Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
