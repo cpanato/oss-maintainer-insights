@@ -1,8 +1,8 @@
 {
-  "generation": 3,
-  "observed_at": "2026-10-24T17:39:53Z",
+  "generation": 4,
+  "observed_at": "2026-11-06T11:32:32Z",
   "pr": {
-    "updated_at": "2026-09-29T18:33:01Z",
+    "updated_at": "2026-11-01T18:17:56Z",
     "id": 4497804635,
     "number": 9330,
     "user": {
@@ -19,8 +19,8 @@
     "tracked_prs": {
       "9330": {
         "id": 4497804635,
-        "updated_at": "2026-09-29T18:33:01Z",
-        "checked_at": "2026-10-24T17:39:53Z",
+        "updated_at": "2026-11-01T18:17:56Z",
+        "checked_at": "2026-11-06T11:32:32Z",
         "state": "open"
       }
     },
@@ -31,7 +31,7 @@
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/9330/comments?per_page=100": {
-        "etag": "W/\"3222cfb807a42f935561811bf94514cd8051ba0cb3d25400dc199e275f9cb05d\"",
+        "etag": "W/\"09127ee088f6945ea30ee3600c591849676be4f7fc268e64fc8a5bde19697604\"",
         "next": "",
         "value": [
           {
@@ -60,18 +60,76 @@
               "type": "User"
             },
             "created_at": "2026-09-29T16:05:23Z"
+          },
+          {
+            "id": 6560583330,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "created_at": "2026-11-01T16:20:28Z"
+          },
+          {
+            "id": 6561320166,
+            "user": {
+              "id": 84045975,
+              "login": "thc1006",
+              "type": "User"
+            },
+            "created_at": "2026-11-01T17:23:27Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9330/comments?per_page=100": {
-        "etag": "\"9836eea0f9d0491a97d6c5fdeafee4c88c2396306738c2a83a0c1c34d72fed3a\"",
+        "etag": "W/\"937dc751ec80acdd707d9bf711502e8843ef970900dc00ef029226adf6937c98\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 4436414213,
+            "user": {
+              "id": 175728472,
+              "login": "Copilot",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-01T16:22:25Z"
+          },
+          {
+            "id": 4436625818,
+            "user": {
+              "id": 84045975,
+              "login": "thc1006",
+              "type": "User"
+            },
+            "created_at": "2026-11-01T17:25:20Z"
+          }
+        ]
       },
       "/repositories/92313258/pulls/9330/reviews?per_page=100": {
-        "etag": "\"9836eea0f9d0491a97d6c5fdeafee4c88c2396306738c2a83a0c1c34d72fed3a\"",
+        "etag": "W/\"81c0b95e58983813e3eff2de8273246b154171d83bc47569146d98d17be8cf27\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5729041945,
+            "user": {
+              "id": 175728472,
+              "login": "copilot-pull-request-reviewer[bot]",
+              "type": "Bot"
+            },
+            "submitted_at": "2026-11-01T16:22:26Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5729337676,
+            "user": {
+              "id": 84045975,
+              "login": "thc1006",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-01T17:25:20Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -90,7 +148,28 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5729041945",
+        "actor": {
+          "id": 175728472,
+          "login": "copilot-pull-request-reviewer[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-01T16:22:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5729337676",
+        "actor": {
+          "id": 84045975,
+          "login": "thc1006",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-01T17:25:20Z",
+        "state": "COMMENTED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "5621909994",
@@ -118,8 +197,45 @@
           "type": "User"
         },
         "occurred_at": "2026-09-29T16:05:23Z"
+      },
+      {
+        "id": "6560583330",
+        "actor": {
+          "id": 1142578,
+          "login": "erikgb",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-01T16:20:28Z"
+      },
+      {
+        "id": "6561320166",
+        "actor": {
+          "id": 84045975,
+          "login": "thc1006",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-01T17:23:27Z"
       }
     ],
-    "review_comments": []
+    "review_comments": [
+      {
+        "id": "4436414213",
+        "actor": {
+          "id": 175728472,
+          "login": "Copilot",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-01T16:22:25Z"
+      },
+      {
+        "id": "4436625818",
+        "actor": {
+          "id": 84045975,
+          "login": "thc1006",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-01T17:25:20Z"
+      }
+    ]
   }
 }

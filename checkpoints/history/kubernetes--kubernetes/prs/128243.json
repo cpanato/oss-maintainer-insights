@@ -1,0 +1,925 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-10-25T00:04:55Z",
+    "id": 2137024013,
+    "number": 128243,
+    "user": {
+      "id": 1256622,
+      "login": "benluddy",
+      "type": "User"
+    },
+    "created_at": "2024-10-21T21:13:50Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-10-25T00:04:53Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "128243": {
+        "id": 2137024013,
+        "updated_at": "2024-10-25T00:04:55Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/128243/comments?per_page=100": {
+        "etag": "W/\"86c7482b48efc941368d2f2fc079e758d3f0e5350f7785d2151006f6ef78c42f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2427730814,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-10-21T21:13:52Z"
+          },
+          {
+            "id": 2427793629,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2024-10-21T21:43:14Z"
+          },
+          {
+            "id": 2427859200,
+            "user": {
+              "id": 53270907,
+              "login": "k8s-triage-robot",
+              "type": "User"
+            },
+            "created_at": "2024-10-21T22:32:45Z"
+          },
+          {
+            "id": 2436134732,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T19:00:38Z"
+          },
+          {
+            "id": 2436211046,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T19:45:22Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2436485797,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T23:01:15Z"
+          },
+          {
+            "id": 2436485959,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T23:01:22Z"
+          },
+          {
+            "id": 2436486035,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T23:01:26Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/128243/comments?per_page=100": {
+        "etag": "W/\"23663e03ba3cf0560199dcff7b18d7fec53cdfb9be5f21c64738754c99a04624\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1811619897,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T01:12:39Z"
+          },
+          {
+            "id": 1811625449,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T01:22:15Z"
+          },
+          {
+            "id": 1811625506,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T01:22:20Z"
+          },
+          {
+            "id": 1811625648,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T01:22:34Z"
+          },
+          {
+            "id": 1811629790,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T01:25:52Z"
+          },
+          {
+            "id": 1811631186,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T01:27:25Z"
+          },
+          {
+            "id": 1812566399,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T11:48:48Z"
+          },
+          {
+            "id": 1812799355,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T13:42:44Z"
+          },
+          {
+            "id": 1813238587,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T17:31:30Z"
+          },
+          {
+            "id": 1813241375,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T17:33:34Z"
+          },
+          {
+            "id": 1813244289,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T17:35:58Z"
+          },
+          {
+            "id": 1813249890,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T17:38:18Z"
+          },
+          {
+            "id": 1813252539,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T17:39:11Z"
+          },
+          {
+            "id": 1813263779,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T17:45:11Z"
+          },
+          {
+            "id": 1813306480,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T18:16:25Z"
+          },
+          {
+            "id": 1813373737,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T18:58:15Z"
+          },
+          {
+            "id": 1813705760,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "created_at": "2024-10-23T21:47:49Z"
+          },
+          {
+            "id": 1814852226,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T12:09:42Z"
+          },
+          {
+            "id": 1814853921,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T12:10:51Z"
+          },
+          {
+            "id": 1814857017,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T12:12:59Z"
+          },
+          {
+            "id": 1814858403,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "created_at": "2024-10-24T12:13:59Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/128243/reviews?per_page=100": {
+        "etag": "W/\"5b971158d8281607c05aa4ef27535157bb4eb0b64fc3333e4e5ddbc52747e60f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2386669823,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T01:28:22Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2388350151,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T11:48:49Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2388776828,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T13:42:44Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2389548553,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T17:31:30Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2389554946,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T17:33:34Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2389563538,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T17:35:58Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2389576605,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T17:38:18Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2389580765,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T17:39:11Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2389596138,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T17:45:11Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2389671930,
+            "user": {
+              "id": 523590,
+              "login": "jpbetz",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T18:16:25Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2389795477,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T18:58:15Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2390716878,
+            "user": {
+              "id": 1256622,
+              "login": "benluddy",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-23T21:47:50Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2392280861,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-24T12:09:42Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2392283541,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-24T12:10:51Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2392288752,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-24T12:12:59Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 2392291436,
+            "user": {
+              "id": 8225098,
+              "login": "deads2k",
+              "type": "User"
+            },
+            "submitted_at": "2024-10-24T12:13:59Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 2137024013,
+    "author": {
+      "id": 1256622,
+      "login": "benluddy",
+      "type": "User"
+    },
+    "created_at": "2024-10-21T21:13:50Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2386669823",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T01:28:22Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2388350151",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T11:48:49Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2388776828",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T13:42:44Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389548553",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:31:30Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389554946",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:33:34Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389563538",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:35:58Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389576605",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:38:18Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389580765",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:39:11Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389596138",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:45:11Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389671930",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T18:16:25Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2389795477",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T18:58:15Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2390716878",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T21:47:50Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2392280861",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T12:09:42Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2392283541",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T12:10:51Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2392288752",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T12:12:59Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2392291436",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T12:13:59Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2427730814",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-21T21:13:52Z"
+      },
+      {
+        "id": "2427793629",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-21T21:43:14Z"
+      },
+      {
+        "id": "2427859200",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-21T22:32:45Z"
+      },
+      {
+        "id": "2436134732",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T19:00:38Z"
+      },
+      {
+        "id": "2436211046",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T19:45:22Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2436485797",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T23:01:15Z"
+      },
+      {
+        "id": "2436485959",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T23:01:22Z"
+      },
+      {
+        "id": "2436486035",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T23:01:26Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1811619897",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T01:12:39Z"
+      },
+      {
+        "id": "1811625449",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T01:22:15Z"
+      },
+      {
+        "id": "1811625506",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T01:22:20Z"
+      },
+      {
+        "id": "1811625648",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T01:22:34Z"
+      },
+      {
+        "id": "1811629790",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T01:25:52Z"
+      },
+      {
+        "id": "1811631186",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T01:27:25Z"
+      },
+      {
+        "id": "1812566399",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T11:48:48Z"
+      },
+      {
+        "id": "1812799355",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T13:42:44Z"
+      },
+      {
+        "id": "1813238587",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:31:30Z"
+      },
+      {
+        "id": "1813241375",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:33:34Z"
+      },
+      {
+        "id": "1813244289",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:35:58Z"
+      },
+      {
+        "id": "1813249890",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:38:18Z"
+      },
+      {
+        "id": "1813252539",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:39:11Z"
+      },
+      {
+        "id": "1813263779",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T17:45:11Z"
+      },
+      {
+        "id": "1813306480",
+        "actor": {
+          "id": 523590,
+          "login": "jpbetz",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T18:16:25Z"
+      },
+      {
+        "id": "1813373737",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T18:58:15Z"
+      },
+      {
+        "id": "1813705760",
+        "actor": {
+          "id": 1256622,
+          "login": "benluddy",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-23T21:47:49Z"
+      },
+      {
+        "id": "1814852226",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T12:09:42Z"
+      },
+      {
+        "id": "1814853921",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T12:10:51Z"
+      },
+      {
+        "id": "1814857017",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T12:12:59Z"
+      },
+      {
+        "id": "1814858403",
+        "actor": {
+          "id": 8225098,
+          "login": "deads2k",
+          "type": "User"
+        },
+        "occurred_at": "2024-10-24T12:13:59Z"
+      }
+    ]
+  }
+}

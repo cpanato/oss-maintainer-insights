@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-06T11:28:31Z",
+  "attempted_at": "2026-11-06T18:26:48Z",
   "entries": [
-    {
-      "repository": "cert-manager/cert-manager",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "argoproj/argo-cd",
       "status": "fresh",
@@ -39,9 +34,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 412,
       "progress": {
         "population": {
           "inspected_prs": 2100,
@@ -58,7 +52,7 @@
         },
         "enumerated_prs": 2100,
         "eligible_prs": 2006,
-        "covered_prs": 1869,
+        "covered_prs": 2006,
         "enumeration_complete": true
       }
     },
@@ -69,6 +63,11 @@
     },
     {
       "repository": "helm/helm",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "cert-manager/cert-manager",
       "status": "fresh",
       "requests": 0
     }

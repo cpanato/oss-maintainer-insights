@@ -1,8 +1,8 @@
 {
-  "generation": 3,
-  "observed_at": "2026-10-24T17:39:53Z",
+  "generation": 4,
+  "observed_at": "2026-11-06T11:32:32Z",
   "pr": {
-    "updated_at": "2026-10-15T15:33:06Z",
+    "updated_at": "2026-11-04T13:59:36Z",
     "id": 4700477170,
     "number": 9409,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-01T07:07:54Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-04T13:59:03Z"
   },
   "state": {
     "tracked_prs": {
       "9409": {
         "id": 4700477170,
-        "updated_at": "2026-10-15T15:33:06Z",
-        "checked_at": "2026-10-24T17:39:53Z",
-        "state": "open"
+        "updated_at": "2026-11-04T13:59:36Z",
+        "checked_at": "2026-11-06T11:32:32Z",
+        "state": "closed"
       }
     },
     "repository_id": 92313258,
@@ -31,18 +31,9 @@
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/9409/comments?per_page=100": {
-        "etag": "W/\"26c6b8105c4ab4e76f6a880ef6937df8ce0f66a8ae87cc4a2d0c31077c810840\"",
+        "etag": "W/\"c577a021230e2211dd2520721961e5d30c38820f4883f83d69753b715206ca13\"",
         "next": "",
         "value": [
-          {
-            "id": 5926471674,
-            "user": {
-              "id": 167124277,
-              "login": "cert-manager-prow[bot]",
-              "type": "Bot"
-            },
-            "created_at": "2026-10-01T07:08:04Z"
-          },
           {
             "id": 6192108426,
             "user": {
@@ -69,11 +60,33 @@
               "type": "User"
             },
             "created_at": "2026-10-15T15:33:02Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 6632085088,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-04T13:37:39Z"
+          },
+          {
+            "id": 6632089704,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-04T13:37:52Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9409/comments?per_page=100": {
-        "etag": "W/\"bfac1604f58ede914f5e3896ad1df68d09d365a54ac35303610f877942bbb97a\"",
+        "etag": "W/\"f6bc099b3027e542f74ef64f9a1f445357aa3fcd0f17624e26f7e8cef0540f56\"",
         "next": "",
         "value": [
           {
@@ -160,7 +173,7 @@
         ]
       },
       "/repositories/92313258/pulls/9409/reviews?per_page=100": {
-        "etag": "W/\"45dcfce8eea9e2df6c47265268ee3fafbdbd1a51cb7c0fc87b5bb38c3c401bac\"",
+        "etag": "W/\"5f8bfd2b8b4de91d1ccbaa4a399fa49bfef4b972ae434720cdb09f69962232b1\"",
         "next": "",
         "value": [
           {
@@ -216,7 +229,7 @@
     },
     "created_at": "2026-10-01T07:07:54Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -266,15 +279,6 @@
     ],
     "issue_comments": [
       {
-        "id": "5926471674",
-        "actor": {
-          "id": 167124277,
-          "login": "cert-manager-prow[bot]",
-          "type": "Bot"
-        },
-        "occurred_at": "2026-10-01T07:08:04Z"
-      },
-      {
         "id": "6192108426",
         "actor": {
           "id": 57584831,
@@ -300,6 +304,28 @@
           "type": "User"
         },
         "occurred_at": "2026-10-15T15:33:02Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "6632085088",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T13:37:39Z"
+      },
+      {
+        "id": "6632089704",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-04T13:37:52Z"
       }
     ],
     "review_comments": [
