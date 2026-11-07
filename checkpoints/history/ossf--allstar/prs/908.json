@@ -1,8 +1,8 @@
 {
-  "generation": 22,
-  "observed_at": "2026-11-06T03:06:52Z",
+  "generation": 23,
+  "observed_at": "2026-11-07T20:37:49Z",
   "pr": {
-    "updated_at": "2026-11-06T07:19:21Z",
+    "updated_at": "2026-11-06T16:38:41Z",
     "id": 5024006769,
     "number": 908,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-26T20:15:36Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-06T16:11:02Z"
   },
   "state": {
     "tracked_prs": {
       "908": {
         "id": 5024006769,
-        "updated_at": "2026-11-06T07:19:21Z",
-        "checked_at": "2026-11-06T03:06:52Z",
-        "state": "open"
+        "updated_at": "2026-11-06T16:38:41Z",
+        "checked_at": "2026-11-07T20:37:49Z",
+        "state": "closed"
       }
     },
     "repository_id": 370773729,
@@ -31,7 +31,7 @@
     "repository": "ossf/allstar",
     "pages": {
       "/repositories/370773729/issues/908/comments?per_page=100": {
-        "etag": "W/\"967c65d7b414b776aa5201bddd02c57e99d7fba76e3d62aa58a10ef9483631b3\"",
+        "etag": "W/\"34881a3a06896770b562ca4344043552fc79c2c3207967ca656487816bc47672\"",
         "next": "",
         "value": [
           {
@@ -60,16 +60,25 @@
               "type": "User"
             },
             "created_at": "2026-11-06T07:19:21Z"
+          },
+          {
+            "id": 6684301173,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2026-11-06T11:59:18Z"
           }
         ]
       },
       "/repositories/370773729/pulls/908/comments?per_page=100": {
-        "etag": "\"8a44c53ef3405829e38da899f7fdcd71e5801532efa1aaf4969b1d1e08fa8da8\"",
+        "etag": "\"31894dd45ca20e8c5cad7474a92edb5f968b01d0ba0d52661bf575cf8e6d929d\"",
         "next": "",
         "value": []
       },
       "/repositories/370773729/pulls/908/reviews?per_page=100": {
-        "etag": "W/\"439f157182a978c8df7bf72ed58abdaf29b79a64125c84aa3842c016c517751d\"",
+        "etag": "W/\"b0b3365b1e7b32738bb03e4a872bdb6b00e077caf3f0a3c4fc23a68e9697ba20\"",
         "next": "",
         "value": [
           {
@@ -81,6 +90,16 @@
             },
             "submitted_at": "2026-11-06T07:11:22Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5803162858,
+            "user": {
+              "id": 771387,
+              "login": "jeffmendoza",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-06T16:10:53Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -95,7 +114,7 @@
     },
     "created_at": "2026-10-26T20:15:36Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -111,6 +130,16 @@
         },
         "occurred_at": "2026-11-06T07:11:22Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5803162858",
+        "actor": {
+          "id": 771387,
+          "login": "jeffmendoza",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-06T16:10:53Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -140,6 +169,15 @@
           "type": "User"
         },
         "occurred_at": "2026-11-06T07:19:21Z"
+      },
+      {
+        "id": "6684301173",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-06T11:59:18Z"
       }
     ],
     "review_comments": []

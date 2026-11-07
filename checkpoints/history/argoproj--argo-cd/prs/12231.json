@@ -16,12 +16,40 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "12231": {
+        "id": 1222809715,
+        "updated_at": "2023-03-07T05:13:20Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/12231/comments?per_page=100": {
+        "etag": "W/\"0506f93c3273ab1c518f8dae00f41f8344d8663b7ea4fb086189588a2fc4024d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1409897696,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2023-01-31T07:35:06Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/12231/comments?per_page=100": {
+        "etag": "\"31894dd45ca20e8c5cad7474a92edb5f968b01d0ba0d52661bf575cf8e6d929d\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/12231/reviews?per_page=100": {
         "etag": "\"e631e949fe221664e2b78d0e31c49da57623b1697d2ceaf29d03413b9a832a89\"",
         "next": "",
@@ -30,18 +58,32 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1222809715,
+    "author": {
+      "id": 2378256,
+      "login": "emirot",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-01-31T06:55:13Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "1409897696",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2023-01-31T07:35:06Z"
+      }
+    ],
+    "review_comments": []
   }
 }
