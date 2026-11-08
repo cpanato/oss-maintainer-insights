@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 100,
-    "human_authored_prs": 16,
+    "human_authored_prs": 24,
     "bot_authored_prs": 24,
-    "draft_prs": 3,
+    "draft_prs": 0,
     "missing_author_prs": 0,
-    "outside_window_prs": 57,
+    "outside_window_prs": 52,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 33,
-    "reused_prs": 7,
+    "refreshed_prs": 15,
+    "reused_prs": 33,
     "events_checked_since": "2026-11-01T09:43:17Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
     "oldest_created_at": "2026-08-10T13:33:10Z",
-    "newest_created_at": "2026-11-06T16:54:38Z"
+    "newest_created_at": "2026-11-07T18:58:36Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,40 +28,52 @@
       "full_name": "ossf/allstar"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-07T03:15:00.000Z",
+    "collected_at": "2026-11-08T06:53:35.000Z",
     "window": {
-      "start": "2026-08-09T03:15:00.000Z",
-      "end": "2026-11-07T03:15:00.000Z"
+      "start": "2026-08-10T06:53:35.000Z",
+      "end": "2026-11-08T06:53:35.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 46,
+      "bot_events": 57,
       "missing_event_actors": 0,
-      "self_events": 14
+      "self_events": 22
     },
     "creation_cohort": {
-      "eligible_prs": 40,
+      "eligible_prs": 48,
       "coverage": "complete_for_sample",
       "authors": 9,
       "outcomes": {
-        "open": 5,
-        "closed_unmerged": 14,
-        "merged": 21
+        "open": 6,
+        "closed_unmerged": 12,
+        "merged": 30
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 21,
+        "github_review_units": 31,
         "prow_command_units": 0
       },
-      "eligible_prs": 40,
-      "covered_prs": 40,
+      "eligible_prs": 48,
+      "covered_prs": 48,
       "coverage": "complete_for_sample",
-      "review_units": 21,
+      "review_units": 31,
       "participants": 3,
       "distribution": [
+        {
+          "sources": {
+            "github_review_units": 19,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 771387,
+            "login": "jeffmendoza",
+            "type": "User"
+          },
+          "review_units": 19
+        },
         {
           "sources": {
             "github_review_units": 10,
@@ -76,19 +88,7 @@
         },
         {
           "sources": {
-            "github_review_units": 10,
-            "prow_command_units": 0
-          },
-          "actor": {
-            "id": 771387,
-            "login": "jeffmendoza",
-            "type": "User"
-          },
-          "review_units": 10
-        },
-        {
-          "sources": {
-            "github_review_units": 1,
+            "github_review_units": 2,
             "prow_command_units": 0
           },
           "actor": {
@@ -96,7 +96,7 @@
             "login": "cpanato",
             "type": "User"
           },
-          "review_units": 1
+          "review_units": 2
         }
       ],
       "concentration_80": {
@@ -104,34 +104,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.47619047619047616,
+        "value": 0.6129032258064516,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 40,
-      "covered_prs": 40,
+      "eligible_prs": 48,
+      "covered_prs": 48,
       "coverage": "complete_for_sample",
-      "responded_prs": 22,
-      "unanswered_prs": 18,
+      "responded_prs": 31,
+      "unanswered_prs": 17,
       "median_ms": {
-        "value": 903635000,
+        "value": 209633000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 100,
-    "selected": 40,
-    "eligible_on_page": 40,
+    "selected": 48,
+    "eligible_on_page": 48,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 101,
+  "requests": 47,
   "rate": {
-    "remaining": 4179,
+    "remaining": 2159,
     "limit": 5000,
-    "resetAt": 1794024694000
+    "resetAt": 1794123706000
   },
   "failures": [],
   "complete": true
