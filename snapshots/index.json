@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-07T20:29:35Z",
+  "attempted_at": "2026-11-07T23:57:06Z",
   "entries": [
-    {
-      "repository": "sigstore/cosign",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "kubernetes/kubernetes",
       "status": "pending",
@@ -28,7 +23,7 @@
         },
         "enumerated_prs": 2200,
         "eligible_prs": 2028,
-        "covered_prs": 1691,
+        "covered_prs": 1990,
         "enumeration_complete": true
       }
     },
@@ -49,9 +44,8 @@
     },
     {
       "repository": "argoproj/argo-cd",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 594,
       "progress": {
         "population": {
           "inspected_prs": 1400,
@@ -68,7 +62,7 @@
         },
         "enumerated_prs": 1400,
         "eligible_prs": 1314,
-        "covered_prs": 1116,
+        "covered_prs": 1314,
         "enumeration_complete": true
       }
     },
@@ -89,6 +83,11 @@
     },
     {
       "repository": "ossf/allstar",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "sigstore/cosign",
       "status": "fresh",
       "requests": 0
     }
