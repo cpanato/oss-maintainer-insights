@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 900,
-    "human_authored_prs": 628,
-    "bot_authored_prs": 213,
+    "human_authored_prs": 620,
+    "bot_authored_prs": 214,
     "draft_prs": 53,
     "missing_author_prs": 0,
-    "outside_window_prs": 6,
+    "outside_window_prs": 13,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 324,
-    "reused_prs": 517,
-    "events_checked_since": "2026-11-01T09:43:44Z",
+    "refreshed_prs": 308,
+    "reused_prs": 526,
+    "events_checked_since": "2026-11-02T18:54:53Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-10T07:40:14Z",
-    "newest_created_at": "2026-11-07T22:01:53Z"
+    "oldest_created_at": "2026-08-11T12:23:10Z",
+    "newest_created_at": "2026-11-09T11:59:59Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,43 +28,43 @@
       "full_name": "prometheus/prometheus"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-08T06:41:46.000Z",
+    "collected_at": "2026-11-09T12:08:24.000Z",
     "window": {
-      "start": "2026-08-10T06:41:46.000Z",
-      "end": "2026-11-08T06:41:46.000Z"
+      "start": "2026-08-11T12:08:24.000Z",
+      "end": "2026-11-09T12:08:24.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 406,
+      "bot_events": 419,
       "missing_event_actors": 0,
-      "self_events": 947
+      "self_events": 945
     },
     "creation_cohort": {
-      "eligible_prs": 841,
+      "eligible_prs": 834,
       "coverage": "complete_for_sample",
-      "authors": 213,
+      "authors": 210,
       "outcomes": {
-        "open": 284,
-        "closed_unmerged": 103,
-        "merged": 454
+        "open": 281,
+        "closed_unmerged": 102,
+        "merged": 451
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 722,
+        "github_review_units": 718,
         "prow_command_units": 0
       },
-      "eligible_prs": 841,
-      "covered_prs": 841,
+      "eligible_prs": 834,
+      "covered_prs": 834,
       "coverage": "complete_for_sample",
-      "review_units": 722,
+      "review_units": 718,
       "participants": 57,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 156,
+            "github_review_units": 157,
             "prow_command_units": 0
           },
           "actor": {
@@ -72,11 +72,11 @@
             "login": "aknuds1",
             "type": "User"
           },
-          "review_units": 156
+          "review_units": 157
         },
         {
           "sources": {
-            "github_review_units": 113,
+            "github_review_units": 112,
             "prow_command_units": 0
           },
           "actor": {
@@ -84,11 +84,11 @@
             "login": "krajorama",
             "type": "User"
           },
-          "review_units": 113
+          "review_units": 112
         },
         {
           "sources": {
-            "github_review_units": 101,
+            "github_review_units": 99,
             "prow_command_units": 0
           },
           "actor": {
@@ -96,7 +96,7 @@
             "login": "bwplotka",
             "type": "User"
           },
-          "review_units": 101
+          "review_units": 99
         },
         {
           "sources": {
@@ -112,7 +112,7 @@
         },
         {
           "sources": {
-            "github_review_units": 30,
+            "github_review_units": 29,
             "prow_command_units": 0
           },
           "actor": {
@@ -120,7 +120,7 @@
             "login": "bboreham",
             "type": "User"
           },
-          "review_units": 30
+          "review_units": 29
         },
         {
           "sources": {
@@ -200,18 +200,6 @@
             "prow_command_units": 0
           },
           "actor": {
-            "id": 9277453,
-            "login": "zenador",
-            "type": "User"
-          },
-          "review_units": 13
-        },
-        {
-          "sources": {
-            "github_review_units": 13,
-            "prow_command_units": 0
-          },
-          "actor": {
             "id": 23482098,
             "login": "matt-gp",
             "type": "User"
@@ -226,6 +214,18 @@
           "actor": {
             "id": 1320667,
             "login": "SuperQ",
+            "type": "User"
+          },
+          "review_units": 12
+        },
+        {
+          "sources": {
+            "github_review_units": 12,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 9277453,
+            "login": "zenador",
             "type": "User"
           },
           "review_units": 12
@@ -248,23 +248,23 @@
             "prow_command_units": 0
           },
           "actor": {
-            "id": 538008,
-            "login": "juliusv",
+            "id": 24193764,
+            "login": "ArthurSens",
             "type": "User"
           },
           "review_units": 7
         },
         {
           "sources": {
-            "github_review_units": 7,
+            "github_review_units": 6,
             "prow_command_units": 0
           },
           "actor": {
-            "id": 24193764,
-            "login": "ArthurSens",
+            "id": 538008,
+            "login": "juliusv",
             "type": "User"
           },
-          "review_units": 7
+          "review_units": 6
         },
         {
           "sources": {
@@ -454,6 +454,18 @@
           "actor": {
             "id": 16706816,
             "login": "upramod",
+            "type": "User"
+          },
+          "review_units": 2
+        },
+        {
+          "sources": {
+            "github_review_units": 2,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 26574719,
+            "login": "SoloJacobs",
             "type": "User"
           },
           "review_units": 2
@@ -680,18 +692,6 @@
             "prow_command_units": 0
           },
           "actor": {
-            "id": 26574719,
-            "login": "SoloJacobs",
-            "type": "User"
-          },
-          "review_units": 1
-        },
-        {
-          "sources": {
-            "github_review_units": 1,
-            "prow_command_units": 0
-          },
-          "actor": {
             "id": 143891555,
             "login": "Yusuf-Hussien",
             "type": "User"
@@ -752,34 +752,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.21606648199445982,
+        "value": 0.21866295264623956,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 841,
-      "covered_prs": 841,
+      "eligible_prs": 834,
+      "covered_prs": 834,
       "coverage": "complete_for_sample",
-      "responded_prs": 636,
+      "responded_prs": 629,
       "unanswered_prs": 205,
       "median_ms": {
-        "value": 71039000,
+        "value": 67510000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 900,
-    "selected": 841,
-    "eligible_on_page": 841,
+    "selected": 834,
+    "eligible_on_page": 834,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 83,
+  "requests": 35,
   "rate": {
-    "remaining": 3990,
+    "remaining": 4063,
     "limit": 5000,
-    "resetAt": 1794153298000
+    "resetAt": 1794267683000
   },
   "failures": [],
   "complete": true

@@ -16,26 +16,114 @@
     "merged_at": "2022-09-06T13:00:25Z"
   },
   "state": {
+    "tracked_prs": {
+      "10368": {
+        "id": 1028936653,
+        "updated_at": "2022-09-06T13:00:25Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/10368/comments?per_page=100": {
+        "etag": "W/\"8cd812e92f1fee6290e2e939103e8867486a307085501fd25b9d01a46676788e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1230258106,
+            "user": {
+              "id": 3942683,
+              "login": "jannfis",
+              "type": "User"
+            },
+            "created_at": "2022-08-29T13:03:33Z"
+          },
+          {
+            "id": 1230261867,
+            "user": {
+              "id": 86763948,
+              "login": "notfromstatefarm",
+              "type": "User"
+            },
+            "created_at": "2022-08-29T13:05:59Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/10368/comments?per_page=100": {
+        "etag": "\"4ee331b8ef1def5a63b01f84caae1f13f4d0cca37177b3c2e5c0c73979afb4b9\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/10368/reviews?per_page=100": {
+        "etag": "W/\"666758a24749c8aa59d34ae84bdf54c0a1e91500ef82e48b548f8648dac33a50\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1077707478,
+            "user": {
+              "id": 350466,
+              "login": "crenshaw-dev",
+              "type": "User"
+            },
+            "submitted_at": "2022-08-18T16:59:19Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1028936653,
+    "author": {
+      "id": 86763948,
+      "login": "notfromstatefarm",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-08-17T14:39:48Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1077707478",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-18T16:59:19Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1230258106",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-29T13:03:33Z"
+      },
+      {
+        "id": "1230261867",
+        "actor": {
+          "id": 86763948,
+          "login": "notfromstatefarm",
+          "type": "User"
+        },
+        "occurred_at": "2022-08-29T13:05:59Z"
+      }
+    ],
+    "review_comments": []
   }
 }
