@@ -16,12 +16,70 @@
     "merged_at": "2025-12-12T10:04:56Z"
   },
   "state": {
+    "tracked_prs": {
+      "8342": {
+        "id": 3095956211,
+        "updated_at": "2025-12-12T10:05:42Z",
+        "checked_at": "2026-11-06T11:32:32Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
-    "pages": {}
+    "pages": {
+      "/repositories/92313258/issues/8342/comments?per_page=100": {
+        "etag": "W/\"21f34f8b23cfa4faa53c0f75d88ff97b51f27bb8b24730b0cc3894d23db62200\"",
+        "next": "",
+        "value": [
+          {
+            "id": 3645755248,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-12T09:55:02Z"
+          },
+          {
+            "id": 3645760090,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2025-12-12T09:56:24Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/8342/comments?per_page=100": {
+        "etag": "\"16dacfabd2253814fd0823ae0bf3cd50b2eddb700a9e62907dfac0770f454913\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/8342/reviews?per_page=100": {
+        "etag": "W/\"6fc78fde97e9be22429f1c90fda1279a02a4db301a089ca9a8489b7173dbd914\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 3571137618,
+            "user": {
+              "id": 1142578,
+              "login": "erikgb",
+              "type": "User"
+            },
+            "submitted_at": "2025-12-12T09:56:12Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
   },
   "input": {
     "id": 3095956211,
