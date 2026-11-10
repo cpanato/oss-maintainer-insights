@@ -16,6 +16,14 @@
     "merged_at": "2022-07-05T14:48:32Z"
   },
   "state": {
+    "tracked_prs": {
+      "9871": {
+        "id": 986608467,
+        "updated_at": "2022-07-12T20:29:43Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -46,6 +54,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/9871/comments?per_page=100": {
+        "etag": "\"f5d34b981751c4969c6945db22e227c87a447fac2cb812d18c622c420c28ca38\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/9871/reviews?per_page=100": {
         "etag": "W/\"5fedca015191e0f868d18fe2cec664521f003ad73b7345cfd74e7057e5b0b84d\"",
         "next": "",
@@ -75,18 +88,62 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 986608467,
+    "author": {
+      "id": 86763948,
+      "login": "notfromstatefarm",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2022-07-04T15:39:25Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1027838813",
+        "actor": {
+          "id": 3375629,
+          "login": "templarfelix",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-04T18:24:18Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1028766999",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-05T14:48:15Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1173957483",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2022-07-04T15:50:00Z"
+      },
+      {
+        "id": "1182472023",
+        "actor": {
+          "id": 350466,
+          "login": "crenshaw-dev",
+          "type": "User"
+        },
+        "occurred_at": "2022-07-12T20:29:43Z"
+      }
+    ],
+    "review_comments": []
   }
 }

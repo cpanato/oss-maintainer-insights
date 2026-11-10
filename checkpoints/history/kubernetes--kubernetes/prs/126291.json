@@ -16,6 +16,14 @@
     "merged_at": "2024-07-23T19:21:39Z"
   },
   "state": {
+    "tracked_prs": {
+      "126291": {
+        "id": 1983473699,
+        "updated_at": "2024-07-23T19:21:39Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -107,6 +115,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/126291/comments?per_page=100": {
+        "etag": "\"f5d34b981751c4969c6945db22e227c87a447fac2cb812d18c622c420c28ca38\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/126291/reviews?per_page=100": {
         "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
         "next": "",
@@ -115,18 +128,102 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1983473699,
+    "author": {
+      "id": 9082919,
+      "login": "haircommander",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-07-23T14:27:05Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "2245407061",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-23T14:27:15Z"
+      },
+      {
+        "id": "2245409276",
+        "actor": {
+          "id": 9082919,
+          "login": "haircommander",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-23T14:28:13Z"
+      },
+      {
+        "id": "2245736017",
+        "actor": {
+          "id": 3780425,
+          "login": "kannon92",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-23T16:44:41Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2245803489",
+        "actor": {
+          "id": 648372,
+          "login": "jsturtevant",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-23T17:15:53Z"
+      },
+      {
+        "id": "2245803671",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-23T17:15:59Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2245809073",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-23T17:19:10Z"
+      },
+      {
+        "id": "2245809557",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-23T17:19:27Z"
+      },
+      {
+        "id": "2246006816",
+        "actor": {
+          "id": 9082919,
+          "login": "haircommander",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-23T18:52:52Z"
+      }
+    ],
+    "review_comments": []
   }
 }
