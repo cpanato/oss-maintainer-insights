@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-10-30T03:16:27Z",
+  "generation": 6,
+  "observed_at": "2026-11-10T13:16:54Z",
   "pr": {
-    "updated_at": "2026-10-26T16:23:53Z",
+    "updated_at": "2026-11-02T16:23:30Z",
     "id": 5020897722,
     "number": 5185,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-26T16:23:48Z",
     "draft": false,
-    "state": "open",
+    "state": "closed",
     "merged_at": null
   },
   "state": {
     "tracked_prs": {
       "5185": {
         "id": 5020897722,
-        "updated_at": "2026-10-26T16:23:53Z",
-        "checked_at": "2026-10-30T03:16:27Z",
-        "state": "open"
+        "updated_at": "2026-11-02T16:23:30Z",
+        "checked_at": "2026-11-10T13:16:54Z",
+        "state": "closed"
       }
     },
     "repository_id": 335952417,
@@ -31,17 +31,27 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/5185/comments?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "W/\"c667f39356c3aceed4cd8a24593ffd82cbb7ff1cd51f00a23746ae633a96b302\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6582276469,
+            "user": {
+              "id": 49699333,
+              "login": "dependabot[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-02T16:23:18Z"
+          }
+        ]
       },
       "/repositories/335952417/pulls/5185/comments?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
         "next": "",
         "value": []
       },
       "/repositories/335952417/pulls/5185/reviews?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
         "next": "",
         "value": []
       }
@@ -56,14 +66,24 @@
     },
     "created_at": "2026-10-26T16:23:48Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "closed_unmerged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
     "reviews": [],
-    "issue_comments": [],
+    "issue_comments": [
+      {
+        "id": "6582276469",
+        "actor": {
+          "id": 49699333,
+          "login": "dependabot[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-02T16:23:18Z"
+      }
+    ],
     "review_comments": []
   }
 }

@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-10-30T03:16:27Z",
+  "generation": 6,
+  "observed_at": "2026-11-10T13:16:54Z",
   "pr": {
-    "updated_at": "2026-10-20T17:35:40Z",
+    "updated_at": "2026-11-04T13:58:09Z",
     "id": 4747907770,
     "number": 5152,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-05T16:24:21Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-04T13:58:05Z"
   },
   "state": {
     "tracked_prs": {
       "5152": {
         "id": 4747907770,
-        "updated_at": "2026-10-20T17:35:40Z",
-        "checked_at": "2026-10-30T03:16:27Z",
-        "state": "open"
+        "updated_at": "2026-11-04T13:58:09Z",
+        "checked_at": "2026-11-10T13:16:54Z",
+        "state": "closed"
       }
     },
     "repository_id": 335952417,
@@ -31,19 +31,40 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/5152/comments?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "W/\"5840ad8677320fa90988835273a93ed61587b29e1cac3b08b752a67a2885ba80\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6629538671,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2026-11-04T11:34:40Z"
+          }
+        ]
       },
       "/repositories/335952417/pulls/5152/comments?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
         "next": "",
         "value": []
       },
       "/repositories/335952417/pulls/5152/reviews?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "W/\"4153d626ce16a81e197abbf6b49d25f673c063a267b940ead3b747a5a1ee9929\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5769545684,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-04T13:57:58Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -56,14 +77,35 @@
     },
     "created_at": "2026-10-05T16:24:21Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
-    "issue_comments": [],
+    "reviews": [
+      {
+        "id": "5769545684",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T13:57:58Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6629538671",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T11:34:40Z"
+      }
+    ],
     "review_comments": []
   }
 }

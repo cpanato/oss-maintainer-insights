@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 200,
-    "human_authored_prs": 60,
-    "bot_authored_prs": 49,
-    "draft_prs": 8,
+    "human_authored_prs": 61,
+    "bot_authored_prs": 58,
+    "draft_prs": 7,
     "missing_author_prs": 0,
-    "outside_window_prs": 83,
+    "outside_window_prs": 74,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 12,
-    "reused_prs": 97,
-    "events_checked_since": "2026-11-02T19:07:32Z",
+    "refreshed_prs": 21,
+    "reused_prs": 98,
+    "events_checked_since": "2026-11-03T23:46:18Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
     "oldest_created_at": "2026-08-13T00:18:27Z",
-    "newest_created_at": "2026-11-04T11:37:03Z"
+    "newest_created_at": "2026-11-09T16:25:17Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,38 +28,38 @@
       "full_name": "sigstore/cosign"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-09T12:08:10.000Z",
+    "collected_at": "2026-11-10T12:58:20.000Z",
     "window": {
-      "start": "2026-08-11T12:08:10.000Z",
-      "end": "2026-11-09T12:08:10.000Z"
+      "start": "2026-08-12T12:58:20.000Z",
+      "end": "2026-11-10T12:58:20.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 76,
+      "bot_events": 78,
       "missing_event_actors": 0,
-      "self_events": 90
+      "self_events": 91
     },
     "creation_cohort": {
-      "eligible_prs": 109,
+      "eligible_prs": 119,
       "coverage": "complete_for_sample",
       "authors": 26,
       "outcomes": {
-        "open": 10,
-        "closed_unmerged": 32,
-        "merged": 67
+        "open": 17,
+        "closed_unmerged": 33,
+        "merged": 69
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 89,
+        "github_review_units": 90,
         "prow_command_units": 0
       },
-      "eligible_prs": 109,
-      "covered_prs": 109,
+      "eligible_prs": 119,
+      "covered_prs": 119,
       "coverage": "complete_for_sample",
-      "review_units": 89,
+      "review_units": 90,
       "participants": 8,
       "distribution": [
         {
@@ -100,7 +100,7 @@
         },
         {
           "sources": {
-            "github_review_units": 14,
+            "github_review_units": 15,
             "prow_command_units": 0
           },
           "actor": {
@@ -108,7 +108,7 @@
             "login": "Hayden-IO",
             "type": "User"
           },
-          "review_units": 14
+          "review_units": 15
         },
         {
           "sources": {
@@ -164,16 +164,16 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.25842696629213485,
+        "value": 0.25555555555555554,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 109,
-      "covered_prs": 109,
+      "eligible_prs": 119,
+      "covered_prs": 119,
       "coverage": "complete_for_sample",
       "responded_prs": 84,
-      "unanswered_prs": 25,
+      "unanswered_prs": 35,
       "median_ms": {
         "value": 136424500,
         "status": "available"
@@ -182,16 +182,16 @@
   },
   "selection": {
     "listed": 200,
-    "selected": 109,
-    "eligible_on_page": 109,
+    "selected": 119,
+    "eligible_on_page": 119,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 39,
+  "requests": 66,
   "rate": {
-    "remaining": 4695,
+    "remaining": 4933,
     "limit": 5000,
-    "resetAt": 1794229575000
+    "resetAt": 1794319069000
   },
   "failures": [],
   "complete": true

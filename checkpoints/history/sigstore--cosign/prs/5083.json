@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-10-30T03:16:27Z",
+  "generation": 6,
+  "observed_at": "2026-11-10T13:16:54Z",
   "pr": {
-    "updated_at": "2026-10-29T19:05:05Z",
+    "updated_at": "2026-11-05T04:47:19Z",
     "id": 4407161731,
     "number": 5083,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-08-31T23:21:33Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-05T00:11:57Z"
   },
   "state": {
     "tracked_prs": {
       "5083": {
         "id": 4407161731,
-        "updated_at": "2026-10-29T19:05:05Z",
-        "checked_at": "2026-10-30T03:16:27Z",
-        "state": "open"
+        "updated_at": "2026-11-05T04:47:19Z",
+        "checked_at": "2026-11-10T13:16:54Z",
+        "state": "closed"
       }
     },
     "repository_id": 335952417,
@@ -31,7 +31,7 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/5083/comments?per_page=100": {
-        "etag": "W/\"97e801f55231f9219968ec11ce123cdddbae5755732eb38d61bcb5fc5a5d06b8\"",
+        "etag": "W/\"e00d1adf6281f30140f193bae180aca94e0e2008feb3e6f9036f99836a0c1917\"",
         "next": "",
         "value": [
           {
@@ -51,11 +51,20 @@
               "type": "User"
             },
             "created_at": "2026-10-09T01:04:33Z"
+          },
+          {
+            "id": 6616471330,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "created_at": "2026-11-03T21:59:59Z"
           }
         ]
       },
       "/repositories/335952417/pulls/5083/comments?per_page=100": {
-        "etag": "W/\"f05716f497ff87842c0975520afaa81e26aa6282032148322d23671adcebca60\"",
+        "etag": "W/\"3efd4f25b612f06655c7a30ba03fb07622f1dd423aafe2a192a1b91c7f78ac44\"",
         "next": "",
         "value": [
           {
@@ -273,11 +282,38 @@
               "type": "User"
             },
             "created_at": "2026-10-29T19:03:30Z"
+          },
+          {
+            "id": 4460567445,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "created_at": "2026-11-03T21:19:47Z"
+          },
+          {
+            "id": 4460894482,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "created_at": "2026-11-03T21:53:59Z"
+          },
+          {
+            "id": 4469262627,
+            "user": {
+              "id": 64337293,
+              "login": "aaronlew02",
+              "type": "User"
+            },
+            "created_at": "2026-11-04T15:07:00Z"
           }
         ]
       },
       "/repositories/335952417/pulls/5083/reviews?per_page=100": {
-        "etag": "W/\"74f86f12beb7d12ce81d7708077e6addafbf159e46d9fb17c1f722ba9581a9a2\"",
+        "etag": "W/\"edc3329907867af40c978f0407ad2018ed15298aef49820f04f00fffaa93a2a9\"",
         "next": "",
         "value": [
           {
@@ -429,6 +465,66 @@
             },
             "submitted_at": "2026-10-29T19:03:30Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5759625833,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-03T21:19:47Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5760015324,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-03T21:54:00Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5760025582,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-03T21:54:51Z",
+            "state": "DISMISSED"
+          },
+          {
+            "id": 5770622436,
+            "user": {
+              "id": 64337293,
+              "login": "aaronlew02",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-04T15:07:00Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5772620726,
+            "user": {
+              "id": 8418760,
+              "login": "Hayden-IO",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-04T17:15:32Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5777818574,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-05T00:07:41Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -443,7 +539,7 @@
     },
     "created_at": "2026-08-31T23:21:33Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -599,6 +695,66 @@
         },
         "occurred_at": "2026-10-29T19:03:30Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5759625833",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-03T21:19:47Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5760015324",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-03T21:54:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5760025582",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-03T21:54:51Z",
+        "state": "DISMISSED"
+      },
+      {
+        "id": "5770622436",
+        "actor": {
+          "id": 64337293,
+          "login": "aaronlew02",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T15:07:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5772620726",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T17:15:32Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5777818574",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-05T00:07:41Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -619,6 +775,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-09T01:04:33Z"
+      },
+      {
+        "id": "6616471330",
+        "actor": {
+          "id": 8418760,
+          "login": "Hayden-IO",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-03T21:59:59Z"
       }
     ],
     "review_comments": [
@@ -837,6 +1002,33 @@
           "type": "User"
         },
         "occurred_at": "2026-10-29T19:03:30Z"
+      },
+      {
+        "id": "4460567445",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-03T21:19:47Z"
+      },
+      {
+        "id": "4460894482",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-03T21:53:59Z"
+      },
+      {
+        "id": "4469262627",
+        "actor": {
+          "id": 64337293,
+          "login": "aaronlew02",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T15:07:00Z"
       }
     ]
   }

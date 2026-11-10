@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-10-30T03:16:27Z",
+  "generation": 6,
+  "observed_at": "2026-11-10T13:16:54Z",
   "pr": {
-    "updated_at": "2026-10-20T17:35:39Z",
+    "updated_at": "2026-11-04T13:59:58Z",
     "id": 4747904886,
     "number": 5151,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-05T16:24:07Z",
     "draft": false,
-    "state": "open",
+    "state": "closed",
     "merged_at": null
   },
   "state": {
     "tracked_prs": {
       "5151": {
         "id": 4747904886,
-        "updated_at": "2026-10-20T17:35:39Z",
-        "checked_at": "2026-10-30T03:16:27Z",
-        "state": "open"
+        "updated_at": "2026-11-04T13:59:58Z",
+        "checked_at": "2026-11-10T13:16:54Z",
+        "state": "closed"
       }
     },
     "repository_id": 335952417,
@@ -31,17 +31,45 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/5151/comments?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "W/\"eaa98a1d14abb9c70f05d313ba2627f5c546fe8975bc2eded40c0e1c19a64b17\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6629538246,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2026-11-04T11:34:39Z"
+          },
+          {
+            "id": 6632542234,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2026-11-04T13:58:33Z"
+          },
+          {
+            "id": 6632569728,
+            "user": {
+              "id": 49699333,
+              "login": "dependabot[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-04T13:59:48Z"
+          }
+        ]
       },
       "/repositories/335952417/pulls/5151/comments?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
         "next": "",
         "value": []
       },
       "/repositories/335952417/pulls/5151/reviews?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
         "next": "",
         "value": []
       }
@@ -56,14 +84,42 @@
     },
     "created_at": "2026-10-05T16:24:07Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "closed_unmerged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
     "reviews": [],
-    "issue_comments": [],
+    "issue_comments": [
+      {
+        "id": "6629538246",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T11:34:39Z"
+      },
+      {
+        "id": "6632542234",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T13:58:33Z"
+      },
+      {
+        "id": "6632569728",
+        "actor": {
+          "id": 49699333,
+          "login": "dependabot[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-04T13:59:48Z"
+      }
+    ],
     "review_comments": []
   }
 }

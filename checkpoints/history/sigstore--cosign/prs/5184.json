@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-10-30T03:16:27Z",
+  "generation": 6,
+  "observed_at": "2026-11-10T13:16:54Z",
   "pr": {
-    "updated_at": "2026-10-30T07:11:17Z",
+    "updated_at": "2026-11-04T07:20:21Z",
     "id": 5008885531,
     "number": 5184,
     "user": {
@@ -19,8 +19,8 @@
     "tracked_prs": {
       "5184": {
         "id": 5008885531,
-        "updated_at": "2026-10-30T07:11:17Z",
-        "checked_at": "2026-10-30T03:16:27Z",
+        "updated_at": "2026-11-04T07:20:21Z",
+        "checked_at": "2026-11-10T13:16:54Z",
         "state": "open"
       }
     },
@@ -31,7 +31,7 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/5184/comments?per_page=100": {
-        "etag": "W/\"b99064a22ff647ab3bbaa2b1293eb90c2d1ab3a9143622a6c3a18c6552615856\"",
+        "etag": "W/\"7378555ee5f140720c050745b405b18628f30179df1c341cfdf401d676b1bf39\"",
         "next": "",
         "value": [
           {
@@ -42,18 +42,38 @@
               "type": "User"
             },
             "created_at": "2026-10-30T07:11:17Z"
+          },
+          {
+            "id": 6618938650,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-04T00:18:17Z"
           }
         ]
       },
       "/repositories/335952417/pulls/5184/comments?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
         "next": "",
         "value": []
       },
       "/repositories/335952417/pulls/5184/reviews?per_page=100": {
-        "etag": "\"ba27dff1bf82167b993cb610c109f43d8f51953ef6647e3c0f93c7b62f23d49a\"",
+        "etag": "W/\"58c89fe69c79ae5b9b78cb3c18aa9d3fb71c63a94dab2142b836aa4a0258b49f\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5761564160,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-04T00:40:59Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -72,7 +92,18 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5761564160",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-04T00:40:59Z",
+        "state": "APPROVED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6517118607",
@@ -82,6 +113,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-30T07:11:17Z"
+      },
+      {
+        "id": "6618938650",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-04T00:18:17Z"
       }
     ],
     "review_comments": []
