@@ -1,8 +1,8 @@
 {
-  "generation": 4,
-  "observed_at": "2026-10-30T17:03:04Z",
+  "generation": 5,
+  "observed_at": "2026-11-11T00:58:44Z",
   "pr": {
-    "updated_at": "2026-10-30T11:39:29Z",
+    "updated_at": "2026-11-08T11:13:09Z",
     "id": 5053086125,
     "number": 5381,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-28T15:26:28Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-08T08:21:55Z"
   },
   "state": {
     "tracked_prs": {
       "5381": {
         "id": 5053086125,
-        "updated_at": "2026-10-30T11:39:29Z",
-        "checked_at": "2026-10-30T17:03:04Z",
-        "state": "open"
+        "updated_at": "2026-11-08T11:13:09Z",
+        "checked_at": "2026-11-11T00:58:44Z",
+        "state": "closed"
       }
     },
     "repository_id": 302670797,
@@ -31,19 +31,58 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/5381/comments?per_page=100": {
-        "etag": "\"514a3471743aaf1bd50d0128c3644c6c502dbd8947af7d6c1e89be6e12edacad\"",
+        "etag": "W/\"edbc4dba4d3b0c3786aa9c5f7b0c1380d626b9b20cdc8228a2dcf6b40f61917e\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6554709440,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-01T07:00:14Z"
+          },
+          {
+            "id": 6696289075,
+            "user": {
+              "id": 48639484,
+              "login": "davic09",
+              "type": "User"
+            },
+            "created_at": "2026-11-06T21:36:24Z"
+          },
+          {
+            "id": 6707477502,
+            "user": {
+              "id": 224792326,
+              "login": "vishnums2k5",
+              "type": "User"
+            },
+            "created_at": "2026-11-07T13:21:06Z"
+          }
+        ]
       },
       "/repositories/302670797/pulls/5381/comments?per_page=100": {
-        "etag": "\"514a3471743aaf1bd50d0128c3644c6c502dbd8947af7d6c1e89be6e12edacad\"",
+        "etag": "\"ff13729f1973a606b5ffa5019bd1838f415ba5df55589d4a4e47b4c69458a344\"",
         "next": "",
         "value": []
       },
       "/repositories/302670797/pulls/5381/reviews?per_page=100": {
-        "etag": "\"514a3471743aaf1bd50d0128c3644c6c502dbd8947af7d6c1e89be6e12edacad\"",
+        "etag": "W/\"eaee4c496b714a7528cf0a2da74401538a7f4b9c51c6e7205350358b8e563e4a\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5817178261,
+            "user": {
+              "id": 567897,
+              "login": "justaugustus",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-08T08:21:11Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -56,14 +95,53 @@
     },
     "created_at": "2026-10-28T15:26:28Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
-    "issue_comments": [],
+    "reviews": [
+      {
+        "id": "5817178261",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-08T08:21:11Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "6554709440",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-01T07:00:14Z"
+      },
+      {
+        "id": "6696289075",
+        "actor": {
+          "id": 48639484,
+          "login": "davic09",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-06T21:36:24Z"
+      },
+      {
+        "id": "6707477502",
+        "actor": {
+          "id": 224792326,
+          "login": "vishnums2k5",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-07T13:21:06Z"
+      }
+    ],
     "review_comments": []
   }
 }

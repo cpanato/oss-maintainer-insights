@@ -1,8 +1,8 @@
 {
-  "generation": 4,
-  "observed_at": "2026-10-30T17:03:04Z",
+  "generation": 5,
+  "observed_at": "2026-11-11T00:58:44Z",
   "pr": {
-    "updated_at": "2026-10-28T10:27:38Z",
+    "updated_at": "2026-11-06T17:10:41Z",
     "id": 5022884071,
     "number": 5367,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-26T18:47:39Z",
     "draft": false,
-    "state": "open",
+    "state": "closed",
     "merged_at": null
   },
   "state": {
     "tracked_prs": {
       "5367": {
         "id": 5022884071,
-        "updated_at": "2026-10-28T10:27:38Z",
-        "checked_at": "2026-10-30T17:03:04Z",
-        "state": "open"
+        "updated_at": "2026-11-06T17:10:41Z",
+        "checked_at": "2026-11-11T00:58:44Z",
+        "state": "closed"
       }
     },
     "repository_id": 302670797,
@@ -31,7 +31,7 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/5367/comments?per_page=100": {
-        "etag": "W/\"c1a2a3ac522ea4435ea7937c155132bc153fe059b246132ab5b9a7d98c0f5fa2\"",
+        "etag": "W/\"6fde55c0b803f6e6c637d1454a305387c21bf333e97f1297ee43c1bdb705f8bd\"",
         "next": "",
         "value": [
           {
@@ -51,18 +51,47 @@
               "type": "User"
             },
             "created_at": "2026-10-28T10:18:38Z"
+          },
+          {
+            "id": 6555601625,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2026-11-01T09:35:27Z"
+          },
+          {
+            "id": 6562200751,
+            "user": {
+              "id": 567897,
+              "login": "justaugustus",
+              "type": "User"
+            },
+            "created_at": "2026-11-01T18:39:09Z"
           }
         ]
       },
       "/repositories/302670797/pulls/5367/comments?per_page=100": {
-        "etag": "\"514a3471743aaf1bd50d0128c3644c6c502dbd8947af7d6c1e89be6e12edacad\"",
+        "etag": "\"ff13729f1973a606b5ffa5019bd1838f415ba5df55589d4a4e47b4c69458a344\"",
         "next": "",
         "value": []
       },
       "/repositories/302670797/pulls/5367/reviews?per_page=100": {
-        "etag": "\"514a3471743aaf1bd50d0128c3644c6c502dbd8947af7d6c1e89be6e12edacad\"",
+        "etag": "W/\"3a750cc1c440fa1e1d8e265f7830081579a199dff9fb83e72bff098d14aef97c\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5727198090,
+            "user": {
+              "id": 567897,
+              "login": "justaugustus",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-01T09:29:22Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -75,13 +104,24 @@
     },
     "created_at": "2026-10-26T18:47:39Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "closed_unmerged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5727198090",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-01T09:29:22Z",
+        "state": "COMMENTED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6424668329",
@@ -100,6 +140,24 @@
           "type": "User"
         },
         "occurred_at": "2026-10-28T10:18:38Z"
+      },
+      {
+        "id": "6555601625",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-01T09:35:27Z"
+      },
+      {
+        "id": "6562200751",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-01T18:39:09Z"
       }
     ],
     "review_comments": []
