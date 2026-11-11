@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 300,
-    "human_authored_prs": 196,
+    "human_authored_prs": 197,
     "bot_authored_prs": 94,
     "draft_prs": 6,
     "missing_author_prs": 0,
-    "outside_window_prs": 4,
+    "outside_window_prs": 3,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
     "refreshed_prs": 164,
-    "reused_prs": 126,
-    "events_checked_since": "2026-11-03T23:54:57Z",
+    "reused_prs": 127,
+    "events_checked_since": "2026-11-05T00:39:57Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-12T13:57:27Z",
-    "newest_created_at": "2026-11-10T12:13:30Z"
+    "oldest_created_at": "2026-08-13T19:13:53Z",
+    "newest_created_at": "2026-11-11T00:03:14Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,51 +28,51 @@
       "full_name": "helm/helm"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-10T13:06:21.000Z",
+    "collected_at": "2026-11-11T16:54:47.000Z",
     "window": {
-      "start": "2026-08-12T13:06:21.000Z",
-      "end": "2026-11-10T13:06:21.000Z"
+      "start": "2026-08-13T16:54:47.000Z",
+      "end": "2026-11-11T16:54:47.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 178,
+      "bot_events": 163,
       "missing_event_actors": 0,
-      "self_events": 251
+      "self_events": 253
     },
     "creation_cohort": {
-      "eligible_prs": 290,
+      "eligible_prs": 291,
       "coverage": "complete_for_sample",
-      "authors": 122,
+      "authors": 123,
       "outcomes": {
-        "open": 151,
+        "open": 149,
         "closed_unmerged": 28,
-        "merged": 111
+        "merged": 114
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 191,
-        "prow_command_units": 98
+        "github_review_units": 193,
+        "prow_command_units": 100
       },
-      "eligible_prs": 290,
-      "covered_prs": 290,
+      "eligible_prs": 291,
+      "covered_prs": 291,
       "coverage": "complete_for_sample",
-      "review_units": 191,
+      "review_units": 193,
       "participants": 24,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 114,
-            "prow_command_units": 98
+            "github_review_units": 116,
+            "prow_command_units": 100
           },
           "actor": {
             "id": 104113,
             "login": "TerryHowe",
             "type": "User"
           },
-          "review_units": 114
+          "review_units": 116
         },
         {
           "sources": {
@@ -356,34 +356,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5968586387434555,
+        "value": 0.6010362694300518,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 290,
-      "covered_prs": 290,
+      "eligible_prs": 291,
+      "covered_prs": 291,
       "coverage": "complete_for_sample",
-      "responded_prs": 175,
-      "unanswered_prs": 115,
+      "responded_prs": 179,
+      "unanswered_prs": 112,
       "median_ms": {
-        "value": 51422000,
+        "value": 51556000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 300,
-    "selected": 290,
-    "eligible_on_page": 290,
+    "selected": 291,
+    "eligible_on_page": 291,
     "truncated": false,
     "list_has_more": false
   },
   "requests": 496,
   "rate": {
-    "remaining": 2865,
+    "remaining": 1239,
     "limit": 5000,
-    "resetAt": 1794319069000
+    "resetAt": 1794418499000
   },
   "failures": [],
   "complete": true
