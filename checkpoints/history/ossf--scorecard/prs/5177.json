@@ -1,8 +1,8 @@
 {
-  "generation": 4,
-  "observed_at": "2026-10-30T17:03:04Z",
+  "generation": 5,
+  "observed_at": "2026-11-11T00:58:44Z",
   "pr": {
-    "updated_at": "2026-09-20T01:44:56Z",
+    "updated_at": "2026-11-08T10:09:44Z",
     "id": 4263454781,
     "number": 5177,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-08-12T15:02:39Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-08T10:09:44Z"
   },
   "state": {
     "tracked_prs": {
       "5177": {
         "id": 4263454781,
-        "updated_at": "2026-09-20T01:44:56Z",
-        "checked_at": "2026-10-30T17:03:04Z",
-        "state": "open"
+        "updated_at": "2026-11-08T10:09:44Z",
+        "checked_at": "2026-11-11T00:58:44Z",
+        "state": "closed"
       }
     },
     "repository_id": 302670797,
@@ -31,7 +31,7 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/5177/comments?per_page=100": {
-        "etag": "W/\"01d4d2cf10c52cf82f11ebe12dd320e02fee29c6245f74bd6ce5bf62d58ca073\"",
+        "etag": "W/\"e9565ab840bc432aa90e1ea8bd9ec7d3f357fecd919ba3283ae1419f255b4834\"",
         "next": "",
         "value": [
           {
@@ -69,16 +69,34 @@
               "type": "Bot"
             },
             "created_at": "2026-09-20T01:44:55Z"
+          },
+          {
+            "id": 6719518247,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-08T08:55:56Z"
+          },
+          {
+            "id": 6719943075,
+            "user": {
+              "id": 567897,
+              "login": "justaugustus",
+              "type": "User"
+            },
+            "created_at": "2026-11-08T09:42:33Z"
           }
         ]
       },
       "/repositories/302670797/pulls/5177/comments?per_page=100": {
-        "etag": "\"cba4ab9f0032d3a2daaed1faf86cf734e86256313e7cbd89469ad1b577a930e8\"",
+        "etag": "\"12cbfe6fd3fb403aef8c2c196911a8faf7e1f2ed00c749ccad9f1f28bbdedb62\"",
         "next": "",
         "value": []
       },
       "/repositories/302670797/pulls/5177/reviews?per_page=100": {
-        "etag": "W/\"927a00dbfb9b0199012d27d0dba48a6244dc92b053a3b07bb9fe1a3e15ccfb49\"",
+        "etag": "W/\"b37b96997d6ffb7b904d50f3ff0fd4af6df756e41f5479c30ad404dd761fcc8a\"",
         "next": "",
         "value": [
           {
@@ -90,6 +108,16 @@
             },
             "submitted_at": "2026-08-13T16:36:41Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5817245421,
+            "user": {
+              "id": 567897,
+              "login": "justaugustus",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-08T08:46:17Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -104,7 +132,7 @@
     },
     "created_at": "2026-08-12T15:02:39Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -120,6 +148,16 @@
         },
         "occurred_at": "2026-08-13T16:36:41Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5817245421",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-08T08:46:17Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -158,6 +196,24 @@
           "type": "Bot"
         },
         "occurred_at": "2026-09-20T01:44:55Z"
+      },
+      {
+        "id": "6719518247",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-08T08:55:56Z"
+      },
+      {
+        "id": "6719943075",
+        "actor": {
+          "id": 567897,
+          "login": "justaugustus",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-08T09:42:33Z"
       }
     ],
     "review_comments": []
