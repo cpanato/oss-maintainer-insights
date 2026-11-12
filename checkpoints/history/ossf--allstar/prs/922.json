@@ -1,8 +1,8 @@
 {
-  "generation": 26,
-  "observed_at": "2026-11-11T08:28:16Z",
+  "generation": 27,
+  "observed_at": "2026-11-12T13:21:01Z",
   "pr": {
-    "updated_at": "2026-11-10T19:45:19Z",
+    "updated_at": "2026-11-12T13:12:16Z",
     "id": 5222088394,
     "number": 922,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-11-09T10:03:16Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-11T22:03:42Z"
   },
   "state": {
     "tracked_prs": {
       "922": {
         "id": 5222088394,
-        "updated_at": "2026-11-10T19:45:19Z",
-        "checked_at": "2026-11-11T08:28:16Z",
-        "state": "open"
+        "updated_at": "2026-11-12T13:12:16Z",
+        "checked_at": "2026-11-12T13:21:01Z",
+        "state": "closed"
       }
     },
     "repository_id": 370773729,
@@ -31,7 +31,7 @@
     "repository": "ossf/allstar",
     "pages": {
       "/repositories/370773729/issues/922/comments?per_page=100": {
-        "etag": "W/\"ee2d2df34ce3cd973aff4d16287d1ea9d2d0c8f2cc27f9a2b02c5ac12d11bc07\"",
+        "etag": "W/\"c25fd0fb8ca289c7ac36642178647b05b85e593cc684595d02880581be8b1492\"",
         "next": "",
         "value": [
           {
@@ -46,12 +46,12 @@
         ]
       },
       "/repositories/370773729/pulls/922/comments?per_page=100": {
-        "etag": "\"12cbfe6fd3fb403aef8c2c196911a8faf7e1f2ed00c749ccad9f1f28bbdedb62\"",
+        "etag": "\"82f3199b6821de10012758c8abf8758f6b7f04113083fb73f1be54b50b837acf\"",
         "next": "",
         "value": []
       },
       "/repositories/370773729/pulls/922/reviews?per_page=100": {
-        "etag": "W/\"daa61e22600752b1fc276d24537e72a25a365f8816e7889d7d825200bee445f2\"",
+        "etag": "W/\"dc3599d6c987bd55934ab0a12dd21848e8cd485f0305571743224250720ee486\"",
         "next": "",
         "value": [
           {
@@ -63,6 +63,16 @@
             },
             "submitted_at": "2026-11-10T19:45:19Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5865889724,
+            "user": {
+              "id": 771387,
+              "login": "jeffmendoza",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-11T22:03:33Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -77,7 +87,7 @@
     },
     "created_at": "2026-11-09T10:03:16Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -93,6 +103,16 @@
         },
         "occurred_at": "2026-11-10T19:45:19Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5865889724",
+        "actor": {
+          "id": 771387,
+          "login": "jeffmendoza",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-11T22:03:33Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [

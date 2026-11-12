@@ -16,6 +16,14 @@
     "merged_at": "2024-06-21T16:22:55Z"
   },
   "state": {
+    "tracked_prs": {
+      "125437": {
+        "id": 1914054763,
+        "updated_at": "2024-06-28T16:02:39Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -73,6 +81,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/125437/comments?per_page=100": {
+        "etag": "\"82f3199b6821de10012758c8abf8758f6b7f04113083fb73f1be54b50b837acf\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/125437/reviews?per_page=100": {
         "etag": "W/\"f9a995497a259f8305d9e4faa7a3ada087b6ab9afb4d5d0d2b3ce2de67dabcfa\"",
         "next": "",
@@ -95,18 +108,82 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1914054763,
+    "author": {
+      "id": 11172207,
+      "login": "ardaguclu",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-06-11T09:48:42Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2132878443",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-21T15:11:10Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2160303723",
+        "actor": {
+          "id": 11172207,
+          "login": "ardaguclu",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-11T09:49:56Z"
+      },
+      {
+        "id": "2182889726",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-21T14:43:05Z"
+      },
+      {
+        "id": "2182938805",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-21T15:11:16Z"
+      },
+      {
+        "id": "2182939280",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-21T15:11:32Z"
+      },
+      {
+        "id": "2197235331",
+        "actor": {
+          "id": 22591623,
+          "login": "sftim",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-28T16:02:37Z"
+      }
+    ],
+    "review_comments": []
   }
 }
