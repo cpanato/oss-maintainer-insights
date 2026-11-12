@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 300,
-    "human_authored_prs": 197,
-    "bot_authored_prs": 94,
-    "draft_prs": 6,
+    "human_authored_prs": 195,
+    "bot_authored_prs": 96,
+    "draft_prs": 7,
     "missing_author_prs": 0,
-    "outside_window_prs": 3,
+    "outside_window_prs": 2,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 164,
-    "reused_prs": 127,
-    "events_checked_since": "2026-11-05T00:39:57Z",
+    "refreshed_prs": 156,
+    "reused_prs": 135,
+    "events_checked_since": "2026-11-07T03:24:28Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-13T19:13:53Z",
-    "newest_created_at": "2026-11-11T00:03:14Z"
+    "oldest_created_at": "2026-08-14T21:33:13Z",
+    "newest_created_at": "2026-11-12T08:16:40Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,18 +28,18 @@
       "full_name": "helm/helm"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-11T16:54:47.000Z",
+    "collected_at": "2026-11-12T21:15:45.000Z",
     "window": {
-      "start": "2026-08-13T16:54:47.000Z",
-      "end": "2026-11-11T16:54:47.000Z"
+      "start": "2026-08-14T21:15:45.000Z",
+      "end": "2026-11-12T21:15:45.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 163,
+      "bot_events": 167,
       "missing_event_actors": 0,
-      "self_events": 253
+      "self_events": 257
     },
     "creation_cohort": {
       "eligible_prs": 291,
@@ -53,30 +53,30 @@
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 193,
-        "prow_command_units": 100
+        "github_review_units": 195,
+        "prow_command_units": 96
       },
       "eligible_prs": 291,
       "covered_prs": 291,
       "coverage": "complete_for_sample",
-      "review_units": 193,
+      "review_units": 195,
       "participants": 24,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 116,
-            "prow_command_units": 100
+            "github_review_units": 112,
+            "prow_command_units": 96
           },
           "actor": {
             "id": 104113,
             "login": "TerryHowe",
             "type": "User"
           },
-          "review_units": 116
+          "review_units": 112
         },
         {
           "sources": {
-            "github_review_units": 12,
+            "github_review_units": 14,
             "prow_command_units": 0
           },
           "actor": {
@@ -84,11 +84,11 @@
             "login": "gjenkins8",
             "type": "User"
           },
-          "review_units": 12
+          "review_units": 14
         },
         {
           "sources": {
-            "github_review_units": 9,
+            "github_review_units": 11,
             "prow_command_units": 0
           },
           "actor": {
@@ -96,11 +96,11 @@
             "login": "banjoh",
             "type": "User"
           },
-          "review_units": 9
+          "review_units": 11
         },
         {
           "sources": {
-            "github_review_units": 8,
+            "github_review_units": 10,
             "prow_command_units": 0
           },
           "actor": {
@@ -108,7 +108,7 @@
             "login": "scottrigby",
             "type": "User"
           },
-          "review_units": 8
+          "review_units": 10
         },
         {
           "sources": {
@@ -356,7 +356,7 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.6010362694300518,
+        "value": 0.5743589743589743,
         "status": "available"
       }
     },
@@ -364,10 +364,10 @@
       "eligible_prs": 291,
       "covered_prs": 291,
       "coverage": "complete_for_sample",
-      "responded_prs": 179,
-      "unanswered_prs": 112,
+      "responded_prs": 177,
+      "unanswered_prs": 114,
       "median_ms": {
-        "value": 51556000,
+        "value": 51605000,
         "status": "available"
       }
     }
@@ -379,11 +379,11 @@
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 496,
+  "requests": 472,
   "rate": {
-    "remaining": 1239,
+    "remaining": 2580,
     "limit": 5000,
-    "resetAt": 1794418499000
+    "resetAt": 1794521161000
   },
   "failures": [],
   "complete": true

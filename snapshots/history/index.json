@@ -1,32 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-12T13:21:01Z",
+  "attempted_at": "2026-11-12T21:25:01Z",
   "entries": [
-    {
-      "repository": "cert-manager/cert-manager",
-      "status": "pending",
-      "reason": "budget",
-      "requests": 300,
-      "progress": {
-        "population": {
-          "inspected_prs": 2117,
-          "human_authored_prs": 1291,
-          "bot_authored_prs": 794,
-          "draft_prs": 31,
-          "missing_author_prs": 1,
-          "outside_window_prs": 0,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-08T11:32:32Z",
-          "end": "2026-11-06T11:32:32Z"
-        },
-        "enumerated_prs": 2117,
-        "eligible_prs": 2085,
-        "covered_prs": 2085,
-        "enumeration_complete": false
-      }
-    },
     {
       "repository": "argoproj/argo-cd",
       "status": "pending",
@@ -34,10 +9,10 @@
       "requests": 300,
       "progress": {
         "population": {
-          "inspected_prs": 13046,
-          "human_authored_prs": 7953,
-          "bot_authored_prs": 4624,
-          "draft_prs": 456,
+          "inspected_prs": 13149,
+          "human_authored_prs": 8050,
+          "bot_authored_prs": 4626,
+          "draft_prs": 460,
           "missing_author_prs": 9,
           "outside_window_prs": 0,
           "after_observation_prs": 4
@@ -46,9 +21,9 @@
           "start": "2026-07-16T15:12:29Z",
           "end": "2026-10-14T15:12:29Z"
         },
-        "enumerated_prs": 13046,
-        "eligible_prs": 12577,
-        "covered_prs": 12577,
+        "enumerated_prs": 13149,
+        "eligible_prs": 12676,
+        "covered_prs": 12676,
         "enumeration_complete": false
       }
     },
@@ -59,10 +34,10 @@
       "requests": 300,
       "progress": {
         "population": {
-          "inspected_prs": 2232,
-          "human_authored_prs": 1488,
+          "inspected_prs": 2334,
+          "human_authored_prs": 1587,
           "bot_authored_prs": 660,
-          "draft_prs": 81,
+          "draft_prs": 84,
           "missing_author_prs": 3,
           "outside_window_prs": 0,
           "after_observation_prs": 0
@@ -71,9 +46,9 @@
           "start": "2026-08-08T03:06:52Z",
           "end": "2026-11-06T03:06:52Z"
         },
-        "enumerated_prs": 2232,
-        "eligible_prs": 2148,
-        "covered_prs": 2148,
+        "enumerated_prs": 2334,
+        "eligible_prs": 2247,
+        "covered_prs": 2247,
         "enumeration_complete": false
       }
     },
@@ -84,9 +59,9 @@
       "requests": 300,
       "progress": {
         "population": {
-          "inspected_prs": 2183,
-          "human_authored_prs": 613,
-          "bot_authored_prs": 1555,
+          "inspected_prs": 2283,
+          "human_authored_prs": 675,
+          "bot_authored_prs": 1593,
           "draft_prs": 15,
           "missing_author_prs": 0,
           "outside_window_prs": 0,
@@ -96,23 +71,23 @@
           "start": "2026-08-08T03:06:52Z",
           "end": "2026-11-06T03:06:52Z"
         },
-        "enumerated_prs": 2183,
-        "eligible_prs": 2168,
-        "covered_prs": 2168,
+        "enumerated_prs": 2283,
+        "eligible_prs": 2268,
+        "covered_prs": 2268,
         "enumeration_complete": false
       }
     },
     {
       "repository": "ossf/scorecard",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 255,
       "progress": {
         "population": {
-          "inspected_prs": 525,
-          "human_authored_prs": 267,
-          "bot_authored_prs": 229,
-          "draft_prs": 29,
+          "inspected_prs": 613,
+          "human_authored_prs": 312,
+          "bot_authored_prs": 268,
+          "draft_prs": 33,
           "missing_author_prs": 0,
           "outside_window_prs": 0,
           "after_observation_prs": 0
@@ -121,17 +96,17 @@
           "start": "2026-08-13T00:58:44Z",
           "end": "2026-11-11T00:58:44Z"
         },
-        "enumerated_prs": 525,
-        "eligible_prs": 496,
-        "covered_prs": 496,
+        "enumerated_prs": 613,
+        "eligible_prs": 580,
+        "covered_prs": 580,
         "enumeration_complete": false
       }
     },
     {
       "repository": "ossf/allstar",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 471,
@@ -155,8 +130,8 @@
     {
       "repository": "sigstore/cosign",
       "status": "pending",
-      "reason": "budget",
-      "requests": 300,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 719,
@@ -180,8 +155,8 @@
     {
       "repository": "kubernetes/kubernetes",
       "status": "pending",
-      "reason": "cancelled",
-      "requests": 238,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 12744,
@@ -204,9 +179,9 @@
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "pending",
-      "reason": "cancelled",
-      "requests": 0,
+      "status": "unavailable",
+      "reason": "invalid_response",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 7207,
@@ -230,8 +205,8 @@
     {
       "repository": "helm/helm",
       "status": "pending",
-      "reason": "cancelled",
-      "requests": 0,
+      "reason": "rate_limit",
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 4316,
@@ -249,6 +224,31 @@
         "enumerated_prs": 4316,
         "eligible_prs": 4233,
         "covered_prs": 4233,
+        "enumeration_complete": false
+      }
+    },
+    {
+      "repository": "cert-manager/cert-manager",
+      "status": "pending",
+      "reason": "rate_limit",
+      "requests": 1,
+      "progress": {
+        "population": {
+          "inspected_prs": 2117,
+          "human_authored_prs": 1291,
+          "bot_authored_prs": 794,
+          "draft_prs": 31,
+          "missing_author_prs": 1,
+          "outside_window_prs": 0,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-08T11:32:32Z",
+          "end": "2026-11-06T11:32:32Z"
+        },
+        "enumerated_prs": 2117,
+        "eligible_prs": 2085,
+        "covered_prs": 2085,
         "enumeration_complete": false
       }
     }

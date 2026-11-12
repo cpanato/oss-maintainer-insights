@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2022-03-17T21:30:23Z",
+    "id": 810596733,
+    "number": 8039,
+    "user": {
+      "id": 19733683,
+      "login": "snyk-bot",
+      "type": "User"
+    },
+    "created_at": "2021-12-27T20:55:57Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2022-03-17T20:19:53Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "8039": {
+        "id": 810596733,
+        "updated_at": "2022-03-17T21:30:23Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 120896210,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "argoproj/argo-cd",
+    "pages": {
+      "/repositories/120896210/issues/8039/comments?per_page=100": {
+        "etag": "W/\"1550ab3279a75e81df28035e3a84bd27e54efb6da87abff660067065356afea5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1001761809,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-12-27T21:09:05Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/8039/comments?per_page=100": {
+        "etag": "\"560e74f83d2368e921adbf343046e17c9e5307876222a89306c03d9ac6128f97\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/8039/reviews?per_page=100": {
+        "etag": "W/\"f7a4b92f3e73ac102dacc43831fe92d63b8a50c6c3701618c211280cedd68269\"",
+        "next": "",
+        "value": [
+          {
+            "id": 843090915,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "submitted_at": "2022-01-03T22:49:39Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 913637389,
+            "user": {
+              "id": 39732895,
+              "login": "pasha-codefresh",
+              "type": "User"
+            },
+            "submitted_at": "2022-03-17T20:02:36Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 810596733,
+    "author": {
+      "id": 19733683,
+      "login": "snyk-bot",
+      "type": "User"
+    },
+    "created_at": "2021-12-27T20:55:57Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "843090915",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2022-01-03T22:49:39Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "913637389",
+        "actor": {
+          "id": 39732895,
+          "login": "pasha-codefresh",
+          "type": "User"
+        },
+        "occurred_at": "2022-03-17T20:02:36Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1001761809",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-12-27T21:09:05Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
