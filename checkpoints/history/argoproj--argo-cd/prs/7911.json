@@ -16,6 +16,14 @@
     "merged_at": "2021-12-13T16:25:47Z"
   },
   "state": {
+    "tracked_prs": {
+      "7911": {
+        "id": 800722237,
+        "updated_at": "2021-12-13T16:25:50Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -46,6 +54,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/7911/comments?per_page=100": {
+        "etag": "\"68eabc2e1ee8f20fcf82237cdb4e96d2632c903cf2340852b26ab5b9d7942185\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/7911/reviews?per_page=100": {
         "etag": "W/\"232dcb5532cbe6bbb4e43997eba66e705845675a16c4db92a8b643ae21f57748\"",
         "next": "",
@@ -75,18 +88,62 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 800722237,
+    "author": {
+      "id": 426437,
+      "login": "alexmt",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-12-12T19:48:54Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "829668303",
+        "actor": {
+          "id": 39732895,
+          "login": "pasha-codefresh",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-12T20:49:57Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "830082495",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-13T10:57:31Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "991961284",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-12-12T20:02:01Z"
+      },
+      {
+        "id": "991968049",
+        "actor": {
+          "id": 39732895,
+          "login": "pasha-codefresh",
+          "type": "User"
+        },
+        "occurred_at": "2021-12-12T20:50:48Z"
+      }
+    ],
+    "review_comments": []
   }
 }
