@@ -16,12 +16,40 @@
     "merged_at": "2021-10-08T18:49:00Z"
   },
   "state": {
+    "tracked_prs": {
+      "7392": {
+        "id": 753358798,
+        "updated_at": "2021-10-08T18:49:01Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/7392/comments?per_page=100": {
+        "etag": "W/\"3c7891e6d9314ddb14fda56bd283a66cae347c34fb2cf5154e565bcbcc5f5390\"",
+        "next": "",
+        "value": [
+          {
+            "id": 937978757,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-10-07T16:54:12Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/7392/comments?per_page=100": {
+        "etag": "\"94347eb51fc6510cadcee209c771bf53916b11f3f065bc1c7a5dd86a8335c57d\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/7392/reviews?per_page=100": {
         "etag": "W/\"8c3bb02e8e3f477b10f841d1480a61c029a864dd2089b7d2f09eae684fc248ce\"",
         "next": "",
@@ -41,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 753358798,
+    "author": {
+      "id": 21128732,
+      "login": "chetan-rns",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-10-07T16:39:38Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "775318533",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-10-08T18:48:54Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "937978757",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-10-07T16:54:12Z"
+      }
+    ],
+    "review_comments": []
   }
 }
