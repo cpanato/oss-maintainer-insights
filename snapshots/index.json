@@ -1,32 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-13T17:06:53Z",
+  "attempted_at": "2026-11-13T17:44:57Z",
   "entries": [
-    {
-      "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
-      "progress": {
-        "population": {
-          "inspected_prs": 2300,
-          "human_authored_prs": 2117,
-          "bot_authored_prs": 0,
-          "draft_prs": 91,
-          "missing_author_prs": 0,
-          "outside_window_prs": 92,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-15T09:58:00.000Z",
-          "end": "2026-11-13T09:58:00.000Z"
-        },
-        "enumerated_prs": 2300,
-        "eligible_prs": 2117,
-        "covered_prs": 1928,
-        "enumeration_complete": true
-      }
-    },
     {
       "repository": "prometheus/prometheus",
       "status": "fresh",
@@ -71,6 +46,31 @@
       "repository": "sigstore/cosign",
       "status": "fresh",
       "requests": 0
+    },
+    {
+      "repository": "kubernetes/kubernetes",
+      "status": "pending",
+      "reason": "partial",
+      "requests": 1,
+      "progress": {
+        "population": {
+          "inspected_prs": 2300,
+          "human_authored_prs": 2117,
+          "bot_authored_prs": 0,
+          "draft_prs": 91,
+          "missing_author_prs": 0,
+          "outside_window_prs": 92,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-15T09:58:00.000Z",
+          "end": "2026-11-13T09:58:00.000Z"
+        },
+        "enumerated_prs": 2300,
+        "eligible_prs": 2117,
+        "covered_prs": 1928,
+        "enumeration_complete": true
+      }
     }
   ]
 }

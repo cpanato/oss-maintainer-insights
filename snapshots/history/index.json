@@ -1,37 +1,12 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-13T17:11:22Z",
+  "attempted_at": "2026-11-13T17:44:58Z",
   "entries": [
-    {
-      "repository": "ossf/scorecard",
-      "status": "pending",
-      "reason": "budget",
-      "requests": 300,
-      "progress": {
-        "population": {
-          "inspected_prs": 911,
-          "human_authored_prs": 395,
-          "bot_authored_prs": 483,
-          "draft_prs": 33,
-          "missing_author_prs": 0,
-          "outside_window_prs": 0,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-13T00:58:44Z",
-          "end": "2026-11-11T00:58:44Z"
-        },
-        "enumerated_prs": 911,
-        "eligible_prs": 878,
-        "covered_prs": 878,
-        "enumeration_complete": false
-      }
-    },
     {
       "repository": "ossf/allstar",
       "status": "pending",
       "reason": "rate_limit",
-      "requests": 125,
+      "requests": 1,
       "progress": {
         "population": {
           "inspected_prs": 71,
@@ -249,6 +224,31 @@
         "enumerated_prs": 2484,
         "eligible_prs": 2466,
         "covered_prs": 2466,
+        "enumeration_complete": false
+      }
+    },
+    {
+      "repository": "ossf/scorecard",
+      "status": "pending",
+      "reason": "rate_limit",
+      "requests": 1,
+      "progress": {
+        "population": {
+          "inspected_prs": 911,
+          "human_authored_prs": 395,
+          "bot_authored_prs": 483,
+          "draft_prs": 33,
+          "missing_author_prs": 0,
+          "outside_window_prs": 0,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-13T00:58:44Z",
+          "end": "2026-11-11T00:58:44Z"
+        },
+        "enumerated_prs": 911,
+        "eligible_prs": 878,
+        "covered_prs": 878,
         "enumeration_complete": false
       }
     }
