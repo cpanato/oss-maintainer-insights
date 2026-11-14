@@ -1,0 +1,297 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-06-04T00:53:06Z",
+    "id": 1842878272,
+    "number": 124563,
+    "user": {
+      "id": 3648838,
+      "login": "atiratree",
+      "type": "User"
+    },
+    "created_at": "2024-04-26T13:36:17Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-06-04T00:53:05Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "124563": {
+        "id": 1842878272,
+        "updated_at": "2024-06-04T00:53:06Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/124563/comments?per_page=100": {
+        "etag": "W/\"fe5d283445db60ff9918d3586e6332ff5d8636bfa00a18ec64812fc1e355c088\"",
+        "next": "",
+        "value": [
+          {
+            "id": 2079419411,
+            "user": {
+              "id": 3648838,
+              "login": "atiratree",
+              "type": "User"
+            },
+            "created_at": "2024-04-26T13:40:09Z"
+          },
+          {
+            "id": 2079560446,
+            "user": {
+              "id": 3648838,
+              "login": "atiratree",
+              "type": "User"
+            },
+            "created_at": "2024-04-26T14:57:33Z"
+          },
+          {
+            "id": 2107059235,
+            "user": {
+              "id": 3648838,
+              "login": "atiratree",
+              "type": "User"
+            },
+            "created_at": "2024-05-13T09:15:35Z"
+          },
+          {
+            "id": 2107498576,
+            "user": {
+              "id": 3648838,
+              "login": "atiratree",
+              "type": "User"
+            },
+            "created_at": "2024-05-13T12:52:28Z"
+          },
+          {
+            "id": 2109664013,
+            "user": {
+              "id": 3648838,
+              "login": "atiratree",
+              "type": "User"
+            },
+            "created_at": "2024-05-14T09:03:37Z"
+          },
+          {
+            "id": 2109673191,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-05-14T09:06:43Z"
+          },
+          {
+            "id": 2109674083,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-05-14T09:07:07Z"
+          },
+          {
+            "id": 2109694189,
+            "user": {
+              "id": 3648838,
+              "login": "atiratree",
+              "type": "User"
+            },
+            "created_at": "2024-05-14T09:16:46Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/124563/comments?per_page=100": {
+        "etag": "\"b6ba42614339d01561f7d59f692c9ea6a007e115c91e07b61260410c42af4fbe\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/124563/reviews?per_page=100": {
+        "etag": "W/\"9db85bd6db32333f65288d20ada99c46595584805652ac7841451dfecdf0dcb8\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 2025506927,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "submitted_at": "2024-04-26T17:14:11Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 2054757201,
+            "user": {
+              "id": 576341,
+              "login": "soltysh",
+              "type": "User"
+            },
+            "submitted_at": "2024-05-14T09:06:37Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 2095036344,
+            "user": {
+              "id": 2050904,
+              "login": "Verolop",
+              "type": "User"
+            },
+            "submitted_at": "2024-06-03T23:40:24Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1842878272,
+    "author": {
+      "id": 3648838,
+      "login": "atiratree",
+      "type": "User"
+    },
+    "created_at": "2024-04-26T13:36:17Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "2025506927",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-26T17:14:11Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2054757201",
+        "actor": {
+          "id": 576341,
+          "login": "soltysh",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-14T09:06:37Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2095036344",
+        "actor": {
+          "id": 2050904,
+          "login": "Verolop",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-03T23:40:24Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2079419411",
+        "actor": {
+          "id": 3648838,
+          "login": "atiratree",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-26T13:40:09Z"
+      },
+      {
+        "id": "2079560446",
+        "actor": {
+          "id": 3648838,
+          "login": "atiratree",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-26T14:57:33Z"
+      },
+      {
+        "id": "2107059235",
+        "actor": {
+          "id": 3648838,
+          "login": "atiratree",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-13T09:15:35Z"
+      },
+      {
+        "id": "2107498576",
+        "actor": {
+          "id": 3648838,
+          "login": "atiratree",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-13T12:52:28Z"
+      },
+      {
+        "id": "2109664013",
+        "actor": {
+          "id": 3648838,
+          "login": "atiratree",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-14T09:03:37Z"
+      },
+      {
+        "id": "2109673191",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-14T09:06:43Z"
+      },
+      {
+        "id": "2109674083",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-14T09:07:07Z"
+      },
+      {
+        "id": "2109694189",
+        "actor": {
+          "id": 3648838,
+          "login": "atiratree",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-14T09:16:46Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

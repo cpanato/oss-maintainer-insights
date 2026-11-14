@@ -16,6 +16,14 @@
     "merged_at": "2024-05-29T12:10:30Z"
   },
   "state": {
+    "tracked_prs": {
+      "124688": {
+        "id": 1853720455,
+        "updated_at": "2024-05-29T12:10:31Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -166,6 +174,75 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/124688/comments?per_page=100": {
+        "etag": "W/\"45da75e9ea890bc953f0b4a53590fa06f610743a5fab0cd8f0bad813fe6d8134\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1589422918,
+            "user": {
+              "id": 331852,
+              "login": "neolit123",
+              "type": "User"
+            },
+            "created_at": "2024-05-03T16:25:04Z"
+          },
+          {
+            "id": 1589423765,
+            "user": {
+              "id": 331852,
+              "login": "neolit123",
+              "type": "User"
+            },
+            "created_at": "2024-05-03T16:26:00Z"
+          },
+          {
+            "id": 1616084280,
+            "user": {
+              "id": 9354727,
+              "login": "SataQiu",
+              "type": "User"
+            },
+            "created_at": "2024-05-27T13:52:48Z"
+          },
+          {
+            "id": 1616098633,
+            "user": {
+              "id": 9354727,
+              "login": "SataQiu",
+              "type": "User"
+            },
+            "created_at": "2024-05-27T14:05:13Z"
+          },
+          {
+            "id": 1616125132,
+            "user": {
+              "id": 9354727,
+              "login": "SataQiu",
+              "type": "User"
+            },
+            "created_at": "2024-05-27T14:25:58Z"
+          },
+          {
+            "id": 1618616158,
+            "user": {
+              "id": 331852,
+              "login": "neolit123",
+              "type": "User"
+            },
+            "created_at": "2024-05-29T10:05:20Z"
+          },
+          {
+            "id": 1618618689,
+            "user": {
+              "id": 331852,
+              "login": "neolit123",
+              "type": "User"
+            },
+            "created_at": "2024-05-29T10:07:06Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/124688/reviews?per_page=100": {
         "etag": "W/\"d84a3eafad3656136f542fe7a5b8ea192cd07926ffd32ebef617baf6991db09e\"",
         "next": "",
@@ -229,18 +306,280 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1853720455,
+    "author": {
+      "id": 331852,
+      "login": "neolit123",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-05-03T16:08:29Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "2038531097",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-03T16:30:51Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2080956207",
+        "actor": {
+          "id": 9354727,
+          "login": "SataQiu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-27T14:27:10Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "2084959455",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:05:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "2084965467",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:07:06Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "2084972871",
+        "actor": {
+          "id": 9354727,
+          "login": "SataQiu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:10:01Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "2093312257",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-03T16:08:49Z"
+      },
+      {
+        "id": "2114102517",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-16T06:05:41Z"
+      },
+      {
+        "id": "2114517271",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-16T08:41:24Z"
+      },
+      {
+        "id": "2114524545",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-16T08:43:18Z"
+      },
+      {
+        "id": "2114570662",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-16T08:55:23Z"
+      },
+      {
+        "id": "2122351560",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-21T10:50:05Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "2126034667",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-23T01:36:13Z"
+      },
+      {
+        "id": "2126034752",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-23T01:36:20Z"
+      },
+      {
+        "id": "2126035031",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-23T01:36:44Z"
+      },
+      {
+        "id": "2132810658",
+        "actor": {
+          "id": 28390961,
+          "login": "carlory",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-27T07:21:03Z"
+      },
+      {
+        "id": "2132959871",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-27T08:37:36Z"
+      },
+      {
+        "id": "2137044324",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:08:22Z"
+      },
+      {
+        "id": "2137047646",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:10:07Z"
+      },
+      {
+        "id": "2137048293",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:10:28Z"
+      },
+      {
+        "id": "2137057823",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:15:35Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1589422918",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-03T16:25:04Z"
+      },
+      {
+        "id": "1589423765",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-03T16:26:00Z"
+      },
+      {
+        "id": "1616084280",
+        "actor": {
+          "id": 9354727,
+          "login": "SataQiu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-27T13:52:48Z"
+      },
+      {
+        "id": "1616098633",
+        "actor": {
+          "id": 9354727,
+          "login": "SataQiu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-27T14:05:13Z"
+      },
+      {
+        "id": "1616125132",
+        "actor": {
+          "id": 9354727,
+          "login": "SataQiu",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-27T14:25:58Z"
+      },
+      {
+        "id": "1618616158",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:05:20Z"
+      },
+      {
+        "id": "1618618689",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-05-29T10:07:06Z"
+      }
+    ]
   }
 }

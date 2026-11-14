@@ -16,26 +16,246 @@
     "merged_at": "2021-08-16T16:38:37Z"
   },
   "state": {
+    "tracked_prs": {
+      "6943": {
+        "id": 707472953,
+        "updated_at": "2021-08-16T16:38:38Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/6943/comments?per_page=100": {
+        "etag": "W/\"054c1f533fef562390ef6411f7246f75f7df945ec53e773309839652e6aa8262\"",
+        "next": "",
+        "value": [
+          {
+            "id": 899409909,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-08-16T10:43:01Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/6943/comments?per_page=100": {
+        "etag": "W/\"09bedc43a99879f790d3862e1363eee3091f486eb268de27abb6ae4e88c5605f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 688749813,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "created_at": "2021-08-13T19:58:35Z"
+          },
+          {
+            "id": 688754137,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "created_at": "2021-08-13T20:08:18Z"
+          },
+          {
+            "id": 688758050,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "created_at": "2021-08-13T20:16:23Z"
+          },
+          {
+            "id": 688758381,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "created_at": "2021-08-13T20:17:04Z"
+          },
+          {
+            "id": 688759352,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "created_at": "2021-08-13T20:19:14Z"
+          },
+          {
+            "id": 688784815,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "created_at": "2021-08-13T21:15:59Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/6943/reviews?per_page=100": {
+        "etag": "W/\"03c31f6b34a3065845cda1398680307988d19caae477881b839951748065f8fe\"",
+        "next": "",
+        "value": [
+          {
+            "id": 729931186,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "submitted_at": "2021-08-13T21:08:04Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 729975442,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "submitted_at": "2021-08-13T21:16:02Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 730920088,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "submitted_at": "2021-08-16T16:38:09Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 707472953,
+    "author": {
+      "id": 39732895,
+      "login": "pasha-codefresh",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-08-10T16:36:55Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "729931186",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-13T21:08:04Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "729975442",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-13T21:16:02Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "730920088",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-16T16:38:09Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "899409909",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-08-16T10:43:01Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "688749813",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-13T19:58:35Z"
+      },
+      {
+        "id": "688754137",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-13T20:08:18Z"
+      },
+      {
+        "id": "688758050",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-13T20:16:23Z"
+      },
+      {
+        "id": "688758381",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-13T20:17:04Z"
+      },
+      {
+        "id": "688759352",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-13T20:19:14Z"
+      },
+      {
+        "id": "688784815",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-08-13T21:15:59Z"
+      }
+    ]
   }
 }
