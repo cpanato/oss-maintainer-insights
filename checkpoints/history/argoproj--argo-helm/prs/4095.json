@@ -1,8 +1,8 @@
 {
-  "generation": 9,
-  "observed_at": "2026-11-06T03:06:52Z",
+  "generation": 10,
+  "observed_at": "2026-11-14T19:32:54Z",
   "pr": {
-    "updated_at": "2026-10-29T08:50:00Z",
+    "updated_at": "2026-11-08T17:48:22Z",
     "id": 4572031006,
     "number": 4095,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-09-18T18:47:54Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-08T17:48:21Z"
   },
   "state": {
     "tracked_prs": {
       "4095": {
         "id": 4572031006,
-        "updated_at": "2026-10-29T08:50:00Z",
-        "checked_at": "2026-11-06T03:06:52Z",
-        "state": "open"
+        "updated_at": "2026-11-08T17:48:22Z",
+        "checked_at": "2026-11-14T19:32:54Z",
+        "state": "closed"
       }
     },
     "repository_id": 106481151,
@@ -31,17 +31,36 @@
     "repository": "argoproj/argo-helm",
     "pages": {
       "/repositories/106481151/issues/4095/comments?per_page=100": {
-        "etag": "\"8a44c53ef3405829e38da899f7fdcd71e5801532efa1aaf4969b1d1e08fa8da8\"",
+        "etag": "W/\"c66faeff5e0b37dddba77cfe5947ea55b6c1599be16fac0af6311673d8a4ad7a\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6724884919,
+            "user": {
+              "id": 122703392,
+              "login": "PhuocOng",
+              "type": "User"
+            },
+            "created_at": "2026-11-08T17:45:47Z"
+          },
+          {
+            "id": 6724912566,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "created_at": "2026-11-08T17:48:01Z"
+          }
+        ]
       },
       "/repositories/106481151/pulls/4095/comments?per_page=100": {
-        "etag": "\"8a44c53ef3405829e38da899f7fdcd71e5801532efa1aaf4969b1d1e08fa8da8\"",
+        "etag": "\"cbd29f23310757cdbc19872f5d9fe15ab7fc3994de673d92ebdab4b8a320771e\"",
         "next": "",
         "value": []
       },
       "/repositories/106481151/pulls/4095/reviews?per_page=100": {
-        "etag": "W/\"d7b9f54d83b69245849f5bfbefbb46e693c847fffda3dc07eddcb2d6056bd703\"",
+        "etag": "W/\"d55271e5964e0600f1b7f2b17033167aae45f930757bf7b7103a3e2675c4c6bc\"",
         "next": "",
         "value": [
           {
@@ -93,6 +112,16 @@
             },
             "submitted_at": "2026-10-29T08:49:59Z",
             "state": "APPROVED"
+          },
+          {
+            "id": 5818942832,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-08T17:47:13Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -107,7 +136,7 @@
     },
     "created_at": "2026-09-18T18:47:54Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -163,9 +192,38 @@
         },
         "occurred_at": "2026-10-29T08:49:59Z",
         "state": "APPROVED"
+      },
+      {
+        "id": "5818942832",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-08T17:47:13Z",
+        "state": "APPROVED"
       }
     ],
-    "issue_comments": [],
+    "issue_comments": [
+      {
+        "id": "6724884919",
+        "actor": {
+          "id": 122703392,
+          "login": "PhuocOng",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-08T17:45:47Z"
+      },
+      {
+        "id": "6724912566",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-08T17:48:01Z"
+      }
+    ],
     "review_comments": []
   }
 }
