@@ -1,8 +1,8 @@
 {
-  "generation": 8,
-  "observed_at": "2026-10-29T19:13:52Z",
+  "generation": 10,
+  "observed_at": "2026-11-14T19:32:54Z",
   "pr": {
-    "updated_at": "2026-10-29T11:51:15Z",
+    "updated_at": "2026-11-08T17:50:47Z",
     "id": 4961384528,
     "number": 4162,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-22T02:54:57Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-08T17:50:47Z"
   },
   "state": {
     "tracked_prs": {
       "4162": {
         "id": 4961384528,
-        "updated_at": "2026-10-29T11:51:15Z",
-        "checked_at": "2026-10-29T19:13:52Z",
-        "state": "open"
+        "updated_at": "2026-11-08T17:50:47Z",
+        "checked_at": "2026-11-14T19:32:54Z",
+        "state": "closed"
       }
     },
     "repository_id": 106481151,
@@ -31,7 +31,7 @@
     "repository": "argoproj/argo-helm",
     "pages": {
       "/repositories/106481151/issues/4162/comments?per_page=100": {
-        "etag": "W/\"b4f3fdd4c05c73d3b2167df0f86267505d17a7d72586bfee74637cf2df12bb7d\"",
+        "etag": "W/\"fceb038ac9cd74246884730cf3e4b40b4027de15248b4e8902a717c8517b4515\"",
         "next": "",
         "value": [
           {
@@ -78,11 +78,20 @@
               "type": "User"
             },
             "created_at": "2026-10-29T11:51:15Z"
+          },
+          {
+            "id": 6648605017,
+            "user": {
+              "id": 33663870,
+              "login": "DrFaust92",
+              "type": "User"
+            },
+            "created_at": "2026-11-05T03:08:57Z"
           }
         ]
       },
       "/repositories/106481151/pulls/4162/comments?per_page=100": {
-        "etag": "W/\"68dbde66e1666a76127eea05fea6cbd777ecf726e9bb1ba86206073cc86dcb60\"",
+        "etag": "W/\"87850ff2936a17809c3a620e4542e1f9dcf6ae5e6f780a4a45ce98995cfcb471\"",
         "next": "",
         "value": [
           {
@@ -106,7 +115,7 @@
         ]
       },
       "/repositories/106481151/pulls/4162/reviews?per_page=100": {
-        "etag": "W/\"353de305b8f879bef75893f5a7cc01cf9efc3e0374c12348845042cc49f34b73\"",
+        "etag": "W/\"a0a32d7d6c502091a9a5245e75708ab9a4511a752926326626a205bf547922f7\"",
         "next": "",
         "value": [
           {
@@ -138,6 +147,26 @@
             },
             "submitted_at": "2026-10-29T01:08:11Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5710012520,
+            "user": {
+              "id": 45351296,
+              "login": "tico24",
+              "type": "User"
+            },
+            "submitted_at": "2026-10-30T08:50:11Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 5818963912,
+            "user": {
+              "id": 35014,
+              "login": "jmeridth",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-08T17:50:36Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -152,7 +181,7 @@
     },
     "created_at": "2026-10-22T02:54:57Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -188,6 +217,26 @@
         },
         "occurred_at": "2026-10-29T01:08:11Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5710012520",
+        "actor": {
+          "id": 45351296,
+          "login": "tico24",
+          "type": "User"
+        },
+        "occurred_at": "2026-10-30T08:50:11Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "5818963912",
+        "actor": {
+          "id": 35014,
+          "login": "jmeridth",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-08T17:50:36Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
@@ -235,6 +284,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-29T11:51:15Z"
+      },
+      {
+        "id": "6648605017",
+        "actor": {
+          "id": 33663870,
+          "login": "DrFaust92",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-05T03:08:57Z"
       }
     ],
     "review_comments": [
