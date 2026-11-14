@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-14T07:00:05Z",
+  "attempted_at": "2026-11-14T14:30:15Z",
   "entries": [
-    {
-      "repository": "argoproj/argo-cd",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "argoproj/argo-helm",
       "status": "fresh",
@@ -34,32 +29,33 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "fresh",
-      "requests": 0
-    },
-    {
-      "repository": "prometheus/prometheus",
-      "status": "updated",
-      "requests": 35,
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
       "progress": {
         "population": {
-          "inspected_prs": 900,
-          "human_authored_prs": 627,
-          "bot_authored_prs": 214,
-          "draft_prs": 51,
+          "inspected_prs": 2300,
+          "human_authored_prs": 2138,
+          "bot_authored_prs": 0,
+          "draft_prs": 94,
           "missing_author_prs": 0,
-          "outside_window_prs": 8,
+          "outside_window_prs": 68,
           "after_observation_prs": 0
         },
         "window": {
-          "start": "2026-08-16T00:00:58.000Z",
-          "end": "2026-11-14T00:00:58.000Z"
+          "start": "2026-08-16T14:30:15.000Z",
+          "end": "2026-11-14T14:30:15.000Z"
         },
-        "enumerated_prs": 900,
-        "eligible_prs": 841,
-        "covered_prs": 841,
+        "enumerated_prs": 2300,
+        "eligible_prs": 2138,
+        "covered_prs": 896,
         "enumeration_complete": true
       }
+    },
+    {
+      "repository": "prometheus/prometheus",
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "helm/helm",
@@ -68,6 +64,11 @@
     },
     {
       "repository": "cert-manager/cert-manager",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "argoproj/argo-cd",
       "status": "fresh",
       "requests": 0
     }
