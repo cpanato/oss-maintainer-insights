@@ -16,12 +16,40 @@
     "merged_at": "2021-03-30T17:42:00Z"
   },
   "state": {
+    "tracked_prs": {
+      "5904": {
+        "id": 603515532,
+        "updated_at": "2021-06-25T18:38:09Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/5904/comments?per_page=100": {
+        "etag": "W/\"6b57e8f912113af4858bca2789a7ddc29d14883ee2f41a01bfbcc58fabf59c09\"",
+        "next": "",
+        "value": [
+          {
+            "id": 810047502,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2021-03-30T08:59:37Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/5904/comments?per_page=100": {
+        "etag": "\"809012f06e32e658adff73b55cf3721e190c746c64015e4aaf9c82379860078e\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/5904/reviews?per_page=100": {
         "etag": "W/\"6949db7e8d25fcb7a034823ec5db9c7e913407c8e6e2fb69747320d9ca55bd76\"",
         "next": "",
@@ -51,18 +79,53 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 603515532,
+    "author": {
+      "id": 1663690,
+      "login": "TrueBrain",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-03-30T08:49:41Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "624221105",
+        "actor": {
+          "id": 12464768,
+          "login": "alinbalutoiu",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-30T12:55:30Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "624538545",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-30T17:41:52Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "810047502",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2021-03-30T08:59:37Z"
+      }
+    ],
+    "review_comments": []
   }
 }
