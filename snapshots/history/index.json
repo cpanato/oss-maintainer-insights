@@ -1,42 +1,17 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-15T03:24:11Z",
+  "attempted_at": "2026-11-15T11:45:30Z",
   "entries": [
-    {
-      "repository": "argoproj/argo-helm",
-      "status": "pending",
-      "reason": "rate_limit",
-      "requests": 1,
-      "progress": {
-        "population": {
-          "inspected_prs": 224,
-          "human_authored_prs": 105,
-          "bot_authored_prs": 93,
-          "draft_prs": 26,
-          "missing_author_prs": 0,
-          "outside_window_prs": 0,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-16T19:32:54Z",
-          "end": "2026-11-14T19:32:54Z"
-        },
-        "enumerated_prs": 224,
-        "eligible_prs": 198,
-        "covered_prs": 198,
-        "enumeration_complete": false
-      }
-    },
     {
       "repository": "sigstore/rekor",
       "status": "pending",
-      "reason": "rate_limit",
-      "requests": 1,
+      "reason": "budget",
+      "requests": 300,
       "progress": {
         "population": {
-          "inspected_prs": 398,
-          "human_authored_prs": 110,
-          "bot_authored_prs": 287,
+          "inspected_prs": 497,
+          "human_authored_prs": 127,
+          "bot_authored_prs": 369,
           "draft_prs": 1,
           "missing_author_prs": 0,
           "outside_window_prs": 0,
@@ -46,23 +21,23 @@
           "start": "2026-08-16T07:00:17Z",
           "end": "2026-11-14T07:00:17Z"
         },
-        "enumerated_prs": 398,
-        "eligible_prs": 397,
-        "covered_prs": 397,
+        "enumerated_prs": 497,
+        "eligible_prs": 496,
+        "covered_prs": 496,
         "enumeration_complete": false
       }
     },
     {
       "repository": "ossf/scorecard",
       "status": "pending",
-      "reason": "rate_limit",
-      "requests": 1,
+      "reason": "budget",
+      "requests": 300,
       "progress": {
         "population": {
-          "inspected_prs": 1511,
-          "human_authored_prs": 652,
-          "bot_authored_prs": 822,
-          "draft_prs": 37,
+          "inspected_prs": 1612,
+          "human_authored_prs": 702,
+          "bot_authored_prs": 871,
+          "draft_prs": 39,
           "missing_author_prs": 0,
           "outside_window_prs": 0,
           "after_observation_prs": 0
@@ -71,9 +46,9 @@
           "start": "2026-08-13T00:58:44Z",
           "end": "2026-11-11T00:58:44Z"
         },
-        "enumerated_prs": 1511,
-        "eligible_prs": 1474,
-        "covered_prs": 1474,
+        "enumerated_prs": 1612,
+        "eligible_prs": 1573,
+        "covered_prs": 1573,
         "enumeration_complete": false
       }
     },
@@ -86,13 +61,13 @@
       "repository": "sigstore/cosign",
       "status": "pending",
       "reason": "rate_limit",
-      "requests": 1,
+      "requests": 291,
       "progress": {
         "population": {
-          "inspected_prs": 1429,
-          "human_authored_prs": 581,
-          "bot_authored_prs": 809,
-          "draft_prs": 38,
+          "inspected_prs": 1526,
+          "human_authored_prs": 615,
+          "bot_authored_prs": 871,
+          "draft_prs": 39,
           "missing_author_prs": 1,
           "outside_window_prs": 0,
           "after_observation_prs": 0
@@ -101,9 +76,9 @@
           "start": "2026-08-12T13:16:54Z",
           "end": "2026-11-10T13:16:54Z"
         },
-        "enumerated_prs": 1429,
-        "eligible_prs": 1390,
-        "covered_prs": 1390,
+        "enumerated_prs": 1526,
+        "eligible_prs": 1486,
+        "covered_prs": 1486,
         "enumeration_complete": false
       }
     },
@@ -229,6 +204,31 @@
         "enumerated_prs": 13974,
         "eligible_prs": 13471,
         "covered_prs": 13471,
+        "enumeration_complete": false
+      }
+    },
+    {
+      "repository": "argoproj/argo-helm",
+      "status": "pending",
+      "reason": "rate_limit",
+      "requests": 1,
+      "progress": {
+        "population": {
+          "inspected_prs": 224,
+          "human_authored_prs": 105,
+          "bot_authored_prs": 93,
+          "draft_prs": 26,
+          "missing_author_prs": 0,
+          "outside_window_prs": 0,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-16T19:32:54Z",
+          "end": "2026-11-14T19:32:54Z"
+        },
+        "enumerated_prs": 224,
+        "eligible_prs": 198,
+        "covered_prs": 198,
         "enumeration_complete": false
       }
     }
