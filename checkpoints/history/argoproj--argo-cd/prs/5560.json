@@ -1,0 +1,131 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2021-03-03T22:39:48Z",
+    "id": 576686119,
+    "number": 5560,
+    "user": {
+      "id": 3942683,
+      "login": "jannfis",
+      "type": "User"
+    },
+    "created_at": "2021-02-19T20:02:47Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2021-03-03T22:39:47Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "5560": {
+        "id": 576686119,
+        "updated_at": "2021-03-03T22:39:48Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 120896210,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "argoproj/argo-cd",
+    "pages": {
+      "/repositories/120896210/issues/5560/comments?per_page=100": {
+        "etag": "\"7439697fab8a7eafc845b34f25797699d5c1ef9cc7a84487d0d25c98c82febd4\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/5560/comments?per_page=100": {
+        "etag": "W/\"aaa6507276048418d04641130cc25720053397ca0331f18e6e21cbe4e094b524\"",
+        "next": "",
+        "value": [
+          {
+            "id": 579444380,
+            "user": {
+              "id": 3942683,
+              "login": "jannfis",
+              "type": "User"
+            },
+            "created_at": "2021-02-19T20:04:20Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/5560/reviews?per_page=100": {
+        "etag": "W/\"68544fcf10b2b377feab9b127bf67851486358e5552d3833a8e7adb6e8fdbc4b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 594523697,
+            "user": {
+              "id": 3942683,
+              "login": "jannfis",
+              "type": "User"
+            },
+            "submitted_at": "2021-02-19T20:04:20Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 603417495,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "submitted_at": "2021-03-03T22:39:42Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 576686119,
+    "author": {
+      "id": 3942683,
+      "login": "jannfis",
+      "type": "User"
+    },
+    "created_at": "2021-02-19T20:02:47Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "594523697",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2021-02-19T20:04:20Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "603417495",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-03T22:39:42Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": [
+      {
+        "id": "579444380",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2021-02-19T20:04:20Z"
+      }
+    ]
+  }
+}

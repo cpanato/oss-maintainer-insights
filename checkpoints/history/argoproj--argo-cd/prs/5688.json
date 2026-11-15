@@ -16,6 +16,14 @@
     "merged_at": "2021-03-04T18:32:18Z"
   },
   "state": {
+    "tracked_prs": {
+      "5688": {
+        "id": 585003701,
+        "updated_at": "2021-03-04T18:32:21Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/5688/comments?per_page=100": {
+        "etag": "\"7439697fab8a7eafc845b34f25797699d5c1ef9cc7a84487d0d25c98c82febd4\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/5688/reviews?per_page=100": {
         "etag": "W/\"9e8c2fdd30236ed9182d3524c3b7b56214c4a3124cfde979830f82394bd97dcb\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 585003701,
+    "author": {
+      "id": 426437,
+      "login": "alexmt",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-03-04T17:57:22Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "604402827",
+        "actor": {
+          "id": 4497837,
+          "login": "kshamajain99",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-04T18:09:38Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "790817842",
+        "actor": {
+          "id": 8655789,
+          "login": "codecov-io",
+          "type": "User"
+        },
+        "occurred_at": "2021-03-04T18:07:54Z"
+      }
+    ],
+    "review_comments": []
   }
 }

@@ -1,0 +1,289 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-03-08T23:11:20Z",
+    "id": 1763636967,
+    "number": 123826,
+    "user": {
+      "id": 68272500,
+      "login": "tenzen-y",
+      "type": "User"
+    },
+    "created_at": "2024-03-08T20:58:46Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-03-08T23:11:13Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "123826": {
+        "id": 1763636967,
+        "updated_at": "2024-03-08T23:11:20Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/123826/comments?per_page=100": {
+        "etag": "W/\"5700eb709924bc04df63f45e2aeaef03d728f5fdbfa8693126ec2b1a4d4185c7\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1986409851,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T20:58:55Z"
+          },
+          {
+            "id": 1986413054,
+            "user": {
+              "id": 68272500,
+              "login": "tenzen-y",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T21:00:08Z"
+          },
+          {
+            "id": 1986421870,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T21:08:01Z"
+          },
+          {
+            "id": 1986424124,
+            "user": {
+              "id": 68272500,
+              "login": "tenzen-y",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T21:10:08Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 1986442741,
+            "user": {
+              "id": 1299064,
+              "login": "alculquicondor",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T21:26:59Z"
+          },
+          {
+            "id": 1986442860,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T21:27:05Z"
+          },
+          {
+            "id": 1986444331,
+            "user": {
+              "id": 1299064,
+              "login": "alculquicondor",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T21:28:07Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/123826/comments?per_page=100": {
+        "etag": "W/\"c9a54e5b07d2a87588fa14a904fa0990c9aa2298cf396a016f60895b68cc7a5e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1518295331,
+            "user": {
+              "id": 1299064,
+              "login": "alculquicondor",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T21:05:50Z"
+          },
+          {
+            "id": 1518297950,
+            "user": {
+              "id": 68272500,
+              "login": "tenzen-y",
+              "type": "User"
+            },
+            "created_at": "2024-03-08T21:09:37Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/123826/reviews?per_page=100": {
+        "etag": "W/\"a0401f6fd3520abe21450372cbc8dc3f9e910d2d1dafee997fbc46c30ff16d09\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 1925837008,
+            "user": {
+              "id": 1299064,
+              "login": "alculquicondor",
+              "type": "User"
+            },
+            "submitted_at": "2024-03-08T21:07:56Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1925841435,
+            "user": {
+              "id": 68272500,
+              "login": "tenzen-y",
+              "type": "User"
+            },
+            "submitted_at": "2024-03-08T21:09:37Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1763636967,
+    "author": {
+      "id": 68272500,
+      "login": "tenzen-y",
+      "type": "User"
+    },
+    "created_at": "2024-03-08T20:58:46Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "1925837008",
+        "actor": {
+          "id": 1299064,
+          "login": "alculquicondor",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:07:56Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1925841435",
+        "actor": {
+          "id": 68272500,
+          "login": "tenzen-y",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:09:37Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1986409851",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T20:58:55Z"
+      },
+      {
+        "id": "1986413054",
+        "actor": {
+          "id": 68272500,
+          "login": "tenzen-y",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:00:08Z"
+      },
+      {
+        "id": "1986421870",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:08:01Z"
+      },
+      {
+        "id": "1986424124",
+        "actor": {
+          "id": 68272500,
+          "login": "tenzen-y",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:10:08Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1986442741",
+        "actor": {
+          "id": 1299064,
+          "login": "alculquicondor",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:26:59Z"
+      },
+      {
+        "id": "1986442860",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:27:05Z"
+      },
+      {
+        "id": "1986444331",
+        "actor": {
+          "id": 1299064,
+          "login": "alculquicondor",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:28:07Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1518295331",
+        "actor": {
+          "id": 1299064,
+          "login": "alculquicondor",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:05:50Z"
+      },
+      {
+        "id": "1518297950",
+        "actor": {
+          "id": 68272500,
+          "login": "tenzen-y",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-08T21:09:37Z"
+      }
+    ]
+  }
+}
