@@ -16,12 +16,30 @@
     "merged_at": "2020-12-01T22:14:55Z"
   },
   "state": {
+    "tracked_prs": {
+      "4920": {
+        "id": 528437969,
+        "updated_at": "2020-12-01T22:14:56Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
     "pages": {
+      "/repositories/120896210/issues/4920/comments?per_page=100": {
+        "etag": "\"5f59a464038acc2e5462a49dc380db4b3c3ac9e40716405031f55f6fadc4066c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/4920/comments?per_page=100": {
+        "etag": "\"5f59a464038acc2e5462a49dc380db4b3c3ac9e40716405031f55f6fadc4066c\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/4920/reviews?per_page=100": {
         "etag": "W/\"050d27e1cbfe0a03c070395e6112e68a116ab7ef0476f8fde105c477959401a8\"",
         "next": "",
@@ -41,18 +59,33 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 528437969,
+    "author": {
+      "id": 21128732,
+      "login": "chetan-rns",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-11-27T07:11:36Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "542176891",
+        "actor": {
+          "id": 6250584,
+          "login": "rbreeze",
+          "type": "User"
+        },
+        "occurred_at": "2020-12-01T18:22:15Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [],
+    "review_comments": []
   }
 }
