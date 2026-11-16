@@ -1,0 +1,233 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-03-12T17:22:33Z",
+    "id": 1742092711,
+    "number": 123492,
+    "user": {
+      "id": 28390961,
+      "login": "carlory",
+      "type": "User"
+    },
+    "created_at": "2024-02-25T09:17:01Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-02-25T21:47:31Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "123492": {
+        "id": 1742092711,
+        "updated_at": "2024-03-12T17:22:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/123492/comments?per_page=100": {
+        "etag": "W/\"5ba0d9cc31623cfb4f473f4d4fc53adc02b710e1df7f1f29120076caff542d08\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1962932155,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-02-25T12:59:55Z"
+          },
+          {
+            "id": 1962933396,
+            "user": {
+              "id": 331852,
+              "login": "neolit123",
+              "type": "User"
+            },
+            "created_at": "2024-02-25T13:03:40Z"
+          },
+          {
+            "id": 1962935099,
+            "user": {
+              "id": 331852,
+              "login": "neolit123",
+              "type": "User"
+            },
+            "created_at": "2024-02-25T13:07:32Z"
+          },
+          {
+            "id": 1962952540,
+            "user": {
+              "id": 28390961,
+              "login": "carlory",
+              "type": "User"
+            },
+            "created_at": "2024-02-25T14:07:07Z"
+          },
+          {
+            "id": 1963056677,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-02-25T20:47:40Z"
+          },
+          {
+            "id": 1992178400,
+            "user": {
+              "id": 22591623,
+              "login": "sftim",
+              "type": "User"
+            },
+            "created_at": "2024-03-12T17:22:31Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/123492/comments?per_page=100": {
+        "etag": "\"4425630130d49f6c6891cacd3888cb7f5e4ae0833ea4e539558d6d7d4680f83c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/123492/reviews?per_page=100": {
+        "etag": "W/\"6610da86916981e3f42ffe35b4609e1c2356c19f118317c82974d41e4c1bf3a0\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 1899673212,
+            "user": {
+              "id": 331852,
+              "login": "neolit123",
+              "type": "User"
+            },
+            "submitted_at": "2024-02-25T12:59:34Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 1899747724,
+            "user": {
+              "id": 331852,
+              "login": "neolit123",
+              "type": "User"
+            },
+            "submitted_at": "2024-02-25T20:47:35Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1742092711,
+    "author": {
+      "id": 28390961,
+      "login": "carlory",
+      "type": "User"
+    },
+    "created_at": "2024-02-25T09:17:01Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "1899673212",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-25T12:59:34Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1899747724",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-25T20:47:35Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1962932155",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-25T12:59:55Z"
+      },
+      {
+        "id": "1962933396",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-25T13:03:40Z"
+      },
+      {
+        "id": "1962935099",
+        "actor": {
+          "id": 331852,
+          "login": "neolit123",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-25T13:07:32Z"
+      },
+      {
+        "id": "1962952540",
+        "actor": {
+          "id": 28390961,
+          "login": "carlory",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-25T14:07:07Z"
+      },
+      {
+        "id": "1963056677",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-25T20:47:40Z"
+      },
+      {
+        "id": "1992178400",
+        "actor": {
+          "id": 22591623,
+          "login": "sftim",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-12T17:22:31Z"
+      }
+    ],
+    "review_comments": []
+  }
+}

@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "123610": {
+        "id": 1750978296,
+        "updated_at": "2024-08-21T03:24:28Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -136,6 +144,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/123610/comments?per_page=100": {
+        "etag": "\"4425630130d49f6c6891cacd3888cb7f5e4ae0833ea4e539558d6d7d4680f83c\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/123610/reviews?per_page=100": {
         "etag": "\"51ef287e310ad6a839bb9d12fda8979c5e479f1428fa93e1bf2bc9dfb7f06f51\"",
         "next": "",
@@ -144,18 +157,131 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1750978296,
+    "author": {
+      "id": 42690079,
+      "login": "Shubham1320",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-03-01T04:56:52Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "1972508502",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-01T04:56:54Z"
+      },
+      {
+        "id": "1972508555",
+        "actor": {
+          "id": 43480880,
+          "login": "linux-foundation-easycla[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2024-03-01T04:56:58Z"
+      },
+      {
+        "id": "1972508597",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-01T04:57:00Z"
+      },
+      {
+        "id": "1972508601",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-01T04:57:01Z"
+      },
+      {
+        "id": "1972508615",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-01T04:57:01Z"
+      },
+      {
+        "id": "1972509337",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-01T04:57:43Z"
+      },
+      {
+        "id": "1986715125",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-09T03:40:57Z"
+      },
+      {
+        "id": "1986716207",
+        "actor": {
+          "id": 42690079,
+          "login": "Shubham1320",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-09T03:46:09Z"
+      },
+      {
+        "id": "2183704827",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-06-22T02:24:56Z"
+      },
+      {
+        "id": "2241928593",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-22T02:30:49Z"
+      },
+      {
+        "id": "2300529461",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-08-21T03:24:22Z"
+      },
+      {
+        "id": "2300529731",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-08-21T03:24:27Z"
+      }
+    ],
+    "review_comments": []
   }
 }

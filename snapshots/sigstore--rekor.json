@@ -1,22 +1,22 @@
 {
   "population": {
     "inspected_prs": 200,
-    "human_authored_prs": 33,
-    "bot_authored_prs": 103,
+    "human_authored_prs": 32,
+    "bot_authored_prs": 94,
     "draft_prs": 0,
     "missing_author_prs": 0,
-    "outside_window_prs": 64,
+    "outside_window_prs": 74,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 136,
-    "reused_prs": 0,
+    "refreshed_prs": 1,
+    "reused_prs": 125,
     "events_checked_since": "2026-11-15T03:24:10Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-17T11:32:22Z",
+    "oldest_created_at": "2026-08-19T12:15:17Z",
     "newest_created_at": "2026-11-13T18:19:26Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
@@ -28,43 +28,43 @@
       "full_name": "sigstore/rekor"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-15T03:24:10.000Z",
+    "collected_at": "2026-11-16T12:09:08.000Z",
     "window": {
-      "start": "2026-08-17T03:24:10.000Z",
-      "end": "2026-11-15T03:24:10.000Z"
+      "start": "2026-08-18T12:09:08.000Z",
+      "end": "2026-11-16T12:09:08.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 35,
+      "bot_events": 34,
       "missing_event_actors": 0,
       "self_events": 7
     },
     "creation_cohort": {
-      "eligible_prs": 136,
+      "eligible_prs": 126,
       "coverage": "complete_for_sample",
       "authors": 8,
       "outcomes": {
         "open": 1,
-        "closed_unmerged": 8,
-        "merged": 127
+        "closed_unmerged": 7,
+        "merged": 118
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 131,
+        "github_review_units": 121,
         "prow_command_units": 0
       },
-      "eligible_prs": 136,
-      "covered_prs": 136,
+      "eligible_prs": 126,
+      "covered_prs": 126,
       "coverage": "complete_for_sample",
-      "review_units": 131,
+      "review_units": 121,
       "participants": 3,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 70,
+            "github_review_units": 62,
             "prow_command_units": 0
           },
           "actor": {
@@ -72,19 +72,7 @@
             "login": "bobcallaway",
             "type": "User"
           },
-          "review_units": 70
-        },
-        {
-          "sources": {
-            "github_review_units": 31,
-            "prow_command_units": 0
-          },
-          "actor": {
-            "id": 8418760,
-            "login": "Hayden-IO",
-            "type": "User"
-          },
-          "review_units": 31
+          "review_units": 62
         },
         {
           "sources": {
@@ -97,6 +85,18 @@
             "type": "User"
           },
           "review_units": 30
+        },
+        {
+          "sources": {
+            "github_review_units": 29,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 8418760,
+            "login": "Hayden-IO",
+            "type": "User"
+          },
+          "review_units": 29
         }
       ],
       "concentration_80": {
@@ -104,34 +104,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5343511450381679,
+        "value": 0.512396694214876,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 136,
-      "covered_prs": 136,
+      "eligible_prs": 126,
+      "covered_prs": 126,
       "coverage": "complete_for_sample",
-      "responded_prs": 131,
+      "responded_prs": 121,
       "unanswered_prs": 5,
       "median_ms": {
-        "value": 6851000,
+        "value": 7302000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 200,
-    "selected": 136,
-    "eligible_on_page": 136,
+    "selected": 126,
+    "eligible_on_page": 126,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 411,
+  "requests": 6,
   "rate": {
-    "remaining": 1727,
+    "remaining": 3883,
     "limit": 5000,
-    "resetAt": 1794745718000
+    "resetAt": 1794834104000
   },
   "failures": [],
   "complete": true

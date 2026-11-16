@@ -16,26 +16,74 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "5170": {
+        "id": 548382726,
+        "updated_at": "2021-01-04T18:43:28Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/5170/comments?per_page=100": {
+        "etag": "W/\"b1efb9dbd3cf75fd91d9d9a3582426025f3d4cbbb5ab987e2300e54423836086\"",
+        "next": "",
+        "value": [
+          {
+            "id": 754126598,
+            "user": {
+              "id": 11571300,
+              "login": "CLAassistant",
+              "type": "User"
+            },
+            "created_at": "2021-01-04T18:04:41Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/5170/comments?per_page=100": {
+        "etag": "\"4425630130d49f6c6891cacd3888cb7f5e4ae0833ea4e539558d6d7d4680f83c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/5170/reviews?per_page=100": {
+        "etag": "\"4425630130d49f6c6891cacd3888cb7f5e4ae0833ea4e539558d6d7d4680f83c\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 548382726,
+    "author": {
+      "id": 54035897,
+      "login": "jovianx-dev",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-01-04T18:04:36Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "754126598",
+        "actor": {
+          "id": 11571300,
+          "login": "CLAassistant",
+          "type": "User"
+        },
+        "occurred_at": "2021-01-04T18:04:41Z"
+      }
+    ],
+    "review_comments": []
   }
 }
