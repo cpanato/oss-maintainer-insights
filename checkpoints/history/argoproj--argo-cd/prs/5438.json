@@ -16,6 +16,14 @@
     "merged_at": "2021-02-08T17:18:36Z"
   },
   "state": {
+    "tracked_prs": {
+      "5438": {
+        "id": 568895323,
+        "updated_at": "2021-02-08T18:14:27Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -37,6 +45,11 @@
           }
         ]
       },
+      "/repositories/120896210/pulls/5438/comments?per_page=100": {
+        "etag": "\"51ef287e310ad6a839bb9d12fda8979c5e479f1428fa93e1bf2bc9dfb7f06f51\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/120896210/pulls/5438/reviews?per_page=100": {
         "etag": "W/\"07da9ca9e0d92256c05d479aaa7ff7ddd048723e836106fb6641cd821b8e16a5\"",
         "next": "",
@@ -56,18 +69,43 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 568895323,
+    "author": {
+      "id": 2119212,
+      "login": "jsoref",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2021-02-07T03:37:53Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "585736069",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2021-02-08T17:18:31Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "774588606",
+        "actor": {
+          "id": 8655789,
+          "login": "codecov-io",
+          "type": "User"
+        },
+        "occurred_at": "2021-02-07T03:48:01Z"
+      }
+    ],
+    "review_comments": []
   }
 }
