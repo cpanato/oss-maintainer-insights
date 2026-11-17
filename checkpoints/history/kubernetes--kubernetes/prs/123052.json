@@ -16,6 +16,14 @@
     "merged_at": "2024-02-05T19:42:58Z"
   },
   "state": {
+    "tracked_prs": {
+      "123052": {
+        "id": 1704162699,
+        "updated_at": "2024-02-05T19:43:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -85,6 +93,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/123052/comments?per_page=100": {
+        "etag": "\"c80373c1795b68f12acefc5375564990c1608e1359f1de3e7b05d601ec1cf4f8\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/123052/reviews?per_page=100": {
         "etag": "W/\"e3cd7b949a153c270e727776b1879c65c57997a5f50cfa9acd28840df843fa5c\"",
         "next": "",
@@ -104,18 +117,91 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1704162699,
+    "author": {
+      "id": 1745006,
+      "login": "jsafrane",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2024-01-31T14:15:34Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1863428757",
+        "actor": {
+          "id": 53798,
+          "login": "mrunalp",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-05T17:46:26Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1919213259",
+        "actor": {
+          "id": 1745006,
+          "login": "jsafrane",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-31T14:27:18Z"
+      },
+      {
+        "id": "1921157635",
+        "actor": {
+          "id": 13677519,
+          "login": "bart0sh",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-01T11:54:58Z"
+      },
+      {
+        "id": "1924410565",
+        "actor": {
+          "id": 278,
+          "login": "gnufied",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-02T17:55:27Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1924427507",
+        "actor": {
+          "id": 8704301,
+          "login": "dobsonj",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-02T18:07:55Z"
+      },
+      {
+        "id": "1924427702",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-02T18:08:03Z"
+      },
+      {
+        "id": "1927585380",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-02-05T17:46:49Z"
+      }
+    ],
+    "review_comments": []
   }
 }

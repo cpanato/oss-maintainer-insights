@@ -16,6 +16,14 @@
     "merged_at": "2020-08-05T18:36:41Z"
   },
   "state": {
+    "tracked_prs": {
+      "4046": {
+        "id": 462856572,
+        "updated_at": "2020-08-05T18:36:47Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -34,6 +42,30 @@
               "type": "User"
             },
             "created_at": "2020-08-04T16:58:54Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/4046/comments?per_page=100": {
+        "etag": "W/\"ccfb619bed7793f6c5a365aecdb260380fa88ecc31ba76e867cc83ff84e5ce4d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 465387076,
+            "user": {
+              "id": 126021,
+              "login": "ash2k",
+              "type": "User"
+            },
+            "created_at": "2020-08-04T23:33:22Z"
+          },
+          {
+            "id": 465419033,
+            "user": {
+              "id": 426437,
+              "login": "alexmt",
+              "type": "User"
+            },
+            "created_at": "2020-08-05T01:28:22Z"
           }
         ]
       },
@@ -76,18 +108,82 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 462856572,
+    "author": {
+      "id": 426437,
+      "login": "alexmt",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-08-04T15:55:23Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "461244315",
+        "actor": {
+          "id": 126021,
+          "login": "ash2k",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-04T23:33:22Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "461279630",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-05T01:28:22Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "461924043",
+        "actor": {
+          "id": 7737306,
+          "login": "mayzhang2000",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-05T18:35:46Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "668712248",
+        "actor": {
+          "id": 65553080,
+          "login": "codecov-commenter",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-04T16:58:54Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "465387076",
+        "actor": {
+          "id": 126021,
+          "login": "ash2k",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-04T23:33:22Z"
+      },
+      {
+        "id": "465419033",
+        "actor": {
+          "id": 426437,
+          "login": "alexmt",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-05T01:28:22Z"
+      }
+    ]
   }
 }
