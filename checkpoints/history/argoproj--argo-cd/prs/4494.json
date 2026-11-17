@@ -16,26 +16,96 @@
     "merged_at": "2020-10-06T10:28:33Z"
   },
   "state": {
+    "tracked_prs": {
+      "4494": {
+        "id": 498364340,
+        "updated_at": "2020-10-06T10:28:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/4494/comments?per_page=100": {
+        "etag": "W/\"5ca25ae3d569914cf78c09c7033586eb5fe4a143ec8721bbcd1a1698de69aded\"",
+        "next": "",
+        "value": [
+          {
+            "id": 704121726,
+            "user": {
+              "id": 65553080,
+              "login": "codecov-commenter",
+              "type": "User"
+            },
+            "created_at": "2020-10-06T08:39:56Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/4494/comments?per_page=100": {
+        "etag": "\"d78798cecb7712a743bdb9e60d645e8e42b29cacb6d1cbe81e55eb62407550d4\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/4494/reviews?per_page=100": {
+        "etag": "W/\"dc9a33458bced3816e80a0c2cd8ffb58ec710ca04e5cc90c640dfde7ed7dd3ae\"",
+        "next": "",
+        "value": [
+          {
+            "id": 502797229,
+            "user": {
+              "id": 3942683,
+              "login": "jannfis",
+              "type": "User"
+            },
+            "submitted_at": "2020-10-06T10:28:17Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 498364340,
+    "author": {
+      "id": 4584443,
+      "login": "DragonStuff",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-10-06T08:30:29Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "502797229",
+        "actor": {
+          "id": 3942683,
+          "login": "jannfis",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-06T10:28:17Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "704121726",
+        "actor": {
+          "id": 65553080,
+          "login": "codecov-commenter",
+          "type": "User"
+        },
+        "occurred_at": "2020-10-06T08:39:56Z"
+      }
+    ],
+    "review_comments": []
   }
 }
