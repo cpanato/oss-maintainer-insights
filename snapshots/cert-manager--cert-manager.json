@@ -2,22 +2,22 @@
   "population": {
     "inspected_prs": 400,
     "human_authored_prs": 172,
-    "bot_authored_prs": 188,
+    "bot_authored_prs": 186,
     "draft_prs": 11,
     "missing_author_prs": 0,
-    "outside_window_prs": 29,
+    "outside_window_prs": 31,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 59,
-    "reused_prs": 301,
-    "events_checked_since": "2026-11-09T12:14:29Z",
+    "refreshed_prs": 82,
+    "reused_prs": 276,
+    "events_checked_since": "2026-11-11T16:35:40Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-18T16:40:26Z",
-    "newest_created_at": "2026-11-16T11:12:34Z"
+    "oldest_created_at": "2026-08-20T08:59:50Z",
+    "newest_created_at": "2026-11-17T10:00:57Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,55 +28,55 @@
       "full_name": "cert-manager/cert-manager"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-16T12:02:24.000Z",
+    "collected_at": "2026-11-17T15:08:32.000Z",
     "window": {
-      "start": "2026-08-18T12:02:24.000Z",
-      "end": "2026-11-16T12:02:24.000Z"
+      "start": "2026-08-19T15:08:32.000Z",
+      "end": "2026-11-17T15:08:32.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 895,
+      "bot_events": 890,
       "missing_event_actors": 0,
-      "self_events": 560
+      "self_events": 557
     },
     "creation_cohort": {
-      "eligible_prs": 360,
+      "eligible_prs": 358,
       "coverage": "complete_for_sample",
       "authors": 62,
       "outcomes": {
-        "open": 50,
+        "open": 49,
         "closed_unmerged": 34,
-        "merged": 276
+        "merged": 275
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 194,
-        "prow_command_units": 209
+        "github_review_units": 192,
+        "prow_command_units": 207
       },
-      "eligible_prs": 360,
-      "covered_prs": 360,
+      "eligible_prs": 358,
+      "covered_prs": 358,
       "coverage": "complete_for_sample",
-      "review_units": 253,
+      "review_units": 249,
       "participants": 14,
       "distribution": [
         {
           "sources": {
             "github_review_units": 90,
-            "prow_command_units": 111
+            "prow_command_units": 109
           },
           "actor": {
             "id": 978965,
             "login": "wallrj",
             "type": "User"
           },
-          "review_units": 122
+          "review_units": 120
         },
         {
           "sources": {
-            "github_review_units": 58,
+            "github_review_units": 57,
             "prow_command_units": 59
           },
           "actor": {
@@ -84,7 +84,7 @@
             "login": "erikgb",
             "type": "User"
           },
-          "review_units": 62
+          "review_units": 61
         },
         {
           "sources": {
@@ -112,7 +112,7 @@
         },
         {
           "sources": {
-            "github_review_units": 6,
+            "github_review_units": 5,
             "prow_command_units": 4
           },
           "actor": {
@@ -120,7 +120,7 @@
             "login": "SgtCoDFish",
             "type": "User"
           },
-          "review_units": 6
+          "review_units": 5
         },
         {
           "sources": {
@@ -236,34 +236,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.48221343873517786,
+        "value": 0.4819277108433735,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 360,
-      "covered_prs": 360,
+      "eligible_prs": 358,
+      "covered_prs": 358,
       "coverage": "complete_for_sample",
-      "responded_prs": 254,
-      "unanswered_prs": 106,
+      "responded_prs": 251,
+      "unanswered_prs": 107,
       "median_ms": {
-        "value": 41594000,
+        "value": 40817000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 400,
-    "selected": 360,
-    "eligible_on_page": 360,
+    "selected": 358,
+    "eligible_on_page": 358,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 182,
+  "requests": 251,
   "rate": {
-    "remaining": 4816,
+    "remaining": 2318,
     "limit": 5000,
-    "resetAt": 1794834104000
+    "resetAt": 1794930787000
   },
   "failures": [],
   "complete": true
