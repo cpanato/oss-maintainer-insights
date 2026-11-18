@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-17T23:09:07Z",
+  "attempted_at": "2026-11-18T04:42:39Z",
   "entries": [
-    {
-      "repository": "ossf/allstar",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "sigstore/cosign",
       "status": "fresh",
@@ -14,9 +9,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 871,
+      "status": "updated",
+      "requests": 2,
       "progress": {
         "population": {
           "inspected_prs": 2300,
@@ -33,33 +27,14 @@
         },
         "enumerated_prs": 2300,
         "eligible_prs": 2166,
-        "covered_prs": 2165,
+        "covered_prs": 2166,
         "enumeration_complete": true
       }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "updated",
-      "requests": 47,
-      "progress": {
-        "population": {
-          "inspected_prs": 900,
-          "human_authored_prs": 618,
-          "bot_authored_prs": 213,
-          "draft_prs": 49,
-          "missing_author_prs": 0,
-          "outside_window_prs": 20,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-19T15:00:09.000Z",
-          "end": "2026-11-17T15:00:09.000Z"
-        },
-        "enumerated_prs": 900,
-        "eligible_prs": 831,
-        "covered_prs": 831,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "helm/helm",
@@ -73,27 +48,8 @@
     },
     {
       "repository": "argoproj/argo-cd",
-      "status": "updated",
-      "requests": 136,
-      "progress": {
-        "population": {
-          "inspected_prs": 1400,
-          "human_authored_prs": 780,
-          "bot_authored_prs": 555,
-          "draft_prs": 31,
-          "missing_author_prs": 0,
-          "outside_window_prs": 34,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-19T15:10:04.000Z",
-          "end": "2026-11-17T15:10:04.000Z"
-        },
-        "enumerated_prs": 1400,
-        "eligible_prs": 1335,
-        "covered_prs": 1335,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "argoproj/argo-helm",
@@ -107,6 +63,11 @@
     },
     {
       "repository": "ossf/scorecard",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "ossf/allstar",
       "status": "fresh",
       "requests": 0
     }

@@ -1,0 +1,571 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-07-21T18:38:17Z",
+    "id": 1687163426,
+    "number": 122878,
+    "user": {
+      "id": 980082,
+      "login": "liggitt",
+      "type": "User"
+    },
+    "created_at": "2024-01-19T16:00:46Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2024-01-26T15:32:12Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "122878": {
+        "id": 1687163426,
+        "updated_at": "2024-07-21T18:38:17Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/122878/comments?per_page=100": {
+        "etag": "W/\"32fdb8811180b08ab48ea10dc04a46a2cc6c5b9fe3ed4d478d971701081a19e8\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1900681479,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T16:00:57Z"
+          },
+          {
+            "id": 1900683443,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T16:02:10Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 1900732303,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T16:34:27Z"
+          },
+          {
+            "id": 1900732872,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T16:34:50Z"
+          },
+          {
+            "id": 1900901459,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T18:27:59Z"
+          },
+          {
+            "id": 1911587127,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-01-26T07:08:26Z"
+          },
+          {
+            "id": 1911587506,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-01-26T07:08:54Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 1912109027,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2024-01-26T13:56:47Z"
+          },
+          {
+            "id": 1912109167,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2024-01-26T13:56:53Z"
+          },
+          {
+            "id": 1912142411,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-01-26T14:19:21Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/122878/comments?per_page=100": {
+        "etag": "W/\"19916ef359edb0bff7c1e8f0d07d2d80364b1ff9d2b7e227363c879291a3683b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1459280615,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T16:19:48Z"
+          },
+          {
+            "id": 1459302576,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T16:32:29Z"
+          },
+          {
+            "id": 1459498989,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T18:25:14Z"
+          },
+          {
+            "id": 1459538207,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T18:43:29Z"
+          },
+          {
+            "id": 1459667018,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T19:58:36Z"
+          },
+          {
+            "id": 1459749275,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-01-19T20:51:35Z"
+          },
+          {
+            "id": 1460497890,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "created_at": "2024-01-20T15:26:33Z"
+          },
+          {
+            "id": 1467207559,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2024-01-26T04:16:07Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/122878/reviews?per_page=100": {
+        "etag": "W/\"70c38f2bfc29f4ae9f6f177c13ac879e8e69aead4376c00adf5b70a1c74a9ffc\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1833190336,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-19T16:19:49Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1833212453,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-19T16:32:29Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1833416431,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-19T18:25:14Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1833459728,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-19T18:43:29Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1833585696,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-19T19:58:36Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1833682451,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-19T20:51:35Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1834688782,
+            "user": {
+              "id": 96040,
+              "login": "danwinship",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-20T15:26:33Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1845051320,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2024-01-26T04:16:07Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1687163426,
+    "author": {
+      "id": 980082,
+      "login": "liggitt",
+      "type": "User"
+    },
+    "created_at": "2024-01-19T16:00:46Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1833190336",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T16:19:49Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1833212453",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T16:32:29Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1833416431",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T18:25:14Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1833459728",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T18:43:29Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1833585696",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T19:58:36Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1833682451",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T20:51:35Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1834688782",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-20T15:26:33Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1845051320",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-26T04:16:07Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1900681479",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T16:00:57Z"
+      },
+      {
+        "id": "1900683443",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T16:02:10Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "1900732303",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T16:34:27Z"
+      },
+      {
+        "id": "1900732872",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T16:34:50Z"
+      },
+      {
+        "id": "1900901459",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T18:27:59Z"
+      },
+      {
+        "id": "1911587127",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-26T07:08:26Z"
+      },
+      {
+        "id": "1911587506",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-26T07:08:54Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1912109027",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-26T13:56:47Z"
+      },
+      {
+        "id": "1912109167",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-26T13:56:53Z"
+      },
+      {
+        "id": "1912142411",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-26T14:19:21Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1459280615",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T16:19:48Z"
+      },
+      {
+        "id": "1459302576",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T16:32:29Z"
+      },
+      {
+        "id": "1459498989",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T18:25:14Z"
+      },
+      {
+        "id": "1459538207",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T18:43:29Z"
+      },
+      {
+        "id": "1459667018",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T19:58:36Z"
+      },
+      {
+        "id": "1459749275",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-19T20:51:35Z"
+      },
+      {
+        "id": "1460497890",
+        "actor": {
+          "id": 96040,
+          "login": "danwinship",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-20T15:26:33Z"
+      },
+      {
+        "id": "1467207559",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-26T04:16:07Z"
+      }
+    ]
+  }
+}

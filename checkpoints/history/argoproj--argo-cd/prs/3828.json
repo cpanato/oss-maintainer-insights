@@ -16,26 +16,154 @@
     "merged_at": "2020-08-19T04:48:01Z"
   },
   "state": {
+    "tracked_prs": {
+      "3828": {
+        "id": 438398273,
+        "updated_at": "2020-08-19T06:06:45Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/3828/comments?per_page=100": {
+        "etag": "W/\"91a35eca9f06952cad3ef187cf3b8c4a471938438dc66f5c86a96a1c78d71529\"",
+        "next": "",
+        "value": [
+          {
+            "id": 647989721,
+            "user": {
+              "id": 22429695,
+              "login": "codecov[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2020-06-23T08:22:26Z"
+          },
+          {
+            "id": 675849201,
+            "user": {
+              "id": 12677113,
+              "login": "jessesuen",
+              "type": "User"
+            },
+            "created_at": "2020-08-19T04:48:04Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/3828/comments?per_page=100": {
+        "etag": "W/\"87b0cdf2e3bf8ca36bb43dafe61b2ab8d85c6b9119b9ed0c3e6cd25af7a27285\"",
+        "next": "",
+        "value": [
+          {
+            "id": 466687340,
+            "user": {
+              "id": 545280,
+              "login": "sbose78",
+              "type": "User"
+            },
+            "created_at": "2020-08-06T21:08:28Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/3828/reviews?per_page=100": {
+        "etag": "W/\"491fcbe324212d05fa953f44923163abf46cfbdd188f089cce169e2f98011a2e\"",
+        "next": "",
+        "value": [
+          {
+            "id": 462878178,
+            "user": {
+              "id": 545280,
+              "login": "sbose78",
+              "type": "User"
+            },
+            "submitted_at": "2020-08-06T21:09:44Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 470121635,
+            "user": {
+              "id": 12677113,
+              "login": "jessesuen",
+              "type": "User"
+            },
+            "submitted_at": "2020-08-19T04:47:48Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 438398273,
+    "author": {
+      "id": 22289110,
+      "login": "povilasv",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-06-23T08:12:38Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "462878178",
+        "actor": {
+          "id": 545280,
+          "login": "sbose78",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-06T21:09:44Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "470121635",
+        "actor": {
+          "id": 12677113,
+          "login": "jessesuen",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-19T04:47:48Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "647989721",
+        "actor": {
+          "id": 22429695,
+          "login": "codecov[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2020-06-23T08:22:26Z"
+      },
+      {
+        "id": "675849201",
+        "actor": {
+          "id": 12677113,
+          "login": "jessesuen",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-19T04:48:04Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "466687340",
+        "actor": {
+          "id": 545280,
+          "login": "sbose78",
+          "type": "User"
+        },
+        "occurred_at": "2020-08-06T21:08:28Z"
+      }
+    ]
   }
 }
