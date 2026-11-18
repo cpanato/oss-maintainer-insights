@@ -1,33 +1,29 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-18T04:42:39Z",
+  "attempted_at": "2026-11-18T13:28:18Z",
   "entries": [
     {
-      "repository": "sigstore/cosign",
-      "status": "fresh",
-      "requests": 0
-    },
-    {
       "repository": "kubernetes/kubernetes",
-      "status": "updated",
-      "requests": 2,
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
       "progress": {
         "population": {
           "inspected_prs": 2300,
-          "human_authored_prs": 2166,
+          "human_authored_prs": 2185,
           "bot_authored_prs": 0,
-          "draft_prs": 94,
+          "draft_prs": 92,
           "missing_author_prs": 0,
-          "outside_window_prs": 40,
+          "outside_window_prs": 23,
           "after_observation_prs": 0
         },
         "window": {
-          "start": "2026-08-19T04:47:31.000Z",
-          "end": "2026-11-17T04:47:31.000Z"
+          "start": "2026-08-20T13:28:18.000Z",
+          "end": "2026-11-18T13:28:18.000Z"
         },
         "enumerated_prs": 2300,
-        "eligible_prs": 2166,
-        "covered_prs": 2166,
+        "eligible_prs": 2185,
+        "covered_prs": 1486,
         "enumeration_complete": true
       }
     },
@@ -68,8 +64,51 @@
     },
     {
       "repository": "ossf/allstar",
-      "status": "fresh",
-      "requests": 0
+      "status": "updated",
+      "requests": 50,
+      "progress": {
+        "population": {
+          "inspected_prs": 100,
+          "human_authored_prs": 28,
+          "bot_authored_prs": 26,
+          "draft_prs": 0,
+          "missing_author_prs": 0,
+          "outside_window_prs": 46,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-20T13:34:22.000Z",
+          "end": "2026-11-18T13:34:22.000Z"
+        },
+        "enumerated_prs": 100,
+        "eligible_prs": 54,
+        "covered_prs": 54,
+        "enumeration_complete": true
+      }
+    },
+    {
+      "repository": "sigstore/cosign",
+      "status": "updated",
+      "requests": 78,
+      "progress": {
+        "population": {
+          "inspected_prs": 200,
+          "human_authored_prs": 58,
+          "bot_authored_prs": 65,
+          "draft_prs": 2,
+          "missing_author_prs": 0,
+          "outside_window_prs": 75,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-20T13:34:40.000Z",
+          "end": "2026-11-18T13:34:40.000Z"
+        },
+        "enumerated_prs": 200,
+        "eligible_prs": 123,
+        "covered_prs": 123,
+        "enumeration_complete": true
+      }
     }
   ]
 }
