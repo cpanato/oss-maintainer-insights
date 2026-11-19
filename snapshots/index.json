@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-19T02:48:13Z",
+  "attempted_at": "2026-11-19T12:07:26Z",
   "entries": [
-    {
-      "repository": "helm/helm",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "cert-manager/cert-manager",
       "status": "fresh",
@@ -14,27 +9,8 @@
     },
     {
       "repository": "argoproj/argo-cd",
-      "status": "updated",
-      "requests": 106,
-      "progress": {
-        "population": {
-          "inspected_prs": 1400,
-          "human_authored_prs": 779,
-          "bot_authored_prs": 550,
-          "draft_prs": 31,
-          "missing_author_prs": 0,
-          "outside_window_prs": 40,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-20T21:45:01.000Z",
-          "end": "2026-11-18T21:45:01.000Z"
-        },
-        "enumerated_prs": 1400,
-        "eligible_prs": 1329,
-        "covered_prs": 1329,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "argoproj/argo-helm",
@@ -63,9 +39,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 305,
       "progress": {
         "population": {
           "inspected_prs": 2300,
@@ -82,33 +57,19 @@
         },
         "enumerated_prs": 2300,
         "eligible_prs": 2185,
-        "covered_prs": 2084,
+        "covered_prs": 2185,
         "enumeration_complete": true
       }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "updated",
-      "requests": 179,
-      "progress": {
-        "population": {
-          "inspected_prs": 900,
-          "human_authored_prs": 618,
-          "bot_authored_prs": 213,
-          "draft_prs": 45,
-          "missing_author_prs": 0,
-          "outside_window_prs": 24,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-20T21:35:25.000Z",
-          "end": "2026-11-18T21:35:25.000Z"
-        },
-        "enumerated_prs": 900,
-        "eligible_prs": 831,
-        "covered_prs": 831,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "helm/helm",
+      "status": "fresh",
+      "requests": 0
     }
   ]
 }
