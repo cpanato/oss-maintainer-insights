@@ -16,6 +16,14 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "122486": {
+        "id": 1656975013,
+        "updated_at": "2024-07-12T23:24:34Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -118,6 +126,30 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/122486/comments?per_page=100": {
+        "etag": "W/\"2f64e27da44f0905163d6ef691208f5aedb6273720024bc2c4ef0e938527a93f\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1534502062,
+            "user": {
+              "id": 19394971,
+              "login": "hanlins",
+              "type": "User"
+            },
+            "created_at": "2024-03-21T19:06:21Z"
+          },
+          {
+            "id": 1534513613,
+            "user": {
+              "id": 19394971,
+              "login": "hanlins",
+              "type": "User"
+            },
+            "created_at": "2024-03-21T19:10:16Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/122486/reviews?per_page=100": {
         "etag": "W/\"a63e22ad0779c84e6beea7a3577e2e1fa374b6f99bcb4bad5bf3594936c69c6e\"",
         "next": "",
@@ -137,18 +169,143 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1656975013,
+    "author": {
+      "id": 26627380,
+      "login": "fgksgf",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-12-26T07:04:31Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1953166670",
+        "actor": {
+          "id": 19394971,
+          "login": "hanlins",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-21T19:49:27Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1869314600",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-12-26T07:04:40Z"
+      },
+      {
+        "id": "1869314612",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-12-26T07:04:41Z"
+      },
+      {
+        "id": "1869314789",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-12-26T07:05:02Z"
+      },
+      {
+        "id": "1869316097",
+        "actor": {
+          "id": 26627380,
+          "login": "fgksgf",
+          "type": "User"
+        },
+        "occurred_at": "2023-12-26T07:07:26Z"
+      },
+      {
+        "id": "1874570021",
+        "actor": {
+          "id": 351783,
+          "login": "alexzielenski",
+          "type": "User"
+        },
+        "occurred_at": "2024-01-02T21:07:13Z"
+      },
+      {
+        "id": "1992516115",
+        "actor": {
+          "id": 3715412,
+          "login": "jiahuif",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-12T20:24:42Z"
+      },
+      {
+        "id": "2013678203",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-21T20:34:09Z"
+      },
+      {
+        "id": "2067647100",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-04-20T11:36:15Z"
+      },
+      {
+        "id": "2226519222",
+        "actor": {
+          "id": 53270907,
+          "login": "k8s-triage-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-12T23:24:29Z"
+      },
+      {
+        "id": "2226519266",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2024-07-12T23:24:34Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1534502062",
+        "actor": {
+          "id": 19394971,
+          "login": "hanlins",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-21T19:06:21Z"
+      },
+      {
+        "id": "1534513613",
+        "actor": {
+          "id": 19394971,
+          "login": "hanlins",
+          "type": "User"
+        },
+        "occurred_at": "2024-03-21T19:10:16Z"
+      }
+    ]
   }
 }

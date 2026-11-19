@@ -16,26 +16,110 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "3276": {
+        "id": 392848359,
+        "updated_at": "2022-03-01T09:51:50Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 120896210,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "argoproj/argo-cd",
-    "pages": {}
+    "pages": {
+      "/repositories/120896210/issues/3276/comments?per_page=100": {
+        "etag": "W/\"6747503edfda90a544a2482a602db1582fb9c7c6c983a48e9887b45b794a46a9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 603541420,
+            "user": {
+              "id": 12677113,
+              "login": "jessesuen",
+              "type": "User"
+            },
+            "created_at": "2020-03-24T22:39:25Z"
+          },
+          {
+            "id": 604631710,
+            "user": {
+              "id": 223820,
+              "login": "moensch",
+              "type": "User"
+            },
+            "created_at": "2020-03-26T19:17:06Z"
+          },
+          {
+            "id": 811923435,
+            "user": {
+              "id": 545280,
+              "login": "sbose78",
+              "type": "User"
+            },
+            "created_at": "2021-04-01T13:51:59Z"
+          }
+        ]
+      },
+      "/repositories/120896210/pulls/3276/comments?per_page=100": {
+        "etag": "\"2447ff9ce2e30b013303ffd760cd066f621116d61994cfe0101f86ad7e57ef4b\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/120896210/pulls/3276/reviews?per_page=100": {
+        "etag": "\"2447ff9ce2e30b013303ffd760cd066f621116d61994cfe0101f86ad7e57ef4b\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 392848359,
+    "author": {
+      "id": 223820,
+      "login": "moensch",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2020-03-24T08:30:33Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "603541420",
+        "actor": {
+          "id": 12677113,
+          "login": "jessesuen",
+          "type": "User"
+        },
+        "occurred_at": "2020-03-24T22:39:25Z"
+      },
+      {
+        "id": "604631710",
+        "actor": {
+          "id": 223820,
+          "login": "moensch",
+          "type": "User"
+        },
+        "occurred_at": "2020-03-26T19:17:06Z"
+      },
+      {
+        "id": "811923435",
+        "actor": {
+          "id": 545280,
+          "login": "sbose78",
+          "type": "User"
+        },
+        "occurred_at": "2021-04-01T13:51:59Z"
+      }
+    ],
+    "review_comments": []
   }
 }
