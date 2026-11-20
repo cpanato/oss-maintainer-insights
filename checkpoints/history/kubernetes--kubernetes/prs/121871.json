@@ -1,0 +1,245 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2023-11-14T17:15:33Z",
+    "id": 1600541636,
+    "number": 121871,
+    "user": {
+      "id": 4115580,
+      "login": "cpanato",
+      "type": "User"
+    },
+    "created_at": "2023-11-14T11:14:57Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2023-11-14T16:17:22Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "121871": {
+        "id": 1600541636,
+        "updated_at": "2023-11-14T17:15:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/121871/comments?per_page=100": {
+        "etag": "W/\"476e7767b601369076248e827e9d7513f8e008fd7471c642026e52ad0b56ed02\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1810010699,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-11-14T11:15:07Z"
+          },
+          {
+            "id": 1810023753,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-11-14T11:24:10Z"
+          },
+          {
+            "id": 1810209875,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2023-11-14T13:31:39Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1810251099,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2023-11-14T13:56:46Z"
+          },
+          {
+            "id": 1810251853,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-11-14T13:57:10Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/121871/comments?per_page=100": {
+        "etag": "\"b76d9d4bf6cbd6fa57780c615d5358a983c888845a2d7bdae7fc911f2b11614c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/121871/reviews?per_page=100": {
+        "etag": "W/\"60853167c227ea6b5accaec50a062949d456dc667a3c61fd9843c362916a3f7a\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1729517080,
+            "user": {
+              "id": 695473,
+              "login": "saschagrunert",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-14T11:19:58Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1729523603,
+            "user": {
+              "id": 18719127,
+              "login": "xmudrii",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-14T11:24:04Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 1729590292,
+            "user": {
+              "id": 12646029,
+              "login": "mkumatag",
+              "type": "User"
+            },
+            "submitted_at": "2023-11-14T12:07:32Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1600541636,
+    "author": {
+      "id": 4115580,
+      "login": "cpanato",
+      "type": "User"
+    },
+    "created_at": "2023-11-14T11:14:57Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1729517080",
+        "actor": {
+          "id": 695473,
+          "login": "saschagrunert",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-14T11:19:58Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1729523603",
+        "actor": {
+          "id": 18719127,
+          "login": "xmudrii",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-14T11:24:04Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1729590292",
+        "actor": {
+          "id": 12646029,
+          "login": "mkumatag",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-14T12:07:32Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1810010699",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-14T11:15:07Z"
+      },
+      {
+        "id": "1810023753",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-14T11:24:10Z"
+      },
+      {
+        "id": "1810209875",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-14T13:31:39Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1810251099",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-14T13:56:46Z"
+      },
+      {
+        "id": "1810251853",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-14T13:57:10Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
