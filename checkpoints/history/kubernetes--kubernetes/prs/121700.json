@@ -16,6 +16,14 @@
     "merged_at": "2023-11-06T19:13:04Z"
   },
   "state": {
+    "tracked_prs": {
+      "121700": {
+        "id": 1584444728,
+        "updated_at": "2023-11-06T19:13:05Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -134,6 +142,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/121700/comments?per_page=100": {
+        "etag": "\"1f482bfde5705d6d09b9b1a3472074157df1d6cb2b04642ff309a18fb66b3b9a\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/121700/reviews?per_page=100": {
         "etag": "\"46157c025745a0a39aaf9438b3bd1f39587e31a76c42e545880a56d601a28370\"",
         "next": "",
@@ -142,18 +155,129 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1584444728,
+    "author": {
+      "id": 3780425,
+      "login": "kannon92",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-11-02T14:28:09Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "id": "1790843019",
+        "actor": {
+          "id": 3780425,
+          "login": "kannon92",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T14:28:17Z"
+      },
+      {
+        "id": "1790843127",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T14:28:20Z"
+      },
+      {
+        "id": "1790843435",
+        "actor": {
+          "id": 3780425,
+          "login": "kannon92",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T14:28:31Z"
+      },
+      {
+        "id": "1790844848",
+        "actor": {
+          "id": 3780425,
+          "login": "kannon92",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T14:29:20Z"
+      },
+      {
+        "id": "1791648246",
+        "actor": {
+          "id": 3780425,
+          "login": "kannon92",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T22:26:36Z"
+      },
+      {
+        "id": "1791679560",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-02T23:00:34Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1794417622",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-06T09:36:27Z"
+      },
+      {
+        "id": "1794417960",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-06T09:36:40Z"
+      },
+      {
+        "id": "1794427283",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-06T09:41:06Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1795738904",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-06T17:59:22Z"
+      },
+      {
+        "id": "1795739691",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-06T17:59:52Z"
+      }
+    ],
+    "review_comments": []
   }
 }
