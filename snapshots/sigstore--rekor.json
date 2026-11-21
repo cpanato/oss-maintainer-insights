@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 200,
-    "human_authored_prs": 35,
+    "human_authored_prs": 36,
     "bot_authored_prs": 100,
     "draft_prs": 0,
     "missing_author_prs": 0,
-    "outside_window_prs": 65,
+    "outside_window_prs": 64,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 1,
-    "reused_prs": 134,
+    "refreshed_prs": 3,
+    "reused_prs": 133,
     "events_checked_since": "2026-11-15T03:24:10Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
-    "oldest_created_at": "2026-08-22T15:46:48Z",
-    "newest_created_at": "2026-11-18T13:23:40Z"
+    "oldest_created_at": "2026-08-24T11:32:32Z",
+    "newest_created_at": "2026-11-20T11:54:54Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,10 +28,10 @@
       "full_name": "sigstore/rekor"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-20T02:35:27.000Z",
+    "collected_at": "2026-11-21T09:01:23.000Z",
     "window": {
-      "start": "2026-08-22T02:35:27.000Z",
-      "end": "2026-11-20T02:35:27.000Z"
+      "start": "2026-08-23T09:01:23.000Z",
+      "end": "2026-11-21T09:01:23.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
@@ -39,32 +39,32 @@
       "missing_authors": 0,
       "bot_events": 38,
       "missing_event_actors": 0,
-      "self_events": 5
+      "self_events": 6
     },
     "creation_cohort": {
-      "eligible_prs": 135,
+      "eligible_prs": 136,
       "coverage": "complete_for_sample",
-      "authors": 8,
+      "authors": 9,
       "outcomes": {
         "open": 1,
         "closed_unmerged": 7,
-        "merged": 127
+        "merged": 128
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 130,
+        "github_review_units": 131,
         "prow_command_units": 0
       },
-      "eligible_prs": 135,
-      "covered_prs": 135,
+      "eligible_prs": 136,
+      "covered_prs": 136,
       "coverage": "complete_for_sample",
-      "review_units": 130,
+      "review_units": 131,
       "participants": 3,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 67,
+            "github_review_units": 68,
             "prow_command_units": 0
           },
           "actor": {
@@ -72,7 +72,7 @@
             "login": "bobcallaway",
             "type": "User"
           },
-          "review_units": 67
+          "review_units": 68
         },
         {
           "sources": {
@@ -104,16 +104,16 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.5153846153846153,
+        "value": 0.5190839694656488,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 135,
-      "covered_prs": 135,
+      "eligible_prs": 136,
+      "covered_prs": 136,
       "coverage": "complete_for_sample",
       "responded_prs": 130,
-      "unanswered_prs": 5,
+      "unanswered_prs": 6,
       "median_ms": {
         "value": 5802500,
         "status": "available"
@@ -122,16 +122,16 @@
   },
   "selection": {
     "listed": 200,
-    "selected": 135,
-    "eligible_on_page": 135,
+    "selected": 136,
+    "eligible_on_page": 136,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 6,
+  "requests": 12,
   "rate": {
-    "remaining": 4974,
+    "remaining": 1557,
     "limit": 5000,
-    "resetAt": 1795145683000
+    "resetAt": 1795254308000
   },
   "failures": [],
   "complete": true
