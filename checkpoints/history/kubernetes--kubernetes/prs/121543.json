@@ -16,6 +16,14 @@
     "merged_at": "2023-10-26T17:25:47Z"
   },
   "state": {
+    "tracked_prs": {
+      "121543": {
+        "id": 1574892382,
+        "updated_at": "2023-10-26T17:25:49Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -123,6 +131,120 @@
               "type": "User"
             },
             "created_at": "2023-10-26T15:03:09Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/121543/comments?per_page=100": {
+        "etag": "W/\"478c2fcb989f8d09d84214a0b9ec572216ecfec6baed4a1c68ba8702f4e39278\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1373216646,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:50:05Z"
+          },
+          {
+            "id": 1373218019,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:50:58Z"
+          },
+          {
+            "id": 1373221233,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:53:03Z"
+          },
+          {
+            "id": 1373221495,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:53:12Z"
+          },
+          {
+            "id": 1373224733,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:55:16Z"
+          },
+          {
+            "id": 1373225671,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:55:53Z"
+          },
+          {
+            "id": 1373226234,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:56:15Z"
+          },
+          {
+            "id": 1373228901,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:57:59Z"
+          },
+          {
+            "id": 1373228970,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:58:02Z"
+          },
+          {
+            "id": 1373230891,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T13:59:17Z"
+          },
+          {
+            "id": 1373234470,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T14:01:38Z"
+          },
+          {
+            "id": 1373235119,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-10-26T14:02:05Z"
           }
         ]
       },
@@ -268,18 +390,364 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1574892382,
+    "author": {
+      "id": 23304,
+      "login": "dims",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-10-26T13:37:28Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1699690150",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:39:02Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1699716365",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:50:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699718492",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:50:58Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699723556",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:53:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699723914",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:53:12Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699728867",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:55:16Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699730354",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:55:54Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699731249",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:56:15Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699735729",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:57:59Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699735844",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:58:02Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699738947",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:59:17Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699747172",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T14:01:38Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1699748222",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T14:02:05Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1781146413",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:37:37Z"
+      },
+      {
+        "id": "1781146632",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:37:45Z"
+      },
+      {
+        "id": "1781146945",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:37:54Z"
+      },
+      {
+        "id": "1781147740",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:38:22Z"
+      },
+      {
+        "id": "1781149227",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:39:09Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1781149929",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:39:35Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1781197023",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T14:03:11Z"
+      },
+      {
+        "id": "1781197242",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T14:03:18Z"
+      },
+      {
+        "id": "1781197800",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T14:03:38Z"
+      },
+      {
+        "id": "1781309721",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T15:03:09Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1373216646",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:50:05Z"
+      },
+      {
+        "id": "1373218019",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:50:58Z"
+      },
+      {
+        "id": "1373221233",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:53:03Z"
+      },
+      {
+        "id": "1373221495",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:53:12Z"
+      },
+      {
+        "id": "1373224733",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:55:16Z"
+      },
+      {
+        "id": "1373225671",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:55:53Z"
+      },
+      {
+        "id": "1373226234",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:56:15Z"
+      },
+      {
+        "id": "1373228901",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:57:59Z"
+      },
+      {
+        "id": "1373228970",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:58:02Z"
+      },
+      {
+        "id": "1373230891",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T13:59:17Z"
+      },
+      {
+        "id": "1373234470",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T14:01:38Z"
+      },
+      {
+        "id": "1373235119",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-26T14:02:05Z"
+      }
+    ]
   }
 }
