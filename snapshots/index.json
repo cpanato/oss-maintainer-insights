@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-21T22:22:14Z",
+  "attempted_at": "2026-11-22T02:38:48Z",
   "entries": [
-    {
-      "repository": "prometheus/prometheus",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "helm/helm",
       "status": "fresh",
@@ -39,16 +34,79 @@
     },
     {
       "repository": "ossf/allstar",
-      "status": "fresh",
-      "requests": 0
+      "status": "updated",
+      "requests": 11,
+      "progress": {
+        "population": {
+          "inspected_prs": 100,
+          "human_authored_prs": 29,
+          "bot_authored_prs": 27,
+          "draft_prs": 0,
+          "missing_author_prs": 0,
+          "outside_window_prs": 44,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-24T02:38:48.000Z",
+          "end": "2026-11-22T02:38:48.000Z"
+        },
+        "enumerated_prs": 100,
+        "eligible_prs": 56,
+        "covered_prs": 56,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "sigstore/cosign",
-      "status": "fresh",
-      "requests": 0
+      "status": "updated",
+      "requests": 54,
+      "progress": {
+        "population": {
+          "inspected_prs": 200,
+          "human_authored_prs": 65,
+          "bot_authored_prs": 65,
+          "draft_prs": 1,
+          "missing_author_prs": 0,
+          "outside_window_prs": 69,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-24T02:38:52.000Z",
+          "end": "2026-11-22T02:38:52.000Z"
+        },
+        "enumerated_prs": 200,
+        "eligible_prs": 130,
+        "covered_prs": 130,
+        "enumeration_complete": true
+      }
     },
     {
       "repository": "kubernetes/kubernetes",
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
+      "progress": {
+        "population": {
+          "inspected_prs": 2400,
+          "human_authored_prs": 2237,
+          "bot_authored_prs": 0,
+          "draft_prs": 93,
+          "missing_author_prs": 0,
+          "outside_window_prs": 70,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-24T02:39:10.000Z",
+          "end": "2026-11-22T02:39:10.000Z"
+        },
+        "enumerated_prs": 2400,
+        "eligible_prs": 2237,
+        "covered_prs": 1049,
+        "enumeration_complete": true
+      }
+    },
+    {
+      "repository": "prometheus/prometheus",
       "status": "fresh",
       "requests": 0
     }

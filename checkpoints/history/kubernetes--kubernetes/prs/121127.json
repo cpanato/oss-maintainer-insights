@@ -1,0 +1,161 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2023-10-12T09:23:33Z",
+    "id": 1550862823,
+    "number": 121127,
+    "user": {
+      "id": 12381034,
+      "login": "MadhavJivrajani",
+      "type": "User"
+    },
+    "created_at": "2023-10-10T22:10:27Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2023-10-12T09:23:33Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "121127": {
+        "id": 1550862823,
+        "updated_at": "2023-10-12T09:23:33Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/121127/comments?per_page=100": {
+        "etag": "W/\"acf4a8af2483a6c6780de911d0f89c0777bdeb775faae02532b4b885f80ea793\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1756344200,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-10-10T22:16:33Z"
+          },
+          {
+            "id": 1756344285,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-10-10T22:16:39Z"
+          },
+          {
+            "id": 1759068920,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-10-12T07:19:58Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/121127/comments?per_page=100": {
+        "etag": "\"e7d612a67dea62a46862707987247a663ab24d11967488caac30f221056220fc\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/121127/reviews?per_page=100": {
+        "etag": "W/\"5c07ac5907e729b7413f4cdd812dfd544d02c665752f42ac5479b261e6c47c35\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 1673444505,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "submitted_at": "2023-10-12T07:19:29Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1550862823,
+    "author": {
+      "id": 12381034,
+      "login": "MadhavJivrajani",
+      "type": "User"
+    },
+    "created_at": "2023-10-10T22:10:27Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1673444505",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-12T07:19:29Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1756344200",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T22:16:33Z"
+      },
+      {
+        "id": "1756344285",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T22:16:39Z"
+      },
+      {
+        "id": "1759068920",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-12T07:19:58Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
