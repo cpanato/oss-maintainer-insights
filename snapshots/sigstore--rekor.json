@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 200,
-    "human_authored_prs": 36,
+    "human_authored_prs": 37,
     "bot_authored_prs": 100,
     "draft_prs": 0,
     "missing_author_prs": 0,
-    "outside_window_prs": 64,
+    "outside_window_prs": 63,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 3,
-    "reused_prs": 133,
-    "events_checked_since": "2026-11-15T03:24:10Z",
+    "refreshed_prs": 123,
+    "reused_prs": 14,
+    "events_checked_since": "2026-11-18T21:51:07Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
     "oldest_created_at": "2026-08-24T11:32:32Z",
-    "newest_created_at": "2026-11-20T11:54:54Z"
+    "newest_created_at": "2026-11-21T13:32:01Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,25 +28,25 @@
       "full_name": "sigstore/rekor"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-21T09:01:23.000Z",
+    "collected_at": "2026-11-22T10:25:44.000Z",
     "window": {
-      "start": "2026-08-23T09:01:23.000Z",
-      "end": "2026-11-21T09:01:23.000Z"
+      "start": "2026-08-24T10:25:44.000Z",
+      "end": "2026-11-22T10:25:44.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 38,
+      "bot_events": 39,
       "missing_event_actors": 0,
       "self_events": 6
     },
     "creation_cohort": {
-      "eligible_prs": 136,
+      "eligible_prs": 137,
       "coverage": "complete_for_sample",
       "authors": 9,
       "outcomes": {
-        "open": 1,
+        "open": 2,
         "closed_unmerged": 7,
         "merged": 128
       }
@@ -56,8 +56,8 @@
         "github_review_units": 131,
         "prow_command_units": 0
       },
-      "eligible_prs": 136,
-      "covered_prs": 136,
+      "eligible_prs": 137,
+      "covered_prs": 137,
       "coverage": "complete_for_sample",
       "review_units": 131,
       "participants": 3,
@@ -109,11 +109,11 @@
       }
     },
     "first_response": {
-      "eligible_prs": 136,
-      "covered_prs": 136,
+      "eligible_prs": 137,
+      "covered_prs": 137,
       "coverage": "complete_for_sample",
       "responded_prs": 130,
-      "unanswered_prs": 6,
+      "unanswered_prs": 7,
       "median_ms": {
         "value": 5802500,
         "status": "available"
@@ -122,16 +122,16 @@
   },
   "selection": {
     "listed": 200,
-    "selected": 136,
-    "eligible_on_page": 136,
+    "selected": 137,
+    "eligible_on_page": 137,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 12,
+  "requests": 372,
   "rate": {
-    "remaining": 1557,
+    "remaining": 2486,
     "limit": 5000,
-    "resetAt": 1795254308000
+    "resetAt": 1795344801000
   },
   "failures": [],
   "complete": true
