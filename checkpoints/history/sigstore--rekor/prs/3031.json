@@ -1,8 +1,8 @@
 {
-  "generation": 11,
-  "observed_at": "2026-11-14T07:00:17Z",
+  "generation": 12,
+  "observed_at": "2026-11-23T08:20:52Z",
   "pr": {
-    "updated_at": "2026-11-09T18:44:55Z",
+    "updated_at": "2026-11-20T16:25:56Z",
     "id": 4966329294,
     "number": 3031,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-22T11:05:33Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-20T16:25:52Z"
   },
   "state": {
     "tracked_prs": {
       "3031": {
         "id": 4966329294,
-        "updated_at": "2026-11-09T18:44:55Z",
-        "checked_at": "2026-11-14T07:00:17Z",
-        "state": "open"
+        "updated_at": "2026-11-20T16:25:56Z",
+        "checked_at": "2026-11-23T08:20:52Z",
+        "state": "closed"
       }
     },
     "repository_id": 272963353,
@@ -31,7 +31,7 @@
     "repository": "sigstore/rekor",
     "pages": {
       "/repositories/272963353/issues/3031/comments?per_page=100": {
-        "etag": "W/\"199cd902dc118a2d8d9d4173a8a07ab219a361cbc5a08a4f9dc83246f6365ef7\"",
+        "etag": "W/\"c22362e53930190b7b5d3b40191093a463402a3b42c5ec569897ac48ffa62cdf\"",
         "next": "",
         "value": [
           {
@@ -51,18 +51,47 @@
               "type": "User"
             },
             "created_at": "2026-11-09T18:44:55Z"
+          },
+          {
+            "id": 6979344061,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "created_at": "2026-11-18T13:02:56Z"
+          },
+          {
+            "id": 7042171421,
+            "user": {
+              "id": 336875025,
+              "login": "kitkatt7",
+              "type": "User"
+            },
+            "created_at": "2026-11-20T14:33:26Z"
           }
         ]
       },
       "/repositories/272963353/pulls/3031/comments?per_page=100": {
-        "etag": "\"b6ba42614339d01561f7d59f692c9ea6a007e115c91e07b61260410c42af4fbe\"",
+        "etag": "\"5a2a4b7a3b763f099e315c6987fb0c65b1ee3b9d8c3310558b35da55435109f2\"",
         "next": "",
         "value": []
       },
       "/repositories/272963353/pulls/3031/reviews?per_page=100": {
-        "etag": "\"b6ba42614339d01561f7d59f692c9ea6a007e115c91e07b61260410c42af4fbe\"",
+        "etag": "W/\"8167383a460f86202a87a8107cc7c5c0e54ed273c745104d3878ef731143c3cb\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5995747954,
+            "user": {
+              "id": 2845093,
+              "login": "bobcallaway",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-20T16:12:43Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -75,13 +104,24 @@
     },
     "created_at": "2026-10-22T11:05:33Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5995747954",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T16:12:43Z",
+        "state": "APPROVED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "6421362630",
@@ -100,6 +140,24 @@
           "type": "User"
         },
         "occurred_at": "2026-11-09T18:44:55Z"
+      },
+      {
+        "id": "6979344061",
+        "actor": {
+          "id": 2845093,
+          "login": "bobcallaway",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-18T13:02:56Z"
+      },
+      {
+        "id": "7042171421",
+        "actor": {
+          "id": 336875025,
+          "login": "kitkatt7",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T14:33:26Z"
       }
     ],
     "review_comments": []
