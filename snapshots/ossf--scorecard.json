@@ -1,23 +1,23 @@
 {
   "population": {
     "inspected_prs": 300,
-    "human_authored_prs": 134,
+    "human_authored_prs": 135,
     "bot_authored_prs": 73,
     "draft_prs": 21,
     "missing_author_prs": 0,
-    "outside_window_prs": 72,
+    "outside_window_prs": 71,
     "after_observation_prs": 0
   },
   "collection": {
     "mode": "incremental",
-    "refreshed_prs": 189,
-    "reused_prs": 18,
-    "events_checked_since": "2026-11-16T12:09:11Z",
+    "refreshed_prs": 72,
+    "reused_prs": 136,
+    "events_checked_since": "2026-11-18T21:51:21Z",
     "reconciliation_interval_days": 7
   },
   "sample_age": {
     "oldest_created_at": "2026-08-26T06:23:15Z",
-    "newest_created_at": "2026-11-20T08:24:53Z"
+    "newest_created_at": "2026-11-22T11:15:18Z"
   },
   "policy": "all-non-draft-prs-created-in-90-days-v2",
   "result": {
@@ -28,43 +28,43 @@
       "full_name": "ossf/scorecard"
     },
     "mode": "live_sample",
-    "collected_at": "2026-11-22T10:27:14.000Z",
+    "collected_at": "2026-11-23T20:32:16.000Z",
     "window": {
-      "start": "2026-08-24T10:27:14.000Z",
-      "end": "2026-11-22T10:27:14.000Z"
+      "start": "2026-08-25T20:32:16.000Z",
+      "end": "2026-11-23T20:32:16.000Z"
     },
     "exclusions": {
       "draft_prs": 0,
       "bot_authors": 0,
       "missing_authors": 0,
-      "bot_events": 241,
+      "bot_events": 242,
       "missing_event_actors": 0,
-      "self_events": 105
+      "self_events": 107
     },
     "creation_cohort": {
-      "eligible_prs": 207,
+      "eligible_prs": 208,
       "coverage": "complete_for_sample",
-      "authors": 58,
+      "authors": 59,
       "outcomes": {
         "open": 62,
         "closed_unmerged": 51,
-        "merged": 94
+        "merged": 95
       }
     },
     "review_activity": {
       "sources": {
-        "github_review_units": 73,
+        "github_review_units": 75,
         "prow_command_units": 0
       },
-      "eligible_prs": 207,
-      "covered_prs": 207,
+      "eligible_prs": 208,
+      "covered_prs": 208,
       "coverage": "complete_for_sample",
-      "review_units": 73,
+      "review_units": 75,
       "participants": 13,
       "distribution": [
         {
           "sources": {
-            "github_review_units": 53,
+            "github_review_units": 54,
             "prow_command_units": 0
           },
           "actor": {
@@ -72,7 +72,7 @@
             "login": "justaugustus",
             "type": "User"
           },
-          "review_units": 53
+          "review_units": 54
         },
         {
           "sources": {
@@ -118,6 +118,18 @@
           "actor": {
             "id": 6064089,
             "login": "spencerschrock",
+            "type": "User"
+          },
+          "review_units": 2
+        },
+        {
+          "sources": {
+            "github_review_units": 2,
+            "prow_command_units": 0
+          },
+          "actor": {
+            "id": 190766850,
+            "login": "Jean-Regis-M",
             "type": "User"
           },
           "review_units": 2
@@ -205,18 +217,6 @@
             "type": "User"
           },
           "review_units": 1
-        },
-        {
-          "sources": {
-            "github_review_units": 1,
-            "prow_command_units": 0
-          },
-          "actor": {
-            "id": 190766850,
-            "login": "Jean-Regis-M",
-            "type": "User"
-          },
-          "review_units": 1
         }
       ],
       "concentration_80": {
@@ -224,34 +224,34 @@
         "status": "available"
       },
       "largest_reviewer_share": {
-        "value": 0.726027397260274,
+        "value": 0.72,
         "status": "available"
       }
     },
     "first_response": {
-      "eligible_prs": 207,
-      "covered_prs": 207,
+      "eligible_prs": 208,
+      "covered_prs": 208,
       "coverage": "complete_for_sample",
-      "responded_prs": 84,
-      "unanswered_prs": 123,
+      "responded_prs": 86,
+      "unanswered_prs": 122,
       "median_ms": {
-        "value": 116807500,
+        "value": 124186000,
         "status": "available"
       }
     }
   },
   "selection": {
     "listed": 300,
-    "selected": 207,
-    "eligible_on_page": 207,
+    "selected": 208,
+    "eligible_on_page": 208,
     "truncated": false,
     "list_has_more": false
   },
-  "requests": 571,
+  "requests": 220,
   "rate": {
-    "remaining": 1915,
+    "remaining": 4778,
     "limit": 5000,
-    "resetAt": 1795344801000
+    "resetAt": 1795469499000
   },
   "failures": [],
   "complete": true
