@@ -16,6 +16,14 @@
     "merged_at": "2023-10-17T15:21:14Z"
   },
   "state": {
+    "tracked_prs": {
+      "121121": {
+        "id": 1550617937,
+        "updated_at": "2023-11-22T14:42:47Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
@@ -179,6 +187,11 @@
           }
         ]
       },
+      "/repositories/20580498/pulls/121121/comments?per_page=100": {
+        "etag": "\"a4867e761ff04cc5767d2256a2120c38ffc978e6b31c3f18c207c894f7063525\"",
+        "next": "",
+        "value": []
+      },
       "/repositories/20580498/pulls/121121/reviews?per_page=100": {
         "etag": "W/\"87353e030c2d5d9d721f90fa7dcd4de1f853ff07dd18e86d87bb93028f368597\"",
         "next": "",
@@ -211,18 +224,198 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1550617937,
+    "author": {
+      "id": 99994218,
+      "login": "kiashok",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-10-10T19:43:00Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1680836140",
+        "actor": {
+          "id": 12767641,
+          "login": "mikebrow",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-16T19:41:31Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1682414474",
+        "actor": {
+          "id": 9082919,
+          "login": "haircommander",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-17T13:44:14Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1756114101",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T19:43:11Z"
+      },
+      {
+        "id": "1756114985",
+        "actor": {
+          "id": 99994218,
+          "login": "kiashok",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T19:43:54Z"
+      },
+      {
+        "id": "1756142573",
+        "actor": {
+          "id": 648372,
+          "login": "jsturtevant",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T20:04:17Z"
+      },
+      {
+        "id": "1756143664",
+        "actor": {
+          "id": 648372,
+          "login": "jsturtevant",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T20:05:14Z"
+      },
+      {
+        "id": "1756459930",
+        "actor": {
+          "id": 648372,
+          "login": "jsturtevant",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T23:27:44Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1756460496",
+        "actor": {
+          "id": 648372,
+          "login": "jsturtevant",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T23:28:33Z"
+      },
+      {
+        "id": "1756460569",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-10T23:28:41Z"
+      },
+      {
+        "id": "1761972015",
+        "actor": {
+          "id": 99994218,
+          "login": "kiashok",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-13T18:14:59Z"
+      },
+      {
+        "id": "1763995350",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-16T08:37:21Z"
+      },
+      {
+        "id": "1764001570",
+        "actor": {
+          "id": 2010320,
+          "login": "pacoxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-16T08:41:09Z"
+      },
+      {
+        "id": "1764897062",
+        "actor": {
+          "id": 99994218,
+          "login": "kiashok",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-16T16:57:49Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1765138722",
+        "actor": {
+          "id": 9082919,
+          "login": "haircommander",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-16T19:27:06Z"
+      },
+      {
+        "id": "1765138842",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-16T19:27:12Z"
+      },
+      {
+        "id": "1765788167",
+        "actor": {
+          "id": 8090069,
+          "login": "hailkomputer",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-17T07:00:13Z"
+      },
+      {
+        "id": "1766451615",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-10-17T13:44:36Z"
+      },
+      {
+        "id": "1822902553",
+        "actor": {
+          "id": 22591623,
+          "login": "sftim",
+          "type": "User"
+        },
+        "occurred_at": "2023-11-22T14:42:45Z"
+      }
+    ],
+    "review_comments": []
   }
 }

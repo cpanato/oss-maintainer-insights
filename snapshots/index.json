@@ -1,32 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-22T18:01:49Z",
+  "attempted_at": "2026-11-22T23:48:25Z",
   "entries": [
-    {
-      "repository": "argoproj/argo-cd",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
-      "progress": {
-        "population": {
-          "inspected_prs": 1400,
-          "human_authored_prs": 793,
-          "bot_authored_prs": 558,
-          "draft_prs": 35,
-          "missing_author_prs": 0,
-          "outside_window_prs": 14,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-24T10:19:54.000Z",
-          "end": "2026-11-22T10:19:54.000Z"
-        },
-        "enumerated_prs": 1400,
-        "eligible_prs": 1351,
-        "covered_prs": 835,
-        "enumeration_complete": true
-      }
-    },
     {
       "repository": "argoproj/argo-helm",
       "status": "fresh",
@@ -73,15 +48,14 @@
         },
         "enumerated_prs": 2400,
         "eligible_prs": 2237,
-        "covered_prs": 1649,
+        "covered_prs": 1948,
         "enumeration_complete": true
       }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 171,
       "progress": {
         "population": {
           "inspected_prs": 900,
@@ -98,15 +72,14 @@
         },
         "enumerated_prs": 900,
         "eligible_prs": 824,
-        "covered_prs": 767,
+        "covered_prs": 824,
         "enumeration_complete": true
       }
     },
     {
       "repository": "helm/helm",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 15,
       "progress": {
         "population": {
           "inspected_prs": 400,
@@ -123,31 +96,37 @@
         },
         "enumerated_prs": 400,
         "eligible_prs": 303,
-        "covered_prs": 298,
+        "covered_prs": 303,
         "enumeration_complete": true
       }
     },
     {
       "repository": "cert-manager/cert-manager",
-      "status": "updated",
-      "requests": 2,
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "argoproj/argo-cd",
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
       "progress": {
         "population": {
-          "inspected_prs": 400,
-          "human_authored_prs": 176,
-          "bot_authored_prs": 181,
-          "draft_prs": 10,
+          "inspected_prs": 1400,
+          "human_authored_prs": 793,
+          "bot_authored_prs": 558,
+          "draft_prs": 35,
           "missing_author_prs": 0,
-          "outside_window_prs": 33,
+          "outside_window_prs": 14,
           "after_observation_prs": 0
         },
         "window": {
-          "start": "2026-08-24T10:16:20.000Z",
-          "end": "2026-11-22T10:16:20.000Z"
+          "start": "2026-08-24T10:19:54.000Z",
+          "end": "2026-11-22T10:19:54.000Z"
         },
-        "enumerated_prs": 400,
-        "eligible_prs": 357,
-        "covered_prs": 357,
+        "enumerated_prs": 1400,
+        "eligible_prs": 1351,
+        "covered_prs": 1135,
         "enumeration_complete": true
       }
     }
