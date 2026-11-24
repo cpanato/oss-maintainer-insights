@@ -1,8 +1,8 @@
 {
-  "generation": 5,
-  "observed_at": "2026-11-11T00:58:44Z",
+  "generation": 6,
+  "observed_at": "2026-11-24T05:06:20Z",
   "pr": {
-    "updated_at": "2026-11-06T08:22:53Z",
+    "updated_at": "2026-11-11T23:34:29Z",
     "id": 5041839735,
     "number": 5372,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-27T22:07:21Z",
     "draft": false,
-    "state": "open",
+    "state": "closed",
     "merged_at": null
   },
   "state": {
     "tracked_prs": {
       "5372": {
         "id": 5041839735,
-        "updated_at": "2026-11-06T08:22:53Z",
-        "checked_at": "2026-11-11T00:58:44Z",
-        "state": "open"
+        "updated_at": "2026-11-11T23:34:29Z",
+        "checked_at": "2026-11-24T05:06:20Z",
+        "state": "closed"
       }
     },
     "repository_id": 302670797,
@@ -31,17 +31,27 @@
     "repository": "ossf/scorecard",
     "pages": {
       "/repositories/302670797/issues/5372/comments?per_page=100": {
-        "etag": "\"ff13729f1973a606b5ffa5019bd1838f415ba5df55589d4a4e47b4c69458a344\"",
+        "etag": "W/\"c97d9c0947ab054daf6e3a2b0f5156282b9cebb684eee85ab5c9edec7aee41cd\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 6809785503,
+            "user": {
+              "id": 49699333,
+              "login": "dependabot[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-11T23:34:21Z"
+          }
+        ]
       },
       "/repositories/302670797/pulls/5372/comments?per_page=100": {
-        "etag": "\"ff13729f1973a606b5ffa5019bd1838f415ba5df55589d4a4e47b4c69458a344\"",
+        "etag": "\"cc2fdbd511d05b6e5d0915de2176a7c72ecc8cbbd56c0c4d1dfeec4a32f6925b\"",
         "next": "",
         "value": []
       },
       "/repositories/302670797/pulls/5372/reviews?per_page=100": {
-        "etag": "W/\"c65aa5e26dff90843e7df2ab7e76f096996adffb53b17e4efa6d9a5fc82bd165\"",
+        "etag": "W/\"ced97226efce2eae2ef1c3232f000854be8b13f3e8313f486801c3350f251b89\"",
         "next": "",
         "value": [
           {
@@ -67,7 +77,7 @@
     },
     "created_at": "2026-10-27T22:07:21Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "closed_unmerged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -85,7 +95,17 @@
         "state": "APPROVED"
       }
     ],
-    "issue_comments": [],
+    "issue_comments": [
+      {
+        "id": "6809785503",
+        "actor": {
+          "id": 49699333,
+          "login": "dependabot[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-11T23:34:21Z"
+      }
+    ],
     "review_comments": []
   }
 }
