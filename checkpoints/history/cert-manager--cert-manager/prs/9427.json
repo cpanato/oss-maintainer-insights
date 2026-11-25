@@ -1,8 +1,8 @@
 {
-  "generation": 4,
-  "observed_at": "2026-11-06T11:32:32Z",
+  "generation": 5,
+  "observed_at": "2026-11-25T01:16:40Z",
   "pr": {
-    "updated_at": "2026-10-10T06:35:29Z",
+    "updated_at": "2026-11-10T09:05:32Z",
     "id": 4746007515,
     "number": 9427,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-05T13:56:02Z",
     "draft": false,
-    "state": "open",
+    "state": "closed",
     "merged_at": null
   },
   "state": {
     "tracked_prs": {
       "9427": {
         "id": 4746007515,
-        "updated_at": "2026-10-10T06:35:29Z",
-        "checked_at": "2026-11-06T11:32:32Z",
-        "state": "open"
+        "updated_at": "2026-11-10T09:05:32Z",
+        "checked_at": "2026-11-25T01:16:40Z",
+        "state": "closed"
       }
     },
     "repository_id": 92313258,
@@ -31,7 +31,7 @@
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/9427/comments?per_page=100": {
-        "etag": "W/\"3b31d4e3fa541c09852a87274c12e9ff7ef594731bc7f68b8974c65a92fe1fda\"",
+        "etag": "W/\"c32e9839e24eebf1579a5ccd9cecb410a87d05680055fe2263393ed471cbba3d\"",
         "next": "",
         "value": [
           {
@@ -69,11 +69,29 @@
               "type": "User"
             },
             "created_at": "2026-10-10T06:35:26Z"
+          },
+          {
+            "id": 6763366391,
+            "user": {
+              "id": 57584831,
+              "login": "lunarwhite",
+              "type": "User"
+            },
+            "created_at": "2026-11-10T09:05:26Z"
+          },
+          {
+            "id": 6763368254,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-10T09:05:32Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9427/comments?per_page=100": {
-        "etag": "W/\"f5436d98f7199b692cad2cf7c42791ae804356a2cbc93a6a4f8a559a915e1cf1\"",
+        "etag": "W/\"4a3364341368b9455d0865a36dc9206214a19294d84c2986061243755c659a68\"",
         "next": "",
         "value": [
           {
@@ -88,7 +106,7 @@
         ]
       },
       "/repositories/92313258/pulls/9427/reviews?per_page=100": {
-        "etag": "W/\"9b4255323b6aae28ea63dd0727a2bded549aa7931f1e0c08670f9537d45a0392\"",
+        "etag": "W/\"ce6eb130f981ecee9cb617edc8db51d152800d60e7f22a064419c0d7cbce58b1\"",
         "next": "",
         "value": [
           {
@@ -114,7 +132,7 @@
     },
     "created_at": "2026-10-05T13:56:02Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "closed_unmerged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -168,6 +186,24 @@
           "type": "User"
         },
         "occurred_at": "2026-10-10T06:35:26Z"
+      },
+      {
+        "id": "6763366391",
+        "actor": {
+          "id": 57584831,
+          "login": "lunarwhite",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-10T09:05:26Z"
+      },
+      {
+        "id": "6763368254",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-10T09:05:32Z"
       }
     ],
     "review_comments": [

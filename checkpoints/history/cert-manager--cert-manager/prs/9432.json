@@ -1,8 +1,8 @@
 {
-  "generation": 4,
-  "observed_at": "2026-11-06T11:32:32Z",
+  "generation": 5,
+  "observed_at": "2026-11-25T01:16:40Z",
   "pr": {
-    "updated_at": "2026-10-10T18:44:10Z",
+    "updated_at": "2026-11-23T10:01:10Z",
     "id": 4759479234,
     "number": 9432,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-10-06T13:33:08Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-23T09:25:53Z"
   },
   "state": {
     "tracked_prs": {
       "9432": {
         "id": 4759479234,
-        "updated_at": "2026-10-10T18:44:10Z",
-        "checked_at": "2026-11-06T11:32:32Z",
-        "state": "open"
+        "updated_at": "2026-11-23T10:01:10Z",
+        "checked_at": "2026-11-25T01:16:40Z",
+        "state": "closed"
       }
     },
     "repository_id": 92313258,
@@ -31,18 +31,9 @@
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/9432/comments?per_page=100": {
-        "etag": "W/\"e453e7c6a2ecddd57fce4e2056954c7ea0de8aba9728e6f3562a2f6957f3f7ab\"",
+        "etag": "W/\"bdc71a80f78ace3662df79f793957c94faf9e14abdb60088c717cfc444a5975c\"",
         "next": "",
         "value": [
-          {
-            "id": 6017407155,
-            "user": {
-              "id": 167124277,
-              "login": "cert-manager-prow[bot]",
-              "type": "Bot"
-            },
-            "created_at": "2026-10-06T13:33:20Z"
-          },
           {
             "id": 6017408610,
             "user": {
@@ -51,11 +42,60 @@
               "type": "Bot"
             },
             "created_at": "2026-10-06T13:33:25Z"
+          },
+          {
+            "id": 7075673030,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-22T07:02:13Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 7096602196,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-23T09:24:13Z"
+          },
+          {
+            "id": 7096617894,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-23T09:24:55Z"
+          },
+          {
+            "id": 7096638129,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-23T09:25:50Z"
+          },
+          {
+            "id": 7097389364,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "created_at": "2026-11-23T10:01:10Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9432/comments?per_page=100": {
-        "etag": "W/\"e9241d878d4d1b9ca7544a173fb04db511456a4db05cc045e2dfc95cfb631643\"",
+        "etag": "W/\"433f3751485b53447b36858f647ee2298691fcd25ef99d8436a53a4b08585046\"",
         "next": "",
         "value": [
           {
@@ -75,11 +115,83 @@
               "type": "User"
             },
             "created_at": "2026-10-10T18:44:10Z"
+          },
+          {
+            "id": 4648223295,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-20T22:03:26Z"
+          },
+          {
+            "id": 4648223479,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-20T22:03:27Z"
+          },
+          {
+            "id": 4648223637,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-20T22:03:28Z"
+          },
+          {
+            "id": 4663506445,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "created_at": "2026-11-23T08:45:03Z"
+          },
+          {
+            "id": 4663506802,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "created_at": "2026-11-23T08:45:05Z"
+          },
+          {
+            "id": 4663507075,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "created_at": "2026-11-23T08:45:07Z"
+          },
+          {
+            "id": 4663860935,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-23T09:24:05Z"
+          },
+          {
+            "id": 4664221684,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "created_at": "2026-11-23T10:01:08Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9432/reviews?per_page=100": {
-        "etag": "W/\"a5082199d44d5777411ad013f0173d79716b7a4db67fe98813992fba3a6cea36\"",
+        "etag": "W/\"af8140f5c2b8c6acfce9a9e1a0f7bdddb2ebff661a62103fcb8fb400be7d9d44\"",
         "next": "",
         "value": [
           {
@@ -101,6 +213,86 @@
             },
             "submitted_at": "2026-10-10T18:44:10Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 5999989994,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-20T22:03:26Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5999990216,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-20T22:03:27Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5999990398,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-20T22:03:28Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 6018687602,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-23T08:45:03Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 6018688048,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-23T08:45:05Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 6018688405,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-23T08:45:07Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 6019140392,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-23T09:24:05Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 6019604952,
+            "user": {
+              "id": 42143998,
+              "login": "efadeev",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-23T10:01:08Z",
+            "state": "COMMENTED"
           }
         ]
       }
@@ -115,7 +307,7 @@
     },
     "created_at": "2026-10-06T13:33:08Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
@@ -141,18 +333,89 @@
         },
         "occurred_at": "2026-10-10T18:44:10Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "5999989994",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T22:03:26Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5999990216",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T22:03:27Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5999990398",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T22:03:28Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "6018687602",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T08:45:03Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "6018688048",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T08:45:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "6018688405",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T08:45:07Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "6019140392",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T09:24:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "6019604952",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T10:01:08Z",
+        "state": "COMMENTED"
       }
     ],
     "issue_comments": [
-      {
-        "id": "6017407155",
-        "actor": {
-          "id": 167124277,
-          "login": "cert-manager-prow[bot]",
-          "type": "Bot"
-        },
-        "occurred_at": "2026-10-06T13:33:20Z"
-      },
       {
         "id": "6017408610",
         "actor": {
@@ -161,6 +424,55 @@
           "type": "Bot"
         },
         "occurred_at": "2026-10-06T13:33:25Z"
+      },
+      {
+        "id": "7075673030",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-22T07:02:13Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "7096602196",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T09:24:13Z"
+      },
+      {
+        "id": "7096617894",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-23T09:24:55Z"
+      },
+      {
+        "id": "7096638129",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T09:25:50Z"
+      },
+      {
+        "id": "7097389364",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T10:01:10Z"
       }
     ],
     "review_comments": [
@@ -181,6 +493,78 @@
           "type": "User"
         },
         "occurred_at": "2026-10-10T18:44:10Z"
+      },
+      {
+        "id": "4648223295",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T22:03:26Z"
+      },
+      {
+        "id": "4648223479",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T22:03:27Z"
+      },
+      {
+        "id": "4648223637",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T22:03:28Z"
+      },
+      {
+        "id": "4663506445",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T08:45:03Z"
+      },
+      {
+        "id": "4663506802",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T08:45:05Z"
+      },
+      {
+        "id": "4663507075",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T08:45:07Z"
+      },
+      {
+        "id": "4663860935",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T09:24:05Z"
+      },
+      {
+        "id": "4664221684",
+        "actor": {
+          "id": 42143998,
+          "login": "efadeev",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-23T10:01:08Z"
       }
     ]
   }

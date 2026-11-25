@@ -1,55 +1,11 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-25T10:46:04Z",
+  "attempted_at": "2026-11-25T20:10:24Z",
   "entries": [
     {
-      "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
-      "progress": {
-        "population": {
-          "inspected_prs": 2400,
-          "human_authored_prs": 2228,
-          "bot_authored_prs": 0,
-          "draft_prs": 89,
-          "missing_author_prs": 0,
-          "outside_window_prs": 83,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-27T10:46:05.000Z",
-          "end": "2026-11-25T10:46:05.000Z"
-        },
-        "enumerated_prs": 2400,
-        "eligible_prs": 2228,
-        "covered_prs": 1610,
-        "enumeration_complete": true
-      }
-    },
-    {
       "repository": "prometheus/prometheus",
-      "status": "updated",
-      "requests": 128,
-      "progress": {
-        "population": {
-          "inspected_prs": 900,
-          "human_authored_prs": 632,
-          "bot_authored_prs": 195,
-          "draft_prs": 45,
-          "missing_author_prs": 0,
-          "outside_window_prs": 28,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-27T01:08:28.000Z",
-          "end": "2026-11-25T01:08:28.000Z"
-        },
-        "enumerated_prs": 900,
-        "eligible_prs": 827,
-        "covered_prs": 827,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "helm/helm",
@@ -65,7 +21,7 @@
       "repository": "argoproj/argo-cd",
       "status": "pending",
       "reason": "partial",
-      "requests": 131,
+      "requests": 900,
       "progress": {
         "population": {
           "inspected_prs": 1500,
@@ -82,7 +38,7 @@
         },
         "enumerated_prs": 1500,
         "eligible_prs": 1401,
-        "covered_prs": 1042,
+        "covered_prs": 1342,
         "enumeration_complete": true
       }
     },
@@ -110,6 +66,31 @@
       "repository": "sigstore/cosign",
       "status": "fresh",
       "requests": 0
+    },
+    {
+      "repository": "kubernetes/kubernetes",
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
+      "progress": {
+        "population": {
+          "inspected_prs": 2400,
+          "human_authored_prs": 2228,
+          "bot_authored_prs": 0,
+          "draft_prs": 89,
+          "missing_author_prs": 0,
+          "outside_window_prs": 83,
+          "after_observation_prs": 0
+        },
+        "window": {
+          "start": "2026-08-27T10:46:05.000Z",
+          "end": "2026-11-25T10:46:05.000Z"
+        },
+        "enumerated_prs": 2400,
+        "eligible_prs": 2228,
+        "covered_prs": 1910,
+        "enumeration_complete": true
+      }
     }
   ]
 }

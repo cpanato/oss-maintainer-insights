@@ -1,8 +1,8 @@
 {
-  "generation": 6,
-  "observed_at": "2026-11-10T13:16:54Z",
+  "generation": 7,
+  "observed_at": "2026-11-25T10:51:33Z",
   "pr": {
-    "updated_at": "2026-11-09T20:25:40Z",
+    "updated_at": "2026-11-12T19:00:03Z",
     "id": 5227227602,
     "number": 5209,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-11-09T16:23:47Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-12T19:00:00Z"
   },
   "state": {
     "tracked_prs": {
       "5209": {
         "id": 5227227602,
-        "updated_at": "2026-11-09T20:25:40Z",
-        "checked_at": "2026-11-10T13:16:54Z",
-        "state": "open"
+        "updated_at": "2026-11-12T19:00:03Z",
+        "checked_at": "2026-11-25T10:51:33Z",
+        "state": "closed"
       }
     },
     "repository_id": 335952417,
@@ -31,19 +31,30 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/5209/comments?per_page=100": {
-        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
+        "etag": "\"844f135ac7f25e6728586da692de4dee0da5658d8865619c963b8e1449c0ae1c\"",
         "next": "",
         "value": []
       },
       "/repositories/335952417/pulls/5209/comments?per_page=100": {
-        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
+        "etag": "\"844f135ac7f25e6728586da692de4dee0da5658d8865619c963b8e1449c0ae1c\"",
         "next": "",
         "value": []
       },
       "/repositories/335952417/pulls/5209/reviews?per_page=100": {
-        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
+        "etag": "W/\"53b78cf074f8c78f7be405bdd1485a6b37307a78b239a51d32a10ecdfa4c3680\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5880326449,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-12T18:59:43Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -56,13 +67,24 @@
     },
     "created_at": "2026-11-09T16:23:47Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5880326449",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-12T18:59:43Z",
+        "state": "APPROVED"
+      }
+    ],
     "issue_comments": [],
     "review_comments": []
   }

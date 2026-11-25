@@ -1,0 +1,243 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2023-09-08T07:43:43Z",
+    "id": 1506337508,
+    "number": 120497,
+    "user": {
+      "id": 4115580,
+      "login": "cpanato",
+      "type": "User"
+    },
+    "created_at": "2023-09-07T13:45:08Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2023-09-07T18:20:58Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "120497": {
+        "id": 1506337508,
+        "updated_at": "2023-09-08T07:43:43Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/120497/comments?per_page=100": {
+        "etag": "W/\"e2240ed6a5aaf143b9d85eaa2285e3b33ae9f311e82b452c6975eea80296a794\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1710181313,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-09-07T13:45:16Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 1710181924,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-09-07T13:45:39Z"
+          },
+          {
+            "id": 1710244256,
+            "user": {
+              "id": 4115580,
+              "login": "cpanato",
+              "type": "User"
+            },
+            "created_at": "2023-09-07T14:21:43Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1710273040,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2023-09-07T14:38:59Z"
+          },
+          {
+            "id": 1710273264,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-09-07T14:39:07Z"
+          },
+          {
+            "id": 1710554317,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-09-07T17:48:11Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/120497/comments?per_page=100": {
+        "etag": "\"844f135ac7f25e6728586da692de4dee0da5658d8865619c963b8e1449c0ae1c\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/120497/reviews?per_page=100": {
+        "etag": "W/\"ecab970c85d5baa2f0ac81fa9386c7f1fe69cf8b69ff5f1b1807a515494e526b\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1615484298,
+            "user": {
+              "id": 695473,
+              "login": "saschagrunert",
+              "type": "User"
+            },
+            "submitted_at": "2023-09-07T13:47:25Z",
+            "state": "APPROVED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1615963327,
+            "user": {
+              "id": 18719127,
+              "login": "xmudrii",
+              "type": "User"
+            },
+            "submitted_at": "2023-09-07T17:47:46Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1506337508,
+    "author": {
+      "id": 4115580,
+      "login": "cpanato",
+      "type": "User"
+    },
+    "created_at": "2023-09-07T13:45:08Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1615484298",
+        "actor": {
+          "id": 695473,
+          "login": "saschagrunert",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-07T13:47:25Z",
+        "state": "APPROVED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1615963327",
+        "actor": {
+          "id": 18719127,
+          "login": "xmudrii",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-07T17:47:46Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1710181313",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-07T13:45:16Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "1710181924",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-07T13:45:39Z"
+      },
+      {
+        "id": "1710244256",
+        "actor": {
+          "id": 4115580,
+          "login": "cpanato",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-07T14:21:43Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1710273040",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-07T14:38:59Z"
+      },
+      {
+        "id": "1710273264",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-07T14:39:07Z"
+      },
+      {
+        "id": "1710554317",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-07T17:48:11Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
