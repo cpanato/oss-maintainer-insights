@@ -1,8 +1,8 @@
 {
-  "generation": 6,
-  "observed_at": "2026-11-10T13:16:54Z",
+  "generation": 7,
+  "observed_at": "2026-11-25T10:51:33Z",
   "pr": {
-    "updated_at": "2026-11-10T00:41:50Z",
+    "updated_at": "2026-11-18T00:09:30Z",
     "id": 4417431202,
     "number": 5088,
     "user": {
@@ -12,16 +12,16 @@
     },
     "created_at": "2026-09-02T00:11:08Z",
     "draft": false,
-    "state": "open",
-    "merged_at": null
+    "state": "closed",
+    "merged_at": "2026-11-11T23:54:19Z"
   },
   "state": {
     "tracked_prs": {
       "5088": {
         "id": 4417431202,
-        "updated_at": "2026-11-10T00:41:50Z",
-        "checked_at": "2026-11-10T13:16:54Z",
-        "state": "open"
+        "updated_at": "2026-11-18T00:09:30Z",
+        "checked_at": "2026-11-25T10:51:33Z",
+        "state": "closed"
       }
     },
     "repository_id": 335952417,
@@ -31,7 +31,7 @@
     "repository": "sigstore/cosign",
     "pages": {
       "/repositories/335952417/issues/5088/comments?per_page=100": {
-        "etag": "W/\"daa0baf45a86d33f758fb2d800c6d3ae942285fffe946a419eecff9e235ce17a\"",
+        "etag": "W/\"a96b6ac4bf3dc2d716d98f98b4970c01fe57fc67346ff0f8bcbbe5d6a63dcbc2\"",
         "next": "",
         "value": [
           {
@@ -55,14 +55,92 @@
         ]
       },
       "/repositories/335952417/pulls/5088/comments?per_page=100": {
-        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
+        "etag": "W/\"6a855b8238788a4e55777f5ba7d74867ae21c4ae2e33c5681d08fe55fe386748\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 4530406150,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "created_at": "2026-11-10T20:55:04Z"
+          },
+          {
+            "id": 4530559119,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "created_at": "2026-11-10T21:08:53Z"
+          },
+          {
+            "id": 4532806111,
+            "user": {
+              "id": 64337293,
+              "login": "aaronlew02",
+              "type": "User"
+            },
+            "created_at": "2026-11-11T01:31:01Z"
+          },
+          {
+            "id": 4532806890,
+            "user": {
+              "id": 64337293,
+              "login": "aaronlew02",
+              "type": "User"
+            },
+            "created_at": "2026-11-11T01:31:08Z"
+          }
+        ]
       },
       "/repositories/335952417/pulls/5088/reviews?per_page=100": {
-        "etag": "\"0f765cee40b80b5d404c0999f9c792cfd66ce4da4d8a4ee33043532ad164b7ed\"",
+        "etag": "W/\"1937b259e94f085d44be731b9cdef36d79c83dfa79418f057c2a44ca79228b3e\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5849206661,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-10T21:15:45Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5852345856,
+            "user": {
+              "id": 64337293,
+              "login": "aaronlew02",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-11T01:31:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5852347095,
+            "user": {
+              "id": 64337293,
+              "login": "aaronlew02",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-11T01:31:08Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 5866879048,
+            "user": {
+              "id": 1220710,
+              "login": "cmurphy",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-11T23:48:52Z",
+            "state": "APPROVED"
+          }
+        ]
       }
     }
   },
@@ -75,13 +153,54 @@
     },
     "created_at": "2026-09-02T00:11:08Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5849206661",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-10T21:15:45Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5852345856",
+        "actor": {
+          "id": 64337293,
+          "login": "aaronlew02",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-11T01:31:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5852347095",
+        "actor": {
+          "id": 64337293,
+          "login": "aaronlew02",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-11T01:31:08Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "5866879048",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-11T23:48:52Z",
+        "state": "APPROVED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "5502370703",
@@ -102,6 +221,43 @@
         "occurred_at": "2026-10-09T01:04:36Z"
       }
     ],
-    "review_comments": []
+    "review_comments": [
+      {
+        "id": "4530406150",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-10T20:55:04Z"
+      },
+      {
+        "id": "4530559119",
+        "actor": {
+          "id": 1220710,
+          "login": "cmurphy",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-10T21:08:53Z"
+      },
+      {
+        "id": "4532806111",
+        "actor": {
+          "id": 64337293,
+          "login": "aaronlew02",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-11T01:31:01Z"
+      },
+      {
+        "id": "4532806890",
+        "actor": {
+          "id": 64337293,
+          "login": "aaronlew02",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-11T01:31:08Z"
+      }
+    ]
   }
 }
