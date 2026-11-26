@@ -1,17 +1,11 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-26T13:07:56Z",
+  "attempted_at": "2026-11-26T22:35:01Z",
   "entries": [
     {
-      "repository": "cert-manager/cert-manager",
-      "status": "fresh",
-      "requests": 0
-    },
-    {
       "repository": "argoproj/argo-cd",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 233,
       "progress": {
         "population": {
           "inspected_prs": 1500,
@@ -28,7 +22,7 @@
         },
         "enumerated_prs": 1500,
         "eligible_prs": 1416,
-        "covered_prs": 1338,
+        "covered_prs": 1416,
         "enumeration_complete": true
       }
     },
@@ -59,54 +53,41 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "updated",
-      "requests": 56,
+      "status": "pending",
+      "reason": "partial",
+      "requests": 900,
       "progress": {
         "population": {
           "inspected_prs": 2400,
-          "human_authored_prs": 2228,
+          "human_authored_prs": 2217,
           "bot_authored_prs": 0,
           "draft_prs": 89,
           "missing_author_prs": 0,
-          "outside_window_prs": 83,
+          "outside_window_prs": 94,
           "after_observation_prs": 0
         },
         "window": {
-          "start": "2026-08-27T10:46:05.000Z",
-          "end": "2026-11-25T10:46:05.000Z"
+          "start": "2026-08-28T22:36:16.000Z",
+          "end": "2026-11-26T22:36:16.000Z"
         },
         "enumerated_prs": 2400,
-        "eligible_prs": 2228,
-        "covered_prs": 2228,
+        "eligible_prs": 2217,
+        "covered_prs": 1368,
         "enumeration_complete": true
       }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "updated",
-      "requests": 284,
-      "progress": {
-        "population": {
-          "inspected_prs": 900,
-          "human_authored_prs": 637,
-          "bot_authored_prs": 196,
-          "draft_prs": 43,
-          "missing_author_prs": 0,
-          "outside_window_prs": 24,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-28T03:14:24.000Z",
-          "end": "2026-11-26T03:14:24.000Z"
-        },
-        "enumerated_prs": 900,
-        "eligible_prs": 833,
-        "covered_prs": 833,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "helm/helm",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "cert-manager/cert-manager",
       "status": "fresh",
       "requests": 0
     }

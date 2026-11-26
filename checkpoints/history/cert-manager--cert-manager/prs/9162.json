@@ -16,12 +16,88 @@
     "merged_at": "2026-11-20T22:25:26Z"
   },
   "state": {
+    "tracked_prs": {
+      "9162": {
+        "id": 4289950294,
+        "updated_at": "2026-11-20T22:25:26Z",
+        "checked_at": "2026-11-25T01:16:40Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 92313258,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "cert-manager/cert-manager",
-    "pages": {}
+    "pages": {
+      "/repositories/92313258/issues/9162/comments?per_page=100": {
+        "etag": "W/\"a7aee9d6bb2f1b42a503133a2ab7f9e01ac4e722eada586ec5f1684da69aaf3c\"",
+        "next": "",
+        "value": [
+          {
+            "id": 6860269344,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-13T17:33:09Z"
+          },
+          {
+            "id": 7051525727,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-20T21:53:57Z"
+          },
+          {
+            "id": 7051684438,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-20T22:02:37Z"
+          },
+          {
+            "id": 7051686330,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-20T22:02:44Z"
+          }
+        ]
+      },
+      "/repositories/92313258/pulls/9162/comments?per_page=100": {
+        "etag": "\"2affe698496eea82982308382cd6642367f038fbbb74a83206cd76e2360af89f\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/92313258/pulls/9162/reviews?per_page=100": {
+        "etag": "W/\"af38fcf1906c7827dd9ca3e9b733834b2c0202fa35e6052b3f415c828fbdf72a\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 5895425891,
+            "user": {
+              "id": 42113979,
+              "login": "inteon",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-13T17:32:58Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
   },
   "input": {
     "id": 4289950294,
@@ -32,31 +108,64 @@
     },
     "created_at": "2026-08-16T12:04:50Z",
     "draft": false,
-    "outcome": "open",
+    "outcome": "merged",
     "coverage": {
       "reviews": true,
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "5895425891",
+        "actor": {
+          "id": 42113979,
+          "login": "inteon",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-13T17:32:58Z",
+        "state": "APPROVED"
+      }
+    ],
     "issue_comments": [
       {
-        "id": "5307341500",
+        "id": "6860269344",
         "actor": {
           "id": 167124277,
           "login": "cert-manager-prow[bot]",
           "type": "Bot"
         },
-        "occurred_at": "2026-08-16T12:04:54Z"
+        "occurred_at": "2026-11-13T17:33:09Z"
       },
       {
-        "id": "5307341767",
+        "id": "7051525727",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T21:53:57Z"
+      },
+      {
+        "id": "7051684438",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T22:02:37Z"
+      },
+      {
+        "id": "7051686330",
         "actor": {
           "id": 167124277,
           "login": "cert-manager-prow[bot]",
           "type": "Bot"
         },
-        "occurred_at": "2026-08-16T12:04:58Z"
+        "occurred_at": "2026-11-20T22:02:44Z"
       }
     ],
     "review_comments": []
