@@ -1,8 +1,8 @@
 {
-  "generation": 4,
-  "observed_at": "2026-11-06T11:32:32Z",
+  "generation": 5,
+  "observed_at": "2026-11-25T01:16:40Z",
   "pr": {
-    "updated_at": "2026-09-02T06:23:21Z",
+    "updated_at": "2026-11-22T12:56:30Z",
     "id": 4412346094,
     "number": 9245,
     "user": {
@@ -19,8 +19,8 @@
     "tracked_prs": {
       "9245": {
         "id": 4412346094,
-        "updated_at": "2026-09-02T06:23:21Z",
-        "checked_at": "2026-11-06T11:32:32Z",
+        "updated_at": "2026-11-22T12:56:30Z",
+        "checked_at": "2026-11-25T01:16:40Z",
         "state": "open"
       }
     },
@@ -31,18 +31,9 @@
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/9245/comments?per_page=100": {
-        "etag": "W/\"b8006764b351818a8e2c972b90cd7483d86ffa615eaa691e6e659f8cb63b1f88\"",
+        "etag": "W/\"2a8488e308d47d11083014abf5cd31451fbf37c9e31d3dec83c2f8174db12b77\"",
         "next": "",
         "value": [
-          {
-            "id": 5494293157,
-            "user": {
-              "id": 167124277,
-              "login": "cert-manager-prow[bot]",
-              "type": "Bot"
-            },
-            "created_at": "2026-09-01T12:57:48Z"
-          },
           {
             "id": 5505405429,
             "user": {
@@ -51,11 +42,47 @@
               "type": "User"
             },
             "created_at": "2026-09-02T06:23:21Z"
+          },
+          {
+            "id": 7050678041,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-20T21:09:17Z"
+          },
+          {
+            "id": 7059979519,
+            "user": {
+              "id": 2195781,
+              "login": "maelvls",
+              "type": "User"
+            },
+            "created_at": "2026-11-21T08:32:34Z"
+          },
+          {
+            "id": 7059984978,
+            "user": {
+              "id": 167124277,
+              "login": "cert-manager-prow[bot]",
+              "type": "Bot"
+            },
+            "created_at": "2026-11-21T08:33:04Z"
+          },
+          {
+            "id": 7079457194,
+            "user": {
+              "id": 978965,
+              "login": "wallrj",
+              "type": "User"
+            },
+            "created_at": "2026-11-22T12:56:29Z"
           }
         ]
       },
       "/repositories/92313258/pulls/9245/comments?per_page=100": {
-        "etag": "W/\"7acb17b2ac24c02b382f343904ba7116339a173ba3b1d344a240b5484a35d719\"",
+        "etag": "W/\"30b58a9fdb3135f672162fd8a02ef2235d5a15574110fbeaa85eee80357066b3\"",
         "next": "",
         "value": [
           {
@@ -79,7 +106,7 @@
         ]
       },
       "/repositories/92313258/pulls/9245/reviews?per_page=100": {
-        "etag": "W/\"7bc913a5a01b49b040fd92e02fd0d8f0c3af1b4eb73efc9ddd9f7107c29c7a69\"",
+        "etag": "W/\"25ffd3d68e0d373b59b1f9d6385043ba9e1d7c9b722e649bda14960deb48c514\"",
         "next": "",
         "value": [
           {
@@ -111,6 +138,16 @@
             },
             "submitted_at": "2026-09-01T16:10:25Z",
             "state": "COMMENTED"
+          },
+          {
+            "id": 6004163187,
+            "user": {
+              "id": 2195781,
+              "login": "maelvls",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-21T08:32:55Z",
+            "state": "APPROVED"
           }
         ]
       }
@@ -161,18 +198,19 @@
         },
         "occurred_at": "2026-09-01T16:10:25Z",
         "state": "COMMENTED"
+      },
+      {
+        "id": "6004163187",
+        "actor": {
+          "id": 2195781,
+          "login": "maelvls",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-21T08:32:55Z",
+        "state": "APPROVED"
       }
     ],
     "issue_comments": [
-      {
-        "id": "5494293157",
-        "actor": {
-          "id": 167124277,
-          "login": "cert-manager-prow[bot]",
-          "type": "Bot"
-        },
-        "occurred_at": "2026-09-01T12:57:48Z"
-      },
       {
         "id": "5505405429",
         "actor": {
@@ -181,6 +219,42 @@
           "type": "User"
         },
         "occurred_at": "2026-09-02T06:23:21Z"
+      },
+      {
+        "id": "7050678041",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-20T21:09:17Z"
+      },
+      {
+        "id": "7059979519",
+        "actor": {
+          "id": 2195781,
+          "login": "maelvls",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-21T08:32:34Z"
+      },
+      {
+        "id": "7059984978",
+        "actor": {
+          "id": 167124277,
+          "login": "cert-manager-prow[bot]",
+          "type": "Bot"
+        },
+        "occurred_at": "2026-11-21T08:33:04Z"
+      },
+      {
+        "id": "7079457194",
+        "actor": {
+          "id": 978965,
+          "login": "wallrj",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-22T12:56:29Z"
       }
     ],
     "review_comments": [
