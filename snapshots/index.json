@@ -1,12 +1,7 @@
 {
   "schema_version": 1,
-  "attempted_at": "2026-11-27T14:19:26Z",
+  "attempted_at": "2026-11-27T22:55:35Z",
   "entries": [
-    {
-      "repository": "sigstore/rekor",
-      "status": "fresh",
-      "requests": 0
-    },
     {
       "repository": "ossf/scorecard",
       "status": "fresh",
@@ -24,9 +19,8 @@
     },
     {
       "repository": "kubernetes/kubernetes",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 752,
       "progress": {
         "population": {
           "inspected_prs": 2400,
@@ -43,33 +37,14 @@
         },
         "enumerated_prs": 2400,
         "eligible_prs": 2217,
-        "covered_prs": 1967,
+        "covered_prs": 2217,
         "enumeration_complete": true
       }
     },
     {
       "repository": "prometheus/prometheus",
-      "status": "updated",
-      "requests": 248,
-      "progress": {
-        "population": {
-          "inspected_prs": 900,
-          "human_authored_prs": 648,
-          "bot_authored_prs": 195,
-          "draft_prs": 43,
-          "missing_author_prs": 0,
-          "outside_window_prs": 14,
-          "after_observation_prs": 0
-        },
-        "window": {
-          "start": "2026-08-29T04:36:45.000Z",
-          "end": "2026-11-27T04:36:45.000Z"
-        },
-        "enumerated_prs": 900,
-        "eligible_prs": 843,
-        "covered_prs": 843,
-        "enumeration_complete": true
-      }
+      "status": "fresh",
+      "requests": 0
     },
     {
       "repository": "helm/helm",
@@ -83,9 +58,8 @@
     },
     {
       "repository": "argoproj/argo-cd",
-      "status": "pending",
-      "reason": "partial",
-      "requests": 900,
+      "status": "updated",
+      "requests": 104,
       "progress": {
         "population": {
           "inspected_prs": 1500,
@@ -102,12 +76,17 @@
         },
         "enumerated_prs": 1500,
         "eligible_prs": 1425,
-        "covered_prs": 1390,
+        "covered_prs": 1425,
         "enumeration_complete": true
       }
     },
     {
       "repository": "argoproj/argo-helm",
+      "status": "fresh",
+      "requests": 0
+    },
+    {
+      "repository": "sigstore/rekor",
       "status": "fresh",
       "requests": 0
     }

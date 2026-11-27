@@ -1,8 +1,8 @@
 {
-  "generation": 4,
-  "observed_at": "2026-11-06T11:32:32Z",
+  "generation": 5,
+  "observed_at": "2026-11-25T01:16:40Z",
   "pr": {
-    "updated_at": "2026-10-27T15:07:18Z",
+    "updated_at": "2026-11-27T13:13:12Z",
     "id": 3538861535,
     "number": 8722,
     "user": {
@@ -19,8 +19,8 @@
     "tracked_prs": {
       "8722": {
         "id": 3538861535,
-        "updated_at": "2026-10-27T15:07:18Z",
-        "checked_at": "2026-11-06T11:32:32Z",
+        "updated_at": "2026-11-27T13:13:12Z",
+        "checked_at": "2026-11-25T01:16:40Z",
         "state": "open"
       }
     },
@@ -31,7 +31,7 @@
     "repository": "cert-manager/cert-manager",
     "pages": {
       "/repositories/92313258/issues/8722/comments?per_page=100": {
-        "etag": "W/\"5e95dc9b41f7286487f2d698c50343c43a5c5f4d9ebda38f97cf5aa04490dcaf\"",
+        "etag": "W/\"bd27e3f419696ebb8251128642afe8237d53aef9db376ccd2a4b107f45653564\"",
         "next": "",
         "value": [
           {
@@ -87,18 +87,38 @@
               "type": "User"
             },
             "created_at": "2026-10-27T15:07:18Z"
+          },
+          {
+            "id": 7219205265,
+            "user": {
+              "id": 4894735,
+              "login": "MaxRink",
+              "type": "User"
+            },
+            "created_at": "2026-11-27T13:13:12Z"
           }
         ]
       },
       "/repositories/92313258/pulls/8722/comments?per_page=100": {
-        "etag": "\"f6095ab6ceb137a6b8731275b3e78d27c1f75c2c222f6711988ff79f16b13148\"",
+        "etag": "\"99c4bcb47ca2336b2a330fb1ce75777119e6edcb4899997dc9f8f64aa3d53cfb\"",
         "next": "",
         "value": []
       },
       "/repositories/92313258/pulls/8722/reviews?per_page=100": {
-        "etag": "\"f6095ab6ceb137a6b8731275b3e78d27c1f75c2c222f6711988ff79f16b13148\"",
+        "etag": "W/\"f5a6f8450693dda68e3ab394a95b2da61c6b5cd6c8167cba6c4577dcfe88ac9f\"",
         "next": "",
-        "value": []
+        "value": [
+          {
+            "id": 5883881512,
+            "user": {
+              "id": 57584831,
+              "login": "lunarwhite",
+              "type": "User"
+            },
+            "submitted_at": "2026-11-12T23:49:44Z",
+            "state": "COMMENTED"
+          }
+        ]
       }
     }
   },
@@ -117,7 +137,18 @@
       "issue_comments": true,
       "review_comments": true
     },
-    "reviews": [],
+    "reviews": [
+      {
+        "id": "5883881512",
+        "actor": {
+          "id": 57584831,
+          "login": "lunarwhite",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-12T23:49:44Z",
+        "state": "COMMENTED"
+      }
+    ],
     "issue_comments": [
       {
         "id": "4259320400",
@@ -172,6 +203,15 @@
           "type": "User"
         },
         "occurred_at": "2026-10-27T15:07:18Z"
+      },
+      {
+        "id": "7219205265",
+        "actor": {
+          "id": 4894735,
+          "login": "MaxRink",
+          "type": "User"
+        },
+        "occurred_at": "2026-11-27T13:13:12Z"
       }
     ],
     "review_comments": []

@@ -1,0 +1,253 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2023-09-09T18:16:00Z",
+    "id": 1451199672,
+    "number": 119605,
+    "user": {
+      "id": 9448877,
+      "login": "a7i",
+      "type": "User"
+    },
+    "created_at": "2023-07-27T01:45:33Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2023-07-28T08:33:55Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "119605": {
+        "id": 1451199672,
+        "updated_at": "2023-09-09T18:16:00Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/119605/comments?per_page=100": {
+        "etag": "W/\"ba192ab1780600217c21d0daf9208101b22ae5b892a07695bc0912d275f6ae39\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1652792428,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-07-27T01:45:41Z"
+          },
+          {
+            "id": 1652795784,
+            "user": {
+              "id": 23304,
+              "login": "dims",
+              "type": "User"
+            },
+            "created_at": "2023-07-27T01:49:23Z"
+          },
+          {
+            "id": 1654533561,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-07-27T20:36:16Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 1654535248,
+            "user": {
+              "id": 53798,
+              "login": "mrunalp",
+              "type": "User"
+            },
+            "created_at": "2023-07-27T20:37:40Z"
+          },
+          {
+            "id": 1654624729,
+            "user": {
+              "id": 9448877,
+              "login": "a7i",
+              "type": "User"
+            },
+            "created_at": "2023-07-27T21:43:16Z"
+          },
+          {
+            "id": 1655142024,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-07-28T07:05:38Z"
+          },
+          {
+            "id": 1655223572,
+            "user": {
+              "id": 695473,
+              "login": "saschagrunert",
+              "type": "User"
+            },
+            "created_at": "2023-07-28T07:55:57Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119605/comments?per_page=100": {
+        "etag": "\"99c4bcb47ca2336b2a330fb1ce75777119e6edcb4899997dc9f8f64aa3d53cfb\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/119605/reviews?per_page=100": {
+        "etag": "W/\"e753d96f7002a77aaeece80e1a3d392b136832dd039e1a5473bfb76cd58f9eda\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1550731669,
+            "user": {
+              "id": 9950081,
+              "login": "SergeyKanzhelev",
+              "type": "User"
+            },
+            "submitted_at": "2023-07-27T20:36:08Z",
+            "state": "APPROVED"
+          },
+          {
+            "id": 1551494876,
+            "user": {
+              "id": 695473,
+              "login": "saschagrunert",
+              "type": "User"
+            },
+            "submitted_at": "2023-07-28T07:05:32Z",
+            "state": "APPROVED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1451199672,
+    "author": {
+      "id": 9448877,
+      "login": "a7i",
+      "type": "User"
+    },
+    "created_at": "2023-07-27T01:45:33Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1550731669",
+        "actor": {
+          "id": 9950081,
+          "login": "SergeyKanzhelev",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-27T20:36:08Z",
+        "state": "APPROVED"
+      },
+      {
+        "id": "1551494876",
+        "actor": {
+          "id": 695473,
+          "login": "saschagrunert",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-28T07:05:32Z",
+        "state": "APPROVED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1652792428",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-27T01:45:41Z"
+      },
+      {
+        "id": "1652795784",
+        "actor": {
+          "id": 23304,
+          "login": "dims",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-27T01:49:23Z"
+      },
+      {
+        "id": "1654533561",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-27T20:36:16Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "1654535248",
+        "actor": {
+          "id": 53798,
+          "login": "mrunalp",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-27T20:37:40Z"
+      },
+      {
+        "id": "1654624729",
+        "actor": {
+          "id": 9448877,
+          "login": "a7i",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-27T21:43:16Z"
+      },
+      {
+        "id": "1655142024",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-28T07:05:38Z"
+      },
+      {
+        "id": "1655223572",
+        "actor": {
+          "id": 695473,
+          "login": "saschagrunert",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-28T07:55:57Z"
+      }
+    ],
+    "review_comments": []
+  }
+}
