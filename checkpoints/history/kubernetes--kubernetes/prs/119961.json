@@ -16,12 +16,158 @@
     "merged_at": null
   },
   "state": {
+    "tracked_prs": {
+      "119961": {
+        "id": 1476827668,
+        "updated_at": "2023-09-05T09:14:01Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
     "pages": {
+      "/repositories/20580498/issues/119961/comments?per_page=100": {
+        "etag": "W/\"1e40a33c1ae3dd529a3fe65d6d5911b0eeb0a409b1ce9d199e7f9e897ebbb50d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1679956379,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-08-16T04:51:30Z"
+          },
+          {
+            "id": 1679956445,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-08-16T04:51:37Z"
+          },
+          {
+            "id": 1682618515,
+            "user": {
+              "id": 3715412,
+              "login": "jiahuif",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T16:43:01Z"
+          },
+          {
+            "id": 1689209556,
+            "user": {
+              "id": 86399306,
+              "login": "bzsuni",
+              "type": "User"
+            },
+            "created_at": "2023-08-23T03:11:20Z"
+          },
+          {
+            "id": 1689365213,
+            "user": {
+              "id": 22076,
+              "login": "pohly",
+              "type": "User"
+            },
+            "created_at": "2023-08-23T06:37:18Z"
+          },
+          {
+            "id": 1705886538,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-09-05T03:11:22Z"
+          },
+          {
+            "id": 1705946665,
+            "user": {
+              "id": 86399306,
+              "login": "bzsuni",
+              "type": "User"
+            },
+            "created_at": "2023-09-05T05:01:36Z"
+          },
+          {
+            "id": 1705994822,
+            "user": {
+              "id": 86399306,
+              "login": "bzsuni",
+              "type": "User"
+            },
+            "created_at": "2023-09-05T06:04:06Z"
+          },
+          {
+            "id": 1706032763,
+            "user": {
+              "id": 86399306,
+              "login": "bzsuni",
+              "type": "User"
+            },
+            "created_at": "2023-09-05T06:42:25Z"
+          },
+          {
+            "id": 1706053397,
+            "user": {
+              "id": 28390961,
+              "login": "carlory",
+              "type": "User"
+            },
+            "created_at": "2023-09-05T07:01:53Z"
+          },
+          {
+            "id": 1706137609,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-09-05T08:04:22Z"
+          },
+          {
+            "id": 1706142822,
+            "user": {
+              "id": 28390961,
+              "login": "carlory",
+              "type": "User"
+            },
+            "created_at": "2023-09-05T08:08:22Z"
+          },
+          {
+            "id": 1706240808,
+            "user": {
+              "id": 86399306,
+              "login": "bzsuni",
+              "type": "User"
+            },
+            "created_at": "2023-09-05T09:12:49Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119961/comments?per_page=100": {
+        "etag": "W/\"170abf70e89f27d0496aad6e7c3182d525eb3b8c0ade3f98702468a95916d637\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1297485299,
+            "user": {
+              "id": 3715412,
+              "login": "jiahuif",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T16:47:22Z"
+          }
+        ]
+      },
       "/repositories/20580498/pulls/119961/reviews?per_page=100": {
         "etag": "W/\"9eb33337be57f52eee279580a3ebab10307c0e00bb1c58f38109d0612aa4fd5b\"",
         "next": "",
@@ -51,18 +197,171 @@
     }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1476827668,
+    "author": {
+      "id": 86399306,
+      "login": "bzsuni",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-08-16T04:51:28Z",
+    "draft": false,
+    "outcome": "closed_unmerged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1583039005",
+        "actor": {
+          "id": 3715412,
+          "login": "jiahuif",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T16:48:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1588493977",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-22T06:24:06Z",
+        "state": "CHANGES_REQUESTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1679956379",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-16T04:51:30Z"
+      },
+      {
+        "id": "1679956445",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-16T04:51:37Z"
+      },
+      {
+        "id": "1682618515",
+        "actor": {
+          "id": 3715412,
+          "login": "jiahuif",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T16:43:01Z"
+      },
+      {
+        "id": "1689209556",
+        "actor": {
+          "id": 86399306,
+          "login": "bzsuni",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-23T03:11:20Z"
+      },
+      {
+        "id": "1689365213",
+        "actor": {
+          "id": 22076,
+          "login": "pohly",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-23T06:37:18Z"
+      },
+      {
+        "id": "1705886538",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-05T03:11:22Z"
+      },
+      {
+        "id": "1705946665",
+        "actor": {
+          "id": 86399306,
+          "login": "bzsuni",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-05T05:01:36Z"
+      },
+      {
+        "id": "1705994822",
+        "actor": {
+          "id": 86399306,
+          "login": "bzsuni",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-05T06:04:06Z"
+      },
+      {
+        "id": "1706032763",
+        "actor": {
+          "id": 86399306,
+          "login": "bzsuni",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-05T06:42:25Z"
+      },
+      {
+        "id": "1706053397",
+        "actor": {
+          "id": 28390961,
+          "login": "carlory",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-05T07:01:53Z"
+      },
+      {
+        "id": "1706137609",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-05T08:04:22Z"
+      },
+      {
+        "id": "1706142822",
+        "actor": {
+          "id": 28390961,
+          "login": "carlory",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-05T08:08:22Z"
+      },
+      {
+        "id": "1706240808",
+        "actor": {
+          "id": 86399306,
+          "login": "bzsuni",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-05T09:12:49Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1297485299",
+        "actor": {
+          "id": 3715412,
+          "login": "jiahuif",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T16:47:22Z"
+      }
+    ]
   }
 }
