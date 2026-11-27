@@ -1,0 +1,807 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2024-01-25T22:22:19Z",
+    "id": 1469104006,
+    "number": 119870,
+    "user": {
+      "id": 7691399,
+      "login": "Jefftree",
+      "type": "User"
+    },
+    "created_at": "2023-08-09T18:26:25Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2023-09-01T14:54:44Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "119870": {
+        "id": 1469104006,
+        "updated_at": "2024-01-25T22:22:19Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/119870/comments?per_page=100": {
+        "etag": "W/\"950be833394ef29450790d943d3e0f3fe4914348e5e73e6636da1cd7d69cdfb5\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1671928482,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-08-09T18:26:29Z"
+          },
+          {
+            "id": 1672149418,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2023-08-09T21:06:04Z"
+          },
+          {
+            "id": 1673554289,
+            "user": {
+              "id": 3715412,
+              "login": "jiahuif",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T16:36:26Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1702741016,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-09-01T13:21:16Z"
+          },
+          {
+            "id": 1702741187,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-09-01T13:21:23Z"
+          },
+          {
+            "id": 1702741254,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-09-01T13:21:26Z"
+          },
+          {
+            "id": 1702741338,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-09-01T13:21:30Z"
+          },
+          {
+            "id": 1702741577,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-09-01T13:21:40Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119870/comments?per_page=100": {
+        "etag": "W/\"cd00778e5be417b64be3bb64ac9bf6fbfb6e8185faf8510aea490f3fc6f22022\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1289026149,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2023-08-09T18:28:58Z"
+          },
+          {
+            "id": 1289194004,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2023-08-09T21:02:39Z"
+          },
+          {
+            "id": 1291869796,
+            "user": {
+              "id": 351783,
+              "login": "alexzielenski",
+              "type": "User"
+            },
+            "created_at": "2023-08-11T23:30:36Z"
+          },
+          {
+            "id": 1291874395,
+            "user": {
+              "id": 351783,
+              "login": "alexzielenski",
+              "type": "User"
+            },
+            "created_at": "2023-08-11T23:35:10Z"
+          },
+          {
+            "id": 1291885412,
+            "user": {
+              "id": 351783,
+              "login": "alexzielenski",
+              "type": "User"
+            },
+            "created_at": "2023-08-11T23:38:38Z"
+          },
+          {
+            "id": 1291892260,
+            "user": {
+              "id": 351783,
+              "login": "alexzielenski",
+              "type": "User"
+            },
+            "created_at": "2023-08-11T23:52:27Z"
+          },
+          {
+            "id": 1291901797,
+            "user": {
+              "id": 351783,
+              "login": "alexzielenski",
+              "type": "User"
+            },
+            "created_at": "2023-08-11T23:57:12Z"
+          },
+          {
+            "id": 1291904898,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-12T00:04:01Z"
+          },
+          {
+            "id": 1297516959,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T17:15:57Z"
+          },
+          {
+            "id": 1297524663,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T17:23:48Z"
+          },
+          {
+            "id": 1305612738,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T12:43:46Z"
+          },
+          {
+            "id": 1305613468,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T12:44:34Z"
+          },
+          {
+            "id": 1305613961,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T12:45:08Z"
+          },
+          {
+            "id": 1305616496,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T12:47:59Z"
+          },
+          {
+            "id": 1305616655,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T12:48:08Z"
+          },
+          {
+            "id": 1305623860,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T12:55:37Z"
+          },
+          {
+            "id": 1305627946,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T12:58:43Z"
+          },
+          {
+            "id": 1306016257,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T18:31:32Z"
+          },
+          {
+            "id": 1306050887,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "created_at": "2023-08-25T19:06:05Z"
+          },
+          {
+            "id": 1310769535,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "created_at": "2023-08-30T20:12:23Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119870/reviews?per_page=100": {
+        "etag": "W/\"c87fcb4a185db7a027d7c8849748913de0919ce6228a8c402cf8607d30b40d67\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1570300730,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-09T18:28:58Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1570548460,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-09T21:02:39Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1574507174,
+            "user": {
+              "id": 351783,
+              "login": "alexzielenski",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-11T23:53:08Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1574551441,
+            "user": {
+              "id": 351783,
+              "login": "alexzielenski",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-11T23:57:12Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1574555317,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-12T00:04:01Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1583090872,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-17T17:15:57Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1583105154,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-17T17:23:48Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1595644278,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-25T12:59:27Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1596301116,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-25T18:31:33Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1596350427,
+            "user": {
+              "id": 980082,
+              "login": "liggitt",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-25T19:06:05Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1603423171,
+            "user": {
+              "id": 7691399,
+              "login": "Jefftree",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-30T20:12:23Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1469104006,
+    "author": {
+      "id": 7691399,
+      "login": "Jefftree",
+      "type": "User"
+    },
+    "created_at": "2023-08-09T18:26:25Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1570300730",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-09T18:28:58Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1570548460",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-09T21:02:39Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1574507174",
+        "actor": {
+          "id": 351783,
+          "login": "alexzielenski",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-11T23:53:08Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1574551441",
+        "actor": {
+          "id": 351783,
+          "login": "alexzielenski",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-11T23:57:12Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1574555317",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-12T00:04:01Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1583090872",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T17:15:57Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1583105154",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T17:23:48Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1595644278",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T12:59:27Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1596301116",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T18:31:33Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1596350427",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T19:06:05Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1603423171",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-30T20:12:23Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1671928482",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-09T18:26:29Z"
+      },
+      {
+        "id": "1672149418",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-09T21:06:04Z"
+      },
+      {
+        "id": "1673554289",
+        "actor": {
+          "id": 3715412,
+          "login": "jiahuif",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T16:36:26Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1702741016",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-01T13:21:16Z"
+      },
+      {
+        "id": "1702741187",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-01T13:21:23Z"
+      },
+      {
+        "id": "1702741254",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-01T13:21:26Z"
+      },
+      {
+        "id": "1702741338",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-01T13:21:30Z"
+      },
+      {
+        "id": "1702741577",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-09-01T13:21:40Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1289026149",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-09T18:28:58Z"
+      },
+      {
+        "id": "1289194004",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-09T21:02:39Z"
+      },
+      {
+        "id": "1291869796",
+        "actor": {
+          "id": 351783,
+          "login": "alexzielenski",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-11T23:30:36Z"
+      },
+      {
+        "id": "1291874395",
+        "actor": {
+          "id": 351783,
+          "login": "alexzielenski",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-11T23:35:10Z"
+      },
+      {
+        "id": "1291885412",
+        "actor": {
+          "id": 351783,
+          "login": "alexzielenski",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-11T23:38:38Z"
+      },
+      {
+        "id": "1291892260",
+        "actor": {
+          "id": 351783,
+          "login": "alexzielenski",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-11T23:52:27Z"
+      },
+      {
+        "id": "1291901797",
+        "actor": {
+          "id": 351783,
+          "login": "alexzielenski",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-11T23:57:12Z"
+      },
+      {
+        "id": "1291904898",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-12T00:04:01Z"
+      },
+      {
+        "id": "1297516959",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T17:15:57Z"
+      },
+      {
+        "id": "1297524663",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T17:23:48Z"
+      },
+      {
+        "id": "1305612738",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T12:43:46Z"
+      },
+      {
+        "id": "1305613468",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T12:44:34Z"
+      },
+      {
+        "id": "1305613961",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T12:45:08Z"
+      },
+      {
+        "id": "1305616496",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T12:47:59Z"
+      },
+      {
+        "id": "1305616655",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T12:48:08Z"
+      },
+      {
+        "id": "1305623860",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T12:55:37Z"
+      },
+      {
+        "id": "1305627946",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T12:58:43Z"
+      },
+      {
+        "id": "1306016257",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T18:31:32Z"
+      },
+      {
+        "id": "1306050887",
+        "actor": {
+          "id": 980082,
+          "login": "liggitt",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-25T19:06:05Z"
+      },
+      {
+        "id": "1310769535",
+        "actor": {
+          "id": 7691399,
+          "login": "Jefftree",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-30T20:12:23Z"
+      }
+    ]
+  }
+}

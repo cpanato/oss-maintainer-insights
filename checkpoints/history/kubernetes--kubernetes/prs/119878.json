@@ -1,0 +1,887 @@
+{
+  "generation": 2,
+  "observed_at": "2026-10-14T15:12:29Z",
+  "pr": {
+    "updated_at": "2023-08-21T04:05:37Z",
+    "id": 1469503790,
+    "number": 119878,
+    "user": {
+      "id": 1856066,
+      "login": "ritazh",
+      "type": "User"
+    },
+    "created_at": "2023-08-10T01:01:19Z",
+    "draft": false,
+    "state": "closed",
+    "merged_at": "2023-08-19T01:19:21Z"
+  },
+  "state": {
+    "tracked_prs": {
+      "119878": {
+        "id": 1469503790,
+        "updated_at": "2023-08-21T04:05:37Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
+    "repository_id": 20580498,
+    "methodology_version": "1.2.0",
+    "version": 3,
+    "policy": "all-pr-review-history-90-days-v1",
+    "repository": "kubernetes/kubernetes",
+    "pages": {
+      "/repositories/20580498/issues/119878/comments?per_page=100": {
+        "etag": "W/\"5a07bd50158f56a8d7b13042d8335cc30c84333407581ed1e33b6be3900a14f9\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1672381591,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T01:01:23Z"
+          },
+          {
+            "id": 1672551461,
+            "user": {
+              "id": 1856066,
+              "login": "ritazh",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T04:53:38Z"
+          },
+          {
+            "id": 1672551692,
+            "user": {
+              "id": 1856066,
+              "login": "ritazh",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T04:54:04Z"
+          },
+          {
+            "id": 1684167647,
+            "user": {
+              "id": 1856066,
+              "login": "ritazh",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T16:38:06Z"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1684504866,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T22:44:16Z"
+          },
+          {
+            "id": 1684504922,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T22:44:22Z"
+          },
+          {
+            "id": 1684504930,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T22:44:23Z"
+          },
+          {
+            "id": 1684538883,
+            "user": {
+              "id": 1856066,
+              "login": "ritazh",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T23:20:55Z"
+          },
+          {
+            "id": 1684630317,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-08-19T01:13:07Z"
+          },
+          {
+            "id": 1684631146,
+            "user": {
+              "id": 1856066,
+              "login": "ritazh",
+              "type": "User"
+            },
+            "created_at": "2023-08-19T01:14:17Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119878/comments?per_page=100": {
+        "etag": "W/\"6c729e02d1973cefbf2381522ae5bb9cef5481e9c63a95776ffb7d759b5c0a2d\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1290300454,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:17:51Z"
+          },
+          {
+            "id": 1290301081,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:18:20Z"
+          },
+          {
+            "id": 1290302482,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:19:20Z"
+          },
+          {
+            "id": 1290303596,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:20:09Z"
+          },
+          {
+            "id": 1290303774,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:20:17Z"
+          },
+          {
+            "id": 1290304226,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:20:39Z"
+          },
+          {
+            "id": 1290318532,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:29:09Z"
+          },
+          {
+            "id": 1290338043,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:44:28Z"
+          },
+          {
+            "id": 1290338150,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:44:34Z"
+          },
+          {
+            "id": 1290338685,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:45:02Z"
+          },
+          {
+            "id": 1290339880,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-10T15:46:05Z"
+          },
+          {
+            "id": 1293884694,
+            "user": {
+              "id": 1856066,
+              "login": "ritazh",
+              "type": "User"
+            },
+            "created_at": "2023-08-14T19:29:12Z"
+          },
+          {
+            "id": 1297686437,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T20:03:59Z"
+          },
+          {
+            "id": 1297687443,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T20:04:36Z"
+          },
+          {
+            "id": 1297691584,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T20:09:18Z"
+          },
+          {
+            "id": 1297701914,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T20:22:13Z"
+          },
+          {
+            "id": 1297705138,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-17T20:26:12Z"
+          },
+          {
+            "id": 1298009938,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T05:08:55Z"
+          },
+          {
+            "id": 1298011807,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T05:13:09Z"
+          },
+          {
+            "id": 1298012098,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T05:13:50Z"
+          },
+          {
+            "id": 1298012844,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T05:15:20Z"
+          },
+          {
+            "id": 1298013375,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T05:16:23Z"
+          },
+          {
+            "id": 1298013901,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T05:17:38Z"
+          },
+          {
+            "id": 1298014519,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T05:18:52Z"
+          },
+          {
+            "id": 1298015686,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T05:21:17Z"
+          },
+          {
+            "id": 1298786238,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T19:22:41Z"
+          },
+          {
+            "id": 1298787014,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T19:23:42Z"
+          },
+          {
+            "id": 1298787187,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "created_at": "2023-08-18T19:23:56Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119878/reviews?per_page=100": {
+        "etag": "W/\"f81f1348a279dfcd89f850ee386534b0ee21113ce5ec4080fe1d3c46d17b9b81\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1572161262,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-10T15:46:22Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 1577510347,
+            "user": {
+              "id": 1856066,
+              "login": "ritazh",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-14T19:29:13Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1583384280,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-17T20:22:50Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 1583413872,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-17T20:26:13Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1583857909,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-18T12:11:41Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 1585103025,
+            "user": {
+              "id": 7001223,
+              "login": "enj",
+              "type": "User"
+            },
+            "submitted_at": "2023-08-18T19:29:25Z",
+            "state": "CHANGES_REQUESTED"
+          }
+        ]
+      }
+    }
+  },
+  "input": {
+    "id": 1469503790,
+    "author": {
+      "id": 1856066,
+      "login": "ritazh",
+      "type": "User"
+    },
+    "created_at": "2023-08-10T01:01:19Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1572161262",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:46:22Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "1577510347",
+        "actor": {
+          "id": 1856066,
+          "login": "ritazh",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-14T19:29:13Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1583384280",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T20:22:50Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "1583413872",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T20:26:13Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1583857909",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T12:11:41Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "1585103025",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T19:29:25Z",
+        "state": "CHANGES_REQUESTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1672381591",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T01:01:23Z"
+      },
+      {
+        "id": "1672551461",
+        "actor": {
+          "id": 1856066,
+          "login": "ritazh",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T04:53:38Z"
+      },
+      {
+        "id": "1672551692",
+        "actor": {
+          "id": 1856066,
+          "login": "ritazh",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T04:54:04Z"
+      },
+      {
+        "id": "1684167647",
+        "actor": {
+          "id": 1856066,
+          "login": "ritazh",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T16:38:06Z"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1684504866",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T22:44:16Z"
+      },
+      {
+        "id": "1684504922",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T22:44:22Z"
+      },
+      {
+        "id": "1684504930",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T22:44:23Z"
+      },
+      {
+        "id": "1684538883",
+        "actor": {
+          "id": 1856066,
+          "login": "ritazh",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T23:20:55Z"
+      },
+      {
+        "id": "1684630317",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-19T01:13:07Z"
+      },
+      {
+        "id": "1684631146",
+        "actor": {
+          "id": 1856066,
+          "login": "ritazh",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-19T01:14:17Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1290300454",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:17:51Z"
+      },
+      {
+        "id": "1290301081",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:18:20Z"
+      },
+      {
+        "id": "1290302482",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:19:20Z"
+      },
+      {
+        "id": "1290303596",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:20:09Z"
+      },
+      {
+        "id": "1290303774",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:20:17Z"
+      },
+      {
+        "id": "1290304226",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:20:39Z"
+      },
+      {
+        "id": "1290318532",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:29:09Z"
+      },
+      {
+        "id": "1290338043",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:44:28Z"
+      },
+      {
+        "id": "1290338150",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:44:34Z"
+      },
+      {
+        "id": "1290338685",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:45:02Z"
+      },
+      {
+        "id": "1290339880",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-10T15:46:05Z"
+      },
+      {
+        "id": "1293884694",
+        "actor": {
+          "id": 1856066,
+          "login": "ritazh",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-14T19:29:12Z"
+      },
+      {
+        "id": "1297686437",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T20:03:59Z"
+      },
+      {
+        "id": "1297687443",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T20:04:36Z"
+      },
+      {
+        "id": "1297691584",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T20:09:18Z"
+      },
+      {
+        "id": "1297701914",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T20:22:13Z"
+      },
+      {
+        "id": "1297705138",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-17T20:26:12Z"
+      },
+      {
+        "id": "1298009938",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T05:08:55Z"
+      },
+      {
+        "id": "1298011807",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T05:13:09Z"
+      },
+      {
+        "id": "1298012098",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T05:13:50Z"
+      },
+      {
+        "id": "1298012844",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T05:15:20Z"
+      },
+      {
+        "id": "1298013375",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T05:16:23Z"
+      },
+      {
+        "id": "1298013901",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T05:17:38Z"
+      },
+      {
+        "id": "1298014519",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T05:18:52Z"
+      },
+      {
+        "id": "1298015686",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T05:21:17Z"
+      },
+      {
+        "id": "1298786238",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T19:22:41Z"
+      },
+      {
+        "id": "1298787014",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T19:23:42Z"
+      },
+      {
+        "id": "1298787187",
+        "actor": {
+          "id": 7001223,
+          "login": "enj",
+          "type": "User"
+        },
+        "occurred_at": "2023-08-18T19:23:56Z"
+      }
+    ]
+  }
+}
