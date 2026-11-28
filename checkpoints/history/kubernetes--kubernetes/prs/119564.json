@@ -16,26 +16,154 @@
     "merged_at": "2023-07-25T17:00:07Z"
   },
   "state": {
+    "tracked_prs": {
+      "119564": {
+        "id": 1448722427,
+        "updated_at": "2023-07-25T17:00:07Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
-    "pages": {}
+    "pages": {
+      "/repositories/20580498/issues/119564/comments?per_page=100": {
+        "etag": "W/\"e3ddc8a1f10ad1eb9e06559a7a491c968a90ff5f5d1ca9afc5a3865fe7975a7f\"",
+        "next": "",
+        "value": [
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1650116531,
+            "user": {
+              "id": 3262098,
+              "login": "dashpole",
+              "type": "User"
+            },
+            "created_at": "2023-07-25T16:01:28Z"
+          },
+          {
+            "id": 1650116804,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-07-25T16:01:35Z"
+          },
+          {
+            "id": 1650117772,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-07-25T16:02:00Z"
+          },
+          {
+            "id": 1650161143,
+            "user": {
+              "id": 704877,
+              "login": "logicalhan",
+              "type": "User"
+            },
+            "created_at": "2023-07-25T16:28:20Z"
+          },
+          {
+            "id": 1650163698,
+            "user": {
+              "id": 704877,
+              "login": "logicalhan",
+              "type": "User"
+            },
+            "created_at": "2023-07-25T16:30:06Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119564/comments?per_page=100": {
+        "etag": "\"868fc8596df5af299807f98c388f2891650bbc91deab76488f83f8e8878d8ac7\"",
+        "next": "",
+        "value": []
+      },
+      "/repositories/20580498/pulls/119564/reviews?per_page=100": {
+        "etag": "\"868fc8596df5af299807f98c388f2891650bbc91deab76488f83f8e8878d8ac7\"",
+        "next": "",
+        "value": []
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1448722427,
+    "author": {
+      "id": 704877,
+      "login": "logicalhan",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-07-25T16:00:43Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [],
+    "issue_comments": [
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1650116531",
+        "actor": {
+          "id": 3262098,
+          "login": "dashpole",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-25T16:01:28Z"
+      },
+      {
+        "id": "1650116804",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-25T16:01:35Z"
+      },
+      {
+        "id": "1650117772",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-25T16:02:00Z"
+      },
+      {
+        "id": "1650161143",
+        "actor": {
+          "id": 704877,
+          "login": "logicalhan",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-25T16:28:20Z"
+      },
+      {
+        "id": "1650163698",
+        "actor": {
+          "id": 704877,
+          "login": "logicalhan",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-25T16:30:06Z"
+      }
+    ],
+    "review_comments": []
   }
 }
