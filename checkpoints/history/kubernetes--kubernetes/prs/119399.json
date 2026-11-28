@@ -16,26 +16,416 @@
     "merged_at": "2023-08-16T00:14:26Z"
   },
   "state": {
+    "tracked_prs": {
+      "119399": {
+        "id": 1439221879,
+        "updated_at": "2023-08-16T01:03:27Z",
+        "checked_at": "2026-10-14T15:12:29Z",
+        "state": "closed"
+      }
+    },
     "repository_id": 20580498,
     "methodology_version": "1.2.0",
     "version": 3,
     "policy": "all-pr-review-history-90-days-v1",
     "repository": "kubernetes/kubernetes",
-    "pages": {}
+    "pages": {
+      "/repositories/20580498/issues/119399/comments?per_page=100": {
+        "etag": "W/\"fea99cf5627dec67acd9d6b5ba30f375154f7a697168fd25ab34f72dbd1052d7\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1640192880,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-07-18T13:04:39Z"
+          },
+          {
+            "id": 1641219144,
+            "user": {
+              "id": 30396467,
+              "login": "wackxu",
+              "type": "User"
+            },
+            "created_at": "2023-07-19T01:04:43Z"
+          },
+          {
+            "id": 1643017366,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-07-20T02:34:15Z"
+          },
+          {
+            "id": 1645254635,
+            "user": {
+              "id": 30396467,
+              "login": "wackxu",
+              "type": "User"
+            },
+            "created_at": "2023-07-21T09:05:01Z"
+          },
+          {
+            "review_commands": [
+              "approve"
+            ],
+            "id": 1645490314,
+            "user": {
+              "id": 1299064,
+              "login": "alculquicondor",
+              "type": "User"
+            },
+            "created_at": "2023-07-21T12:15:54Z"
+          },
+          {
+            "id": 1645505281,
+            "user": {
+              "id": 1299064,
+              "login": "alculquicondor",
+              "type": "User"
+            },
+            "created_at": "2023-07-21T12:29:04Z"
+          },
+          {
+            "id": 1651547885,
+            "user": {
+              "id": 20407524,
+              "login": "k8s-ci-robot",
+              "type": "User"
+            },
+            "created_at": "2023-07-26T10:55:23Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119399/comments?per_page=100": {
+        "etag": "W/\"6f30fc06a2ed2f11df88541efb98a37e907babff2a3a1da8dda5c6d8fce05f81\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1267446752,
+            "user": {
+              "id": 6007417,
+              "login": "chendave",
+              "type": "User"
+            },
+            "created_at": "2023-07-19T01:43:58Z"
+          },
+          {
+            "id": 1267497495,
+            "user": {
+              "id": 30396467,
+              "login": "wackxu",
+              "type": "User"
+            },
+            "created_at": "2023-07-19T03:24:00Z"
+          },
+          {
+            "id": 1268849657,
+            "user": {
+              "id": 6007417,
+              "login": "chendave",
+              "type": "User"
+            },
+            "created_at": "2023-07-20T01:59:44Z"
+          },
+          {
+            "id": 1268857209,
+            "user": {
+              "id": 30396467,
+              "login": "wackxu",
+              "type": "User"
+            },
+            "created_at": "2023-07-20T02:15:18Z"
+          },
+          {
+            "review_commands": [
+              "lgtm"
+            ],
+            "id": 1268866006,
+            "user": {
+              "id": 6007417,
+              "login": "chendave",
+              "type": "User"
+            },
+            "created_at": "2023-07-20T02:34:08Z"
+          }
+        ]
+      },
+      "/repositories/20580498/pulls/119399/reviews?per_page=100": {
+        "etag": "W/\"feeb760bf74ea71a97923f7975c386d782d5d40ad257c5afc5e6844f40b95b55\"",
+        "next": "",
+        "value": [
+          {
+            "id": 1536122488,
+            "user": {
+              "id": 6007417,
+              "login": "chendave",
+              "type": "User"
+            },
+            "submitted_at": "2023-07-19T01:44:02Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1536192743,
+            "user": {
+              "id": 30396467,
+              "login": "wackxu",
+              "type": "User"
+            },
+            "submitted_at": "2023-07-19T03:24:00Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1538302368,
+            "user": {
+              "id": 6007417,
+              "login": "chendave",
+              "type": "User"
+            },
+            "submitted_at": "2023-07-20T02:01:12Z",
+            "state": "CHANGES_REQUESTED"
+          },
+          {
+            "id": 1538313307,
+            "user": {
+              "id": 30396467,
+              "login": "wackxu",
+              "type": "User"
+            },
+            "submitted_at": "2023-07-20T02:15:18Z",
+            "state": "COMMENTED"
+          },
+          {
+            "id": 1538326385,
+            "user": {
+              "id": 6007417,
+              "login": "chendave",
+              "type": "User"
+            },
+            "submitted_at": "2023-07-20T02:34:08Z",
+            "state": "COMMENTED"
+          },
+          {
+            "review_commands": [
+              "lgtm",
+              "approve"
+            ],
+            "id": 1547453552,
+            "user": {
+              "id": 18364341,
+              "login": "kerthcet",
+              "type": "User"
+            },
+            "submitted_at": "2023-07-26T10:55:02Z",
+            "state": "COMMENTED"
+          }
+        ]
+      }
+    }
   },
   "input": {
-    "id": 0,
-    "author": null,
-    "created_at": "",
-    "draft": false,
-    "outcome": "",
-    "coverage": {
-      "reviews": false,
-      "issue_comments": false,
-      "review_comments": false
+    "id": 1439221879,
+    "author": {
+      "id": 30396467,
+      "login": "wackxu",
+      "type": "User"
     },
-    "reviews": null,
-    "issue_comments": null,
-    "review_comments": null
+    "created_at": "2023-07-18T13:04:29Z",
+    "draft": false,
+    "outcome": "merged",
+    "coverage": {
+      "reviews": true,
+      "issue_comments": true,
+      "review_comments": true
+    },
+    "reviews": [
+      {
+        "id": "1536122488",
+        "actor": {
+          "id": 6007417,
+          "login": "chendave",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-19T01:44:02Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1536192743",
+        "actor": {
+          "id": 30396467,
+          "login": "wackxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-19T03:24:00Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1538302368",
+        "actor": {
+          "id": 6007417,
+          "login": "chendave",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-20T02:01:12Z",
+        "state": "CHANGES_REQUESTED"
+      },
+      {
+        "id": "1538313307",
+        "actor": {
+          "id": 30396467,
+          "login": "wackxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-20T02:15:18Z",
+        "state": "COMMENTED"
+      },
+      {
+        "id": "1538326385",
+        "actor": {
+          "id": 6007417,
+          "login": "chendave",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-20T02:34:08Z",
+        "state": "COMMENTED"
+      },
+      {
+        "review_commands": [
+          "lgtm",
+          "approve"
+        ],
+        "id": "1547453552",
+        "actor": {
+          "id": 18364341,
+          "login": "kerthcet",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-26T10:55:02Z",
+        "state": "COMMENTED"
+      }
+    ],
+    "issue_comments": [
+      {
+        "id": "1640192880",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-18T13:04:39Z"
+      },
+      {
+        "id": "1641219144",
+        "actor": {
+          "id": 30396467,
+          "login": "wackxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-19T01:04:43Z"
+      },
+      {
+        "id": "1643017366",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-20T02:34:15Z"
+      },
+      {
+        "id": "1645254635",
+        "actor": {
+          "id": 30396467,
+          "login": "wackxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-21T09:05:01Z"
+      },
+      {
+        "review_commands": [
+          "approve"
+        ],
+        "id": "1645490314",
+        "actor": {
+          "id": 1299064,
+          "login": "alculquicondor",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-21T12:15:54Z"
+      },
+      {
+        "id": "1645505281",
+        "actor": {
+          "id": 1299064,
+          "login": "alculquicondor",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-21T12:29:04Z"
+      },
+      {
+        "id": "1651547885",
+        "actor": {
+          "id": 20407524,
+          "login": "k8s-ci-robot",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-26T10:55:23Z"
+      }
+    ],
+    "review_comments": [
+      {
+        "id": "1267446752",
+        "actor": {
+          "id": 6007417,
+          "login": "chendave",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-19T01:43:58Z"
+      },
+      {
+        "id": "1267497495",
+        "actor": {
+          "id": 30396467,
+          "login": "wackxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-19T03:24:00Z"
+      },
+      {
+        "id": "1268849657",
+        "actor": {
+          "id": 6007417,
+          "login": "chendave",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-20T01:59:44Z"
+      },
+      {
+        "id": "1268857209",
+        "actor": {
+          "id": 30396467,
+          "login": "wackxu",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-20T02:15:18Z"
+      },
+      {
+        "review_commands": [
+          "lgtm"
+        ],
+        "id": "1268866006",
+        "actor": {
+          "id": 6007417,
+          "login": "chendave",
+          "type": "User"
+        },
+        "occurred_at": "2023-07-20T02:34:08Z"
+      }
+    ]
   }
 }
